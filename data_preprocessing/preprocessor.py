@@ -9,15 +9,12 @@ def _tokenize(text:str):
 
     tokens = []
     for token in doc:
-        if token.is_stop:
+        if _is_full_word_or_punctuation(token):
             continue
-        if token.is_punct:
-            continue
-        if token.is_space:
-            continue
-
         tokens.append(token.lemma_.lower())
 
     return " ".join(tokens)
 
+def _is_full_word_or_punctuation(token)->bool:
+    return token.is_stop or token.is_punct or token.is_space
 
