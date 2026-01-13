@@ -17,7 +17,7 @@ def _tokenize(text:str):
      return nlp(text)
 
 def _is_full_word_or_punctuation(token)->bool:
-    return token.is_stop or token.is_punct or token.is_space
+    return token.is_stop or token.is_punct or token.is_space # token.text.strip() ?
 
 def _get_all_sentences(doc):
     sentences = []
@@ -25,4 +25,30 @@ def _get_all_sentences(doc):
         sentences.append(sent.text)
     return sentences
 
+
+"""
+import string
+import nltk
+
+def remove_punctuation(text):
+    return "".join(char for char in text if char not in string.punctuation)
+
+def clean_text(text, stop_words):
+    # Convert to lowercase
+    text = text.lower()
+
+    # Remove punctuation 
+    text = remove_punctuation(text)
+    
+    # Remove punctuation  
+    # text = re.sub(r'[\W_]+', ' ', text)
+
+    # Tokenize text
+    words = nltk.word_tokenize(text)
+
+    # Remove stopwords
+    filtered_words = [word for word in words if word not in stop_words]
+
+    return " ".join(filtered_words)
+"""
 # stemmin ?
