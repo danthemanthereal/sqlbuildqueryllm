@@ -1,4 +1,6 @@
 import spacy
+import nltk
+from nltk.stem.porter import *
 nlp = spacy.load("de_core_news_sm")
 
 def reprocess(text:str):
@@ -53,4 +55,8 @@ def clean_text(text, stop_words):
 
     return " ".join(filtered_words)
 """
-# stemmin ?
+# stemmin -> braucht nltk  ?
+
+def stemming(tokens: list):
+    stemmer = PorterStemmer()
+    return [stemmer.stem(token) for token in tokens]
