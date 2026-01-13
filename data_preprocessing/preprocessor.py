@@ -2,19 +2,21 @@ import spacy
 nlp = spacy.load("de_core_news_sm")
 
 def reprocess(text:str):
-    _tokenize(text)
-
-def _lemmatize(text:str):
-    lemma = []
     tokens = _tokenize(text)
+    lemmatizes = _lemmatize(tokens)
+
+
+def _tokenize(text: str):
+    return nlp(text)
+
+def _lemmatize(tokens):
+    lemma = []
     for token in tokens:
         if _is_full_word_or_punctuation(token):
             continue
         lemma.append(token.lemma_.lower())
     return " ".join(lemma)
 
-def _tokenize(text:str):
-     return nlp(text)
 
 def _is_full_word_or_punctuation(token)->bool:
     return token.is_stop or token.is_punct or token.is_space # token.text.strip() ?
