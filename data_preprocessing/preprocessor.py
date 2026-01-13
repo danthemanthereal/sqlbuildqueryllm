@@ -1,5 +1,6 @@
 import spacy
 import nltk
+from nltk import SnowballStemmer
 from nltk.stem.porter import *
 nlp = spacy.load("de_core_news_sm")
 
@@ -57,6 +58,10 @@ def clean_text(text, stop_words):
 """
 # stemmin -> braucht nltk  ?
 
-def stemming(tokens: list):
+def port_stemming(tokens: list):
     stemmer = PorterStemmer()
     return [stemmer.stem(token) for token in tokens]
+
+def snowball_stemming(tokens: list):
+    stemmer = SnowballStemmer("german")
+    return [ stemmer.stem(token) for token in tokens]
