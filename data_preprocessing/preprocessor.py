@@ -19,4 +19,10 @@ def _tokenize(text:str):
 def _is_full_word_or_punctuation(token)->bool:
     return token.is_stop or token.is_punct or token.is_space
 
+def _get_all_sentences(doc):
+    sentences = []
+    for sent in doc.sents:
+        sentences.append(sent.text)
+    return sentences
+
 # stemmin ?
