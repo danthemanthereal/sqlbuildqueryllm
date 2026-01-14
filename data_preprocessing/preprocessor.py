@@ -55,7 +55,7 @@ def clean_text(text, stop_words):
 
     return " ".join(filtered_words)
 """
-# stemmin -> braucht nltk  ?
+# stemmin -> braucht nltk stemming -> dann lemmatize immer  ?
 
 def port_stemming(tokens: list):
     stemmer = PorterStemmer()
@@ -64,3 +64,14 @@ def port_stemming(tokens: list):
 def snowball_stemming(tokens: list):
     stemmer = SnowballStemmer("german")
     return [ stemmer.stem(token) for token in tokens]
+
+
+def pos_tag(input_text):
+
+    spacy_doc = nlp(input_text)
+    tagged_string = []
+    for token in spacy_doc:
+        tagged_string.append(token.text + '_' + token.pos_)
+
+    tagged_result = ' '.join(tagged_string)
+    return tagged_result
