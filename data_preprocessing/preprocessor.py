@@ -1,5 +1,4 @@
 import spacy
-import nltk
 from nltk import SnowballStemmer
 from nltk.stem.porter import *
 nlp = spacy.load("de_core_news_sm")
