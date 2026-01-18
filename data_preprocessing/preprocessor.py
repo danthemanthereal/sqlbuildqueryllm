@@ -13,12 +13,13 @@ def _tokenize(text: str):
 
 def _lemmatize(tokens):
     lemma = []
-    for token in tokens:
-        if _is_full_word_or_punctuation(token):
-            continue
+    non_stop_words = _get_non_stop_words(tokens)
+    for token in non_stop_words:
         lemma.append(token.lemma_.lower())
     return " ".join(lemma)
 
+def _get_non_stop_words(tokens):
+    return [token for token in tokens if not _is_full_word_or_punctuation(token)]
 
 def _is_full_word_or_punctuation(token)->bool:
     return token.is_stop or token.is_punct or token.is_space # token.text.strip() ?
