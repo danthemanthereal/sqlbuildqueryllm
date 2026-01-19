@@ -8,7 +8,7 @@ def reprocess(text:str):
     tokens = _tokenize(text)
     non_stop_word_tokens = _get_non_stop_words(tokens)
     lemmatizes = _lemmatize(non_stop_word_tokens)
-    pos_tags = _get_pos_tag(tokens)
+    pos_tags = _get_pos_tag(tokens) # anwenden auf non stop tokens ? 
 
 def _tokenize(text: str):
     return nlp(text)
