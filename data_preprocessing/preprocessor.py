@@ -75,3 +75,6 @@ def pos_tag(input_text):
 
     tagged_result = ' '.join(tagged_string)
     return tagged_result
+
+def get_lower_input(input_text: str):
+    return input_text.lower()
