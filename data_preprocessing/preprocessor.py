@@ -5,24 +5,23 @@ nlp = spacy.load("de_core_news_sm")
 
 def reprocess(text:str):
     tokens = _tokenize(text)
-    lemmatizes = _lemmatize(tokens)
-
-
-def _tokenize(text: str):
-    return nlp(text)
-
-def _lemmatize(tokens):
-    lemma = []
-    non_stop_words = _get_non_stop_words(tokens)
-    for token in non_stop_words:
-        lemma.append(token.lemma_.lower())
-    return " ".join(lemma)
+    non_stop_word_tokens = _get_non_stop_words(tokens)
+    lemmatizes = _lemmatize(non_stop_word_tokens)
 
 def _get_non_stop_words(tokens):
     return [token for token in tokens if not _is_full_word_or_punctuation(token)]
 
 def _is_full_word_or_punctuation(token)->bool:
     return token.is_stop or token.is_punct or token.is_space # token.text.strip() ?
+
+def _tokenize(text: str):
+    return nlp(text)
+
+def _lemmatize(tokens):
+    lemma = []
+    for token in tokens:
+        lemma.append(token.lemma_.lower())
+    return " ".join(lemma)
 
 def _get_all_sentences(doc):
     sentences = []
