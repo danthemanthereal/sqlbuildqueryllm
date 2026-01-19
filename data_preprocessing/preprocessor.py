@@ -1,3 +1,4 @@
+import nltk
 import spacy
 from nltk import SnowballStemmer
 from nltk.stem.porter import *
@@ -7,6 +8,7 @@ def reprocess(text:str):
     tokens = _tokenize(text)
     non_stop_word_tokens = _get_non_stop_words(tokens)
     lemmatizes = _lemmatize(non_stop_word_tokens)
+    pos_tags = _get_pos_tag(tokens)
 
 def _tokenize(text: str):
     return nlp(text)
@@ -22,6 +24,15 @@ def _lemmatize(tokens):
     for token in tokens:
         lemma.append(token.lemma_.lower())
     return " ".join(lemma)
+
+def _get_pos_tag(tokens):
+    """
+    pos_tag_map = {}
+    for token in tokens:
+        pos_tag_map[token.text] = token.pos_
+    :return pos_tag_map
+    """
+    return nltk.pos_tag(tokens, lang="deu")
 
 def _get_all_sentences(doc):
     sentences = []
@@ -64,17 +75,6 @@ def port_stemming(tokens: list):
 def snowball_stemming(tokens: list):
     stemmer = SnowballStemmer("german")
     return [ stemmer.stem(token) for token in tokens]
-
-
-def pos_tag(input_text):
-
-    spacy_doc = nlp(input_text)
-    tagged_string = []
-    for token in spacy_doc:
-        tagged_string.append(token.text + '_' + token.pos_)
-
-    tagged_result = ' '.join(tagged_string)
-    return tagged_result
 
 def get_lower_input(input_text: str):
     return input_text.lower()
