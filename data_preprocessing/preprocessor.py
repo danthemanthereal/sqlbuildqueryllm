@@ -5,8 +5,8 @@ from nltk.stem.porter import *
 nlp = spacy.load("de_core_news_sm")
 
 def reprocess(text:str):
-    lowred_text = _lower_text(text)
-    tokens = _tokenize(text)
+    lowercase_text = _lower_text(text)
+    tokens = _tokenize(lowercase_text)
     non_stop_word_tokens = _get_non_stop_words(tokens)
     lemmatizes = _lemmatize(non_stop_word_tokens)
     pos_tags = _get_pos_tag(tokens) # anwenden auf non stop tokens ? 
