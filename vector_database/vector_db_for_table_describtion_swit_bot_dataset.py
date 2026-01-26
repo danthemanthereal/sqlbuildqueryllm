@@ -5,8 +5,6 @@ client = chromadb.Client()
 
 only_description_df = table_meta_df["discription"]
 
-only_table_name = list(table_meta_df["name"])
-
 table_description_df = table_meta_df[["name", "discription"]]
 
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
