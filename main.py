@@ -1,5 +1,5 @@
 from data_preprocessing.preprocessor import reprocess
-from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df
+from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
 from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
 from transformers import AutoTokenizer
 from torch import nn, cosine_similarity
@@ -8,10 +8,12 @@ from collections import Counter
 only_table_name = list(table_meta_df["name"])
 table_description_df = table_meta_df[["name", "discription"]]
 only_question = list(only_german_test_df["question"])
+query_end_question = query_question_test_df
 tokenizer = AutoTokenizer.from_pretrained("distilbert-base-german-cased")
 embedding_dim = 768
 table_embeddings = embeddings
 table_in_query = 0
+table_not_in_query = 0
 
 
 for question in only_question:
@@ -41,10 +43,20 @@ for question in only_question:
     #print(scores)
     results = collection.query(
         query_texts=[question],
-        n_results=5
+        n_results=8
     )
-    
 
+    query_wert = query_question_test_df.loc[query_question_test_df['question'] == question, 'query'].values[0]
+    metadata_liste = results["metadatas"][0]
+
+    ergebnis = any(item["name"] in query_wert for item in metadata_liste)
+    if ergebnis is True:
+        table_in_query += 1
+    else:
+        table_not_in_query += 1
+
+print("table correct in query:", table_in_query)
+print("table not in query:", table_not_in_query)
 
 
     #description = table_description_df.loc[table_description_df["name"] == table_name, "discription"].values[0]
