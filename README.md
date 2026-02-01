@@ -5,3 +5,4 @@ Schema Linking Ansätze:
 
 NER ? 
  
+Fehler behebung ? 
