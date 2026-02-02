@@ -2,6 +2,9 @@ import json
 from collections import defaultdict
 from pathlib import Path
 from typing import List, Dict, Optional
+import networkx as nx
+
+
 
 current_path = Path(__file__).resolve()
 project_path = current_path.parent.parent
@@ -31,7 +34,7 @@ class Table:
         self.text = text
         self.columns = columns
 
-def build_schema_graph(schema_path: str) -> Dict[str, List[Table]]:
+def read_database_schema(schema_path: str) -> Dict[str, List[Table]]:
     schemas: Dict[str, Dict[str, Table]] = defaultdict(dict)
     dbs_json_blob = json.load(open(schema_path, "r"))
     for db in dbs_json_blob:
@@ -65,6 +68,43 @@ def build_schema_graph(schema_path: str) -> Dict[str, List[Table]]:
 
     return {**schemas}
 
-schema = build_schema_graph(schema_path_str)
+schema = read_database_schema(schema_path_str)
+
+# Knowledge graph
 
 
+G = nx.MultiDiGraph()
+
+for db_id, tables in schema.items():
+    for table_name, table_obj in tables.items():
+
+        table_node = f"table:{table_name}"
+        G.add_node(table_node, type="table", db=db_id, name=table_name)
+
+        for col in table_obj.columns:
+            col_node = f"column:{table_name}.{col.name}"
+
+            G.add_node(col_node,
+                       type="column",
+                       name=col.name,
+                       table=table_name,
+                       column_type=col.column_type)
+
+            G.add_edge(table_node, col_node, relation="HAS_COLUMN")
+
+            if col.is_primary_key:
+                G.add_edge(table_node, col_node, relation="PRIMARY_KEY")
+
+            if col.foreign_key:
+                fk_table, fk_col = col.foreign_key.split(":")
+                fk_node = f"column:{fk_table}.{fk_col}"
+                G.add_edge(col_node, fk_node, relation="FOREIGN_KEY")
+
+
+
+"""from pyvis.network import Network
+print(f"Knoten: {G.number_of_nodes()}")
+print(f"Kanten: {G.number_of_edges()}")
+net = Network(notebook=True, height="750px", width="100%")
+net.from_nx(G)
+net.show("graph.html")"""
