@@ -1,0 +1,2922 @@
+[
+  {
+    "db_id": "train_station",
+    "query": "SELECT count(*) FROM station",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "station"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "station"
+    ],
+    "question": "¿Cuántas estaciones de tren hay?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  LOCATION ,  number_of_platforms FROM station",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      ",",
+      "number_of_platforms",
+      "FROM",
+      "station"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      ",",
+      "number_of_platforms",
+      "from",
+      "station"
+    ],
+    "question": "Muestre el nombre, la ubicación y el número de plataformas de todas las estaciones.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT DISTINCT LOCATION FROM station",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "station"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "station"
+    ],
+    "question": "¿Cuáles son todas las ubicaciones de las estaciones de tren?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  total_passengers FROM station WHERE LOCATION != 'London'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "total_passengers",
+      "FROM",
+      "station",
+      "WHERE",
+      "LOCATION",
+      "!",
+      "=",
+      "'London",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "total_passengers",
+      "from",
+      "station",
+      "where",
+      "location",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Muestre los nombres y el total de pasajeros de todas las estaciones de tren que no se encuentran en ''Londres''.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  main_services FROM station ORDER BY total_passengers DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "main_services",
+      "FROM",
+      "station",
+      "ORDER",
+      "BY",
+      "total_passengers",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "main_services",
+      "from",
+      "station",
+      "order",
+      "by",
+      "total_passengers",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Muestre los nombres y los principales servicios de las estaciones de tren que tienen los tres primeros pasajeros en total.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT avg(total_passengers) ,  max(total_passengers) FROM station WHERE LOCATION  =  'London' OR LOCATION  =  'Glasgow'",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "total_passengers",
+      ")",
+      ",",
+      "max",
+      "(",
+      "total_passengers",
+      ")",
+      "FROM",
+      "station",
+      "WHERE",
+      "LOCATION",
+      "=",
+      "'London",
+      "'",
+      "OR",
+      "LOCATION",
+      "=",
+      "'Glasgow",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "total_passengers",
+      ")",
+      ",",
+      "max",
+      "(",
+      "total_passengers",
+      ")",
+      "from",
+      "station",
+      "where",
+      "location",
+      "=",
+      "value",
+      "or",
+      "location",
+      "=",
+      "value"
+    ],
+    "question": "¿Cuál es el número medio y máximo de pasajeros totales para las estaciones de tren de ''Londres'' o ''Glasgow''?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Glasgow\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT LOCATION ,  sum(number_of_platforms) ,  sum(total_passengers) FROM station GROUP BY LOCATION",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      ",",
+      "sum",
+      "(",
+      "number_of_platforms",
+      ")",
+      ",",
+      "sum",
+      "(",
+      "total_passengers",
+      ")",
+      "FROM",
+      "station",
+      "GROUP",
+      "BY",
+      "LOCATION"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      ",",
+      "sum",
+      "(",
+      "number_of_platforms",
+      ")",
+      ",",
+      "sum",
+      "(",
+      "total_passengers",
+      ")",
+      "from",
+      "station",
+      "group",
+      "by",
+      "location"
+    ],
+    "question": "Muestre todas las ubicaciones y el número total de plataformas y pasajeros para todas las estaciones de tren en cada ubicación.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT DISTINCT LOCATION FROM station WHERE number_of_platforms  >=  15 AND total_passengers  >  25",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "WHERE",
+      "number_of_platforms",
+      ">",
+      "=",
+      "15",
+      "AND",
+      "total_passengers",
+      ">",
+      "25"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "station",
+      "where",
+      "number_of_platforms",
+      ">",
+      "=",
+      "value",
+      "and",
+      "total_passengers",
+      ">",
+      "value"
+    ],
+    "question": "Muestre todas las ubicaciones que tienen estaciones de tren con al menos 15 plataformas y estaciones de tren con más de 25 pasajeros en total.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          15.0,
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          25.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT LOCATION FROM station EXCEPT SELECT LOCATION FROM station WHERE number_of_platforms  >=  15",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "EXCEPT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "WHERE",
+      "number_of_platforms",
+      ">",
+      "=",
+      "15"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "station",
+      "except",
+      "select",
+      "location",
+      "from",
+      "station",
+      "where",
+      "number_of_platforms",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Muestre todas las ubicaciones que no tienen una estación de tren con al menos 15 plataformas.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            5,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            15.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT LOCATION FROM station GROUP BY LOCATION ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "station",
+      "group",
+      "by",
+      "location",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Mueste la ubicación con la mayor cantidad de estaciones de tren.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  TIME ,  service FROM train",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "TIME",
+      ",",
+      "service",
+      "FROM",
+      "train"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "time",
+      ",",
+      "service",
+      "from",
+      "train"
+    ],
+    "question": "Muestre el nombre, la hora y el servicio de todos los trenes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT count(*) FROM train",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "train"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "train"
+    ],
+    "question": "Muestre el número de trenes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  service FROM train ORDER BY TIME",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "service",
+      "FROM",
+      "train",
+      "ORDER",
+      "BY",
+      "TIME"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "service",
+      "from",
+      "train",
+      "order",
+      "by",
+      "time"
+    ],
+    "question": "Muestre el nombre y el servicio de todos los trenes en orden por hora.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name ,  count(*) FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id GROUP BY T1.station_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "GROUP",
+      "BY",
+      "T1.station_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "station_id"
+    ],
+    "question": "Muestre el nombre de la estación y el número de trenes en cada estación.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name ,  T3.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id JOIN train AS T3 ON T3.train_id  =  T1.train_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T3.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "T3",
+      "ON",
+      "T3.train_id",
+      "=",
+      "T1.train_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "train_id",
+      "=",
+      "t1",
+      ".",
+      "train_id"
+    ],
+    "question": "muestre el nombre del tren y el nombre de la estación de cada tren.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T3.name ,  T3.time FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id JOIN train AS T3 ON T3.train_id  =  T1.train_id WHERE T2.location  =  'London' ORDER BY T3.time DESC",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T3.time",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "T3",
+      "ON",
+      "T3.train_id",
+      "=",
+      "T1.train_id",
+      "WHERE",
+      "T2.location",
+      "=",
+      "'London",
+      "'",
+      "ORDER",
+      "BY",
+      "T3.time",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "time",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "train_id",
+      "=",
+      "t1",
+      ".",
+      "train_id",
+      "where",
+      "t2",
+      ".",
+      "location",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "time",
+      "desc"
+    ],
+    "question": "Muestre todos los nombres y horarios de los trenes en las estaciones de ''Londres'' en orden descendente según la hora del tren.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id GROUP BY T1.station_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "GROUP",
+      "BY",
+      "T1.station_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "station_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Muestre el nombre de la estación con mayor número de trenes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id GROUP BY T1.station_id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "GROUP",
+      "BY",
+      "T1.station_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "station_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Muestre el nombre de la estación con al menos dos trenes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT LOCATION FROM station GROUP BY LOCATION HAVING count(*)  =  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "station",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question": "Muestre todas las ubicaciones con solo 1 estación.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name FROM station WHERE station_id NOT IN (SELECT station_id FROM train_station)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "station",
+      "WHERE",
+      "station_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "station_id",
+      "FROM",
+      "train_station",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "station",
+      "where",
+      "station_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "station_id",
+      "from",
+      "train_station",
+      ")"
+    ],
+    "question": "Muestre los nombres de las estaciones sin ningún tren.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id JOIN train AS T3 ON T3.train_id  =  T1.train_id WHERE T3.Name  =  \"Ananthapuri Express\" INTERSECT SELECT T2.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id JOIN train AS T3 ON T3.train_id  =  T1.train_id WHERE T3.Name  =  \"Guruvayur Express\"",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "T3",
+      "ON",
+      "T3.train_id",
+      "=",
+      "T1.train_id",
+      "WHERE",
+      "T3.Name",
+      "=",
+      "``",
+      "Ananthapuri",
+      "Express",
+      "''",
+      "INTERSECT",
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "T3",
+      "ON",
+      "T3.train_id",
+      "=",
+      "T1.train_id",
+      "WHERE",
+      "T3.Name",
+      "=",
+      "``",
+      "Guruvayur",
+      "Express",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "train_id",
+      "=",
+      "t1",
+      ".",
+      "train_id",
+      "where",
+      "t3",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "train_id",
+      "=",
+      "t1",
+      ".",
+      "train_id",
+      "where",
+      "t3",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "¿Cuáles son los nombres de las estaciones que sirven a los trenes \"Ananthapuri Express\" y \"Guruvayur Express\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"Ananthapuri Express\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  14,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  9,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            "\"Guruvayur Express\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name FROM train_station AS T1 JOIN train AS T2 ON T1.train_id  =  T2.train_id WHERE T1.station_id NOT IN (SELECT T4.station_id FROM train_station AS T3 JOIN station AS T4 ON T3.station_id  =  T4.station_id WHERE t4.location  =  \"London\")",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "train",
+      "AS",
+      "T2",
+      "ON",
+      "T1.train_id",
+      "=",
+      "T2.train_id",
+      "WHERE",
+      "T1.station_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "T4.station_id",
+      "FROM",
+      "train_station",
+      "AS",
+      "T3",
+      "JOIN",
+      "station",
+      "AS",
+      "T4",
+      "ON",
+      "T3.station_id",
+      "=",
+      "T4.station_id",
+      "WHERE",
+      "t4.location",
+      "=",
+      "``",
+      "London",
+      "''",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "train",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "train_id",
+      "=",
+      "t2",
+      ".",
+      "train_id",
+      "where",
+      "t1",
+      ".",
+      "station_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "t4",
+      ".",
+      "station_id",
+      "from",
+      "train_station",
+      "as",
+      "t3",
+      "join",
+      "station",
+      "as",
+      "t4",
+      "on",
+      "t3",
+      ".",
+      "station_id",
+      "=",
+      "t4",
+      ".",
+      "station_id",
+      "where",
+      "t4",
+      ".",
+      "location",
+      "=",
+      "value",
+      ")"
+    ],
+    "question": "Encuentre los nombres de los trenes que no pasan por ninguna estación ubicada en ''Londres''.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ],
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    1,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    6,
+                    false
+                  ],
+                  null
+                ],
+                "\"London\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  LOCATION FROM station ORDER BY Annual_entry_exit ,  Annual_interchanges",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "station",
+      "ORDER",
+      "BY",
+      "Annual_entry_exit",
+      ",",
+      "Annual_interchanges"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "station",
+      "order",
+      "by",
+      "annual_entry_exit",
+      ",",
+      "annual_interchanges"
+    ],
+    "question": "Enumere los nombres y ubicaciones de todas las estaciones ordenadas por su entrada anual, salida e intercambio de cantidades.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

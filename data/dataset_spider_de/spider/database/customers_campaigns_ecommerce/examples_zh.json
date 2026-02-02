@@ -1,0 +1,2229 @@
+[
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT count(*) FROM premises",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "premises"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "premises"
+    ],
+    "question_spider": "How many premises are there?",
+    "question": "有多少处建筑物？",
+    "question_cspider": "有多少处建筑物？",
+    "Harold": "BLEU = 0.00, 37.5/0.0/0.0/0.0 (BP=1.000, ratio=1.000, hyp_len=8, ref_len=8)",
+    "question_toks": [
+      "那",
+      "里",
+      "有",
+      "几",
+      "处",
+      "房",
+      "屋",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT DISTINCT premises_type FROM premises",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "premises_type",
+      "FROM",
+      "premises"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "premises_type",
+      "from",
+      "premises"
+    ],
+    "question_spider": "What are all the distinct premise types?",
+    "question": "什么是不同的建筑物的类型？",
+    "question_cspider": "什么是不同的建筑物的类型？",
+    "Harold": "BLEU = 0.00, 69.2/33.3/9.1/0.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "所",
+      "有",
+      "不",
+      "同",
+      "的",
+      "前",
+      "提",
+      "类",
+      "型",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT premises_type ,  premise_details FROM premises ORDER BY premises_type",
+    "query_toks": [
+      "SELECT",
+      "premises_type",
+      ",",
+      "premise_details",
+      "FROM",
+      "premises",
+      "ORDER",
+      "BY",
+      "premises_type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "premises_type",
+      ",",
+      "premise_details",
+      "from",
+      "premises",
+      "order",
+      "by",
+      "premises_type"
+    ],
+    "question_spider": "Find the types and details for all premises and order by the premise type.",
+    "question": "通过建筑物类型查找所有房屋和订单的类型和细节。",
+    "question_cspider": "通过建筑物类型查找所有房屋和订单的类型和细节。",
+    "Harold": "BLEU = 22.66, 50.0/30.4/18.2/9.5 (BP=1.000, ratio=1.043, hyp_len=24, ref_len=23)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "场",
+      "所",
+      "的",
+      "类",
+      "型",
+      "和",
+      "详",
+      "细",
+      "信",
+      "息",
+      "，",
+      "并",
+      "按",
+      "场",
+      "所",
+      "类",
+      "型",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT premises_type ,  count(*) FROM premises GROUP BY premises_type",
+    "query_toks": [
+      "SELECT",
+      "premises_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "premises",
+      "GROUP",
+      "BY",
+      "premises_type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "premises_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "premises",
+      "group",
+      "by",
+      "premises_type"
+    ],
+    "question_spider": "Show each premise type and the number of premises in that type.",
+    "question": "显示每个建筑物类型和该类型的建筑物数。",
+    "question_cspider": "显示每个建筑物类型和该类型的建筑物数。",
+    "Harold": "BLEU = 0.00, 57.9/27.8/11.8/0.0 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "显",
+      "示",
+      "每",
+      "种",
+      "场",
+      "所",
+      "类",
+      "型",
+      "以",
+      "及",
+      "该",
+      "类",
+      "型",
+      "场",
+      "所",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT product_category ,  count(*) FROM mailshot_campaigns GROUP BY product_category",
+    "query_toks": [
+      "SELECT",
+      "product_category",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "mailshot_campaigns",
+      "GROUP",
+      "BY",
+      "product_category"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_category",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "mailshot_campaigns",
+      "group",
+      "by",
+      "product_category"
+    ],
+    "question_spider": "Show all distinct product categories along with the number of mailshots in each category.",
+    "question": "显示所有不同的产品类别以及每个类别中的邮件的数量。",
+    "question_cspider": "显示所有不同的产品类别以及每个类别中的邮件的数量。",
+    "Harold": "BLEU = 84.83, 95.8/91.3/86.4/81.0 (BP=0.959, ratio=0.960, hyp_len=24, ref_len=25)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "不",
+      "同",
+      "的",
+      "产",
+      "品",
+      "类",
+      "别",
+      "以",
+      "及",
+      "每",
+      "个",
+      "类",
+      "别",
+      "中",
+      "的",
+      "邮",
+      "寄",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT customer_name ,  customer_phone FROM customers WHERE customer_id NOT IN (SELECT customer_id FROM mailshot_customers)",
+    "query_toks": [
+      "SELECT",
+      "customer_name",
+      ",",
+      "customer_phone",
+      "FROM",
+      "customers",
+      "WHERE",
+      "customer_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "customer_id",
+      "FROM",
+      "mailshot_customers",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_name",
+      ",",
+      "customer_phone",
+      "from",
+      "customers",
+      "where",
+      "customer_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "customer_id",
+      "from",
+      "mailshot_customers",
+      ")"
+    ],
+    "question_spider": "Show the name and phone of the customer without any mailshot.",
+    "question": "在没有任何邮件的情况下显示客户的姓名和电话。",
+    "question_cspider": "在没有任何邮件的情况下显示客户的姓名和电话。",
+    "Harold": "BLEU = 53.28, 83.3/70.6/62.5/53.3 (BP=0.801, ratio=0.818, hyp_len=18, ref_len=22)",
+    "question_toks": [
+      "显",
+      "示",
+      "客",
+      "户",
+      "的",
+      "姓",
+      "名",
+      "和",
+      "电",
+      "话",
+      "，",
+      "不",
+      "带",
+      "任",
+      "何",
+      "邮",
+      "件",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  6
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      33,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT T1.customer_name ,  T1.customer_phone FROM customers AS T1 JOIN mailshot_customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T2.outcome_code  =  'No Response'",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_name",
+      ",",
+      "T1.customer_phone",
+      "FROM",
+      "customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "mailshot_customers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "WHERE",
+      "T2.outcome_code",
+      "=",
+      "'No",
+      "Response",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      ",",
+      "t1",
+      ".",
+      "customer_phone",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "mailshot_customers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "where",
+      "t2",
+      ".",
+      "outcome_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the name and phone for customers with a mailshot with outcome code 'No Response'.",
+    "question": "显示用带有“No Response”结果代码的发放邮件客户的姓名和电话。",
+    "question_cspider": "显示用带有“No Response”结果代码的发放邮件客户的姓名和电话。",
+    "Harold": "BLEU = 41.17, 75.0/51.9/30.8/24.0 (BP=1.000, ratio=1.000, hyp_len=28, ref_len=28)",
+    "question_toks": [
+      "通",
+      "过",
+      "邮",
+      "件",
+      "记",
+      "录",
+      "显",
+      "示",
+      "客",
+      "户",
+      "的",
+      "姓",
+      "名",
+      "和",
+      "电",
+      "话",
+      "，",
+      "结",
+      "果",
+      "代",
+      "码",
+      "为",
+      "“",
+      "无",
+      "响",
+      "应",
+      "”",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              33,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              34,
+              false
+            ],
+            null
+          ],
+          "\"No Response\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT outcome_code ,  count(*) FROM mailshot_customers GROUP BY outcome_code",
+    "query_toks": [
+      "SELECT",
+      "outcome_code",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "mailshot_customers",
+      "GROUP",
+      "BY",
+      "outcome_code"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "outcome_code",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "mailshot_customers",
+      "group",
+      "by",
+      "outcome_code"
+    ],
+    "question_spider": "Show the outcome code of mailshots along with the number of mailshots in each outcome code.",
+    "question": "显示邮件快照的结果代码以及每个结果代码中的邮件快照数量。",
+    "question_cspider": "显示邮件快照的结果代码以及每个结果代码中的邮件快照数量。",
+    "Harold": "BLEU = 54.57, 82.8/64.3/48.1/34.6 (BP=1.000, ratio=1.036, hyp_len=29, ref_len=28)",
+    "question_toks": [
+      "在",
+      "每",
+      "个",
+      "结",
+      "果",
+      "代",
+      "码",
+      "中",
+      "显",
+      "示",
+      "邮",
+      "件",
+      "记",
+      "录",
+      "的",
+      "结",
+      "果",
+      "代",
+      "码",
+      "以",
+      "及",
+      "邮",
+      "件",
+      "记",
+      "录",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          34,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT T2.customer_name FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE outcome_code  =  'Order' GROUP BY T1.customer_id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T2.customer_name",
+      "FROM",
+      "mailshot_customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "WHERE",
+      "outcome_code",
+      "=",
+      "'Order",
+      "'",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "customer_name",
+      "from",
+      "mailshot_customers",
+      "as",
+      "t1",
+      "join",
+      "customers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "where",
+      "outcome_code",
+      "=",
+      "value",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the names of customers who have at least 2 mailshots with outcome code 'Order'.",
+    "question": "显示至少有2个邮件的客户且结果代码是“Order”的客户姓名。",
+    "question_cspider": "显示至少有2个邮件的客户且结果代码是“预定”的客户姓名。",
+    "Harold": "BLEU = 35.64, 72.0/45.8/34.8/22.7 (BP=0.887, ratio=0.893, hyp_len=25, ref_len=28)",
+    "question_toks": [
+      "显",
+      "示",
+      "至",
+      "少",
+      "有",
+      "两",
+      "封",
+      "邮",
+      "件",
+      "的",
+      "客",
+      "户",
+      "名",
+      "称",
+      "，",
+      "结",
+      "果",
+      "代",
+      "码",
+      "为",
+      "“",
+      "订",
+      "单",
+      "”",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              34,
+              false
+            ],
+            null
+          ],
+          "\"Order\"",
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          33,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT T2.customer_name FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.customer_name",
+      "FROM",
+      "mailshot_customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "customer_name",
+      "from",
+      "mailshot_customers",
+      "as",
+      "t1",
+      "join",
+      "customers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show the names of customers who have the most mailshots.",
+    "question": "显示邮件最多的客户的名字。",
+    "question_cspider": "显示邮件最多的客户的名字。",
+    "Harold": "BLEU = 46.83, 78.6/53.8/41.7/27.3 (BP=1.000, ratio=1.077, hyp_len=14, ref_len=13)",
+    "question_toks": [
+      "显",
+      "示",
+      "邮",
+      "件",
+      "记",
+      "录",
+      "最",
+      "多",
+      "的",
+      "客",
+      "户",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          33,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT T2.customer_name ,  T2.payment_method FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.outcome_code  =  'Order' INTERSECT SELECT T2.customer_name ,  T2.payment_method FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.outcome_code  =  'No Response'",
+    "query_toks": [
+      "SELECT",
+      "T2.customer_name",
+      ",",
+      "T2.payment_method",
+      "FROM",
+      "mailshot_customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "WHERE",
+      "T1.outcome_code",
+      "=",
+      "'Order",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T2.customer_name",
+      ",",
+      "T2.payment_method",
+      "FROM",
+      "mailshot_customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "WHERE",
+      "T1.outcome_code",
+      "=",
+      "'No",
+      "Response",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "customer_name",
+      ",",
+      "t2",
+      ".",
+      "payment_method",
+      "from",
+      "mailshot_customers",
+      "as",
+      "t1",
+      "join",
+      "customers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "where",
+      "t1",
+      ".",
+      "outcome_code",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "customer_name",
+      ",",
+      "t2",
+      ".",
+      "payment_method",
+      "from",
+      "mailshot_customers",
+      "as",
+      "t1",
+      "join",
+      "customers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "where",
+      "t1",
+      ".",
+      "outcome_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the name and payment method of customers who have both mailshots in 'Order' outcome and mailshots in 'No Response' outcome.",
+    "question": "在邮件结果中同时具有“Order”邮件快照和具有“No Response”邮件快照的客户的姓名和支付方法是什么？",
+    "question_cspider": "在邮件结果中同时具有“预定”邮件快照和具有“No Response”邮件快照的客户的姓名和支付方法是什么？",
+    "Harold": "BLEU = 18.82, 67.5/35.9/15.8/5.4 (BP=0.882, ratio=0.889, hyp_len=40, ref_len=45)",
+    "question_toks": [
+      "既",
+      "有",
+      "“",
+      "订",
+      "单",
+      "”",
+      "结",
+      "果",
+      "中",
+      "的",
+      "邮",
+      "件",
+      "又",
+      "有",
+      "“",
+      "无",
+      "响",
+      "应",
+      "”",
+      "结",
+      "果",
+      "中",
+      "的",
+      "邮",
+      "件",
+      "的",
+      "客",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "付",
+      "款",
+      "方",
+      "式",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              34,
+              false
+            ],
+            null
+          ],
+          "\"Order\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              6
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  33,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  9,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ],
+            "\"No Response\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT T2.premises_type ,  T1.address_type_code FROM customer_addresses AS T1 JOIN premises AS T2 ON T1.premise_id  =  T2.premise_id",
+    "query_toks": [
+      "SELECT",
+      "T2.premises_type",
+      ",",
+      "T1.address_type_code",
+      "FROM",
+      "customer_addresses",
+      "AS",
+      "T1",
+      "JOIN",
+      "premises",
+      "AS",
+      "T2",
+      "ON",
+      "T1.premise_id",
+      "=",
+      "T2.premise_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "premises_type",
+      ",",
+      "t1",
+      ".",
+      "address_type_code",
+      "from",
+      "customer_addresses",
+      "as",
+      "t1",
+      "join",
+      "premises",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "premise_id",
+      "=",
+      "t2",
+      ".",
+      "premise_id"
+    ],
+    "question_spider": "Show the premise type and address type code for all customer addresses.",
+    "question": "针对所有客户地址显示建筑物类型和地址类型代码。",
+    "question_cspider": "针对所有客户地址显示建筑物类型和地址类型代码。",
+    "Harold": "BLEU = 62.66, 85.7/75.0/63.2/55.6 (BP=0.909, ratio=0.913, hyp_len=21, ref_len=23)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "客",
+      "户",
+      "地",
+      "址",
+      "的",
+      "前",
+      "提",
+      "类",
+      "型",
+      "和",
+      "地",
+      "址",
+      "类",
+      "型",
+      "代",
+      "码",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT DISTINCT address_type_code FROM customer_addresses",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "address_type_code",
+      "FROM",
+      "customer_addresses"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "address_type_code",
+      "from",
+      "customer_addresses"
+    ],
+    "question_spider": "What are the distinct address type codes for all customer addresses?",
+    "question": "对于所有的客户地址，有什么不同的地址类型代码？",
+    "question_cspider": "对于所有的客户地址，有什么不同的地址类型代码？",
+    "Harold": "BLEU = 38.52, 94.7/61.1/35.3/25.0 (BP=0.810, ratio=0.826, hyp_len=19, ref_len=23)",
+    "question_toks": [
+      "所",
+      "有",
+      "客",
+      "户",
+      "地",
+      "址",
+      "的",
+      "不",
+      "同",
+      "地",
+      "址",
+      "类",
+      "型",
+      "代",
+      "码",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT order_shipping_charges ,  customer_id FROM customer_orders WHERE order_status_code  =  'Cancelled' OR order_status_code  =  'Paid'",
+    "query_toks": [
+      "SELECT",
+      "order_shipping_charges",
+      ",",
+      "customer_id",
+      "FROM",
+      "customer_orders",
+      "WHERE",
+      "order_status_code",
+      "=",
+      "'Cancelled",
+      "'",
+      "OR",
+      "order_status_code",
+      "=",
+      "'Paid",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "order_shipping_charges",
+      ",",
+      "customer_id",
+      "from",
+      "customer_orders",
+      "where",
+      "order_status_code",
+      "=",
+      "value",
+      "or",
+      "order_status_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the shipping charge and customer id for customer orders with order status Cancelled or Paid.",
+    "question": "显示“Cancelled”或“Paid”订单状态的客户订单的装运费和客户ID。",
+    "question_cspider": "显示“Cancelled”或“付款”订单状态的客户订单的装运费和客户ID。",
+    "Harold": "BLEU = 52.21, 89.3/66.7/46.2/36.0 (BP=0.931, ratio=0.933, hyp_len=28, ref_len=30)",
+    "question_toks": [
+      "显",
+      "示",
+      "订",
+      "单",
+      "状",
+      "态",
+      "为",
+      "已",
+      "取",
+      "消",
+      "或",
+      "已",
+      "付",
+      "款",
+      "的",
+      "客",
+      "户",
+      "订",
+      "单",
+      "的",
+      "运",
+      "费",
+      "和",
+      "客",
+      "户",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              27,
+              false
+            ],
+            null
+          ],
+          "\"Cancelled\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              27,
+              false
+            ],
+            null
+          ],
+          "\"Paid\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customers_campaigns_ecommerce",
+    "query": "SELECT T1.customer_name FROM customers AS T1 JOIN customer_orders AS T2 ON T1.customer_id  =  T2.customer_id WHERE shipping_method_code  =  'FedEx' AND order_status_code  =  'Paid'",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_name",
+      "FROM",
+      "customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customer_orders",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "WHERE",
+      "shipping_method_code",
+      "=",
+      "'FedEx",
+      "'",
+      "AND",
+      "order_status_code",
+      "=",
+      "'Paid",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_orders",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "where",
+      "shipping_method_code",
+      "=",
+      "value",
+      "and",
+      "order_status_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the names of customers having an order with shipping method FedEx and order status Paid.",
+    "question": "显示具有配送方法是“FedEx”和订单状态“Paid”的订单客户的名称。",
+    "question_cspider": "显示具有配送方法是“FedEx”和订单状态“付款”的订单客户的名称。",
+    "Harold": "BLEU = 17.12, 67.7/33.3/13.8/3.6 (BP=0.938, ratio=0.939, hyp_len=31, ref_len=33)",
+    "question_toks": [
+      "使",
+      "用",
+      "送",
+      "货",
+      "方",
+      "式",
+      "F",
+      "e",
+      "d",
+      "E",
+      "x",
+      "和",
+      "已",
+      "付",
+      "款",
+      "的",
+      "订",
+      "单",
+      "状",
+      "态",
+      "显",
+      "示",
+      "有",
+      "订",
+      "单",
+      "的",
+      "客",
+      "户",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              26,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          "\"FedEx\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              27,
+              false
+            ],
+            null
+          ],
+          "\"Paid\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

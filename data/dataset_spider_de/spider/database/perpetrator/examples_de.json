@@ -1,0 +1,2177 @@
+[
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT count(*) FROM perpetrator",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "perpetrator"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "perpetrator"
+    ],
+    "question": "Wie viele Täter gibt es?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Date FROM perpetrator ORDER BY Killed DESC",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      "FROM",
+      "perpetrator",
+      "ORDER",
+      "BY",
+      "Killed",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      "from",
+      "perpetrator",
+      "order",
+      "by",
+      "killed",
+      "desc"
+    ],
+    "question": "Listen Sie das Datum der Täter in absteigender Reihenfolge der Anzahl der getöteten Personen auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Injured FROM perpetrator ORDER BY Injured ASC",
+    "query_toks": [
+      "SELECT",
+      "Injured",
+      "FROM",
+      "perpetrator",
+      "ORDER",
+      "BY",
+      "Injured",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "injured",
+      "from",
+      "perpetrator",
+      "order",
+      "by",
+      "injured",
+      "asc"
+    ],
+    "question": "Listen Sie die Anzahl der von Tätern verletzten Personen in aufsteigender Reihenfolge auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT avg(Injured) FROM perpetrator",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Injured",
+      ")",
+      "FROM",
+      "perpetrator"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "injured",
+      ")",
+      "from",
+      "perpetrator"
+    ],
+    "question": "Wie viele Menschen wurden durchschnittlich von allen Tätern verletzt?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT LOCATION FROM perpetrator ORDER BY Killed DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "perpetrator",
+      "ORDER",
+      "BY",
+      "Killed",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "perpetrator",
+      "order",
+      "by",
+      "killed",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Was ist der Ort des Täters mit den größten Tötungen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Name FROM People ORDER BY Height ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "People",
+      "ORDER",
+      "BY",
+      "Height",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "order",
+      "by",
+      "height",
+      "asc"
+    ],
+    "question": "Wie heißen die Personen in aufsteigender Reihenfolge ihrer Größe?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id"
+    ],
+    "question": "Wie heißen die Täter?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Country != \"China\"",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "WHERE",
+      "T2.Country",
+      "!",
+      "=",
+      "``",
+      "China",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t2",
+      ".",
+      "country",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Wie heißen die Täter, deren Land nicht \"China\" ist?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"China\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Weight DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "ORDER",
+      "BY",
+      "T1.Weight",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "weight",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie heißt der Täter mit dem größten Gewicht?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT sum(T2.Killed) FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T1.Height  >  1.84",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.Killed",
+      ")",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "WHERE",
+      "T1.Height",
+      ">",
+      "1.84"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "killed",
+      ")",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t1",
+      ".",
+      "height",
+      ">",
+      "value"
+    ],
+    "question": "Was ist die Gesamtzahl der Tötungen der Täter mit einer Körpergröße von mehr als 1,84.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          1.84,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Country  =  \"China\" OR T2.Country  =  \"Japan\"",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "WHERE",
+      "T2.Country",
+      "=",
+      "``",
+      "China",
+      "''",
+      "OR",
+      "T2.Country",
+      "=",
+      "``",
+      "Japan",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t2",
+      ".",
+      "country",
+      "=",
+      "value",
+      "or",
+      "t2",
+      ".",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "Wie heißen die Täter im Land \"China\" oder \"Japan\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"China\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Japan\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Height FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Injured DESC",
+    "query_toks": [
+      "SELECT",
+      "T1.Height",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "ORDER",
+      "BY",
+      "T2.Injured",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "height",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "injured",
+      "desc"
+    ],
+    "question": "Wie groß sind die Täter in absteigender Reihenfolge der Anzahl der Verletzten?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "perpetrator",
+      "GROUP",
+      "BY",
+      "Country"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "perpetrator",
+      "group",
+      "by",
+      "country"
+    ],
+    "question": "Was sind die Länder der Täter? Zeigen Sie dort jedes Land und die entsprechende Anzahl von Tätern an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "perpetrator",
+      "GROUP",
+      "BY",
+      "Country",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "perpetrator",
+      "group",
+      "by",
+      "country",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Was ist das Land mit den meisten Tätern?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "perpetrator",
+      "GROUP",
+      "BY",
+      "Country",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "perpetrator",
+      "group",
+      "by",
+      "country",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "In welchen Ländern gibt es mindestens zwei Täter?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Year DESC",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "ORDER",
+      "BY",
+      "T2.Year",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "year",
+      "desc"
+    ],
+    "question": "Listen Sie die Namen der Täter in absteigender Reihenfolge des Jahres auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM perpetrator)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "people",
+      "WHERE",
+      "People_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "People_ID",
+      "FROM",
+      "perpetrator",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "people_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "people_id",
+      "from",
+      "perpetrator",
+      ")"
+    ],
+    "question": "Listen Sie die Namen von Personen auf, die keine Täter sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      2,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Country FROM perpetrator WHERE Injured  >  50 INTERSECT SELECT Country FROM perpetrator WHERE Injured  <  20",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      "FROM",
+      "perpetrator",
+      "WHERE",
+      "Injured",
+      ">",
+      "50",
+      "INTERSECT",
+      "SELECT",
+      "Country",
+      "FROM",
+      "perpetrator",
+      "WHERE",
+      "Injured",
+      "<",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "perpetrator",
+      "where",
+      "injured",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "country",
+      "from",
+      "perpetrator",
+      "where",
+      "injured",
+      "<",
+      "value"
+    ],
+    "question": "Zeigen Sie die Länder, in denen sowohl Täter mit mehr als 50 Verletzungen als auch Täter mit weniger als 20 Verletzungen leben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          50.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            20.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT count(DISTINCT LOCATION) FROM perpetrator",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "LOCATION",
+      ")",
+      "FROM",
+      "perpetrator"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "location",
+      ")",
+      "from",
+      "perpetrator"
+    ],
+    "question": "Wie viele verschiedene Orte von Tätern gibt es?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T2.Date FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.Date",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "ORDER",
+      "BY",
+      "T1.Height",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "date",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "height",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Zeigen Sie das Datum des größten Täters an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT max(YEAR) FROM perpetrator;",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "YEAR",
+      ")",
+      "FROM",
+      "perpetrator",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "year",
+      ")",
+      "from",
+      "perpetrator"
+    ],
+    "question": "In welchem ​​Jahr ereignete sich das letzte Verbrechen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

@@ -1,0 +1,5788 @@
+[
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(*) FROM branch WHERE membership_amount  >  (SELECT avg(membership_amount) FROM branch)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "membership_amount",
+      ")",
+      "FROM",
+      "branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "membership_amount",
+      ")",
+      "from",
+      "branch",
+      ")"
+    ],
+    "question": "メンバーシップの数が平均を超える支店はいくつありますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(*) FROM branch WHERE membership_amount  >  (SELECT avg(membership_amount) FROM branch)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "membership_amount",
+      ")",
+      "FROM",
+      "branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "membership_amount",
+      ")",
+      "from",
+      "branch",
+      ")"
+    ],
+    "question": "メンバーシップの平均数を超えるブランチの数はいくつですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name ,  address_road ,  city FROM branch ORDER BY open_year",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "address_road",
+      ",",
+      "city",
+      "FROM",
+      "branch",
+      "ORDER",
+      "BY",
+      "open_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "address_road",
+      ",",
+      "city",
+      "from",
+      "branch",
+      "order",
+      "by",
+      "open_year"
+    ],
+    "question": "営業年でソートされたすべての支店の名前、住所、道路、都市を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name ,  address_road ,  city FROM branch ORDER BY open_year",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "address_road",
+      ",",
+      "city",
+      "FROM",
+      "branch",
+      "ORDER",
+      "BY",
+      "open_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "address_road",
+      ",",
+      "city",
+      "from",
+      "branch",
+      "order",
+      "by",
+      "open_year"
+    ],
+    "question": "開業年順に並べられた支店の名前、住所道路、都市は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name FROM branch ORDER BY membership_amount DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "branch",
+      "ORDER",
+      "BY",
+      "membership_amount",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "branch",
+      "order",
+      "by",
+      "membership_amount",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "メンバーシップの数が最も多い上位3つのブランチの名前は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name FROM branch ORDER BY membership_amount DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "branch",
+      "ORDER",
+      "BY",
+      "membership_amount",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "branch",
+      "order",
+      "by",
+      "membership_amount",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "メンバーシップが最も多い3つのブランチの名前は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT DISTINCT city FROM branch WHERE membership_amount  >=  100",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "=",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "少なくとも100のメンバーシップを持つブランチが配置されているすべての個別の都市を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          100.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT DISTINCT city FROM branch WHERE membership_amount  >=  100",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "=",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "100以上のメンバーシップを持つさまざまな都市は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          100.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT open_year FROM branch GROUP BY open_year HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "open_year",
+      "FROM",
+      "branch",
+      "GROUP",
+      "BY",
+      "open_year",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "open_year",
+      "from",
+      "branch",
+      "group",
+      "by",
+      "open_year",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "少なくとも2つのショップがオープンしたすべてのオープン年をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT open_year FROM branch GROUP BY open_year HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "open_year",
+      "FROM",
+      "branch",
+      "GROUP",
+      "BY",
+      "open_year",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "open_year",
+      "from",
+      "branch",
+      "group",
+      "by",
+      "open_year",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "少なくとも2つのショップがオープンした開店年は何年ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT min(membership_amount) ,  max(membership_amount) FROM branch WHERE open_year  =  2011 OR city  =  'London'",
+    "query_toks": [
+      "SELECT",
+      "min",
+      "(",
+      "membership_amount",
+      ")",
+      ",",
+      "max",
+      "(",
+      "membership_amount",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "=",
+      "2011",
+      "OR",
+      "city",
+      "=",
+      "'London",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "min",
+      "(",
+      "membership_amount",
+      ")",
+      ",",
+      "max",
+      "(",
+      "membership_amount",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "=",
+      "value",
+      "or",
+      "city",
+      "=",
+      "value"
+    ],
+    "question": "2011年に開設された、またはロンドン市にあるすべての支店のメンバーシップの最小数と最大数を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2011.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT min(membership_amount) ,  max(membership_amount) FROM branch WHERE open_year  =  2011 OR city  =  'London'",
+    "query_toks": [
+      "SELECT",
+      "min",
+      "(",
+      "membership_amount",
+      ")",
+      ",",
+      "max",
+      "(",
+      "membership_amount",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "=",
+      "2011",
+      "OR",
+      "city",
+      "=",
+      "'London",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "min",
+      "(",
+      "membership_amount",
+      ")",
+      ",",
+      "max",
+      "(",
+      "membership_amount",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "=",
+      "value",
+      "or",
+      "city",
+      "=",
+      "value"
+    ],
+    "question": "2011年にオープンした、またはロンドンにあるすべての支店の最小および最大メンバーシップ金額はいくらですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2011.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city ,  count(*) FROM branch WHERE open_year  <  2010 GROUP BY city",
+    "query_toks": [
+      "SELECT",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "<",
+      "2010",
+      "GROUP",
+      "BY",
+      "city"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "<",
+      "value",
+      "group",
+      "by",
+      "city"
+    ],
+    "question": "各都市の都市と2010年以前に開設された支店の数を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city ,  count(*) FROM branch WHERE open_year  <  2010 GROUP BY city",
+    "query_toks": [
+      "SELECT",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "<",
+      "2010",
+      "GROUP",
+      "BY",
+      "city"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "<",
+      "value",
+      "group",
+      "by",
+      "city"
+    ],
+    "question": "各都市について、2010年までにいくつの支店が開設されましたか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(DISTINCT LEVEL) FROM member",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "LEVEL",
+      ")",
+      "FROM",
+      "member"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "level",
+      ")",
+      "from",
+      "member"
+    ],
+    "question": "メンバーにはいくつの異なるレベルがありますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(DISTINCT LEVEL) FROM member",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "LEVEL",
+      ")",
+      "FROM",
+      "member"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "level",
+      ")",
+      "from",
+      "member"
+    ],
+    "question": "さまざまなメンバーシップレベルは何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT card_number ,  name ,  hometown FROM member ORDER BY LEVEL DESC",
+    "query_toks": [
+      "SELECT",
+      "card_number",
+      ",",
+      "name",
+      ",",
+      "hometown",
+      "FROM",
+      "member",
+      "ORDER",
+      "BY",
+      "LEVEL",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "card_number",
+      ",",
+      "name",
+      ",",
+      "hometown",
+      "from",
+      "member",
+      "order",
+      "by",
+      "level",
+      "desc"
+    ],
+    "question": "レベルの降順で、すべてのメンバーのカード番号、名前、出身地を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT card_number ,  name ,  hometown FROM member ORDER BY LEVEL DESC",
+    "query_toks": [
+      "SELECT",
+      "card_number",
+      ",",
+      "name",
+      ",",
+      "hometown",
+      "FROM",
+      "member",
+      "ORDER",
+      "BY",
+      "LEVEL",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "card_number",
+      ",",
+      "name",
+      ",",
+      "hometown",
+      "from",
+      "member",
+      "order",
+      "by",
+      "level",
+      "desc"
+    ],
+    "question": "レベルの降順で並べられたすべてのメンバーのカード番号、名前、出身地は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT LEVEL FROM member GROUP BY LEVEL ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LEVEL",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "LEVEL",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "level",
+      "from",
+      "member",
+      "group",
+      "by",
+      "level",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "メンバーの数が最も多いメンバーシップレベルを表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT LEVEL FROM member GROUP BY LEVEL ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LEVEL",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "LEVEL",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "level",
+      "from",
+      "member",
+      "group",
+      "by",
+      "level",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "最も多くの人がいる会員レベルはどれくらいですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T3.name ,  T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id ORDER BY T1.register_year",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "ORDER",
+      "BY",
+      "T1.register_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "register_year"
+    ],
+    "question": "登録年でソートされたすべてのメンバー名と登録済みブランチ名を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T3.name ,  T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id ORDER BY T1.register_year",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "ORDER",
+      "BY",
+      "T1.register_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "register_year"
+    ],
+    "question": "登録されている会員と支部の名前は、登録年ごとに並べ替えられていますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  count(*) FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T1.register_year  >  2015 GROUP BY T2.branch_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T1.register_year",
+      ">",
+      "2015",
+      "GROUP",
+      "BY",
+      "T2.branch_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      ">",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "branch_id"
+    ],
+    "question": "2015年以降に登録された各ブランチのメンバー数とともに、すべてのブランチ名を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2015.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  count(*) FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T1.register_year  >  2015 GROUP BY T2.branch_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T1.register_year",
+      ">",
+      "2015",
+      "GROUP",
+      "BY",
+      "T2.branch_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      ">",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "branch_id"
+    ],
+    "question": "各ブランチIDについて、2015年以降に登録されたブランチの名前は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2015.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name FROM member WHERE member_id NOT IN (SELECT member_id FROM membership_register_branch)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "member",
+      "WHERE",
+      "member_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "member_id",
+      "FROM",
+      "membership_register_branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "where",
+      "member_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "member_id",
+      "from",
+      "membership_register_branch",
+      ")"
+    ],
+    "question": "登録されたブランチなしでメンバー名を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name FROM member WHERE member_id NOT IN (SELECT member_id FROM membership_register_branch)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "member",
+      "WHERE",
+      "member_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "member_id",
+      "FROM",
+      "membership_register_branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "where",
+      "member_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "member_id",
+      "from",
+      "membership_register_branch",
+      ")"
+    ],
+    "question": "どの支店にも登録したことのない会員の名前は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name ,  city FROM branch WHERE branch_id NOT IN (SELECT branch_id FROM membership_register_branch)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "branch_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "branch_id",
+      "FROM",
+      "membership_register_branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "branch_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "branch_id",
+      "from",
+      "membership_register_branch",
+      ")"
+    ],
+    "question": "登録メンバーなしで支店名と都市をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name ,  city FROM branch WHERE branch_id NOT IN (SELECT branch_id FROM membership_register_branch)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "branch_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "branch_id",
+      "FROM",
+      "membership_register_branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "branch_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "branch_id",
+      "from",
+      "membership_register_branch",
+      ")"
+    ],
+    "question": "登録会員がいない支店の名前と都市は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  T2.open_year FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T1.register_year  =  2016 GROUP BY T2.branch_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.open_year",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T1.register_year",
+      "=",
+      "2016",
+      "GROUP",
+      "BY",
+      "T2.branch_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "open_year",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      "=",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "branch_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "2016年に登録された会員数が最も多い支店の名前と開業年は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  T2.open_year FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T1.register_year  =  2016 GROUP BY T2.branch_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.open_year",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T1.register_year",
+      "=",
+      "2016",
+      "GROUP",
+      "BY",
+      "T2.branch_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "open_year",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      "=",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "branch_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "2016年に最も多くの会員を登録した支店の名前と開業年は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  T2.hometown FROM membership_register_branch AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T1.register_year  =  2016",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.hometown",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T2.member_id",
+      "WHERE",
+      "T1.register_year",
+      "=",
+      "2016"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "hometown",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      "=",
+      "value"
+    ],
+    "question": "2016年に支店を登録した会員名と出身地を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  T2.hometown FROM membership_register_branch AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T1.register_year  =  2016",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.hometown",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T2.member_id",
+      "WHERE",
+      "T1.register_year",
+      "=",
+      "2016"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "hometown",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      "=",
+      "value"
+    ],
+    "question": "2016年に支店に登録した人の会員名と出身地は？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city FROM branch WHERE open_year  =  2001 AND membership_amount  >  100",
+    "query_toks": [
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "=",
+      "2001",
+      "AND",
+      "membership_amount",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "=",
+      "value",
+      "and",
+      "membership_amount",
+      ">",
+      "value"
+    ],
+    "question": "2001年に開設された支店と、会員数が100を超える支店があるすべての都市を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2001.0,
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          100.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city FROM branch WHERE open_year  =  2001 AND membership_amount  >  100",
+    "query_toks": [
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "=",
+      "2001",
+      "AND",
+      "membership_amount",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "=",
+      "value",
+      "and",
+      "membership_amount",
+      ">",
+      "value"
+    ],
+    "question": "2001年に開設された支店と100人以上の会員がいる支店がある都市は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2001.0,
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          100.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city FROM branch EXCEPT SELECT city FROM branch WHERE membership_amount  >  100",
+    "query_toks": [
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "EXCEPT",
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      "from",
+      "branch",
+      "except",
+      "select",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "value"
+    ],
+    "question": "100を超えるメンバーシップを持つブランチのないすべての都市を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            100.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city FROM branch EXCEPT SELECT city FROM branch WHERE membership_amount  >  100",
+    "query_toks": [
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "EXCEPT",
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      "from",
+      "branch",
+      "except",
+      "select",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "value"
+    ],
+    "question": "100人以上の会員がいる支店がない都市は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            100.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT sum(total_pounds) FROM purchase AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T2.city  =  'London' AND T1.year  =  2018",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "total_pounds",
+      ")",
+      "FROM",
+      "purchase",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T2.city",
+      "=",
+      "'London",
+      "'",
+      "AND",
+      "T1.year",
+      "=",
+      "2018"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "total_pounds",
+      ")",
+      "from",
+      "purchase",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t2",
+      ".",
+      "city",
+      "=",
+      "value",
+      "and",
+      "t1",
+      ".",
+      "year",
+      "=",
+      "value"
+    ],
+    "question": "「London」のすべての支店の2018年の購入総額の合計はいくらですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          2018.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT sum(total_pounds) FROM purchase AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T2.city  =  'London' AND T1.year  =  2018",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "total_pounds",
+      ")",
+      "FROM",
+      "purchase",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T2.city",
+      "=",
+      "'London",
+      "'",
+      "AND",
+      "T1.year",
+      "=",
+      "2018"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "total_pounds",
+      ")",
+      "from",
+      "purchase",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t2",
+      ".",
+      "city",
+      "=",
+      "value",
+      "and",
+      "t1",
+      ".",
+      "year",
+      "=",
+      "value"
+    ],
+    "question": "2018年に「London」のすべての支店で合計何ポンドが購入されましたか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          2018.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(*) FROM purchase AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.level  =  6",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "purchase",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T2.member_id",
+      "WHERE",
+      "T2.level",
+      "=",
+      "6"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "purchase",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t2",
+      ".",
+      "level",
+      "=",
+      "value"
+    ],
+    "question": "レベル6のメンバーの合計購入数はいくつですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          6.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(*) FROM purchase AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.level  =  6",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "purchase",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T2.member_id",
+      "WHERE",
+      "T2.level",
+      "=",
+      "6"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "purchase",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t2",
+      ".",
+      "level",
+      "=",
+      "value"
+    ],
+    "question": "レベル6と評価されたメンバーの合計購入額はいくらですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          6.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id WHERE T3.Hometown  =  'Louisville ,  Kentucky' INTERSECT SELECT T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id WHERE T3.Hometown  =  'Hiram ,  Georgia'",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "WHERE",
+      "T3.Hometown",
+      "=",
+      "'Louisville",
+      ",",
+      "Kentucky",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "WHERE",
+      "T3.Hometown",
+      "=",
+      "'Hiram",
+      ",",
+      "Georgia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "where",
+      "t3",
+      ".",
+      "hometown",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "where",
+      "t3",
+      ".",
+      "hometown",
+      "=",
+      "value"
+    ],
+    "question": "「Kentucky」州「Louisville」にメンバーがいて、「Georgia」州「Hiram」にメンバーがいる支店の名前を見つけます。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Louisville ,  Kentucky\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "\"Hiram ,  Georgia\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id WHERE T3.Hometown  =  'Louisville ,  Kentucky' INTERSECT SELECT T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id WHERE T3.Hometown  =  'Hiram ,  Georgia'",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "WHERE",
+      "T3.Hometown",
+      "=",
+      "'Louisville",
+      ",",
+      "Kentucky",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "WHERE",
+      "T3.Hometown",
+      "=",
+      "'Hiram",
+      ",",
+      "Georgia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "where",
+      "t3",
+      ".",
+      "hometown",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "where",
+      "t3",
+      ".",
+      "hometown",
+      "=",
+      "value"
+    ],
+    "question": "「Kentucky」州「Louisville」に故郷のメンバーがいる支部と、「Georgia」州「Hiram」の支部の名前は何ですか。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Louisville ,  Kentucky\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "\"Hiram ,  Georgia\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT card_number FROM member WHERE Hometown LIKE \"%Kentucky%\"",
+    "query_toks": [
+      "SELECT",
+      "card_number",
+      "FROM",
+      "member",
+      "WHERE",
+      "Hometown",
+      "LIKE",
+      "``",
+      "%",
+      "Kentucky",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "card_number",
+      "from",
+      "member",
+      "where",
+      "hometown",
+      "like",
+      "value"
+    ],
+    "question": "出身地の住所に「Kentucky」という単語が含まれているすべてのメンバーのカード番号をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Kentucky%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT card_number FROM member WHERE Hometown LIKE \"%Kentucky%\"",
+    "query_toks": [
+      "SELECT",
+      "card_number",
+      "FROM",
+      "member",
+      "WHERE",
+      "Hometown",
+      "LIKE",
+      "``",
+      "%",
+      "Kentucky",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "card_number",
+      "from",
+      "member",
+      "where",
+      "hometown",
+      "like",
+      "value"
+    ],
+    "question": "「Kentucky」州の会員のカード番号は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Kentucky%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

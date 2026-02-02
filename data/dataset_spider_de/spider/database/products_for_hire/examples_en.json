@@ -1,0 +1,2558 @@
+[
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT T1.good_or_bad_customer FROM customers AS T1 JOIN discount_coupons AS T2 ON T1.coupon_id  =  T2.coupon_id WHERE T2.coupon_amount  =  500",
+    "query_toks": [
+      "SELECT",
+      "T1.good_or_bad_customer",
+      "FROM",
+      "customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "discount_coupons",
+      "AS",
+      "T2",
+      "ON",
+      "T1.coupon_id",
+      "=",
+      "T2.coupon_id",
+      "WHERE",
+      "T2.coupon_amount",
+      "=",
+      "500"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "good_or_bad_customer",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "discount_coupons",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coupon_id",
+      "=",
+      "t2",
+      ".",
+      "coupon_id",
+      "where",
+      "t2",
+      ".",
+      "coupon_amount",
+      "=",
+      "value"
+    ],
+    "question": "Are the customers holding coupons with amount 500 bad or good?",
+    "question_toks": [
+      "Are",
+      "the",
+      "customers",
+      "holding",
+      "coupons",
+      "with",
+      "amount",
+      "500",
+      "bad",
+      "or",
+      "good",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          500.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT T1.customer_id ,  T1.first_name ,  count(*) FROM Customers AS T1 JOIN bookings AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_id",
+      ",",
+      "T1.first_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "bookings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_id",
+      ",",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "bookings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id"
+    ],
+    "question": "How many bookings did each customer make? List the customer id, first name, and the count.",
+    "question_toks": [
+      "How",
+      "many",
+      "bookings",
+      "did",
+      "each",
+      "customer",
+      "make",
+      "?",
+      "List",
+      "the",
+      "customer",
+      "id",
+      ",",
+      "first",
+      "name",
+      ",",
+      "and",
+      "the",
+      "count",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT customer_id ,  sum(amount_paid) FROM Payments GROUP BY customer_id ORDER BY sum(amount_paid) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "customer_id",
+      ",",
+      "sum",
+      "(",
+      "amount_paid",
+      ")",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "customer_id",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "amount_paid",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_id",
+      ",",
+      "sum",
+      "(",
+      "amount_paid",
+      ")",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "customer_id",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "amount_paid",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What is the maximum total amount paid by a customer? List the customer id and amount.",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "maximum",
+      "total",
+      "amount",
+      "paid",
+      "by",
+      "a",
+      "customer",
+      "?",
+      "List",
+      "the",
+      "customer",
+      "id",
+      "and",
+      "amount",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          30,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              4,
+              35,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                30,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                35,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT T1.booking_id ,  T1.amount_of_refund FROM Bookings AS T1 JOIN Payments AS T2 ON T1.booking_id  =  T2.booking_id GROUP BY T1.booking_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.booking_id",
+      ",",
+      "T1.amount_of_refund",
+      "FROM",
+      "Bookings",
+      "AS",
+      "T1",
+      "JOIN",
+      "Payments",
+      "AS",
+      "T2",
+      "ON",
+      "T1.booking_id",
+      "=",
+      "T2.booking_id",
+      "GROUP",
+      "BY",
+      "T1.booking_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "booking_id",
+      ",",
+      "t1",
+      ".",
+      "amount_of_refund",
+      "from",
+      "bookings",
+      "as",
+      "t1",
+      "join",
+      "payments",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "booking_id",
+      "=",
+      "t2",
+      ".",
+      "booking_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "booking_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What are the id and the amount of refund of the booking that incurred the most times of payments?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "id",
+      "and",
+      "the",
+      "amount",
+      "of",
+      "refund",
+      "of",
+      "the",
+      "booking",
+      "that",
+      "incurred",
+      "the",
+      "most",
+      "times",
+      "of",
+      "payments",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT product_id FROM products_booked GROUP BY product_id HAVING count(*)  =  3",
+    "query_toks": [
+      "SELECT",
+      "product_id",
+      "FROM",
+      "products_booked",
+      "GROUP",
+      "BY",
+      "product_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_id",
+      "from",
+      "products_booked",
+      "group",
+      "by",
+      "product_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question": "What is the id of the product that is booked for 3 times?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "id",
+      "of",
+      "the",
+      "product",
+      "that",
+      "is",
+      "booked",
+      "for",
+      "3",
+      "times",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          37,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                37,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT T2.product_description FROM products_booked AS T1 JOIN products_for_hire AS T2 ON T1.product_id  =  T2.product_id WHERE T1.booked_amount  =  102.76",
+    "query_toks": [
+      "SELECT",
+      "T2.product_description",
+      "FROM",
+      "products_booked",
+      "AS",
+      "T1",
+      "JOIN",
+      "products_for_hire",
+      "AS",
+      "T2",
+      "ON",
+      "T1.product_id",
+      "=",
+      "T2.product_id",
+      "WHERE",
+      "T1.booked_amount",
+      "=",
+      "102.76"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "product_description",
+      "from",
+      "products_booked",
+      "as",
+      "t1",
+      "join",
+      "products_for_hire",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "where",
+      "t1",
+      ".",
+      "booked_amount",
+      "=",
+      "value"
+    ],
+    "question": "What is the product description of the product booked with an amount of 102.76?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "product",
+      "description",
+      "of",
+      "the",
+      "product",
+      "booked",
+      "with",
+      "an",
+      "amount",
+      "of",
+      "102.76",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                37,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              41,
+              false
+            ],
+            null
+          ],
+          102.76,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT T3.booking_start_date ,   T3.booking_end_date FROM Products_for_hire AS T1 JOIN products_booked AS T2 ON T1.product_id  =  T2.product_id JOIN bookings AS T3 ON T2.booking_id  =  T3.booking_id WHERE T1.product_name  =  'Book collection A'",
+    "query_toks": [
+      "SELECT",
+      "T3.booking_start_date",
+      ",",
+      "T3.booking_end_date",
+      "FROM",
+      "Products_for_hire",
+      "AS",
+      "T1",
+      "JOIN",
+      "products_booked",
+      "AS",
+      "T2",
+      "ON",
+      "T1.product_id",
+      "=",
+      "T2.product_id",
+      "JOIN",
+      "bookings",
+      "AS",
+      "T3",
+      "ON",
+      "T2.booking_id",
+      "=",
+      "T3.booking_id",
+      "WHERE",
+      "T1.product_name",
+      "=",
+      "'Book",
+      "collection",
+      "A",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "booking_start_date",
+      ",",
+      "t3",
+      ".",
+      "booking_end_date",
+      "from",
+      "products_for_hire",
+      "as",
+      "t1",
+      "join",
+      "products_booked",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "join",
+      "bookings",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "booking_id",
+      "=",
+      "t3",
+      ".",
+      "booking_id",
+      "where",
+      "t1",
+      ".",
+      "product_name",
+      "=",
+      "value"
+    ],
+    "question": "What are the start date and end date of the booking that has booked the product named 'Book collection A'?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "start",
+      "date",
+      "and",
+      "end",
+      "date",
+      "of",
+      "the",
+      "booking",
+      "that",
+      "has",
+      "booked",
+      "the",
+      "product",
+      "named",
+      "'Book",
+      "collection",
+      "A",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              37,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                36,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              26,
+              false
+            ],
+            null
+          ],
+          "\"Book collection A\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT T2.product_name FROM view_product_availability AS T1 JOIN products_for_hire AS T2 ON T1.product_id  =  T2.product_id WHERE T1.available_yn  =  1",
+    "query_toks": [
+      "SELECT",
+      "T2.product_name",
+      "FROM",
+      "view_product_availability",
+      "AS",
+      "T1",
+      "JOIN",
+      "products_for_hire",
+      "AS",
+      "T2",
+      "ON",
+      "T1.product_id",
+      "=",
+      "T2.product_id",
+      "WHERE",
+      "T1.available_yn",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "product_name",
+      "from",
+      "view_product_availability",
+      "as",
+      "t1",
+      "join",
+      "products_for_hire",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "where",
+      "t1",
+      ".",
+      "available_yn",
+      "=",
+      "value"
+    ],
+    "question": "What are the names of products whose availability equals to 1?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "names",
+      "of",
+      "products",
+      "whose",
+      "availability",
+      "equals",
+      "to",
+      "1",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                42,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              45,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT count(DISTINCT product_type_code) FROM products_for_hire",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "product_type_code",
+      ")",
+      "FROM",
+      "products_for_hire"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "product_type_code",
+      ")",
+      "from",
+      "products_for_hire"
+    ],
+    "question": "How many different product types are there?",
+    "question_toks": [
+      "How",
+      "many",
+      "different",
+      "product",
+      "types",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                24,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT first_name ,  last_name ,  gender_mf FROM customers WHERE good_or_bad_customer  =  'good' ORDER BY last_name",
+    "query_toks": [
+      "SELECT",
+      "first_name",
+      ",",
+      "last_name",
+      ",",
+      "gender_mf",
+      "FROM",
+      "customers",
+      "WHERE",
+      "good_or_bad_customer",
+      "=",
+      "'good",
+      "'",
+      "ORDER",
+      "BY",
+      "last_name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "first_name",
+      ",",
+      "last_name",
+      ",",
+      "gender_mf",
+      "from",
+      "customers",
+      "where",
+      "good_or_bad_customer",
+      "=",
+      "value",
+      "order",
+      "by",
+      "last_name"
+    ],
+    "question": "What are the first name, last name, and gender of all the good customers? Order by their last name.",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "first",
+      "name",
+      ",",
+      "last",
+      "name",
+      ",",
+      "and",
+      "gender",
+      "of",
+      "all",
+      "the",
+      "good",
+      "customers",
+      "?",
+      "Order",
+      "by",
+      "their",
+      "last",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"good\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT avg(amount_due) FROM payments",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "amount_due",
+      ")",
+      "FROM",
+      "payments"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "amount_due",
+      ")",
+      "from",
+      "payments"
+    ],
+    "question": "What is the average amount due for all the payments?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "amount",
+      "due",
+      "for",
+      "all",
+      "the",
+      "payments",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT max(booked_count) ,  min(booked_count) ,  avg(booked_count) FROM products_booked",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "booked_count",
+      ")",
+      ",",
+      "min",
+      "(",
+      "booked_count",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "booked_count",
+      ")",
+      "FROM",
+      "products_booked"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "booked_count",
+      ")",
+      ",",
+      "min",
+      "(",
+      "booked_count",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "booked_count",
+      ")",
+      "from",
+      "products_booked"
+    ],
+    "question": "What are the maximum, minimum, and average booked count for the products booked?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "maximum",
+      ",",
+      "minimum",
+      ",",
+      "and",
+      "average",
+      "booked",
+      "count",
+      "for",
+      "the",
+      "products",
+      "booked",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                40,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                40,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                40,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT DISTINCT payment_type_code FROM payments",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "payment_type_code",
+      "FROM",
+      "payments"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "payment_type_code",
+      "from",
+      "payments"
+    ],
+    "question": "What are all the distinct payment types?",
+    "question_toks": [
+      "What",
+      "are",
+      "all",
+      "the",
+      "distinct",
+      "payment",
+      "types",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT daily_hire_cost FROM Products_for_hire WHERE product_name LIKE '%Book%'",
+    "query_toks": [
+      "SELECT",
+      "daily_hire_cost",
+      "FROM",
+      "Products_for_hire",
+      "WHERE",
+      "product_name",
+      "LIKE",
+      "'",
+      "%",
+      "Book",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "daily_hire_cost",
+      "from",
+      "products_for_hire",
+      "where",
+      "product_name",
+      "like",
+      "value"
+    ],
+    "question": "What are the daily hire costs for the products with substring 'Book' in its name?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "daily",
+      "hire",
+      "costs",
+      "for",
+      "the",
+      "products",
+      "with",
+      "substring",
+      "'Book",
+      "'",
+      "in",
+      "its",
+      "name",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              26,
+              false
+            ],
+            null
+          ],
+          "\"%Book%\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT count(*) FROM Products_for_hire WHERE product_id NOT IN ( SELECT product_id FROM products_booked WHERE booked_amount  >  200 )",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Products_for_hire",
+      "WHERE",
+      "product_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "product_id",
+      "FROM",
+      "products_booked",
+      "WHERE",
+      "booked_amount",
+      ">",
+      "200",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "products_for_hire",
+      "where",
+      "product_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "product_id",
+      "from",
+      "products_booked",
+      "where",
+      "booked_amount",
+      ">",
+      "value",
+      ")"
+    ],
+    "question": "How many products are never booked with amount higher than 200?",
+    "question_toks": [
+      "How",
+      "many",
+      "products",
+      "are",
+      "never",
+      "booked",
+      "with",
+      "amount",
+      "higher",
+      "than",
+      "200",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  5
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      37,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    41,
+                    false
+                  ],
+                  null
+                ],
+                200.0,
+                null
+              ]
+            ]
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT T1.coupon_amount FROM Discount_Coupons AS T1 JOIN customers AS T2 ON T1.coupon_id  =  T2.coupon_id WHERE T2.good_or_bad_customer  =  'good' INTERSECT SELECT T1.coupon_amount FROM Discount_Coupons AS T1 JOIN customers AS T2 ON T1.coupon_id  =  T2.coupon_id WHERE T2.good_or_bad_customer  =  'bad'",
+    "query_toks": [
+      "SELECT",
+      "T1.coupon_amount",
+      "FROM",
+      "Discount_Coupons",
+      "AS",
+      "T1",
+      "JOIN",
+      "customers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.coupon_id",
+      "=",
+      "T2.coupon_id",
+      "WHERE",
+      "T2.good_or_bad_customer",
+      "=",
+      "'good",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T1.coupon_amount",
+      "FROM",
+      "Discount_Coupons",
+      "AS",
+      "T1",
+      "JOIN",
+      "customers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.coupon_id",
+      "=",
+      "T2.coupon_id",
+      "WHERE",
+      "T2.good_or_bad_customer",
+      "=",
+      "'bad",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "coupon_amount",
+      "from",
+      "discount_coupons",
+      "as",
+      "t1",
+      "join",
+      "customers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coupon_id",
+      "=",
+      "t2",
+      ".",
+      "coupon_id",
+      "where",
+      "t2",
+      ".",
+      "good_or_bad_customer",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "coupon_amount",
+      "from",
+      "discount_coupons",
+      "as",
+      "t1",
+      "join",
+      "customers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coupon_id",
+      "=",
+      "t2",
+      ".",
+      "coupon_id",
+      "where",
+      "t2",
+      ".",
+      "good_or_bad_customer",
+      "=",
+      "value"
+    ],
+    "question": "What are the coupon amount of the coupons owned by both good and bad customers?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "coupon",
+      "amount",
+      "of",
+      "the",
+      "coupons",
+      "owned",
+      "by",
+      "both",
+      "good",
+      "and",
+      "bad",
+      "customers",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            "\"bad\"",
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"good\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT payment_date FROM payments WHERE amount_paid  >  300 OR payment_type_code  =  'Check'",
+    "query_toks": [
+      "SELECT",
+      "payment_date",
+      "FROM",
+      "payments",
+      "WHERE",
+      "amount_paid",
+      ">",
+      "300",
+      "OR",
+      "payment_type_code",
+      "=",
+      "'Check",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_date",
+      "from",
+      "payments",
+      "where",
+      "amount_paid",
+      ">",
+      "value",
+      "or",
+      "payment_type_code",
+      "=",
+      "value"
+    ],
+    "question": "What are the payment date of the payment with amount paid higher than 300 or with payment type is 'Check'",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "payment",
+      "date",
+      "of",
+      "the",
+      "payment",
+      "with",
+      "amount",
+      "paid",
+      "higher",
+      "than",
+      "300",
+      "or",
+      "with",
+      "payment",
+      "type",
+      "is",
+      "'Check",
+      "'"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              35,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              31,
+              false
+            ],
+            null
+          ],
+          "\"Check\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "products_for_hire",
+    "query": "SELECT product_name ,  product_description FROM products_for_hire WHERE product_type_code  =  'Cutlery' AND daily_hire_cost  <  20",
+    "query_toks": [
+      "SELECT",
+      "product_name",
+      ",",
+      "product_description",
+      "FROM",
+      "products_for_hire",
+      "WHERE",
+      "product_type_code",
+      "=",
+      "'Cutlery",
+      "'",
+      "AND",
+      "daily_hire_cost",
+      "<",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_name",
+      ",",
+      "product_description",
+      "from",
+      "products_for_hire",
+      "where",
+      "product_type_code",
+      "=",
+      "value",
+      "and",
+      "daily_hire_cost",
+      "<",
+      "value"
+    ],
+    "question": "What are the names and descriptions of the products that are of 'Cutlery' type and have daily hire cost lower than 20?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "names",
+      "and",
+      "descriptions",
+      "of",
+      "the",
+      "products",
+      "that",
+      "are",
+      "of",
+      "'Cutlery",
+      "'",
+      "type",
+      "and",
+      "have",
+      "daily",
+      "hire",
+      "cost",
+      "lower",
+      "than",
+      "20",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ],
+          "\"Cutlery\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ],
+          20.0,
+          null
+        ]
+      ]
+    }
+  }
+]

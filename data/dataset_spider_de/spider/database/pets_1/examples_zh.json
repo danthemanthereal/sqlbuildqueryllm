@@ -1,0 +1,7584 @@
+[
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(*) FROM pets WHERE weight  >  10",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "pets",
+      "WHERE",
+      "weight",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "pets",
+      "where",
+      "weight",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the number of pets whose weight is heavier than 10.",
+    "question": "找出体重大于10的宠物的数量。",
+    "question_cspider": "找出体重大于10的宠物的数量。",
+    "bleu_from_cspider_question": "BLEU = 37.26, 78.6/53.8/33.3/18.2 (BP=0.931, ratio=0.933, hyp_len=14, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "体",
+      "重",
+      "超",
+      "过",
+      "1",
+      "0",
+      "的",
+      "宠",
+      "物",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(*) FROM pets WHERE weight  >  10",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "pets",
+      "WHERE",
+      "weight",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "pets",
+      "where",
+      "weight",
+      ">",
+      "value"
+    ],
+    "question_spider": "How many pets have a greater weight than 10?",
+    "question": "有多少宠物的体重比10大？",
+    "question_cspider": "有多少宠物的体重比10大？",
+    "bleu_from_cspider_question": "BLEU = 40.90, 85.7/53.8/33.3/18.2 (BP=1.000, ratio=1.077, hyp_len=14, ref_len=13)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "只",
+      "宠",
+      "物",
+      "的",
+      "体",
+      "重",
+      "大",
+      "于",
+      "1",
+      "0",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT weight FROM pets ORDER BY pet_age LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "weight",
+      "FROM",
+      "pets",
+      "ORDER",
+      "BY",
+      "pet_age",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "weight",
+      "from",
+      "pets",
+      "order",
+      "by",
+      "pet_age",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the weight of the youngest dog.",
+    "question": "找到最年轻的“dog”的体重。",
+    "question_cspider": "找到最年轻的狗的体重。",
+    "bleu_from_cspider_question": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=11, ref_len=11)",
+    "question_toks": [
+      "找",
+      "到",
+      "最",
+      "年",
+      "轻",
+      "的",
+      "狗",
+      "的",
+      "体",
+      "重",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT weight FROM pets ORDER BY pet_age LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "weight",
+      "FROM",
+      "pets",
+      "ORDER",
+      "BY",
+      "pet_age",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "weight",
+      "from",
+      "pets",
+      "order",
+      "by",
+      "pet_age",
+      "limit",
+      "value"
+    ],
+    "question_spider": "How much does the youngest dog weigh?",
+    "question": "最年轻的“dog”有多重？",
+    "question_cspider": "最年轻的狗有多重？",
+    "bleu_from_cspider_question": "BLEU = 0.00, 75.0/14.3/0.0/0.0 (BP=0.882, ratio=0.889, hyp_len=8, ref_len=9)",
+    "question_toks": [
+      "最",
+      "小",
+      "的",
+      "狗",
+      "重",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT max(weight) ,  petType FROM pets GROUP BY petType",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "petType",
+      "FROM",
+      "pets",
+      "GROUP",
+      "BY",
+      "petType"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "pettype",
+      "from",
+      "pets",
+      "group",
+      "by",
+      "pettype"
+    ],
+    "question_spider": "Find the maximum weight for each type of pet. List the maximum weight and pet type.",
+    "question": "找出每种宠物的最大重量。列出最大重量和宠物类型。",
+    "question_cspider": "找出每种宠物的最大重量。列出最大重量和宠物类型。",
+    "bleu_from_cspider_question": "BLEU = 92.11, 95.8/91.3/90.9/90.5 (BP=1.000, ratio=1.000, hyp_len=24, ref_len=24)",
+    "question_toks": [
+      "找",
+      "到",
+      "每",
+      "种",
+      "宠",
+      "物",
+      "的",
+      "最",
+      "大",
+      "重",
+      "量",
+      "。",
+      "列",
+      "出",
+      "最",
+      "大",
+      "重",
+      "量",
+      "和",
+      "宠",
+      "物",
+      "类",
+      "型",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT max(weight) ,  petType FROM pets GROUP BY petType",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "petType",
+      "FROM",
+      "pets",
+      "GROUP",
+      "BY",
+      "petType"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "pettype",
+      "from",
+      "pets",
+      "group",
+      "by",
+      "pettype"
+    ],
+    "question_spider": "List the maximum weight and type for each type of pet.",
+    "question": "列出每种宠物的最大重量和类型。",
+    "question_cspider": "列出每种宠物的最大重量和类型。",
+    "bleu_from_cspider_question": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "列",
+      "出",
+      "每",
+      "种",
+      "宠",
+      "物",
+      "的",
+      "最",
+      "大",
+      "重",
+      "量",
+      "和",
+      "类",
+      "型",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "WHERE",
+      "T1.age",
+      ">",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "where",
+      "t1",
+      ".",
+      "age",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find number of pets owned by students who are older than 20.",
+    "question": "找出20岁以上学生拥有的宠物数量。",
+    "question_cspider": "找出20岁以上学生拥有的宠物数量。",
+    "bleu_from_cspider_question": "BLEU = 65.31, 88.2/68.8/60.0/50.0 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "2",
+      "0",
+      "岁",
+      "以",
+      "上",
+      "的",
+      "学",
+      "生",
+      "拥",
+      "有",
+      "的",
+      "宠",
+      "物",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          20.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "WHERE",
+      "T1.age",
+      ">",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "where",
+      "t1",
+      ".",
+      "age",
+      ">",
+      "value"
+    ],
+    "question_spider": "How many pets are owned by students that have an age greater than 20?",
+    "question": "年龄大于20岁的学生拥有多少宠物？",
+    "question_cspider": "年龄大于20岁的学生拥有多少宠物？",
+    "bleu_from_cspider_question": "BLEU = 83.94, 94.4/88.2/81.2/73.3 (BP=1.000, ratio=1.059, hyp_len=18, ref_len=17)",
+    "question_toks": [
+      "年",
+      "龄",
+      "大",
+      "于",
+      "2",
+      "0",
+      "岁",
+      "的",
+      "学",
+      "生",
+      "拥",
+      "有",
+      "多",
+      "少",
+      "只",
+      "宠",
+      "物",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          20.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T2.petid",
+      "=",
+      "T3.petid",
+      "WHERE",
+      "T1.sex",
+      "=",
+      "'F",
+      "'",
+      "AND",
+      "T3.pettype",
+      "=",
+      "'dog",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "petid",
+      "=",
+      "t3",
+      ".",
+      "petid",
+      "where",
+      "t1",
+      ".",
+      "sex",
+      "=",
+      "value",
+      "and",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the number of dog pets that are raised by female students (with sex F).",
+    "question": "找出由女学生（性别为“F”）养的宠物“dog”的数量。",
+    "question_cspider": "找出由女学生（性别为“女”）养的宠物狗的数量。",
+    "bleu_from_cspider_question": "BLEU = 42.61, 85.7/55.0/36.8/27.8 (BP=0.909, ratio=0.913, hyp_len=21, ref_len=23)",
+    "question_toks": [
+      "查",
+      "找",
+      "女",
+      "学",
+      "生",
+      "（",
+      "性",
+      "别",
+      "为",
+      "F",
+      "）",
+      "饲",
+      "养",
+      "的",
+      "狗",
+      "宠",
+      "物",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"F\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"dog\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T2.petid",
+      "=",
+      "T3.petid",
+      "WHERE",
+      "T1.sex",
+      "=",
+      "'F",
+      "'",
+      "AND",
+      "T3.pettype",
+      "=",
+      "'dog",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "petid",
+      "=",
+      "t3",
+      ".",
+      "petid",
+      "where",
+      "t1",
+      ".",
+      "sex",
+      "=",
+      "value",
+      "and",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many dog pets are raised by female students?",
+    "question": "女学生养了多少只宠物“dog”？",
+    "question_cspider": "女学生养了多少只宠物狗？",
+    "bleu_from_cspider_question": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "女",
+      "学",
+      "生",
+      "养",
+      "了",
+      "多",
+      "少",
+      "只",
+      "宠",
+      "物",
+      "狗",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"F\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"dog\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(DISTINCT pettype) FROM pets",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "pettype",
+      ")",
+      "FROM",
+      "pets"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "pettype",
+      ")",
+      "from",
+      "pets"
+    ],
+    "question_spider": "Find the number of distinct type of pets.",
+    "question": "找出不同类型宠物的数量。",
+    "question_cspider": "找出不同类型宠物的数量。",
+    "bleu_from_cspider_question": "BLEU = 59.23, 84.6/66.7/54.5/40.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "查",
+      "找",
+      "不",
+      "同",
+      "类",
+      "型",
+      "的",
+      "宠",
+      "物",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(DISTINCT pettype) FROM pets",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "pettype",
+      ")",
+      "FROM",
+      "pets"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "pettype",
+      ")",
+      "from",
+      "pets"
+    ],
+    "question_spider": "How many different types of pet are there?",
+    "question": "有多少种不同类型的宠物？",
+    "question_cspider": "有多少种不同类型的宠物？",
+    "bleu_from_cspider_question": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "种",
+      "不",
+      "同",
+      "类",
+      "型",
+      "的",
+      "宠",
+      "物",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.Fname",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'",
+      "OR",
+      "T3.pettype",
+      "=",
+      "'dog",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "fname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      "or",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the first name of students who have cat or dog pet.",
+    "question": "查找有“cat”“dog”宠物的学生的名字。",
+    "question_cspider": "查找有猫狗宠物的学生的名字。",
+    "bleu_from_cspider_question": "BLEU = 80.03, 93.3/85.7/76.9/66.7 (BP=1.000, ratio=1.071, hyp_len=15, ref_len=14)",
+    "question_toks": [
+      "查",
+      "找",
+      "有",
+      "猫",
+      "或",
+      "狗",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"cat\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"dog\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.Fname",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'",
+      "OR",
+      "T3.pettype",
+      "=",
+      "'dog",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "fname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      "or",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the first names of every student who has a cat or dog as a pet?",
+    "question": "每一个养“cat”或“dog”的学生的名字是什么？",
+    "question_cspider": "每一个养猫或狗的学生的名字是什么？",
+    "bleu_from_cspider_question": "BLEU = 64.87, 80.0/68.4/61.1/52.9 (BP=1.000, ratio=1.176, hyp_len=20, ref_len=17)",
+    "question_toks": [
+      "每",
+      "个",
+      "养",
+      "猫",
+      "或",
+      "狗",
+      "作",
+      "为",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"cat\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"dog\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'cat' intersect select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'dog'",
+    "query_toks": [
+      "select",
+      "t1.fname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1.stuid",
+      "=",
+      "t2.stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3.petid",
+      "=",
+      "t2.petid",
+      "where",
+      "t3.pettype",
+      "=",
+      "\"cat\"",
+      "intersect",
+      "select",
+      "t1.fname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1.stuid",
+      "=",
+      "t2.stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3.petid",
+      "=",
+      "t2.petid",
+      "where",
+      "t3.pettype",
+      "=",
+      "\"dog\""
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "fname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the first name of students who have both cat and dog pets .",
+    "question": "找出既有“cat”又有“dog”的学生的名字。",
+    "question_cspider": "找出既有猫又有狗的学生的名字。",
+    "bleu_from_cspider_question": "BLEU = 38.05, 61.1/41.2/31.2/26.7 (BP=1.000, ratio=1.200, hyp_len=18, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "同",
+      "时",
+      "拥",
+      "有",
+      "猫",
+      "和",
+      "狗",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"cat\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  11,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            "\"dog\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
+    "query_toks": [
+      "SELECT",
+      "T1.Fname",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T1.Fname",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'dog",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "fname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the students' first names who have both cats and dogs as pets?",
+    "question": "有“cat”又有“dog”的学生名字是什么？",
+    "question_cspider": "有猫又有狗的学生名字是什么？",
+    "bleu_from_cspider_question": "BLEU = 47.98, 70.0/57.9/44.4/29.4 (BP=1.000, ratio=1.429, hyp_len=20, ref_len=14)",
+    "question_toks": [
+      "既",
+      "有",
+      "猫",
+      "又",
+      "有",
+      "狗",
+      "作",
+      "为",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"cat\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  11,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            "\"dog\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
+    "query_toks": [
+      "SELECT",
+      "major",
+      ",",
+      "age",
+      "FROM",
+      "student",
+      "WHERE",
+      "stuid",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "T1.stuid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "major",
+      ",",
+      "age",
+      "from",
+      "student",
+      "where",
+      "stuid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "t1",
+      ".",
+      "stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      ")"
+    ],
+    "question_spider": "Find the major and age of students who do not have a cat pet.",
+    "question": "找到没有宠物“cat”的学生的专业和年龄。",
+    "question_cspider": "找到没有宠物猫的学生的专业和年龄。",
+    "bleu_from_cspider_question": "BLEU = 64.45, 94.1/68.8/53.3/50.0 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "没",
+      "有",
+      "猫",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "专",
+      "业",
+      "和",
+      "年",
+      "龄",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  1
+                ],
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    9,
+                    false
+                  ],
+                  null
+                ],
+                "and",
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    10,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    12,
+                    false
+                  ],
+                  null
+                ],
+                "\"cat\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
+    "query_toks": [
+      "SELECT",
+      "major",
+      ",",
+      "age",
+      "FROM",
+      "student",
+      "WHERE",
+      "stuid",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "T1.stuid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "major",
+      ",",
+      "age",
+      "from",
+      "student",
+      "where",
+      "stuid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "t1",
+      ".",
+      "stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      ")"
+    ],
+    "question_spider": "What major is every student who does not own a cat as a pet, and also how old are they?",
+    "question": "每个不养“cat”的学生都学什么专业？他们多大了？",
+    "question_cspider": "每个不养猫的学生都学什么专业？他们多大了？",
+    "bleu_from_cspider_question": "BLEU = 49.63, 70.8/56.5/45.5/33.3 (BP=1.000, ratio=1.143, hyp_len=24, ref_len=21)",
+    "question_toks": [
+      "每",
+      "个",
+      "不",
+      "拥",
+      "有",
+      "猫",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "都",
+      "读",
+      "哪",
+      "个",
+      "专",
+      "业",
+      "？",
+      "他",
+      "们",
+      "多",
+      "大",
+      "了",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  1
+                ],
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    9,
+                    false
+                  ],
+                  null
+                ],
+                "and",
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    10,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    12,
+                    false
+                  ],
+                  null
+                ],
+                "\"cat\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'",
+    "query_toks": [
+      "SELECT",
+      "stuid",
+      "FROM",
+      "student",
+      "EXCEPT",
+      "SELECT",
+      "T1.stuid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "stuid",
+      "from",
+      "student",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the id of students who do not have a cat pet.",
+    "question": "找到没有宠物“cat”的学生的ID。",
+    "question_cspider": "找到没有宠物猫的学生的ID。",
+    "bleu_from_cspider_question": "BLEU = 24.07, 73.3/35.7/15.4/8.3 (BP=1.000, ratio=1.071, hyp_len=15, ref_len=14)",
+    "question_toks": [
+      "查",
+      "找",
+      "没",
+      "有",
+      "猫",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "身",
+      "份",
+      "证",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  11,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            "\"cat\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'",
+    "query_toks": [
+      "SELECT",
+      "stuid",
+      "FROM",
+      "student",
+      "EXCEPT",
+      "SELECT",
+      "T1.stuid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "stuid",
+      "from",
+      "student",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the ids of the students who do not own cats as pets?",
+    "question": "那些没有“cat”的学生的ID是什么？",
+    "question_cspider": "那些没有猫的学生的ID是什么？",
+    "bleu_from_cspider_question": "BLEU = 27.85, 52.6/38.9/23.5/12.5 (BP=1.000, ratio=1.267, hyp_len=19, ref_len=15)",
+    "question_toks": [
+      "不",
+      "拥",
+      "有",
+      "猫",
+      "作",
+      "为",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "身",
+      "份",
+      "证",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  11,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            "\"cat\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
+    "query_toks": [
+      "SELECT",
+      "T1.fname",
+      ",",
+      "T1.age",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'dog",
+      "'",
+      "AND",
+      "T1.stuid",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "T1.stuid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fname",
+      ",",
+      "t1",
+      ".",
+      "age",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      "and",
+      "t1",
+      ".",
+      "stuid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "t1",
+      ".",
+      "stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      ")"
+    ],
+    "question_spider": "Find the first name and age of students who have a dog but do not have a cat as a pet.",
+    "question": "找出有“dog”但没有“cat”的学生的名字和年龄。",
+    "question_cspider": "找出有狗但没有猫的学生的名字和年龄。",
+    "bleu_from_cspider_question": "BLEU = 63.51, 77.3/66.7/60.0/52.6 (BP=1.000, ratio=1.222, hyp_len=22, ref_len=18)",
+    "question_toks": [
+      "查",
+      "找",
+      "有",
+      "狗",
+      "但",
+      "没",
+      "有",
+      "猫",
+      "作",
+      "为",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "和",
+      "年",
+      "龄",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"dog\"",
+          null
+        ],
+        "and",
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  1
+                ],
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    9,
+                    false
+                  ],
+                  null
+                ],
+                "and",
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    10,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    12,
+                    false
+                  ],
+                  null
+                ],
+                "\"cat\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
+    "query_toks": [
+      "SELECT",
+      "T1.fname",
+      ",",
+      "T1.age",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'dog",
+      "'",
+      "AND",
+      "T1.stuid",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "T1.stuid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fname",
+      ",",
+      "t1",
+      ".",
+      "age",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      "and",
+      "t1",
+      ".",
+      "stuid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "t1",
+      ".",
+      "stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value",
+      ")"
+    ],
+    "question_spider": "What is the first name of every student who has a dog but does not have a cat?",
+    "question": "养“dog”但没有养“cat”的学生的名字是什么？",
+    "question_cspider": "养狗但没有养猫的学生的名字是什么？",
+    "bleu_from_cspider_question": "BLEU = 71.60, 83.3/76.5/68.8/60.0 (BP=1.000, ratio=1.059, hyp_len=18, ref_len=17)",
+    "question_toks": [
+      "每",
+      "个",
+      "有",
+      "狗",
+      "但",
+      "没",
+      "有",
+      "猫",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"dog\"",
+          null
+        ],
+        "and",
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  1
+                ],
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    9,
+                    false
+                  ],
+                  null
+                ],
+                "and",
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    10,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    12,
+                    false
+                  ],
+                  null
+                ],
+                "\"cat\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "pettype",
+      ",",
+      "weight",
+      "FROM",
+      "pets",
+      "ORDER",
+      "BY",
+      "pet_age",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "pettype",
+      ",",
+      "weight",
+      "from",
+      "pets",
+      "order",
+      "by",
+      "pet_age",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the type and weight of the youngest pet.",
+    "question": "找出最年轻的宠物的类型和体重。",
+    "question_cspider": "找出最年轻的宠物的类型和体重。",
+    "bleu_from_cspider_question": "BLEU = 86.66, 93.3/85.7/84.6/83.3 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "最",
+      "年",
+      "轻",
+      "的",
+      "宠",
+      "物",
+      "的",
+      "类",
+      "型",
+      "和",
+      "体",
+      "重",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "pettype",
+      ",",
+      "weight",
+      "FROM",
+      "pets",
+      "ORDER",
+      "BY",
+      "pet_age",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "pettype",
+      ",",
+      "weight",
+      "from",
+      "pets",
+      "order",
+      "by",
+      "pet_age",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What type of pet is the youngest animal, and how much does it weigh?",
+    "question": "最年轻的宠物是什么类型的，它的重量是多少？",
+    "question_cspider": "最年轻的宠物是什么类型的，它的重量是多少？",
+    "bleu_from_cspider_question": "BLEU = 33.55, 75.0/52.6/33.3/11.8 (BP=0.951, ratio=0.952, hyp_len=20, ref_len=21)",
+    "question_toks": [
+      "哪",
+      "种",
+      "宠",
+      "物",
+      "是",
+      "最",
+      "年",
+      "轻",
+      "的",
+      "动",
+      "物",
+      "，",
+      "它",
+      "的",
+      "体",
+      "重",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT petid ,  weight FROM pets WHERE pet_age  >  1",
+    "query_toks": [
+      "SELECT",
+      "petid",
+      ",",
+      "weight",
+      "FROM",
+      "pets",
+      "WHERE",
+      "pet_age",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "petid",
+      ",",
+      "weight",
+      "from",
+      "pets",
+      "where",
+      "pet_age",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the id and weight of all pets whose age is older than 1.",
+    "question": "找出所有年龄大于1岁的宠物的ID和体重。",
+    "question_cspider": "找出所有年龄大于1岁的宠物的ID和体重。",
+    "bleu_from_cspider_question": "BLEU = 76.15, 94.7/83.3/76.5/68.8 (BP=0.949, ratio=0.950, hyp_len=19, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "年",
+      "龄",
+      "大",
+      "于",
+      "1",
+      "的",
+      "宠",
+      "物",
+      "的",
+      "I",
+      "D",
+      "和",
+      "体",
+      "重",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT petid ,  weight FROM pets WHERE pet_age  >  1",
+    "query_toks": [
+      "SELECT",
+      "petid",
+      ",",
+      "weight",
+      "FROM",
+      "pets",
+      "WHERE",
+      "pet_age",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "petid",
+      ",",
+      "weight",
+      "from",
+      "pets",
+      "where",
+      "pet_age",
+      ">",
+      "value"
+    ],
+    "question_spider": "What is the id and weight of every pet who is older than 1?",
+    "question": "每一个1岁以上的宠物的ID和体重是多少？",
+    "question_cspider": "每一个1岁以上的宠物的ID和体重是多少？",
+    "bleu_from_cspider_question": "BLEU = 65.08, 84.2/72.2/64.7/56.2 (BP=0.949, ratio=0.950, hyp_len=19, ref_len=20)",
+    "question_toks": [
+      "每",
+      "只",
+      "1",
+      "岁",
+      "以",
+      "上",
+      "的",
+      "宠",
+      "物",
+      "的",
+      "身",
+      "分",
+      "和",
+      "体",
+      "重",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "pet_age",
+      ")",
+      ",",
+      "max",
+      "(",
+      "pet_age",
+      ")",
+      ",",
+      "pettype",
+      "FROM",
+      "pets",
+      "GROUP",
+      "BY",
+      "pettype"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "pet_age",
+      ")",
+      ",",
+      "max",
+      "(",
+      "pet_age",
+      ")",
+      ",",
+      "pettype",
+      "from",
+      "pets",
+      "group",
+      "by",
+      "pettype"
+    ],
+    "question_spider": "Find the average and maximum age for each type of pet.",
+    "question": "找出每种宠物的平均年龄和最大年龄。",
+    "question_cspider": "找出每种宠物的平均年龄和最大年龄。",
+    "bleu_from_cspider_question": "BLEU = 88.44, 94.1/87.5/86.7/85.7 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "种",
+      "宠",
+      "物",
+      "的",
+      "平",
+      "均",
+      "年",
+      "龄",
+      "和",
+      "最",
+      "大",
+      "年",
+      "龄",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "pet_age",
+      ")",
+      ",",
+      "max",
+      "(",
+      "pet_age",
+      ")",
+      ",",
+      "pettype",
+      "FROM",
+      "pets",
+      "GROUP",
+      "BY",
+      "pettype"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "pet_age",
+      ")",
+      ",",
+      "max",
+      "(",
+      "pet_age",
+      ")",
+      ",",
+      "pettype",
+      "from",
+      "pets",
+      "group",
+      "by",
+      "pettype"
+    ],
+    "question_spider": "What is the average and maximum age for each pet type?",
+    "question": "每种宠物的平均年龄和最大年龄是多少？",
+    "question_cspider": "每种宠物的平均年龄和最大年龄是多少？",
+    "bleu_from_cspider_question": "BLEU = 83.94, 94.4/88.2/81.2/73.3 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "每",
+      "种",
+      "宠",
+      "物",
+      "的",
+      "平",
+      "均",
+      "年",
+      "龄",
+      "和",
+      "最",
+      "高",
+      "年",
+      "龄",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT avg(weight) ,  pettype FROM pets GROUP BY pettype",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "pettype",
+      "FROM",
+      "pets",
+      "GROUP",
+      "BY",
+      "pettype"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "pettype",
+      "from",
+      "pets",
+      "group",
+      "by",
+      "pettype"
+    ],
+    "question_spider": "Find the average weight for each pet type.",
+    "question": "找到每种宠物类型的平均体重。",
+    "question_cspider": "找到每种宠物类型的平均体重。",
+    "bleu_from_cspider_question": "BLEU = 70.63, 100.0/90.9/80.0/66.7 (BP=0.846, ratio=0.857, hyp_len=12, ref_len=14)",
+    "question_toks": [
+      "找",
+      "到",
+      "每",
+      "种",
+      "宠",
+      "物",
+      "的",
+      "平",
+      "均",
+      "体",
+      "重",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT avg(weight) ,  pettype FROM pets GROUP BY pettype",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "pettype",
+      "FROM",
+      "pets",
+      "GROUP",
+      "BY",
+      "pettype"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "pettype",
+      "from",
+      "pets",
+      "group",
+      "by",
+      "pettype"
+    ],
+    "question_spider": "What is the average weight for each type of pet?",
+    "question": "每种宠物的平均体重是多少？",
+    "question_cspider": "每种宠物的平均体重是多少？",
+    "bleu_from_cspider_question": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "每",
+      "种",
+      "宠",
+      "物",
+      "的",
+      "平",
+      "均",
+      "体",
+      "重",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT DISTINCT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.fname",
+      ",",
+      "T1.age",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "fname",
+      ",",
+      "t1",
+      ".",
+      "age",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid"
+    ],
+    "question_spider": "Find the first name and age of students who have a pet.",
+    "question": "找出有宠物的学生的名字和年龄。",
+    "question_cspider": "找出有宠物的学生的名字和年龄。",
+    "bleu_from_cspider_question": "BLEU = 86.66, 93.3/85.7/84.6/83.3 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "有",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "和",
+      "年",
+      "龄",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT DISTINCT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.fname",
+      ",",
+      "T1.age",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "fname",
+      ",",
+      "t1",
+      ".",
+      "age",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid"
+    ],
+    "question_spider": "What are the different first names and ages of the students who do have pets?",
+    "question": "有宠物的学生有哪些不同的名字和年龄？",
+    "question_cspider": "有宠物的学生有哪些不同的名字和年龄？",
+    "bleu_from_cspider_question": "BLEU = 47.63, 66.7/52.9/43.8/33.3 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "养",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "和",
+      "年",
+      "龄",
+      "分",
+      "别",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'",
+    "query_toks": [
+      "SELECT",
+      "T2.petid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "WHERE",
+      "T1.Lname",
+      "=",
+      "'Smith",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "petid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "where",
+      "t1",
+      ".",
+      "lname",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the id of the pet owned by student whose last name is ‘Smith’.",
+    "question": "找出主人姓氏为“Smith”的宠物的ID。",
+    "question_cspider": "找出有宠物而且姓为“琳”的学生的ID。",
+    "bleu_from_cspider_question": "BLEU = 24.77, 62.5/34.8/18.2/9.5 (BP=1.000, ratio=1.263, hyp_len=24, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "姓",
+      "氏",
+      "为",
+      "“",
+      " ",
+      "S",
+      "m",
+      "i",
+      "t",
+      "h",
+      "”",
+      "的",
+      "学",
+      "生",
+      "拥",
+      "有",
+      "的",
+      "宠",
+      "物",
+      "的",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Smith\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'",
+    "query_toks": [
+      "SELECT",
+      "T2.petid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "WHERE",
+      "T1.Lname",
+      "=",
+      "'Smith",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "petid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "where",
+      "t1",
+      ".",
+      "lname",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the id of the pet owned by the student whose last name is 'Smith'?",
+    "question": "那个姓氏是“Smith”的学生的宠物ID是什么？",
+    "question_cspider": "那个姓“琳”而且有宠物的学生的ID是什么？",
+    "bleu_from_cspider_question": "BLEU = 20.94, 65.0/36.8/16.7/5.9 (BP=0.951, ratio=0.952, hyp_len=20, ref_len=21)",
+    "question_toks": [
+      "该",
+      "学",
+      "生",
+      "姓",
+      "“",
+      "史",
+      "密",
+      "斯",
+      "”",
+      "的",
+      "宠",
+      "物",
+      "的",
+      "身",
+      "份",
+      "证",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Smith\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT count(*) ,  T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.stuid",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "GROUP",
+      "BY",
+      "T1.stuid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "stuid"
+    ],
+    "question_spider": "Find the number of pets for each student who has any pet and student id.",
+    "question": "找出每个有宠物的学生的ID和宠物数量。",
+    "question_cspider": "找出每个有宠物的学生的ID和宠物数量。",
+    "bleu_from_cspider_question": "BLEU = 40.20, 78.9/50.0/35.3/18.8 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "找",
+      "到",
+      "每",
+      "个",
+      "有",
+      "宠",
+      "物",
+      "和",
+      "学",
+      "生",
+      "证",
+      "的",
+      "学",
+      "生",
+      "的",
+      "宠",
+      "物",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "select count(*) ,  t1.stuid from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid group by t1.stuid",
+    "query_toks": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1.stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1.stuid",
+      "=",
+      "t2.stuid",
+      "group",
+      "by",
+      "t1.stuid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "stuid",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "stuid"
+    ],
+    "question_spider": "For students who have pets , how many pets does each student have ? list their ids instead of names .",
+    "question": "对于有宠物的学生，每个学生有多少宠物？",
+    "question_cspider": "对于有宠物的学生，每个学生有多少宠物？",
+    "bleu_from_cspider_question": "BLEU = 45.34, 53.1/48.4/43.3/37.9 (BP=1.000, ratio=1.684, hyp_len=32, ref_len=19)",
+    "question_toks": [
+      "对",
+      "于",
+      "有",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "，",
+      "每",
+      "个",
+      "学",
+      "生",
+      "有",
+      "几",
+      "只",
+      "宠",
+      "物",
+      "？",
+      "列",
+      "出",
+      "他",
+      "们",
+      "的",
+      "I",
+      "D",
+      "而",
+      "不",
+      "是",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T1.fname ,  T1.sex FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.fname",
+      ",",
+      "T1.sex",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "GROUP",
+      "BY",
+      "T1.stuid",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fname",
+      ",",
+      "t1",
+      ".",
+      "sex",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "stuid",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the first name and gender of student who have more than one pet.",
+    "question": "找出拥有不止一只宠物的学生的名字和性别。",
+    "question_cspider": "找出拥有不止一只宠物的学生的名字和性别。",
+    "bleu_from_cspider_question": "BLEU = 58.83, 82.4/68.8/66.7/64.3 (BP=0.838, ratio=0.850, hyp_len=17, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "有",
+      "多",
+      "个",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "和",
+      "性",
+      "别",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T1.fname ,  T1.sex FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.fname",
+      ",",
+      "T1.sex",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "GROUP",
+      "BY",
+      "T1.stuid",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fname",
+      ",",
+      "t1",
+      ".",
+      "sex",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "stuid",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "What is the first name and gender of the all the students who have more than one pet?",
+    "question": "所有拥有多只宠物的学生的名和性别是什么？",
+    "question_cspider": "所有拥有多只宠物的学生的名和性别是什么？",
+    "bleu_from_cspider_question": "BLEU = 50.99, 82.6/63.6/42.9/30.0 (BP=1.000, ratio=1.150, hyp_len=23, ref_len=20)",
+    "question_toks": [
+      "拥",
+      "有",
+      "不",
+      "止",
+      "一",
+      "只",
+      "宠",
+      "物",
+      "的",
+      "所",
+      "有",
+      "学",
+      "生",
+      "的",
+      "名",
+      "字",
+      "和",
+      "性",
+      "别",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'cat'",
+    "query_toks": [
+      "SELECT",
+      "T1.lname",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pet_age",
+      "=",
+      "3",
+      "AND",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "lname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pet_age",
+      "=",
+      "value",
+      "and",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the last name of the student who has a cat that is age 3.",
+    "question": "找出有一只3岁“cat”的学生的姓氏。",
+    "question_cspider": "找出有一只3岁猫的学生的姓氏。",
+    "bleu_from_cspider_question": "BLEU = 65.95, 85.7/69.2/66.7/63.6 (BP=0.931, ratio=0.933, hyp_len=14, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "拥",
+      "有",
+      "3",
+      "岁",
+      "猫",
+      "的",
+      "学",
+      "生",
+      "的",
+      "姓",
+      "氏",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"cat\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'cat'",
+    "query_toks": [
+      "SELECT",
+      "T1.lname",
+      "FROM",
+      "student",
+      "AS",
+      "T1",
+      "JOIN",
+      "has_pet",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stuid",
+      "=",
+      "T2.stuid",
+      "JOIN",
+      "pets",
+      "AS",
+      "T3",
+      "ON",
+      "T3.petid",
+      "=",
+      "T2.petid",
+      "WHERE",
+      "T3.pet_age",
+      "=",
+      "3",
+      "AND",
+      "T3.pettype",
+      "=",
+      "'cat",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "lname",
+      "from",
+      "student",
+      "as",
+      "t1",
+      "join",
+      "has_pet",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stuid",
+      "=",
+      "t2",
+      ".",
+      "stuid",
+      "join",
+      "pets",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "petid",
+      "=",
+      "t2",
+      ".",
+      "petid",
+      "where",
+      "t3",
+      ".",
+      "pet_age",
+      "=",
+      "value",
+      "and",
+      "t3",
+      ".",
+      "pettype",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the last name of the student who has a cat that is 3 years old?",
+    "question": "有一只3岁“cat”的学生的姓氏是什么？",
+    "question_cspider": "有一只3岁猫的学生的姓氏是什么？",
+    "bleu_from_cspider_question": "BLEU = 64.32, 92.9/76.9/66.7/63.6 (BP=0.867, ratio=0.875, hyp_len=14, ref_len=16)",
+    "question_toks": [
+      "养",
+      "猫",
+      "3",
+      "岁",
+      "的",
+      "学",
+      "生",
+      "的",
+      "姓",
+      "氏",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"cat\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "select avg(age) from student where stuid not in (select stuid from has_pet)",
+    "query_toks": [
+      "select",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "from",
+      "student",
+      "where",
+      "stuid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "stuid",
+      "from",
+      "has_pet",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "from",
+      "student",
+      "where",
+      "stuid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "stuid",
+      "from",
+      "has_pet",
+      ")"
+    ],
+    "question_spider": "Find the average age of students who do not have any pet .",
+    "question": "找出没有宠物的学生的平均年龄。",
+    "question_cspider": "找出没有宠物的学生的平均年龄。",
+    "bleu_from_cspider_question": "BLEU = 92.54, 93.3/92.9/92.3/91.7 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "求",
+      "出",
+      "没",
+      "有",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "平",
+      "均",
+      "年",
+      "龄",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      9,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pets_1",
+    "query": "select avg(age) from student where stuid not in (select stuid from has_pet)",
+    "query_toks": [
+      "select",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "from",
+      "student",
+      "where",
+      "stuid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "stuid",
+      "from",
+      "has_pet",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "from",
+      "student",
+      "where",
+      "stuid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "stuid",
+      "from",
+      "has_pet",
+      ")"
+    ],
+    "question_spider": "What is the average age for all students who do not own any pets ?",
+    "question": "所有没有宠物的学生平均年龄是多少？",
+    "question_cspider": "所有没有宠物的学生平均年龄是多少？",
+    "bleu_from_cspider_question": "BLEU = 62.69, 83.3/70.6/56.2/46.7 (BP=1.000, ratio=1.059, hyp_len=18, ref_len=17)",
+    "question_toks": [
+      "所",
+      "有",
+      "不",
+      "养",
+      "宠",
+      "物",
+      "的",
+      "学",
+      "生",
+      "的",
+      "平",
+      "均",
+      "年",
+      "龄",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      9,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

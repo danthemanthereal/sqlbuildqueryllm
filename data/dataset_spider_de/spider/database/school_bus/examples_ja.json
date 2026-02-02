@@ -1,0 +1,1907 @@
+[
+  {
+    "db_id": "school_bus",
+    "query": "SELECT count(*) FROM driver",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "driver"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "driver"
+    ],
+    "question": "ドライバーは何人いますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT name ,  home_city ,  age FROM driver",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "home_city",
+      ",",
+      "age",
+      "FROM",
+      "driver"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "home_city",
+      ",",
+      "age",
+      "from",
+      "driver"
+    ],
+    "question": "すべてのドライバーの名前、出身地、年齢を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT party ,  count(*) FROM driver GROUP BY party",
+    "query_toks": [
+      "SELECT",
+      "party",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "driver",
+      "GROUP",
+      "BY",
+      "party"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "party",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "driver",
+      "group",
+      "by",
+      "party"
+    ],
+    "question": "パーティーと各パーティーのドライバーの数を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT name FROM driver ORDER BY age DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "driver",
+      "ORDER",
+      "BY",
+      "age",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "driver",
+      "order",
+      "by",
+      "age",
+      "desc"
+    ],
+    "question": "年齢の降順でドライバーの名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT DISTINCT home_city FROM driver",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "home_city",
+      "FROM",
+      "driver"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "home_city",
+      "from",
+      "driver"
+    ],
+    "question": "さまざまなホーム都市をすべて表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT home_city FROM driver GROUP BY home_city ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "home_city",
+      "FROM",
+      "driver",
+      "GROUP",
+      "BY",
+      "home_city",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "home_city",
+      "from",
+      "driver",
+      "group",
+      "by",
+      "home_city",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "ドライバーの数が最も多い故郷の都市を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT party FROM driver WHERE home_city  =  'Hartford' AND age  >  40",
+    "query_toks": [
+      "SELECT",
+      "party",
+      "FROM",
+      "driver",
+      "WHERE",
+      "home_city",
+      "=",
+      "'Hartford",
+      "'",
+      "AND",
+      "age",
+      ">",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "party",
+      "from",
+      "driver",
+      "where",
+      "home_city",
+      "=",
+      "value",
+      "and",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "「Hartford」のドライバーと40歳以上のドライバーと一緒にパーティーを見せてください。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Hartford\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          40.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT home_city FROM driver WHERE age  >  40 GROUP BY home_city HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "home_city",
+      "FROM",
+      "driver",
+      "WHERE",
+      "age",
+      ">",
+      "40",
+      "GROUP",
+      "BY",
+      "home_city",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "home_city",
+      "from",
+      "driver",
+      "where",
+      "age",
+      ">",
+      "value",
+      "group",
+      "by",
+      "home_city",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "40歳以上のドライバーが2人以上いる故郷の都市を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          40.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT home_city FROM driver EXCEPT SELECT home_city FROM driver WHERE age  >  40",
+    "query_toks": [
+      "SELECT",
+      "home_city",
+      "FROM",
+      "driver",
+      "EXCEPT",
+      "SELECT",
+      "home_city",
+      "FROM",
+      "driver",
+      "WHERE",
+      "age",
+      ">",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "home_city",
+      "from",
+      "driver",
+      "except",
+      "select",
+      "home_city",
+      "from",
+      "driver",
+      "where",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "40歳以上のドライバーがいる都市を除くすべてのホーム都市を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            40.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT name FROM driver WHERE driver_id NOT IN (SELECT driver_id FROM school_bus)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "driver",
+      "WHERE",
+      "driver_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "driver_id",
+      "FROM",
+      "school_bus",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "driver",
+      "where",
+      "driver_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "driver_id",
+      "from",
+      "school_bus",
+      ")"
+    ],
+    "question": "スクールバスなしで運転手の名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT TYPE FROM school GROUP BY TYPE HAVING count(*)  =  2",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      "FROM",
+      "school",
+      "GROUP",
+      "BY",
+      "TYPE",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      "from",
+      "school",
+      "group",
+      "by",
+      "type",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question": "2つの学校がある学校の種類を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT T2.school ,  T3.name FROM school_bus AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id JOIN driver AS T3 ON T1.driver_id  =  T3.driver_id",
+    "query_toks": [
+      "SELECT",
+      "T2.school",
+      ",",
+      "T3.name",
+      "FROM",
+      "school_bus",
+      "AS",
+      "T1",
+      "JOIN",
+      "school",
+      "AS",
+      "T2",
+      "ON",
+      "T1.school_id",
+      "=",
+      "T2.school_id",
+      "JOIN",
+      "driver",
+      "AS",
+      "T3",
+      "ON",
+      "T1.driver_id",
+      "=",
+      "T3.driver_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "school",
+      ",",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "school_bus",
+      "as",
+      "t1",
+      "join",
+      "school",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "school_id",
+      "=",
+      "t2",
+      ".",
+      "school_id",
+      "join",
+      "driver",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "driver_id",
+      "=",
+      "t3",
+      ".",
+      "driver_id"
+    ],
+    "question": "すべてのスクールバスの学校名と運転手名を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT max(years_working) ,  min(years_working) ,  avg(years_working) FROM school_bus",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "min",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "years_working",
+      ")",
+      "FROM",
+      "school_bus"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "min",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "years_working",
+      ")",
+      "from",
+      "school_bus"
+    ],
+    "question": "スクールバスで働くのに費やした最大、最小、平均年は何年ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT school ,  TYPE FROM school WHERE school_id NOT IN (SELECT school_id FROM school_bus)",
+    "query_toks": [
+      "SELECT",
+      "school",
+      ",",
+      "TYPE",
+      "FROM",
+      "school",
+      "WHERE",
+      "school_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "school_id",
+      "FROM",
+      "school_bus",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "school",
+      ",",
+      "type",
+      "from",
+      "school",
+      "where",
+      "school_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "school_id",
+      "from",
+      "school_bus",
+      ")"
+    ],
+    "question": "スクールバスのない学校の学校名と種類を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT T2.type ,  count(*) FROM school_bus AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id GROUP BY T2.type",
+    "query_toks": [
+      "SELECT",
+      "T2.type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "school_bus",
+      "AS",
+      "T1",
+      "JOIN",
+      "school",
+      "AS",
+      "T2",
+      "ON",
+      "T1.school_id",
+      "=",
+      "T2.school_id",
+      "GROUP",
+      "BY",
+      "T2.type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "school_bus",
+      "as",
+      "t1",
+      "join",
+      "school",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "school_id",
+      "=",
+      "t2",
+      ".",
+      "school_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "type"
+    ],
+    "question": "学校の種類と各種類のバスの数を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT count(*) FROM driver WHERE home_city  =  'Hartford' OR age  <  40",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "driver",
+      "WHERE",
+      "home_city",
+      "=",
+      "'Hartford",
+      "'",
+      "OR",
+      "age",
+      "<",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "driver",
+      "where",
+      "home_city",
+      "=",
+      "value",
+      "or",
+      "age",
+      "<",
+      "value"
+    ],
+    "question": "「Hartford」出身または40歳未満のドライバーは何人いますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Hartford\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          40.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT name FROM driver WHERE home_city  =  'Hartford' AND age  <  40",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "driver",
+      "WHERE",
+      "home_city",
+      "=",
+      "'Hartford",
+      "'",
+      "AND",
+      "age",
+      "<",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "driver",
+      "where",
+      "home_city",
+      "=",
+      "value",
+      "and",
+      "age",
+      "<",
+      "value"
+    ],
+    "question": "「Hartford」から40歳未満のドライバーの名前をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Hartford\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          40.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT t1.name FROM driver AS t1 JOIN school_bus AS t2 ON t1.driver_id  =  t2.driver_id ORDER BY years_working DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "driver",
+      "AS",
+      "t1",
+      "JOIN",
+      "school_bus",
+      "AS",
+      "t2",
+      "ON",
+      "t1.driver_id",
+      "=",
+      "t2.driver_id",
+      "ORDER",
+      "BY",
+      "years_working",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "driver",
+      "as",
+      "t1",
+      "join",
+      "school_bus",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "driver_id",
+      "=",
+      "t2",
+      ".",
+      "driver_id",
+      "order",
+      "by",
+      "years_working",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "勤務歴が最も長いスクールバスを運転している運転手の名前を見つけてください。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

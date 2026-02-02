@@ -1,0 +1,3572 @@
+[
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema EXCEPT SELECT LOCATION FROM cinema WHERE capacity  >  800",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "EXCEPT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "800"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "except",
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value"
+    ],
+    "question": "Show all the locations where no cinema has capacity over 800.",
+    "question_toks": [
+      "Show",
+      "all",
+      "the",
+      "locations",
+      "where",
+      "no",
+      "cinema",
+      "has",
+      "capacity",
+      "over",
+      "800",
+      "."
+    ],
+    "sql": {
+      "except": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            800.0,
+            null
+          ]
+        ]
+      },
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE openning_year  =  2010 INTERSECT SELECT LOCATION FROM cinema WHERE openning_year  =  2011",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      "=",
+      "2010",
+      "INTERSECT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      "=",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      "=",
+      "value"
+    ],
+    "question": "Show all the locations where some cinemas were opened in both year 2010 and year 2011.",
+    "question_toks": [
+      "Show",
+      "all",
+      "the",
+      "locations",
+      "where",
+      "some",
+      "cinemas",
+      "were",
+      "opened",
+      "in",
+      "both",
+      "year",
+      "2010",
+      "and",
+      "year",
+      "2011",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            2011.0,
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema"
+    ],
+    "question": "How many cinema do we have?",
+    "question_toks": [
+      "How",
+      "many",
+      "cinema",
+      "do",
+      "we",
+      "have",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema"
+    ],
+    "question": "Count the number of cinemas.",
+    "question_toks": [
+      "Count",
+      "the",
+      "number",
+      "of",
+      "cinemas",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  openning_year ,  capacity FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "openning_year",
+      ",",
+      "capacity",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "openning_year",
+      ",",
+      "capacity",
+      "from",
+      "cinema"
+    ],
+    "question": "Show name, opening year, and capacity for each cinema.",
+    "question_toks": [
+      "Show",
+      "name",
+      ",",
+      "opening",
+      "year",
+      ",",
+      "and",
+      "capacity",
+      "for",
+      "each",
+      "cinema",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  LOCATION FROM cinema WHERE capacity  >  (SELECT avg(capacity) FROM cinema)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "cinema",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "cinema",
+      ")"
+    ],
+    "question": "Show the cinema name and location for cinemas with capacity above average.",
+    "question_toks": [
+      "Show",
+      "the",
+      "cinema",
+      "name",
+      "and",
+      "location",
+      "for",
+      "cinemas",
+      "with",
+      "capacity",
+      "above",
+      "average",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT LOCATION FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "cinema"
+    ],
+    "question": "What are all the locations with a cinema?",
+    "question_toks": [
+      "What",
+      "are",
+      "all",
+      "the",
+      "locations",
+      "with",
+      "a",
+      "cinema",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT LOCATION FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "cinema"
+    ],
+    "question": "Find the distinct locations that has a cinema.",
+    "question_toks": [
+      "Find",
+      "the",
+      "distinct",
+      "locations",
+      "that",
+      "has",
+      "a",
+      "cinema",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  openning_year FROM cinema ORDER BY openning_year DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "openning_year",
+      "FROM",
+      "cinema",
+      "ORDER",
+      "BY",
+      "openning_year",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "openning_year",
+      "from",
+      "cinema",
+      "order",
+      "by",
+      "openning_year",
+      "desc"
+    ],
+    "question": "Show all the cinema names and opening years in descending order of opening year.",
+    "question_toks": [
+      "Show",
+      "all",
+      "the",
+      "cinema",
+      "names",
+      "and",
+      "opening",
+      "years",
+      "in",
+      "descending",
+      "order",
+      "of",
+      "opening",
+      "year",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  LOCATION FROM cinema ORDER BY capacity DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "ORDER",
+      "BY",
+      "capacity",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "cinema",
+      "order",
+      "by",
+      "capacity",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What are the name and location of the cinema with the largest capacity?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "name",
+      "and",
+      "location",
+      "of",
+      "the",
+      "cinema",
+      "with",
+      "the",
+      "largest",
+      "capacity",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT avg(capacity) ,  min(capacity) ,  max(capacity) FROM cinema WHERE openning_year  >=  2011",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "min",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "max",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      ">",
+      "=",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "min",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "max",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Show the average, minimum, and maximum capacity for all the cinemas opened in year 2011 or later.",
+    "question_toks": [
+      "Show",
+      "the",
+      "average",
+      ",",
+      "minimum",
+      ",",
+      "and",
+      "maximum",
+      "capacity",
+      "for",
+      "all",
+      "the",
+      "cinemas",
+      "opened",
+      "in",
+      "year",
+      "2011",
+      "or",
+      "later",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2011.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION ,  count(*) FROM cinema GROUP BY LOCATION",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema",
+      "GROUP",
+      "BY",
+      "LOCATION"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema",
+      "group",
+      "by",
+      "location"
+    ],
+    "question": "Show each location and the number of cinemas there.",
+    "question_toks": [
+      "Show",
+      "each",
+      "location",
+      "and",
+      "the",
+      "number",
+      "of",
+      "cinemas",
+      "there",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE openning_year  >=  2010 GROUP BY LOCATION ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      ">",
+      "=",
+      "2010",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      ">",
+      "=",
+      "value",
+      "group",
+      "by",
+      "location",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What is the location with the most cinemas opened in year 2010 or later?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "location",
+      "with",
+      "the",
+      "most",
+      "cinemas",
+      "opened",
+      "in",
+      "year",
+      "2010",
+      "or",
+      "later",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Show all the locations with at least two cinemas with capacity above 300.",
+    "question_toks": [
+      "Show",
+      "all",
+      "the",
+      "locations",
+      "with",
+      "at",
+      "least",
+      "two",
+      "cinemas",
+      "with",
+      "capacity",
+      "above",
+      "300",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Which locations have 2 or more cinemas with capacity over 300?",
+    "question_toks": [
+      "Which",
+      "locations",
+      "have",
+      "2",
+      "or",
+      "more",
+      "cinemas",
+      "with",
+      "capacity",
+      "over",
+      "300",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Show the title and director for all films.",
+    "question_toks": [
+      "Show",
+      "the",
+      "title",
+      "and",
+      "director",
+      "for",
+      "all",
+      "films",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "What are the title and director of each film?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "title",
+      "and",
+      "director",
+      "of",
+      "each",
+      "film",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Show all directors.",
+    "question_toks": [
+      "Show",
+      "all",
+      "directors",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Who are all the directors?",
+    "question_toks": [
+      "Who",
+      "are",
+      "all",
+      "the",
+      "directors",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT directed_by ,  count(*) FROM film GROUP BY directed_by",
+    "query_toks": [
+      "SELECT",
+      "directed_by",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "GROUP",
+      "BY",
+      "directed_by"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "directed_by",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "group",
+      "by",
+      "directed_by"
+    ],
+    "question": "List all directors along with the number of films directed by each director.",
+    "question_toks": [
+      "List",
+      "all",
+      "directors",
+      "along",
+      "with",
+      "the",
+      "number",
+      "of",
+      "films",
+      "directed",
+      "by",
+      "each",
+      "director",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.name ,  sum(T1.show_times_per_day) FROM schedule AS T1 JOIN cinema AS T2 ON T1.cinema_id  =  T2.cinema_id GROUP BY T1.cinema_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "sum",
+      "(",
+      "T1.show_times_per_day",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "cinema",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cinema_id",
+      "=",
+      "T2.cinema_id",
+      "GROUP",
+      "BY",
+      "T1.cinema_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "sum",
+      "(",
+      "t1",
+      ".",
+      "show_times_per_day",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "cinema",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cinema_id",
+      "=",
+      "t2",
+      ".",
+      "cinema_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "cinema_id"
+    ],
+    "question": "What is total number of show times per dat for each cinema?",
+    "question_toks": [
+      "What",
+      "is",
+      "total",
+      "number",
+      "of",
+      "show",
+      "times",
+      "per",
+      "dat",
+      "for",
+      "each",
+      "cinema",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.title ,  max(T1.price) FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "max",
+      "(",
+      "T1.price",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "price",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id"
+    ],
+    "question": "What are the title and maximum price of each film?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "title",
+      "and",
+      "maximum",
+      "price",
+      "of",
+      "each",
+      "film",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.title ,  max(T1.price) FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "max",
+      "(",
+      "T1.price",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "price",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id"
+    ],
+    "question": "Give me the title and highest price for each film.",
+    "question_toks": [
+      "Give",
+      "me",
+      "the",
+      "title",
+      "and",
+      "highest",
+      "price",
+      "for",
+      "each",
+      "film",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T3.name ,  T2.title ,  T1.date ,  T1.price FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id JOIN cinema AS T3 ON T1.cinema_id  =  T3.cinema_id",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T2.title",
+      ",",
+      "T1.date",
+      ",",
+      "T1.price",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "JOIN",
+      "cinema",
+      "AS",
+      "T3",
+      "ON",
+      "T1.cinema_id",
+      "=",
+      "T3.cinema_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "t1",
+      ".",
+      "date",
+      ",",
+      "t1",
+      ".",
+      "price",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "join",
+      "cinema",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "cinema_id",
+      "=",
+      "t3",
+      ".",
+      "cinema_id"
+    ],
+    "question": "Show cinema name, film title, date, and price for each record in schedule.",
+    "question_toks": [
+      "Show",
+      "cinema",
+      "name",
+      ",",
+      "film",
+      "title",
+      ",",
+      "date",
+      ",",
+      "and",
+      "price",
+      "for",
+      "each",
+      "record",
+      "in",
+      "schedule",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film WHERE film_id NOT IN (SELECT film_id FROM schedule)",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film",
+      "WHERE",
+      "film_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "film_id",
+      "FROM",
+      "schedule",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film",
+      "where",
+      "film_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "film_id",
+      "from",
+      "schedule",
+      ")"
+    ],
+    "question": "What are the title and director of the films without any schedule?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "title",
+      "and",
+      "director",
+      "of",
+      "the",
+      "films",
+      "without",
+      "any",
+      "schedule",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.directed_by FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T2.directed_by ORDER BY sum(T1.show_times_per_day) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.directed_by",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T2.directed_by",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "T1.show_times_per_day",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "directed_by",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "directed_by",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "t1",
+      ".",
+      "show_times_per_day",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Show director with the largest number of show times in total.",
+    "question_toks": [
+      "Show",
+      "director",
+      "with",
+      "the",
+      "largest",
+      "number",
+      "of",
+      "show",
+      "times",
+      "in",
+      "total",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              4,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Find the locations that have more than one movie theater with capacity above 300.",
+    "question_toks": [
+      "Find",
+      "the",
+      "locations",
+      "that",
+      "have",
+      "more",
+      "than",
+      "one",
+      "movie",
+      "theater",
+      "with",
+      "capacity",
+      "above",
+      "300",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "In which locations are there more than one movie theater with capacity above 300?",
+    "question_toks": [
+      "In",
+      "which",
+      "locations",
+      "are",
+      "there",
+      "more",
+      "than",
+      "one",
+      "movie",
+      "theater",
+      "with",
+      "capacity",
+      "above",
+      "300",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "WHERE",
+      "title",
+      "LIKE",
+      "``",
+      "%",
+      "Dummy",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "where",
+      "title",
+      "like",
+      "value"
+    ],
+    "question": "How many films have the word 'Dummy' in their titles?",
+    "question_toks": [
+      "How",
+      "many",
+      "films",
+      "have",
+      "the",
+      "word",
+      "'Dummy",
+      "'",
+      "in",
+      "their",
+      "titles",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Dummy%\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "WHERE",
+      "title",
+      "LIKE",
+      "``",
+      "%",
+      "Dummy",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "where",
+      "title",
+      "like",
+      "value"
+    ],
+    "question": "Count the number of films whose title contains the word 'Dummy'.",
+    "question_toks": [
+      "Count",
+      "the",
+      "number",
+      "of",
+      "films",
+      "whose",
+      "title",
+      "contains",
+      "the",
+      "word",
+      "'Dummy",
+      "'",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Dummy%\"",
+          null
+        ]
+      ]
+    }
+  }
+]

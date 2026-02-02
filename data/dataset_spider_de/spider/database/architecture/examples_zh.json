@@ -1,0 +1,2834 @@
+[
+  {
+    "db_id": "architecture",
+    "query": "SELECT count(*) FROM architect WHERE gender  =  'female'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "architect",
+      "WHERE",
+      "gender",
+      "=",
+      "'female",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "architect",
+      "where",
+      "gender",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many architects are female?",
+    "question": "有多少建筑师是“F”性？",
+    "question_cspider": "有多少建筑师是“F”性？",
+    "Harold": "BLEU = 0.00, 90.0/44.4/25.0/0.0 (BP=0.819, ratio=0.833, hyp_len=10, ref_len=12)",
+    "question_toks": [
+      "女",
+      "性",
+      "有",
+      "多",
+      "少",
+      "名",
+      "建",
+      "筑",
+      "师",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"female\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT name ,  nationality ,  id FROM architect WHERE gender  =  'male' ORDER BY name",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "nationality",
+      ",",
+      "id",
+      "FROM",
+      "architect",
+      "WHERE",
+      "gender",
+      "=",
+      "'male",
+      "'",
+      "ORDER",
+      "BY",
+      "name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "nationality",
+      ",",
+      "id",
+      "from",
+      "architect",
+      "where",
+      "gender",
+      "=",
+      "value",
+      "order",
+      "by",
+      "name"
+    ],
+    "question_spider": "List the name, nationality and id of all male architects ordered by their names lexicographically.",
+    "question": "按其姓名的字典顺序列出所有“M”性架构师的姓名、国籍和ID。",
+    "question_cspider": "按其姓名的字典顺序列出所有“M”性架构师的姓名、国籍和ID。",
+    "Harold": "BLEU = 31.45, 71.0/40.0/24.1/14.3 (BP=1.000, ratio=1.033, hyp_len=31, ref_len=30)",
+    "question_toks": [
+      "按",
+      "字",
+      "典",
+      "顺",
+      "序",
+      "列",
+      "出",
+      "按",
+      "其",
+      "名",
+      "字",
+      "排",
+      "序",
+      "的",
+      "所",
+      "有",
+      "男",
+      "性",
+      "建",
+      "筑",
+      "师",
+      "的",
+      "姓",
+      "名",
+      "，",
+      "国",
+      "籍",
+      "和",
+      "身",
+      "分",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"male\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT max(T1.length_meters) ,  T2.name FROM bridge AS T1 JOIN architect AS T2 ON T1.architect_id  =  T2.id",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "T1.length_meters",
+      ")",
+      ",",
+      "T2.name",
+      "FROM",
+      "bridge",
+      "AS",
+      "T1",
+      "JOIN",
+      "architect",
+      "AS",
+      "T2",
+      "ON",
+      "T1.architect_id",
+      "=",
+      "T2.id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "length_meters",
+      ")",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "bridge",
+      "as",
+      "t1",
+      "join",
+      "architect",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id"
+    ],
+    "question_spider": "What is the maximum length in meters for the bridges and what are the architects' names?",
+    "question": "以米为单位桥梁的最大长度是多少？建筑师的名字是什么？",
+    "question_cspider": "以米为单位桥梁的最大长度是多少？建筑师的名字是什么？",
+    "Harold": "BLEU = 70.20, 95.7/86.4/76.2/65.0 (BP=0.878, ratio=0.885, hyp_len=23, ref_len=26)",
+    "question_toks": [
+      "桥",
+      "梁",
+      "的",
+      "最",
+      "大",
+      "长",
+      "度",
+      "以",
+      "米",
+      "为",
+      "单",
+      "位",
+      "，",
+      "建",
+      "筑",
+      "师",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT avg(length_feet) FROM bridge",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "length_feet",
+      ")",
+      "FROM",
+      "bridge"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "length_feet",
+      ")",
+      "from",
+      "bridge"
+    ],
+    "question_spider": "What is the average length in feet of the bridges?",
+    "question": "桥的平均长度是多少？",
+    "question_cspider": "桥的平均长度是多少？",
+    "Harold": "BLEU = 40.21, 55.6/47.1/37.5/26.7 (BP=1.000, ratio=1.800, hyp_len=18, ref_len=10)",
+    "question_toks": [
+      "桥",
+      "的",
+      "平",
+      "均",
+      "长",
+      "度",
+      "（",
+      "以",
+      "英",
+      "尺",
+      "为",
+      "单",
+      "位",
+      "）",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT name ,  built_year FROM mill WHERE TYPE  =  'Grondzeiler'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "built_year",
+      "FROM",
+      "mill",
+      "WHERE",
+      "TYPE",
+      "=",
+      "'Grondzeiler",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "built_year",
+      "from",
+      "mill",
+      "where",
+      "type",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names and year of construction for the mills of 'Grondzeiler' type?",
+    "question": "“Grondzeiler”类型的工厂的名字和年份是什么？",
+    "question_cspider": "“Grondzeiler”类型的工厂的名字和年份是什么？",
+    "Harold": "BLEU = 27.20, 50.0/29.6/23.1/16.0 (BP=1.000, ratio=1.474, hyp_len=28, ref_len=19)",
+    "question_toks": [
+      "“",
+      " ",
+      "G",
+      "r",
+      "o",
+      "n",
+      "d",
+      "z",
+      "e",
+      "i",
+      "l",
+      "e",
+      "r",
+      "”",
+      "型",
+      "工",
+      "厂",
+      "的",
+      "名",
+      "称",
+      "和",
+      "建",
+      "造",
+      "年",
+      "份",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Grondzeiler\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT DISTINCT T1.name ,  T1.nationality FROM architect AS T1 JOIN mill AS t2 ON T1.id  =  T2.architect_id",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.name",
+      ",",
+      "T1.nationality",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "mill",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "nationality",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "mill",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id"
+    ],
+    "question_spider": "What are the distinct names and nationalities of the architects who have ever built a mill?",
+    "question": "建造过工厂的不同的建筑师的名字和国籍是什么？",
+    "question_cspider": "建造过工厂的不同的建筑师的名字和国籍是什么？",
+    "Harold": "BLEU = 44.80, 77.3/61.9/40.0/21.1 (BP=1.000, ratio=1.000, hyp_len=22, ref_len=22)",
+    "question_toks": [
+      "曾",
+      "经",
+      "建",
+      "造",
+      "工",
+      "厂",
+      "的",
+      "建",
+      "筑",
+      "师",
+      "有",
+      "哪",
+      "些",
+      "不",
+      "同",
+      "的",
+      "名",
+      "字",
+      "和",
+      "国",
+      "籍",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT name FROM mill WHERE LOCATION != 'Donceel'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "mill",
+      "WHERE",
+      "LOCATION",
+      "!",
+      "=",
+      "'Donceel",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "mill",
+      "where",
+      "location",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of the mills which are not located in 'Donceel'?",
+    "question": "不在“Donceel”的工厂的名字是什么？",
+    "question_cspider": "不在“San Jose”的工厂的名字是什么？",
+    "Harold": "BLEU = 27.75, 52.2/31.8/23.8/15.0 (BP=1.000, ratio=1.438, hyp_len=23, ref_len=16)",
+    "question_toks": [
+      "不",
+      "位",
+      "于",
+      "“",
+      " ",
+      "D",
+      "o",
+      "n",
+      "c",
+      "e",
+      "e",
+      "l",
+      "”",
+      "中",
+      "的",
+      "工",
+      "厂",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Donceel\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT DISTINCT T1.type FROM mill AS T1 JOIN architect AS t2 ON T1.architect_id  =  T2.id WHERE T2.nationality  =  'American' OR T2.nationality  =  'Canadian'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.type",
+      "FROM",
+      "mill",
+      "AS",
+      "T1",
+      "JOIN",
+      "architect",
+      "AS",
+      "t2",
+      "ON",
+      "T1.architect_id",
+      "=",
+      "T2.id",
+      "WHERE",
+      "T2.nationality",
+      "=",
+      "'American",
+      "'",
+      "OR",
+      "T2.nationality",
+      "=",
+      "'Canadian",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "type",
+      "from",
+      "mill",
+      "as",
+      "t1",
+      "join",
+      "architect",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "nationality",
+      "=",
+      "value",
+      "or",
+      "t2",
+      ".",
+      "nationality",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the distinct types of mills that are built by American or Canadian architects?",
+    "question": "“American”或“Canadian”的建筑师建造的工厂有哪些类型？",
+    "question_cspider": "“US”或“Canada”的建筑师建造的工厂有哪些类型？",
+    "Harold": "BLEU = 54.33, 90.9/71.4/55.0/42.1 (BP=0.873, ratio=0.880, hyp_len=22, ref_len=25)",
+    "question_toks": [
+      "美",
+      "国",
+      "或",
+      "加",
+      "拿",
+      "大",
+      "建",
+      "筑",
+      "师",
+      "建",
+      "造",
+      "的",
+      "工",
+      "厂",
+      "有",
+      "哪",
+      "些",
+      "不",
+      "同",
+      "类",
+      "型",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"American\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"Canadian\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT T1.id ,  T1.name FROM architect AS T1 JOIN bridge AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id HAVING count(*)  >=  3",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "bridge",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "bridge",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the ids and names of the architects who built at least 3 bridges ?",
+    "question": "建造至少3座桥梁的建筑师的ID和名字是什么？",
+    "question_cspider": "建造至少3座桥梁的建筑师的ID和名字是什么？",
+    "Harold": "BLEU = 73.43, 95.5/81.0/65.0/57.9 (BP=1.000, ratio=1.000, hyp_len=22, ref_len=22)",
+    "question_toks": [
+      "至",
+      "少",
+      "建",
+      "造",
+      "3",
+      "座",
+      "桥",
+      "梁",
+      "的",
+      "建",
+      "筑",
+      "师",
+      "的",
+      "I",
+      "D",
+      "和",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT T1.id ,  T1.name ,  T1.nationality FROM architect AS T1 JOIN mill AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      ",",
+      "T1.nationality",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "mill",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "nationality",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "mill",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the id, name and nationality of the architect who built most mills?",
+    "question": "建造工厂最多的建筑师的ID，姓名和国籍是什么？",
+    "question_cspider": "建造工厂最多的建筑师的 ID 、姓名和国籍是什么？",
+    "Harold": "BLEU = 51.45, 76.0/58.3/43.5/36.4 (BP=1.000, ratio=1.087, hyp_len=25, ref_len=23)",
+    "question_toks": [
+      "建",
+      "造",
+      "大",
+      "多",
+      "数",
+      "工",
+      "厂",
+      "的",
+      "建",
+      "筑",
+      "师",
+      "的",
+      "身",
+      "份",
+      "证",
+      "，",
+      "姓",
+      "名",
+      "和",
+      "国",
+      "籍",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT T1.id ,  T1.name ,  T1.gender FROM architect AS T1 JOIN bridge AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id HAVING count(*)  =  2 UNION SELECT T1.id ,  T1.name ,  T1.gender FROM architect AS T1 JOIN mill AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id HAVING count(*)  =  1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      ",",
+      "T1.gender",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "bridge",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "2",
+      "UNION",
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      ",",
+      "T1.gender",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "mill",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "gender",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "bridge",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value",
+      "union",
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "gender",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "mill",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the ids, names and genders of the architects who built two bridges or one mill?",
+    "question": "建造两座桥或一座工厂的建筑师的ID，姓名和性别是什么？",
+    "question_cspider": "建造两座桥或一座工厂的建筑师的 ID 、姓名和性别是什么？",
+    "Harold": "BLEU = 60.95, 79.3/67.9/55.6/46.2 (BP=1.000, ratio=1.074, hyp_len=29, ref_len=27)",
+    "question_toks": [
+      "建",
+      "造",
+      "两",
+      "座",
+      "桥",
+      "梁",
+      "或",
+      "一",
+      "间",
+      "工",
+      "厂",
+      "的",
+      "建",
+      "筑",
+      "师",
+      "的",
+      "身",
+      "份",
+      "证",
+      "，",
+      "姓",
+      "名",
+      "和",
+      "性",
+      "别",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [
+          [
+            0,
+            1,
+            false
+          ]
+        ],
+        "having": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                3,
+                0,
+                false
+              ],
+              null
+            ],
+            1,
+            null
+          ]
+        ],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT LOCATION FROM bridge WHERE name  =  'Kolob Arch' OR name  =  'Rainbow Bridge'",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "bridge",
+      "WHERE",
+      "name",
+      "=",
+      "'Kolob",
+      "Arch",
+      "'",
+      "OR",
+      "name",
+      "=",
+      "'Rainbow",
+      "Bridge",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "bridge",
+      "where",
+      "name",
+      "=",
+      "value",
+      "or",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the location of the bridge named 'Kolob Arch' or 'Rainbow Bridge'?",
+    "question": "“Kolob Arch”或“Rainbow Bridge”的位置是什么？",
+    "question_cspider": "“Kolob Arch”或“赵州桥”的位置是什么？",
+    "Harold": "BLEU = 0.00, 37.5/17.4/9.1/0.0 (BP=1.000, ratio=1.263, hyp_len=24, ref_len=19)",
+    "question_toks": [
+      "名",
+      "为",
+      "“",
+      " ",
+      "K",
+      "o",
+      "l",
+      "o",
+      "b",
+      "拱",
+      "门",
+      "”",
+      "或",
+      "“",
+      "彩",
+      "虹",
+      "桥",
+      "”",
+      "的",
+      "桥",
+      "梁",
+      "在",
+      "哪",
+      "里",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Kolob Arch\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Rainbow Bridge\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT name FROM mill WHERE name LIKE '%Moulin%'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "mill",
+      "WHERE",
+      "name",
+      "LIKE",
+      "'",
+      "%",
+      "Moulin",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "mill",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question_spider": "Which of the mill names contains the french word 'Moulin'?",
+    "question": "哪一个工厂名称包含中文单词“Moulin”？",
+    "question_cspider": "哪一个工厂名称包含中文单词“J”？",
+    "Harold": "BLEU = 14.96, 42.9/20.0/10.5/5.6 (BP=1.000, ratio=1.235, hyp_len=21, ref_len=17)",
+    "question_toks": [
+      "哪",
+      "个",
+      "磨",
+      "坊",
+      "名",
+      "称",
+      "包",
+      "含",
+      "法",
+      "语",
+      "单",
+      "词",
+      "'",
+      "M",
+      "o",
+      "u",
+      "l",
+      "i",
+      "n",
+      "'",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"%Moulin%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT DISTINCT T1.name FROM mill AS T1 JOIN architect AS t2 ON T1.architect_id  =  T2.id JOIN bridge AS T3 ON T3.architect_id  =  T2.id WHERE T3.length_meters  >  80",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.name",
+      "FROM",
+      "mill",
+      "AS",
+      "T1",
+      "JOIN",
+      "architect",
+      "AS",
+      "t2",
+      "ON",
+      "T1.architect_id",
+      "=",
+      "T2.id",
+      "JOIN",
+      "bridge",
+      "AS",
+      "T3",
+      "ON",
+      "T3.architect_id",
+      "=",
+      "T2.id",
+      "WHERE",
+      "T3.length_meters",
+      ">",
+      "80"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "mill",
+      "as",
+      "t1",
+      "join",
+      "architect",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "bridge",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t3",
+      ".",
+      "length_meters",
+      ">",
+      "value"
+    ],
+    "question_spider": "What are the distinct name of the mills built by the architects who have also built a bridge longer than 80 meters?",
+    "question": "建造一座超过80米的桥梁的建筑师建造的工厂叫什么名字？",
+    "question_cspider": "建造一座超过80米的桥梁的建筑师建造的工厂叫什么名字？",
+    "Harold": "BLEU = 50.45, 71.9/54.8/43.3/37.9 (BP=1.000, ratio=1.185, hyp_len=32, ref_len=27)",
+    "question_toks": [
+      "那",
+      "些",
+      "建",
+      "造",
+      "了",
+      "超",
+      "过",
+      "8",
+      "0",
+      "米",
+      "的",
+      "桥",
+      "梁",
+      "的",
+      "建",
+      "筑",
+      "师",
+      "所",
+      "建",
+      "造",
+      "的",
+      "工",
+      "厂",
+      "的",
+      "独",
+      "特",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          80,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT TYPE ,  count(*) FROM mill GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "mill",
+      "GROUP",
+      "BY",
+      "TYPE",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "mill",
+      "group",
+      "by",
+      "type",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the most common mill type, and how many are there?",
+    "question": "最常见的工厂类型是什么，有多少个？",
+    "question_cspider": "最常见的工厂类型是什么，有多少个？",
+    "Harold": "BLEU = 19.97, 83.3/45.5/20.0/11.1 (BP=0.659, ratio=0.706, hyp_len=12, ref_len=17)",
+    "question_toks": [
+      "什",
+      "么",
+      "是",
+      "最",
+      "常",
+      "见",
+      "的",
+      "磨",
+      "机",
+      "类",
+      "型",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT count(*) FROM architect WHERE id NOT IN ( SELECT architect_id FROM mill WHERE built_year  <  1850 );",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "architect",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "architect_id",
+      "FROM",
+      "mill",
+      "WHERE",
+      "built_year",
+      "<",
+      "1850",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "architect",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "architect_id",
+      "from",
+      "mill",
+      "where",
+      "built_year",
+      "<",
+      "value",
+      ")"
+    ],
+    "question_spider": "How many architects haven't built a mill before year 1850?",
+    "question": "1850年以前有多少建筑师返回没有建造过工厂？",
+    "question_cspider": "1850年以前有多少建筑师返回没有建造过工厂？",
+    "Harold": "BLEU = 44.30, 85.0/63.2/44.4/29.4 (BP=0.861, ratio=0.870, hyp_len=20, ref_len=23)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "建",
+      "筑",
+      "师",
+      "在",
+      "1",
+      "8",
+      "5",
+      "0",
+      "年",
+      "之",
+      "前",
+      "还",
+      "没",
+      "有",
+      "建",
+      "厂",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                4,
+                [
+                  0,
+                  [
+                    0,
+                    16,
+                    false
+                  ],
+                  null
+                ],
+                1850,
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT t1.name FROM bridge AS t1 JOIN architect AS t2 ON t1.architect_id  =  t2.id WHERE t2.nationality  =  'American' ORDER BY t1.length_feet",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "bridge",
+      "AS",
+      "t1",
+      "JOIN",
+      "architect",
+      "AS",
+      "t2",
+      "ON",
+      "t1.architect_id",
+      "=",
+      "t2.id",
+      "WHERE",
+      "t2.nationality",
+      "=",
+      "'American",
+      "'",
+      "ORDER",
+      "BY",
+      "t1.length_feet"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "bridge",
+      "as",
+      "t1",
+      "join",
+      "architect",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "nationality",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "length_feet"
+    ],
+    "question_spider": "show the name of all bridges that was designed by american archtect, and sort the result by the bridge feet length.",
+    "question": "显示所有由“American”建筑师设计的桥梁的名称，并根据桥长度对结果进行排序。",
+    "question_cspider": "显示所有由“US”建筑师设计的桥梁的名称，并根据桥长度对结果进行排序。",
+    "Harold": "BLEU = 60.68, 93.9/71.9/54.8/46.7 (BP=0.941, ratio=0.943, hyp_len=33, ref_len=35)",
+    "question_toks": [
+      "显",
+      "示",
+      "由",
+      "美",
+      "国",
+      "建",
+      "筑",
+      "师",
+      "设",
+      "计",
+      "的",
+      "所",
+      "有",
+      "桥",
+      "梁",
+      "的",
+      "名",
+      "称",
+      "，",
+      "并",
+      "按",
+      "桥",
+      "脚",
+      "长",
+      "度",
+      "对",
+      "结",
+      "果",
+      "进",
+      "行",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"American\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

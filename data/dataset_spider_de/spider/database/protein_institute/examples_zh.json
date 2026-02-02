@@ -1,0 +1,3038 @@
+[
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT count(*) FROM building",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "building"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "building"
+    ],
+    "question_spider": "How many buildings are there?",
+    "question": "那里有多少栋建筑？",
+    "question_cspider": "那里有多少栋建筑？",
+    "Harold": "BLEU = 0.00, 66.7/37.5/14.3/0.0 (BP=1.000, ratio=1.000, hyp_len=9, ref_len=9)",
+    "question_toks": [
+      "那",
+      "里",
+      "有",
+      "几",
+      "座",
+      "建",
+      "筑",
+      "物",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT name ,  street_address ,  floors FROM building ORDER BY floors",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "street_address",
+      ",",
+      "floors",
+      "FROM",
+      "building",
+      "ORDER",
+      "BY",
+      "floors"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "street_address",
+      ",",
+      "floors",
+      "from",
+      "building",
+      "order",
+      "by",
+      "floors"
+    ],
+    "question_spider": "Show the name, street address, and number of floors for all buildings ordered by the number of floors.",
+    "question": "根据楼层数显示所有建筑物的名称、街道地址和楼层数。",
+    "question_cspider": "根据楼层数显示所有建筑物的名称、街道地址和楼层数。",
+    "Harold": "BLEU = 53.64, 76.9/60.0/45.8/39.1 (BP=1.000, ratio=1.040, hyp_len=26, ref_len=25)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "建",
+      "筑",
+      "物",
+      "的",
+      "名",
+      "称",
+      "，",
+      "街",
+      "道",
+      "地",
+      "址",
+      "和",
+      "层",
+      "数",
+      "（",
+      "按",
+      "层",
+      "数",
+      "排",
+      "序",
+      "）",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT name FROM building ORDER BY height_feet DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "building",
+      "ORDER",
+      "BY",
+      "height_feet",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "building",
+      "order",
+      "by",
+      "height_feet",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name of the tallest building?",
+    "question": "最高的建筑物叫什么名字？",
+    "question_cspider": "最高的建筑物叫什么名字？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "最",
+      "高",
+      "的",
+      "建",
+      "筑",
+      "物",
+      "叫",
+      "什",
+      "么",
+      "名",
+      "字",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT avg(floors) ,  max(floors) ,  min(floors) FROM building",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "floors",
+      ")",
+      ",",
+      "max",
+      "(",
+      "floors",
+      ")",
+      ",",
+      "min",
+      "(",
+      "floors",
+      ")",
+      "FROM",
+      "building"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "floors",
+      ")",
+      ",",
+      "max",
+      "(",
+      "floors",
+      ")",
+      ",",
+      "min",
+      "(",
+      "floors",
+      ")",
+      "from",
+      "building"
+    ],
+    "question_spider": "What are the average, maximum, and minimum number of floors for all buildings?",
+    "question": "所有建筑的平均、最大和最小楼层数是多少？",
+    "question_cspider": "所有建筑的平均、最大和最小楼层数是多少？",
+    "Harold": "BLEU = 49.40, 70.4/57.7/44.0/33.3 (BP=1.000, ratio=1.350, hyp_len=27, ref_len=20)",
+    "question_toks": [
+      "所",
+      "有",
+      "建",
+      "筑",
+      "物",
+      "的",
+      "平",
+      "均",
+      "楼",
+      "层",
+      "数",
+      "，",
+      "最",
+      "大",
+      "楼",
+      "层",
+      "数",
+      "和",
+      "最",
+      "小",
+      "楼",
+      "层",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT count(*) FROM building WHERE height_feet  >  (SELECT avg(height_feet) FROM building) OR floors  >  (SELECT avg(floors) FROM building)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "building",
+      "WHERE",
+      "height_feet",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "height_feet",
+      ")",
+      "FROM",
+      "building",
+      ")",
+      "OR",
+      "floors",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "floors",
+      ")",
+      "FROM",
+      "building",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "building",
+      "where",
+      "height_feet",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "height_feet",
+      ")",
+      "from",
+      "building",
+      ")",
+      "or",
+      "floors",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "floors",
+      ")",
+      "from",
+      "building",
+      ")"
+    ],
+    "question_spider": "Show the number of buildings with a height above the average or a number of floors above the average.",
+    "question": "显示高于平均高度或者楼层数高于平均的建筑物数量。",
+    "question_cspider": "显示高于平均高度或者楼层数高于平均的建筑物数量。",
+    "Harold": "BLEU = 29.05, 78.3/45.5/23.8/10.0 (BP=0.957, ratio=0.958, hyp_len=23, ref_len=24)",
+    "question_toks": [
+      "显",
+      "示",
+      "高",
+      "出",
+      "平",
+      "均",
+      "数",
+      "的",
+      "建",
+      "筑",
+      "物",
+      "数",
+      "或",
+      "高",
+      "出",
+      "平",
+      "均",
+      "数",
+      "的",
+      "楼",
+      "层",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      5,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT name FROM building WHERE height_feet  >=  200 AND floors  >=  20",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "building",
+      "WHERE",
+      "height_feet",
+      ">",
+      "=",
+      "200",
+      "AND",
+      "floors",
+      ">",
+      "=",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "building",
+      "where",
+      "height_feet",
+      ">",
+      "=",
+      "value",
+      "and",
+      "floors",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the names of buildings with at least 200 feet of height and with at least 20 floors.",
+    "question": "列出高度至少200英尺以及楼层至少20层的建筑物的名称。",
+    "question_cspider": "列出高度至少200英尺以及楼层至少20层的建筑物的名称。",
+    "Harold": "BLEU = 55.65, 95.7/77.3/61.9/50.0 (BP=0.805, ratio=0.821, hyp_len=23, ref_len=28)",
+    "question_toks": [
+      "列",
+      "出",
+      "至",
+      "少",
+      "2",
+      "0",
+      "0",
+      "英",
+      "尺",
+      "高",
+      "，",
+      "至",
+      "少",
+      "2",
+      "0",
+      "层",
+      "的",
+      "建",
+      "筑",
+      "物",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          200,
+          null
+        ],
+        "and",
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          20,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT institution ,  LOCATION FROM institution WHERE founded  >  1990 AND TYPE  =  'Private'",
+    "query_toks": [
+      "SELECT",
+      "institution",
+      ",",
+      "LOCATION",
+      "FROM",
+      "institution",
+      "WHERE",
+      "founded",
+      ">",
+      "1990",
+      "AND",
+      "TYPE",
+      "=",
+      "'Private",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "institution",
+      ",",
+      "location",
+      "from",
+      "institution",
+      "where",
+      "founded",
+      ">",
+      "value",
+      "and",
+      "type",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the names and locations of institutions that are founded after 1990 and have the type \"Private\".",
+    "question": "显示1990年以后成立的、类型为“Private”的机构的名称和地点。",
+    "question_cspider": "显示1990年以后成立的、类型为“Private”的机构的名称和地点。",
+    "Harold": "BLEU = 71.80, 89.7/78.6/70.4/61.5 (BP=0.966, ratio=0.967, hyp_len=29, ref_len=30)",
+    "question_toks": [
+      "显",
+      "示",
+      "1",
+      "9",
+      "9",
+      "0",
+      "年",
+      "以",
+      "后",
+      "成",
+      "立",
+      "的",
+      "类",
+      "型",
+      "为",
+      "“",
+      "私",
+      "人",
+      "”",
+      "的",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "和",
+      "位",
+      "置",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          1990,
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "\"Private\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT TYPE ,  count(*) ,  sum(enrollment) FROM institution GROUP BY TYPE",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "sum",
+      "(",
+      "enrollment",
+      ")",
+      "FROM",
+      "institution",
+      "GROUP",
+      "BY",
+      "TYPE"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "sum",
+      "(",
+      "enrollment",
+      ")",
+      "from",
+      "institution",
+      "group",
+      "by",
+      "type"
+    ],
+    "question_spider": "Show institution types, along with the number of institutions and total enrollment for each type.",
+    "question": "显示机构类型，以及每种类型的机构的数量和总注册人数。",
+    "question_cspider": "显示机构类型，以及每种类型的机构的数量和总注册人数。",
+    "Harold": "BLEU = 81.24, 100.0/95.5/90.5/85.0 (BP=0.878, ratio=0.885, hyp_len=23, ref_len=26)",
+    "question_toks": [
+      "显",
+      "示",
+      "机",
+      "构",
+      "类",
+      "型",
+      "，",
+      "以",
+      "及",
+      "每",
+      "种",
+      "机",
+      "构",
+      "的",
+      "数",
+      "量",
+      "和",
+      "总",
+      "注",
+      "册",
+      "人",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT TYPE FROM institution GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      "FROM",
+      "institution",
+      "GROUP",
+      "BY",
+      "TYPE",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      "from",
+      "institution",
+      "group",
+      "by",
+      "type",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show the institution type with the largest number of institutions.",
+    "question": "展示机构数量最多的机构类型。",
+    "question_cspider": "展示机构数量最多的机构类型。",
+    "Harold": "BLEU = 91.93, 92.9/92.3/91.7/90.9 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "显",
+      "示",
+      "机",
+      "构",
+      "数",
+      "量",
+      "最",
+      "多",
+      "的",
+      "机",
+      "构",
+      "类",
+      "型",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT TYPE FROM institution WHERE founded  >  1990 AND enrollment  >=  1000",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      "FROM",
+      "institution",
+      "WHERE",
+      "founded",
+      ">",
+      "1990",
+      "AND",
+      "enrollment",
+      ">",
+      "=",
+      "1000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      "from",
+      "institution",
+      "where",
+      "founded",
+      ">",
+      "value",
+      "and",
+      "enrollment",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the institution type with an institution founded after 1990 and an institution with at least 1000 enrollment.",
+    "question": "显示1990年后成立至少有1000个注册人数的机构的机构类型。",
+    "question_cspider": "显示1990年后成立至少有1000个注册人数的机构的机构类型。",
+    "Harold": "BLEU = 47.85, 80.0/61.8/42.4/25.0 (BP=1.000, ratio=1.129, hyp_len=35, ref_len=31)",
+    "question_toks": [
+      "用",
+      "1",
+      "9",
+      "9",
+      "0",
+      "年",
+      "以",
+      "后",
+      "成",
+      "立",
+      "的",
+      "机",
+      "构",
+      "和",
+      "至",
+      "少",
+      "有",
+      "1",
+      "0",
+      "0",
+      "0",
+      "名",
+      "注",
+      "册",
+      "的",
+      "机",
+      "构",
+      "来",
+      "显",
+      "示",
+      "机",
+      "构",
+      "类",
+      "型",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          1990,
+          null
+        ],
+        "and",
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          1000,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT name FROM building WHERE building_id NOT IN (SELECT building_id FROM institution)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "building",
+      "WHERE",
+      "building_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "building_id",
+      "FROM",
+      "institution",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "building",
+      "where",
+      "building_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "building_id",
+      "from",
+      "institution",
+      ")"
+    ],
+    "question_spider": "Show the name of buildings that do not have any institution.",
+    "question": "显示没有任何机构的建筑物名称。",
+    "question_cspider": "显示没有任何机构的建筑物名称。",
+    "Harold": "BLEU = 81.54, 93.8/86.7/78.6/69.2 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "显",
+      "示",
+      "没",
+      "有",
+      "任",
+      "何",
+      "机",
+      "构",
+      "的",
+      "建",
+      "筑",
+      "物",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      15,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT name FROM building EXCEPT SELECT T1.name FROM building AS T1 JOIN institution AS T2 ON T1.building_id  =  T2.building_id WHERE T2.founded  =  2003",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "building",
+      "EXCEPT",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "building",
+      "AS",
+      "T1",
+      "JOIN",
+      "institution",
+      "AS",
+      "T2",
+      "ON",
+      "T1.building_id",
+      "=",
+      "T2.building_id",
+      "WHERE",
+      "T2.founded",
+      "=",
+      "2003"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "building",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "building",
+      "as",
+      "t1",
+      "join",
+      "institution",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "building_id",
+      "=",
+      "t2",
+      ".",
+      "building_id",
+      "where",
+      "t2",
+      ".",
+      "founded",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the names of buildings except for those having an institution founded in 2003.",
+    "question": "展示建筑名称，除了那些含有在2003成立的机构的。",
+    "question_cspider": "展示建筑名称，除了那些含有在2003成立的机构的。",
+    "Harold": "BLEU = 22.12, 69.6/40.9/23.8/5.0 (BP=0.917, ratio=0.920, hyp_len=23, ref_len=25)",
+    "question_toks": [
+      "显",
+      "示",
+      "建",
+      "筑",
+      "物",
+      "的",
+      "名",
+      "称",
+      "，",
+      "但",
+      "建",
+      "于",
+      "2",
+      "0",
+      "0",
+      "3",
+      "年",
+      "的",
+      "机",
+      "构",
+      "除",
+      "外",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            2003,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT T1.name ,  count(*) FROM building AS T1 JOIN institution AS T2 ON T1.building_id  =  T2.building_id GROUP BY T1.building_id",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "building",
+      "AS",
+      "T1",
+      "JOIN",
+      "institution",
+      "AS",
+      "T2",
+      "ON",
+      "T1.building_id",
+      "=",
+      "T2.building_id",
+      "GROUP",
+      "BY",
+      "T1.building_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "building",
+      "as",
+      "t1",
+      "join",
+      "institution",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "building_id",
+      "=",
+      "t2",
+      ".",
+      "building_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "building_id"
+    ],
+    "question_spider": "For each building, show the name of the building and the number of institutions in it.",
+    "question": "对于每个建筑，显示建筑物的名称和其中的机构数量。",
+    "question_cspider": "对于每个建筑，显示建筑物的名称和其中的机构数量。",
+    "Harold": "BLEU = 82.07, 92.3/84.0/79.2/73.9 (BP=1.000, ratio=1.083, hyp_len=26, ref_len=24)",
+    "question_toks": [
+      "对",
+      "于",
+      "每",
+      "个",
+      "建",
+      "筑",
+      "物",
+      "，",
+      "请",
+      "显",
+      "示",
+      "建",
+      "筑",
+      "物",
+      "的",
+      "名",
+      "称",
+      "和",
+      "其",
+      "中",
+      "的",
+      "机",
+      "构",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT T1.name ,  T1.height_feet FROM building AS T1 JOIN institution AS T2 ON T1.building_id  =  T2.building_id WHERE T2.founded  >  1880 GROUP BY T1.building_id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.height_feet",
+      "FROM",
+      "building",
+      "AS",
+      "T1",
+      "JOIN",
+      "institution",
+      "AS",
+      "T2",
+      "ON",
+      "T1.building_id",
+      "=",
+      "T2.building_id",
+      "WHERE",
+      "T2.founded",
+      ">",
+      "1880",
+      "GROUP",
+      "BY",
+      "T1.building_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "height_feet",
+      "from",
+      "building",
+      "as",
+      "t1",
+      "join",
+      "institution",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "building_id",
+      "=",
+      "t2",
+      ".",
+      "building_id",
+      "where",
+      "t2",
+      ".",
+      "founded",
+      ">",
+      "value",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "building_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the names and heights of buildings with at least two institutions founded after 1880.",
+    "question": "展示在1880年后建立的至少有两个机构的建筑物的名称和高度。",
+    "question_cspider": "展示在1880年后建立的至少有两个机构的建筑物的名称和高度。",
+    "Harold": "BLEU = 56.76, 80.6/63.3/51.7/39.3 (BP=1.000, ratio=1.033, hyp_len=31, ref_len=30)",
+    "question_toks": [
+      "使",
+      "用",
+      "1",
+      "8",
+      "8",
+      "0",
+      "年",
+      "以",
+      "后",
+      "成",
+      "立",
+      "的",
+      "至",
+      "少",
+      "两",
+      "个",
+      "机",
+      "构",
+      "来",
+      "显",
+      "示",
+      "建",
+      "筑",
+      "物",
+      "的",
+      "名",
+      "称",
+      "和",
+      "高",
+      "度",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          1880,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT DISTINCT TYPE FROM institution",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "TYPE",
+      "FROM",
+      "institution"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "type",
+      "from",
+      "institution"
+    ],
+    "question_spider": "Show all the distinct institution types.",
+    "question": "显示所有不同的机构类型。",
+    "question_cspider": "显示所有不同的机构类型。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "不",
+      "同",
+      "的",
+      "机",
+      "构",
+      "类",
+      "型",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT T1.institution ,  count(*) FROM institution AS T1 JOIN protein AS T2 ON T1.institution_id  =  T2.institution_id GROUP BY T1.institution_id",
+    "query_toks": [
+      "SELECT",
+      "T1.institution",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "institution",
+      "AS",
+      "T1",
+      "JOIN",
+      "protein",
+      "AS",
+      "T2",
+      "ON",
+      "T1.institution_id",
+      "=",
+      "T2.institution_id",
+      "GROUP",
+      "BY",
+      "T1.institution_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "institution",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "institution",
+      "as",
+      "t1",
+      "join",
+      "protein",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "institution_id",
+      "=",
+      "t2",
+      ".",
+      "institution_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "institution_id"
+    ],
+    "question_spider": "Show institution names along with the number of proteins for each institution.",
+    "question": "显示机构名称以及每个机构的蛋白质数量。",
+    "question_cspider": "显示机构名称以及每个机构的蛋白质数量。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "显",
+      "示",
+      "机",
+      "构",
+      "名",
+      "称",
+      "以",
+      "及",
+      "每",
+      "个",
+      "机",
+      "构",
+      "的",
+      "蛋",
+      "白",
+      "质",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT count(*) FROM institution AS T1 JOIN protein AS T2 ON T1.institution_id  =  T2.institution_id WHERE T1.founded  >  1880 OR T1.type  =  'Private'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "institution",
+      "AS",
+      "T1",
+      "JOIN",
+      "protein",
+      "AS",
+      "T2",
+      "ON",
+      "T1.institution_id",
+      "=",
+      "T2.institution_id",
+      "WHERE",
+      "T1.founded",
+      ">",
+      "1880",
+      "OR",
+      "T1.type",
+      "=",
+      "'Private",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "institution",
+      "as",
+      "t1",
+      "join",
+      "protein",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "institution_id",
+      "=",
+      "t2",
+      ".",
+      "institution_id",
+      "where",
+      "t1",
+      ".",
+      "founded",
+      ">",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many proteins are associated with an institution founded after 1880 or an institution with type \"Private\"?",
+    "question": "有多少蛋白质与1880年后建立的机构或具有“Private”类型的机构相关？",
+    "question_cspider": "有多少蛋白质与1880年后建立的机构或具有“Private”类型的机构相关？",
+    "Harold": "BLEU = 49.41, 90.3/66.7/44.8/28.6 (BP=0.938, ratio=0.939, hyp_len=31, ref_len=33)",
+    "question_toks": [
+      "1",
+      "8",
+      "8",
+      "0",
+      "年",
+      "后",
+      "成",
+      "立",
+      "的",
+      "机",
+      "构",
+      "或",
+      "“",
+      "私",
+      "人",
+      "”",
+      "类",
+      "型",
+      "的",
+      "机",
+      "构",
+      "与",
+      "多",
+      "少",
+      "种",
+      "蛋",
+      "白",
+      "质",
+      "相",
+      "关",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          1880,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "\"Private\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT T2.protein_name ,  T1.institution FROM institution AS T1 JOIN protein AS T2 ON T1.institution_id  =  T2.institution_id",
+    "query_toks": [
+      "SELECT",
+      "T2.protein_name",
+      ",",
+      "T1.institution",
+      "FROM",
+      "institution",
+      "AS",
+      "T1",
+      "JOIN",
+      "protein",
+      "AS",
+      "T2",
+      "ON",
+      "T1.institution_id",
+      "=",
+      "T2.institution_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "protein_name",
+      ",",
+      "t1",
+      ".",
+      "institution",
+      "from",
+      "institution",
+      "as",
+      "t1",
+      "join",
+      "protein",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "institution_id",
+      "=",
+      "t2",
+      ".",
+      "institution_id"
+    ],
+    "question_spider": "Show the protein name and the institution name.",
+    "question": "显示蛋白质名称和机构名称。",
+    "question_cspider": "显示蛋白质名称和机构名称。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "显",
+      "示",
+      "蛋",
+      "白",
+      "质",
+      "名",
+      "称",
+      "和",
+      "机",
+      "构",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT count(*) FROM institution AS T1 JOIN protein AS T2 ON T1.institution_id  =  T2.institution_id JOIN building AS T3 ON T3.building_id  =  T1.building_id WHERE T3.floors  >=  20",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "institution",
+      "AS",
+      "T1",
+      "JOIN",
+      "protein",
+      "AS",
+      "T2",
+      "ON",
+      "T1.institution_id",
+      "=",
+      "T2.institution_id",
+      "JOIN",
+      "building",
+      "AS",
+      "T3",
+      "ON",
+      "T3.building_id",
+      "=",
+      "T1.building_id",
+      "WHERE",
+      "T3.floors",
+      ">",
+      "=",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "institution",
+      "as",
+      "t1",
+      "join",
+      "protein",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "institution_id",
+      "=",
+      "t2",
+      ".",
+      "institution_id",
+      "join",
+      "building",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "building_id",
+      "=",
+      "t1",
+      ".",
+      "building_id",
+      "where",
+      "t3",
+      ".",
+      "floors",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many proteins are associated with an institution in a building with at least 20 floors?",
+    "question": "在至少20层楼的建筑中，有多少机构与蛋白质相关联？",
+    "question_cspider": "在至少20层楼的建筑中，有多少机构与蛋白质相关联？",
+    "Harold": "BLEU = 0.00, 77.8/34.6/8.0/0.0 (BP=1.000, ratio=1.080, hyp_len=27, ref_len=25)",
+    "question_toks": [
+      "建",
+      "筑",
+      "物",
+      "至",
+      "少",
+      "有",
+      "2",
+      "0",
+      "层",
+      "时",
+      "，",
+      "与",
+      "该",
+      "机",
+      "构",
+      "相",
+      "关",
+      "的",
+      "蛋",
+      "白",
+      "质",
+      "数",
+      "量",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          20,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "protein_institute",
+    "query": "SELECT count(*) FROM institution WHERE institution_id NOT IN (SELECT institution_id FROM protein)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "institution",
+      "WHERE",
+      "institution_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "institution_id",
+      "FROM",
+      "protein",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "institution",
+      "where",
+      "institution_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "institution_id",
+      "from",
+      "protein",
+      ")"
+    ],
+    "question_spider": "How many institutions do not have an associated protein in our record?",
+    "question": "在我们的记录中没有蛋白质的相关机构有多少？",
+    "question_cspider": "在我们的记录中没有蛋白质的相关机构有多少？",
+    "Harold": "BLEU = 53.78, 100.0/72.2/47.1/37.5 (BP=0.900, ratio=0.905, hyp_len=19, ref_len=21)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "机",
+      "构",
+      "在",
+      "我",
+      "们",
+      "的",
+      "记",
+      "录",
+      "中",
+      "没",
+      "有",
+      "相",
+      "关",
+      "蛋",
+      "白",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      22,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

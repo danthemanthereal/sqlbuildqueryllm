@@ -1,0 +1,3745 @@
+[
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT count(*) FROM submission",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "submission"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "submission"
+    ],
+    "question_spider": "How many submissions are there?",
+    "question": "有多少提交意见？",
+    "question_cspider": "有多少提交意见？",
+    "Harold": "BLEU = 0.00, 57.1/33.3/20.0/0.0 (BP=0.867, ratio=0.875, hyp_len=7, ref_len=8)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "份",
+      "作",
+      "品",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT count(*) FROM submission",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "submission"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "submission"
+    ],
+    "question_spider": "Count the number of submissions.",
+    "question": "统计提交的数量。",
+    "question_cspider": "统计提交的数量。",
+    "Harold": "BLEU = 70.71, 87.5/71.4/66.7/60.0 (BP=1.000, ratio=1.000, hyp_len=8, ref_len=8)",
+    "question_toks": [
+      "计",
+      "算",
+      "提",
+      "交",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author FROM submission ORDER BY Scores ASC",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      "FROM",
+      "submission",
+      "ORDER",
+      "BY",
+      "Scores",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      "from",
+      "submission",
+      "order",
+      "by",
+      "scores",
+      "asc"
+    ],
+    "question_spider": "List the authors of submissions in ascending order of scores.",
+    "question": "按分数升序排列提交的作者。",
+    "question_cspider": "按分数升序排列提交的作者。",
+    "Harold": "BLEU = 44.29, 78.6/53.8/33.3/27.3 (BP=1.000, ratio=1.077, hyp_len=14, ref_len=13)",
+    "question_toks": [
+      "以",
+      "分",
+      "数",
+      "的",
+      "升",
+      "序",
+      "列",
+      "出",
+      "提",
+      "交",
+      "的",
+      "作",
+      "者",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author FROM submission ORDER BY Scores ASC",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      "FROM",
+      "submission",
+      "ORDER",
+      "BY",
+      "Scores",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      "from",
+      "submission",
+      "order",
+      "by",
+      "scores",
+      "asc"
+    ],
+    "question_spider": "Find the author for each submission and list them in ascending order of submission score.",
+    "question": "找出每个提交的作者，并按提交分数的升序列出它们。",
+    "question_cspider": "找出每个提交的作者，并按提交分数的升序列出它们。",
+    "Harold": "BLEU = 79.88, 95.5/85.7/85.0/84.2 (BP=0.913, ratio=0.917, hyp_len=22, ref_len=24)",
+    "question_toks": [
+      "找",
+      "到",
+      "每",
+      "个",
+      "提",
+      "交",
+      "的",
+      "作",
+      "者",
+      "，",
+      "并",
+      "按",
+      "提",
+      "交",
+      "分",
+      "数",
+      "的",
+      "升",
+      "序",
+      "列",
+      "出",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author ,  College FROM submission",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      ",",
+      "College",
+      "FROM",
+      "submission"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      ",",
+      "college",
+      "from",
+      "submission"
+    ],
+    "question_spider": "What are the authors of submissions and their colleges?",
+    "question": "提交的作者和他们的学院是什么？",
+    "question_cspider": "提交的作者和他们的学院是什么？",
+    "Harold": "BLEU = 58.28, 80.0/64.3/53.8/41.7 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "论",
+      "文",
+      "的",
+      "作",
+      "者",
+      "和",
+      "他",
+      "们",
+      "的",
+      "大",
+      "学",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author ,  College FROM submission",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      ",",
+      "College",
+      "FROM",
+      "submission"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      ",",
+      "college",
+      "from",
+      "submission"
+    ],
+    "question_spider": "For each submission, show the author and their affiliated college.",
+    "question": "对于每一个提交，显示作者及其附属学院。",
+    "question_cspider": "对于每一个提交，显示作者及其附属学院。",
+    "Harold": "BLEU = 46.85, 84.2/55.6/41.2/25.0 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "对",
+      "于",
+      "每",
+      "个",
+      "提",
+      "交",
+      "，",
+      "请",
+      "显",
+      "示",
+      "作",
+      "者",
+      "及",
+      "其",
+      "所",
+      "属",
+      "大",
+      "学",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author FROM submission WHERE College  =  \"Florida\" OR College  =  \"Temple\"",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      "FROM",
+      "submission",
+      "WHERE",
+      "College",
+      "=",
+      "``",
+      "Florida",
+      "''",
+      "OR",
+      "College",
+      "=",
+      "``",
+      "Temple",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      "from",
+      "submission",
+      "where",
+      "college",
+      "=",
+      "value",
+      "or",
+      "college",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the names of authors from college \"Florida\" or \"Temple\"",
+    "question": "显示“Florida”大学或“Temple”大学的作者姓名",
+    "question_cspider": "显示“California”大学或“Temple”大学的作者姓名",
+    "Harold": "BLEU = 0.00, 70.0/26.3/0.0/0.0 (BP=1.000, ratio=1.000, hyp_len=20, ref_len=20)",
+    "question_toks": [
+      "显",
+      "示",
+      "大",
+      "学",
+      "“",
+      "佛",
+      "罗",
+      "里",
+      "达",
+      "”",
+      "或",
+      "“",
+      "圣",
+      "殿",
+      "”",
+      "作",
+      "者",
+      "的",
+      "姓",
+      "名"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Florida\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Temple\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author FROM submission WHERE College  =  \"Florida\" OR College  =  \"Temple\"",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      "FROM",
+      "submission",
+      "WHERE",
+      "College",
+      "=",
+      "``",
+      "Florida",
+      "''",
+      "OR",
+      "College",
+      "=",
+      "``",
+      "Temple",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      "from",
+      "submission",
+      "where",
+      "college",
+      "=",
+      "value",
+      "or",
+      "college",
+      "=",
+      "value"
+    ],
+    "question_spider": "Which authors with submissions are from college \"Florida\" or \"Temple\"?",
+    "question": "哪些提交的作者来自“Florida”大学或“Temple”大学？",
+    "question_cspider": "哪些提交的作者来自“California”大学或“Temple”大学？",
+    "Harold": "BLEU = 24.65, 60.9/31.8/19.0/10.0 (BP=1.000, ratio=1.000, hyp_len=23, ref_len=23)",
+    "question_toks": [
+      "哪",
+      "些",
+      "提",
+      "交",
+      "的",
+      "论",
+      "文",
+      "来",
+      "自",
+      "“",
+      "佛",
+      "罗",
+      "里",
+      "达",
+      "”",
+      "或",
+      "“",
+      "圣",
+      "殿",
+      "”",
+      "学",
+      "院",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Florida\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Temple\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT avg(Scores) FROM submission",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Scores",
+      ")",
+      "FROM",
+      "submission"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "scores",
+      ")",
+      "from",
+      "submission"
+    ],
+    "question_spider": "What is the average score of submissions?",
+    "question": "提交的平均分数是多少？",
+    "question_cspider": "提交的平均分数是多少？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=11, ref_len=11)",
+    "question_toks": [
+      "提",
+      "交",
+      "的",
+      "平",
+      "均",
+      "分",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT avg(Scores) FROM submission",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Scores",
+      ")",
+      "FROM",
+      "submission"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "scores",
+      ")",
+      "from",
+      "submission"
+    ],
+    "question_spider": "Compute the average score of submissions.",
+    "question": "计算提交的平均分数。",
+    "question_cspider": "计算提交的平均分数。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=10, ref_len=10)",
+    "question_toks": [
+      "计",
+      "算",
+      "提",
+      "交",
+      "的",
+      "平",
+      "均",
+      "分",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author FROM submission ORDER BY Scores DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      "FROM",
+      "submission",
+      "ORDER",
+      "BY",
+      "Scores",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      "from",
+      "submission",
+      "order",
+      "by",
+      "scores",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the author of the submission with the highest score?",
+    "question": "提交分数最高的作者是什么？",
+    "question_cspider": "提交分数最高的作者是什么？",
+    "Harold": "BLEU = 67.29, 90.9/80.0/77.8/75.0 (BP=0.834, ratio=0.846, hyp_len=11, ref_len=13)",
+    "question_toks": [
+      "得",
+      "分",
+      "最",
+      "高",
+      "的",
+      "作",
+      "者",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author FROM submission ORDER BY Scores DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      "FROM",
+      "submission",
+      "ORDER",
+      "BY",
+      "Scores",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      "from",
+      "submission",
+      "order",
+      "by",
+      "scores",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the author who achieved the highest score in a submission.",
+    "question": "找出在提交中获得最高分数的作者。",
+    "question_cspider": "找出在提交中获得最高分数的作者。",
+    "Harold": "BLEU = 36.17, 92.9/53.8/33.3/18.2 (BP=0.867, ratio=0.875, hyp_len=14, ref_len=16)",
+    "question_toks": [
+      "查",
+      "找",
+      "在",
+      "提",
+      "交",
+      "中",
+      "得",
+      "分",
+      "最",
+      "高",
+      "的",
+      "作",
+      "者",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT College ,  COUNT(*) FROM submission GROUP BY College",
+    "query_toks": [
+      "SELECT",
+      "College",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "submission",
+      "GROUP",
+      "BY",
+      "College"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "college",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "submission",
+      "group",
+      "by",
+      "college"
+    ],
+    "question_spider": "Show different colleges along with the number of authors of submission from each college.",
+    "question": "显示不同的大学以及每个学大学提交论文的作者数量。",
+    "question_cspider": "显示不同的大学以及每个学大学提交论文的作者数量。",
+    "Harold": "BLEU = 58.46, 95.2/75.0/57.9/50.0 (BP=0.867, ratio=0.875, hyp_len=21, ref_len=24)",
+    "question_toks": [
+      "显",
+      "示",
+      "不",
+      "同",
+      "的",
+      "大",
+      "学",
+      "以",
+      "及",
+      "每",
+      "所",
+      "大",
+      "学",
+      "的",
+      "论",
+      "文",
+      "作",
+      "者",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT College ,  COUNT(*) FROM submission GROUP BY College",
+    "query_toks": [
+      "SELECT",
+      "College",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "submission",
+      "GROUP",
+      "BY",
+      "College"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "college",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "submission",
+      "group",
+      "by",
+      "college"
+    ],
+    "question_spider": "For each college, return the college name and the count of authors with submissions from that college.",
+    "question": "对于每个大学，返回大学名称和从该大学提交的作者计数。",
+    "question_cspider": "对于每个大学，返回大学名称和从该大学提交的作者计数。",
+    "Harold": "BLEU = 20.96, 69.0/39.3/18.5/3.8 (BP=1.000, ratio=1.115, hyp_len=29, ref_len=26)",
+    "question_toks": [
+      "对",
+      "于",
+      "每",
+      "个",
+      "学",
+      "院",
+      "，",
+      "返",
+      "回",
+      "学",
+      "院",
+      "名",
+      "称",
+      "以",
+      "及",
+      "该",
+      "学",
+      "院",
+      "提",
+      "交",
+      "的",
+      "论",
+      "文",
+      "的",
+      "作",
+      "者",
+      "人",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT College FROM submission GROUP BY College ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "College",
+      "FROM",
+      "submission",
+      "GROUP",
+      "BY",
+      "College",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "college",
+      "from",
+      "submission",
+      "group",
+      "by",
+      "college",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show the most common college of authors of submissions.",
+    "question": "显示最常见的大学提交的作者。",
+    "question_cspider": "显示最常见的大学提交的作者。",
+    "Harold": "BLEU = 41.91, 76.9/50.0/36.4/30.0 (BP=0.926, ratio=0.929, hyp_len=13, ref_len=14)",
+    "question_toks": [
+      "显",
+      "示",
+      "最",
+      "常",
+      "见",
+      "的",
+      "论",
+      "文",
+      "作",
+      "者",
+      "学",
+      "院",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT College FROM submission GROUP BY College ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "College",
+      "FROM",
+      "submission",
+      "GROUP",
+      "BY",
+      "College",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "college",
+      "from",
+      "submission",
+      "group",
+      "by",
+      "college",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which college has the most authors with submissions?",
+    "question": "哪一所大学的提交的作者最多？",
+    "question_cspider": "哪一所大学的提交的作者最多？",
+    "Harold": "BLEU = 52.66, 100.0/88.9/75.0/57.1 (BP=0.670, ratio=0.714, hyp_len=10, ref_len=14)",
+    "question_toks": [
+      "哪",
+      "所",
+      "大",
+      "学",
+      "的",
+      "作",
+      "者",
+      "最",
+      "多",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT College FROM submission WHERE Scores  >  90 INTERSECT SELECT College FROM submission WHERE Scores  <  80",
+    "query_toks": [
+      "SELECT",
+      "College",
+      "FROM",
+      "submission",
+      "WHERE",
+      "Scores",
+      ">",
+      "90",
+      "INTERSECT",
+      "SELECT",
+      "College",
+      "FROM",
+      "submission",
+      "WHERE",
+      "Scores",
+      "<",
+      "80"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "college",
+      "from",
+      "submission",
+      "where",
+      "scores",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "college",
+      "from",
+      "submission",
+      "where",
+      "scores",
+      "<",
+      "value"
+    ],
+    "question_spider": "Show the colleges that have both authors with submission score larger than 90 and authors with submission score smaller than 80.",
+    "question": "显示那些提交分数大于90的作者和提交分数小于80的作者的大学。",
+    "question_cspider": "显示那些提交分数大于90的作者和提交分数小于80的作者的大学。",
+    "Harold": "BLEU = 69.12, 82.4/72.7/65.6/58.1 (BP=1.000, ratio=1.097, hyp_len=34, ref_len=31)",
+    "question_toks": [
+      "向",
+      "大",
+      "学",
+      "展",
+      "示",
+      "提",
+      "交",
+      "分",
+      "数",
+      "均",
+      "大",
+      "于",
+      "9",
+      "0",
+      "的",
+      "作",
+      "者",
+      "和",
+      "提",
+      "交",
+      "分",
+      "数",
+      "均",
+      "小",
+      "于",
+      "8",
+      "0",
+      "的",
+      "作",
+      "者",
+      "的",
+      "大",
+      "学",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          90,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            80,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT College FROM submission WHERE Scores  >  90 INTERSECT SELECT College FROM submission WHERE Scores  <  80",
+    "query_toks": [
+      "SELECT",
+      "College",
+      "FROM",
+      "submission",
+      "WHERE",
+      "Scores",
+      ">",
+      "90",
+      "INTERSECT",
+      "SELECT",
+      "College",
+      "FROM",
+      "submission",
+      "WHERE",
+      "Scores",
+      "<",
+      "80"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "college",
+      "from",
+      "submission",
+      "where",
+      "scores",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "college",
+      "from",
+      "submission",
+      "where",
+      "scores",
+      "<",
+      "value"
+    ],
+    "question_spider": "Which colleges have both authors with submission score above 90 and authors with submission score below 80?",
+    "question": "哪些大学有提交分数在90以上的作者和80以下的作者？",
+    "question_cspider": "哪些大学有提交分数在90以上的作者和80以下的作者？",
+    "Harold": "BLEU = 0.00, 60.0/29.2/4.3/0.0 (BP=0.961, ratio=0.962, hyp_len=25, ref_len=26)",
+    "question_toks": [
+      "哪",
+      "些",
+      "学",
+      "院",
+      "的",
+      "作",
+      "者",
+      "分",
+      "数",
+      "均",
+      "高",
+      "于",
+      "9",
+      "0",
+      "，",
+      "作",
+      "者",
+      "分",
+      "数",
+      "均",
+      "低",
+      "于",
+      "8",
+      "0",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          90,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            80,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT T2.Author ,  T1.Result FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID  =  T2.Submission_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Author",
+      ",",
+      "T1.Result",
+      "FROM",
+      "acceptance",
+      "AS",
+      "T1",
+      "JOIN",
+      "submission",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Submission_ID",
+      "=",
+      "T2.Submission_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "author",
+      ",",
+      "t1",
+      ".",
+      "result",
+      "from",
+      "acceptance",
+      "as",
+      "t1",
+      "join",
+      "submission",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "submission_id",
+      "=",
+      "t2",
+      ".",
+      "submission_id"
+    ],
+    "question_spider": "Show the authors of submissions and the acceptance results of their submissions.",
+    "question": "显示提交的作者及其提交的接受结果。",
+    "question_cspider": "显示提交的作者及其提交的接受结果。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "显",
+      "示",
+      "提",
+      "交",
+      "的",
+      "作",
+      "者",
+      "及",
+      "其",
+      "提",
+      "交",
+      "的",
+      "接",
+      "受",
+      "结",
+      "果",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT T2.Author ,  T1.Result FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID  =  T2.Submission_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Author",
+      ",",
+      "T1.Result",
+      "FROM",
+      "acceptance",
+      "AS",
+      "T1",
+      "JOIN",
+      "submission",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Submission_ID",
+      "=",
+      "T2.Submission_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "author",
+      ",",
+      "t1",
+      ".",
+      "result",
+      "from",
+      "acceptance",
+      "as",
+      "t1",
+      "join",
+      "submission",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "submission_id",
+      "=",
+      "t2",
+      ".",
+      "submission_id"
+    ],
+    "question_spider": "For each submission, find its author and acceptance result.",
+    "question": "对于每个提交，找出其作者和接受结果。",
+    "question_cspider": "对于每个提交，找出其作者和接受结果。",
+    "Harold": "BLEU = 83.94, 94.4/88.2/81.2/73.3 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "对",
+      "于",
+      "每",
+      "个",
+      "提",
+      "交",
+      "，",
+      "找",
+      "到",
+      "其",
+      "作",
+      "者",
+      "和",
+      "接",
+      "受",
+      "结",
+      "果",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT T1.Result FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID  =  T2.Submission_ID ORDER BY T2.Scores DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.Result",
+      "FROM",
+      "acceptance",
+      "AS",
+      "T1",
+      "JOIN",
+      "submission",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Submission_ID",
+      "=",
+      "T2.Submission_ID",
+      "ORDER",
+      "BY",
+      "T2.Scores",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "result",
+      "from",
+      "acceptance",
+      "as",
+      "t1",
+      "join",
+      "submission",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "submission_id",
+      "=",
+      "t2",
+      ".",
+      "submission_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "scores",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show the result of the submission with the highest score.",
+    "question": "显示最高分数的提交结果。",
+    "question_cspider": "显示最高分数的提交结果。",
+    "Harold": "BLEU = 57.74, 91.7/72.7/50.0/33.3 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "以",
+      "最",
+      "高",
+      "分",
+      "数",
+      "显",
+      "示",
+      "提",
+      "交",
+      "结",
+      "果",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT T1.Result FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID  =  T2.Submission_ID ORDER BY T2.Scores DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.Result",
+      "FROM",
+      "acceptance",
+      "AS",
+      "T1",
+      "JOIN",
+      "submission",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Submission_ID",
+      "=",
+      "T2.Submission_ID",
+      "ORDER",
+      "BY",
+      "T2.Scores",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "result",
+      "from",
+      "acceptance",
+      "as",
+      "t1",
+      "join",
+      "submission",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "submission_id",
+      "=",
+      "t2",
+      ".",
+      "submission_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "scores",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which submission received the highest score in acceptance result. Show me the result.",
+    "question": "在录取结果中，录取分数最高。把结果显示给我。",
+    "question_cspider": "在录取结果中，录取分数最高。把结果显示给我。",
+    "Harold": "BLEU = 0.00, 52.4/25.0/5.3/0.0 (BP=0.953, ratio=0.955, hyp_len=21, ref_len=22)",
+    "question_toks": [
+      "哪",
+      "个",
+      "提",
+      "交",
+      "的",
+      "接",
+      "收",
+      "结",
+      "果",
+      "得",
+      "分",
+      "最",
+      "高",
+      "。",
+      "给",
+      "我",
+      "看",
+      "看",
+      "结",
+      "果",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT T2.Author ,  COUNT(DISTINCT T1.workshop_id) FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID  =  T2.Submission_ID GROUP BY T2.Author",
+    "query_toks": [
+      "SELECT",
+      "T2.Author",
+      ",",
+      "COUNT",
+      "(",
+      "DISTINCT",
+      "T1.workshop_id",
+      ")",
+      "FROM",
+      "acceptance",
+      "AS",
+      "T1",
+      "JOIN",
+      "submission",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Submission_ID",
+      "=",
+      "T2.Submission_ID",
+      "GROUP",
+      "BY",
+      "T2.Author"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "author",
+      ",",
+      "count",
+      "(",
+      "distinct",
+      "t1",
+      ".",
+      "workshop_id",
+      ")",
+      "from",
+      "acceptance",
+      "as",
+      "t1",
+      "join",
+      "submission",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "submission_id",
+      "=",
+      "t2",
+      ".",
+      "submission_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "author"
+    ],
+    "question_spider": "Show each author and the number of workshops they submitted to.",
+    "question": "显示每个作者和他们提交的研习会数量。",
+    "question_cspider": "显示每个作者和他们提交的研习会数量。",
+    "Harold": "BLEU = 54.03, 82.4/68.8/53.3/35.7 (BP=0.943, ratio=0.944, hyp_len=17, ref_len=18)",
+    "question_toks": [
+      "显",
+      "示",
+      "每",
+      "个",
+      "作",
+      "者",
+      "及",
+      "其",
+      "提",
+      "交",
+      "的",
+      "研",
+      "讨",
+      "会",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                10,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT T2.Author ,  COUNT(DISTINCT T1.workshop_id) FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID  =  T2.Submission_ID GROUP BY T2.Author",
+    "query_toks": [
+      "SELECT",
+      "T2.Author",
+      ",",
+      "COUNT",
+      "(",
+      "DISTINCT",
+      "T1.workshop_id",
+      ")",
+      "FROM",
+      "acceptance",
+      "AS",
+      "T1",
+      "JOIN",
+      "submission",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Submission_ID",
+      "=",
+      "T2.Submission_ID",
+      "GROUP",
+      "BY",
+      "T2.Author"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "author",
+      ",",
+      "count",
+      "(",
+      "distinct",
+      "t1",
+      ".",
+      "workshop_id",
+      ")",
+      "from",
+      "acceptance",
+      "as",
+      "t1",
+      "join",
+      "submission",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "submission_id",
+      "=",
+      "t2",
+      ".",
+      "submission_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "author"
+    ],
+    "question_spider": "How many workshops did each author submit to? Return the author name and the number of workshops.",
+    "question": "每个作者提交了多少个研习会？返回作者姓名和研习会的数量。",
+    "question_cspider": "每个作者提交了多少个研习会？返回作者姓名和研习会的数量。",
+    "Harold": "BLEU = 73.40, 92.6/80.8/72.0/62.5 (BP=0.964, ratio=0.964, hyp_len=27, ref_len=28)",
+    "question_toks": [
+      "每",
+      "个",
+      "作",
+      "者",
+      "提",
+      "交",
+      "了",
+      "多",
+      "少",
+      "个",
+      "研",
+      "讨",
+      "会",
+      "？",
+      "返",
+      "回",
+      "作",
+      "者",
+      "姓",
+      "名",
+      "和",
+      "研",
+      "讨",
+      "会",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                10,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT T2.Author FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID  =  T2.Submission_ID GROUP BY T2.Author HAVING COUNT(DISTINCT T1.workshop_id)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T2.Author",
+      "FROM",
+      "acceptance",
+      "AS",
+      "T1",
+      "JOIN",
+      "submission",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Submission_ID",
+      "=",
+      "T2.Submission_ID",
+      "GROUP",
+      "BY",
+      "T2.Author",
+      "HAVING",
+      "COUNT",
+      "(",
+      "DISTINCT",
+      "T1.workshop_id",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "author",
+      "from",
+      "acceptance",
+      "as",
+      "t1",
+      "join",
+      "submission",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "submission_id",
+      "=",
+      "t2",
+      ".",
+      "submission_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "author",
+      "having",
+      "count",
+      "(",
+      "distinct",
+      "t1",
+      ".",
+      "workshop_id",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Show the authors who have submissions to more than one workshop.",
+    "question": "显示提交给一个以上研习会的作者。",
+    "question_cspider": "显示提交给一个以上研习会的作者。",
+    "Harold": "BLEU = 0.00, 61.1/29.4/12.5/0.0 (BP=1.000, ratio=1.125, hyp_len=18, ref_len=16)",
+    "question_toks": [
+      "向",
+      "提",
+      "交",
+      "给",
+      "多",
+      "个",
+      "研",
+      "讨",
+      "会",
+      "的",
+      "论",
+      "文",
+      "的",
+      "作",
+      "者",
+      "展",
+      "示",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              10,
+              true
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT T2.Author FROM acceptance AS T1 JOIN submission AS T2 ON T1.Submission_ID  =  T2.Submission_ID GROUP BY T2.Author HAVING COUNT(DISTINCT T1.workshop_id)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T2.Author",
+      "FROM",
+      "acceptance",
+      "AS",
+      "T1",
+      "JOIN",
+      "submission",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Submission_ID",
+      "=",
+      "T2.Submission_ID",
+      "GROUP",
+      "BY",
+      "T2.Author",
+      "HAVING",
+      "COUNT",
+      "(",
+      "DISTINCT",
+      "T1.workshop_id",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "author",
+      "from",
+      "acceptance",
+      "as",
+      "t1",
+      "join",
+      "submission",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "submission_id",
+      "=",
+      "t2",
+      ".",
+      "submission_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "author",
+      "having",
+      "count",
+      "(",
+      "distinct",
+      "t1",
+      ".",
+      "workshop_id",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Which authors have submitted to more than one workshop?",
+    "question": "哪些作者提交了一个以上的研习会？",
+    "question_cspider": "哪些作者提交了一个以上的研习会？",
+    "Harold": "BLEU = 43.45, 84.6/58.3/45.5/40.0 (BP=0.794, ratio=0.812, hyp_len=13, ref_len=16)",
+    "question_toks": [
+      "哪",
+      "些",
+      "作",
+      "者",
+      "提",
+      "交",
+      "了",
+      "多",
+      "个",
+      "研",
+      "讨",
+      "会",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              10,
+              true
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Date ,  Venue FROM workshop ORDER BY Venue",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      ",",
+      "Venue",
+      "FROM",
+      "workshop",
+      "ORDER",
+      "BY",
+      "Venue"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      ",",
+      "venue",
+      "from",
+      "workshop",
+      "order",
+      "by",
+      "venue"
+    ],
+    "question_spider": "Show the date and venue of each workshop in ascending alphabetical order of the venue.",
+    "question": "按照场地的升序显示每个研讨会的日期和地点。",
+    "question_cspider": "按照场地的升序显示每个研讨会的日期和地点。",
+    "Harold": "BLEU = 77.39, 86.4/81.0/75.0/68.4 (BP=1.000, ratio=1.048, hyp_len=22, ref_len=21)",
+    "question_toks": [
+      "以",
+      "场",
+      "地",
+      "的",
+      "字",
+      "母",
+      "升",
+      "序",
+      "显",
+      "示",
+      "每",
+      "个",
+      "研",
+      "讨",
+      "会",
+      "的",
+      "日",
+      "期",
+      "和",
+      "地",
+      "点",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Date ,  Venue FROM workshop ORDER BY Venue",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      ",",
+      "Venue",
+      "FROM",
+      "workshop",
+      "ORDER",
+      "BY",
+      "Venue"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      ",",
+      "venue",
+      "from",
+      "workshop",
+      "order",
+      "by",
+      "venue"
+    ],
+    "question_spider": "Sort the each workshop in alphabetical order of the venue. Return the date and venue of each workshop.",
+    "question": "按场地的字母顺序对每个研习会进行排序。返回每个研习会的日期和地点。",
+    "question_cspider": "按场地的字母顺序对每个研习会进行排序。返回每个研习会的日期和地点。",
+    "Harold": "BLEU = 83.50, 93.9/87.5/80.6/73.3 (BP=1.000, ratio=1.000, hyp_len=33, ref_len=33)",
+    "question_toks": [
+      "按",
+      "场",
+      "地",
+      "的",
+      "字",
+      "母",
+      "顺",
+      "序",
+      "对",
+      "每",
+      "个",
+      "研",
+      "讨",
+      "会",
+      "进",
+      "行",
+      "排",
+      "序",
+      "。",
+      "返",
+      "回",
+      "每",
+      "个",
+      "研",
+      "讨",
+      "会",
+      "的",
+      "日",
+      "期",
+      "和",
+      "地",
+      "点",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author FROM submission WHERE Submission_ID NOT IN (SELECT Submission_ID FROM acceptance)",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      "FROM",
+      "submission",
+      "WHERE",
+      "Submission_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Submission_ID",
+      "FROM",
+      "acceptance",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      "from",
+      "submission",
+      "where",
+      "submission_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "submission_id",
+      "from",
+      "acceptance",
+      ")"
+    ],
+    "question_spider": "List the authors who do not have submission to any workshop.",
+    "question": "列出没有提交到任何研习会的作者。",
+    "question_cspider": "列出没有提交到任何研习会的作者。",
+    "Harold": "BLEU = 46.17, 80.0/64.3/46.2/25.0 (BP=0.936, ratio=0.938, hyp_len=15, ref_len=16)",
+    "question_toks": [
+      "列",
+      "出",
+      "没",
+      "有",
+      "参",
+      "加",
+      "任",
+      "何",
+      "研",
+      "讨",
+      "会",
+      "的",
+      "作",
+      "者",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      9,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "workshop_paper",
+    "query": "SELECT Author FROM submission WHERE Submission_ID NOT IN (SELECT Submission_ID FROM acceptance)",
+    "query_toks": [
+      "SELECT",
+      "Author",
+      "FROM",
+      "submission",
+      "WHERE",
+      "Submission_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Submission_ID",
+      "FROM",
+      "acceptance",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "author",
+      "from",
+      "submission",
+      "where",
+      "submission_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "submission_id",
+      "from",
+      "acceptance",
+      ")"
+    ],
+    "question_spider": "Which authors did not submit to any workshop?",
+    "question": "哪些作者没有提交任何研习会？",
+    "question_cspider": "哪些作者没有提交任何研习会？",
+    "Harold": "BLEU = 48.42, 78.6/61.5/41.7/27.3 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "哪",
+      "些",
+      "作",
+      "者",
+      "没",
+      "有",
+      "参",
+      "加",
+      "任",
+      "何",
+      "研",
+      "讨",
+      "会",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      9,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

@@ -1,0 +1,1714 @@
+[
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT count(*) FROM performance",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "performance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "performance"
+    ],
+    "question": "¿Cuántas actuaciones hay?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT HOST FROM performance ORDER BY Attendance ASC",
+    "query_toks": [
+      "SELECT",
+      "HOST",
+      "FROM",
+      "performance",
+      "ORDER",
+      "BY",
+      "Attendance",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "host",
+      "from",
+      "performance",
+      "order",
+      "by",
+      "attendance",
+      "asc"
+    ],
+    "question": "Enumere los presentadores de las actuaciones en orden ascendente de asistencia.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT Date ,  LOCATION FROM performance",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      ",",
+      "LOCATION",
+      "FROM",
+      "performance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      ",",
+      "location",
+      "from",
+      "performance"
+    ],
+    "question": "¿Cuáles son las fechas y lugares de las actuaciones?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT Attendance FROM performance WHERE LOCATION  =  \"TD Garden\" OR LOCATION  =  \"Bell Centre\"",
+    "query_toks": [
+      "SELECT",
+      "Attendance",
+      "FROM",
+      "performance",
+      "WHERE",
+      "LOCATION",
+      "=",
+      "``",
+      "TD",
+      "Garden",
+      "''",
+      "OR",
+      "LOCATION",
+      "=",
+      "``",
+      "Bell",
+      "Centre",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "attendance",
+      "from",
+      "performance",
+      "where",
+      "location",
+      "=",
+      "value",
+      "or",
+      "location",
+      "=",
+      "value"
+    ],
+    "question": "Muestre la asistencia de las actuaciones en la ubicación \"TD Garden\" o \"Bell Center\"",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"TD Garden\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Bell Centre\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT avg(Attendance) FROM performance",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Attendance",
+      ")",
+      "FROM",
+      "performance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "attendance",
+      ")",
+      "from",
+      "performance"
+    ],
+    "question": "¿Cuál es el número medio de asistentes a las actuaciones?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT Date FROM performance ORDER BY Attendance DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      "FROM",
+      "performance",
+      "ORDER",
+      "BY",
+      "Attendance",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      "from",
+      "performance",
+      "order",
+      "by",
+      "attendance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "¿Cuál es la fecha de la actuación con mayor número de asistentes?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT LOCATION ,  COUNT(*) FROM performance GROUP BY LOCATION",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "performance",
+      "GROUP",
+      "BY",
+      "LOCATION"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "performance",
+      "group",
+      "by",
+      "location"
+    ],
+    "question": "Muestre diferentes ubicaciones y el número de actuaciones en cada ubicación.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT LOCATION FROM performance GROUP BY LOCATION ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "performance",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "performance",
+      "group",
+      "by",
+      "location",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Muestre la ubicación más común de las actuaciones.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT LOCATION FROM performance GROUP BY LOCATION HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "performance",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "performance",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Muestre las ubicaciones que tienen al menos dos acuaciones.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT LOCATION FROM performance WHERE Attendance  >  2000 INTERSECT SELECT LOCATION FROM performance WHERE Attendance  <  1000",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "performance",
+      "WHERE",
+      "Attendance",
+      ">",
+      "2000",
+      "INTERSECT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "performance",
+      "WHERE",
+      "Attendance",
+      "<",
+      "1000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "performance",
+      "where",
+      "attendance",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "location",
+      "from",
+      "performance",
+      "where",
+      "attendance",
+      "<",
+      "value"
+    ],
+    "question": "Muestre las ubicaciones que tienen actuaciones con más de 2000 asistentes y actuaciones con menos de 1000 asistentes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          2000.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            1000.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT T2.Name ,  T3.Location FROM member_attendance AS T1 JOIN member AS T2 ON T1.Member_ID  =  T2.Member_ID JOIN performance AS T3 ON T1.Performance_ID  =  T3.Performance_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T3.Location",
+      "FROM",
+      "member_attendance",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Member_ID",
+      "=",
+      "T2.Member_ID",
+      "JOIN",
+      "performance",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Performance_ID",
+      "=",
+      "T3.Performance_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "location",
+      "from",
+      "member_attendance",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "join",
+      "performance",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "performance_id",
+      "=",
+      "t3",
+      ".",
+      "performance_id"
+    ],
+    "question": "Muestre los nombres de los miembros y la ubicación de las actuaciones a las que asistieron.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT T2.Name ,  T3.Location FROM member_attendance AS T1 JOIN member AS T2 ON T1.Member_ID  =  T2.Member_ID JOIN performance AS T3 ON T1.Performance_ID  =  T3.Performance_ID ORDER BY T2.Name ASC",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T3.Location",
+      "FROM",
+      "member_attendance",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Member_ID",
+      "=",
+      "T2.Member_ID",
+      "JOIN",
+      "performance",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Performance_ID",
+      "=",
+      "T3.Performance_ID",
+      "ORDER",
+      "BY",
+      "T2.Name",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "location",
+      "from",
+      "member_attendance",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "join",
+      "performance",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "performance_id",
+      "=",
+      "t3",
+      ".",
+      "performance_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "name",
+      "asc"
+    ],
+    "question": "Muestre los nombres de los miembros y la ubicación de las actuaciones a las que asistieron en orden alfabético ascendente de sus nombres.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT T3.Date FROM member_attendance AS T1 JOIN member AS T2 ON T1.Member_ID  =  T2.Member_ID JOIN performance AS T3 ON T1.Performance_ID  =  T3.Performance_ID WHERE T2.Role  =  \"Violin\"",
+    "query_toks": [
+      "SELECT",
+      "T3.Date",
+      "FROM",
+      "member_attendance",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Member_ID",
+      "=",
+      "T2.Member_ID",
+      "JOIN",
+      "performance",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Performance_ID",
+      "=",
+      "T3.Performance_ID",
+      "WHERE",
+      "T2.Role",
+      "=",
+      "``",
+      "Violin",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "date",
+      "from",
+      "member_attendance",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "join",
+      "performance",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "performance_id",
+      "=",
+      "t3",
+      ".",
+      "performance_id",
+      "where",
+      "t2",
+      ".",
+      "role",
+      "=",
+      "value"
+    ],
+    "question": "Muestre las fechas de las actuaciones con los miembros asistentes cuyos roles son \"Violin\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Violin\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT T2.Name ,  T3.Date FROM member_attendance AS T1 JOIN member AS T2 ON T1.Member_ID  =  T2.Member_ID JOIN performance AS T3 ON T1.Performance_ID  =  T3.Performance_ID ORDER BY T3.Attendance DESC",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T3.Date",
+      "FROM",
+      "member_attendance",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Member_ID",
+      "=",
+      "T2.Member_ID",
+      "JOIN",
+      "performance",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Performance_ID",
+      "=",
+      "T3.Performance_ID",
+      "ORDER",
+      "BY",
+      "T3.Attendance",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "date",
+      "from",
+      "member_attendance",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "join",
+      "performance",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "performance_id",
+      "=",
+      "t3",
+      ".",
+      "performance_id",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "attendance",
+      "desc"
+    ],
+    "question": "Muestre los nombres de los miembros y las fechas de las actuaciones a las que asistieron en orden descendente de asistencia a las actuaciones.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "performance_attendance",
+    "query": "SELECT Name FROM member WHERE Member_ID NOT IN (SELECT Member_ID FROM member_attendance)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "member",
+      "WHERE",
+      "Member_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Member_ID",
+      "FROM",
+      "member_attendance",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "where",
+      "member_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "member_id",
+      "from",
+      "member_attendance",
+      ")"
+    ],
+    "question": "Enumere los nombres de los miembros que no asistieron a ninguna función.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      10,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

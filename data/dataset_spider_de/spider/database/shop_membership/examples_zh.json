@@ -1,0 +1,7037 @@
+[
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(*) FROM branch WHERE membership_amount  >  (SELECT avg(membership_amount) FROM branch)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "membership_amount",
+      ")",
+      "FROM",
+      "branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "membership_amount",
+      ")",
+      "from",
+      "branch",
+      ")"
+    ],
+    "question_spider": "How many branches where have more than average number of memberships are there?",
+    "question": "有多少分支机构的会员人数超过平均数？",
+    "question_cspider": "有多少分支机构的会员人数超过平均数？",
+    "Harold": "BLEU = 72.65, 90.0/78.9/66.7/58.8 (BP=1.000, ratio=1.111, hyp_len=20, ref_len=18)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "个",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "会",
+      "员",
+      "人",
+      "数",
+      "超",
+      "过",
+      "平",
+      "均",
+      "人",
+      "数",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(*) FROM branch WHERE membership_amount  >  (SELECT avg(membership_amount) FROM branch)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "membership_amount",
+      ")",
+      "FROM",
+      "branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "membership_amount",
+      ")",
+      "from",
+      "branch",
+      ")"
+    ],
+    "question_spider": "What is the number of branches that have more than the average number of memberships?",
+    "question": "有多少分支机构的成员数超过了平均数？",
+    "question_cspider": "有多少分支机构的成员数超过了平均数？",
+    "Harold": "BLEU = 20.97, 78.9/33.3/11.8/6.2 (BP=1.000, ratio=1.056, hyp_len=19, ref_len=18)",
+    "question_toks": [
+      "超",
+      "过",
+      "平",
+      "均",
+      "会",
+      "员",
+      "人",
+      "数",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "数",
+      "量",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name ,  address_road ,  city FROM branch ORDER BY open_year",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "address_road",
+      ",",
+      "city",
+      "FROM",
+      "branch",
+      "ORDER",
+      "BY",
+      "open_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "address_road",
+      ",",
+      "city",
+      "from",
+      "branch",
+      "order",
+      "by",
+      "open_year"
+    ],
+    "question_spider": "Show name, address road, and city for all branches sorted by open year.",
+    "question": "按开业年份分列出所有分行名称、地址、道路和城市。",
+    "question_cspider": "按开业年份分列出所有分行名称、地址、道路和城市。",
+    "Harold": "BLEU = 22.10, 58.6/35.7/14.8/7.7 (BP=1.000, ratio=1.208, hyp_len=29, ref_len=24)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "，",
+      "地",
+      "址",
+      "道",
+      "路",
+      "和",
+      "城",
+      "市",
+      "（",
+      "按",
+      "开",
+      "放",
+      "年",
+      "份",
+      "排",
+      "序",
+      "）",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name ,  address_road ,  city FROM branch ORDER BY open_year",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "address_road",
+      ",",
+      "city",
+      "FROM",
+      "branch",
+      "ORDER",
+      "BY",
+      "open_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "address_road",
+      ",",
+      "city",
+      "from",
+      "branch",
+      "order",
+      "by",
+      "open_year"
+    ],
+    "question_spider": "What are the names, address roads, and cities of the branches ordered by opening year?",
+    "question": "按开业年份排序的分行的名称、地址道路和城市是什么？",
+    "question_cspider": "按开业年份排序的分行的名称、地址道路和城市是什么？",
+    "Harold": "BLEU = 55.71, 76.9/64.0/50.0/39.1 (BP=1.000, ratio=1.040, hyp_len=26, ref_len=25)",
+    "question_toks": [
+      "开",
+      "业",
+      "年",
+      "份",
+      "订",
+      "购",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "，",
+      "地",
+      "址",
+      "道",
+      "路",
+      "和",
+      "城",
+      "市",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name FROM branch ORDER BY membership_amount DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "branch",
+      "ORDER",
+      "BY",
+      "membership_amount",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "branch",
+      "order",
+      "by",
+      "membership_amount",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What are names for top three branches with most number of membership?",
+    "question": "会员人数最多的三大分支机构是什么？",
+    "question_cspider": "会员人数最多的三大分支机构是什么？",
+    "Harold": "BLEU = 47.91, 73.7/55.6/41.2/31.2 (BP=1.000, ratio=1.118, hyp_len=19, ref_len=17)",
+    "question_toks": [
+      "会",
+      "员",
+      "人",
+      "数",
+      "最",
+      "多",
+      "的",
+      "前",
+      "三",
+      "个",
+      "分",
+      "支",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name FROM branch ORDER BY membership_amount DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "branch",
+      "ORDER",
+      "BY",
+      "membership_amount",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "branch",
+      "order",
+      "by",
+      "membership_amount",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What are the names for the 3 branches that have the most memberships?",
+    "question": "拥有前三多会员人数的分支机构的名称是什么？",
+    "question_cspider": "拥有前三多会员人数的分支机构的名称是什么？",
+    "Harold": "BLEU = 35.44, 70.0/42.1/27.8/23.5 (BP=0.951, ratio=0.952, hyp_len=20, ref_len=21)",
+    "question_toks": [
+      "拥",
+      "有",
+      "最",
+      "多",
+      "成",
+      "员",
+      "资",
+      "格",
+      "的",
+      "3",
+      "个",
+      "分",
+      "支",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT DISTINCT city FROM branch WHERE membership_amount  >=  100",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "=",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show all distinct city where branches with at least 100 memberships are located.",
+    "question": "显示所有具有至少100个会员人数的分支机构所在的城市。",
+    "question_cspider": "显示所有具有至少100个会员人数的分支机构所在的城市。",
+    "Harold": "BLEU = 66.91, 82.8/71.4/63.0/53.8 (BP=1.000, ratio=1.074, hyp_len=29, ref_len=27)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "具",
+      "有",
+      "至",
+      "少",
+      "1",
+      "0",
+      "0",
+      "个",
+      "成",
+      "员",
+      "资",
+      "格",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "所",
+      "在",
+      "的",
+      "不",
+      "同",
+      "城",
+      "市",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          100,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT DISTINCT city FROM branch WHERE membership_amount  >=  100",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "=",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the different cities that have more than 100 memberships?",
+    "question": "哪些城市拥有超过100个会员资格？",
+    "question_cspider": "哪些城市拥有超过100个会员资格？",
+    "Harold": "BLEU = 52.89, 68.4/55.6/47.1/43.8 (BP=1.000, ratio=1.118, hyp_len=19, ref_len=17)",
+    "question_toks": [
+      "拥",
+      "有",
+      "超",
+      "过",
+      "1",
+      "0",
+      "0",
+      "个",
+      "会",
+      "员",
+      "的",
+      "不",
+      "同",
+      "城",
+      "市",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          100,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT open_year FROM branch GROUP BY open_year HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "open_year",
+      "FROM",
+      "branch",
+      "GROUP",
+      "BY",
+      "open_year",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "open_year",
+      "from",
+      "branch",
+      "group",
+      "by",
+      "open_year",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "List all open years when at least two shops are opened.",
+    "question": "列出至少两个商店开业的所有营业年。",
+    "question_cspider": "列出至少两个商店开业的所有营业年。",
+    "Harold": "BLEU = 48.74, 78.9/55.6/41.2/31.2 (BP=1.000, ratio=1.118, hyp_len=19, ref_len=17)",
+    "question_toks": [
+      "列",
+      "出",
+      "至",
+      "少",
+      "有",
+      "两",
+      "家",
+      "商",
+      "店",
+      "开",
+      "业",
+      "的",
+      "所",
+      "有",
+      "开",
+      "业",
+      "年",
+      "份",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT open_year FROM branch GROUP BY open_year HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "open_year",
+      "FROM",
+      "branch",
+      "GROUP",
+      "BY",
+      "open_year",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "open_year",
+      "from",
+      "branch",
+      "group",
+      "by",
+      "open_year",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the opening years in which at least two shops opened?",
+    "question": "开店时间至少有两个的营业年有哪些？",
+    "question_cspider": "开店时间至少有两个的营业年有哪些？",
+    "Harold": "BLEU = 18.04, 71.4/23.1/16.7/9.1 (BP=0.807, ratio=0.824, hyp_len=14, ref_len=17)",
+    "question_toks": [
+      "至",
+      "少",
+      "有",
+      "两",
+      "家",
+      "商",
+      "店",
+      "开",
+      "业",
+      "的",
+      "年",
+      "份",
+      "是",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT min(membership_amount) ,  max(membership_amount) FROM branch WHERE open_year  =  2011 OR city  =  'London'",
+    "query_toks": [
+      "SELECT",
+      "min",
+      "(",
+      "membership_amount",
+      ")",
+      ",",
+      "max",
+      "(",
+      "membership_amount",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "=",
+      "2011",
+      "OR",
+      "city",
+      "=",
+      "'London",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "min",
+      "(",
+      "membership_amount",
+      ")",
+      ",",
+      "max",
+      "(",
+      "membership_amount",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "=",
+      "value",
+      "or",
+      "city",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show minimum and maximum amount of memberships for all branches opened in 2011 or located at city London.",
+    "question": "显示2011年开业或位于“London”的所有分行的最低和最高会员数量。",
+    "question_cspider": "显示2011年开业或位于\"北京\"的所有分行的最低和最高会员数量。",
+    "Harold": "BLEU = 70.67, 81.8/75.0/67.7/60.0 (BP=1.000, ratio=1.031, hyp_len=33, ref_len=32)",
+    "question_toks": [
+      "显",
+      "示",
+      "2",
+      "0",
+      "1",
+      "1",
+      "年",
+      "开",
+      "业",
+      "或",
+      "位",
+      "于",
+      "伦",
+      "敦",
+      "市",
+      "的",
+      "所",
+      "有",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "最",
+      "低",
+      "和",
+      "最",
+      "高",
+      "会",
+      "员",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2011,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT min(membership_amount) ,  max(membership_amount) FROM branch WHERE open_year  =  2011 OR city  =  'London'",
+    "query_toks": [
+      "SELECT",
+      "min",
+      "(",
+      "membership_amount",
+      ")",
+      ",",
+      "max",
+      "(",
+      "membership_amount",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "=",
+      "2011",
+      "OR",
+      "city",
+      "=",
+      "'London",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "min",
+      "(",
+      "membership_amount",
+      ")",
+      ",",
+      "max",
+      "(",
+      "membership_amount",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "=",
+      "value",
+      "or",
+      "city",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the minimum and maximum membership amounts for all branches that either opened in 2011 or are located in London?",
+    "question": "2011年开业或位于“London”的所有分行的最低和最高会员人数是多少？",
+    "question_cspider": "2011年开业或位于\"北京\"的所有分行的最低和最高会员人数是多少？",
+    "Harold": "BLEU = 60.56, 79.4/66.7/56.2/45.2 (BP=1.000, ratio=1.030, hyp_len=34, ref_len=33)",
+    "question_toks": [
+      "在",
+      "2",
+      "0",
+      "1",
+      "1",
+      "年",
+      "开",
+      "业",
+      "或",
+      "位",
+      "于",
+      "伦",
+      "敦",
+      "的",
+      "所",
+      "有",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "最",
+      "低",
+      "和",
+      "最",
+      "高",
+      "会",
+      "员",
+      "数",
+      "量",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2011,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city ,  count(*) FROM branch WHERE open_year  <  2010 GROUP BY city",
+    "query_toks": [
+      "SELECT",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "<",
+      "2010",
+      "GROUP",
+      "BY",
+      "city"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "<",
+      "value",
+      "group",
+      "by",
+      "city"
+    ],
+    "question_spider": "Show the city and the number of branches opened before 2010 for each city.",
+    "question": "显示每个城市在2010年开放的每个分支机构的数量。",
+    "question_cspider": "显示每个城市在2010年开放的每个分支机构的数量。",
+    "Harold": "BLEU = 50.65, 77.8/57.7/44.0/33.3 (BP=1.000, ratio=1.080, hyp_len=27, ref_len=25)",
+    "question_toks": [
+      "显",
+      "示",
+      "城",
+      "市",
+      "和",
+      "2",
+      "0",
+      "1",
+      "0",
+      "年",
+      "之",
+      "前",
+      "每",
+      "个",
+      "城",
+      "市",
+      "开",
+      "设",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2010,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city ,  count(*) FROM branch WHERE open_year  <  2010 GROUP BY city",
+    "query_toks": [
+      "SELECT",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "<",
+      "2010",
+      "GROUP",
+      "BY",
+      "city"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "<",
+      "value",
+      "group",
+      "by",
+      "city"
+    ],
+    "question_spider": "For each city, how many branches opened before 2010?",
+    "question": "每一个城市，有多少分支机构在2010年之前开放？",
+    "question_cspider": "每一个城市，有多少分支机构在2010年之前开放？",
+    "Harold": "BLEU = 50.41, 80.0/58.3/43.5/31.8 (BP=1.000, ratio=1.042, hyp_len=25, ref_len=24)",
+    "question_toks": [
+      "对",
+      "于",
+      "每",
+      "个",
+      "城",
+      "市",
+      "，",
+      "2",
+      "0",
+      "1",
+      "0",
+      "年",
+      "之",
+      "前",
+      "开",
+      "设",
+      "了",
+      "多",
+      "少",
+      "个",
+      "分",
+      "支",
+      "机",
+      "构",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2010,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(DISTINCT LEVEL) FROM member",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "LEVEL",
+      ")",
+      "FROM",
+      "member"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "level",
+      ")",
+      "from",
+      "member"
+    ],
+    "question_spider": "How many different levels do members have?",
+    "question": "会员有多少不同级别？",
+    "question_cspider": "会员有多少不同级别？",
+    "Harold": "BLEU = 58.77, 81.8/70.0/55.6/37.5 (BP=1.000, ratio=1.100, hyp_len=11, ref_len=10)",
+    "question_toks": [
+      "成",
+      "员",
+      "有",
+      "多",
+      "少",
+      "个",
+      "不",
+      "同",
+      "级",
+      "别",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(DISTINCT LEVEL) FROM member",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "LEVEL",
+      ")",
+      "FROM",
+      "member"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "level",
+      ")",
+      "from",
+      "member"
+    ],
+    "question_spider": "What are the different membership levels?",
+    "question": "不同的会员级别有哪些？",
+    "question_cspider": "不同的会员级别有哪些？",
+    "Harold": "BLEU = 71.86, 100.0/80.0/66.7/50.0 (BP=1.000, ratio=1.000, hyp_len=11, ref_len=11)",
+    "question_toks": [
+      "有",
+      "哪",
+      "些",
+      "不",
+      "同",
+      "的",
+      "会",
+      "员",
+      "级",
+      "别",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT card_number ,  name ,  hometown FROM member ORDER BY LEVEL DESC",
+    "query_toks": [
+      "SELECT",
+      "card_number",
+      ",",
+      "name",
+      ",",
+      "hometown",
+      "FROM",
+      "member",
+      "ORDER",
+      "BY",
+      "LEVEL",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "card_number",
+      ",",
+      "name",
+      ",",
+      "hometown",
+      "from",
+      "member",
+      "order",
+      "by",
+      "level",
+      "desc"
+    ],
+    "question_spider": "Show card number, name, and hometown for all members in a descending order of level.",
+    "question": "按照级别的降序显示所有成员的卡号、姓名和家乡。",
+    "question_cspider": "按照级别的降序显示所有成员的卡号、姓名和家乡。",
+    "Harold": "BLEU = 68.30, 95.2/80.0/68.4/61.1 (BP=0.909, ratio=0.913, hyp_len=21, ref_len=23)",
+    "question_toks": [
+      "按",
+      "级",
+      "别",
+      "降",
+      "序",
+      "显",
+      "示",
+      "所",
+      "有",
+      "成",
+      "员",
+      "的",
+      "卡",
+      "号",
+      "，",
+      "姓",
+      "名",
+      "和",
+      "家",
+      "乡",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT card_number ,  name ,  hometown FROM member ORDER BY LEVEL DESC",
+    "query_toks": [
+      "SELECT",
+      "card_number",
+      ",",
+      "name",
+      ",",
+      "hometown",
+      "FROM",
+      "member",
+      "ORDER",
+      "BY",
+      "LEVEL",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "card_number",
+      ",",
+      "name",
+      ",",
+      "hometown",
+      "from",
+      "member",
+      "order",
+      "by",
+      "level",
+      "desc"
+    ],
+    "question_spider": "What are the card numbers, names, and hometowns of every member ordered by descending level?",
+    "question": "按降序排列的每个会员的卡号、姓名和家乡是什么？",
+    "question_cspider": "按降序排列的每个会员的卡号、姓名和家乡是什么？",
+    "Harold": "BLEU = 87.87, 95.7/90.9/85.7/80.0 (BP=1.000, ratio=1.000, hyp_len=23, ref_len=23)",
+    "question_toks": [
+      "按",
+      "降",
+      "序",
+      "排",
+      "列",
+      "的",
+      "每",
+      "个",
+      "会",
+      "员",
+      "的",
+      "卡",
+      "号",
+      "，",
+      "姓",
+      "名",
+      "和",
+      "家",
+      "乡",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT LEVEL FROM member GROUP BY LEVEL ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LEVEL",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "LEVEL",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "level",
+      "from",
+      "member",
+      "group",
+      "by",
+      "level",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show the membership level with most number of members.",
+    "question": "显示成员数量最多的会员级别。",
+    "question_cspider": "显示成员数量最多的会员级别。",
+    "Harold": "BLEU = 78.25, 92.9/84.6/75.0/63.6 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "显",
+      "示",
+      "成",
+      "员",
+      "数",
+      "量",
+      "最",
+      "多",
+      "的",
+      "成",
+      "员",
+      "级",
+      "别",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT LEVEL FROM member GROUP BY LEVEL ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LEVEL",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "LEVEL",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "level",
+      "from",
+      "member",
+      "group",
+      "by",
+      "level",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the membership level with the most people?",
+    "question": "人数最多的会员等级是什么？",
+    "question_cspider": "人数最多的会员等级是什么？",
+    "Harold": "BLEU = 51.42, 76.9/50.0/45.5/40.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "人",
+      "数",
+      "最",
+      "多",
+      "的",
+      "会",
+      "员",
+      "级",
+      "别",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T3.name ,  T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id ORDER BY T1.register_year",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "ORDER",
+      "BY",
+      "T1.register_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "register_year"
+    ],
+    "question_spider": "Show all member names and registered branch names sorted by register year.",
+    "question": "按注册年份排序显示所有成员名字和的注册分支名称。",
+    "question_cspider": "按注册年份排序显示所有成员名字和的注册分支名称。",
+    "Harold": "BLEU = 56.72, 91.7/65.2/45.5/38.1 (BP=1.000, ratio=1.000, hyp_len=24, ref_len=24)",
+    "question_toks": [
+      "显",
+      "示",
+      "按",
+      "注",
+      "册",
+      "年",
+      "份",
+      "排",
+      "序",
+      "的",
+      "所",
+      "有",
+      "会",
+      "员",
+      "名",
+      "称",
+      "和",
+      "注",
+      "册",
+      "分",
+      "支",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T3.name ,  T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id ORDER BY T1.register_year",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "ORDER",
+      "BY",
+      "T1.register_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "register_year"
+    ],
+    "question_spider": "What are the names of the members and branches at which they are registered sorted by year of registration?",
+    "question": "按注册年份排序的注册会员和分支机构的名称是什么？",
+    "question_cspider": "按注册年份排序的注册会员和分支机构的名称是什么？",
+    "Harold": "BLEU = 57.85, 70.8/60.9/54.5/47.6 (BP=1.000, ratio=1.000, hyp_len=24, ref_len=24)",
+    "question_toks": [
+      "根",
+      "据",
+      "注",
+      "册",
+      "年",
+      "份",
+      "对",
+      "注",
+      "册",
+      "会",
+      "员",
+      "和",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "进",
+      "行",
+      "分",
+      "类",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  count(*) FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T1.register_year  >  2015 GROUP BY T2.branch_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T1.register_year",
+      ">",
+      "2015",
+      "GROUP",
+      "BY",
+      "T2.branch_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      ">",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "branch_id"
+    ],
+    "question_spider": "Show all branch names with the number of members in each branch registered after 2015.",
+    "question": "显示所有分支名称以及2015年后每个分支注册的成员数量。",
+    "question_cspider": "显示所有分支名称以及2015年后每个分支注册的成员数量。",
+    "Harold": "BLEU = 69.07, 90.0/75.9/64.3/51.9 (BP=1.000, ratio=1.071, hyp_len=30, ref_len=28)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "分",
+      "支",
+      "名",
+      "称",
+      "以",
+      "及",
+      "2",
+      "0",
+      "1",
+      "5",
+      "年",
+      "之",
+      "后",
+      "注",
+      "册",
+      "的",
+      "每",
+      "个",
+      "分",
+      "支",
+      "中",
+      "的",
+      "成",
+      "员",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2015,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  count(*) FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T1.register_year  >  2015 GROUP BY T2.branch_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T1.register_year",
+      ">",
+      "2015",
+      "GROUP",
+      "BY",
+      "T2.branch_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      ">",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "branch_id"
+    ],
+    "question_spider": "For each branch id, what are the names of the branches that were registered after 2015?",
+    "question": "对于每个分支ID，2015年以后登记的分支名称是什么？",
+    "question_cspider": "对于每个分支ID，2015年以后登记的分支名称是什么？",
+    "Harold": "BLEU = 78.85, 88.9/80.8/76.0/70.8 (BP=1.000, ratio=1.000, hyp_len=27, ref_len=27)",
+    "question_toks": [
+      "对",
+      "于",
+      "每",
+      "个",
+      "分",
+      "支",
+      "I",
+      "D",
+      "，",
+      "2",
+      "0",
+      "1",
+      "5",
+      "年",
+      "之",
+      "后",
+      "注",
+      "册",
+      "的",
+      "分",
+      "支",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2015,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name FROM member WHERE member_id NOT IN (SELECT member_id FROM membership_register_branch)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "member",
+      "WHERE",
+      "member_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "member_id",
+      "FROM",
+      "membership_register_branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "where",
+      "member_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "member_id",
+      "from",
+      "membership_register_branch",
+      ")"
+    ],
+    "question_spider": "Show member names without any registered branch.",
+    "question": "显示没有任何注册分支的成员名称。",
+    "question_cspider": "显示没有任何注册分支的成员名称。",
+    "Harold": "BLEU = 37.42, 66.7/47.1/31.2/20.0 (BP=1.000, ratio=1.125, hyp_len=18, ref_len=16)",
+    "question_toks": [
+      "显",
+      "示",
+      "会",
+      "员",
+      "名",
+      "称",
+      "，",
+      "无",
+      "需",
+      "任",
+      "何",
+      "注",
+      "册",
+      "分",
+      "支",
+      "机",
+      "构",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name FROM member WHERE member_id NOT IN (SELECT member_id FROM membership_register_branch)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "member",
+      "WHERE",
+      "member_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "member_id",
+      "FROM",
+      "membership_register_branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "where",
+      "member_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "member_id",
+      "from",
+      "membership_register_branch",
+      ")"
+    ],
+    "question_spider": "What are the names of the members that have never registered at any branch?",
+    "question": "那些从未在任何分支注册过的会员的名字是什么？",
+    "question_cspider": "那些从未在任何分支注册过的会员的名字是什么？",
+    "Harold": "BLEU = 68.88, 86.4/76.2/65.0/52.6 (BP=1.000, ratio=1.000, hyp_len=22, ref_len=22)",
+    "question_toks": [
+      "从",
+      "未",
+      "在",
+      "任",
+      "何",
+      "分",
+      "支",
+      "机",
+      "构",
+      "注",
+      "册",
+      "过",
+      "的",
+      "成",
+      "员",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name ,  city FROM branch WHERE branch_id NOT IN (SELECT branch_id FROM membership_register_branch)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "branch_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "branch_id",
+      "FROM",
+      "membership_register_branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "branch_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "branch_id",
+      "from",
+      "membership_register_branch",
+      ")"
+    ],
+    "question_spider": "List the branch name and city without any registered members.",
+    "question": "列出没有任何注册会员的分支机构名称和城市。",
+    "question_cspider": "列出没有任何注册会员的分支机构名称和城市。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "列",
+      "出",
+      "没",
+      "有",
+      "任",
+      "何",
+      "注",
+      "册",
+      "会",
+      "员",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "名",
+      "称",
+      "和",
+      "城",
+      "市",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT name ,  city FROM branch WHERE branch_id NOT IN (SELECT branch_id FROM membership_register_branch)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "branch_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "branch_id",
+      "FROM",
+      "membership_register_branch",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "branch_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "branch_id",
+      "from",
+      "membership_register_branch",
+      ")"
+    ],
+    "question_spider": "What are the names and cities of the branches that do not have any registered members?",
+    "question": "没有注册会员的分支机构的名字和城市有哪些？",
+    "question_cspider": "没有注册会员的分支机构的名字和城市有哪些？",
+    "Harold": "BLEU = 66.78, 81.0/70.0/63.2/55.6 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "没",
+      "有",
+      "注",
+      "册",
+      "会",
+      "员",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "和",
+      "城",
+      "市",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  T2.open_year FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T1.register_year  =  2016 GROUP BY T2.branch_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.open_year",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T1.register_year",
+      "=",
+      "2016",
+      "GROUP",
+      "BY",
+      "T2.branch_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "open_year",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      "=",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "branch_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name and open year for the branch with most number of memberships registered in 2016?",
+    "question": "2016年注册会员最多的分公司的名称和开业年限是什么？",
+    "question_cspider": "2016年注册会员最多的分公司的名称和开业年限是什么？",
+    "Harold": "BLEU = 44.68, 74.2/56.7/37.9/25.0 (BP=1.000, ratio=1.148, hyp_len=31, ref_len=27)",
+    "question_toks": [
+      "2",
+      "0",
+      "1",
+      "6",
+      "年",
+      "注",
+      "册",
+      "的",
+      "会",
+      "员",
+      "数",
+      "量",
+      "最",
+      "多",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "和",
+      "营",
+      "业",
+      "年",
+      "份",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  T2.open_year FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T1.register_year  =  2016 GROUP BY T2.branch_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.open_year",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T1.register_year",
+      "=",
+      "2016",
+      "GROUP",
+      "BY",
+      "T2.branch_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "open_year",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      "=",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "branch_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name and opening year for the branch that registered the most members in 2016?",
+    "question": "2016年注册会员人数最多的分支机构名字和其开业的年限是什么？",
+    "question_cspider": "2016年注册会员人数最多的分支机构名字和其开业的年限是什么？",
+    "Harold": "BLEU = 55.60, 92.9/66.7/53.8/44.0 (BP=0.898, ratio=0.903, hyp_len=28, ref_len=31)",
+    "question_toks": [
+      "2",
+      "0",
+      "1",
+      "6",
+      "年",
+      "注",
+      "册",
+      "人",
+      "数",
+      "最",
+      "多",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "和",
+      "开",
+      "业",
+      "年",
+      "份",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  T2.hometown FROM membership_register_branch AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T1.register_year  =  2016",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.hometown",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T2.member_id",
+      "WHERE",
+      "T1.register_year",
+      "=",
+      "2016"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "hometown",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the member name and hometown who registered a branch in 2016.",
+    "question": "在2016年显示注册的分支机构的成员名字和故乡。",
+    "question_cspider": "在2016年显示注册的分支机构的成员名字和故乡。",
+    "Harold": "BLEU = 47.15, 90.9/61.9/40.0/31.6 (BP=0.913, ratio=0.917, hyp_len=22, ref_len=24)",
+    "question_toks": [
+      "显",
+      "示",
+      "2",
+      "0",
+      "1",
+      "6",
+      "年",
+      "注",
+      "册",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "成",
+      "员",
+      "姓",
+      "名",
+      "和",
+      "家",
+      "乡",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name ,  T2.hometown FROM membership_register_branch AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T1.register_year  =  2016",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.hometown",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T2.member_id",
+      "WHERE",
+      "T1.register_year",
+      "=",
+      "2016"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "hometown",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t1",
+      ".",
+      "register_year",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the member names and hometowns of those who registered at a branch in 2016?",
+    "question": "2016年在一个分支机构注册的会员名称和家乡名称是什么？",
+    "question_cspider": "2016年在一个分支机构注册的会员名称和家乡名称是什么？",
+    "Harold": "BLEU = 58.63, 92.0/75.0/60.9/45.5 (BP=0.887, ratio=0.893, hyp_len=25, ref_len=28)",
+    "question_toks": [
+      "2",
+      "0",
+      "1",
+      "6",
+      "年",
+      "在",
+      "分",
+      "支",
+      "机",
+      "构",
+      "注",
+      "册",
+      "的",
+      "会",
+      "员",
+      "的",
+      "姓",
+      "名",
+      "和",
+      "家",
+      "乡",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city FROM branch WHERE open_year  =  2001 AND membership_amount  >  100",
+    "query_toks": [
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "=",
+      "2001",
+      "AND",
+      "membership_amount",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "=",
+      "value",
+      "and",
+      "membership_amount",
+      ">",
+      "value"
+    ],
+    "question_spider": "Show all city with a branch opened in 2001 and a branch with more than 100 membership.",
+    "question": "显示所有城市在2001年开设的分支机构，以及超过100个会员的分支机构。",
+    "question_cspider": "显示所有城市在2001年开设的分支机构，以及超过100个会员的分支机构。",
+    "Harold": "BLEU = 48.45, 78.1/61.3/50.0/37.9 (BP=0.882, ratio=0.889, hyp_len=32, ref_len=36)",
+    "question_toks": [
+      "通",
+      "过",
+      "2",
+      "0",
+      "0",
+      "1",
+      "年",
+      "开",
+      "设",
+      "的",
+      "分",
+      "行",
+      "和",
+      "拥",
+      "有",
+      "1",
+      "0",
+      "0",
+      "多",
+      "个",
+      "会",
+      "员",
+      "的",
+      "分",
+      "行",
+      "显",
+      "示",
+      "所",
+      "有",
+      "城",
+      "市",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2001,
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          100,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city FROM branch WHERE open_year  =  2001 AND membership_amount  >  100",
+    "query_toks": [
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "open_year",
+      "=",
+      "2001",
+      "AND",
+      "membership_amount",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "open_year",
+      "=",
+      "value",
+      "and",
+      "membership_amount",
+      ">",
+      "value"
+    ],
+    "question_spider": "What are the cities that have a branch that opened in 2001 and a branch with more than 100 members?",
+    "question": "哪些城市在2001年开设了分支机构且有100多名会员？",
+    "question_cspider": "哪些城市在2001年开设了分支机构且有100多名会员？",
+    "Harold": "BLEU = 30.96, 58.6/39.3/25.9/15.4 (BP=1.000, ratio=1.074, hyp_len=29, ref_len=27)",
+    "question_toks": [
+      "哪",
+      "些",
+      "城",
+      "市",
+      "的",
+      "分",
+      "行",
+      "于",
+      "2",
+      "0",
+      "0",
+      "1",
+      "年",
+      "开",
+      "业",
+      "，",
+      "分",
+      "行",
+      "的",
+      "会",
+      "员",
+      "人",
+      "数",
+      "超",
+      "过",
+      "1",
+      "0",
+      "0",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          2001,
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          100,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city FROM branch EXCEPT SELECT city FROM branch WHERE membership_amount  >  100",
+    "query_toks": [
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "EXCEPT",
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      "from",
+      "branch",
+      "except",
+      "select",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "value"
+    ],
+    "question_spider": "Show all cities without a branch having more than 100 memberships.",
+    "question": "显示所有没有超过100个会员的分支机构所在的城市。",
+    "question_cspider": "显示所有没有超过100个会员的分支机构所在的城市。",
+    "Harold": "BLEU = 71.15, 91.7/78.3/68.2/61.9 (BP=0.959, ratio=0.960, hyp_len=24, ref_len=25)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "城",
+      "市",
+      "，",
+      "但",
+      "没",
+      "有",
+      "超",
+      "过",
+      "1",
+      "0",
+      "0",
+      "个",
+      "会",
+      "员",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            100,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT city FROM branch EXCEPT SELECT city FROM branch WHERE membership_amount  >  100",
+    "query_toks": [
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "EXCEPT",
+      "SELECT",
+      "city",
+      "FROM",
+      "branch",
+      "WHERE",
+      "membership_amount",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "city",
+      "from",
+      "branch",
+      "except",
+      "select",
+      "city",
+      "from",
+      "branch",
+      "where",
+      "membership_amount",
+      ">",
+      "value"
+    ],
+    "question_spider": "What are the cities that do not have any branches with more than 100 members?",
+    "question": "哪些城市没有超过100个成员的分支机构？",
+    "question_cspider": "哪些城市没有超过100个成员的分支机构？",
+    "Harold": "BLEU = 41.49, 75.0/52.2/31.8/23.8 (BP=1.000, ratio=1.200, hyp_len=24, ref_len=20)",
+    "question_toks": [
+      "没",
+      "有",
+      "分",
+      "支",
+      "机",
+      "构",
+      "超",
+      "过",
+      "1",
+      "0",
+      "0",
+      "个",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "城",
+      "市",
+      "是",
+      "哪",
+      "些",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            100,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT sum(total_pounds) FROM purchase AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T2.city  =  'London' AND T1.year  =  2018",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "total_pounds",
+      ")",
+      "FROM",
+      "purchase",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T2.city",
+      "=",
+      "'London",
+      "'",
+      "AND",
+      "T1.year",
+      "=",
+      "2018"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "total_pounds",
+      ")",
+      "from",
+      "purchase",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t2",
+      ".",
+      "city",
+      "=",
+      "value",
+      "and",
+      "t1",
+      ".",
+      "year",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the sum of total pounds of purchase in year 2018 for all branches in London?",
+    "question": "2018年“London”所有分行的总购买金额是多少？",
+    "question_cspider": "2018年“London”所有分行的总购买金额是多少？",
+    "Harold": "BLEU = 56.18, 81.0/70.0/57.9/44.4 (BP=0.909, ratio=0.913, hyp_len=21, ref_len=23)",
+    "question_toks": [
+      "2",
+      "0",
+      "1",
+      "8",
+      "年",
+      "伦",
+      "敦",
+      "所",
+      "有",
+      "分",
+      "行",
+      "的",
+      "总",
+      "购",
+      "买",
+      "磅",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          2018,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT sum(total_pounds) FROM purchase AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T2.city  =  'London' AND T1.year  =  2018",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "total_pounds",
+      ")",
+      "FROM",
+      "purchase",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "WHERE",
+      "T2.city",
+      "=",
+      "'London",
+      "'",
+      "AND",
+      "T1.year",
+      "=",
+      "2018"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "total_pounds",
+      ")",
+      "from",
+      "purchase",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "where",
+      "t2",
+      ".",
+      "city",
+      "=",
+      "value",
+      "and",
+      "t1",
+      ".",
+      "year",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many total pounds were purchased in the year 2018 at all London branches?",
+    "question": "2018年度“London”分行总共购买了英镑的金额是多少？",
+    "question_cspider": "2018年度“London”分行总共购买了英镑的金额是多少？",
+    "Harold": "BLEU = 32.22, 64.0/41.7/26.1/18.2 (BP=0.961, ratio=0.962, hyp_len=25, ref_len=26)",
+    "question_toks": [
+      "在",
+      "2",
+      "0",
+      "1",
+      "8",
+      "年",
+      "，",
+      "伦",
+      "敦",
+      "所",
+      "有",
+      "分",
+      "支",
+      "机",
+      "构",
+      "总",
+      "共",
+      "购",
+      "买",
+      "了",
+      "多",
+      "少",
+      "英",
+      "镑",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          2018,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(*) FROM purchase AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.level  =  6",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "purchase",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T2.member_id",
+      "WHERE",
+      "T2.level",
+      "=",
+      "6"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "purchase",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t2",
+      ".",
+      "level",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the total number of purchases for members with level 6?",
+    "question": "6级会员的购买总额是多少？",
+    "question_cspider": "6级会员的购买总额是多少？",
+    "Harold": "BLEU = 26.52, 75.0/40.0/21.4/7.7 (BP=1.000, ratio=1.231, hyp_len=16, ref_len=13)",
+    "question_toks": [
+      "级",
+      "别",
+      "6",
+      "的",
+      "会",
+      "员",
+      "的",
+      "总",
+      "购",
+      "买",
+      "次",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          6,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT count(*) FROM purchase AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.level  =  6",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "purchase",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T2.member_id",
+      "WHERE",
+      "T2.level",
+      "=",
+      "6"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "purchase",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t2",
+      ".",
+      "level",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the total purchases for members rated at level 6?",
+    "question": "6级成员的总购买量是多少？",
+    "question_cspider": "6级成员的总购买量是多少？",
+    "Harold": "BLEU = 37.71, 64.7/43.8/33.3/21.4 (BP=1.000, ratio=1.308, hyp_len=17, ref_len=13)",
+    "question_toks": [
+      "等",
+      "级",
+      "为",
+      "6",
+      "的",
+      "会",
+      "员",
+      "的",
+      "总",
+      "购",
+      "买",
+      "金",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          6,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id WHERE T3.Hometown  =  'Louisville ,  Kentucky' INTERSECT SELECT T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id WHERE T3.Hometown  =  'Hiram ,  Georgia'",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "WHERE",
+      "T3.Hometown",
+      "=",
+      "'Louisville",
+      ",",
+      "Kentucky",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "WHERE",
+      "T3.Hometown",
+      "=",
+      "'Hiram",
+      ",",
+      "Georgia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "where",
+      "t3",
+      ".",
+      "hometown",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "where",
+      "t3",
+      ".",
+      "hometown",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the name of branches where have some members whose hometown is in Louisville, Kentucky and some in Hiram, Georgia.",
+    "question": "找出有会员的家乡在“Louisville, Kentucky”和“Hiram, Georgia”的分支机构的名称。",
+    "question_cspider": "找出有会员的家乡在“Louisville, Kentucky”和“Hiram, Georgia”的分支机构的名称。",
+    "Harold": "BLEU = 20.84, 40.8/20.8/17.0/13.0 (BP=1.000, ratio=1.485, hyp_len=49, ref_len=33)",
+    "question_toks": [
+      "查",
+      "找",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "，",
+      "这",
+      "些",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "某",
+      "些",
+      "成",
+      "员",
+      "的",
+      "家",
+      "乡",
+      "在",
+      "肯",
+      "塔",
+      "基",
+      "州",
+      "的",
+      "路",
+      "易",
+      "斯",
+      "维",
+      "尔",
+      "，",
+      "在",
+      "乔",
+      "治",
+      "亚",
+      "州",
+      "的",
+      "希",
+      "兰",
+      "姆",
+      "有",
+      "一",
+      "些",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Louisville ,  Kentucky\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "\"Hiram ,  Georgia\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id WHERE T3.Hometown  =  'Louisville ,  Kentucky' INTERSECT SELECT T2.name FROM membership_register_branch AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id JOIN member AS T3 ON T1.member_id  =  T3.member_id WHERE T3.Hometown  =  'Hiram ,  Georgia'",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "WHERE",
+      "T3.Hometown",
+      "=",
+      "'Louisville",
+      ",",
+      "Kentucky",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "membership_register_branch",
+      "AS",
+      "T1",
+      "JOIN",
+      "branch",
+      "AS",
+      "T2",
+      "ON",
+      "T1.branch_id",
+      "=",
+      "T2.branch_id",
+      "JOIN",
+      "member",
+      "AS",
+      "T3",
+      "ON",
+      "T1.member_id",
+      "=",
+      "T3.member_id",
+      "WHERE",
+      "T3.Hometown",
+      "=",
+      "'Hiram",
+      ",",
+      "Georgia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "where",
+      "t3",
+      ".",
+      "hometown",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "membership_register_branch",
+      "as",
+      "t1",
+      "join",
+      "branch",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "branch_id",
+      "=",
+      "t2",
+      ".",
+      "branch_id",
+      "join",
+      "member",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t3",
+      ".",
+      "member_id",
+      "where",
+      "t3",
+      ".",
+      "hometown",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of the branches that have some members with a hometown in Louisville, Kentucky and also those from Hiram, Goergia?",
+    "question": "那些有会员的家乡在“Louisville, Kentucky”和“Hiram, Georgia”的分支机构叫什么名字？",
+    "question_cspider": "那些有会员的家乡在“Louisville, Kentucky”和“Hiram, Georgia”的分支机构叫什么名字？",
+    "Harold": "BLEU = 15.30, 58.6/25.0/11.1/7.7 (BP=0.813, ratio=0.829, hyp_len=29, ref_len=35)",
+    "question_toks": [
+      "在",
+      "肯",
+      "塔",
+      "基",
+      "州",
+      "路",
+      "易",
+      "斯",
+      "维",
+      "尔",
+      "有",
+      "一",
+      "些",
+      "家",
+      "乡",
+      "成",
+      "员",
+      "的",
+      "分",
+      "支",
+      "机",
+      "构",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Louisville ,  Kentucky\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "\"Hiram ,  Georgia\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT card_number FROM member WHERE Hometown LIKE \"%Kentucky%\"",
+    "query_toks": [
+      "SELECT",
+      "card_number",
+      "FROM",
+      "member",
+      "WHERE",
+      "Hometown",
+      "LIKE",
+      "``",
+      "%",
+      "Kentucky",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "card_number",
+      "from",
+      "member",
+      "where",
+      "hometown",
+      "like",
+      "value"
+    ],
+    "question_spider": "list the card number of all members whose hometown address includes word \"Kentucky\".",
+    "question": "列出其家乡地址包含“Kentucky”一词的所有会员的卡号。",
+    "question_cspider": "列出其家乡地址包含“Kentucky”一词的所有会员的卡号。",
+    "Harold": "BLEU = 54.13, 70.0/55.2/50.0/44.4 (BP=1.000, ratio=1.200, hyp_len=30, ref_len=25)",
+    "question_toks": [
+      "列",
+      "出",
+      "其",
+      "家",
+      "乡",
+      "地",
+      "址",
+      "包",
+      "含",
+      "单",
+      "词",
+      "“",
+      " ",
+      "K",
+      "e",
+      "n",
+      "t",
+      "u",
+      "c",
+      "k",
+      "y",
+      "”",
+      "的",
+      "所",
+      "有",
+      "会",
+      "员",
+      "的",
+      "卡",
+      "号",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Kentucky%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "shop_membership",
+    "query": "SELECT card_number FROM member WHERE Hometown LIKE \"%Kentucky%\"",
+    "query_toks": [
+      "SELECT",
+      "card_number",
+      "FROM",
+      "member",
+      "WHERE",
+      "Hometown",
+      "LIKE",
+      "``",
+      "%",
+      "Kentucky",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "card_number",
+      "from",
+      "member",
+      "where",
+      "hometown",
+      "like",
+      "value"
+    ],
+    "question_spider": "What are the card numbers of members from Kentucky?",
+    "question": "来自“Kentucky”的会员卡的号码是多少？",
+    "question_cspider": "来自“Kentucky”的会员卡的号码是多少？",
+    "Harold": "BLEU = 33.11, 92.3/66.7/45.5/20.0 (BP=0.681, ratio=0.722, hyp_len=13, ref_len=18)",
+    "question_toks": [
+      "肯",
+      "塔",
+      "基",
+      "州",
+      "的",
+      "会",
+      "员",
+      "卡",
+      "号",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Kentucky%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

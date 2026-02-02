@@ -1,0 +1,2464 @@
+[
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT count(*) FROM artwork",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "artwork"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "artwork"
+    ],
+    "question": "Combien d'œuvres d'art y a-t-il?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT Name FROM artwork ORDER BY Name ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "artwork",
+      "ORDER",
+      "BY",
+      "Name",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "artwork",
+      "order",
+      "by",
+      "name",
+      "asc"
+    ],
+    "question": "Dressez la liste des noms des œuvres par ordre alphabétique croissant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT Name FROM artwork WHERE TYPE != \"Program Talent Show\"",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "artwork",
+      "WHERE",
+      "TYPE",
+      "!",
+      "=",
+      "``",
+      "Program",
+      "Talent",
+      "Show",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "artwork",
+      "where",
+      "type",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Répertoriez le nom des œuvres dont le type n'est pas \"Program Talent Show\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Program Talent Show\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT Festival_Name ,  LOCATION FROM festival_detail",
+    "query_toks": [
+      "SELECT",
+      "Festival_Name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "festival_detail"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "festival_name",
+      ",",
+      "location",
+      "from",
+      "festival_detail"
+    ],
+    "question": "Quels sont les noms et les lieux des festivals?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT Chair_Name FROM festival_detail ORDER BY YEAR ASC",
+    "query_toks": [
+      "SELECT",
+      "Chair_Name",
+      "FROM",
+      "festival_detail",
+      "ORDER",
+      "BY",
+      "YEAR",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "chair_name",
+      "from",
+      "festival_detail",
+      "order",
+      "by",
+      "year",
+      "asc"
+    ],
+    "question": "Quels sont les noms des présidents des festivals, classés par ordre croissant de l'année qui a lieu?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT LOCATION FROM festival_detail ORDER BY Num_of_Audience DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "festival_detail",
+      "ORDER",
+      "BY",
+      "Num_of_Audience",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "festival_detail",
+      "order",
+      "by",
+      "num_of_audience",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le lieu du festival avec le plus grand nombre de spectateurs?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT Festival_Name FROM festival_detail WHERE YEAR  =  2007",
+    "query_toks": [
+      "SELECT",
+      "Festival_Name",
+      "FROM",
+      "festival_detail",
+      "WHERE",
+      "YEAR",
+      "=",
+      "2007"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "festival_name",
+      "from",
+      "festival_detail",
+      "where",
+      "year",
+      "=",
+      "value"
+    ],
+    "question": "Quels sont les noms des festivals organisés en 2007?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          2007.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT avg(Num_of_Audience) FROM festival_detail",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Num_of_Audience",
+      ")",
+      "FROM",
+      "festival_detail"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "num_of_audience",
+      ")",
+      "from",
+      "festival_detail"
+    ],
+    "question": "Quel est le nombre moyen de spectateurs pour les festivals?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT Festival_Name FROM festival_detail ORDER BY YEAR DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "Festival_Name",
+      "FROM",
+      "festival_detail",
+      "ORDER",
+      "BY",
+      "YEAR",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "festival_name",
+      "from",
+      "festival_detail",
+      "order",
+      "by",
+      "year",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Montrez les noms des trois festivals les plus récents.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT T2.Name ,  T3.Festival_Name FROM nomination AS T1 JOIN artwork AS T2 ON T1.Artwork_ID  =  T2.Artwork_ID JOIN festival_detail AS T3 ON T1.Festival_ID  =  T3.Festival_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T3.Festival_Name",
+      "FROM",
+      "nomination",
+      "AS",
+      "T1",
+      "JOIN",
+      "artwork",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Artwork_ID",
+      "=",
+      "T2.Artwork_ID",
+      "JOIN",
+      "festival_detail",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Festival_ID",
+      "=",
+      "T3.Festival_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "festival_name",
+      "from",
+      "nomination",
+      "as",
+      "t1",
+      "join",
+      "artwork",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "artwork_id",
+      "=",
+      "t2",
+      ".",
+      "artwork_id",
+      "join",
+      "festival_detail",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "festival_id",
+      "=",
+      "t3",
+      ".",
+      "festival_id"
+    ],
+    "question": "Pour chaque nomination, indiquez le nom de l'œuvre d'art et le nom du festival où elle est nominée.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT DISTINCT T2.Type FROM nomination AS T1 JOIN artwork AS T2 ON T1.Artwork_ID  =  T2.Artwork_ID JOIN festival_detail AS T3 ON T1.Festival_ID  =  T3.Festival_ID WHERE T3.Year  =  2007",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.Type",
+      "FROM",
+      "nomination",
+      "AS",
+      "T1",
+      "JOIN",
+      "artwork",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Artwork_ID",
+      "=",
+      "T2.Artwork_ID",
+      "JOIN",
+      "festival_detail",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Festival_ID",
+      "=",
+      "T3.Festival_ID",
+      "WHERE",
+      "T3.Year",
+      "=",
+      "2007"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "type",
+      "from",
+      "nomination",
+      "as",
+      "t1",
+      "join",
+      "artwork",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "artwork_id",
+      "=",
+      "t2",
+      ".",
+      "artwork_id",
+      "join",
+      "festival_detail",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "festival_id",
+      "=",
+      "t3",
+      ".",
+      "festival_id",
+      "where",
+      "t3",
+      ".",
+      "year",
+      "=",
+      "value"
+    ],
+    "question": "Montrez différents types d'œuvres d'art qui sont nominées dans les festivals en 2007.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          2007.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT T2.Name FROM nomination AS T1 JOIN artwork AS T2 ON T1.Artwork_ID  =  T2.Artwork_ID JOIN festival_detail AS T3 ON T1.Festival_ID  =  T3.Festival_ID ORDER BY T3.Year",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      "FROM",
+      "nomination",
+      "AS",
+      "T1",
+      "JOIN",
+      "artwork",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Artwork_ID",
+      "=",
+      "T2.Artwork_ID",
+      "JOIN",
+      "festival_detail",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Festival_ID",
+      "=",
+      "T3.Festival_ID",
+      "ORDER",
+      "BY",
+      "T3.Year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "nomination",
+      "as",
+      "t1",
+      "join",
+      "artwork",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "artwork_id",
+      "=",
+      "t2",
+      ".",
+      "artwork_id",
+      "join",
+      "festival_detail",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "festival_id",
+      "=",
+      "t3",
+      ".",
+      "festival_id",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "year"
+    ],
+    "question": "Affichez les noms des œuvres d'art par ordre croissant de l'année de leur nomination.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT T3.Festival_Name FROM nomination AS T1 JOIN artwork AS T2 ON T1.Artwork_ID  =  T2.Artwork_ID JOIN festival_detail AS T3 ON T1.Festival_ID  =  T3.Festival_ID WHERE T2.Type  =  \"Program Talent Show\"",
+    "query_toks": [
+      "SELECT",
+      "T3.Festival_Name",
+      "FROM",
+      "nomination",
+      "AS",
+      "T1",
+      "JOIN",
+      "artwork",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Artwork_ID",
+      "=",
+      "T2.Artwork_ID",
+      "JOIN",
+      "festival_detail",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Festival_ID",
+      "=",
+      "T3.Festival_ID",
+      "WHERE",
+      "T2.Type",
+      "=",
+      "``",
+      "Program",
+      "Talent",
+      "Show",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "festival_name",
+      "from",
+      "nomination",
+      "as",
+      "t1",
+      "join",
+      "artwork",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "artwork_id",
+      "=",
+      "t2",
+      ".",
+      "artwork_id",
+      "join",
+      "festival_detail",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "festival_id",
+      "=",
+      "t3",
+      ".",
+      "festival_id",
+      "where",
+      "t2",
+      ".",
+      "type",
+      "=",
+      "value"
+    ],
+    "question": "Affichez les noms des festivals qui ont nominé des œuvres d'art de type \"Program Talent Show\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Program Talent Show\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT T1.Festival_ID ,  T3.Festival_Name FROM nomination AS T1 JOIN artwork AS T2 ON T1.Artwork_ID  =  T2.Artwork_ID JOIN festival_detail AS T3 ON T1.Festival_ID  =  T3.Festival_ID GROUP BY T1.Festival_ID HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.Festival_ID",
+      ",",
+      "T3.Festival_Name",
+      "FROM",
+      "nomination",
+      "AS",
+      "T1",
+      "JOIN",
+      "artwork",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Artwork_ID",
+      "=",
+      "T2.Artwork_ID",
+      "JOIN",
+      "festival_detail",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Festival_ID",
+      "=",
+      "T3.Festival_ID",
+      "GROUP",
+      "BY",
+      "T1.Festival_ID",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "festival_id",
+      ",",
+      "t3",
+      ".",
+      "festival_name",
+      "from",
+      "nomination",
+      "as",
+      "t1",
+      "join",
+      "artwork",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "artwork_id",
+      "=",
+      "t2",
+      ".",
+      "artwork_id",
+      "join",
+      "festival_detail",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "festival_id",
+      "=",
+      "t3",
+      ".",
+      "festival_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "festival_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Affichez les identifiants et les noms des festivals qui ont au moins deux nominations pour des œuvres d'art.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT T1.Festival_ID ,  T3.Festival_Name ,  COUNT(*) FROM nomination AS T1 JOIN artwork AS T2 ON T1.Artwork_ID  =  T2.Artwork_ID JOIN festival_detail AS T3 ON T1.Festival_ID  =  T3.Festival_ID GROUP BY T1.Festival_ID",
+    "query_toks": [
+      "SELECT",
+      "T1.Festival_ID",
+      ",",
+      "T3.Festival_Name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "nomination",
+      "AS",
+      "T1",
+      "JOIN",
+      "artwork",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Artwork_ID",
+      "=",
+      "T2.Artwork_ID",
+      "JOIN",
+      "festival_detail",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Festival_ID",
+      "=",
+      "T3.Festival_ID",
+      "GROUP",
+      "BY",
+      "T1.Festival_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "festival_id",
+      ",",
+      "t3",
+      ".",
+      "festival_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "nomination",
+      "as",
+      "t1",
+      "join",
+      "artwork",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "artwork_id",
+      "=",
+      "t2",
+      ".",
+      "artwork_id",
+      "join",
+      "festival_detail",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "festival_id",
+      "=",
+      "t3",
+      ".",
+      "festival_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "festival_id"
+    ],
+    "question": "Montrez l'identifiant, le nom de chaque festival et le nombre d'œuvres d'art qu'il a nominées.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT TYPE ,  COUNT(*) FROM artwork GROUP BY TYPE",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "artwork",
+      "GROUP",
+      "BY",
+      "TYPE"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "artwork",
+      "group",
+      "by",
+      "type"
+    ],
+    "question": "Veuillez montrer différents types d'œuvres d'art avec le nombre correspondant d'œuvres d'art de chaque type.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT TYPE FROM artwork GROUP BY TYPE ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      "FROM",
+      "artwork",
+      "GROUP",
+      "BY",
+      "TYPE",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      "from",
+      "artwork",
+      "group",
+      "by",
+      "type",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Énumérez les types d'œuvres d'art les plus courants.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT YEAR FROM festival_detail GROUP BY YEAR HAVING COUNT(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "YEAR",
+      "FROM",
+      "festival_detail",
+      "GROUP",
+      "BY",
+      "YEAR",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "year",
+      "from",
+      "festival_detail",
+      "group",
+      "by",
+      "year",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Indiquez l'année au cours de laquelle il y a plus d'un festival.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT Name FROM Artwork WHERE Artwork_ID NOT IN (SELECT Artwork_ID FROM nomination)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "Artwork",
+      "WHERE",
+      "Artwork_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Artwork_ID",
+      "FROM",
+      "nomination",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "artwork",
+      "where",
+      "artwork_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "artwork_id",
+      "from",
+      "nomination",
+      ")"
+    ],
+    "question": "Énumérez le nom des œuvres d'art qui ne sont pas mises en candidature.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      10,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT Num_of_Audience FROM festival_detail WHERE YEAR  =  2008 OR YEAR  =  2010",
+    "query_toks": [
+      "SELECT",
+      "Num_of_Audience",
+      "FROM",
+      "festival_detail",
+      "WHERE",
+      "YEAR",
+      "=",
+      "2008",
+      "OR",
+      "YEAR",
+      "=",
+      "2010"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "num_of_audience",
+      "from",
+      "festival_detail",
+      "where",
+      "year",
+      "=",
+      "value",
+      "or",
+      "year",
+      "=",
+      "value"
+    ],
+    "question": "Affichez le nombre d'audience en 2008 ou 2010.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          2008.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT sum(Num_of_Audience) FROM festival_detail",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Num_of_Audience",
+      ")",
+      "FROM",
+      "festival_detail"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "num_of_audience",
+      ")",
+      "from",
+      "festival_detail"
+    ],
+    "question": "Quel est le nombre total de publics qui ont visité l'un des festivals?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "entertainment_awards",
+    "query": "SELECT YEAR FROM festival_detail WHERE LOCATION  =  'United States' INTERSECT SELECT YEAR FROM festival_detail WHERE LOCATION != 'United States'",
+    "query_toks": [
+      "SELECT",
+      "YEAR",
+      "FROM",
+      "festival_detail",
+      "WHERE",
+      "LOCATION",
+      "=",
+      "'United",
+      "States",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "YEAR",
+      "FROM",
+      "festival_detail",
+      "WHERE",
+      "LOCATION",
+      "!",
+      "=",
+      "'United",
+      "States",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "year",
+      "from",
+      "festival_detail",
+      "where",
+      "location",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "year",
+      "from",
+      "festival_detail",
+      "where",
+      "location",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "En quelle année y a-t-il des festivals à la fois aux États-Unis et en dehors des \"United States\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"United States\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  5,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            7,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "\"United States\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  }
+]

@@ -1,0 +1,2125 @@
+[
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT actual_order_id FROM actual_orders WHERE order_status_code  =  'Success'",
+    "query_toks": [
+      "SELECT",
+      "actual_order_id",
+      "FROM",
+      "actual_orders",
+      "WHERE",
+      "order_status_code",
+      "=",
+      "'Success",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "actual_order_id",
+      "from",
+      "actual_orders",
+      "where",
+      "order_status_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the ids of orders whose status is 'Success'.",
+    "question": "找出订单的ID，其状态是“Success”。",
+    "question_cspider": "找出订单的ID，其状态是“成功”。",
+    "Harold": "BLEU = 40.84, 81.2/53.3/35.7/23.1 (BP=0.939, ratio=0.941, hyp_len=16, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "状",
+      "态",
+      "为",
+      "“",
+      "成",
+      "功",
+      "”",
+      "的",
+      "订",
+      "单",
+      "的",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ],
+          "\"Success\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT t1.product_name ,   t1.product_price FROM products AS t1 JOIN regular_order_products AS t2 ON t1.product_id  =  t2.product_id GROUP BY t2.product_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.product_name",
+      ",",
+      "t1.product_price",
+      "FROM",
+      "products",
+      "AS",
+      "t1",
+      "JOIN",
+      "regular_order_products",
+      "AS",
+      "t2",
+      "ON",
+      "t1.product_id",
+      "=",
+      "t2.product_id",
+      "GROUP",
+      "BY",
+      "t2.product_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product_name",
+      ",",
+      "t1",
+      ".",
+      "product_price",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "regular_order_products",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "product_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name and price of the product that has been ordered the greatest number of times.",
+    "question": "查找订购次数最多的产品的名称和价格。",
+    "question_cspider": "查找订购次数最多的产品的名称和价格。",
+    "Harold": "BLEU = 61.26, 94.7/72.2/47.1/43.8 (BP=1.000, ratio=1.056, hyp_len=19, ref_len=18)",
+    "question_toks": [
+      "查",
+      "找",
+      "已",
+      "订",
+      "购",
+      "最",
+      "多",
+      "次",
+      "数",
+      "的",
+      "产",
+      "品",
+      "的",
+      "名",
+      "称",
+      "和",
+      "价",
+      "格",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          20,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT count(*) FROM customers",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customers"
+    ],
+    "question_spider": "Find the number of customers in total.",
+    "question": "找到客户总数。",
+    "question_cspider": "找到客户总数。",
+    "Harold": "BLEU = 0.00, 60.0/11.1/0.0/0.0 (BP=1.000, ratio=1.429, hyp_len=10, ref_len=7)",
+    "question_toks": [
+      "查",
+      "找",
+      "总",
+      "计",
+      "的",
+      "客",
+      "户",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT count(DISTINCT payment_method) FROM customers",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "payment_method",
+      ")",
+      "FROM",
+      "customers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "payment_method",
+      ")",
+      "from",
+      "customers"
+    ],
+    "question_spider": "How many different payment methods are there?",
+    "question": "有多少种不同的支付方式？",
+    "question_cspider": "有多少种不同的支付方式？",
+    "Harold": "BLEU = 32.99, 81.8/50.0/33.3/12.5 (BP=0.913, ratio=0.917, hyp_len=11, ref_len=12)",
+    "question_toks": [
+      "有",
+      "几",
+      "种",
+      "不",
+      "同",
+      "的",
+      "付",
+      "款",
+      "方",
+      "式",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                12,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT truck_details FROM trucks ORDER BY truck_licence_number",
+    "query_toks": [
+      "SELECT",
+      "truck_details",
+      "FROM",
+      "trucks",
+      "ORDER",
+      "BY",
+      "truck_licence_number"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "truck_details",
+      "from",
+      "trucks",
+      "order",
+      "by",
+      "truck_licence_number"
+    ],
+    "question_spider": "Show the details of all trucks in the order of their license number.",
+    "question": "按牌照号码的顺序显示所有卡车的细节。",
+    "question_cspider": "按牌照号码的顺序显示所有卡车的细节。",
+    "Harold": "BLEU = 44.02, 65.0/42.1/38.9/35.3 (BP=1.000, ratio=1.111, hyp_len=20, ref_len=18)",
+    "question_toks": [
+      "按",
+      "许",
+      "可",
+      "证",
+      "编",
+      "号",
+      "顺",
+      "序",
+      "显",
+      "示",
+      "所",
+      "有",
+      "卡",
+      "车",
+      "的",
+      "详",
+      "细",
+      "信",
+      "息",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            10
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              40,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT product_name FROM products ORDER BY product_price DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "product_name",
+      "FROM",
+      "products",
+      "ORDER",
+      "BY",
+      "product_price",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_name",
+      "from",
+      "products",
+      "order",
+      "by",
+      "product_price",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name of the most expensive product.",
+    "question": "找出最昂贵产品的名称。",
+    "question_cspider": "找出最昂贵产品的名称。",
+    "Harold": "BLEU = 54.52, 83.3/63.6/50.0/33.3 (BP=1.000, ratio=1.091, hyp_len=12, ref_len=11)",
+    "question_toks": [
+      "查",
+      "找",
+      "最",
+      "昂",
+      "贵",
+      "的",
+      "产",
+      "品",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT customer_name FROM customers EXCEPT SELECT t1.customer_name FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.state_province_county  =  'California'",
+    "query_toks": [
+      "SELECT",
+      "customer_name",
+      "FROM",
+      "customers",
+      "EXCEPT",
+      "SELECT",
+      "t1.customer_name",
+      "FROM",
+      "customers",
+      "AS",
+      "t1",
+      "JOIN",
+      "customer_addresses",
+      "AS",
+      "t2",
+      "ON",
+      "t1.customer_id",
+      "=",
+      "t2.customer_id",
+      "JOIN",
+      "addresses",
+      "AS",
+      "t3",
+      "ON",
+      "t2.address_id",
+      "=",
+      "t3.address_id",
+      "WHERE",
+      "t3.state_province_county",
+      "=",
+      "'California",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_name",
+      "from",
+      "customers",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_addresses",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "join",
+      "addresses",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "address_id",
+      "=",
+      "t3",
+      ".",
+      "address_id",
+      "where",
+      "t3",
+      ".",
+      "state_province_county",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the names of customers who are not living in the state of California.",
+    "question": "找到那些不住在“California”州的客户的名字。",
+    "question_cspider": "找到那些不住在“California”州的客户的名字。",
+    "Harold": "BLEU = 16.32, 57.9/16.7/11.8/6.2 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "不",
+      "在",
+      "加",
+      "利",
+      "福",
+      "尼",
+      "亚",
+      "州",
+      "居",
+      "住",
+      "的",
+      "客",
+      "户",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              7
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  11,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  28,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "\"California\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT customer_email ,  customer_name FROM customers WHERE payment_method  =  'Visa'",
+    "query_toks": [
+      "SELECT",
+      "customer_email",
+      ",",
+      "customer_name",
+      "FROM",
+      "customers",
+      "WHERE",
+      "payment_method",
+      "=",
+      "'Visa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_email",
+      ",",
+      "customer_name",
+      "from",
+      "customers",
+      "where",
+      "payment_method",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the names and emails of customers who payed by Visa card.",
+    "question": "列出由“Visa”卡支付的客户的姓名和电子邮件。",
+    "question_cspider": "列出由“Visa”卡支付的客户的姓名和电子邮件。",
+    "Harold": "BLEU = 54.21, 73.9/54.5/47.6/45.0 (BP=1.000, ratio=1.000, hyp_len=23, ref_len=23)",
+    "question_toks": [
+      "列",
+      "出",
+      "使",
+      "用",
+      "V",
+      "i",
+      "s",
+      "a",
+      "卡",
+      "付",
+      "款",
+      "的",
+      "客",
+      "户",
+      "的",
+      "姓",
+      "名",
+      "和",
+      "电",
+      "子",
+      "邮",
+      "件",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"Visa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT t1.customer_name ,  t1.customer_phone FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.state_province_county  =  'California'",
+    "query_toks": [
+      "SELECT",
+      "t1.customer_name",
+      ",",
+      "t1.customer_phone",
+      "FROM",
+      "customers",
+      "AS",
+      "t1",
+      "JOIN",
+      "customer_addresses",
+      "AS",
+      "t2",
+      "ON",
+      "t1.customer_id",
+      "=",
+      "t2.customer_id",
+      "JOIN",
+      "addresses",
+      "AS",
+      "t3",
+      "ON",
+      "t2.address_id",
+      "=",
+      "t3.address_id",
+      "WHERE",
+      "t3.state_province_county",
+      "=",
+      "'California",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      ",",
+      "t1",
+      ".",
+      "customer_phone",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_addresses",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "join",
+      "addresses",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "address_id",
+      "=",
+      "t3",
+      ".",
+      "address_id",
+      "where",
+      "t3",
+      ".",
+      "state_province_county",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the names and phone numbers of customers living in California state.",
+    "question": "查找居住在“California”州的客户的姓名和电话号码。",
+    "question_cspider": "查找居住在“California”州的客户的姓名和电话号码。",
+    "Harold": "BLEU = 69.08, 78.3/72.7/66.7/60.0 (BP=1.000, ratio=1.045, hyp_len=23, ref_len=22)",
+    "question_toks": [
+      "查",
+      "找",
+      "居",
+      "住",
+      "在",
+      "加",
+      "利",
+      "福",
+      "尼",
+      "亚",
+      "州",
+      "的",
+      "客",
+      "户",
+      "的",
+      "姓",
+      "名",
+      "和",
+      "电",
+      "话",
+      "号",
+      "码",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              27,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"California\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT state_province_county FROM addresses WHERE address_id NOT IN (SELECT employee_address_id FROM Employees)",
+    "query_toks": [
+      "SELECT",
+      "state_province_county",
+      "FROM",
+      "addresses",
+      "WHERE",
+      "address_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "employee_address_id",
+      "FROM",
+      "Employees",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "state_province_county",
+      "from",
+      "addresses",
+      "where",
+      "address_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "employee_address_id",
+      "from",
+      "employees",
+      ")"
+    ],
+    "question_spider": "Find the states which do not have any employee in their record.",
+    "question": "发现没有任何雇员在他们的记录中的状态。",
+    "question_cspider": "发现没有任何雇员在他们的记录中的状态。",
+    "Harold": "BLEU = 19.67, 71.4/38.5/25.0/9.1 (BP=0.700, ratio=0.737, hyp_len=14, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "记",
+      "录",
+      "中",
+      "没",
+      "有",
+      "任",
+      "何",
+      "员",
+      "工",
+      "的",
+      "州",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  11
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      43,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT customer_name ,  customer_phone ,  customer_email FROM Customers ORDER BY date_became_customer",
+    "query_toks": [
+      "SELECT",
+      "customer_name",
+      ",",
+      "customer_phone",
+      ",",
+      "customer_email",
+      "FROM",
+      "Customers",
+      "ORDER",
+      "BY",
+      "date_became_customer"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_name",
+      ",",
+      "customer_phone",
+      ",",
+      "customer_email",
+      "from",
+      "customers",
+      "order",
+      "by",
+      "date_became_customer"
+    ],
+    "question_spider": "List the names, phone numbers, and emails of all customers sorted by their dates of becoming customers.",
+    "question": "列出所有客户的姓名、电话号码和电子邮件，按照成为客户的日期进行排序。",
+    "question_cspider": "列出所有客户的姓名、电话号码和电子邮件，按照成为客户的日期进行排序。",
+    "Harold": "BLEU = 72.66, 93.8/83.9/73.3/62.1 (BP=0.939, ratio=0.941, hyp_len=32, ref_len=34)",
+    "question_toks": [
+      "列",
+      "出",
+      "所",
+      "有",
+      "客",
+      "户",
+      "的",
+      "姓",
+      "名",
+      "，",
+      "电",
+      "话",
+      "号",
+      "码",
+      "和",
+      "电",
+      "子",
+      "邮",
+      "件",
+      "，",
+      "按",
+      "其",
+      "成",
+      "为",
+      "客",
+      "户",
+      "的",
+      "日",
+      "期",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT customer_name FROM Customers ORDER BY date_became_customer LIMIT 5",
+    "query_toks": [
+      "SELECT",
+      "customer_name",
+      "FROM",
+      "Customers",
+      "ORDER",
+      "BY",
+      "date_became_customer",
+      "LIMIT",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_name",
+      "from",
+      "customers",
+      "order",
+      "by",
+      "date_became_customer",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name of the first 5 customers.",
+    "question": "查找前5名客户的姓名。",
+    "question_cspider": "查找前5名客户的姓名。",
+    "Harold": "BLEU = 36.13, 81.8/50.0/33.3/12.5 (BP=1.000, ratio=1.000, hyp_len=11, ref_len=11)",
+    "question_toks": [
+      "查",
+      "找",
+      "前",
+      "5",
+      "个",
+      "客",
+      "户",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 5,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT payment_method FROM Customers GROUP BY payment_method ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "payment_method",
+      "FROM",
+      "Customers",
+      "GROUP",
+      "BY",
+      "payment_method",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method",
+      "from",
+      "customers",
+      "group",
+      "by",
+      "payment_method",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the payment method that is used most frequently.",
+    "question": "找到最常用的支付方法。",
+    "question_cspider": "找到最常用的支付方法。",
+    "Harold": "BLEU = 51.10, 81.8/50.0/44.4/37.5 (BP=1.000, ratio=1.000, hyp_len=11, ref_len=11)",
+    "question_toks": [
+      "找",
+      "到",
+      "最",
+      "常",
+      "用",
+      "的",
+      "付",
+      "款",
+      "方",
+      "式",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT route_name FROM Delivery_Routes ORDER BY route_name",
+    "query_toks": [
+      "SELECT",
+      "route_name",
+      "FROM",
+      "Delivery_Routes",
+      "ORDER",
+      "BY",
+      "route_name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "route_name",
+      "from",
+      "delivery_routes",
+      "order",
+      "by",
+      "route_name"
+    ],
+    "question_spider": "List the names of all routes in alphabetic order.",
+    "question": "按字母顺序列出所有路线的名称。",
+    "question_cspider": "按字母顺序列出所有路线的名称。",
+    "Harold": "BLEU = 72.42, 86.7/78.6/69.2/58.3 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "以",
+      "字",
+      "母",
+      "顺",
+      "序",
+      "列",
+      "出",
+      "所",
+      "有",
+      "路",
+      "由",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            8
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              33,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT t1.route_name FROM Delivery_Routes AS t1 JOIN Delivery_Route_Locations AS t2 ON t1.route_id  =  t2.route_id GROUP BY t1.route_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.route_name",
+      "FROM",
+      "Delivery_Routes",
+      "AS",
+      "t1",
+      "JOIN",
+      "Delivery_Route_Locations",
+      "AS",
+      "t2",
+      "ON",
+      "t1.route_id",
+      "=",
+      "t2.route_id",
+      "GROUP",
+      "BY",
+      "t1.route_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "route_name",
+      "from",
+      "delivery_routes",
+      "as",
+      "t1",
+      "join",
+      "delivery_route_locations",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "route_id",
+      "=",
+      "t2",
+      ".",
+      "route_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "route_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name of route that has the highest number of deliveries.",
+    "question": "查找具有最高交付次数的线路的名称。",
+    "question_cspider": "查找具有最高交付次数的线路的名称。",
+    "Harold": "BLEU = 21.97, 86.7/35.7/15.4/8.3 (BP=0.875, ratio=0.882, hyp_len=15, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "交",
+      "付",
+      "数",
+      "量",
+      "最",
+      "多",
+      "的",
+      "路",
+      "线",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            8
+          ],
+          [
+            "table_unit",
+            9
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              36,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          32,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_deliveries",
+    "query": "SELECT t2.state_province_county ,  count(*) FROM customer_addresses AS t1 JOIN addresses AS t2 ON t1.address_id  =  t2.address_id GROUP BY t2.state_province_county",
+    "query_toks": [
+      "SELECT",
+      "t2.state_province_county",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customer_addresses",
+      "AS",
+      "t1",
+      "JOIN",
+      "addresses",
+      "AS",
+      "t2",
+      "ON",
+      "t1.address_id",
+      "=",
+      "t2.address_id",
+      "GROUP",
+      "BY",
+      "t2.state_province_county"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "state_province_county",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customer_addresses",
+      "as",
+      "t1",
+      "join",
+      "addresses",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "address_id",
+      "=",
+      "t2",
+      ".",
+      "address_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "state_province_county"
+    ],
+    "question_spider": "List the state names and the number of customers living in each state.",
+    "question": "列出每个州的名字和居住人数。",
+    "question_cspider": "列出每个州的名字和居住人数。",
+    "Harold": "BLEU = 24.02, 71.4/30.8/16.7/9.1 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "列",
+      "出",
+      "州",
+      "名",
+      "和",
+      "每",
+      "个",
+      "州",
+      "的",
+      "客",
+      "户",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

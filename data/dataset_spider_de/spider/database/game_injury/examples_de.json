@@ -1,0 +1,2788 @@
+[
+  {
+    "db_id": "game_injury",
+    "query": "SELECT count(*) FROM game WHERE season  >  2007",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "game",
+      "WHERE",
+      "season",
+      ">",
+      "2007"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "game",
+      "where",
+      "season",
+      ">",
+      "value"
+    ],
+    "question": "Wie viele Spiele finden nach der Saison 2007 statt?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          2007.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT Date FROM game ORDER BY home_team DESC",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      "FROM",
+      "game",
+      "ORDER",
+      "BY",
+      "home_team",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      "from",
+      "game",
+      "order",
+      "by",
+      "home_team",
+      "desc"
+    ],
+    "question": "Listen Sie die Spieldaten nach dem Namen der Heimmannschaft in absteigender Reihenfolge auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT season ,  home_team ,  away_team FROM game",
+    "query_toks": [
+      "SELECT",
+      "season",
+      ",",
+      "home_team",
+      ",",
+      "away_team",
+      "FROM",
+      "game"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "season",
+      ",",
+      "home_team",
+      ",",
+      "away_team",
+      "from",
+      "game"
+    ],
+    "question": "Listen Sie die Saison, die Heimmannschaft und die Auswärtsmannschaft aller Spiele auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT max(home_games) ,  min(home_games) ,  avg(home_games) FROM stadium",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "home_games",
+      ")",
+      ",",
+      "min",
+      "(",
+      "home_games",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "home_games",
+      ")",
+      "FROM",
+      "stadium"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "home_games",
+      ")",
+      ",",
+      "min",
+      "(",
+      "home_games",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "home_games",
+      ")",
+      "from",
+      "stadium"
+    ],
+    "question": "Was sind die maximalen, minimalen und durchschnittlichen Heimspiele in jedem Stadion?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT average_attendance FROM stadium WHERE capacity_percentage  >  100",
+    "query_toks": [
+      "SELECT",
+      "average_attendance",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "capacity_percentage",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "average_attendance",
+      "from",
+      "stadium",
+      "where",
+      "capacity_percentage",
+      ">",
+      "value"
+    ],
+    "question": "Wie hoch ist die durchschnittliche Besucherzahl von Stadien mit einem Kapazitätsprozentsatz von mehr als 100%?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          100.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT player ,  number_of_matches ,  SOURCE FROM injury_accident WHERE injury != 'Knee problem'",
+    "query_toks": [
+      "SELECT",
+      "player",
+      ",",
+      "number_of_matches",
+      ",",
+      "SOURCE",
+      "FROM",
+      "injury_accident",
+      "WHERE",
+      "injury",
+      "!",
+      "=",
+      "'Knee",
+      "problem",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player",
+      ",",
+      "number_of_matches",
+      ",",
+      "source",
+      "from",
+      "injury_accident",
+      "where",
+      "injury",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Wie lauten der Spielername, die Anzahl der Spiele und die Informationsquelle für Spieler, die nicht an einer Verletzung des \"Knee problem\" leiden?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          "\"Knee problem\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT T1.season FROM game AS T1 JOIN injury_accident AS T2 ON T1.id  =  T2.game_id WHERE T2.player  =  'Walter Samuel'",
+    "query_toks": [
+      "SELECT",
+      "T1.season",
+      "FROM",
+      "game",
+      "AS",
+      "T1",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.game_id",
+      "WHERE",
+      "T2.player",
+      "=",
+      "'Walter",
+      "Samuel",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "season",
+      "from",
+      "game",
+      "as",
+      "t1",
+      "join",
+      "injury_accident",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "game_id",
+      "where",
+      "t2",
+      ".",
+      "player",
+      "=",
+      "value"
+    ],
+    "question": "In welcher Saison wird der Spieler \"Walter Samuel\" verletzt?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          "\"Walter Samuel\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT T1.id ,  T1.score ,  T1.date FROM game AS T1 JOIN injury_accident AS T2 ON T2.game_id  =  T1.id GROUP BY T1.id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.score",
+      ",",
+      "T1.date",
+      "FROM",
+      "game",
+      "AS",
+      "T1",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T2",
+      "ON",
+      "T2.game_id",
+      "=",
+      "T1.id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "score",
+      ",",
+      "t1",
+      ".",
+      "date",
+      "from",
+      "game",
+      "as",
+      "t1",
+      "join",
+      "injury_accident",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "game_id",
+      "=",
+      "t1",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Was sind die IDs, Ergebnisse und Daten der Spiele, die mindestens zwei Verletzungsunfälle verursacht haben?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT T1.id ,  T1.name FROM stadium AS T1 JOIN game AS T2 ON T1.id  =  T2.stadium_id JOIN injury_accident AS T3 ON T2.id  =  T3.game_id GROUP BY T1.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "stadium",
+      "AS",
+      "T1",
+      "JOIN",
+      "game",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.stadium_id",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T3",
+      "ON",
+      "T2.id",
+      "=",
+      "T3.game_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "stadium",
+      "as",
+      "t1",
+      "join",
+      "game",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "stadium_id",
+      "join",
+      "injury_accident",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "game_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie lautet die ID und der Name des Stadions, in dem die meisten Unfälle mit Verletzungen passiert sind?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT T1.id ,  T1.name FROM stadium AS T1 JOIN game AS T2 ON T1.id  =  T2.stadium_id JOIN injury_accident AS T3 ON T2.id  =  T3.game_id GROUP BY T1.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "stadium",
+      "AS",
+      "T1",
+      "JOIN",
+      "game",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.stadium_id",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T3",
+      "ON",
+      "T2.id",
+      "=",
+      "T3.game_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "stadium",
+      "as",
+      "t1",
+      "join",
+      "game",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "stadium_id",
+      "join",
+      "injury_accident",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "game_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Finden Sie die ID und den Namen des Stadions, in dem die meisten Unfälle mit Verletzungen aufgetreten sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT T1.season ,  T2.name FROM game AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.id JOIN injury_accident AS T3 ON T1.id  =  T3.game_id WHERE T3.injury  =  'Foot injury' OR T3.injury  =  'Knee problem'",
+    "query_toks": [
+      "SELECT",
+      "T1.season",
+      ",",
+      "T2.name",
+      "FROM",
+      "game",
+      "AS",
+      "T1",
+      "JOIN",
+      "stadium",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stadium_id",
+      "=",
+      "T2.id",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T3",
+      "ON",
+      "T1.id",
+      "=",
+      "T3.game_id",
+      "WHERE",
+      "T3.injury",
+      "=",
+      "'Foot",
+      "injury",
+      "'",
+      "OR",
+      "T3.injury",
+      "=",
+      "'Knee",
+      "problem",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "season",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "game",
+      "as",
+      "t1",
+      "join",
+      "stadium",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stadium_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "injury_accident",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "game_id",
+      "where",
+      "t3",
+      ".",
+      "injury",
+      "=",
+      "value",
+      "or",
+      "t3",
+      ".",
+      "injury",
+      "=",
+      "value"
+    ],
+    "question": "In welcher Saison und in welchem ​​Stadion hatte ein Spieler eine \"Foot injury\" oder ein \"Knee problem\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          "\"Foot injury\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          "\"Knee problem\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT count(DISTINCT SOURCE) FROM injury_accident",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "SOURCE",
+      ")",
+      "FROM",
+      "injury_accident"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "source",
+      ")",
+      "from",
+      "injury_accident"
+    ],
+    "question": "Wie viele verschiedene Arten von Informationsquellen gibt es für Unfälle mit Verletzungen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                20,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT count(*) FROM game WHERE id NOT IN ( SELECT game_id FROM injury_accident )",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "game",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "game_id",
+      "FROM",
+      "injury_accident",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "game",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "game_id",
+      "from",
+      "injury_accident",
+      ")"
+    ],
+    "question": "Wie viele Spiele sind frei von Verletzungsunfällen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      15,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT count(DISTINCT T1.injury) FROM injury_accident AS T1 JOIN game AS T2 ON T1.game_id  =  T2.id WHERE T2.season  >  2010",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "T1.injury",
+      ")",
+      "FROM",
+      "injury_accident",
+      "AS",
+      "T1",
+      "JOIN",
+      "game",
+      "AS",
+      "T2",
+      "ON",
+      "T1.game_id",
+      "=",
+      "T2.id",
+      "WHERE",
+      "T2.season",
+      ">",
+      "2010"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "t1",
+      ".",
+      "injury",
+      ")",
+      "from",
+      "injury_accident",
+      "as",
+      "t1",
+      "join",
+      "game",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "game_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "season",
+      ">",
+      "value"
+    ],
+    "question": "Wie viele verschiedene Arten von Verletzungen ereigneten sich nach der Saison 2010?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                18,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT T2.name FROM game AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.id JOIN injury_accident AS T3 ON T1.id  =  T3.game_id WHERE T3.player  =  'Walter Samuel' INTERSECT SELECT T2.name FROM game AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.id JOIN injury_accident AS T3 ON T1.id  =  T3.game_id WHERE T3.player  =  'Thiago Motta'",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "game",
+      "AS",
+      "T1",
+      "JOIN",
+      "stadium",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stadium_id",
+      "=",
+      "T2.id",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T3",
+      "ON",
+      "T1.id",
+      "=",
+      "T3.game_id",
+      "WHERE",
+      "T3.player",
+      "=",
+      "'Walter",
+      "Samuel",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "game",
+      "AS",
+      "T1",
+      "JOIN",
+      "stadium",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stadium_id",
+      "=",
+      "T2.id",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T3",
+      "ON",
+      "T1.id",
+      "=",
+      "T3.game_id",
+      "WHERE",
+      "T3.player",
+      "=",
+      "'Thiago",
+      "Motta",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "game",
+      "as",
+      "t1",
+      "join",
+      "stadium",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stadium_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "injury_accident",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "game_id",
+      "where",
+      "t3",
+      ".",
+      "player",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "game",
+      "as",
+      "t1",
+      "join",
+      "stadium",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stadium_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "injury_accident",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "game_id",
+      "where",
+      "t3",
+      ".",
+      "player",
+      "=",
+      "value"
+    ],
+    "question": "Geben Sie den Namen des Stadions an, in dem sowohl der Spieler \"Walter Samuel\" als auch der Spieler 'Thiago Motta' verletzt wurden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          "\"Walter Samuel\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            "\"Thiago Motta\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT name ,  average_attendance ,  total_attendance FROM stadium EXCEPT SELECT T2.name ,  T2.average_attendance ,  T2.total_attendance FROM game AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.id JOIN injury_accident AS T3 ON T1.id  =  T3.game_id",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "average_attendance",
+      ",",
+      "total_attendance",
+      "FROM",
+      "stadium",
+      "EXCEPT",
+      "SELECT",
+      "T2.name",
+      ",",
+      "T2.average_attendance",
+      ",",
+      "T2.total_attendance",
+      "FROM",
+      "game",
+      "AS",
+      "T1",
+      "JOIN",
+      "stadium",
+      "AS",
+      "T2",
+      "ON",
+      "T1.stadium_id",
+      "=",
+      "T2.id",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T3",
+      "ON",
+      "T1.id",
+      "=",
+      "T3.game_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "average_attendance",
+      ",",
+      "total_attendance",
+      "from",
+      "stadium",
+      "except",
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "average_attendance",
+      ",",
+      "t2",
+      ".",
+      "total_attendance",
+      "from",
+      "game",
+      "as",
+      "t1",
+      "join",
+      "stadium",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "stadium_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "injury_accident",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "game_id"
+    ],
+    "question": "Zeigen Sie den Namen, die durchschnittliche Besucherzahl und die Gesamtbesucherzahl für Stadien an, in denen keine Unfälle passiert sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  5,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT name FROM stadium WHERE name LIKE \"%Bank%\"",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "name",
+      "LIKE",
+      "``",
+      "%",
+      "Bank",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "stadium",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question": "Welcher Stadionname enthält die Teilzeichenfolge \"Bank\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"%Bank%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT T1.id ,  count(*) FROM stadium AS T1 JOIN game AS T2 ON T1.id  =  T2.stadium_id GROUP BY T1.id",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "stadium",
+      "AS",
+      "T1",
+      "JOIN",
+      "game",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.stadium_id",
+      "GROUP",
+      "BY",
+      "T1.id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "stadium",
+      "as",
+      "t1",
+      "join",
+      "game",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "stadium_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id"
+    ],
+    "question": "Wie viele Spiele hat jedes Stadion abgehalten?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "game_injury",
+    "query": "SELECT T1.date ,  T2.player FROM game AS T1 JOIN injury_accident AS T2 ON T1.id  =  T2.game_id ORDER BY T1.season DESC",
+    "query_toks": [
+      "SELECT",
+      "T1.date",
+      ",",
+      "T2.player",
+      "FROM",
+      "game",
+      "AS",
+      "T1",
+      "JOIN",
+      "injury_accident",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.game_id",
+      "ORDER",
+      "BY",
+      "T1.season",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "date",
+      ",",
+      "t2",
+      ".",
+      "player",
+      "from",
+      "game",
+      "as",
+      "t1",
+      "join",
+      "injury_accident",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "game_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "season",
+      "desc"
+    ],
+    "question": "Suchen Sie für jeden Verletzungsunfall das Datum des Spiels und den Namen des verletzten Spielers im Spiel und sortieren Sie die Ergebnisse in absteigender Reihenfolge der Spielsaison.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

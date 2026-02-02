@@ -1,0 +1,2392 @@
+[
+  {
+    "db_id": "department_management",
+    "query": "SELECT count(*) FROM head WHERE age  >  56",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "head",
+      "WHERE",
+      "age",
+      ">",
+      "56"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "head",
+      "where",
+      "age",
+      ">",
+      "value"
+    ],
+    "question_spider": "How many heads of the departments are older than 56 ?",
+    "question": "部门中有多少人年龄大于56岁？",
+    "question_cspider": "部门中有多少人年龄大于56岁？",
+    "Harold": "BLEU = 22.89, 62.5/40.0/14.3/7.7 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "多",
+      "少",
+      "个",
+      "部",
+      "门",
+      "的",
+      "主",
+      "管",
+      "年",
+      "龄",
+      "超",
+      "过",
+      "5",
+      "6",
+      "岁",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          56,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT name ,  born_state ,  age FROM head ORDER BY age",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "born_state",
+      ",",
+      "age",
+      "FROM",
+      "head",
+      "ORDER",
+      "BY",
+      "age"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "born_state",
+      ",",
+      "age",
+      "from",
+      "head",
+      "order",
+      "by",
+      "age"
+    ],
+    "question_spider": "List the name, born state and age of the heads of departments ordered by age.",
+    "question": "列出按年龄排序的部门负责人的姓名、出生地和年龄。",
+    "question_cspider": "列出按年龄排序的部门负责人的姓名、出生地和年龄。",
+    "Harold": "BLEU = 74.52, 88.0/79.2/69.6/63.6 (BP=1.000, ratio=1.042, hyp_len=25, ref_len=24)",
+    "question_toks": [
+      "列",
+      "出",
+      "按",
+      "年",
+      "龄",
+      "排",
+      "序",
+      "的",
+      "部",
+      "门",
+      "负",
+      "责",
+      "人",
+      "的",
+      "姓",
+      "名",
+      "，",
+      "出",
+      "生",
+      "状",
+      "态",
+      "和",
+      "年",
+      "龄",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT creation ,  name ,  budget_in_billions FROM department",
+    "query_toks": [
+      "SELECT",
+      "creation",
+      ",",
+      "name",
+      ",",
+      "budget_in_billions",
+      "FROM",
+      "department"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "creation",
+      ",",
+      "name",
+      ",",
+      "budget_in_billions",
+      "from",
+      "department"
+    ],
+    "question_spider": "List the creation year, name and budget of each department.",
+    "question": "列出每个部门的创建年份、名称和预算。",
+    "question_cspider": "列出每个部门的创建年份、名称和预算。",
+    "Harold": "BLEU = 83.94, 94.4/88.2/81.2/73.3 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "列",
+      "出",
+      "每",
+      "个",
+      "部",
+      "门",
+      "的",
+      "创",
+      "建",
+      "年",
+      "份",
+      "，",
+      "名",
+      "称",
+      "和",
+      "预",
+      "算",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT max(budget_in_billions) ,  min(budget_in_billions) FROM department",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "budget_in_billions",
+      ")",
+      ",",
+      "min",
+      "(",
+      "budget_in_billions",
+      ")",
+      "FROM",
+      "department"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "budget_in_billions",
+      ")",
+      ",",
+      "min",
+      "(",
+      "budget_in_billions",
+      ")",
+      "from",
+      "department"
+    ],
+    "question_spider": "What are the maximum and minimum budget of the departments?",
+    "question": "部门的最高预算和最低预算是多少？",
+    "question_cspider": "部门的最高预算和最低预算是多少？",
+    "Harold": "BLEU = 74.97, 100.0/92.3/83.3/72.7 (BP=0.867, ratio=0.875, hyp_len=14, ref_len=16)",
+    "question_toks": [
+      "部",
+      "门",
+      "的",
+      "最",
+      "高",
+      "和",
+      "最",
+      "低",
+      "预",
+      "算",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT avg(num_employees) FROM department WHERE ranking BETWEEN 10 AND 15",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "num_employees",
+      ")",
+      "FROM",
+      "department",
+      "WHERE",
+      "ranking",
+      "BETWEEN",
+      "10",
+      "AND",
+      "15"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "num_employees",
+      ")",
+      "from",
+      "department",
+      "where",
+      "ranking",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question_spider": "What is the average number of employees of the departments whose rank is between 10 and 15?",
+    "question": "排名在10到15之间的部门的平均雇员人数是多少？",
+    "question_cspider": "排名在10到15之间的部门的平均雇员人数是多少？",
+    "Harold": "BLEU = 58.54, 87.0/68.2/52.4/45.0 (BP=0.957, ratio=0.958, hyp_len=23, ref_len=24)",
+    "question_toks": [
+      "部",
+      "门",
+      "级",
+      "别",
+      "在",
+      "1",
+      "0",
+      "到",
+      "1",
+      "5",
+      "之",
+      "间",
+      "的",
+      "员",
+      "工",
+      "平",
+      "均",
+      "人",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          10,
+          15
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT name FROM head WHERE born_state != 'California'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "head",
+      "WHERE",
+      "born_state",
+      "!",
+      "=",
+      "'California",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "head",
+      "where",
+      "born_state",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of the heads who are born outside the California state?",
+    "question": "出生在“California”州以外的人的名字是什么？",
+    "question_cspider": "出生在“California”州以外的人的名字是什么？",
+    "Harold": "BLEU = 33.55, 61.9/35.0/26.3/22.2 (BP=1.000, ratio=1.105, hyp_len=21, ref_len=19)",
+    "question_toks": [
+      "在",
+      "加",
+      "利",
+      "福",
+      "尼",
+      "亚",
+      "州",
+      "境",
+      "外",
+      "出",
+      "生",
+      "的",
+      "元",
+      "首",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"California\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT DISTINCT T1.creation FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T3.born_state  =  'Alabama'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.creation",
+      "FROM",
+      "department",
+      "AS",
+      "T1",
+      "JOIN",
+      "management",
+      "AS",
+      "T2",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "JOIN",
+      "head",
+      "AS",
+      "T3",
+      "ON",
+      "T2.head_id",
+      "=",
+      "T3.head_id",
+      "WHERE",
+      "T3.born_state",
+      "=",
+      "'Alabama",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "creation",
+      "from",
+      "department",
+      "as",
+      "t1",
+      "join",
+      "management",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "join",
+      "head",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "head_id",
+      "=",
+      "t3",
+      ".",
+      "head_id",
+      "where",
+      "t3",
+      ".",
+      "born_state",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the distinct creation years of the departments managed by a secretary born in state 'Alabama'?",
+    "question": "出生于“Alabama”州的秘书所管理的各部门的不同创建年份是什么？",
+    "question_cspider": "出生于“Alabama”州的秘书所管理的各部门的不同创建年份是什么？",
+    "Harold": "BLEU = 0.00, 69.0/28.6/7.4/0.0 (BP=1.000, ratio=1.000, hyp_len=29, ref_len=29)",
+    "question_toks": [
+      "由",
+      "“",
+      "阿",
+      "拉",
+      "巴",
+      "马",
+      "州",
+      "”",
+      "出",
+      "生",
+      "的",
+      "秘",
+      "书",
+      "管",
+      "理",
+      "的",
+      "部",
+      "门",
+      "有",
+      "哪",
+      "些",
+      "不",
+      "同",
+      "的",
+      "创",
+      "立",
+      "年",
+      "份",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Alabama\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT born_state FROM head GROUP BY born_state HAVING count(*)  >=  3",
+    "query_toks": [
+      "SELECT",
+      "born_state",
+      "FROM",
+      "head",
+      "GROUP",
+      "BY",
+      "born_state",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "born_state",
+      "from",
+      "head",
+      "group",
+      "by",
+      "born_state",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of the states where at least 3 heads were born?",
+    "question": "至少有3个负责人出生的州的名字是什么？",
+    "question_cspider": "至少有3个负责人出生的州的名字是什么？",
+    "Harold": "BLEU = 50.91, 77.8/64.7/50.0/33.3 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "至",
+      "少",
+      "有",
+      "3",
+      "位",
+      "元",
+      "首",
+      "出",
+      "生",
+      "的",
+      "州",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT creation FROM department GROUP BY creation ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "creation",
+      "FROM",
+      "department",
+      "GROUP",
+      "BY",
+      "creation",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "creation",
+      "from",
+      "department",
+      "group",
+      "by",
+      "creation",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "In which year were most departments established?",
+    "question": "大多数部门在哪一年成立？",
+    "question_cspider": "大多数部门在哪一年成立？",
+    "Harold": "BLEU = 84.24, 92.3/83.3/81.8/80.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "大",
+      "多",
+      "数",
+      "部",
+      "门",
+      "在",
+      "哪",
+      "一",
+      "年",
+      "成",
+      "立",
+      "的",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT T1.name ,  T1.num_employees FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id WHERE T2.temporary_acting  =  'Yes'",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.num_employees",
+      "FROM",
+      "department",
+      "AS",
+      "T1",
+      "JOIN",
+      "management",
+      "AS",
+      "T2",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "WHERE",
+      "T2.temporary_acting",
+      "=",
+      "'Yes",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "num_employees",
+      "from",
+      "department",
+      "as",
+      "t1",
+      "join",
+      "management",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "where",
+      "t2",
+      ".",
+      "temporary_acting",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the name and number of employees for the departments managed by heads whose temporary acting value is 'Yes'?",
+    "question": "显示由临时代理值为“Yes”的负责人所管理的部门的员工姓名和数目？",
+    "question_cspider": "显示由临时代理值为“Yes”的负责人所管理的部门的员工姓名和数目？",
+    "Harold": "BLEU = 53.74, 80.6/60.0/48.3/35.7 (BP=1.000, ratio=1.000, hyp_len=31, ref_len=31)",
+    "question_toks": [
+      "是",
+      "否",
+      "显",
+      "示",
+      "由",
+      "临",
+      "时",
+      "负",
+      "责",
+      "人",
+      "为",
+      "“",
+      "是",
+      "”",
+      "的",
+      "主",
+      "管",
+      "领",
+      "导",
+      "的",
+      "部",
+      "门",
+      "的",
+      "员",
+      "工",
+      "姓",
+      "名",
+      "和",
+      "人",
+      "数",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Yes\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT count(DISTINCT temporary_acting) FROM management",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "temporary_acting",
+      ")",
+      "FROM",
+      "management"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "temporary_acting",
+      ")",
+      "from",
+      "management"
+    ],
+    "question_spider": "How many acting statuses are there?",
+    "question": "有多少个代理状态？",
+    "question_cspider": "有多少个代理状态？",
+    "Harold": "BLEU = 0.00, 66.7/50.0/28.6/0.0 (BP=1.000, ratio=1.000, hyp_len=9, ref_len=9)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "种",
+      "表",
+      "演",
+      "状",
+      "态",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                13,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT count(*) FROM department WHERE department_id NOT IN (SELECT department_id FROM management);",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "department",
+      "WHERE",
+      "department_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "department_id",
+      "FROM",
+      "management",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "department",
+      "where",
+      "department_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "department_id",
+      "from",
+      "management",
+      ")"
+    ],
+    "question_spider": "How many departments are led by heads who are not mentioned?",
+    "question": "有多少部门由没有提到的负责人领导？",
+    "question_cspider": "有多少部门由没有提到的负责人领导？",
+    "Harold": "BLEU = 64.49, 87.5/73.3/64.3/53.8 (BP=0.939, ratio=0.941, hyp_len=16, ref_len=17)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "部",
+      "门",
+      "由",
+      "未",
+      "提",
+      "及",
+      "的",
+      "负",
+      "责",
+      "人",
+      "领",
+      "导",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT DISTINCT T1.age FROM management AS T2 JOIN head AS T1 ON T1.head_id  =  T2.head_id WHERE T2.temporary_acting  =  'Yes'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.age",
+      "FROM",
+      "management",
+      "AS",
+      "T2",
+      "JOIN",
+      "head",
+      "AS",
+      "T1",
+      "ON",
+      "T1.head_id",
+      "=",
+      "T2.head_id",
+      "WHERE",
+      "T2.temporary_acting",
+      "=",
+      "'Yes",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "age",
+      "from",
+      "management",
+      "as",
+      "t2",
+      "join",
+      "head",
+      "as",
+      "t1",
+      "on",
+      "t1",
+      ".",
+      "head_id",
+      "=",
+      "t2",
+      ".",
+      "head_id",
+      "where",
+      "t2",
+      ".",
+      "temporary_acting",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the distinct ages of the heads who are acting?",
+    "question": "那些正在代理的负责人有哪些不同的年龄？",
+    "question_cspider": "那些正在代理的负责人有哪些不同的年龄？",
+    "Harold": "BLEU = 0.00, 50.0/30.8/16.7/0.0 (BP=0.700, ratio=0.737, hyp_len=14, ref_len=19)",
+    "question_toks": [
+      "演",
+      "习",
+      "负",
+      "责",
+      "人",
+      "的",
+      "年",
+      "龄",
+      "分",
+      "别",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Yes\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT T3.born_state FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T1.name  =  'Treasury' INTERSECT SELECT T3.born_state FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T1.name  =  'Homeland Security'",
+    "query_toks": [
+      "SELECT",
+      "T3.born_state",
+      "FROM",
+      "department",
+      "AS",
+      "T1",
+      "JOIN",
+      "management",
+      "AS",
+      "T2",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "JOIN",
+      "head",
+      "AS",
+      "T3",
+      "ON",
+      "T2.head_id",
+      "=",
+      "T3.head_id",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Treasury",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T3.born_state",
+      "FROM",
+      "department",
+      "AS",
+      "T1",
+      "JOIN",
+      "management",
+      "AS",
+      "T2",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "JOIN",
+      "head",
+      "AS",
+      "T3",
+      "ON",
+      "T2.head_id",
+      "=",
+      "T3.head_id",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Homeland",
+      "Security",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "born_state",
+      "from",
+      "department",
+      "as",
+      "t1",
+      "join",
+      "management",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "join",
+      "head",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "head_id",
+      "=",
+      "t3",
+      ".",
+      "head_id",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t3",
+      ".",
+      "born_state",
+      "from",
+      "department",
+      "as",
+      "t1",
+      "join",
+      "management",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "join",
+      "head",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "head_id",
+      "=",
+      "t3",
+      ".",
+      "head_id",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the states where both the secretary of 'Treasury' department and the secretary of 'Homeland Security' were born.",
+    "question": "列出“Treasury”部门秘书和“Homeland Security”秘书出生的州。",
+    "question_cspider": "列出“Treasury”部门秘书和“Homeland Security”秘书出生的州。",
+    "Harold": "BLEU = 70.70, 100.0/82.6/68.2/61.9 (BP=0.920, ratio=0.923, hyp_len=24, ref_len=26)",
+    "question_toks": [
+      "列",
+      "出",
+      "“",
+      "财",
+      "政",
+      "部",
+      "”",
+      "秘",
+      "书",
+      "和",
+      "“",
+      "国",
+      "土",
+      "安",
+      "全",
+      "部",
+      "”",
+      "秘",
+      "书",
+      "的",
+      "出",
+      "生",
+      "州",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Treasury\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  9,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ],
+            "\"Homeland Security\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT T1.department_id ,  T1.name ,  count(*) FROM management AS T2 JOIN department AS T1 ON T1.department_id  =  T2.department_id GROUP BY T1.department_id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.department_id",
+      ",",
+      "T1.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "management",
+      "AS",
+      "T2",
+      "JOIN",
+      "department",
+      "AS",
+      "T1",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "GROUP",
+      "BY",
+      "T1.department_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "department_id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "management",
+      "as",
+      "t2",
+      "join",
+      "department",
+      "as",
+      "t1",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "department_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Which department has more than 1 head at a time? List the id, name and the number of heads.",
+    "question": "哪个部门有不止一个负责人？列出ID、姓名和人数。",
+    "question_cspider": "哪个部门有不止一个负责人？列出ID、姓名和人数。",
+    "Harold": "BLEU = 25.98, 59.3/30.8/20.0/12.5 (BP=1.000, ratio=1.125, hyp_len=27, ref_len=24)",
+    "question_toks": [
+      "哪",
+      "个",
+      "部",
+      "门",
+      "一",
+      "次",
+      "拥",
+      "有",
+      "1",
+      "个",
+      "以",
+      "上",
+      "的",
+      "主",
+      "管",
+      "？",
+      "列",
+      "出",
+      "I",
+      "D",
+      "，",
+      "名",
+      "称",
+      "和",
+      "头",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT head_id ,  name FROM head WHERE name LIKE '%Ha%'",
+    "query_toks": [
+      "SELECT",
+      "head_id",
+      ",",
+      "name",
+      "FROM",
+      "head",
+      "WHERE",
+      "name",
+      "LIKE",
+      "'",
+      "%",
+      "Ha",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "head_id",
+      ",",
+      "name",
+      "from",
+      "head",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question_spider": "Which head's name has the substring 'Ha'? List the id and name.",
+    "question": "哪个负责人的名字有“Ha”这个子串？列出ID和姓名。",
+    "question_cspider": "哪个负责人的名字有“Led”这个子串？列出ID和姓名。",
+    "Harold": "BLEU = 26.57, 72.0/29.2/17.4/13.6 (BP=1.000, ratio=1.000, hyp_len=25, ref_len=25)",
+    "question_toks": [
+      "哪",
+      "个",
+      "头",
+      "的",
+      "名",
+      "称",
+      "带",
+      "有",
+      "子",
+      "字",
+      "符",
+      "串",
+      "“",
+      " ",
+      "H",
+      "a",
+      "”",
+      "？",
+      "列",
+      "出",
+      "I",
+      "D",
+      "和",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"%Ha%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

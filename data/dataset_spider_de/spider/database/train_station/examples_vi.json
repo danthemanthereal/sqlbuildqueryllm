@@ -1,0 +1,3275 @@
+[
+  {
+    "db_id": "train_station",
+    "query": "SELECT count(*) FROM station",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "station"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "station"
+    ],
+    "question": "Có tất cả bao nhiêu ga tàu ?",
+    "question_toks": [
+      "How",
+      "many",
+      "train",
+      "stations",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  LOCATION ,  number_of_platforms FROM station",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      ",",
+      "number_of_platforms",
+      "FROM",
+      "station"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      ",",
+      "number_of_platforms",
+      "from",
+      "station"
+    ],
+    "question": "Hiển thị tên , địa điểm và số lượng sân ga của từng ga tàu .",
+    "question_toks": [
+      "Show",
+      "the",
+      "name",
+      ",",
+      "location",
+      ",",
+      "and",
+      "number",
+      "of",
+      "platforms",
+      "for",
+      "all",
+      "stations",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT DISTINCT LOCATION FROM station",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "station"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "station"
+    ],
+    "question": "Cho biết địa điểm của tất cả các nhà ga .",
+    "question_toks": [
+      "What",
+      "are",
+      "all",
+      "locations",
+      "of",
+      "train",
+      "stations",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  total_passengers FROM station WHERE LOCATION != 'London'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "total_passengers",
+      "FROM",
+      "station",
+      "WHERE",
+      "LOCATION",
+      "!",
+      "=",
+      "'London",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "total_passengers",
+      "from",
+      "station",
+      "where",
+      "location",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết tên và tổng số hành khách của tất cả các ga tàu không nằm ở Luân Đôn .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "and",
+      "total",
+      "passengers",
+      "for",
+      "all",
+      "train",
+      "stations",
+      "not",
+      "in",
+      "London",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  main_services FROM station ORDER BY total_passengers DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "main_services",
+      "FROM",
+      "station",
+      "ORDER",
+      "BY",
+      "total_passengers",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "main_services",
+      "from",
+      "station",
+      "order",
+      "by",
+      "total_passengers",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết tên và dịch vụ chính của 3 nhà ga đứng đầu về tổng số lượng hành khách .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "and",
+      "main",
+      "services",
+      "for",
+      "train",
+      "stations",
+      "that",
+      "have",
+      "the",
+      "top",
+      "three",
+      "total",
+      "number",
+      "of",
+      "passengers",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 3,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT avg(total_passengers) ,  max(total_passengers) FROM station WHERE LOCATION  =  'London' OR LOCATION  =  'Glasgow'",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "total_passengers",
+      ")",
+      ",",
+      "max",
+      "(",
+      "total_passengers",
+      ")",
+      "FROM",
+      "station",
+      "WHERE",
+      "LOCATION",
+      "=",
+      "'London",
+      "'",
+      "OR",
+      "LOCATION",
+      "=",
+      "'Glasgow",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "total_passengers",
+      ")",
+      ",",
+      "max",
+      "(",
+      "total_passengers",
+      ")",
+      "from",
+      "station",
+      "where",
+      "location",
+      "=",
+      "value",
+      "or",
+      "location",
+      "=",
+      "value"
+    ],
+    "question": "Tổng số lượng hành khách trung bình và tổng số lượng hành khách tối đa trên tất cả các nhà ga tại Luân Đôn hoặc Glasgow là bao nhiêu ?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "and",
+      "maximum",
+      "number",
+      "of",
+      "total",
+      "passengers",
+      "for",
+      "train",
+      "stations",
+      "in",
+      "London",
+      "or",
+      "Glasgow",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Glasgow\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT LOCATION ,  sum(number_of_platforms) ,  sum(total_passengers) FROM station GROUP BY LOCATION",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      ",",
+      "sum",
+      "(",
+      "number_of_platforms",
+      ")",
+      ",",
+      "sum",
+      "(",
+      "total_passengers",
+      ")",
+      "FROM",
+      "station",
+      "GROUP",
+      "BY",
+      "LOCATION"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      ",",
+      "sum",
+      "(",
+      "number_of_platforms",
+      ")",
+      ",",
+      "sum",
+      "(",
+      "total_passengers",
+      ")",
+      "from",
+      "station",
+      "group",
+      "by",
+      "location"
+    ],
+    "question": "Hiển thị tất cả các địa điểm cũng như là tổng số sân ga và tổng số hành khách trên tất cả các nhà ga tại mỗi địa điểm .",
+    "question_toks": [
+      "Show",
+      "all",
+      "locations",
+      "and",
+      "the",
+      "total",
+      "number",
+      "of",
+      "platforms",
+      "and",
+      "passengers",
+      "for",
+      "all",
+      "train",
+      "stations",
+      "in",
+      "each",
+      "location",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT DISTINCT LOCATION FROM station WHERE number_of_platforms  >=  15 AND total_passengers  >  25",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "WHERE",
+      "number_of_platforms",
+      ">",
+      "=",
+      "15",
+      "AND",
+      "total_passengers",
+      ">",
+      "25"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "station",
+      "where",
+      "number_of_platforms",
+      ">",
+      "=",
+      "value",
+      "and",
+      "total_passengers",
+      ">",
+      "value"
+    ],
+    "question": "Hiển thị tất cả các địa điểm có ga tàu với ít nhất 15 sân ga và ga tàu với nhiều hơn 25 hành khách .",
+    "question_toks": [
+      "Show",
+      "all",
+      "locations",
+      "that",
+      "have",
+      "train",
+      "stations",
+      "with",
+      "at",
+      "least",
+      "15",
+      "platforms",
+      "and",
+      "train",
+      "stations",
+      "with",
+      "more",
+      "than",
+      "25",
+      "total",
+      "passengers",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          15.0,
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          25.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT LOCATION FROM station EXCEPT SELECT LOCATION FROM station WHERE number_of_platforms  >=  15",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "EXCEPT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "WHERE",
+      "number_of_platforms",
+      ">",
+      "=",
+      "15"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "station",
+      "except",
+      "select",
+      "location",
+      "from",
+      "station",
+      "where",
+      "number_of_platforms",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tất cả các địa điểm không có ga tàu với ít nhất 15 sân ga",
+    "question_toks": [
+      "Show",
+      "all",
+      "locations",
+      "which",
+      "do",
+      "n't",
+      "have",
+      "a",
+      "train",
+      "station",
+      "with",
+      "at",
+      "least",
+      "15",
+      "platforms",
+      "."
+    ],
+    "sql": {
+      "except": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            5,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            15.0,
+            null
+          ]
+        ]
+      },
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT LOCATION FROM station GROUP BY LOCATION ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "station",
+      "group",
+      "by",
+      "location",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Hiển thị địa điểm có số lượng ga tàu nhiều nhất .",
+    "question_toks": [
+      "Show",
+      "the",
+      "location",
+      "with",
+      "most",
+      "number",
+      "of",
+      "train",
+      "stations",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  TIME ,  service FROM train",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "TIME",
+      ",",
+      "service",
+      "FROM",
+      "train"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "time",
+      ",",
+      "service",
+      "from",
+      "train"
+    ],
+    "question": "Hiển thị tên , thời gian và dịch vụ của tất cả các chuyến tàu .",
+    "question_toks": [
+      "Show",
+      "the",
+      "name",
+      ",",
+      "time",
+      ",",
+      "and",
+      "service",
+      "for",
+      "all",
+      "trains",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT count(*) FROM train",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "train"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "train"
+    ],
+    "question": "Đếm số lượng chuyến tàu .",
+    "question_toks": [
+      "Show",
+      "the",
+      "number",
+      "of",
+      "trains"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  service FROM train ORDER BY TIME",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "service",
+      "FROM",
+      "train",
+      "ORDER",
+      "BY",
+      "TIME"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "service",
+      "from",
+      "train",
+      "order",
+      "by",
+      "time"
+    ],
+    "question": "Hiển thị tên và dịch vụ của tất cả các chuyến tàu theo thứ tự thời gian .",
+    "question_toks": [
+      "Show",
+      "the",
+      "name",
+      "and",
+      "service",
+      "for",
+      "all",
+      "trains",
+      "in",
+      "order",
+      "by",
+      "time",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name ,  count(*) FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id GROUP BY T1.station_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "GROUP",
+      "BY",
+      "T1.station_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "station_id"
+    ],
+    "question": "Hiển thị tên của nhà ga và số lượng chuyến tàu ở mỗi nhà ga .",
+    "question_toks": [
+      "Show",
+      "the",
+      "station",
+      "name",
+      "and",
+      "number",
+      "of",
+      "trains",
+      "in",
+      "each",
+      "station",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name ,  T3.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id JOIN train AS T3 ON T3.train_id  =  T1.train_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T3.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "T3",
+      "ON",
+      "T3.train_id",
+      "=",
+      "T1.train_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "train_id",
+      "=",
+      "t1",
+      ".",
+      "train_id"
+    ],
+    "question": "Hiển thị tên chuyến tàu và tên nhà ga cho mỗi chuyến tàu .",
+    "question_toks": [
+      "show",
+      "the",
+      "train",
+      "name",
+      "and",
+      "station",
+      "name",
+      "for",
+      "each",
+      "train",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T3.name ,  T3.time FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id JOIN train AS T3 ON T3.train_id  =  T1.train_id WHERE T2.location  =  'London' ORDER BY T3.time DESC",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T3.time",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "T3",
+      "ON",
+      "T3.train_id",
+      "=",
+      "T1.train_id",
+      "WHERE",
+      "T2.location",
+      "=",
+      "'London",
+      "'",
+      "ORDER",
+      "BY",
+      "T3.time",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "time",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "train_id",
+      "=",
+      "t1",
+      ".",
+      "train_id",
+      "where",
+      "t2",
+      ".",
+      "location",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "time",
+      "desc"
+    ],
+    "question": "Hiển thị tên và thời gian của tất cả các chuyến tàu tại các ga ở Luân Đôn theo thứ tự giảm dần về thời gian của từng chuyến tàu .",
+    "question_toks": [
+      "Show",
+      "all",
+      "train",
+      "names",
+      "and",
+      "times",
+      "in",
+      "stations",
+      "in",
+      "London",
+      "in",
+      "descending",
+      "order",
+      "by",
+      "train",
+      "time",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"London\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id GROUP BY T1.station_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "GROUP",
+      "BY",
+      "T1.station_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "station_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Hiển thị tên của ga với số lượng chuyến tàu nhiều nhất .",
+    "question_toks": [
+      "Show",
+      "the",
+      "station",
+      "name",
+      "with",
+      "greatest",
+      "number",
+      "of",
+      "trains",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id GROUP BY T1.station_id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "GROUP",
+      "BY",
+      "T1.station_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "station_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tên của ga với ít nhất hai chuyến tàu .",
+    "question_toks": [
+      "Show",
+      "the",
+      "station",
+      "name",
+      "with",
+      "at",
+      "least",
+      "two",
+      "trains",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT LOCATION FROM station GROUP BY LOCATION HAVING count(*)  =  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "station",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "station",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết các địa điểm chỉ có duy nhất 1 ga tàu .",
+    "question_toks": [
+      "Show",
+      "all",
+      "locations",
+      "with",
+      "only",
+      "1",
+      "station",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name FROM station WHERE station_id NOT IN (SELECT station_id FROM train_station)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "station",
+      "WHERE",
+      "station_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "station_id",
+      "FROM",
+      "train_station",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "station",
+      "where",
+      "station_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "station_id",
+      "from",
+      "train_station",
+      ")"
+    ],
+    "question": "Hiển thị tên nhà ga không có bất kỳ chuyến tàu nào .",
+    "question_toks": [
+      "Show",
+      "station",
+      "names",
+      "without",
+      "any",
+      "trains",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id JOIN train AS T3 ON T3.train_id  =  T1.train_id WHERE T3.Name  =  \"Ananthapuri Express\" INTERSECT SELECT T2.name FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id JOIN train AS T3 ON T3.train_id  =  T1.train_id WHERE T3.Name  =  \"Guruvayur Express\"",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "T3",
+      "ON",
+      "T3.train_id",
+      "=",
+      "T1.train_id",
+      "WHERE",
+      "T3.Name",
+      "=",
+      "``",
+      "Ananthapuri",
+      "Express",
+      "''",
+      "INTERSECT",
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "station",
+      "AS",
+      "T2",
+      "ON",
+      "T1.station_id",
+      "=",
+      "T2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "T3",
+      "ON",
+      "T3.train_id",
+      "=",
+      "T1.train_id",
+      "WHERE",
+      "T3.Name",
+      "=",
+      "``",
+      "Guruvayur",
+      "Express",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "train_id",
+      "=",
+      "t1",
+      ".",
+      "train_id",
+      "where",
+      "t3",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "train_id",
+      "=",
+      "t1",
+      ".",
+      "train_id",
+      "where",
+      "t3",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết tên của các nhà ga đã phục vụ một số chuyến tàu có tên là ' Ananthapuri Express ' và một số chuyến tàu có tên là ' Guruvayur Express ' .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "names",
+      "of",
+      "the",
+      "stations",
+      "which",
+      "serve",
+      "both",
+      "``",
+      "Ananthapuri",
+      "Express",
+      "''",
+      "and",
+      "``",
+      "Guruvayur",
+      "Express",
+      "''",
+      "trains",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  14,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  9,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            "\"Guruvayur Express\"",
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"Ananthapuri Express\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT T2.name FROM train_station AS T1 JOIN train AS T2 ON T1.train_id  =  T2.train_id WHERE T1.station_id NOT IN (SELECT T4.station_id FROM train_station AS T3 JOIN station AS T4 ON T3.station_id  =  T4.station_id WHERE t4.location  =  \"London\")",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "train_station",
+      "AS",
+      "T1",
+      "JOIN",
+      "train",
+      "AS",
+      "T2",
+      "ON",
+      "T1.train_id",
+      "=",
+      "T2.train_id",
+      "WHERE",
+      "T1.station_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "T4.station_id",
+      "FROM",
+      "train_station",
+      "AS",
+      "T3",
+      "JOIN",
+      "station",
+      "AS",
+      "T4",
+      "ON",
+      "T3.station_id",
+      "=",
+      "T4.station_id",
+      "WHERE",
+      "t4.location",
+      "=",
+      "``",
+      "London",
+      "''",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "train_station",
+      "as",
+      "t1",
+      "join",
+      "train",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "train_id",
+      "=",
+      "t2",
+      ".",
+      "train_id",
+      "where",
+      "t1",
+      ".",
+      "station_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "t4",
+      ".",
+      "station_id",
+      "from",
+      "train_station",
+      "as",
+      "t3",
+      "join",
+      "station",
+      "as",
+      "t4",
+      "on",
+      "t3",
+      ".",
+      "station_id",
+      "=",
+      "t4",
+      ".",
+      "station_id",
+      "where",
+      "t4",
+      ".",
+      "location",
+      "=",
+      "value",
+      ")"
+    ],
+    "question": "Tìm tên của các chuyến tàu không đi qua bất kỳ nhà ga nào ở Luân Đôn .",
+    "question_toks": [
+      "Find",
+      "the",
+      "names",
+      "of",
+      "the",
+      "trains",
+      "that",
+      "do",
+      "not",
+      "pass",
+      "any",
+      "station",
+      "located",
+      "in",
+      "London",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    1,
+                    false
+                  ],
+                  null
+                ]
+              ],
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ],
+                [
+                  "table_unit",
+                  0
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    6,
+                    false
+                  ],
+                  null
+                ],
+                "\"London\"",
+                null
+              ]
+            ]
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "train_station",
+    "query": "SELECT name ,  LOCATION FROM station ORDER BY Annual_entry_exit ,  Annual_interchanges",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "station",
+      "ORDER",
+      "BY",
+      "Annual_entry_exit",
+      ",",
+      "Annual_interchanges"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "station",
+      "order",
+      "by",
+      "annual_entry_exit",
+      ",",
+      "annual_interchanges"
+    ],
+    "question": "Liệt kê tên và địa điểm của tất cả các nhà ga theo thứ tự số lần xuất cảnh hàng năm và số lượng trao đổi hàng năm diễn ra tại từng nhà ga .",
+    "question_toks": [
+      "List",
+      "the",
+      "names",
+      "and",
+      "locations",
+      "of",
+      "all",
+      "stations",
+      "ordered",
+      "by",
+      "their",
+      "yearly",
+      "entry",
+      "exit",
+      "and",
+      "interchange",
+      "amounts",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  }
+]

@@ -1,0 +1,7482 @@
+[
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.Date_Claim_Made ,  T1.Claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id GROUP BY T1.Claim_id HAVING count(*)  >  2 UNION SELECT T1.Date_Claim_Made ,  T1.Claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id WHERE T1.Amount_Claimed  =  ( SELECT max(Amount_Claimed) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "T1.Date_Claim_Made",
+      ",",
+      "T1.Claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "GROUP",
+      "BY",
+      "T1.Claim_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2",
+      "UNION",
+      "SELECT",
+      "T1.Date_Claim_Made",
+      ",",
+      "T1.Claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "WHERE",
+      "T1.Amount_Claimed",
+      "=",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value",
+      "union",
+      "select",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "where",
+      "t1",
+      ".",
+      "amount_claimed",
+      "=",
+      "(",
+      "select",
+      "max",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question_spider": "Which claims caused more than 2 settlements or have the maximum claim value? List the date the claim was made and the claim id.",
+    "question": "哪些索赔造成超过2次转让或拥有最高的索赔额？列出索赔的日期和索赔ID。",
+    "question_cspider": "哪些索赔造成超过2次转让或拥有最高的索赔额？列出索赔的日期和索赔ID。",
+    "Harold": "BLEU = 41.73, 62.5/48.7/36.8/27.0 (BP=1.000, ratio=1.143, hyp_len=40, ref_len=35)",
+    "question_toks": [
+      "哪",
+      "些",
+      "索",
+      "赔",
+      "引",
+      "起",
+      "了",
+      "两",
+      "次",
+      "以",
+      "上",
+      "的",
+      "和",
+      "解",
+      "或",
+      "具",
+      "有",
+      "最",
+      "大",
+      "的",
+      "索",
+      "赔",
+      "价",
+      "值",
+      "？",
+      "列",
+      "出",
+      "提",
+      "出",
+      "索",
+      "赔",
+      "的",
+      "日",
+      "期",
+      "和",
+      "索",
+      "赔",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              3
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            {
+              "from": {
+                "table_units": [
+                  [
+                    "table_unit",
+                    2
+                  ]
+                ],
+                "conds": []
+              },
+              "select": [
+                false,
+                [
+                  [
+                    1,
+                    [
+                      0,
+                      [
+                        0,
+                        12,
+                        false
+                      ],
+                      null
+                    ]
+                  ]
+                ]
+              ],
+              "where": [],
+              "groupBy": [],
+              "having": [],
+              "orderBy": [],
+              "limit": null,
+              "intersect": null,
+              "union": null,
+              "except": null
+            },
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.Date_Claim_Made ,  T1.Claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id GROUP BY T1.Claim_id HAVING count(*)  >  2 UNION SELECT T1.Date_Claim_Made ,  T1.Claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id WHERE T1.Amount_Claimed  =  ( SELECT max(Amount_Claimed) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "T1.Date_Claim_Made",
+      ",",
+      "T1.Claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "GROUP",
+      "BY",
+      "T1.Claim_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2",
+      "UNION",
+      "SELECT",
+      "T1.Date_Claim_Made",
+      ",",
+      "T1.Claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "WHERE",
+      "T1.Amount_Claimed",
+      "=",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value",
+      "union",
+      "select",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "where",
+      "t1",
+      ".",
+      "amount_claimed",
+      "=",
+      "(",
+      "select",
+      "max",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question_spider": "Find the claims that led to more than two settlements or have the maximum claim value. For each of them, return the date the claim was made and the id of the claim.",
+    "question": "找出导致两个以上结算或具有最大索赔金额的索赔。返回每个人索赔的日期和索赔的ID。",
+    "question_cspider": "找出导致两个以上结算或具有最大索赔金额的索赔。返回每个人索赔的日期和索赔的ID。",
+    "Harold": "BLEU = 48.95, 76.1/57.8/43.2/30.2 (BP=1.000, ratio=1.150, hyp_len=46, ref_len=40)",
+    "question_toks": [
+      "查",
+      "找",
+      "导",
+      "致",
+      "两",
+      "个",
+      "以",
+      "上",
+      "和",
+      "解",
+      "或",
+      "具",
+      "有",
+      "最",
+      "大",
+      "索",
+      "赔",
+      "价",
+      "值",
+      "的",
+      "索",
+      "赔",
+      "。",
+      "对",
+      "于",
+      "他",
+      "们",
+      "每",
+      "个",
+      "人",
+      "，",
+      "返",
+      "回",
+      "提",
+      "出",
+      "索",
+      "赔",
+      "的",
+      "日",
+      "期",
+      "和",
+      "索",
+      "赔",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              3
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            {
+              "from": {
+                "table_units": [
+                  [
+                    "table_unit",
+                    2
+                  ]
+                ],
+                "conds": []
+              },
+              "select": [
+                false,
+                [
+                  [
+                    1,
+                    [
+                      0,
+                      [
+                        0,
+                        12,
+                        false
+                      ],
+                      null
+                    ]
+                  ]
+                ]
+              ],
+              "where": [],
+              "groupBy": [],
+              "having": [],
+              "orderBy": [],
+              "limit": null,
+              "intersect": null,
+              "union": null,
+              "except": null
+            },
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.customer_id GROUP BY T1.customer_id HAVING count(*)  >=  2 EXCEPT SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.customer_id JOIN Claims AS T3 ON T2.policy_id  =  T3.policy_id",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2",
+      "EXCEPT",
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.customer_id",
+      "JOIN",
+      "Claims",
+      "AS",
+      "T3",
+      "ON",
+      "T2.policy_id",
+      "=",
+      "T3.policy_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "join",
+      "claims",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "policy_id",
+      "=",
+      "t3",
+      ".",
+      "policy_id"
+    ],
+    "question_spider": "Which customer had at least 2 policies but did not file any claims? List the customer details and id.",
+    "question": "哪个客户至少有2个政策，但没有提出任何索赔？列出客户详细信息和ID。",
+    "question_cspider": "哪个客户至少有2个政策，但没有提出任何索赔？列出客户详细信息和ID。",
+    "Harold": "BLEU = 86.01, 93.9/90.6/87.1/83.3 (BP=0.970, ratio=0.971, hyp_len=33, ref_len=34)",
+    "question_toks": [
+      "哪",
+      "个",
+      "客",
+      "户",
+      "至",
+      "少",
+      "有",
+      "2",
+      "个",
+      "保",
+      "单",
+      "但",
+      "没",
+      "有",
+      "提",
+      "出",
+      "任",
+      "何",
+      "索",
+      "赔",
+      "？",
+      "列",
+      "出",
+      "客",
+      "户",
+      "详",
+      "细",
+      "信",
+      "息",
+      "和",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.customer_id GROUP BY T1.customer_id HAVING count(*)  >=  2 EXCEPT SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.customer_id JOIN Claims AS T3 ON T2.policy_id  =  T3.policy_id",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2",
+      "EXCEPT",
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.customer_id",
+      "JOIN",
+      "Claims",
+      "AS",
+      "T3",
+      "ON",
+      "T2.policy_id",
+      "=",
+      "T3.policy_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "join",
+      "claims",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "policy_id",
+      "=",
+      "t3",
+      ".",
+      "policy_id"
+    ],
+    "question_spider": "Give me the the customer details and id for the customers who had two or more policies but did not file any claims.",
+    "question": "给出有两个或更多的政策，但没有提出任何索赔的客户详细资料和ID。",
+    "question_cspider": "给出有两个或更多的政策，但没有提出任何索赔的客户详细资料和ID。",
+    "Harold": "BLEU = 35.74, 56.8/38.9/31.4/23.5 (BP=1.000, ratio=1.156, hyp_len=37, ref_len=32)",
+    "question_toks": [
+      "给",
+      "我",
+      "提",
+      "供",
+      "具",
+      "有",
+      "两",
+      "个",
+      "或",
+      "两",
+      "个",
+      "以",
+      "上",
+      "保",
+      "单",
+      "但",
+      "未",
+      "提",
+      "交",
+      "任",
+      "何",
+      "索",
+      "赔",
+      "的",
+      "客",
+      "户",
+      "的",
+      "客",
+      "户",
+      "详",
+      "细",
+      "信",
+      "息",
+      "和",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code ,  Date_Payment_Made ,  Amount_Payment FROM Payments ORDER BY Date_Payment_Made ASC",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      ",",
+      "Date_Payment_Made",
+      ",",
+      "Amount_Payment",
+      "FROM",
+      "Payments",
+      "ORDER",
+      "BY",
+      "Date_Payment_Made",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      ",",
+      "date_payment_made",
+      ",",
+      "amount_payment",
+      "from",
+      "payments",
+      "order",
+      "by",
+      "date_payment_made",
+      "asc"
+    ],
+    "question_spider": "List the method, date and amount of all the payments, in ascending order of date.",
+    "question": "按日期的升序列出所有付款的方法、日期和数额。",
+    "question_cspider": "按日期的升序列出所有付款的方法、日期和数额。",
+    "Harold": "BLEU = 70.54, 86.4/76.2/65.0/57.9 (BP=1.000, ratio=1.000, hyp_len=22, ref_len=22)",
+    "question_toks": [
+      "以",
+      "日",
+      "期",
+      "的",
+      "升",
+      "序",
+      "列",
+      "出",
+      "所",
+      "有",
+      "付",
+      "款",
+      "的",
+      "方",
+      "法",
+      "，",
+      "日",
+      "期",
+      "和",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code ,  Date_Payment_Made ,  Amount_Payment FROM Payments ORDER BY Date_Payment_Made ASC",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      ",",
+      "Date_Payment_Made",
+      ",",
+      "Amount_Payment",
+      "FROM",
+      "Payments",
+      "ORDER",
+      "BY",
+      "Date_Payment_Made",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      ",",
+      "date_payment_made",
+      ",",
+      "amount_payment",
+      "from",
+      "payments",
+      "order",
+      "by",
+      "date_payment_made",
+      "asc"
+    ],
+    "question_spider": "What are the method, date and amount of each payment? Sort the list in ascending order of date.",
+    "question": "按日期升序排序的每个付款的方法、日期和金额是多少？",
+    "question_cspider": "按日期升序排序的每个付款的方法、日期和金额是多少？",
+    "Harold": "BLEU = 41.82, 71.0/50.0/34.5/25.0 (BP=1.000, ratio=1.240, hyp_len=31, ref_len=25)",
+    "question_toks": [
+      "每",
+      "次",
+      "付",
+      "款",
+      "的",
+      "方",
+      "式",
+      "，",
+      "日",
+      "期",
+      "和",
+      "金",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？",
+      "按",
+      "日",
+      "期",
+      "的",
+      "升",
+      "序",
+      "对",
+      "列",
+      "表",
+      "进",
+      "行",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Amount_Settled ,  Amount_Claimed FROM Claims ORDER BY Amount_Claimed DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Amount_Settled",
+      ",",
+      "Amount_Claimed",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Amount_Claimed",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount_settled",
+      ",",
+      "amount_claimed",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "amount_claimed",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Among all the claims, what is the settlement amount of the claim with the largest claim amount? List both the settlement amount and claim amount.",
+    "question": "在所有索赔中，索赔额最大的索赔的清算额是多少？列出结算金额和索赔金额。",
+    "question_cspider": "在所有索赔中，索赔额最大的索赔的清算额是多少？列出结算金额和索赔金额。",
+    "Harold": "BLEU = 73.65, 94.4/80.0/67.6/57.6 (BP=1.000, ratio=1.029, hyp_len=36, ref_len=35)",
+    "question_toks": [
+      "在",
+      "所",
+      "有",
+      "索",
+      "赔",
+      "中",
+      "，",
+      "最",
+      "大",
+      "索",
+      "赔",
+      "额",
+      "的",
+      "索",
+      "赔",
+      "的",
+      "结",
+      "算",
+      "金",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？",
+      "列",
+      "出",
+      "结",
+      "算",
+      "金",
+      "额",
+      "和",
+      "索",
+      "赔",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Amount_Settled ,  Amount_Claimed FROM Claims ORDER BY Amount_Claimed DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Amount_Settled",
+      ",",
+      "Amount_Claimed",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Amount_Claimed",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount_settled",
+      ",",
+      "amount_claimed",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "amount_claimed",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the settlement amount of the claim with the largest claim amount. Show both the settlement amount and claim amount.",
+    "question": "找到索赔金额最大的清算金额。显示结算金额和索赔金额。",
+    "question_cspider": "找到索赔金额最大的清算金额。显示结算金额和索赔金额。",
+    "Harold": "BLEU = 55.80, 76.7/62.1/50.0/40.7 (BP=1.000, ratio=1.154, hyp_len=30, ref_len=26)",
+    "question_toks": [
+      "查",
+      "找",
+      "索",
+      "赔",
+      "额",
+      "最",
+      "大",
+      "的",
+      "索",
+      "赔",
+      "的",
+      "结",
+      "算",
+      "金",
+      "额",
+      "。",
+      "同",
+      "时",
+      "显",
+      "示",
+      "结",
+      "算",
+      "金",
+      "额",
+      "和",
+      "索",
+      "赔",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Amount_Settled ,  Amount_Claimed FROM Claims ORDER BY Amount_Settled ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Amount_Settled",
+      ",",
+      "Amount_Claimed",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Amount_Settled",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount_settled",
+      ",",
+      "amount_claimed",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "amount_settled",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Among all the claims, what is the amount claimed in the claim with the least amount settled? List both the settlement amount and claim amount.",
+    "question": "在所有索赔中，索赔金额最少的索赔额是多少？列出结算金额和索赔金额。",
+    "question_cspider": "在所有索赔中，索赔金额最少的索赔额是多少？列出结算金额和索赔金额。",
+    "Harold": "BLEU = 91.94, 100.0/96.8/93.3/89.7 (BP=0.969, ratio=0.970, hyp_len=32, ref_len=33)",
+    "question_toks": [
+      "在",
+      "所",
+      "有",
+      "索",
+      "赔",
+      "中",
+      "，",
+      "索",
+      "赔",
+      "额",
+      "最",
+      "少",
+      "的",
+      "索",
+      "赔",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？",
+      "列",
+      "出",
+      "结",
+      "算",
+      "金",
+      "额",
+      "和",
+      "索",
+      "赔",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Amount_Settled ,  Amount_Claimed FROM Claims ORDER BY Amount_Settled ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Amount_Settled",
+      ",",
+      "Amount_Claimed",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Amount_Settled",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount_settled",
+      ",",
+      "amount_claimed",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "amount_settled",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the claimed amount in the claim with the least amount settled. Show both the settlement amount and claim amount.",
+    "question": "找出索赔金额最小的清算金额。显示结算金额和索赔金额。",
+    "question_cspider": "找出索赔金额最小的清算金额。显示结算金额和索赔金额。",
+    "Harold": "BLEU = 46.12, 67.9/48.1/38.5/36.0 (BP=1.000, ratio=1.077, hyp_len=28, ref_len=26)",
+    "question_toks": [
+      "在",
+      "索",
+      "赔",
+      "中",
+      "找",
+      "到",
+      "最",
+      "少",
+      "量",
+      "的",
+      "索",
+      "赔",
+      "额",
+      "。",
+      "同",
+      "时",
+      "显",
+      "示",
+      "结",
+      "算",
+      "金",
+      "额",
+      "和",
+      "索",
+      "赔",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made ,  Date_Claim_Settled FROM Claims WHERE Amount_Claimed  >  ( SELECT avg(Amount_Claimed) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      ",",
+      "Date_Claim_Settled",
+      "FROM",
+      "Claims",
+      "WHERE",
+      "Amount_Claimed",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      ",",
+      "date_claim_settled",
+      "from",
+      "claims",
+      "where",
+      "amount_claimed",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question_spider": "Among all the claims, which claims have a claimed amount larger than the average? List the date the claim was made and the date it was settled.",
+    "question": "在所有索赔中，哪些索赔的索赔额高于平均索赔额？列出索赔日期和处理日期。",
+    "question_cspider": "在所有索赔中，哪些索赔的索赔额高于平均索赔额？列出索赔日期和处理日期。",
+    "Harold": "BLEU = 57.11, 80.6/68.6/52.9/36.4 (BP=1.000, ratio=1.029, hyp_len=36, ref_len=35)",
+    "question_toks": [
+      "在",
+      "所",
+      "有",
+      "索",
+      "赔",
+      "中",
+      "，",
+      "哪",
+      "些",
+      "索",
+      "赔",
+      "的",
+      "索",
+      "赔",
+      "额",
+      "大",
+      "于",
+      "平",
+      "均",
+      "值",
+      "？",
+      "列",
+      "出",
+      "提",
+      "出",
+      "索",
+      "赔",
+      "的",
+      "日",
+      "期",
+      "和",
+      "解",
+      "决",
+      "日",
+      "期",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made ,  Date_Claim_Settled FROM Claims WHERE Amount_Claimed  >  ( SELECT avg(Amount_Claimed) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      ",",
+      "Date_Claim_Settled",
+      "FROM",
+      "Claims",
+      "WHERE",
+      "Amount_Claimed",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      ",",
+      "date_claim_settled",
+      "from",
+      "claims",
+      "where",
+      "amount_claimed",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question_spider": "Give me the claim date, settlement date for all the claims whose claimed amount is larger than the average.",
+    "question": "请告诉我所有索赔额高于平均索赔金额的索赔日期和结算日期。",
+    "question_cspider": "请告诉我所有索赔额高于平均索赔金额的索赔日期和结算日期。",
+    "Harold": "BLEU = 60.02, 82.1/66.7/53.8/44.0 (BP=1.000, ratio=1.000, hyp_len=28, ref_len=28)",
+    "question_toks": [
+      "请",
+      "给",
+      "我",
+      "我",
+      "所",
+      "有",
+      "索",
+      "赔",
+      "额",
+      "大",
+      "于",
+      "平",
+      "均",
+      "值",
+      "的",
+      "索",
+      "赔",
+      "的",
+      "索",
+      "赔",
+      "日",
+      "期",
+      "和",
+      "结",
+      "算",
+      "日",
+      "期",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made FROM Claims WHERE Amount_Settled  <=  ( SELECT avg(Amount_Settled) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      "FROM",
+      "Claims",
+      "WHERE",
+      "Amount_Settled",
+      "<",
+      "=",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "Amount_Settled",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      "from",
+      "claims",
+      "where",
+      "amount_settled",
+      "<",
+      "=",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "amount_settled",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question_spider": "Among all the claims, which settlements have a claimed amount that is no more than the average? List the claim start date.",
+    "question": "在所有的索赔中，哪些结算的索赔额不超过平均值？列出索赔开始日期。",
+    "question_cspider": "在所有的索赔中，哪些结算的索赔额不超过平均值？列出索赔开始日期。",
+    "Harold": "BLEU = 65.21, 90.6/74.2/60.0/44.8 (BP=1.000, ratio=1.000, hyp_len=32, ref_len=32)",
+    "question_toks": [
+      "在",
+      "所",
+      "有",
+      "索",
+      "赔",
+      "中",
+      "，",
+      "哪",
+      "些",
+      "和",
+      "解",
+      "的",
+      "索",
+      "赔",
+      "额",
+      "不",
+      "超",
+      "过",
+      "平",
+      "均",
+      "额",
+      "？",
+      "列",
+      "出",
+      "索",
+      "赔",
+      "的",
+      "开",
+      "始",
+      "日",
+      "期",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          6,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made FROM Claims WHERE Amount_Settled  <=  ( SELECT avg(Amount_Settled) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      "FROM",
+      "Claims",
+      "WHERE",
+      "Amount_Settled",
+      "<",
+      "=",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "Amount_Settled",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      "from",
+      "claims",
+      "where",
+      "amount_settled",
+      "<",
+      "=",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "amount_settled",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question_spider": "Return the claim start date for the claims whose claimed amount is no more than the average",
+    "question": "返回索赔金额不超过平均金额的索赔开始日期",
+    "question_cspider": "返回索赔金额不超过平均金额的索赔开始日期",
+    "Harold": "BLEU = 72.46, 81.8/76.2/70.0/63.2 (BP=1.000, ratio=1.100, hyp_len=22, ref_len=20)",
+    "question_toks": [
+      "返",
+      "回",
+      "索",
+      "赔",
+      "金",
+      "额",
+      "不",
+      "超",
+      "过",
+      "平",
+      "均",
+      "值",
+      "的",
+      "索",
+      "赔",
+      "的",
+      "索",
+      "赔",
+      "开",
+      "始",
+      "日",
+      "期"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          6,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.Claim_id ,  count(*) FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id",
+    "query_toks": [
+      "SELECT",
+      "T1.Claim_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id"
+    ],
+    "question_spider": "How many settlements does each claim correspond to? List the claim id and the number of settlements.",
+    "question": "每个索赔对应多少个结算？列出索赔ID和结算数量。",
+    "question_cspider": "每个索赔对应多少个结算？列出索赔ID和结算数量。",
+    "Harold": "BLEU = 54.30, 75.0/60.9/50.0/38.1 (BP=1.000, ratio=1.000, hyp_len=24, ref_len=24)",
+    "question_toks": [
+      "每",
+      "个",
+      "索",
+      "赔",
+      "对",
+      "应",
+      "多",
+      "少",
+      "个",
+      "和",
+      "解",
+      "？",
+      "列",
+      "出",
+      "索",
+      "赔",
+      "编",
+      "号",
+      "和",
+      "和",
+      "解",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.Claim_id ,  count(*) FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id",
+    "query_toks": [
+      "SELECT",
+      "T1.Claim_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id"
+    ],
+    "question_spider": "Find the number of settlements each claim corresponds to. Show the number together with the claim id.",
+    "question": "找出每个索赔对应的结算数量和索赔ID。",
+    "question_cspider": "找出每个索赔对应的结算数量和索赔ID。",
+    "Harold": "BLEU = 47.03, 65.2/50.0/42.9/35.0 (BP=1.000, ratio=1.211, hyp_len=23, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "索",
+      "赔",
+      "对",
+      "应",
+      "的",
+      "和",
+      "解",
+      "数",
+      "。",
+      "显",
+      "示",
+      "数",
+      "字",
+      "和",
+      "索",
+      "赔",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.claim_id ,  T1.date_claim_made ,  count(*) FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.claim_id",
+      ",",
+      "T1.date_claim_made",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which claim incurred the most number of settlements? List the claim id, the date the claim was made, and the number.",
+    "question": "哪种索赔导致最多数量的结算？列出索赔ID、索赔日期和结算数量。",
+    "question_cspider": "哪种索赔导致最多数量的结算？列出索赔ID、索赔日期和结算数量。",
+    "Harold": "BLEU = 26.73, 57.6/34.4/19.4/13.3 (BP=1.000, ratio=1.065, hyp_len=33, ref_len=31)",
+    "question_toks": [
+      "哪",
+      "个",
+      "索",
+      "赔",
+      "引",
+      "起",
+      "了",
+      "最",
+      "多",
+      "的",
+      "和",
+      "解",
+      "​",
+      "​",
+      "？",
+      "列",
+      "出",
+      "索",
+      "赔",
+      "I",
+      "D",
+      "，",
+      "提",
+      "出",
+      "索",
+      "赔",
+      "的",
+      "日",
+      "期",
+      "和",
+      "编",
+      "号",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.claim_id ,  T1.date_claim_made ,  count(*) FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.claim_id",
+      ",",
+      "T1.date_claim_made",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the claim id and claim date of the claim that incurred the most settlement count. Also tell me the count.",
+    "question": "找出导致最多数量结算的索赔ID、索赔日期和结算数量。",
+    "question_cspider": "找出导致最多数量结算的索赔ID、索赔日期和结算数量。",
+    "Harold": "BLEU = 23.82, 58.1/30.0/17.2/10.7 (BP=1.000, ratio=1.192, hyp_len=31, ref_len=26)",
+    "question_toks": [
+      "查",
+      "找",
+      "发",
+      "生",
+      "最",
+      "多",
+      "结",
+      "算",
+      "次",
+      "数",
+      "的",
+      "索",
+      "赔",
+      "的",
+      "索",
+      "赔",
+      "I",
+      "D",
+      "和",
+      "索",
+      "赔",
+      "日",
+      "期",
+      "。",
+      "还",
+      "告",
+      "诉",
+      "我",
+      "计",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT count(*) ,  T1.claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id ORDER BY T1.Date_Claim_Settled DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "ORDER",
+      "BY",
+      "T1.Date_Claim_Settled",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "date_claim_settled",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "How many settlements were made on the claim with the most recent claim settlement date? List the number and the claim id.",
+    "question": "在最近的索赔结算日期内，对索赔进行了多少次结算？列出结算次数和索赔ID。",
+    "question_cspider": "在最近的索赔结算日期内，对索赔进行了多少次结算？列出结算次数和索赔ID。",
+    "Harold": "BLEU = 70.06, 93.5/86.7/79.3/71.4 (BP=0.851, ratio=0.861, hyp_len=31, ref_len=36)",
+    "question_toks": [
+      "最",
+      "近",
+      "的",
+      "索",
+      "赔",
+      "结",
+      "算",
+      "日",
+      "期",
+      "对",
+      "索",
+      "赔",
+      "进",
+      "行",
+      "了",
+      "多",
+      "少",
+      "次",
+      "结",
+      "算",
+      "？",
+      "列",
+      "出",
+      "编",
+      "号",
+      "和",
+      "索",
+      "赔",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT count(*) ,  T1.claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id ORDER BY T1.Date_Claim_Settled DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "ORDER",
+      "BY",
+      "T1.Date_Claim_Settled",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "date_claim_settled",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the claim id and the number of settlements made for the claim with the most recent settlement date.",
+    "question": "查找索赔的ID、为索赔进行的结算次数以及最近的结算日期。",
+    "question_cspider": "查找索赔的ID、为索赔进行的结算次数以及最近的结算日期。",
+    "Harold": "BLEU = 21.77, 81.0/45.0/21.1/11.1 (BP=0.717, ratio=0.750, hyp_len=21, ref_len=28)",
+    "question_toks": [
+      "查",
+      "找",
+      "索",
+      "赔",
+      "编",
+      "号",
+      "和",
+      "最",
+      "近",
+      "结",
+      "算",
+      "日",
+      "期",
+      "的",
+      "索",
+      "赔",
+      "结",
+      "算",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made FROM Claims ORDER BY Date_Claim_Made ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Date_Claim_Made",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "date_claim_made",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Of all the claims, what was the earliest date when any claim was made?",
+    "question": "在所有索赔中，索赔的最早日期是什么时候？",
+    "question_cspider": "在所有索赔中，索赔的最早日期是什么时候？",
+    "Harold": "BLEU = 66.61, 90.9/76.2/60.0/47.4 (BP=1.000, ratio=1.100, hyp_len=22, ref_len=20)",
+    "question_toks": [
+      "在",
+      "所",
+      "有",
+      "索",
+      "赔",
+      "中",
+      "，",
+      "最",
+      "早",
+      "提",
+      "出",
+      "索",
+      "赔",
+      "的",
+      "日",
+      "期",
+      "是",
+      "什",
+      "么",
+      "时",
+      "候",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made FROM Claims ORDER BY Date_Claim_Made ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Date_Claim_Made",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "date_claim_made",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Tell me the the date when the first claim was made.",
+    "question": "给出第一次索赔的日期。",
+    "question_cspider": "给出第一次索赔的日期。",
+    "Harold": "BLEU = 45.72, 71.4/53.8/41.7/27.3 (BP=1.000, ratio=1.273, hyp_len=14, ref_len=11)",
+    "question_toks": [
+      "告",
+      "诉",
+      "我",
+      "第",
+      "一",
+      "次",
+      "提",
+      "出",
+      "索",
+      "赔",
+      "的",
+      "日",
+      "期",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Settled) FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Settled",
+      ")",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_settled",
+      ")",
+      "from",
+      "settlements"
+    ],
+    "question_spider": "What is the total amount of settlement made for all the settlements?",
+    "question": "所有清算的总结算金额是多少？",
+    "question_cspider": "所有清算的总结算金额是多少？",
+    "Harold": "BLEU = 38.33, 92.3/58.3/27.3/20.0 (BP=0.926, ratio=0.929, hyp_len=13, ref_len=14)",
+    "question_toks": [
+      "所",
+      "有",
+      "结",
+      "算",
+      "的",
+      "结",
+      "算",
+      "总",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Settled) FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Settled",
+      ")",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_settled",
+      ")",
+      "from",
+      "settlements"
+    ],
+    "question_spider": "Compute the total amount of settlement across all the settlements.",
+    "question": "计算所有结算的总结算量。",
+    "question_cspider": "计算所有结算的总结算量。",
+    "Harold": "BLEU = 46.35, 84.6/50.0/36.4/30.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "计",
+      "算",
+      "所",
+      "有",
+      "结",
+      "算",
+      "中",
+      "的",
+      "结",
+      "算",
+      "总",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.Customer_id GROUP BY T1.customer_id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.Customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Who are the customers that had more than 1 policy? List the customer details and id.",
+    "question": "谁有超过1个政策的客户？列出客户详细信息和ID。",
+    "question_cspider": "谁有超过1个政策的客户？列出客户详细信息和ID。",
+    "Harold": "BLEU = 53.76, 69.6/54.5/52.4/50.0 (BP=0.957, ratio=0.958, hyp_len=23, ref_len=24)",
+    "question_toks": [
+      "谁",
+      "拥",
+      "有",
+      "一",
+      "项",
+      "以",
+      "上",
+      "的",
+      "保",
+      "单",
+      "？",
+      "列",
+      "出",
+      "客",
+      "户",
+      "详",
+      "细",
+      "信",
+      "息",
+      "和",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.Customer_id GROUP BY T1.customer_id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.Customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the the customer details and id for the customers who had more than one policy.",
+    "question": "找出具有超过一个政策的客户的详细信息和ID。",
+    "question_cspider": "找出具有超过一个政策的客户的详细信息和ID。",
+    "Harold": "BLEU = 47.55, 77.3/52.4/40.0/31.6 (BP=1.000, ratio=1.000, hyp_len=22, ref_len=22)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "多",
+      "个",
+      "策",
+      "略",
+      "的",
+      "客",
+      "户",
+      "的",
+      "客",
+      "户",
+      "详",
+      "细",
+      "信",
+      "息",
+      "和",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made ,  Date_Claim_Settled FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      ",",
+      "Date_Claim_Settled",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      ",",
+      "date_claim_settled",
+      "from",
+      "settlements"
+    ],
+    "question_spider": "What are the claim dates and settlement dates of all the settlements?",
+    "question": "所有结算的索赔日期和结算日期是什么？",
+    "question_cspider": "所有结算的索赔日期和结算日期是什么？",
+    "Harold": "BLEU = 56.33, 77.8/64.7/50.0/40.0 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "所",
+      "有",
+      "和",
+      "解",
+      "的",
+      "索",
+      "赔",
+      "日",
+      "期",
+      "和",
+      "和",
+      "解",
+      "日",
+      "期",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made ,  Date_Claim_Settled FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      ",",
+      "Date_Claim_Settled",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      ",",
+      "date_claim_settled",
+      "from",
+      "settlements"
+    ],
+    "question_spider": "Tell me the the claim date and settlement date for each settlement case.",
+    "question": "告诉我每个结算案件的索赔日期和结算日期。",
+    "question_cspider": "告诉我每个结算案件的索赔日期和结算日期。",
+    "Harold": "BLEU = 59.49, 80.0/68.4/55.6/41.2 (BP=1.000, ratio=1.000, hyp_len=20, ref_len=20)",
+    "question_toks": [
+      "告",
+      "诉",
+      "我",
+      "每",
+      "个",
+      "和",
+      "解",
+      "案",
+      "件",
+      "的",
+      "索",
+      "赔",
+      "日",
+      "期",
+      "和",
+      "和",
+      "解",
+      "日",
+      "期",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "Payment_Method_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "payment_method_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the most popular payment method?",
+    "question": "什么是最流行的支付方式？",
+    "question_cspider": "什么是最流行的支付方式？",
+    "Harold": "BLEU = 0.00, 69.2/16.7/0.0/0.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "最",
+      "受",
+      "欢",
+      "迎",
+      "的",
+      "付",
+      "款",
+      "方",
+      "式",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "Payment_Method_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "payment_method_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which payment method is used the most often?",
+    "question": "哪种付款方式最常被使用？",
+    "question_cspider": "哪种付款方式最常被使用？",
+    "Harold": "BLEU = 53.36, 100.0/70.0/44.4/37.5 (BP=0.913, ratio=0.917, hyp_len=11, ref_len=12)",
+    "question_toks": [
+      "最",
+      "常",
+      "使",
+      "用",
+      "哪",
+      "种",
+      "付",
+      "款",
+      "方",
+      "式",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "Payment_Method_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "payment_method_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "With which kind of payment method were the least number of payments processed?",
+    "question": "哪种支付方式处理的付款金额最少？",
+    "question_cspider": "哪种支付方式处理的付款金额最少？",
+    "Harold": "BLEU = 47.09, 76.5/56.2/40.0/28.6 (BP=1.000, ratio=1.062, hyp_len=17, ref_len=16)",
+    "question_toks": [
+      "用",
+      "哪",
+      "种",
+      "付",
+      "款",
+      "方",
+      "式",
+      "处",
+      "理",
+      "的",
+      "付",
+      "款",
+      "次",
+      "数",
+      "最",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "Payment_Method_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "payment_method_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the payment method that were used the least often?",
+    "question": "最少使用的付款方式是什么？",
+    "question_cspider": "最少使用的付款方式是什么？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "最",
+      "少",
+      "使",
+      "用",
+      "的",
+      "付",
+      "款",
+      "方",
+      "式",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Payment) FROM Payments",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Payment",
+      ")",
+      "FROM",
+      "Payments"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_payment",
+      ")",
+      "from",
+      "payments"
+    ],
+    "question_spider": "What is the total amount of payment?",
+    "question": "付款总额是多少？",
+    "question_cspider": "付款总额是多少？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=8, ref_len=8)",
+    "question_toks": [
+      "付",
+      "款",
+      "总",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Payment) FROM Payments",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Payment",
+      ")",
+      "FROM",
+      "Payments"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_payment",
+      ")",
+      "from",
+      "payments"
+    ],
+    "question_spider": "Compute the total amount of payment processed.",
+    "question": "计算处理的付款总额。",
+    "question_cspider": "计算处理的付款总额。",
+    "Harold": "BLEU = 74.19, 90.9/80.0/66.7/62.5 (BP=1.000, ratio=1.100, hyp_len=11, ref_len=10)",
+    "question_toks": [
+      "计",
+      "算",
+      "已",
+      "处",
+      "理",
+      "的",
+      "付",
+      "款",
+      "总",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT DISTINCT customer_details FROM Customers",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "customer_details",
+      "FROM",
+      "Customers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "customer_details",
+      "from",
+      "customers"
+    ],
+    "question_spider": "What are all the distinct details of the customers?",
+    "question": "顾客的具体细节是什么？",
+    "question_cspider": "顾客的具体细节是什么？",
+    "Harold": "BLEU = 40.90, 61.5/41.7/36.4/30.0 (BP=1.000, ratio=1.182, hyp_len=13, ref_len=11)",
+    "question_toks": [
+      "客",
+      "户",
+      "的",
+      "所",
+      "有",
+      "独",
+      "特",
+      "细",
+      "节",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT DISTINCT customer_details FROM Customers",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "customer_details",
+      "FROM",
+      "Customers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "customer_details",
+      "from",
+      "customers"
+    ],
+    "question_spider": "Return the distinct customer details.",
+    "question": "返回不同的客户详细信息。",
+    "question_cspider": "返回不同的客户详细信息。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "返",
+      "回",
+      "不",
+      "同",
+      "的",
+      "客",
+      "户",
+      "详",
+      "细",
+      "信",
+      "息",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Policy_Type_Code FROM Customer_Policies GROUP BY Policy_Type_Code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Policy_Type_Code",
+      "FROM",
+      "Customer_Policies",
+      "GROUP",
+      "BY",
+      "Policy_Type_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "policy_type_code",
+      "from",
+      "customer_policies",
+      "group",
+      "by",
+      "policy_type_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which kind of policy type was chosen by the most customers?",
+    "question": "哪种政策类型是大多数客户选择的？",
+    "question_cspider": "哪种政策类型是大多数客户选择的？",
+    "Harold": "BLEU = 46.96, 86.7/57.1/38.5/33.3 (BP=0.936, ratio=0.938, hyp_len=15, ref_len=16)",
+    "question_toks": [
+      "大",
+      "多",
+      "数",
+      "客",
+      "户",
+      "选",
+      "择",
+      "了",
+      "哪",
+      "种",
+      "策",
+      "略",
+      "类",
+      "型",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Policy_Type_Code FROM Customer_Policies GROUP BY Policy_Type_Code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Policy_Type_Code",
+      "FROM",
+      "Customer_Policies",
+      "GROUP",
+      "BY",
+      "Policy_Type_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "policy_type_code",
+      "from",
+      "customer_policies",
+      "group",
+      "by",
+      "policy_type_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the policy type the most customers choose.",
+    "question": "找出大多数客户选择的策略类型。",
+    "question_cspider": "找出大多数客户选择的策略类型。",
+    "Harold": "BLEU = 86.66, 93.3/85.7/84.6/83.3 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "大",
+      "多",
+      "数",
+      "客",
+      "户",
+      "选",
+      "择",
+      "的",
+      "策",
+      "略",
+      "类",
+      "型",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT count(*) FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "settlements"
+    ],
+    "question_spider": "How many settlements are there in total?",
+    "question": "总共有多少次清算？",
+    "question_cspider": "总共有多少次清算？",
+    "Harold": "BLEU = 41.11, 60.0/44.4/37.5/28.6 (BP=1.000, ratio=1.111, hyp_len=10, ref_len=9)",
+    "question_toks": [
+      "总",
+      "共",
+      "有",
+      "多",
+      "少",
+      "个",
+      "定",
+      "居",
+      "点",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT count(*) FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "settlements"
+    ],
+    "question_spider": "Count the total number of settlements made.",
+    "question": "计算清算次数的数量。",
+    "question_cspider": "计算清算次数的数量。",
+    "Harold": "BLEU = 0.00, 66.7/12.5/0.0/0.0 (BP=0.895, ratio=0.900, hyp_len=9, ref_len=10)",
+    "question_toks": [
+      "计",
+      "算",
+      "已",
+      "结",
+      "算",
+      "的",
+      "总",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_ID ,  Date_Payment_Made ,  Amount_Payment FROM Payments WHERE Payment_Method_Code  =  'Visa'",
+    "query_toks": [
+      "SELECT",
+      "Payment_ID",
+      ",",
+      "Date_Payment_Made",
+      ",",
+      "Amount_Payment",
+      "FROM",
+      "Payments",
+      "WHERE",
+      "Payment_Method_Code",
+      "=",
+      "'Visa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_id",
+      ",",
+      "date_payment_made",
+      ",",
+      "amount_payment",
+      "from",
+      "payments",
+      "where",
+      "payment_method_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "Which Payments were processed with Visa? List the payment Id, the date and the amount.",
+    "question": "哪些支付是用“Visa”的？列出付款ID、日期和金额。",
+    "question_cspider": "哪些支付是用“Visa”的？列出付款ID、日期和金额。",
+    "Harold": "BLEU = 34.84, 60.0/41.7/30.4/22.7 (BP=0.961, ratio=0.962, hyp_len=25, ref_len=26)",
+    "question_toks": [
+      "V",
+      "i",
+      "s",
+      "a",
+      "处",
+      "理",
+      "了",
+      "哪",
+      "些",
+      "付",
+      "款",
+      "？",
+      "列",
+      "出",
+      "付",
+      "款",
+      "编",
+      "号",
+      "，",
+      "日",
+      "期",
+      "和",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          "\"Visa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_ID ,  Date_Payment_Made ,  Amount_Payment FROM Payments WHERE Payment_Method_Code  =  'Visa'",
+    "query_toks": [
+      "SELECT",
+      "Payment_ID",
+      ",",
+      "Date_Payment_Made",
+      ",",
+      "Amount_Payment",
+      "FROM",
+      "Payments",
+      "WHERE",
+      "Payment_Method_Code",
+      "=",
+      "'Visa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_id",
+      ",",
+      "date_payment_made",
+      ",",
+      "amount_payment",
+      "from",
+      "payments",
+      "where",
+      "payment_method_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "Give me the payment Id, the date and the amount for all the payments processed with Visa.",
+    "question": "给出使用“Visa”处理的付款id，日期和数额。",
+    "question_cspider": "给出使用“Visa”处理的付款id，日期和数额。",
+    "Harold": "BLEU = 37.01, 57.1/44.4/30.8/24.0 (BP=1.000, ratio=1.217, hyp_len=28, ref_len=23)",
+    "question_toks": [
+      "请",
+      "给",
+      "我",
+      "使",
+      "用",
+      "V",
+      "i",
+      "s",
+      "a",
+      "处",
+      "理",
+      "的",
+      "所",
+      "有",
+      "付",
+      "款",
+      "的",
+      "付",
+      "款",
+      "I",
+      "D",
+      "，",
+      "日",
+      "期",
+      "和",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          "\"Visa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT customer_details FROM Customers EXCEPT SELECT T1.customer_details FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.customer_id  =  T2.customer_id",
+    "query_toks": [
+      "SELECT",
+      "customer_details",
+      "FROM",
+      "Customers",
+      "EXCEPT",
+      "SELECT",
+      "T1.customer_details",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_details",
+      "from",
+      "customers",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id"
+    ],
+    "question_spider": "List the details of the customers who do not have any policies.",
+    "question": "列出没有任何政策的客户的细节。",
+    "question_cspider": "列出没有任何政策的客户的细节。",
+    "Harold": "BLEU = 45.72, 76.5/50.0/40.0/28.6 (BP=1.000, ratio=1.133, hyp_len=17, ref_len=15)",
+    "question_toks": [
+      "列",
+      "出",
+      "没",
+      "有",
+      "任",
+      "何",
+      "策",
+      "略",
+      "的",
+      "客",
+      "户",
+      "的",
+      "详",
+      "细",
+      "信",
+      "息",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT customer_details FROM Customers EXCEPT SELECT T1.customer_details FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.customer_id  =  T2.customer_id",
+    "query_toks": [
+      "SELECT",
+      "customer_details",
+      "FROM",
+      "Customers",
+      "EXCEPT",
+      "SELECT",
+      "T1.customer_details",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_details",
+      "from",
+      "customers",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id"
+    ],
+    "question_spider": "Which customers do not have any policies? Find the details of these customers.",
+    "question": "哪些客户没有任何政策？找到这些客户的详细信息。",
+    "question_cspider": "哪些客户没有任何政策？找到这些客户的详细信息。",
+    "Harold": "BLEU = 84.15, 95.7/86.4/81.0/75.0 (BP=1.000, ratio=1.000, hyp_len=23, ref_len=23)",
+    "question_toks": [
+      "哪",
+      "些",
+      "客",
+      "户",
+      "没",
+      "有",
+      "任",
+      "何",
+      "政",
+      "策",
+      "？",
+      "查",
+      "找",
+      "这",
+      "些",
+      "客",
+      "户",
+      "的",
+      "详",
+      "细",
+      "信",
+      "息",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.claim_id ,  T1.date_claim_made ,  T1.Date_Claim_Settled FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id GROUP BY T1.claim_id HAVING count(*)  =  1",
+    "query_toks": [
+      "SELECT",
+      "T1.claim_id",
+      ",",
+      "T1.date_claim_made",
+      ",",
+      "T1.Date_Claim_Settled",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "date_claim_settled",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the date the claim was made, the date it was settled and the amount settled for all the claims which had exactly one settlement.",
+    "question": "列出只有一次清算的索赔中的索赔的日期，结算的日期以及所有索赔的清算金额。",
+    "question_cspider": "列出只有一次清算的索赔中的索赔的日期，结算的日期以及所有索赔的清算金额。",
+    "Harold": "BLEU = 33.93, 78.8/50.0/29.0/16.7 (BP=0.913, ratio=0.917, hyp_len=33, ref_len=36)",
+    "question_toks": [
+      "列",
+      "出",
+      "所",
+      "有",
+      "提",
+      "出",
+      "一",
+      "项",
+      "索",
+      "赔",
+      "的",
+      "所",
+      "有",
+      "索",
+      "赔",
+      "的",
+      "日",
+      "期",
+      "，",
+      "索",
+      "赔",
+      "的",
+      "解",
+      "决",
+      "日",
+      "期",
+      "和",
+      "结",
+      "算",
+      "的",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.claim_id ,  T1.date_claim_made ,  T1.Date_Claim_Settled FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id GROUP BY T1.claim_id HAVING count(*)  =  1",
+    "query_toks": [
+      "SELECT",
+      "T1.claim_id",
+      ",",
+      "T1.date_claim_made",
+      ",",
+      "T1.Date_Claim_Settled",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "date_claim_settled",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question_spider": "Which claims had exactly one settlement? For each, tell me the the date the claim was made, the date it was settled and the amount settled.",
+    "question": "只有一次清算的索赔中的索赔的日期，结算的日期以及所有索赔的清算金额是什么？",
+    "question_cspider": "只有一次清算的索赔中的索赔的日期，结算的日期以及所有索赔的清算金额是什么？",
+    "Harold": "BLEU = 19.73, 43.2/27.8/14.3/8.8 (BP=1.000, ratio=1.000, hyp_len=37, ref_len=37)",
+    "question_toks": [
+      "哪",
+      "些",
+      "索",
+      "赔",
+      "正",
+      "好",
+      "有",
+      "一",
+      "项",
+      "和",
+      "解",
+      "？",
+      "对",
+      "于",
+      "每",
+      "一",
+      "个",
+      "，",
+      "请",
+      "告",
+      "诉",
+      "我",
+      "索",
+      "赔",
+      "的",
+      "日",
+      "期",
+      "，",
+      "解",
+      "决",
+      "的",
+      "日",
+      "期",
+      "和",
+      "金",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Claimed) FROM Claims",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims"
+    ],
+    "question_spider": "Find the total claimed amount of all the claims.",
+    "question": "找出索赔的总金额。",
+    "question_cspider": "找出索赔的总金额。",
+    "Harold": "BLEU = 26.20, 58.3/36.4/20.0/11.1 (BP=1.000, ratio=1.333, hyp_len=12, ref_len=9)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "索",
+      "赔",
+      "的",
+      "总",
+      "索",
+      "赔",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Claimed) FROM Claims",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims"
+    ],
+    "question_spider": "What is total amount claimed summed across all the claims?",
+    "question": "在所有索赔中，索赔总额是多少？",
+    "question_cspider": "在所有索赔中，索赔总额是多少？",
+    "Harold": "BLEU = 46.15, 92.3/66.7/45.5/30.0 (BP=0.857, ratio=0.867, hyp_len=13, ref_len=15)",
+    "question_toks": [
+      "所",
+      "有",
+      "索",
+      "赔",
+      "的",
+      "总",
+      "索",
+      "赔",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

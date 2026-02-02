@@ -1,0 +1,9841 @@
+[
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(T2.balance) FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T1.name != 'Brown'",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.balance",
+      ")",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "!",
+      "=",
+      "'Brown",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "balance",
+      ")",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the total savings balance of all accounts except the account with name ‘Brown’.",
+    "question": "找出除了名为“Brown”的账户的所有账户的总储蓄余额。",
+    "question_cspider": "找出除了名为“Brown”的账户的所有账户的总储蓄余额。",
+    "Harold": "BLEU = 33.21, 62.1/39.3/25.9/19.2 (BP=1.000, ratio=1.160, hyp_len=29, ref_len=25)",
+    "question_toks": [
+      "查",
+      "找",
+      "名",
+      "称",
+      "为",
+      "“",
+      " ",
+      "B",
+      "r",
+      "o",
+      "w",
+      "n",
+      "”",
+      "的",
+      "帐",
+      "户",
+      "以",
+      "外",
+      "的",
+      "所",
+      "有",
+      "帐",
+      "户",
+      "的",
+      "总",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Brown\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(T2.balance) FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T1.name != 'Brown'",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.balance",
+      ")",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "!",
+      "=",
+      "'Brown",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "balance",
+      ")",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the total balance of savings accounts not belonging to someone with the name Brown?",
+    "question": "不属于“Brown”这个名字的人的储蓄账户的总储蓄余额是多少？",
+    "question_cspider": "不属于“Brown”这个名字的人的储蓄账户的总储蓄余额是多少？",
+    "Harold": "BLEU = 56.26, 90.9/81.0/70.0/57.9 (BP=0.761, ratio=0.786, hyp_len=22, ref_len=28)",
+    "question_toks": [
+      "不",
+      "属",
+      "于",
+      "布",
+      "朗",
+      "名",
+      "字",
+      "的",
+      "人",
+      "的",
+      "储",
+      "蓄",
+      "账",
+      "户",
+      "的",
+      "总",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Brown\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) FROM accounts",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "accounts"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "accounts"
+    ],
+    "question_spider": "How many accounts are there in total?",
+    "question": "总共有多少个帐户？",
+    "question_cspider": "总共有多少个帐户？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=9, ref_len=9)",
+    "question_toks": [
+      "总",
+      "共",
+      "有",
+      "多",
+      "少",
+      "个",
+      "帐",
+      "户",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) FROM accounts",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "accounts"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "accounts"
+    ],
+    "question_spider": "Count the number of accounts.",
+    "question": "计算账户数量。",
+    "question_cspider": "计算账户数量。",
+    "Harold": "BLEU = 0.00, 83.3/40.0/0.0/0.0 (BP=0.846, ratio=0.857, hyp_len=6, ref_len=7)",
+    "question_toks": [
+      "计",
+      "算",
+      "帐",
+      "户",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(balance) FROM checking",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking"
+    ],
+    "question_spider": "What is the total checking balance in all accounts?",
+    "question": "所有帐户的总储蓄余额是多少？",
+    "question_cspider": "所有帐户的总储蓄余额是多少？",
+    "Harold": "BLEU = 69.98, 85.7/76.9/66.7/54.5 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "所",
+      "有",
+      "帐",
+      "户",
+      "的",
+      "总",
+      "支",
+      "票",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(balance) FROM checking",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking"
+    ],
+    "question_spider": "Find the total balance across checking accounts.",
+    "question": "找到在支票账户上的总储蓄余额。",
+    "question_cspider": "找到在支票账户上的总储蓄余额。",
+    "Harold": "BLEU = 0.00, 69.2/33.3/9.1/0.0 (BP=0.857, ratio=0.867, hyp_len=13, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "支",
+      "票",
+      "帐",
+      "户",
+      "的",
+      "总",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT avg(balance) FROM checking",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking"
+    ],
+    "question_spider": "Find the average checking balance.",
+    "question": "找到平均支票余额。",
+    "question_cspider": "找到平均支票余额。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=9, ref_len=9)",
+    "question_toks": [
+      "找",
+      "到",
+      "平",
+      "均",
+      "支",
+      "票",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT avg(balance) FROM checking",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking"
+    ],
+    "question_spider": "What is the average balance in checking accounts?",
+    "question": "支票账户的平均余额是多少？",
+    "question_cspider": "支票账户的平均余额是多少？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "支",
+      "票",
+      "账",
+      "户",
+      "的",
+      "平",
+      "均",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) FROM savings WHERE balance  >  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "savings",
+      "WHERE",
+      "balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "savings",
+      "where",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question_spider": "How many accounts have a savings balance above the average savings balance?",
+    "question": "有多少账户储蓄余额高于平均储蓄余额？",
+    "question_cspider": "有多少账户储蓄余额高于平均储蓄余额？",
+    "Harold": "BLEU = 36.68, 65.0/47.4/33.3/17.6 (BP=1.000, ratio=1.111, hyp_len=20, ref_len=18)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "个",
+      "帐",
+      "户",
+      "的",
+      "存",
+      "款",
+      "余",
+      "额",
+      "高",
+      "于",
+      "平",
+      "均",
+      "存",
+      "款",
+      "余",
+      "额",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) FROM savings WHERE balance  >  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "savings",
+      "WHERE",
+      "balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "savings",
+      "where",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question_spider": "Find the number of accounts with a savings balance that is higher than the average savings balance.",
+    "question": "查找存款余额高于平均存款余额的账户数量。",
+    "question_cspider": "查找存款余额高于平均存款余额的账户数量。",
+    "Harold": "BLEU = 35.82, 73.7/50.0/29.4/18.8 (BP=0.949, ratio=0.950, hyp_len=19, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "高",
+      "于",
+      "平",
+      "均",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.custid ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT max(balance) FROM checking)",
+    "query_toks": [
+      "SELECT",
+      "T1.custid",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "custid",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "max",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")"
+    ],
+    "question_spider": "Find the name and id of accounts whose checking balance is below the maximum checking balance.",
+    "question": "查找支票余额低于最大支票余额的帐户的名称和id。",
+    "question_cspider": "查找支票余额低于最大支票余额的帐户的名称和id。",
+    "Harold": "BLEU = 90.16, 96.0/91.7/87.0/86.4 (BP=1.000, ratio=1.042, hyp_len=25, ref_len=24)",
+    "question_toks": [
+      "查",
+      "找",
+      "其",
+      "支",
+      "票",
+      "余",
+      "额",
+      "低",
+      "于",
+      "最",
+      "大",
+      "支",
+      "票",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  1,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.custid ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT max(balance) FROM checking)",
+    "query_toks": [
+      "SELECT",
+      "T1.custid",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "custid",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "max",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")"
+    ],
+    "question_spider": "What are the customer id and name corresponding to accounts with a checking balance less than the largest checking balance?",
+    "question": "支票余额小于最大支票余额的账户相对应的客户ID和名称是什么？",
+    "question_cspider": "支票余额小于最大支票余额的账户相对应的客户ID和名称是什么？",
+    "Harold": "BLEU = 84.78, 96.6/89.3/85.2/80.8 (BP=0.966, ratio=0.967, hyp_len=29, ref_len=30)",
+    "question_toks": [
+      "支",
+      "票",
+      "余",
+      "额",
+      "小",
+      "于",
+      "最",
+      "大",
+      "支",
+      "票",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "对",
+      "应",
+      "的",
+      "客",
+      "户",
+      "I",
+      "D",
+      "和",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  1,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T1.name LIKE '%ee%'",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "LIKE",
+      "'",
+      "%",
+      "ee",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "like",
+      "value"
+    ],
+    "question_spider": "What is the checking balance of the account whose owner’s name contains the substring ‘ee’?",
+    "question": "所有名字包含“ee”的所有者的账户支票余额是什么？",
+    "question_cspider": "所有名字包含“怡”的所有者的账户支票余额是什么？",
+    "Harold": "BLEU = 22.87, 66.7/30.8/16.0/8.3 (BP=1.000, ratio=1.125, hyp_len=27, ref_len=24)",
+    "question_toks": [
+      "所",
+      "有",
+      "者",
+      "名",
+      "称",
+      "包",
+      "含",
+      "子",
+      "字",
+      "符",
+      "串",
+      "“",
+      " ",
+      "e",
+      "e",
+      "”",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "支",
+      "票",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"%ee%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T1.name LIKE '%ee%'",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "LIKE",
+      "'",
+      "%",
+      "ee",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "like",
+      "value"
+    ],
+    "question_spider": "Find the balance of the checking account belonging to an owner whose name contains 'ee'.",
+    "question": "找到属于名称包含“ee”的所有者的支票账户余额。",
+    "question_cspider": "找到属于名称包含“怡”的所有者的支票账户余额。",
+    "Harold": "BLEU = 57.16, 80.0/62.5/52.2/40.9 (BP=1.000, ratio=1.087, hyp_len=25, ref_len=23)",
+    "question_toks": [
+      "查",
+      "找",
+      "属",
+      "于",
+      "名",
+      "称",
+      "包",
+      "含",
+      "“",
+      " ",
+      "e",
+      "e",
+      "”",
+      "的",
+      "所",
+      "有",
+      "者",
+      "的",
+      "支",
+      "票",
+      "帐",
+      "户",
+      "的",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"%ee%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T1.name  =  'Brown'",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Brown",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the checking balance and saving balance in the Brown’s account.",
+    "question": "查找“Brown”账户的支票余额和储蓄余额。",
+    "question_cspider": "查找“Brown”账户的支票余额和储蓄余额。",
+    "Harold": "BLEU = 51.52, 68.4/50.0/47.1/43.8 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "在",
+      "布",
+      "朗",
+      "的",
+      "帐",
+      "户",
+      "中",
+      "找",
+      "到",
+      "支",
+      "票",
+      "余",
+      "额",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Brown\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T1.name  =  'Brown'",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Brown",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the checking and savings balances in accounts belonging to Brown?",
+    "question": "“Brown”账户中的支票余额和储蓄余额是多少？",
+    "question_cspider": "“Brown”账户中的支票余额和储蓄余额是多少？",
+    "Harold": "BLEU = 55.46, 70.0/63.2/55.6/47.1 (BP=0.951, ratio=0.952, hyp_len=20, ref_len=21)",
+    "question_toks": [
+      "属",
+      "于",
+      "布",
+      "朗",
+      "的",
+      "帐",
+      "户",
+      "中",
+      "的",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Brown\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  >  (SELECT avg(balance) FROM checking) INTERSECT SELECT T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")",
+      "INTERSECT",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question_spider": "Find the names of accounts whose checking balance is above the average checking balance, but savings balance is below the average savings balance.",
+    "question": "查找支票余额高于平均支票余额但储蓄余额低于平均储蓄余额的帐户的名称。",
+    "question_cspider": "查找支票余额高于平均支票余额但储蓄余额低于平均储蓄余额的帐户的名称。",
+    "Harold": "BLEU = 70.44, 85.3/75.8/65.6/58.1 (BP=1.000, ratio=1.000, hyp_len=34, ref_len=34)",
+    "question_toks": [
+      "查",
+      "找",
+      "其",
+      "检",
+      "查",
+      "余",
+      "额",
+      "高",
+      "于",
+      "平",
+      "均",
+      "检",
+      "查",
+      "余",
+      "额",
+      "但",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "低",
+      "于",
+      "平",
+      "均",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            {
+              "from": {
+                "table_units": [
+                  [
+                    "table_unit",
+                    1
+                  ]
+                ],
+                "conds": []
+              },
+              "select": [
+                false,
+                [
+                  [
+                    5,
+                    [
+                      0,
+                      [
+                        0,
+                        4,
+                        false
+                      ],
+                      null
+                    ]
+                  ]
+                ]
+              ],
+              "where": [],
+              "groupBy": [],
+              "having": [],
+              "orderBy": [],
+              "limit": null,
+              "intersect": null,
+              "union": null,
+              "except": null
+            },
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  >  (SELECT avg(balance) FROM checking) INTERSECT SELECT T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")",
+      "INTERSECT",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question_spider": "What are the names of accounts with checking balances greater than the average checking balance and savings balances below the average savings balance?",
+    "question": "支票余额大于平均支票余额而储蓄余额低于平均储蓄余额的账户的名称是什么？",
+    "question_cspider": "支票余额大于平均支票余额而储蓄余额低于平均储蓄余额的账户的名称是什么？",
+    "Harold": "BLEU = 79.21, 94.1/84.8/78.1/71.0 (BP=0.971, ratio=0.971, hyp_len=34, ref_len=35)",
+    "question_toks": [
+      "支",
+      "票",
+      "余",
+      "额",
+      "大",
+      "于",
+      "平",
+      "均",
+      "支",
+      "票",
+      "余",
+      "额",
+      "且",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "低",
+      "于",
+      "平",
+      "均",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            {
+              "from": {
+                "table_units": [
+                  [
+                    "table_unit",
+                    1
+                  ]
+                ],
+                "conds": []
+              },
+              "select": [
+                false,
+                [
+                  [
+                    5,
+                    [
+                      0,
+                      [
+                        0,
+                        4,
+                        false
+                      ],
+                      null
+                    ]
+                  ]
+                ]
+              ],
+              "where": [],
+              "groupBy": [],
+              "having": [],
+              "orderBy": [],
+              "limit": null,
+              "intersect": null,
+              "union": null,
+              "except": null
+            },
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T1.name IN (SELECT T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  >  (SELECT avg(balance) FROM savings))",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "IN",
+      "(",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "in",
+      "(",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")",
+      ")"
+    ],
+    "question_spider": "Find the checking balance of the accounts whose savings balance is higher than the average savings balance.",
+    "question": "查找存款余额高于平均存款余额的账户的支票余额。",
+    "question_cspider": "查找存款余额高于平均存款余额的账户的支票余额。",
+    "Harold": "BLEU = 53.68, 78.3/63.6/47.6/35.0 (BP=1.000, ratio=1.000, hyp_len=23, ref_len=23)",
+    "question_toks": [
+      "查",
+      "找",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "高",
+      "于",
+      "平",
+      "均",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "支",
+      "票",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          8,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    3,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      2,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    4,
+                    false
+                  ],
+                  null
+                ],
+                {
+                  "from": {
+                    "table_units": [
+                      [
+                        "table_unit",
+                        1
+                      ]
+                    ],
+                    "conds": []
+                  },
+                  "select": [
+                    false,
+                    [
+                      [
+                        5,
+                        [
+                          0,
+                          [
+                            0,
+                            4,
+                            false
+                          ],
+                          null
+                        ]
+                      ]
+                    ]
+                  ],
+                  "where": [],
+                  "groupBy": [],
+                  "having": [],
+                  "orderBy": [],
+                  "limit": null,
+                  "intersect": null,
+                  "union": null,
+                  "except": null
+                },
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T1.name IN (SELECT T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  >  (SELECT avg(balance) FROM savings))",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "IN",
+      "(",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "in",
+      "(",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")",
+      ")"
+    ],
+    "question_spider": "What are the balances of checking accounts belonging to people with savings balances greater than the average savings balance?",
+    "question": "属于储蓄余额大于平均储蓄余额的人的支票账户的余额是多少？",
+    "question_cspider": "属于储蓄余额大于平均储蓄余额的人的支票账户的余额是多少？",
+    "Harold": "BLEU = 86.46, 92.9/88.9/84.6/80.0 (BP=1.000, ratio=1.000, hyp_len=28, ref_len=28)",
+    "question_toks": [
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "大",
+      "于",
+      "平",
+      "均",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "人",
+      "的",
+      "支",
+      "票",
+      "账",
+      "​",
+      "​",
+      "户",
+      "的",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          8,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    3,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      2,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    4,
+                    false
+                  ],
+                  null
+                ],
+                {
+                  "from": {
+                    "table_units": [
+                      [
+                        "table_unit",
+                        1
+                      ]
+                    ],
+                    "conds": []
+                  },
+                  "select": [
+                    false,
+                    [
+                      [
+                        5,
+                        [
+                          0,
+                          [
+                            0,
+                            4,
+                            false
+                          ],
+                          null
+                        ]
+                      ]
+                    ]
+                  ],
+                  "where": [],
+                  "groupBy": [],
+                  "having": [],
+                  "orderBy": [],
+                  "limit": null,
+                  "intersect": null,
+                  "union": null,
+                  "except": null
+                },
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT name FROM accounts ORDER BY name",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "accounts",
+      "ORDER",
+      "BY",
+      "name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "accounts",
+      "order",
+      "by",
+      "name"
+    ],
+    "question_spider": "List all customers’ names in the alphabetical order.",
+    "question": "按照字母序列出所有客户的名字。",
+    "question_cspider": "按照字母序列出所有客户的名字。",
+    "Harold": "BLEU = 55.55, 86.7/57.1/46.2/41.7 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "按",
+      "字",
+      "母",
+      "顺",
+      "序",
+      "列",
+      "出",
+      "所",
+      "有",
+      "客",
+      "户",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT name FROM accounts ORDER BY name",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "accounts",
+      "ORDER",
+      "BY",
+      "name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "accounts",
+      "order",
+      "by",
+      "name"
+    ],
+    "question_spider": "What are the names of all the customers in alphabetical order?",
+    "question": "按字母顺序排列的所有客户的名字是什么？",
+    "question_cspider": "按字母顺序排列的所有客户的名字是什么？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "按",
+      "字",
+      "母",
+      "顺",
+      "序",
+      "排",
+      "列",
+      "的",
+      "所",
+      "有",
+      "客",
+      "户",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name of account that has the lowest total checking and saving balance.",
+    "question": "查找具有最低支票和储蓄总余额的帐户名称。",
+    "question_cspider": "查找具有最低支票和储蓄总余额的帐户名称。",
+    "Harold": "BLEU = 50.69, 100.0/70.6/43.8/33.3 (BP=0.895, ratio=0.900, hyp_len=18, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "总",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "最",
+      "低",
+      "的",
+      "帐",
+      "户",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name corresponding to the accoung with the lowest sum of checking and savings balances?",
+    "question": "支票和储蓄余额总额最低的账户对应的名称是什么？",
+    "question_cspider": "支票和储蓄余额总额最低的账户对应的名称是什么？",
+    "Harold": "BLEU = 74.51, 95.2/90.0/78.9/66.7 (BP=0.909, ratio=0.913, hyp_len=21, ref_len=23)",
+    "question_toks": [
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "最",
+      "低",
+      "的",
+      "帐",
+      "户",
+      "对",
+      "应",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance + T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T3.balance  >  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T3.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t3",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question_spider": "Find the names and total checking and savings balances of accounts whose savings balance is higher than the average savings balance.",
+    "question": "查找存款余额高于平均存款余额的账户的名称以及总的支票和存款余额。",
+    "question_cspider": "查找存款余额高于平均存款余额的账户的名称以及总的支票和存款余额。",
+    "Harold": "BLEU = 45.28, 75.0/58.1/40.0/24.1 (BP=1.000, ratio=1.000, hyp_len=32, ref_len=32)",
+    "question_toks": [
+      "查",
+      "找",
+      "其",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "高",
+      "于",
+      "平",
+      "均",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "以",
+      "及",
+      "总",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                6,
+                false
+              ],
+              [
+                0,
+                4,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance + T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T3.balance  >  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T3.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t3",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question_spider": "What are the names and sum of checking and savings balances for accounts with savings balances higher than the average savings balance?",
+    "question": "对于存款余额高于平均存款余额的帐户，名称及支票和储蓄余额总额是什么？",
+    "question_cspider": "对于存款余额高于平均存款余额的帐户，名称及支票和储蓄余额总额是什么？",
+    "Harold": "BLEU = 49.49, 75.8/59.4/45.2/33.3 (BP=0.970, ratio=0.971, hyp_len=33, ref_len=34)",
+    "question_toks": [
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "高",
+      "于",
+      "平",
+      "均",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "名",
+      "称",
+      "和",
+      "总",
+      "和",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                6,
+                false
+              ],
+              [
+                0,
+                4,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name and checking balance of the account with the lowest savings balance.",
+    "question": "找到存款余额最低的账户的名称和支票余额。",
+    "question_cspider": "找到存款余额最低的账户的名称和支票余额。",
+    "Harold": "BLEU = 19.86, 59.1/33.3/15.0/5.3 (BP=1.000, ratio=1.100, hyp_len=22, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "最",
+      "低",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "并",
+      "检",
+      "查",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What are the names and balances of checking accounts belonging to the customer with the lowest savings balance?",
+    "question": "属于储蓄余额最低的客户的支票账户的名称和余额是什么？",
+    "question_cspider": "属于储蓄余额最低的客户的支票账户的名称和余额是什么？",
+    "Harold": "BLEU = 92.00, 100.0/100.0/100.0/100.0 (BP=0.920, ratio=0.923, hyp_len=24, ref_len=26)",
+    "question_toks": [
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "最",
+      "低",
+      "的",
+      "客",
+      "户",
+      "的",
+      "支",
+      "票",
+      "账",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "余",
+      "额",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid GROUP BY T1.name",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "GROUP",
+      "BY",
+      "T1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question_spider": "Find the number of checking accounts for each account name.",
+    "question": "查找每个帐户名称的支票帐户数。",
+    "question_cspider": "查找每个帐户名称的支票帐户数。",
+    "Harold": "BLEU = 87.62, 93.8/86.7/85.7/84.6 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "帐",
+      "户",
+      "名",
+      "称",
+      "的",
+      "支",
+      "票",
+      "帐",
+      "户",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid GROUP BY T1.name",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "GROUP",
+      "BY",
+      "T1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question_spider": "What are the names of customers with accounts, and how many checking accounts do each of them have?",
+    "question": "开户客户的姓名是什么？每个客户有多少支票账户？",
+    "question_cspider": "开户客户的姓名是什么？每个客户有多少支票账户？",
+    "Harold": "BLEU = 21.17, 69.2/40.0/16.7/4.3 (BP=1.000, ratio=1.130, hyp_len=26, ref_len=23)",
+    "question_toks": [
+      "有",
+      "帐",
+      "户",
+      "的",
+      "客",
+      "户",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "，",
+      "每",
+      "个",
+      "帐",
+      "户",
+      "有",
+      "多",
+      "少",
+      "个",
+      "支",
+      "票",
+      "帐",
+      "户",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(T2.balance) ,  T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid GROUP BY T1.name",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.balance",
+      ")",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "GROUP",
+      "BY",
+      "T1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "balance",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question_spider": "Find the total saving balance for each account name.",
+    "question": "查找每个帐户名称的总储蓄余额。",
+    "question_cspider": "查找每个帐户名称的总储蓄余额。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "帐",
+      "户",
+      "名",
+      "称",
+      "的",
+      "总",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(T2.balance) ,  T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid GROUP BY T1.name",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.balance",
+      ")",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "GROUP",
+      "BY",
+      "T1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "balance",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question_spider": "What are the names of customers with accounts, and what are the total savings balances for each?",
+    "question": "有账户的客户的名字是什么，每个账户的储蓄余额是多少？",
+    "question_cspider": "有账户的客户的名字是什么，每个账户的储蓄余额是多少？",
+    "Harold": "BLEU = 89.85, 96.3/92.3/88.0/83.3 (BP=1.000, ratio=1.038, hyp_len=27, ref_len=26)",
+    "question_toks": [
+      "有",
+      "账",
+      "户",
+      "的",
+      "客",
+      "户",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "，",
+      "每",
+      "个",
+      "账",
+      "户",
+      "的",
+      "总",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT avg(balance) FROM checking)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")"
+    ],
+    "question_spider": "Find the name of accounts whose checking balance is below the average checking balance.",
+    "question": "查找支票余额低于平均支票余额的帐户的名称。",
+    "question_cspider": "查找支票余额低于平均支票余额的帐户的名称。",
+    "Harold": "BLEU = 79.41, 95.2/85.0/73.7/66.7 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "查",
+      "找",
+      "其",
+      "支",
+      "票",
+      "余",
+      "额",
+      "低",
+      "于",
+      "平",
+      "均",
+      "支",
+      "票",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT avg(balance) FROM checking)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")"
+    ],
+    "question_spider": "What are the names of customers with checking balances lower than the average checking balance?",
+    "question": "支票余额低于平均支票余额的客户的名字是什么？",
+    "question_cspider": "支票余额低于平均支票余额的客户的名字是什么？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=22, ref_len=22)",
+    "question_toks": [
+      "支",
+      "票",
+      "余",
+      "额",
+      "低",
+      "于",
+      "平",
+      "均",
+      "支",
+      "票",
+      "余",
+      "额",
+      "的",
+      "客",
+      "户",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the saving balance of the account with the highest checking balance.",
+    "question": "找出支票余额最高的账户的储蓄余额。",
+    "question_cspider": "找出支票余额最高的账户的储蓄余额。",
+    "Harold": "BLEU = 48.74, 78.9/55.6/41.2/31.2 (BP=1.000, ratio=1.118, hyp_len=19, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "最",
+      "高",
+      "支",
+      "票",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the savings balance of the account belonging to the customer with the highest checking balance?",
+    "question": "余额最高的客户的帐户的储蓄余额是多少？",
+    "question_cspider": "余额最高的客户的帐户的储蓄余额是多少？",
+    "Harold": "BLEU = 80.32, 90.0/84.2/77.8/70.6 (BP=1.000, ratio=1.053, hyp_len=20, ref_len=19)",
+    "question_toks": [
+      "支",
+      "票",
+      "余",
+      "额",
+      "最",
+      "高",
+      "的",
+      "客",
+      "户",
+      "帐",
+      "户",
+      "的",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.balance + T2.balance FROM checking AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid ORDER BY T1.balance + T2.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.balance",
+      "+",
+      "T2.balance",
+      "FROM",
+      "checking",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "ORDER",
+      "BY",
+      "T1.balance",
+      "+",
+      "T2.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "checking",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance"
+    ],
+    "question_spider": "Find the total checking and saving balance of all accounts sorted by the total balance in ascending order.",
+    "question": "查找按总余额升序排序的所有账户的总支票余额和储蓄余额。",
+    "question_cspider": "查找按总余额升序排序的所有账户的总支票余额和储蓄余额。",
+    "Harold": "BLEU = 30.24, 78.3/50.0/28.6/15.0 (BP=0.840, ratio=0.852, hyp_len=23, ref_len=27)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "帐",
+      "户",
+      "的",
+      "总",
+      "检",
+      "查",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "，",
+      "并",
+      "按",
+      "升",
+      "序",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                6,
+                false
+              ],
+              [
+                0,
+                4,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.balance + T2.balance FROM checking AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid ORDER BY T1.balance + T2.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.balance",
+      "+",
+      "T2.balance",
+      "FROM",
+      "checking",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "ORDER",
+      "BY",
+      "T1.balance",
+      "+",
+      "T2.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "checking",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance"
+    ],
+    "question_spider": "What is the sum of checking and savings balances for all customers, ordered by the total balance?",
+    "question": "按总余额排序，所有客户的支票余额和储蓄余额总和是多少？",
+    "question_cspider": "按总余额排序，所有客户的支票余额和储蓄余额总和是多少？",
+    "Harold": "BLEU = 73.04, 100.0/83.3/73.9/63.6 (BP=0.923, ratio=0.926, hyp_len=25, ref_len=27)",
+    "question_toks": [
+      "所",
+      "有",
+      "客",
+      "户",
+      "的",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "总",
+      "和",
+      "是",
+      "多",
+      "少",
+      "，",
+      "按",
+      "总",
+      "余",
+      "额",
+      "排",
+      "序",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                6,
+                false
+              ],
+              [
+                0,
+                4,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name and checking balance of the account with the lowest saving balance.",
+    "question": "找到存款余额最低的账户的名称和支票余额。",
+    "question_cspider": "找到存款余额最低的账户的名称和支票余额。",
+    "Harold": "BLEU = 19.86, 59.1/33.3/15.0/5.3 (BP=1.000, ratio=1.100, hyp_len=22, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "最",
+      "低",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "并",
+      "检",
+      "查",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name and checking balance of the account which has the lowest savings balance?",
+    "question": "存款余额最低的账户的名称和支票余额是多少？",
+    "question_cspider": "存款余额最低的账户的名称和支票余额是多少？",
+    "Harold": "BLEU = 76.18, 85.7/80.0/73.7/66.7 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "最",
+      "低",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "支",
+      "票",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid"
+    ],
+    "question_spider": "Find the name, checking balance and saving balance of all accounts in the bank.",
+    "question": "查找银行所有账户的名称、支票余额和储蓄余额。",
+    "question_cspider": "查找银行所有账户的名称、支票余额和储蓄余额。",
+    "Harold": "BLEU = 63.50, 87.0/72.7/57.1/45.0 (BP=1.000, ratio=1.045, hyp_len=23, ref_len=22)",
+    "question_toks": [
+      "查",
+      "找",
+      "银",
+      "行",
+      "中",
+      "所",
+      "有",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "，",
+      "支",
+      "票",
+      "余",
+      "额",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid"
+    ],
+    "question_spider": "What are the names, checking balances, and savings balances for all customers?",
+    "question": "所有客户的姓名、支票余额和存款余额是多少？",
+    "question_cspider": "所有客户的姓名、支票余额和存款余额是多少？",
+    "Harold": "BLEU = 41.35, 71.4/50.0/36.8/22.2 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "所",
+      "有",
+      "客",
+      "户",
+      "的",
+      "名",
+      "字",
+      "，",
+      "支",
+      "票",
+      "余",
+      "额",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance DESC",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "desc"
+    ],
+    "question_spider": "Find the name, checking balance and savings balance of all accounts in the bank sorted by their total checking and savings balance in descending order.",
+    "question": "讲支票余额和储蓄余额总额按降序排列,查找银行所有账户的名称、支票余额和储蓄余额。",
+    "question_cspider": "讲支票余额和储蓄余额总额按降序排列,查找银行所有账户的名称、支票余额和储蓄余额。",
+    "Harold": "BLEU = 49.72, 86.8/62.2/44.4/31.4 (BP=0.949, ratio=0.950, hyp_len=38, ref_len=40)",
+    "question_toks": [
+      "查",
+      "找",
+      "银",
+      "行",
+      "中",
+      "所",
+      "有",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "，",
+      "支",
+      "票",
+      "余",
+      "额",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "，",
+      "按",
+      "其",
+      "总",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "降",
+      "序",
+      "排",
+      "列",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance DESC",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "desc"
+    ],
+    "question_spider": "What are the names, checking balances, and savings balances of customers, ordered by the total of checking and savings balances descending?",
+    "question": "按支票存款和存款余额总和递减，客户的姓名、支票余额和存款余额是什么？",
+    "question_cspider": "按支票存款和存款余额总和递减，客户的姓名、支票余额和存款余额是什么？",
+    "Harold": "BLEU = 21.67, 60.0/32.4/18.2/6.2 (BP=1.000, ratio=1.029, hyp_len=35, ref_len=34)",
+    "question_toks": [
+      "客",
+      "户",
+      "的",
+      "名",
+      "称",
+      "，",
+      "支",
+      "票",
+      "余",
+      "额",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "是",
+      "多",
+      "少",
+      "，",
+      "按",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "总",
+      "数",
+      "降",
+      "序",
+      "排",
+      "列",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T2.balance  >  T3.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "T3.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "t3",
+      ".",
+      "balance"
+    ],
+    "question_spider": "Find the name of accounts whose checking balance is higher than corresponding saving balance.",
+    "question": "查找支票余额高于相应储蓄余额的帐户的名称。",
+    "question_cspider": "查找支票余额高于相应储蓄余额的帐户的名称。",
+    "Harold": "BLEU = 79.41, 95.2/85.0/73.7/66.7 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "查",
+      "找",
+      "其",
+      "支",
+      "票",
+      "余",
+      "额",
+      "高",
+      "于",
+      "相",
+      "应",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            4,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T2.balance  >  T3.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "T3.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "t3",
+      ".",
+      "balance"
+    ],
+    "question_spider": "What are the names of customers with a higher checking balance than savings balance?",
+    "question": "支票余额高于储蓄余额的客户有哪些名字？",
+    "question_cspider": "支票余额高于储蓄余额的客户有哪些名字？",
+    "Harold": "BLEU = 66.60, 80.0/68.4/61.1/58.8 (BP=1.000, ratio=1.053, hyp_len=20, ref_len=19)",
+    "question_toks": [
+      "支",
+      "票",
+      "余",
+      "额",
+      "高",
+      "于",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "客",
+      "户",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            4,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T3.balance + T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T3.balance  <  T2.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T3.balance",
+      "+",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T3.balance",
+      "<",
+      "T2.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t3",
+      ".",
+      "balance",
+      "<",
+      "t2",
+      ".",
+      "balance"
+    ],
+    "question_spider": "Find the name and total checking and savings balance of the accounts whose savings balance is lower than corresponding checking balance.",
+    "question": "查找存款余额低于相应支票余额的账户的名称及总支票和存款余额。",
+    "question_cspider": "查找存款余额低于相应支票余额的账户的名称及总支票和存款余额。",
+    "Harold": "BLEU = 43.00, 74.2/56.7/37.9/21.4 (BP=1.000, ratio=1.033, hyp_len=31, ref_len=30)",
+    "question_toks": [
+      "查",
+      "找",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "低",
+      "于",
+      "相",
+      "应",
+      "检",
+      "查",
+      "余",
+      "额",
+      "的",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "以",
+      "及",
+      "总",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                4,
+                false
+              ],
+              [
+                0,
+                6,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            6,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T3.balance + T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T3.balance  <  T2.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T3.balance",
+      "+",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T3.balance",
+      "<",
+      "T2.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t3",
+      ".",
+      "balance",
+      "<",
+      "t2",
+      ".",
+      "balance"
+    ],
+    "question_spider": "What are the names of customers who have a savings balance lower than their checking balance, and what is the total of their checking and savings balances?",
+    "question": "储蓄余额低于支票余额的客户的名字是什么？他们的支票余额和储蓄余额合计是多少？",
+    "question_cspider": "储蓄余额低于支票余额的客户的名字是什么？他们的支票余额和储蓄余额合计是多少？",
+    "Harold": "BLEU = 66.05, 88.6/76.5/66.7/59.4 (BP=0.918, ratio=0.921, hyp_len=35, ref_len=38)",
+    "question_toks": [
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "低",
+      "于",
+      "支",
+      "票",
+      "余",
+      "额",
+      "的",
+      "客",
+      "户",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "，",
+      "其",
+      "支",
+      "票",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "总",
+      "和",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                4,
+                false
+              ],
+              [
+                0,
+                6,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            6,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid ORDER BY T2.balance DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name and savings balance of the top 3 accounts with the highest saving balance sorted by savings balance in descending order.",
+    "question": "按存款余额的降序排列，查找前3个账户的名称和存款余额。",
+    "question_cspider": "按存款余额的降序排列，查找前3个账户的名称和存款余额。",
+    "Harold": "BLEU = 25.53, 61.1/37.1/20.6/9.1 (BP=1.000, ratio=1.333, hyp_len=36, ref_len=27)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "最",
+      "高",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "的",
+      "前",
+      "3",
+      "个",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "，",
+      "并",
+      "按",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "降",
+      "序",
+      "排",
+      "列",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid ORDER BY T2.balance DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What are names and savings balances of the three accounts with the highest savings balances?",
+    "question": "这三个有着最高储蓄余额的账户的名称和存款余额是什么？",
+    "question_cspider": "这三个有着最高储蓄余额的账户的名称和存款余额是什么？",
+    "Harold": "BLEU = 45.33, 87.0/63.6/42.9/30.0 (BP=0.878, ratio=0.885, hyp_len=23, ref_len=26)",
+    "question_toks": [
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "最",
+      "高",
+      "的",
+      "三",
+      "个",
+      "帐",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "储",
+      "蓄",
+      "余",
+      "额",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

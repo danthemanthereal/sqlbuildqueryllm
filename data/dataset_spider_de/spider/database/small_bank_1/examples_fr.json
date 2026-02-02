@@ -1,0 +1,8446 @@
+[
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(T2.balance) FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T1.name != 'Brown'",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.balance",
+      ")",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "!",
+      "=",
+      "'Brown",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "balance",
+      ")",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Trouvez le solde d'épargne total de tous les comptes à l'exception du compte avec le nom \"Brown\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Brown\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(T2.balance) FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T1.name != 'Brown'",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.balance",
+      ")",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "!",
+      "=",
+      "'Brown",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "balance",
+      ")",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Quel est le solde total des comptes d'épargne n'appartenant pas à quelqu'un du nom de \"Brown\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Brown\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) FROM accounts",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "accounts"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "accounts"
+    ],
+    "question": "Combien de comptes y a-t-il au total?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) FROM accounts",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "accounts"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "accounts"
+    ],
+    "question": "Comptez le nombre de comptes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(balance) FROM checking",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking"
+    ],
+    "question": "Quel est le solde courant total de tous les comptes?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(balance) FROM checking",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking"
+    ],
+    "question": "Trouvez le solde total des comptes chèques.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT avg(balance) FROM checking",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking"
+    ],
+    "question": "Trouvez le solde courant moyen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT avg(balance) FROM checking",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking"
+    ],
+    "question": "Quel est le solde moyen des comptes chèques?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) FROM savings WHERE balance  >  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "savings",
+      "WHERE",
+      "balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "savings",
+      "where",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question": "Combien de comptes ont un solde d'épargne supérieur au solde d'épargne moyen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) FROM savings WHERE balance  >  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "savings",
+      "WHERE",
+      "balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "savings",
+      "where",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question": "Trouvez le nombre de comptes dont le solde d'épargne est supérieur au solde d'épargne moyen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.custid ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT max(balance) FROM checking)",
+    "query_toks": [
+      "SELECT",
+      "T1.custid",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "custid",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "max",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")"
+    ],
+    "question": "Trouvez le nom et l'identifiant des comptes dont le solde de chèque est inférieur au solde de chèque maximal.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  1,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.custid ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT max(balance) FROM checking)",
+    "query_toks": [
+      "SELECT",
+      "T1.custid",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "custid",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "max",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")"
+    ],
+    "question": "Quels sont l'identifiant et le nom du client correspondant aux comptes dont le solde courant est inférieur au solde courant le plus élevé?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  1,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T1.name LIKE '%ee%'",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "LIKE",
+      "'",
+      "%",
+      "ee",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "like",
+      "value"
+    ],
+    "question": "Quel est le solde courant du compte dont le nom du propriétaire contient la sous-chaîne \"ee\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"%ee%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T1.name LIKE '%ee%'",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "LIKE",
+      "'",
+      "%",
+      "ee",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "like",
+      "value"
+    ],
+    "question": "Trouvez le solde du compte courant appartenant à un propriétaire dont le nom contient \"ee\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"%ee%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T1.name  =  'Brown'",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Brown",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "Trouvez le solde courant et le solde d'épargne dans le compte de \"Brown\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Brown\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T1.name  =  'Brown'",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Brown",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "Quels sont les soldes de chèques et d'épargne des comptes appartenant à \"Brown\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Brown\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  >  (SELECT avg(balance) FROM checking) INTERSECT SELECT T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")",
+      "INTERSECT",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question": "Trouvez les noms des comptes dont le solde de chèque est supérieur au solde de chèque moyen, mais le solde d'épargne est inférieur au solde d'épargne moyen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            {
+              "from": {
+                "table_units": [
+                  [
+                    "table_unit",
+                    1
+                  ]
+                ],
+                "conds": []
+              },
+              "select": [
+                false,
+                [
+                  [
+                    5,
+                    [
+                      0,
+                      [
+                        0,
+                        4,
+                        false
+                      ],
+                      null
+                    ]
+                  ]
+                ]
+              ],
+              "where": [],
+              "groupBy": [],
+              "having": [],
+              "orderBy": [],
+              "limit": null,
+              "intersect": null,
+              "union": null,
+              "except": null
+            },
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  >  (SELECT avg(balance) FROM checking) INTERSECT SELECT T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")",
+      "INTERSECT",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question": "Quels sont les noms des chèque dont les soldes de chèque sont supérieurs au solde de chèque moyen et les soldes d'épargne inférieurs au solde d'épargne moyen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            {
+              "from": {
+                "table_units": [
+                  [
+                    "table_unit",
+                    1
+                  ]
+                ],
+                "conds": []
+              },
+              "select": [
+                false,
+                [
+                  [
+                    5,
+                    [
+                      0,
+                      [
+                        0,
+                        4,
+                        false
+                      ],
+                      null
+                    ]
+                  ]
+                ]
+              ],
+              "where": [],
+              "groupBy": [],
+              "having": [],
+              "orderBy": [],
+              "limit": null,
+              "intersect": null,
+              "union": null,
+              "except": null
+            },
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T1.name IN (SELECT T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  >  (SELECT avg(balance) FROM savings))",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "IN",
+      "(",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "in",
+      "(",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")",
+      ")"
+    ],
+    "question": "Trouvez le solde courant des comptes dont le solde d'épargne est supérieur au solde d'épargne moyen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          8,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    3,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      2,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    4,
+                    false
+                  ],
+                  null
+                ],
+                {
+                  "from": {
+                    "table_units": [
+                      [
+                        "table_unit",
+                        1
+                      ]
+                    ],
+                    "conds": []
+                  },
+                  "select": [
+                    false,
+                    [
+                      [
+                        5,
+                        [
+                          0,
+                          [
+                            0,
+                            4,
+                            false
+                          ],
+                          null
+                        ]
+                      ]
+                    ]
+                  ],
+                  "where": [],
+                  "groupBy": [],
+                  "having": [],
+                  "orderBy": [],
+                  "limit": null,
+                  "intersect": null,
+                  "union": null,
+                  "except": null
+                },
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T1.name IN (SELECT T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  >  (SELECT avg(balance) FROM savings))",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T1.name",
+      "IN",
+      "(",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "in",
+      "(",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")",
+      ")"
+    ],
+    "question": "Quels sont les soldes des comptes chèques appartenant à des personnes dont les soldes d'épargne sont supérieurs au solde d'épargne moyen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          8,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    3,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      2,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    4,
+                    false
+                  ],
+                  null
+                ],
+                {
+                  "from": {
+                    "table_units": [
+                      [
+                        "table_unit",
+                        1
+                      ]
+                    ],
+                    "conds": []
+                  },
+                  "select": [
+                    false,
+                    [
+                      [
+                        5,
+                        [
+                          0,
+                          [
+                            0,
+                            4,
+                            false
+                          ],
+                          null
+                        ]
+                      ]
+                    ]
+                  ],
+                  "where": [],
+                  "groupBy": [],
+                  "having": [],
+                  "orderBy": [],
+                  "limit": null,
+                  "intersect": null,
+                  "union": null,
+                  "except": null
+                },
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT name FROM accounts ORDER BY name",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "accounts",
+      "ORDER",
+      "BY",
+      "name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "accounts",
+      "order",
+      "by",
+      "name"
+    ],
+    "question": "Répertoriez les noms de tous les clients par ordre alphabétique.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT name FROM accounts ORDER BY name",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "accounts",
+      "ORDER",
+      "BY",
+      "name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "accounts",
+      "order",
+      "by",
+      "name"
+    ],
+    "question": "Quels sont les noms de tous les clients par ordre alphabétique?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question": "Trouvez le nom du compte dont le solde total de chèque et d'épargne est le plus bas.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le nom correspondant au compte avec la somme la plus faible de soldes de chèque et d'épargne?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance + T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T3.balance  >  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T3.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t3",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question": "Trouvez les noms et les soldes totaux de chèque et d'épargne des comptes dont le solde d'épargne est supérieur au solde d'épargne moyen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                6,
+                false
+              ],
+              [
+                0,
+                4,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance + T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T3.balance  >  (SELECT avg(balance) FROM savings)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T3.balance",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "savings",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t3",
+      ".",
+      "balance",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "savings",
+      ")"
+    ],
+    "question": "Quels sont les noms et la somme des soldes de chèque et d'épargne pour les comptes dont les soldes d'épargne sont supérieurs au solde d'épargne moyen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                6,
+                false
+              ],
+              [
+                0,
+                4,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question": "Trouvez le nom et le solde de chèque du compte avec le solde d'épargne le plus bas.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question": "Quels sont les noms et les soldes des comptes chèques appartenant au client ayant le solde d'épargne le plus bas?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid GROUP BY T1.name",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "GROUP",
+      "BY",
+      "T1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question": "Trouvez le nombre de comptes courants pour chaque nom de compte.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT count(*) ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid GROUP BY T1.name",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "GROUP",
+      "BY",
+      "T1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question": "Quels sont les noms des clients ayant des comptes et combien de comptes chèques chacun d'entre eux possède-t-il?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(T2.balance) ,  T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid GROUP BY T1.name",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.balance",
+      ")",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "GROUP",
+      "BY",
+      "T1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "balance",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question": "Trouvez le solde d'épargne total pour chaque nom de compte.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT sum(T2.balance) ,  T1.name FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid GROUP BY T1.name",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.balance",
+      ")",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "GROUP",
+      "BY",
+      "T1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "balance",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question": "Quels sont les noms des clients avec des comptes et quel est le solde total de l'épargne pour chacun?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT avg(balance) FROM checking)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")"
+    ],
+    "question": "Trouvez le nom des comptes dont le solde courant est inférieur au solde courant moyen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid WHERE T2.balance  <  (SELECT avg(balance) FROM checking)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "WHERE",
+      "T2.balance",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "FROM",
+      "checking",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "balance",
+      ")",
+      "from",
+      "checking",
+      ")"
+    ],
+    "question": "Quels sont les noms des clients dont le solde courant est inférieur au solde courant moyen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Trouvez le solde d'épargne du compte avec le solde courant le plus élevé.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T3.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le solde d'épargne du compte appartenant au client avec le solde de chèque le plus élevé?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.balance + T2.balance FROM checking AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid ORDER BY T1.balance + T2.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.balance",
+      "+",
+      "T2.balance",
+      "FROM",
+      "checking",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "ORDER",
+      "BY",
+      "T1.balance",
+      "+",
+      "T2.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "checking",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance"
+    ],
+    "question": "Trouvez le solde total de chèque et d'épargne de tous les comptes triés par le solde total dans l'ordre croissant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                6,
+                false
+              ],
+              [
+                0,
+                4,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.balance + T2.balance FROM checking AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid ORDER BY T1.balance + T2.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.balance",
+      "+",
+      "T2.balance",
+      "FROM",
+      "checking",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "ORDER",
+      "BY",
+      "T1.balance",
+      "+",
+      "T2.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "checking",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance"
+    ],
+    "question": "Quelle est la somme des soldes de chèque et d'épargne pour tous les clients, triée par le solde total?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                6,
+                false
+              ],
+              [
+                0,
+                4,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question": "Trouvez le nom et le solde de chèque du compte avec le solde d'épargne le plus bas.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T3.balance LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T3.balance",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "balance",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le nom et le solde de chèque du compte qui a le solde d'épargne le plus bas?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid"
+    ],
+    "question": "Trouvez le nom, le solde de chèque et le solde d'épargne de tous les comptes de la banque.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid"
+    ],
+    "question": "Quels sont les noms, les soldes de chèque et les soldes d'épargne pour tous les clients?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance DESC",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "desc"
+    ],
+    "question": "Trouvez le nom, le solde de chèque et le solde d'épargne de tous les comptes de la banque triés par leur solde total de chèque et d'épargne dans l'ordre décroissant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T2.balance ,  T3.balance ,  T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance DESC",
+    "query_toks": [
+      "SELECT",
+      "T2.balance",
+      ",",
+      "T3.balance",
+      ",",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "+",
+      "T3.balance",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "balance",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "+",
+      "t3",
+      ".",
+      "balance",
+      "desc"
+    ],
+    "question": "Quels sont les noms, les soldes de chèque et les soldes d'épargne des clients, classés par le total des soldes de chèque et d'épargne décroissant?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            2,
+            [
+              0,
+              6,
+              false
+            ],
+            [
+              0,
+              4,
+              false
+            ]
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T2.balance  >  T3.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "T3.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "t3",
+      ".",
+      "balance"
+    ],
+    "question": "Trouvez le nom des comptes dont le solde courant est supérieur au solde d'épargne correspondant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            4,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T2.balance  >  T3.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T2.balance",
+      ">",
+      "T3.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t2",
+      ".",
+      "balance",
+      ">",
+      "t3",
+      ".",
+      "balance"
+    ],
+    "question": "Quels sont les noms des clients dont le solde de chèque est plus élevé que le solde d'épargne?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            4,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T3.balance + T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T3.balance  <  T2.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T3.balance",
+      "+",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T3.balance",
+      "<",
+      "T2.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t3",
+      ".",
+      "balance",
+      "<",
+      "t2",
+      ".",
+      "balance"
+    ],
+    "question": "Trouvez le nom et le solde total de contrôle et d'épargne des comptes dont le solde d'épargne est inférieur au solde de chèque correspondant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                4,
+                false
+              ],
+              [
+                0,
+                6,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            6,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T3.balance + T2.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid WHERE T3.balance  <  T2.balance",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T3.balance",
+      "+",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "checking",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "JOIN",
+      "savings",
+      "AS",
+      "T3",
+      "ON",
+      "T1.custid",
+      "=",
+      "T3.custid",
+      "WHERE",
+      "T3.balance",
+      "<",
+      "T2.balance"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "balance",
+      "+",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "checking",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "join",
+      "savings",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t3",
+      ".",
+      "custid",
+      "where",
+      "t3",
+      ".",
+      "balance",
+      "<",
+      "t2",
+      ".",
+      "balance"
+    ],
+    "question": "Quels sont les noms des clients qui ont un solde d'épargne inférieur à leur solde courant, et quel est le total de leurs soldes courants et d'épargne?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              2,
+              [
+                0,
+                4,
+                false
+              ],
+              [
+                0,
+                6,
+                false
+              ]
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            6,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid ORDER BY T2.balance DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Trouvez le nom et le solde d'épargne des 3 principaux comptes avec le solde d'épargne le plus élevé, triés par solde d'épargne par ordre décroissant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "small_bank_1",
+    "query": "SELECT T1.name ,  T2.balance FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid ORDER BY T2.balance DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T2.balance",
+      "FROM",
+      "accounts",
+      "AS",
+      "T1",
+      "JOIN",
+      "savings",
+      "AS",
+      "T2",
+      "ON",
+      "T1.custid",
+      "=",
+      "T2.custid",
+      "ORDER",
+      "BY",
+      "T2.balance",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "balance",
+      "from",
+      "accounts",
+      "as",
+      "t1",
+      "join",
+      "savings",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "custid",
+      "=",
+      "t2",
+      ".",
+      "custid",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "balance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quels sont les noms et les soldes d'épargne des trois comptes ayant les soldes d'épargne les plus élevés?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

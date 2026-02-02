@@ -1,0 +1,2562 @@
+[
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(*) FROM ship WHERE disposition_of_ship  =  'Captured'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "ship",
+      "WHERE",
+      "disposition_of_ship",
+      "=",
+      "'Captured",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "ship",
+      "where",
+      "disposition_of_ship",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many ships ended up being 'Captured'?",
+    "question": "有多少艘船最终被“Captured”？",
+    "question_cspider": "有多少艘船最终被“Captured”？",
+    "bleu_from_cspider_question": "BLEU = 48.59, 91.7/63.6/40.0/33.3 (BP=0.920, ratio=0.923, hyp_len=12, ref_len=13)",
+    "question_toks": [
+      "最",
+      "终",
+      "有",
+      "几",
+      "艘",
+      "船",
+      "被",
+      "“",
+      "俘",
+      "虏",
+      "”",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Captured\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  tonnage FROM ship ORDER BY name DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "tonnage",
+      "FROM",
+      "ship",
+      "ORDER",
+      "BY",
+      "name",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "tonnage",
+      "from",
+      "ship",
+      "order",
+      "by",
+      "name",
+      "desc"
+    ],
+    "question_spider": "List the name and tonnage ordered by in descending alphaetical order for the names.",
+    "question": "按名称的字母顺序降序列出名称和吨位。",
+    "question_cspider": "按名称的字母顺序降序列出名称和吨位。",
+    "bleu_from_cspider_question": "BLEU = 60.05, 84.2/66.7/52.9/43.8 (BP=1.000, ratio=1.056, hyp_len=19, ref_len=18)",
+    "question_toks": [
+      "列",
+      "出",
+      "名",
+      "称",
+      "和",
+      "吨",
+      "位",
+      "，",
+      "按",
+      "名",
+      "称",
+      "的",
+      "字",
+      "母",
+      "降",
+      "序",
+      "排",
+      "列",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  date FROM battle",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "date",
+      "FROM",
+      "battle"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "date",
+      "from",
+      "battle"
+    ],
+    "question_spider": "List the name, date and result of each battle.",
+    "question": "列出每一场战斗的名称和日期。",
+    "question_cspider": "列出每一场战斗的名称、日期和结果。",
+    "bleu_from_cspider_question": "BLEU = 64.52, 93.8/80.0/64.3/46.2 (BP=0.939, ratio=0.941, hyp_len=16, ref_len=17)",
+    "question_toks": [
+      "列",
+      "出",
+      "每",
+      "场",
+      "战",
+      "斗",
+      "的",
+      "名",
+      "称",
+      "，",
+      "日",
+      "期",
+      "和",
+      "结",
+      "果",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT max(killed) ,  min(killed) FROM death",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "killed",
+      ")",
+      ",",
+      "min",
+      "(",
+      "killed",
+      ")",
+      "FROM",
+      "death"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "killed",
+      ")",
+      ",",
+      "min",
+      "(",
+      "killed",
+      ")",
+      "from",
+      "death"
+    ],
+    "question_spider": "What is maximum and minimum death toll caused each time?",
+    "question": "每一次造成的最大和最小死亡人数是多少？",
+    "question_cspider": "每一次造成的最大和最小死亡人数是多少？",
+    "bleu_from_cspider_question": "BLEU = 90.11, 100.0/94.1/93.8/93.3 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "每",
+      "次",
+      "造",
+      "成",
+      "的",
+      "最",
+      "大",
+      "和",
+      "最",
+      "小",
+      "死",
+      "亡",
+      "人",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT avg(injured) FROM death",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "injured",
+      ")",
+      "FROM",
+      "death"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "injured",
+      ")",
+      "from",
+      "death"
+    ],
+    "question_spider": "What is the average number of injuries caused each time?",
+    "question": "平均每次受伤次数是多少？",
+    "question_cspider": "平均每次受伤次数是多少？",
+    "bleu_from_cspider_question": "BLEU = 26.91, 69.2/41.7/18.2/10.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "每",
+      "次",
+      "造",
+      "成",
+      "的",
+      "平",
+      "均",
+      "伤",
+      "害",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.killed ,  T1.injured FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id WHERE T2.tonnage  =  't'",
+    "query_toks": [
+      "SELECT",
+      "T1.killed",
+      ",",
+      "T1.injured",
+      "FROM",
+      "death",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "t2",
+      "ON",
+      "T1.caused_by_ship_id",
+      "=",
+      "T2.id",
+      "WHERE",
+      "T2.tonnage",
+      "=",
+      "'t",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "killed",
+      ",",
+      "t1",
+      ".",
+      "injured",
+      "from",
+      "death",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "caused_by_ship_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "tonnage",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the death and injury situations caused by the ship with tonnage 't'?",
+    "question": "吨位为“T”的船舶造成的受伤和死亡人数分别是多少？",
+    "question_cspider": "吨位为“T”的船舶造成的伤亡事故是什么？",
+    "bleu_from_cspider_question": "BLEU = 53.93, 68.2/52.4/50.0/47.4 (BP=1.000, ratio=1.100, hyp_len=22, ref_len=20)",
+    "question_toks": [
+      "吨",
+      "位",
+      "为",
+      "“",
+      " ",
+      "t",
+      "”",
+      "的",
+      "船",
+      "舶",
+      "造",
+      "成",
+      "的",
+      "死",
+      "亡",
+      "和",
+      "伤",
+      "害",
+      "情",
+      "况",
+      "如",
+      "何",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"t\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  RESULT FROM battle WHERE bulgarian_commander != 'Boril'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "RESULT",
+      "FROM",
+      "battle",
+      "WHERE",
+      "bulgarian_commander",
+      "!",
+      "=",
+      "'Boril",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "result",
+      "from",
+      "battle",
+      "where",
+      "bulgarian_commander",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the name and results of the battles when the bulgarian commander is not 'Boril'",
+    "question": "当保加利亚指挥官不是“Boril”时，战争的名称和结果是什么？",
+    "question_cspider": "当bulgarian的指挥官不是“Boril”时，战争的名称和结果是什么？",
+    "bleu_from_cspider_question": "BLEU = 52.22, 78.6/63.0/50.0/40.0 (BP=0.931, ratio=0.933, hyp_len=28, ref_len=30)",
+    "question_toks": [
+      "保",
+      "加",
+      "利",
+      "亚",
+      "指",
+      "挥",
+      "官",
+      "不",
+      "是",
+      "“",
+      " ",
+      "B",
+      "o",
+      "r",
+      "i",
+      "l",
+      "”",
+      "时",
+      "战",
+      "斗",
+      "的",
+      "名",
+      "称",
+      "和",
+      "结",
+      "果",
+      "是",
+      "什",
+      "么"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Boril\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT DISTINCT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.ship_type  =  'Brig'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.ship_type",
+      "=",
+      "'Brig",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "ship_type",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the different ids and names of the battles that lost any 'Brig' type shipes?",
+    "question": "损失过“Brig”船只的战斗的不同的id和名称是什么？",
+    "question_cspider": "损失过“Brig”船只的战斗的不同的id和名称是什么？",
+    "bleu_from_cspider_question": "BLEU = 32.73, 66.7/39.1/27.3/19.0 (BP=0.959, ratio=0.960, hyp_len=24, ref_len=25)",
+    "question_toks": [
+      "丢",
+      "失",
+      "“",
+      "双",
+      "桅",
+      "”",
+      "型",
+      "飞",
+      "船",
+      "的",
+      "战",
+      "斗",
+      "的",
+      "I",
+      "D",
+      "和",
+      "名",
+      "称",
+      "有",
+      "哪",
+      "些",
+      "不",
+      "同",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "\"Brig\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle JOIN death AS T3 ON T2.id  =  T3.caused_by_ship_id GROUP BY T1.id HAVING sum(T3.killed)  >  10",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "JOIN",
+      "death",
+      "AS",
+      "T3",
+      "ON",
+      "T2.id",
+      "=",
+      "T3.caused_by_ship_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "sum",
+      "(",
+      "T3.killed",
+      ")",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "join",
+      "death",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "caused_by_ship_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "sum",
+      "(",
+      "t3",
+      ".",
+      "killed",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "What are the ids and names of the battles that led to more than 10 people killed in total.",
+    "question": "导致总共超过10人死亡的战斗的ID和名称是什么？",
+    "question_cspider": "导致总共超过10人死亡的战斗的ID和名称是什么？",
+    "bleu_from_cspider_question": "BLEU = 65.22, 87.0/72.7/61.9/55.0 (BP=0.957, ratio=0.958, hyp_len=23, ref_len=24)",
+    "question_toks": [
+      "导",
+      "致",
+      "总",
+      "共",
+      "1",
+      "0",
+      "多",
+      "人",
+      "丧",
+      "生",
+      "的",
+      "战",
+      "斗",
+      "的",
+      "I",
+      "D",
+      "和",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              4,
+              17,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T2.id ,  T2.name FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id GROUP BY T2.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.id",
+      ",",
+      "T2.name",
+      "FROM",
+      "death",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "t2",
+      "ON",
+      "T1.caused_by_ship_id",
+      "=",
+      "T2.id",
+      "GROUP",
+      "BY",
+      "T2.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "id",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "death",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "caused_by_ship_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the ship id and name that caused most total injuries?",
+    "question": "造成总伤害最多的船的ID和名称是什么？",
+    "question_cspider": "造成总伤害最多的船的ID和名称是什么？",
+    "bleu_from_cspider_question": "BLEU = 42.53, 83.3/58.8/31.2/26.7 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "造",
+      "成",
+      "最",
+      "多",
+      "人",
+      "员",
+      "伤",
+      "害",
+      "的",
+      "船",
+      "名",
+      "和",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name FROM battle WHERE bulgarian_commander  =  'Kaloyan' AND latin_commander  =  'Baldwin I'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "battle",
+      "WHERE",
+      "bulgarian_commander",
+      "=",
+      "'Kaloyan",
+      "'",
+      "AND",
+      "latin_commander",
+      "=",
+      "'Baldwin",
+      "I",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "battle",
+      "where",
+      "bulgarian_commander",
+      "=",
+      "value",
+      "and",
+      "latin_commander",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the distinct battle names which are between bulgarian commander 'Kaloyan' and latin commander 'Baldwin I'?",
+    "question": "在保加利亚指挥官“Kaloyan”和拉丁指挥官“Baldwin I”之间，有哪些不同的战斗名称？",
+    "question_cspider": "在bulgarian指挥官“Kaloyan”和拉丁指挥官“Baldwin I”之间，有哪些不同的战斗名称？",
+    "bleu_from_cspider_question": "BLEU = 42.32, 60.9/48.9/38.6/27.9 (BP=1.000, ratio=1.150, hyp_len=46, ref_len=40)",
+    "question_toks": [
+      "保",
+      "加",
+      "利",
+      "亚",
+      "指",
+      "挥",
+      "官",
+      "“",
+      " ",
+      "K",
+      "a",
+      "l",
+      "o",
+      "y",
+      "a",
+      "n",
+      "”",
+      "和",
+      "拉",
+      "丁",
+      "语",
+      "指",
+      "挥",
+      "官",
+      "“",
+      " ",
+      "B",
+      "a",
+      "l",
+      "d",
+      "w",
+      "i",
+      "n",
+      " ",
+      "I",
+      "”",
+      "之",
+      "间",
+      "有",
+      "什",
+      "么",
+      "不",
+      "同",
+      "的",
+      "战",
+      "斗",
+      "名",
+      "称",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Kaloyan\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Baldwin I\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(DISTINCT RESULT) FROM battle",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "RESULT",
+      ")",
+      "FROM",
+      "battle"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "result",
+      ")",
+      "from",
+      "battle"
+    ],
+    "question_spider": "How many different results are there for the battles?",
+    "question": "战斗共有多少不同的结果？",
+    "question_cspider": "战斗共有多少不同的结果？",
+    "bleu_from_cspider_question": "BLEU = 77.72, 100.0/90.0/77.8/75.0 (BP=0.913, ratio=0.917, hyp_len=11, ref_len=12)",
+    "question_toks": [
+      "战",
+      "斗",
+      "有",
+      "多",
+      "少",
+      "不",
+      "同",
+      "的",
+      "结",
+      "果",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                6,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "battle",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "lost_in_battle",
+      "FROM",
+      "ship",
+      "WHERE",
+      "tonnage",
+      "=",
+      "'225",
+      "'",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "battle",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "lost_in_battle",
+      "from",
+      "ship",
+      "where",
+      "tonnage",
+      "=",
+      "value",
+      ")"
+    ],
+    "question_spider": "How many battles did not lose any ship with tonnage '225'?",
+    "question": "有多少次战斗损失了吨位为“225”的船只？",
+    "question_cspider": "有多少次战斗没有失去吨位为“225”的船只？",
+    "bleu_from_cspider_question": "BLEU = 30.17, 71.4/40.0/21.1/16.7 (BP=0.953, ratio=0.955, hyp_len=21, ref_len=22)",
+    "question_toks": [
+      "多",
+      "少",
+      "场",
+      "战",
+      "斗",
+      "未",
+      "损",
+      "失",
+      "吨",
+      "位",
+      "“",
+      " ",
+      "2",
+      "2",
+      "5",
+      "”",
+      "的",
+      "任",
+      "何",
+      "船",
+      "舶",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      7,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    10,
+                    false
+                  ],
+                  null
+                ],
+                "\"225\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'Lettice' INTERSECT SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'HMS Atalanta'",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.date",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.name",
+      "=",
+      "'Lettice",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.date",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.name",
+      "=",
+      "'HMS",
+      "Atalanta",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "date",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "date",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the name and date the battle that has lost the ship named 'Lettice' and the ship named 'HMS Atalanta'",
+    "question": "列出损失“Lettice”号和“HMS Atalanta”号战舰的战斗的名称和日期。",
+    "question_cspider": "列出失去“Lettice”号和“HMS Atalanta”号战舰的战斗的名称和日期。",
+    "bleu_from_cspider_question": "BLEU = 22.73, 37.5/23.4/19.6/15.6 (BP=1.000, ratio=1.714, hyp_len=48, ref_len=28)",
+    "question_toks": [
+      "列",
+      "出",
+      "失",
+      "去",
+      "名",
+      "称",
+      "为",
+      "“",
+      " ",
+      "L",
+      "e",
+      "t",
+      "t",
+      "i",
+      "c",
+      "e",
+      "”",
+      "的",
+      "船",
+      "只",
+      "和",
+      "名",
+      "称",
+      "为",
+      "“",
+      " ",
+      "H",
+      "M",
+      "S",
+      " ",
+      "A",
+      "t",
+      "a",
+      "l",
+      "a",
+      "n",
+      "t",
+      "a",
+      "”",
+      "的",
+      "船",
+      "只",
+      "的",
+      "战",
+      "斗",
+      "的",
+      "名",
+      "称",
+      "和",
+      "日",
+      "期"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Lettice\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "\"HMS Atalanta\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  RESULT ,  bulgarian_commander FROM battle EXCEPT SELECT T1.name ,  T1.result ,  T1.bulgarian_commander FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'English Channel'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "RESULT",
+      ",",
+      "bulgarian_commander",
+      "FROM",
+      "battle",
+      "EXCEPT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.result",
+      ",",
+      "T1.bulgarian_commander",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.location",
+      "=",
+      "'English",
+      "Channel",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "result",
+      ",",
+      "bulgarian_commander",
+      "from",
+      "battle",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "result",
+      ",",
+      "t1",
+      ".",
+      "bulgarian_commander",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "location",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show names, results and bulgarian commanders of the battles with no ships lost in the 'English Channel'.",
+    "question": "显示在“English Channel”中没有船只损失的战斗的名称、结果和保加利亚指挥官。",
+    "question_cspider": "显示在“English Channel”中没有船只损失的战斗的名称、结果和bulgarian指挥官。",
+    "bleu_from_cspider_question": "BLEU = 58.03, 81.6/64.9/50.0/42.9 (BP=1.000, ratio=1.086, hyp_len=38, ref_len=35)",
+    "question_toks": [
+      "在",
+      "“",
+      "英",
+      "吉",
+      "利",
+      "海",
+      "峡",
+      "”",
+      "中",
+      "显",
+      "示",
+      "战",
+      "斗",
+      "的",
+      "名",
+      "称",
+      "，",
+      "结",
+      "果",
+      "和",
+      "保",
+      "加",
+      "利",
+      "亚",
+      "指",
+      "挥",
+      "官",
+      "，",
+      "而",
+      "不",
+      "会",
+      "损",
+      "失",
+      "任",
+      "何",
+      "船",
+      "只",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            "\"English Channel\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT note FROM death WHERE note LIKE '%East%'",
+    "query_toks": [
+      "SELECT",
+      "note",
+      "FROM",
+      "death",
+      "WHERE",
+      "note",
+      "LIKE",
+      "'",
+      "%",
+      "East",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "note",
+      "from",
+      "death",
+      "where",
+      "note",
+      "like",
+      "value"
+    ],
+    "question_spider": "What are the notes of the death events which has substring 'East'?",
+    "question": "包含文本为“East”的死亡事件的注解是什么？",
+    "question_cspider": "包含文本为“East”的死亡事件的注解是什么？",
+    "bleu_from_cspider_question": "BLEU = 35.60, 54.2/39.1/31.8/23.8 (BP=1.000, ratio=1.200, hyp_len=24, ref_len=20)",
+    "question_toks": [
+      "带",
+      "有",
+      "“",
+      " ",
+      "E",
+      "a",
+      "s",
+      "t",
+      "”",
+      "子",
+      "字",
+      "符",
+      "串",
+      "的",
+      "死",
+      "亡",
+      "事",
+      "件",
+      "的",
+      "注",
+      "释",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"%East%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

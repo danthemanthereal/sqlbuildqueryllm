@@ -1,0 +1,3757 @@
+[
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT email FROM user_profiles WHERE name  =  'Mary'",
+    "query_toks": [
+      "SELECT",
+      "email",
+      "FROM",
+      "user_profiles",
+      "WHERE",
+      "name",
+      "=",
+      "'Mary",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "email",
+      "from",
+      "user_profiles",
+      "where",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the emails of the user named \"Mary\".",
+    "question": "找到名为“Mary”的用户的电子邮件。",
+    "question_cspider": "找到名为“Mary”的用户的电子邮件。",
+    "Harold": "BLEU = 56.83, 73.7/61.1/52.9/43.8 (BP=1.000, ratio=1.118, hyp_len=19, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "名",
+      "为",
+      "“",
+      " ",
+      "M",
+      "a",
+      "r",
+      "y",
+      "”",
+      "的",
+      "用",
+      "户",
+      "的",
+      "电",
+      "子",
+      "邮",
+      "件",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Mary\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT partitionid FROM user_profiles WHERE name  =  'Iron Man'",
+    "query_toks": [
+      "SELECT",
+      "partitionid",
+      "FROM",
+      "user_profiles",
+      "WHERE",
+      "name",
+      "=",
+      "'Iron",
+      "Man",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "partitionid",
+      "from",
+      "user_profiles",
+      "where",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the partition id of the user named \"Iron Man\".",
+    "question": "名为“Iron Man”的用户的ID是什么？",
+    "question_cspider": "名为“Iron Man”的用户的ID是什么？",
+    "Harold": "BLEU = 48.07, 77.8/58.8/43.8/26.7 (BP=1.000, ratio=1.059, hyp_len=18, ref_len=17)",
+    "question_toks": [
+      "名",
+      "为",
+      "“",
+      "铁",
+      "人",
+      "”",
+      "的",
+      "用",
+      "户",
+      "的",
+      "分",
+      "区",
+      "I",
+      "D",
+      "是",
+      "什",
+      "么",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Iron Man\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT count(*) FROM user_profiles",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "user_profiles"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "user_profiles"
+    ],
+    "question_spider": "How many users are there?",
+    "question": "有多少用户？",
+    "question_cspider": "有多少用户？",
+    "Harold": "BLEU = 0.00, 85.7/66.7/40.0/0.0 (BP=1.000, ratio=1.167, hyp_len=7, ref_len=6)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "个",
+      "用",
+      "户",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT count(*) FROM follows",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "follows"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "follows"
+    ],
+    "question_spider": "How many followers does each user have?",
+    "question": "每个用户有多少追随者？",
+    "question_cspider": "每个用户有多少追随者？",
+    "Harold": "BLEU = 63.16, 81.8/70.0/55.6/50.0 (BP=1.000, ratio=1.000, hyp_len=11, ref_len=11)",
+    "question_toks": [
+      "每",
+      "个",
+      "用",
+      "户",
+      "有",
+      "多",
+      "少",
+      "关",
+      "注",
+      "者",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT count(*) FROM follows GROUP BY f1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "follows",
+      "GROUP",
+      "BY",
+      "f1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "follows",
+      "group",
+      "by",
+      "value"
+    ],
+    "question_spider": "Find the number of followers for each user.",
+    "question": "查找每个用户的追随者数量。",
+    "question_cspider": "查找每个用户的追随者数量。",
+    "Harold": "BLEU = 67.03, 84.6/75.0/63.6/50.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "用",
+      "户",
+      "的",
+      "关",
+      "注",
+      "者",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT count(*) FROM tweets",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "tweets"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "tweets"
+    ],
+    "question_spider": "Find the number of tweets in record.",
+    "question": "在记录中找到推文的数量。",
+    "question_cspider": "在记录中找到推文的数量。",
+    "Harold": "BLEU = 0.00, 90.9/50.0/22.2/0.0 (BP=0.913, ratio=0.917, hyp_len=11, ref_len=12)",
+    "question_toks": [
+      "查",
+      "找",
+      "记",
+      "录",
+      "中",
+      "的",
+      "推",
+      "文",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT count(DISTINCT UID) FROM tweets",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "UID",
+      ")",
+      "FROM",
+      "tweets"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "uid",
+      ")",
+      "from",
+      "tweets"
+    ],
+    "question_spider": "Find the number of users who posted some tweets.",
+    "question": "查找发布了的推文的用户的数量。",
+    "question_cspider": "查找发布了的推文的用户的数量。",
+    "Harold": "BLEU = 49.66, 85.7/69.2/50.0/27.3 (BP=0.931, ratio=0.933, hyp_len=14, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "发",
+      "布",
+      "一",
+      "些",
+      "推",
+      "文",
+      "的",
+      "用",
+      "户",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                4,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT name ,  email FROM user_profiles WHERE name LIKE '%Swift%'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "email",
+      "FROM",
+      "user_profiles",
+      "WHERE",
+      "name",
+      "LIKE",
+      "'",
+      "%",
+      "Swift",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "email",
+      "from",
+      "user_profiles",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question_spider": "Find the name and email of the user whose name contains the word ‘Swift’.",
+    "question": "找出用户名字中含有“Swift”的人的名字和电子邮箱。",
+    "question_cspider": "找出用户名字中含有“Swift”的人的名字和电子邮箱。",
+    "Harold": "BLEU = 0.00, 56.0/12.5/4.3/0.0 (BP=0.961, ratio=0.962, hyp_len=25, ref_len=26)",
+    "question_toks": [
+      "查",
+      "找",
+      "名",
+      "称",
+      "和",
+      "包",
+      "含",
+      "“",
+      " ",
+      "S",
+      "w",
+      "i",
+      "f",
+      "t",
+      "”",
+      "一",
+      "词",
+      "的",
+      "用",
+      "户",
+      "的",
+      "电",
+      "子",
+      "邮",
+      "件",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"%Swift%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT name FROM user_profiles WHERE email LIKE '%superstar%' OR email LIKE '%edu%'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "user_profiles",
+      "WHERE",
+      "email",
+      "LIKE",
+      "'",
+      "%",
+      "superstar",
+      "%",
+      "'",
+      "OR",
+      "email",
+      "LIKE",
+      "'",
+      "%",
+      "edu",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "user_profiles",
+      "where",
+      "email",
+      "like",
+      "value",
+      "or",
+      "email",
+      "like",
+      "value"
+    ],
+    "question_spider": "Find the names of users whose emails contain ‘superstar’ or ‘edu’.",
+    "question": "找出电子邮箱中中含有“superstar”或是“edu”的用户的名字。",
+    "question_cspider": "找出电子邮箱中中含有“superstar”或是“edu”的用户的名字。",
+    "Harold": "BLEU = 62.74, 87.9/68.8/61.3/53.3 (BP=0.941, ratio=0.943, hyp_len=33, ref_len=35)",
+    "question_toks": [
+      "查",
+      "找",
+      "电",
+      "子",
+      "邮",
+      "件",
+      "中",
+      "包",
+      "含",
+      "“",
+      " ",
+      "s",
+      "u",
+      "p",
+      "e",
+      "r",
+      "s",
+      "t",
+      "a",
+      "r",
+      "”",
+      "或",
+      "“",
+      " ",
+      "e",
+      "d",
+      "u",
+      "”",
+      "的",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"%superstar%\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"%edu%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT text FROM tweets WHERE text LIKE '%intern%'",
+    "query_toks": [
+      "SELECT",
+      "text",
+      "FROM",
+      "tweets",
+      "WHERE",
+      "text",
+      "LIKE",
+      "'",
+      "%",
+      "intern",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "text",
+      "from",
+      "tweets",
+      "where",
+      "text",
+      "like",
+      "value"
+    ],
+    "question_spider": "Return the text of tweets about the topic 'intern'.",
+    "question": "返回关于“intern”主题的推文。",
+    "question_cspider": "返回关于“intern”主题的推文。",
+    "Harold": "BLEU = 54.11, 86.7/64.3/46.2/33.3 (BP=1.000, ratio=1.071, hyp_len=15, ref_len=14)",
+    "question_toks": [
+      "返",
+      "回",
+      "有",
+      "关",
+      "“",
+      "实",
+      "习",
+      "生",
+      "”",
+      "主",
+      "题",
+      "的",
+      "推",
+      "文",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"%intern%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT name ,  email FROM user_profiles WHERE followers  >  1000",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "email",
+      "FROM",
+      "user_profiles",
+      "WHERE",
+      "followers",
+      ">",
+      "1000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "email",
+      "from",
+      "user_profiles",
+      "where",
+      "followers",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the name and email of the users who have more than 1000 followers.",
+    "question": "查找拥有超过1000个追随者的用户的姓名和电子邮件。",
+    "question_cspider": "查找拥有超过1000个追随者的用户的姓名和电子邮件。",
+    "Harold": "BLEU = 85.31, 92.3/88.0/83.3/78.3 (BP=1.000, ratio=1.000, hyp_len=26, ref_len=26)",
+    "question_toks": [
+      "查",
+      "找",
+      "拥",
+      "有",
+      "超",
+      "过",
+      "1",
+      "0",
+      "0",
+      "0",
+      "个",
+      "关",
+      "注",
+      "者",
+      "的",
+      "用",
+      "户",
+      "的",
+      "姓",
+      "名",
+      "和",
+      "电",
+      "子",
+      "邮",
+      "件",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          1000,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT T1.name FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f1 GROUP BY T2.f1 HAVING count(*)  >  (SELECT count(*) FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f1 WHERE T1.name  =  'Tyler Swift')",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "follows",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.f1",
+      "GROUP",
+      "BY",
+      "T2.f1",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "(",
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "follows",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.f1",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Tyler",
+      "Swift",
+      "'",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "follows",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "f1",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "f1",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "(",
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "follows",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "f1",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value",
+      ")"
+    ],
+    "question_spider": "Find the names of the users whose number of followers is greater than that of the user named \"Tyler Swift\".",
+    "question": "查找追随者数量大于名为“Tyler Swift”的用户的用户名称。",
+    "question_cspider": "查找追随者数量大于名为“Tyler Swift”的用户的用户名称。",
+    "Harold": "BLEU = 43.31, 60.6/50.0/38.7/30.0 (BP=1.000, ratio=1.320, hyp_len=33, ref_len=25)",
+    "question_toks": [
+      "查",
+      "找",
+      "关",
+      "注",
+      "者",
+      "数",
+      "量",
+      "大",
+      "于",
+      "名",
+      "为",
+      "“",
+      " ",
+      "T",
+      "y",
+      "l",
+      "e",
+      "r",
+      " ",
+      "S",
+      "w",
+      "i",
+      "f",
+      "t",
+      "”",
+      "的",
+      "用",
+      "户",
+      "的",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ],
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      7,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    1,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  3,
+                  [
+                    0,
+                    [
+                      0,
+                      0,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    8,
+                    false
+                  ],
+                  null
+                ],
+                "\"Tyler Swift\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT T1.name ,  T1.email FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f1 GROUP BY T2.f1 HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.email",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "follows",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.f1",
+      "GROUP",
+      "BY",
+      "T2.f1",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "email",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "follows",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "f1",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "f1",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the name and email for the users who have more than one follower.",
+    "question": "查找有不止一个跟随者的用户的姓名和电子邮件。",
+    "question_cspider": "查找有不止一个跟随者的用户的姓名和电子邮件。",
+    "Harold": "BLEU = 42.37, 76.2/50.0/36.8/27.8 (BP=0.953, ratio=0.955, hyp_len=21, ref_len=22)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "多",
+      "个",
+      "关",
+      "注",
+      "者",
+      "的",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "电",
+      "子",
+      "邮",
+      "件",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT T1.name FROM user_profiles AS T1 JOIN tweets AS T2 ON T1.uid  =  T2.uid GROUP BY T2.uid HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "tweets",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.uid",
+      "GROUP",
+      "BY",
+      "T2.uid",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "tweets",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "uid",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "uid",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the names of users who have more than one tweet.",
+    "question": "查找拥有不止一条推特的用户的姓名。",
+    "question_cspider": "查找拥有不止一条推特的用户的姓名。",
+    "Harold": "BLEU = 19.45, 66.7/28.6/15.4/8.3 (BP=0.875, ratio=0.882, hyp_len=15, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "多",
+      "个",
+      "推",
+      "文",
+      "的",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT T2.f1 FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f2 WHERE T1.name  =  \"Mary\" INTERSECT SELECT T2.f1 FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f2 WHERE T1.name  =  \"Susan\"",
+    "query_toks": [
+      "SELECT",
+      "T2.f1",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "follows",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.f2",
+      "WHERE",
+      "T1.name",
+      "=",
+      "``",
+      "Mary",
+      "''",
+      "INTERSECT",
+      "SELECT",
+      "T2.f1",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "follows",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.f2",
+      "WHERE",
+      "T1.name",
+      "=",
+      "``",
+      "Susan",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "f1",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "follows",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "f2",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "f1",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "follows",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "f2",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the id of users who are followed by Mary and Susan.",
+    "question": "找到被“Mary”和“Susan”跟随的用户的ID。",
+    "question_cspider": "找到被“Mary”和“Susan”跟随的用户的ID。",
+    "Harold": "BLEU = 0.00, 43.5/18.2/9.5/0.0 (BP=1.000, ratio=1.095, hyp_len=23, ref_len=21)",
+    "question_toks": [
+      "查",
+      "找",
+      "紧",
+      "随",
+      "其",
+      "后",
+      "的",
+      "M",
+      "a",
+      "r",
+      "y",
+      "和",
+      "S",
+      "u",
+      "s",
+      "a",
+      "n",
+      "的",
+      "用",
+      "户",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Mary\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            "\"Susan\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT T2.f1 FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f2 WHERE T1.name  =  \"Mary\" OR T1.name  =  \"Susan\"",
+    "query_toks": [
+      "SELECT",
+      "T2.f1",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "follows",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.f2",
+      "WHERE",
+      "T1.name",
+      "=",
+      "``",
+      "Mary",
+      "''",
+      "OR",
+      "T1.name",
+      "=",
+      "``",
+      "Susan",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "f1",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "follows",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "f2",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the id of users who are followed by Mary or Susan.",
+    "question": "找到“Mary”或“Susan”共同追随的用户的ID。",
+    "question_cspider": "找到“Mary”或“Susan”共同追随的用户的ID。",
+    "Harold": "BLEU = 33.07, 45.5/33.3/30.0/26.3 (BP=1.000, ratio=1.000, hyp_len=22, ref_len=22)",
+    "question_toks": [
+      "查",
+      "找",
+      "由",
+      "M",
+      "a",
+      "r",
+      "y",
+      "或",
+      "S",
+      "u",
+      "s",
+      "a",
+      "n",
+      "跟",
+      "随",
+      "的",
+      "用",
+      "户",
+      "的",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Mary\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Susan\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT name FROM user_profiles ORDER BY followers DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "user_profiles",
+      "ORDER",
+      "BY",
+      "followers",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "user_profiles",
+      "order",
+      "by",
+      "followers",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name of the user who has the largest number of followers.",
+    "question": "查找有最多追随者的用户的名称。",
+    "question_cspider": "查找有最多追随者的用户的名称。",
+    "Harold": "BLEU = 45.79, 75.0/53.3/35.7/30.8 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "关",
+      "注",
+      "者",
+      "数",
+      "量",
+      "最",
+      "多",
+      "的",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT name ,  email FROM user_profiles ORDER BY followers LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "email",
+      "FROM",
+      "user_profiles",
+      "ORDER",
+      "BY",
+      "followers",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "email",
+      "from",
+      "user_profiles",
+      "order",
+      "by",
+      "followers",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name and email of the user followed by the least number of people.",
+    "question": "找到有最少追随者的用户的名字和电子邮件。",
+    "question_cspider": "找到有最少追随者的用户的名字和电子邮件。",
+    "Harold": "BLEU = 29.40, 56.0/37.5/26.1/13.6 (BP=1.000, ratio=1.250, hyp_len=25, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "电",
+      "子",
+      "邮",
+      "件",
+      "，",
+      "然",
+      "后",
+      "查",
+      "找",
+      "人",
+      "数",
+      "最",
+      "少",
+      "的",
+      "用",
+      "户",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT name ,  followers FROM user_profiles ORDER BY followers DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "followers",
+      "FROM",
+      "user_profiles",
+      "ORDER",
+      "BY",
+      "followers",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "followers",
+      "from",
+      "user_profiles",
+      "order",
+      "by",
+      "followers",
+      "desc"
+    ],
+    "question_spider": "List the name and number of followers for each user, and sort the results by the number of followers in descending order.",
+    "question": "按跟随者数量的降序进行排序，列出每个用户的名称和追随者数目。",
+    "question_cspider": "按跟随者数量的降序进行排序，列出每个用户的名称和追随者数目。",
+    "Harold": "BLEU = 35.08, 67.6/44.4/28.6/17.6 (BP=1.000, ratio=1.233, hyp_len=37, ref_len=30)",
+    "question_toks": [
+      "列",
+      "出",
+      "每",
+      "个",
+      "用",
+      "户",
+      "的",
+      "关",
+      "注",
+      "者",
+      "的",
+      "名",
+      "称",
+      "和",
+      "关",
+      "注",
+      "者",
+      "数",
+      "量",
+      "，",
+      "并",
+      "按",
+      "关",
+      "注",
+      "者",
+      "数",
+      "量",
+      "降",
+      "序",
+      "对",
+      "结",
+      "果",
+      "进",
+      "行",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT name FROM user_profiles ORDER BY followers DESC LIMIT 5",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "user_profiles",
+      "ORDER",
+      "BY",
+      "followers",
+      "DESC",
+      "LIMIT",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "user_profiles",
+      "order",
+      "by",
+      "followers",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "List the names of 5 users followed by the largest number of other users.",
+    "question": "列出拥有追随者的最多的前5个用户的名字。",
+    "question_cspider": "列出拥有追随者的最多的前5个用户的名字。",
+    "Harold": "BLEU = 24.53, 45.8/30.4/18.2/14.3 (BP=1.000, ratio=1.200, hyp_len=24, ref_len=20)",
+    "question_toks": [
+      "列",
+      "出",
+      "5",
+      "个",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "，",
+      "然",
+      "后",
+      "列",
+      "出",
+      "其",
+      "他",
+      "用",
+      "户",
+      "的",
+      "最",
+      "大",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 5,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT text FROM tweets ORDER BY createdate",
+    "query_toks": [
+      "SELECT",
+      "text",
+      "FROM",
+      "tweets",
+      "ORDER",
+      "BY",
+      "createdate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "text",
+      "from",
+      "tweets",
+      "order",
+      "by",
+      "createdate"
+    ],
+    "question_spider": "List the text of all tweets in the order of date.",
+    "question": "按日期顺序列出所有推文的文本。",
+    "question_cspider": "按日期顺序列出所有推文的文本。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "按",
+      "日",
+      "期",
+      "顺",
+      "序",
+      "列",
+      "出",
+      "所",
+      "有",
+      "推",
+      "文",
+      "的",
+      "文",
+      "本",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT T1.name ,  count(*) FROM user_profiles AS T1 JOIN tweets AS T2 ON T1.uid  =  T2.uid GROUP BY T2.uid",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "tweets",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.uid",
+      "GROUP",
+      "BY",
+      "T2.uid"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "tweets",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "uid",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "uid"
+    ],
+    "question_spider": "Find the name of each user and number of tweets tweeted by each of them.",
+    "question": "找出每个用户的名字和推特的数量。",
+    "question_cspider": "找出每个用户的名字和推特的数量。",
+    "Harold": "BLEU = 29.11, 54.5/33.3/25.0/15.8 (BP=1.000, ratio=1.375, hyp_len=22, ref_len=16)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "以",
+      "及",
+      "每",
+      "个",
+      "用",
+      "户",
+      "发",
+      "的",
+      "推",
+      "文",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT T1.name ,  T1.partitionid FROM user_profiles AS T1 JOIN tweets AS T2 ON T1.uid  =  T2.uid GROUP BY T2.uid HAVING count(*)  <  2",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.partitionid",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "tweets",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.uid",
+      "GROUP",
+      "BY",
+      "T2.uid",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "partitionid",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "tweets",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "uid",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "uid",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "value"
+    ],
+    "question_spider": "Find the name and partition id for users who tweeted less than twice.",
+    "question": "查找发了不到两次推特的用户的名称和ID。",
+    "question_cspider": "查找发了不到两次推特的用户的名称和ID。",
+    "Harold": "BLEU = 41.95, 75.0/52.6/33.3/23.5 (BP=1.000, ratio=1.000, hyp_len=20, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "推",
+      "文",
+      "少",
+      "于",
+      "两",
+      "次",
+      "的",
+      "用",
+      "户",
+      "的",
+      "名",
+      "称",
+      "和",
+      "分",
+      "区",
+      "I",
+      "D",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT T1.name ,  count(*) FROM user_profiles AS T1 JOIN tweets AS T2 ON T1.uid  =  T2.uid GROUP BY T2.uid HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "user_profiles",
+      "AS",
+      "T1",
+      "JOIN",
+      "tweets",
+      "AS",
+      "T2",
+      "ON",
+      "T1.uid",
+      "=",
+      "T2.uid",
+      "GROUP",
+      "BY",
+      "T2.uid",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "user_profiles",
+      "as",
+      "t1",
+      "join",
+      "tweets",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "uid",
+      "=",
+      "t2",
+      ".",
+      "uid",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "uid",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the name of the user who tweeted more than once, and number of tweets tweeted by them.",
+    "question": "查找不止一次发推特的用户的姓名，以及他们发推特的次数。",
+    "question_cspider": "查找不止一次发推特的用户的姓名，以及他们发推特的次数。",
+    "Harold": "BLEU = 31.48, 76.0/37.5/26.1/18.2 (BP=0.923, ratio=0.926, hyp_len=25, ref_len=27)",
+    "question_toks": [
+      "查",
+      "找",
+      "发",
+      "过",
+      "多",
+      "次",
+      "推",
+      "文",
+      "的",
+      "用",
+      "户",
+      "名",
+      "，",
+      "以",
+      "及",
+      "他",
+      "们",
+      "发",
+      "过",
+      "推",
+      "文",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT avg(followers) FROM user_profiles WHERE UID NOT IN (SELECT UID FROM tweets)",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "followers",
+      ")",
+      "FROM",
+      "user_profiles",
+      "WHERE",
+      "UID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "UID",
+      "FROM",
+      "tweets",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "followers",
+      ")",
+      "from",
+      "user_profiles",
+      "where",
+      "uid",
+      "not",
+      "in",
+      "(",
+      "select",
+      "uid",
+      "from",
+      "tweets",
+      ")"
+    ],
+    "question_spider": "Find the average number of followers for the users who do not have any tweet.",
+    "question": "查找没有任何推特的用户的平均追随者数量。",
+    "question_cspider": "查找没有任何推特的用户的平均追随者数量。",
+    "Harold": "BLEU = 59.49, 80.0/68.4/55.6/41.2 (BP=1.000, ratio=1.000, hyp_len=20, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "没",
+      "有",
+      "任",
+      "何",
+      "鸣",
+      "叫",
+      "的",
+      "用",
+      "户",
+      "的",
+      "平",
+      "均",
+      "关",
+      "注",
+      "者",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT avg(followers) FROM user_profiles WHERE UID IN (SELECT UID FROM tweets)",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "followers",
+      ")",
+      "FROM",
+      "user_profiles",
+      "WHERE",
+      "UID",
+      "IN",
+      "(",
+      "SELECT",
+      "UID",
+      "FROM",
+      "tweets",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "followers",
+      ")",
+      "from",
+      "user_profiles",
+      "where",
+      "uid",
+      "in",
+      "(",
+      "select",
+      "uid",
+      "from",
+      "tweets",
+      ")"
+    ],
+    "question_spider": "Find the average number of followers for the users who had some tweets.",
+    "question": "查找有一些推文的用户的平均追随者数量。",
+    "question_cspider": "查找有一些推文的用户的平均追随者数量。",
+    "Harold": "BLEU = 67.09, 85.0/73.7/61.1/52.9 (BP=1.000, ratio=1.053, hyp_len=20, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "一",
+      "些",
+      "推",
+      "文",
+      "的",
+      "用",
+      "户",
+      "的",
+      "平",
+      "均",
+      "关",
+      "注",
+      "者",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          8,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "twitter_1",
+    "query": "SELECT max(followers) ,  sum(followers) FROM user_profiles",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "followers",
+      ")",
+      ",",
+      "sum",
+      "(",
+      "followers",
+      ")",
+      "FROM",
+      "user_profiles"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "followers",
+      ")",
+      ",",
+      "sum",
+      "(",
+      "followers",
+      ")",
+      "from",
+      "user_profiles"
+    ],
+    "question_spider": "Find the maximum and total number of followers of all users.",
+    "question": "查找所有用户的追随者的最大数量和总数。",
+    "question_cspider": "查找所有用户的追随者的最大数量和总数。",
+    "Harold": "BLEU = 44.54, 88.2/62.5/40.0/28.6 (BP=0.889, ratio=0.895, hyp_len=17, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "用",
+      "户",
+      "的",
+      "最",
+      "大",
+      "和",
+      "总",
+      "关",
+      "注",
+      "者",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

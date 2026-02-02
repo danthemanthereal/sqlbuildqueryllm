@@ -1,0 +1,4598 @@
+[
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Model_name FROM chip_model WHERE Launch_year BETWEEN 2002 AND 2004;",
+    "query_toks": [
+      "SELECT",
+      "Model_name",
+      "FROM",
+      "chip_model",
+      "WHERE",
+      "Launch_year",
+      "BETWEEN",
+      "2002",
+      "AND",
+      "2004",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "model_name",
+      "from",
+      "chip_model",
+      "where",
+      "launch_year",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question_spider": "the names of models that launched between 2002 and 2004.",
+    "question": "2002到2004年间推出的模型名称。",
+    "question_cspider": "2002到2004年间推出的模型名称。",
+    "Harold": "BLEU = 43.91, 77.3/57.1/40.0/21.1 (BP=1.000, ratio=1.158, hyp_len=22, ref_len=19)",
+    "question_toks": [
+      "在",
+      "2",
+      "0",
+      "0",
+      "2",
+      "年",
+      "至",
+      "2",
+      "0",
+      "0",
+      "4",
+      "年",
+      "之",
+      "间",
+      "推",
+      "出",
+      "的",
+      "型",
+      "号",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          2002,
+          2004
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Model_name ,  RAM_MiB FROM chip_model ORDER BY RAM_MiB ASC LIMIT 1;",
+    "query_toks": [
+      "SELECT",
+      "Model_name",
+      ",",
+      "RAM_MiB",
+      "FROM",
+      "chip_model",
+      "ORDER",
+      "BY",
+      "RAM_MiB",
+      "ASC",
+      "LIMIT",
+      "1",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "model_name",
+      ",",
+      "ram_mib",
+      "from",
+      "chip_model",
+      "order",
+      "by",
+      "ram_mib",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which model has the least amount of RAM? List the model name and the amount of RAM.",
+    "question": "哪种型号的RAM最少？列出模型名称和RAM的数量。",
+    "question_cspider": "哪种型号的RAM最少？列出模型名称和RAM的数量。",
+    "Harold": "BLEU = 74.11, 95.8/82.6/72.7/61.9 (BP=0.959, ratio=0.960, hyp_len=24, ref_len=25)",
+    "question_toks": [
+      "哪",
+      "种",
+      "型",
+      "号",
+      "的",
+      "R",
+      "A",
+      "M",
+      "最",
+      "少",
+      "？",
+      "列",
+      "出",
+      "型",
+      "号",
+      "名",
+      "称",
+      "和",
+      "R",
+      "A",
+      "M",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT chip_model ,  screen_mode FROM phone WHERE Hardware_Model_name = \"LG-P760\";",
+    "query_toks": [
+      "SELECT",
+      "chip_model",
+      ",",
+      "screen_mode",
+      "FROM",
+      "phone",
+      "WHERE",
+      "Hardware_Model_name",
+      "=",
+      "``",
+      "LG-P760",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "chip_model",
+      ",",
+      "screen_mode",
+      "from",
+      "phone",
+      "where",
+      "hardware_model_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the chip model and screen mode of the phone with hardware model name \"LG-P760\"?",
+    "question": "硬件型号为“LG-P760”的手机的芯片型号和屏幕模式是什么？",
+    "question_cspider": "硬件型号为“LG-P760”的手机的芯片型号和屏幕模式是什么？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=31, ref_len=31)",
+    "question_toks": [
+      "硬",
+      "件",
+      "型",
+      "号",
+      "为",
+      "“",
+      " ",
+      "L",
+      "G",
+      "-",
+      "P",
+      "7",
+      "6",
+      "0",
+      "”",
+      "的",
+      "手",
+      "机",
+      "的",
+      "芯",
+      "片",
+      "型",
+      "号",
+      "和",
+      "屏",
+      "幕",
+      "模",
+      "式",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"LG-P760\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT count(*) FROM phone WHERE Company_name = \"Nokia Corporation\";",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "phone",
+      "WHERE",
+      "Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "phone",
+      "where",
+      "company_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many phone hardware models are produced by the company named \"Nokia Corporation\"?",
+    "question": "“Nokia Corporation”生产了多少款手机硬件？",
+    "question_cspider": "“Nokia Corporation”生产了多少款手机硬件？",
+    "Harold": "BLEU = 17.73, 40.0/20.8/13.0/9.1 (BP=1.000, ratio=1.667, hyp_len=25, ref_len=15)",
+    "question_toks": [
+      "名",
+      "为",
+      "“",
+      "诺",
+      "基",
+      "亚",
+      "公",
+      "司",
+      "”",
+      "的",
+      "公",
+      "司",
+      "生",
+      "产",
+      "了",
+      "多",
+      "少",
+      "种",
+      "电",
+      "话",
+      "硬",
+      "件",
+      "模",
+      "型",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT max(T1.RAM_MiB) ,  min(T1.RAM_MiB) FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model WHERE T2.Company_name = \"Nokia Corporation\";",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "T1.RAM_MiB",
+      ")",
+      ",",
+      "min",
+      "(",
+      "T1.RAM_MiB",
+      ")",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "WHERE",
+      "T2.Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "ram_mib",
+      ")",
+      ",",
+      "min",
+      "(",
+      "t1",
+      ".",
+      "ram_mib",
+      ")",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "where",
+      "t2",
+      ".",
+      "company_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is maximum and minimum RAM size of phone produced by company named \"Nokia Corporation\"?",
+    "question": "“Nokia Corporation”生产的手机最大和最小RAM尺寸是多少？",
+    "question_cspider": "“Nokia Corporation”生产的手机最大和最小RAM尺寸是多少？",
+    "Harold": "BLEU = 41.11, 62.5/45.2/36.7/27.6 (BP=1.000, ratio=1.391, hyp_len=32, ref_len=23)",
+    "question_toks": [
+      "名",
+      "为",
+      "“",
+      "诺",
+      "基",
+      "亚",
+      "公",
+      "司",
+      "”",
+      "的",
+      "公",
+      "司",
+      "生",
+      "产",
+      "的",
+      "手",
+      "机",
+      "的",
+      "最",
+      "大",
+      "和",
+      "最",
+      "小",
+      "R",
+      "A",
+      "M",
+      "大",
+      "小",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT avg(T1.ROM_MiB) FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model WHERE T2.Company_name = \"Nokia Corporation\";",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "T1.ROM_MiB",
+      ")",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "WHERE",
+      "T2.Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "t1",
+      ".",
+      "rom_mib",
+      ")",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "where",
+      "t2",
+      ".",
+      "company_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the average ROM size of phones produced by the company named \"Nokia Corporation\"?",
+    "question": "“Nokia Corporation”生产的手机的平均ROM尺寸是多少？",
+    "question_cspider": "“Nokia Corporation”生产的手机的平均ROM尺寸是多少？",
+    "Harold": "BLEU = 29.77, 55.2/35.7/25.9/15.4 (BP=1.000, ratio=1.381, hyp_len=29, ref_len=21)",
+    "question_toks": [
+      "名",
+      "为",
+      "“",
+      "诺",
+      "基",
+      "亚",
+      "公",
+      "司",
+      "”",
+      "的",
+      "公",
+      "司",
+      "生",
+      "产",
+      "的",
+      "电",
+      "话",
+      "的",
+      "平",
+      "均",
+      "R",
+      "O",
+      "M",
+      "大",
+      "小",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T2.Hardware_Model_name ,  T2.Company_name FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model WHERE T1.Launch_year = 2002 OR T1.RAM_MiB  >  32;",
+    "query_toks": [
+      "SELECT",
+      "T2.Hardware_Model_name",
+      ",",
+      "T2.Company_name",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "WHERE",
+      "T1.Launch_year",
+      "=",
+      "2002",
+      "OR",
+      "T1.RAM_MiB",
+      ">",
+      "32",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "hardware_model_name",
+      ",",
+      "t2",
+      ".",
+      "company_name",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "where",
+      "t1",
+      ".",
+      "launch_year",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "ram_mib",
+      ">",
+      "value"
+    ],
+    "question_spider": "List the hardware model name and company name for all the phones that were launched in year 2002 or have RAM size greater than 32.",
+    "question": "列出所有在2002年推出或RAM大于32的手机的硬件型号名称和公司名称。",
+    "question_cspider": "列出所有在2002年推出或RAM大于32的手机的硬件型号名称和公司名称。",
+    "Harold": "BLEU = 82.49, 89.5/86.5/80.6/74.3 (BP=1.000, ratio=1.056, hyp_len=38, ref_len=36)",
+    "question_toks": [
+      "列",
+      "出",
+      "所",
+      "有",
+      "在",
+      "2",
+      "0",
+      "0",
+      "2",
+      "年",
+      "推",
+      "出",
+      "或",
+      "R",
+      "A",
+      "M",
+      "大",
+      "小",
+      "大",
+      "于",
+      "3",
+      "2",
+      "的",
+      "电",
+      "话",
+      "的",
+      "硬",
+      "件",
+      "型",
+      "号",
+      "名",
+      "称",
+      "和",
+      "公",
+      "司",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          2002,
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          32,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Hardware_Model_name ,  Company_name FROM phone WHERE Accreditation_type LIKE 'Full';",
+    "query_toks": [
+      "SELECT",
+      "Hardware_Model_name",
+      ",",
+      "Company_name",
+      "FROM",
+      "phone",
+      "WHERE",
+      "Accreditation_type",
+      "LIKE",
+      "'Full",
+      "'",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "hardware_model_name",
+      ",",
+      "company_name",
+      "from",
+      "phone",
+      "where",
+      "accreditation_type",
+      "like",
+      "value"
+    ],
+    "question_spider": "Find all phones that have word 'Full' in their accreditation types. List the Hardware Model name and Company name.",
+    "question": "查找在其认证类型中有“Full”字样的所有手机。列出硬件模型名称和公司名称。",
+    "question_cspider": "查找在其认证类型中有“全权”字样的所有手机。列出硬件模型名称和公司名称。",
+    "Harold": "BLEU = 45.53, 74.4/50.0/37.8/30.6 (BP=1.000, ratio=1.083, hyp_len=39, ref_len=36)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "在",
+      "其",
+      "认",
+      "证",
+      "类",
+      "型",
+      "中",
+      "带",
+      "有",
+      "单",
+      "词",
+      "“",
+      " ",
+      "F",
+      "u",
+      "l",
+      "l",
+      "”",
+      "的",
+      "电",
+      "话",
+      "。",
+      "列",
+      "出",
+      "硬",
+      "件",
+      "型",
+      "号",
+      "名",
+      "称",
+      "和",
+      "公",
+      "司",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          "\"Full\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T1.Char_cells ,  T1.Pixels ,  T1.Hardware_colours FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T2.Hardware_Model_name = \"LG-P760\";",
+    "query_toks": [
+      "SELECT",
+      "T1.Char_cells",
+      ",",
+      "T1.Pixels",
+      ",",
+      "T1.Hardware_colours",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "T2.Hardware_Model_name",
+      "=",
+      "``",
+      "LG-P760",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "char_cells",
+      ",",
+      "t1",
+      ".",
+      "pixels",
+      ",",
+      "t1",
+      ".",
+      "hardware_colours",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the Char cells, Pixels and Hardware colours for the screen of the phone whose hardware model name is \"LG-P760\".",
+    "question": "查找硬件型号为“LG-P760”的电话屏幕的Char单元、像素和硬件颜色。",
+    "question_cspider": "查找硬件型号为“LG-P760”的电话屏幕的Char单元、像素和硬件颜色。",
+    "Harold": "BLEU = 77.81, 88.9/82.9/76.5/72.7 (BP=0.973, ratio=0.973, hyp_len=36, ref_len=37)",
+    "question_toks": [
+      "查",
+      "找",
+      "硬",
+      "件",
+      "型",
+      "号",
+      "为",
+      "“",
+      " ",
+      "L",
+      "G",
+      "-",
+      "P",
+      "7",
+      "6",
+      "0",
+      "”",
+      "的",
+      "电",
+      "话",
+      "屏",
+      "幕",
+      "的",
+      "字",
+      "符",
+      "单",
+      "元",
+      "格",
+      "，",
+      "像",
+      "素",
+      "和",
+      "硬",
+      "件",
+      "颜",
+      "色",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"LG-P760\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T2.Hardware_Model_name ,  T2.Company_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.Type  =  \"Graphics\";",
+    "query_toks": [
+      "SELECT",
+      "T2.Hardware_Model_name",
+      ",",
+      "T2.Company_name",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "T1.Type",
+      "=",
+      "``",
+      "Graphics",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "hardware_model_name",
+      ",",
+      "t2",
+      ".",
+      "company_name",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the hardware model name and company name for the phone whose screen mode type is \"Graphics.\"",
+    "question": "列出屏幕模式类型为“Graphics.”的电话的硬件型号名称和公司名称。",
+    "question_cspider": "列出屏幕模式类型为“Graphics.”的电话的硬件型号名称和公司名称。",
+    "Harold": "BLEU = 82.72, 93.3/86.2/78.6/74.1 (BP=1.000, ratio=1.034, hyp_len=30, ref_len=29)",
+    "question_toks": [
+      "列",
+      "出",
+      "其",
+      "屏",
+      "幕",
+      "模",
+      "式",
+      "类",
+      "型",
+      "为",
+      "“",
+      "图",
+      "形",
+      "”",
+      "的",
+      "电",
+      "话",
+      "的",
+      "硬",
+      "件",
+      "型",
+      "号",
+      "名",
+      "称",
+      "和",
+      "公",
+      "司",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Graphics\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Company_name ,  count(*) FROM phone GROUP BY Company_name ORDER BY count(*) ASC LIMIT 1;",
+    "query_toks": [
+      "SELECT",
+      "Company_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Company_name",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "company_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "company_name",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name of the company that has the least number of phone models. List the company name and the number of phone model produced by that company.",
+    "question": "查找手机型号最少的公司名称。列出该公司生产的手机型号和公司名称。",
+    "question_cspider": "查找手机型号最少的公司名称。列出该公司生产的手机型号和公司名称。",
+    "Harold": "BLEU = 53.15, 84.8/62.5/45.2/33.3 (BP=1.000, ratio=1.031, hyp_len=33, ref_len=32)",
+    "question_toks": [
+      "查",
+      "找",
+      "电",
+      "话",
+      "型",
+      "号",
+      "最",
+      "少",
+      "的",
+      "公",
+      "司",
+      "的",
+      "名",
+      "称",
+      "。",
+      "列",
+      "出",
+      "公",
+      "司",
+      "名",
+      "称",
+      "和",
+      "该",
+      "公",
+      "司",
+      "生",
+      "产",
+      "的",
+      "电",
+      "话",
+      "型",
+      "号",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Company_name FROM phone GROUP BY Company_name HAVING count(*)  >  1;",
+    "query_toks": [
+      "SELECT",
+      "Company_name",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Company_name",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "company_name",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "company_name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "List the name of the company that produced more than one phone model.",
+    "question": "列出生产一个以上手机型号的公司的名称。",
+    "question_cspider": "列出生产一个以上手机型号的公司的名称。",
+    "Harold": "BLEU = 68.89, 94.1/81.2/73.3/64.3 (BP=0.889, ratio=0.895, hyp_len=17, ref_len=19)",
+    "question_toks": [
+      "列",
+      "出",
+      "生",
+      "产",
+      "多",
+      "个",
+      "手",
+      "机",
+      "型",
+      "号",
+      "的",
+      "公",
+      "司",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT max(used_kb) , min(used_kb) , avg(used_kb) FROM screen_mode;",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "used_kb",
+      ")",
+      ",",
+      "min",
+      "(",
+      "used_kb",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "used_kb",
+      ")",
+      "FROM",
+      "screen_mode",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "used_kb",
+      ")",
+      ",",
+      "min",
+      "(",
+      "used_kb",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "used_kb",
+      ")",
+      "from",
+      "screen_mode"
+    ],
+    "question_spider": "List the maximum, minimum and average number of used kb in screen mode.",
+    "question": "列出屏幕模式中使用的KB的最大、最小和平均数。",
+    "question_cspider": "列出屏幕模式中使用的KB的最大、最小和平均数。",
+    "Harold": "BLEU = 50.32, 90.9/71.4/45.0/26.3 (BP=0.956, ratio=0.957, hyp_len=22, ref_len=23)",
+    "question_toks": [
+      "列",
+      "出",
+      "屏",
+      "幕",
+      "模",
+      "式",
+      "下",
+      "使",
+      "用",
+      "的",
+      "最",
+      "大",
+      "，",
+      "最",
+      "小",
+      "和",
+      "平",
+      "均",
+      "k",
+      "b",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T2.Hardware_Model_name FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model WHERE T1.Launch_year = 2002 ORDER BY T1.RAM_MiB DESC LIMIT 1;",
+    "query_toks": [
+      "SELECT",
+      "T2.Hardware_Model_name",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "WHERE",
+      "T1.Launch_year",
+      "=",
+      "2002",
+      "ORDER",
+      "BY",
+      "T1.RAM_MiB",
+      "DESC",
+      "LIMIT",
+      "1",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "where",
+      "t1",
+      ".",
+      "launch_year",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "ram_mib",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "List the name of the phone model launched in year 2002 and with the highest RAM size.",
+    "question": "列出2002年推出的具有最高RAM大小的手机型号的名称。",
+    "question_cspider": "列出2002年推出的具有最高RAM大小的手机型号的名称。",
+    "Harold": "BLEU = 90.25, 96.4/92.6/88.5/84.0 (BP=1.000, ratio=1.000, hyp_len=28, ref_len=28)",
+    "question_toks": [
+      "列",
+      "出",
+      "2",
+      "0",
+      "0",
+      "2",
+      "年",
+      "推",
+      "出",
+      "的",
+      "具",
+      "有",
+      "最",
+      "大",
+      "R",
+      "A",
+      "M",
+      "大",
+      "小",
+      "的",
+      "手",
+      "机",
+      "型",
+      "号",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          2002,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T1.WiFi , T3.Type FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model JOIN screen_mode AS T3 ON T2.screen_mode = T3.Graphics_mode WHERE T2.Hardware_Model_name = \"LG-P760\";",
+    "query_toks": [
+      "SELECT",
+      "T1.WiFi",
+      ",",
+      "T3.Type",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "JOIN",
+      "screen_mode",
+      "AS",
+      "T3",
+      "ON",
+      "T2.screen_mode",
+      "=",
+      "T3.Graphics_mode",
+      "WHERE",
+      "T2.Hardware_Model_name",
+      "=",
+      "``",
+      "LG-P760",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "wifi",
+      ",",
+      "t3",
+      ".",
+      "type",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "join",
+      "screen_mode",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "screen_mode",
+      "=",
+      "t3",
+      ".",
+      "graphics_mode",
+      "where",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the wifi and screen mode type of the hardware model named \"LG-P760\"?",
+    "question": "名为“LG-P760”的硬件模型的WiFi和屏幕模式类型？",
+    "question_cspider": "名为“LG-P760”的硬件模型的WiFi和屏幕模式类型？",
+    "Harold": "BLEU = 87.63, 90.6/87.1/86.7/86.2 (BP=1.000, ratio=1.103, hyp_len=32, ref_len=29)",
+    "question_toks": [
+      "名",
+      "为",
+      "“",
+      " ",
+      "L",
+      "G",
+      "-",
+      "P",
+      "7",
+      "6",
+      "0",
+      "”",
+      "的",
+      "硬",
+      "件",
+      "模",
+      "型",
+      "的",
+      "w",
+      "i",
+      "f",
+      "i",
+      "和",
+      "屏",
+      "幕",
+      "模",
+      "式",
+      "类",
+      "型",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"LG-P760\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T2.Hardware_Model_name FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model JOIN screen_mode AS T3 ON T2.screen_mode = T3.Graphics_mode WHERE T3.Type = \"Text\" OR T1.RAM_MiB  >  32;",
+    "query_toks": [
+      "SELECT",
+      "T2.Hardware_Model_name",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "JOIN",
+      "screen_mode",
+      "AS",
+      "T3",
+      "ON",
+      "T2.screen_mode",
+      "=",
+      "T3.Graphics_mode",
+      "WHERE",
+      "T3.Type",
+      "=",
+      "``",
+      "Text",
+      "''",
+      "OR",
+      "T1.RAM_MiB",
+      ">",
+      "32",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "join",
+      "screen_mode",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "screen_mode",
+      "=",
+      "t3",
+      ".",
+      "graphics_mode",
+      "where",
+      "t3",
+      ".",
+      "type",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "ram_mib",
+      ">",
+      "value"
+    ],
+    "question_spider": "List the hardware model name for the phones that have screen mode type \"Text\" or RAM size greater than 32.",
+    "question": "列出屏幕模式类型为“Text”或RAM大于32的手机的硬件型号名称。",
+    "question_cspider": "列出屏幕模式类型为“Text”或RAM大于32的手机的硬件型号名称。",
+    "Harold": "BLEU = 80.27, 88.2/84.8/78.1/71.0 (BP=1.000, ratio=1.062, hyp_len=34, ref_len=32)",
+    "question_toks": [
+      "列",
+      "出",
+      "屏",
+      "幕",
+      "模",
+      "式",
+      "类",
+      "型",
+      "为",
+      "“",
+      "文",
+      "本",
+      "”",
+      "或",
+      "R",
+      "A",
+      "M",
+      "大",
+      "小",
+      "大",
+      "于",
+      "3",
+      "2",
+      "的",
+      "电",
+      "话",
+      "的",
+      "硬",
+      "件",
+      "型",
+      "号",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Text\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          32,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT DISTINCT T2.Hardware_Model_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.Type  =  \"Graphics\" OR t2.Company_name  =  \"Nokia Corporation\"",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.Hardware_Model_name",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "T1.Type",
+      "=",
+      "``",
+      "Graphics",
+      "''",
+      "OR",
+      "t2.Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value",
+      "or",
+      "t2",
+      ".",
+      "company_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the hardware model name for the phones that were produced by \"Nokia Corporation\" or whose screen mode type is \"Graphics.\"",
+    "question": "列出“Nokia Corporation”生产的或屏幕模式类型为“Graphics.”的手机的硬件型号名称。",
+    "question_cspider": "列出“Nokia Corporation”生产的或屏幕模式类型为“Graphics.”的手机的硬件型号名称。",
+    "Harold": "BLEU = 52.24, 74.3/58.8/45.5/37.5 (BP=1.000, ratio=1.094, hyp_len=35, ref_len=32)",
+    "question_toks": [
+      "列",
+      "出",
+      "由",
+      "“",
+      "诺",
+      "基",
+      "亚",
+      "公",
+      "司",
+      "”",
+      "生",
+      "产",
+      "或",
+      "屏",
+      "幕",
+      "模",
+      "式",
+      "类",
+      "型",
+      "为",
+      "“",
+      "图",
+      "形",
+      "”",
+      "的",
+      "电",
+      "话",
+      "的",
+      "硬",
+      "件",
+      "型",
+      "号",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Graphics\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT DISTINCT T2.Hardware_Model_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE t2.Company_name  =  \"Nokia Corporation\" AND T1.Type != \"Text\";",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.Hardware_Model_name",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "t2.Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''",
+      "AND",
+      "T1.Type",
+      "!",
+      "=",
+      "``",
+      "Text",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t2",
+      ".",
+      "company_name",
+      "=",
+      "value",
+      "and",
+      "t1",
+      ".",
+      "type",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the hardware model name for the phons that were produced by \"Nokia Corporation\" but whose screen mode type is not Text.",
+    "question": "列出“Nokia Corporation”生产但是其屏幕模式类型不是“Text”的电话的硬件型号名称。",
+    "question_cspider": "列出“Nokia Corporation”生产但是其屏幕模式类型不是“Text”的电话的硬件型号名称。",
+    "Harold": "BLEU = 64.64, 83.8/69.4/60.0/50.0 (BP=1.000, ratio=1.088, hyp_len=37, ref_len=34)",
+    "question_toks": [
+      "列",
+      "出",
+      "“",
+      "诺",
+      "基",
+      "亚",
+      "公",
+      "司",
+      "”",
+      "生",
+      "产",
+      "的",
+      "电",
+      "话",
+      "的",
+      "硬",
+      "件",
+      "型",
+      "号",
+      "名",
+      "称",
+      "，",
+      "但",
+      "其",
+      "屏",
+      "幕",
+      "模",
+      "式",
+      "类",
+      "型",
+      "不",
+      "是",
+      "“",
+      "文",
+      "本",
+      "”",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Text\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT DISTINCT T2.Hardware_Model_name , T2.Company_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.used_kb BETWEEN 10 AND 15;",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.Hardware_Model_name",
+      ",",
+      "T2.Company_name",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "T1.used_kb",
+      "BETWEEN",
+      "10",
+      "AND",
+      "15",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "hardware_model_name",
+      ",",
+      "t2",
+      ".",
+      "company_name",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t1",
+      ".",
+      "used_kb",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question_spider": "List the phone hardware model and company name for the phones whose screen usage in kb is between 10 and 15.",
+    "question": "列出屏幕使用在10到15KB之间的手机的硬件型号和公司名称。",
+    "question_cspider": "列出屏幕使用在10到15KB之间的手机的硬件型号和公司名称。",
+    "Harold": "BLEU = 63.22, 83.9/70.0/58.6/46.4 (BP=1.000, ratio=1.033, hyp_len=31, ref_len=30)",
+    "question_toks": [
+      "列",
+      "出",
+      "屏",
+      "幕",
+      "使",
+      "用",
+      "率",
+      "在",
+      "1",
+      "0",
+      "到",
+      "1",
+      "5",
+      "之",
+      "间",
+      "的",
+      "电",
+      "话",
+      "的",
+      "电",
+      "话",
+      "硬",
+      "件",
+      "型",
+      "号",
+      "和",
+      "公",
+      "司",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          10,
+          15
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Accreditation_type ,  count(*) FROM phone GROUP BY Accreditation_type",
+    "query_toks": [
+      "SELECT",
+      "Accreditation_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Accreditation_type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "accreditation_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "accreditation_type"
+    ],
+    "question_spider": "Find the number of phones for each accreditation type.",
+    "question": "查找每个认证类型的电话数量。",
+    "question_cspider": "查找每个认证类型的电话数量。",
+    "Harold": "BLEU = 78.25, 92.9/84.6/75.0/63.6 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "种",
+      "认",
+      "证",
+      "类",
+      "型",
+      "的",
+      "电",
+      "话",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          17,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Accreditation_type ,  count(*) FROM phone GROUP BY Accreditation_type",
+    "query_toks": [
+      "SELECT",
+      "Accreditation_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Accreditation_type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "accreditation_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "accreditation_type"
+    ],
+    "question_spider": "How many phones belongs to each accreditation type?",
+    "question": "每种认证类型有多少手机？",
+    "question_cspider": "每种认证类型有多少手机？",
+    "Harold": "BLEU = 66.52, 76.9/66.7/63.6/60.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "每",
+      "种",
+      "认",
+      "证",
+      "类",
+      "型",
+      "有",
+      "多",
+      "少",
+      "部",
+      "电",
+      "话",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          17,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Accreditation_level FROM phone GROUP BY Accreditation_level HAVING count(*)  >  3",
+    "query_toks": [
+      "SELECT",
+      "Accreditation_level",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Accreditation_level",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "accreditation_level",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "accreditation_level",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the accreditation level that more than 3 phones use.",
+    "question": "找到超过3部手机使用的认证级别。",
+    "question_cspider": "找到超过3部手机使用的认证级别。",
+    "Harold": "BLEU = 54.24, 75.0/60.0/50.0/38.5 (BP=1.000, ratio=1.000, hyp_len=16, ref_len=16)",
+    "question_toks": [
+      "查",
+      "找",
+      "超",
+      "过",
+      "3",
+      "个",
+      "电",
+      "话",
+      "使",
+      "用",
+      "的",
+      "认",
+      "证",
+      "级",
+      "别",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          18,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT * FROM chip_model",
+    "query_toks": [
+      "SELECT",
+      "*",
+      "FROM",
+      "chip_model"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "*",
+      "from",
+      "chip_model"
+    ],
+    "question_spider": "Find the details for all chip models.",
+    "question": "找到所有芯片模型的信息。",
+    "question_cspider": "找到所有芯片模型的信息。",
+    "Harold": "BLEU = 28.11, 71.4/38.5/25.0/9.1 (BP=1.000, ratio=1.167, hyp_len=14, ref_len=12)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "芯",
+      "片",
+      "型",
+      "号",
+      "的",
+      "详",
+      "细",
+      "信",
+      "息",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT count(*) FROM chip_model WHERE wifi  =  'No'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "chip_model",
+      "WHERE",
+      "wifi",
+      "=",
+      "'No",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "chip_model",
+      "where",
+      "wifi",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many models do not have the wifi function?",
+    "question": "有多少型号没有WiFi功能？",
+    "question_cspider": "有多少型号没有WiFi功能？",
+    "Harold": "BLEU = 61.63, 78.6/69.2/58.3/45.5 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "多",
+      "少",
+      "型",
+      "号",
+      "不",
+      "具",
+      "备",
+      "w",
+      "i",
+      "f",
+      "i",
+      "功",
+      "能",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"No\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT count(*) FROM chip_model WHERE wifi  =  'No'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "chip_model",
+      "WHERE",
+      "wifi",
+      "=",
+      "'No",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "chip_model",
+      "where",
+      "wifi",
+      "=",
+      "value"
+    ],
+    "question_spider": "Count the number of chip model that do not have wifi.",
+    "question": "统计没有WiFi的芯片模型的数量。",
+    "question_cspider": "统计没有WiFi的芯片模型的数量。",
+    "Harold": "BLEU = 65.31, 88.2/68.8/60.0/50.0 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "计",
+      "算",
+      "没",
+      "有",
+      "w",
+      "i",
+      "f",
+      "i",
+      "的",
+      "芯",
+      "片",
+      "型",
+      "号",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"No\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT model_name FROM chip_model ORDER BY launch_year",
+    "query_toks": [
+      "SELECT",
+      "model_name",
+      "FROM",
+      "chip_model",
+      "ORDER",
+      "BY",
+      "launch_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "model_name",
+      "from",
+      "chip_model",
+      "order",
+      "by",
+      "launch_year"
+    ],
+    "question_spider": "List all the model names sorted by their launch year.",
+    "question": "按照他们推出年度顺序列出所有型号名称。",
+    "question_cspider": "按照他们推出年度顺序列出所有型号名称。",
+    "Harold": "BLEU = 36.79, 66.7/41.2/31.2/26.7 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "列",
+      "出",
+      "按",
+      "其",
+      "发",
+      "布",
+      "年",
+      "份",
+      "排",
+      "序",
+      "的",
+      "所",
+      "有",
+      "型",
+      "号",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT avg(RAM_MiB) FROM chip_model WHERE model_name NOT IN (SELECT chip_model FROM phone)",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "RAM_MiB",
+      ")",
+      "FROM",
+      "chip_model",
+      "WHERE",
+      "model_name",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "chip_model",
+      "FROM",
+      "phone",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "ram_mib",
+      ")",
+      "from",
+      "chip_model",
+      "where",
+      "model_name",
+      "not",
+      "in",
+      "(",
+      "select",
+      "chip_model",
+      "from",
+      "phone",
+      ")"
+    ],
+    "question_spider": "Find the average ram mib size of the chip models that are never used by any phone.",
+    "question": "查找从未被任何手机使用的芯片模型的平均ram大小。",
+    "question_cspider": "查找从未被任何手机使用的芯片模型的平均ram大小。",
+    "Harold": "BLEU = 55.82, 80.0/65.5/50.0/37.0 (BP=1.000, ratio=1.200, hyp_len=30, ref_len=25)",
+    "question_toks": [
+      "查",
+      "找",
+      "从",
+      "未",
+      "在",
+      "任",
+      "何",
+      "手",
+      "机",
+      "上",
+      "使",
+      "用",
+      "过",
+      "的",
+      "芯",
+      "片",
+      "模",
+      "型",
+      "的",
+      "平",
+      "均",
+      "r",
+      "a",
+      "m",
+      " ",
+      "m",
+      "i",
+      "b",
+      "大",
+      "小",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      20,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT model_name FROM chip_model EXCEPT SELECT chip_model FROM phone WHERE Accreditation_type  =  'Full'",
+    "query_toks": [
+      "SELECT",
+      "model_name",
+      "FROM",
+      "chip_model",
+      "EXCEPT",
+      "SELECT",
+      "chip_model",
+      "FROM",
+      "phone",
+      "WHERE",
+      "Accreditation_type",
+      "=",
+      "'Full",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "model_name",
+      "from",
+      "chip_model",
+      "except",
+      "select",
+      "chip_model",
+      "from",
+      "phone",
+      "where",
+      "accreditation_type",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the names of the chip models that are not used by any phone with full accreditation type.",
+    "question": "查找未被任何具有完全认证类型的手机使用的芯片型号的名称。",
+    "question_cspider": "查找未被任何具有完全认证类型的手机使用的芯片型号的名称。",
+    "Harold": "BLEU = 60.95, 79.3/67.9/55.6/46.2 (BP=1.000, ratio=1.036, hyp_len=29, ref_len=28)",
+    "question_toks": [
+      "查",
+      "找",
+      "没",
+      "有",
+      "任",
+      "何",
+      "具",
+      "有",
+      "完",
+      "整",
+      "认",
+      "证",
+      "类",
+      "型",
+      "的",
+      "电",
+      "话",
+      "所",
+      "使",
+      "用",
+      "的",
+      "芯",
+      "片",
+      "型",
+      "号",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  20,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            "\"Full\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT t1.pixels FROM screen_mode AS t1 JOIN phone AS t2 ON t1.Graphics_mode  =  t2.screen_mode WHERE t2.Accreditation_type  =  'Provisional' INTERSECT SELECT t1.pixels FROM screen_mode AS t1 JOIN phone AS t2 ON t1.Graphics_mode  =  t2.screen_mode WHERE t2.Accreditation_type  =  'Full'",
+    "query_toks": [
+      "SELECT",
+      "t1.pixels",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "t1",
+      "JOIN",
+      "phone",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Graphics_mode",
+      "=",
+      "t2.screen_mode",
+      "WHERE",
+      "t2.Accreditation_type",
+      "=",
+      "'Provisional",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "t1.pixels",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "t1",
+      "JOIN",
+      "phone",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Graphics_mode",
+      "=",
+      "t2.screen_mode",
+      "WHERE",
+      "t2.Accreditation_type",
+      "=",
+      "'Full",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "pixels",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t2",
+      ".",
+      "accreditation_type",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "pixels",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t2",
+      ".",
+      "accreditation_type",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the pixels of the screen modes that are used by both phones with full accreditation types and phones with Provisional accreditation types.",
+    "question": "查找具有完全认证类型的电话和具有临时认证类型的电话所使用的屏幕模式的像素。",
+    "question_cspider": "查找具有完全认证类型的电话和具有临时认证类型的电话所使用的屏幕模式的像素。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=37, ref_len=37)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "完",
+      "全",
+      "认",
+      "证",
+      "类",
+      "型",
+      "的",
+      "电",
+      "话",
+      "和",
+      "具",
+      "有",
+      "临",
+      "时",
+      "认",
+      "证",
+      "类",
+      "型",
+      "的",
+      "电",
+      "话",
+      "所",
+      "使",
+      "用",
+      "的",
+      "屏",
+      "幕",
+      "模",
+      "式",
+      "的",
+      "像",
+      "素",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          "\"Provisional\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            "\"Full\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  }
+]

@@ -1,0 +1,5219 @@
+[
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT count(*) FROM candidate",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "candidate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "candidate"
+    ],
+    "question_spider": "How many candidates are there?",
+    "question": "有多少候选人？",
+    "question_cspider": "有多少候选人？",
+    "Harold": "BLEU = 43.47, 71.4/50.0/40.0/25.0 (BP=1.000, ratio=1.000, hyp_len=7, ref_len=7)",
+    "question_toks": [
+      "有",
+      "几",
+      "位",
+      "候",
+      "选",
+      "人",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT count(*) FROM candidate",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "candidate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "candidate"
+    ],
+    "question_spider": "Count the number of candidates.",
+    "question": "统计候选人人数。",
+    "question_cspider": "统计候选人人数。",
+    "Harold": "BLEU = 0.00, 66.7/25.0/14.3/0.0 (BP=1.000, ratio=1.125, hyp_len=9, ref_len=8)",
+    "question_toks": [
+      "计",
+      "算",
+      "候",
+      "选",
+      "人",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT poll_source FROM candidate GROUP BY poll_source ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "poll_source",
+      "FROM",
+      "candidate",
+      "GROUP",
+      "BY",
+      "poll_source",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "poll_source",
+      "from",
+      "candidate",
+      "group",
+      "by",
+      "poll_source",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which poll resource provided the most number of candidate information?",
+    "question": "哪些投票资源提供了最多的候选信息？",
+    "question_cspider": "哪些投票资源提供了最多的候选信息？",
+    "Harold": "BLEU = 38.79, 68.4/50.0/35.3/18.8 (BP=1.000, ratio=1.118, hyp_len=19, ref_len=17)",
+    "question_toks": [
+      "哪",
+      "个",
+      "民",
+      "意",
+      "测",
+      "验",
+      "资",
+      "源",
+      "提",
+      "供",
+      "最",
+      "多",
+      "的",
+      "候",
+      "选",
+      "人",
+      "信",
+      "息",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT poll_source FROM candidate GROUP BY poll_source ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "poll_source",
+      "FROM",
+      "candidate",
+      "GROUP",
+      "BY",
+      "poll_source",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "poll_source",
+      "from",
+      "candidate",
+      "group",
+      "by",
+      "poll_source",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Return the poll resource associated with the most candidates.",
+    "question": "返回候选人最多的民意调查。",
+    "question_cspider": "返回候选人最多的民意调查。",
+    "Harold": "BLEU = 0.00, 50.0/20.0/0.0/0.0 (BP=1.000, ratio=1.231, hyp_len=16, ref_len=13)",
+    "question_toks": [
+      "返",
+      "回",
+      "与",
+      "最",
+      "多",
+      "候",
+      "选",
+      "者",
+      "关",
+      "联",
+      "的",
+      "投",
+      "票",
+      "资",
+      "源",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT support_rate FROM candidate ORDER BY support_rate DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "support_rate",
+      "FROM",
+      "candidate",
+      "ORDER",
+      "BY",
+      "support_rate",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "support_rate",
+      "from",
+      "candidate",
+      "order",
+      "by",
+      "support_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "what are the top 3 highest support rates?",
+    "question": "前3大支持率是什么？",
+    "question_cspider": "前3大支持率是什么？",
+    "Harold": "BLEU = 31.70, 66.7/45.5/30.0/11.1 (BP=1.000, ratio=1.200, hyp_len=12, ref_len=10)",
+    "question_toks": [
+      "支",
+      "持",
+      "率",
+      "最",
+      "高",
+      "的",
+      "3",
+      "个",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT support_rate FROM candidate ORDER BY support_rate DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "support_rate",
+      "FROM",
+      "candidate",
+      "ORDER",
+      "BY",
+      "support_rate",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "support_rate",
+      "from",
+      "candidate",
+      "order",
+      "by",
+      "support_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Return the top 3 greatest support rates.",
+    "question": "返回前3大支持率。",
+    "question_cspider": "返回前3大支持率。",
+    "Harold": "BLEU = 33.93, 63.6/50.0/33.3/12.5 (BP=1.000, ratio=1.222, hyp_len=11, ref_len=9)",
+    "question_toks": [
+      "返",
+      "回",
+      "前",
+      "三",
+      "个",
+      "最",
+      "高",
+      "支",
+      "持",
+      "率",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT Candidate_ID FROM candidate ORDER BY oppose_rate LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Candidate_ID",
+      "FROM",
+      "candidate",
+      "ORDER",
+      "BY",
+      "oppose_rate",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "candidate_id",
+      "from",
+      "candidate",
+      "order",
+      "by",
+      "oppose_rate",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the id of the candidate who got the lowest oppose rate.",
+    "question": "找到反对率最低的候选人的ID。",
+    "question_cspider": "找到反对率最低的候选人的ID。",
+    "Harold": "BLEU = 73.68, 81.2/73.3/71.4/69.2 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "找",
+      "到",
+      "反",
+      "对",
+      "率",
+      "最",
+      "低",
+      "的",
+      "候",
+      "选",
+      "人",
+      "的",
+      "身",
+      "份",
+      "证",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT Candidate_ID FROM candidate ORDER BY oppose_rate LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Candidate_ID",
+      "FROM",
+      "candidate",
+      "ORDER",
+      "BY",
+      "oppose_rate",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "candidate_id",
+      "from",
+      "candidate",
+      "order",
+      "by",
+      "oppose_rate",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the id of the candidate with the lowest oppose rate?",
+    "question": "反对率最低的候选人的身份是什么？",
+    "question_cspider": "反对率最低的候选人的身份是什么？",
+    "Harold": "BLEU = 61.00, 75.0/60.0/57.1/53.8 (BP=1.000, ratio=1.000, hyp_len=16, ref_len=16)",
+    "question_toks": [
+      "反",
+      "对",
+      "率",
+      "最",
+      "低",
+      "的",
+      "候",
+      "选",
+      "人",
+      "的",
+      "i",
+      "d",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT Support_rate ,  Consider_rate ,  Oppose_rate FROM candidate ORDER BY unsure_rate",
+    "query_toks": [
+      "SELECT",
+      "Support_rate",
+      ",",
+      "Consider_rate",
+      ",",
+      "Oppose_rate",
+      "FROM",
+      "candidate",
+      "ORDER",
+      "BY",
+      "unsure_rate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "support_rate",
+      ",",
+      "consider_rate",
+      ",",
+      "oppose_rate",
+      "from",
+      "candidate",
+      "order",
+      "by",
+      "unsure_rate"
+    ],
+    "question_spider": "Please list support, consider, and oppose rates for each candidate in ascending order by unsure rate.",
+    "question": "按不确定率升序列出每个候选人的支持，考虑和反对率。",
+    "question_cspider": "按不确定率升序列出每个候选人的支持，考虑和反对率。",
+    "Harold": "BLEU = 75.39, 88.9/80.8/72.0/62.5 (BP=1.000, ratio=1.080, hyp_len=27, ref_len=25)",
+    "question_toks": [
+      "请",
+      "按",
+      "不",
+      "确",
+      "定",
+      "的",
+      "升",
+      "序",
+      "列",
+      "出",
+      "对",
+      "每",
+      "个",
+      "候",
+      "选",
+      "人",
+      "的",
+      "支",
+      "持",
+      "，",
+      "考",
+      "虑",
+      "和",
+      "反",
+      "对",
+      "率",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT Support_rate ,  Consider_rate ,  Oppose_rate FROM candidate ORDER BY unsure_rate",
+    "query_toks": [
+      "SELECT",
+      "Support_rate",
+      ",",
+      "Consider_rate",
+      ",",
+      "Oppose_rate",
+      "FROM",
+      "candidate",
+      "ORDER",
+      "BY",
+      "unsure_rate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "support_rate",
+      ",",
+      "consider_rate",
+      ",",
+      "oppose_rate",
+      "from",
+      "candidate",
+      "order",
+      "by",
+      "unsure_rate"
+    ],
+    "question_spider": "What are the support, consider, and oppose rates of each candidate, ordered ascending by their unsure rate?",
+    "question": "按不确定率升序排列的每个候选人的支持率、考虑率和反对率是多少？",
+    "question_cspider": "按不确定率升序排列的每个候选人的支持率、考虑率和反对率是多少？",
+    "Harold": "BLEU = 65.66, 84.4/71.0/60.0/51.7 (BP=1.000, ratio=1.032, hyp_len=32, ref_len=31)",
+    "question_toks": [
+      "按",
+      "照",
+      "不",
+      "确",
+      "定",
+      "性",
+      "顺",
+      "序",
+      "升",
+      "序",
+      "排",
+      "列",
+      "的",
+      "每",
+      "个",
+      "候",
+      "选",
+      "人",
+      "的",
+      "支",
+      "持",
+      "，",
+      "考",
+      "虑",
+      "和",
+      "反",
+      "对",
+      "率",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT poll_source FROM candidate ORDER BY oppose_rate DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "poll_source",
+      "FROM",
+      "candidate",
+      "ORDER",
+      "BY",
+      "oppose_rate",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "poll_source",
+      "from",
+      "candidate",
+      "order",
+      "by",
+      "oppose_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "which poll source does the highest oppose rate come from?",
+    "question": "针对那一项的民意调查有最高的反对率？",
+    "question_cspider": "针对那一项的民意调查有最高的反对率？",
+    "Harold": "BLEU = 25.57, 68.8/46.7/28.6/7.7 (BP=0.882, ratio=0.889, hyp_len=16, ref_len=18)",
+    "question_toks": [
+      "反",
+      "对",
+      "率",
+      "最",
+      "高",
+      "的",
+      "是",
+      "哪",
+      "个",
+      "民",
+      "意",
+      "调",
+      "查",
+      "来",
+      "源",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT poll_source FROM candidate ORDER BY oppose_rate DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "poll_source",
+      "FROM",
+      "candidate",
+      "ORDER",
+      "BY",
+      "oppose_rate",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "poll_source",
+      "from",
+      "candidate",
+      "order",
+      "by",
+      "oppose_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Return the poll source corresponding to the candidate who has the oppose rate.",
+    "question": "返回最有反对率的候选人对应的民意调查。",
+    "question_cspider": "返回最有反对率的候选人对应的民意调查。",
+    "Harold": "BLEU = 61.40, 81.8/66.7/55.0/47.4 (BP=1.000, ratio=1.158, hyp_len=22, ref_len=19)",
+    "question_toks": [
+      "返",
+      "回",
+      "与",
+      "具",
+      "有",
+      "反",
+      "对",
+      "率",
+      "的",
+      "候",
+      "选",
+      "人",
+      "相",
+      "对",
+      "应",
+      "的",
+      "民",
+      "意",
+      "调",
+      "查",
+      "源",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT name FROM people ORDER BY date_of_birth",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "people",
+      "ORDER",
+      "BY",
+      "date_of_birth"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "order",
+      "by",
+      "date_of_birth"
+    ],
+    "question_spider": "List all people names in the order of their date of birth from old to young.",
+    "question": "按出生日期顺序从年长到年轻列出所有人的名字。",
+    "question_cspider": "按出生日期顺序从年长到年轻列出所有人的名字。",
+    "Harold": "BLEU = 42.43, 78.9/50.0/41.2/37.5 (BP=0.854, ratio=0.864, hyp_len=19, ref_len=22)",
+    "question_toks": [
+      "按",
+      "年",
+      "龄",
+      "从",
+      "大",
+      "到",
+      "小",
+      "的",
+      "顺",
+      "序",
+      "列",
+      "出",
+      "所",
+      "有",
+      "人",
+      "的",
+      "名",
+      "字",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT name FROM people ORDER BY date_of_birth",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "people",
+      "ORDER",
+      "BY",
+      "date_of_birth"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "order",
+      "by",
+      "date_of_birth"
+    ],
+    "question_spider": "What are the names of all people, ordered by their date of birth?",
+    "question": "按出生日期顺序列出所有人的名字是什么？",
+    "question_cspider": "按出生日期顺序列出所有人的名字是什么？",
+    "Harold": "BLEU = 40.53, 81.2/53.3/42.9/30.8 (BP=0.829, ratio=0.842, hyp_len=16, ref_len=19)",
+    "question_toks": [
+      "所",
+      "有",
+      "人",
+      "的",
+      "名",
+      "字",
+      "，",
+      "按",
+      "其",
+      "出",
+      "生",
+      "日",
+      "期",
+      "排",
+      "序",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT avg(height) ,  avg(weight) FROM people WHERE sex  =  “M”",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "height",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      "FROM",
+      "people",
+      "WHERE",
+      "sex",
+      "=",
+      "'M",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "height",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      "from",
+      "people",
+      "where",
+      "sex",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the average height and weight for all males (sex is M).",
+    "question": "找到所有男性的平均身高和体重(性别是“M”)。",
+    "question_cspider": "找到所有男性的平均身高和体重(性别是“M”)。",
+    "Harold": "BLEU = 62.17, 81.0/70.0/63.2/61.1 (BP=0.909, ratio=0.913, hyp_len=21, ref_len=23)",
+    "question_toks": [
+      "找",
+      "到",
+      "所",
+      "有",
+      "男",
+      "性",
+      "的",
+      "平",
+      "均",
+      "身",
+      "高",
+      "和",
+      "体",
+      "重",
+      "（",
+      "性",
+      "别",
+      "为",
+      "M",
+      "）",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"M\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT avg(height) ,  avg(weight) FROM people WHERE sex  =  “M”",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "height",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      "FROM",
+      "people",
+      "WHERE",
+      "sex",
+      "=",
+      "'M",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "height",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      "from",
+      "people",
+      "where",
+      "sex",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the average height and weight across males (sex is M)?",
+    "question": "男性的平均身高和体重是多少(性别是“M”)？",
+    "question_cspider": "男性的平均身高和体重是多少(性别是“M”)？",
+    "Harold": "BLEU = 51.39, 80.0/63.2/50.0/41.2 (BP=0.905, ratio=0.909, hyp_len=20, ref_len=22)",
+    "question_toks": [
+      "男",
+      "性",
+      "的",
+      "平",
+      "均",
+      "身",
+      "高",
+      "和",
+      "体",
+      "重",
+      "（",
+      "性",
+      "别",
+      "为",
+      "M",
+      "）",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"M\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT name FROM people WHERE height  >  200 OR height  <  190",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "people",
+      "WHERE",
+      "height",
+      ">",
+      "200",
+      "OR",
+      "height",
+      "<",
+      "190"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "height",
+      ">",
+      "value",
+      "or",
+      "height",
+      "<",
+      "value"
+    ],
+    "question_spider": "find the names of people who are taller than 200 or lower than 190.",
+    "question": "找出身高在200以上或190以下的人的名字。",
+    "question_cspider": "找出身高在200以上或190以下的人的名字。",
+    "Harold": "BLEU = 0.00, 70.0/26.3/11.1/0.0 (BP=0.905, ratio=0.909, hyp_len=20, ref_len=22)",
+    "question_toks": [
+      "查",
+      "找",
+      "高",
+      "于",
+      "2",
+      "0",
+      "0",
+      "或",
+      "低",
+      "于",
+      "1",
+      "9",
+      "0",
+      "的",
+      "人",
+      "员",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          200,
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          190,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT name FROM people WHERE height  >  200 OR height  <  190",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "people",
+      "WHERE",
+      "height",
+      ">",
+      "200",
+      "OR",
+      "height",
+      "<",
+      "190"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "height",
+      ">",
+      "value",
+      "or",
+      "height",
+      "<",
+      "value"
+    ],
+    "question_spider": "What are the names of people who have a height greater than 200 or less than 190?",
+    "question": "身高大于200或小于190的人的名字是什么？",
+    "question_cspider": "身高大于200或小于190的人的名字是什么？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=22, ref_len=22)",
+    "question_toks": [
+      "身",
+      "高",
+      "大",
+      "于",
+      "2",
+      "0",
+      "0",
+      "或",
+      "小",
+      "于",
+      "1",
+      "9",
+      "0",
+      "的",
+      "人",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          200,
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          190,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT avg(weight) ,  min(weight) ,  sex FROM people GROUP BY sex",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "min",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "sex",
+      "FROM",
+      "people",
+      "GROUP",
+      "BY",
+      "sex"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "min",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "sex",
+      "from",
+      "people",
+      "group",
+      "by",
+      "sex"
+    ],
+    "question_spider": "Find the average and minimum weight for each gender.",
+    "question": "找出每个性别的平均和最小重量。",
+    "question_cspider": "找出每个性别的平均和最小重量。",
+    "Harold": "BLEU = 52.66, 80.0/50.0/46.2/41.7 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "找",
+      "到",
+      "每",
+      "种",
+      "性",
+      "别",
+      "的",
+      "平",
+      "均",
+      "和",
+      "最",
+      "小",
+      "体",
+      "重",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT avg(weight) ,  min(weight) ,  sex FROM people GROUP BY sex",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "min",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "sex",
+      "FROM",
+      "people",
+      "GROUP",
+      "BY",
+      "sex"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "min",
+      "(",
+      "weight",
+      ")",
+      ",",
+      "sex",
+      "from",
+      "people",
+      "group",
+      "by",
+      "sex"
+    ],
+    "question_spider": "What are the average and minimum weights for people of each sex?",
+    "question": "每个性别的平均体重和最小体重是多少？",
+    "question_cspider": "每个性别的平均体重和最小体重是多少？",
+    "Harold": "BLEU = 74.83, 85.0/78.9/72.2/64.7 (BP=1.000, ratio=1.111, hyp_len=20, ref_len=18)",
+    "question_toks": [
+      "每",
+      "种",
+      "性",
+      "别",
+      "的",
+      "人",
+      "的",
+      "平",
+      "均",
+      "体",
+      "重",
+      "和",
+      "最",
+      "小",
+      "体",
+      "重",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.name ,  t1.sex FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id ORDER BY t2.support_rate DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t1.sex",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "ORDER",
+      "BY",
+      "t2.support_rate",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "sex",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "support_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name and gender of the candidate who got the highest support rate.",
+    "question": "找出获得最高支持率的候选人的姓名和性别。",
+    "question_cspider": "找出获得最高支持率的候选人的姓名和性别。",
+    "Harold": "BLEU = 90.36, 95.0/89.5/88.9/88.2 (BP=1.000, ratio=1.000, hyp_len=20, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "获",
+      "得",
+      "最",
+      "高",
+      "支",
+      "持",
+      "率",
+      "的",
+      "候",
+      "选",
+      "人",
+      "的",
+      "姓",
+      "名",
+      "和",
+      "性",
+      "别",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.name ,  t1.sex FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id ORDER BY t2.support_rate DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t1.sex",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "ORDER",
+      "BY",
+      "t2.support_rate",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "sex",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "support_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name and sex of the candidate with the highest support rate?",
+    "question": "支持率最高的候选人的姓名和性别是什么？",
+    "question_cspider": "支持率最高的候选人的姓名和性别是什么？",
+    "Harold": "BLEU = 80.26, 94.7/83.3/76.5/68.8 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "支",
+      "持",
+      "率",
+      "最",
+      "高",
+      "的",
+      "候",
+      "选",
+      "人",
+      "的",
+      "名",
+      "字",
+      "和",
+      "性",
+      "别",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.name ,  t1.sex ,  min(oppose_rate) FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id GROUP BY t1.sex",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t1.sex",
+      ",",
+      "min",
+      "(",
+      "oppose_rate",
+      ")",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "GROUP",
+      "BY",
+      "t1.sex"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "sex",
+      ",",
+      "min",
+      "(",
+      "oppose_rate",
+      ")",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "sex"
+    ],
+    "question_spider": "Find the name of the candidates whose oppose percentage is the lowest for each sex.",
+    "question": "找出每个性别中反对比例最低的候选人的姓名。",
+    "question_cspider": "找出每个性别中反对比例最低的候选人的姓名。",
+    "Harold": "BLEU = 27.85, 69.2/40.0/25.0/8.7 (BP=1.000, ratio=1.238, hyp_len=26, ref_len=21)",
+    "question_toks": [
+      "找",
+      "到",
+      "候",
+      "选",
+      "人",
+      "的",
+      "名",
+      "字",
+      "，",
+      "他",
+      "们",
+      "的",
+      "反",
+      "对",
+      "比",
+      "例",
+      "是",
+      "每",
+      "种",
+      "性",
+      "别",
+      "中",
+      "最",
+      "低",
+      "的",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.name ,  t1.sex ,  min(oppose_rate) FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id GROUP BY t1.sex",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t1.sex",
+      ",",
+      "min",
+      "(",
+      "oppose_rate",
+      ")",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "GROUP",
+      "BY",
+      "t1.sex"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "sex",
+      ",",
+      "min",
+      "(",
+      "oppose_rate",
+      ")",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "sex"
+    ],
+    "question_spider": "For each sex, what is the name and sex of the candidate with the oppose rate for their sex?",
+    "question": "对于每个性别，反对率最低的候选人的姓名和性别是什么？",
+    "question_cspider": "对于每个性别，反对率最低的候选人的姓名和性别是什么？",
+    "Harold": "BLEU = 35.26, 81.8/61.9/40.0/15.8 (BP=0.834, ratio=0.846, hyp_len=22, ref_len=26)",
+    "question_toks": [
+      "对",
+      "于",
+      "每",
+      "种",
+      "性",
+      "别",
+      "，",
+      "候",
+      "选",
+      "人",
+      "的",
+      "名",
+      "字",
+      "和",
+      "性",
+      "别",
+      "分",
+      "别",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.sex FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id GROUP BY t1.sex ORDER BY avg(t2.unsure_rate) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.sex",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "GROUP",
+      "BY",
+      "t1.sex",
+      "ORDER",
+      "BY",
+      "avg",
+      "(",
+      "t2.unsure_rate",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "sex",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "sex",
+      "order",
+      "by",
+      "avg",
+      "(",
+      "t2",
+      ".",
+      "unsure_rate",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "which gender got the highest average uncertain ratio.",
+    "question": "哪个性别的平均不确定率最高。",
+    "question_cspider": "哪个性别的平均不确定率最高。",
+    "Harold": "BLEU = 74.48, 87.5/80.0/71.4/61.5 (BP=1.000, ratio=1.143, hyp_len=16, ref_len=14)",
+    "question_toks": [
+      "哪",
+      "个",
+      "性",
+      "别",
+      "的",
+      "平",
+      "均",
+      "不",
+      "确",
+      "定",
+      "性",
+      "比",
+      "率",
+      "最",
+      "高",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              5,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.sex FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id GROUP BY t1.sex ORDER BY avg(t2.unsure_rate) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.sex",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "GROUP",
+      "BY",
+      "t1.sex",
+      "ORDER",
+      "BY",
+      "avg",
+      "(",
+      "t2.unsure_rate",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "sex",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "sex",
+      "order",
+      "by",
+      "avg",
+      "(",
+      "t2",
+      ".",
+      "unsure_rate",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the sex of the candidate who had the highest unsure rate?",
+    "question": "不确定率最高的候选人的性别是什么？",
+    "question_cspider": "不确定率最高的候选人的性别是什么？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "不",
+      "确",
+      "定",
+      "率",
+      "最",
+      "高",
+      "的",
+      "候",
+      "选",
+      "人",
+      "的",
+      "性",
+      "别",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              5,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT name FROM people WHERE people_id NOT IN (SELECT people_id FROM candidate)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "people",
+      "WHERE",
+      "people_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "people_id",
+      "FROM",
+      "candidate",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "people_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "people_id",
+      "from",
+      "candidate",
+      ")"
+    ],
+    "question_spider": "what are the names of people who did not participate in the candidate election.",
+    "question": "不参加候选人选举的人的名字是什么？",
+    "question_cspider": "不参加候选人选举的人的名字是什么？",
+    "Harold": "BLEU = 87.82, 88.9/88.2/87.5/86.7 (BP=1.000, ratio=1.059, hyp_len=18, ref_len=17)",
+    "question_toks": [
+      "没",
+      "有",
+      "参",
+      "加",
+      "候",
+      "选",
+      "人",
+      "选",
+      "举",
+      "的",
+      "人",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      2,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT name FROM people WHERE people_id NOT IN (SELECT people_id FROM candidate)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "people",
+      "WHERE",
+      "people_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "people_id",
+      "FROM",
+      "candidate",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "people_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "people_id",
+      "from",
+      "candidate",
+      ")"
+    ],
+    "question_spider": "Give the names of people who did not participate in the candidate election.",
+    "question": "给出不参加候选人选举的人的姓名。",
+    "question_cspider": "给出不参加候选人选举的人的姓名。",
+    "Harold": "BLEU = 57.04, 70.6/56.2/53.3/50.0 (BP=1.000, ratio=1.062, hyp_len=17, ref_len=16)",
+    "question_toks": [
+      "提",
+      "供",
+      "没",
+      "有",
+      "参",
+      "加",
+      "候",
+      "选",
+      "人",
+      "选",
+      "举",
+      "的",
+      "人",
+      "的",
+      "名",
+      "字",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      2,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.name FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id WHERE t2.support_rate  <  t2.oppose_rate",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "WHERE",
+      "t2.support_rate",
+      "<",
+      "t2.oppose_rate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t2",
+      ".",
+      "support_rate",
+      "<",
+      "t2",
+      ".",
+      "oppose_rate"
+    ],
+    "question_spider": "Find the names of the candidates whose support percentage is lower than their oppose rate.",
+    "question": "找出支持率低于反对率的候选人的姓名。",
+    "question_cspider": "找出支持率低于反对率的候选人的姓名。",
+    "Harold": "BLEU = 89.16, 94.4/88.2/87.5/86.7 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "查",
+      "找",
+      "支",
+      "持",
+      "率",
+      "低",
+      "于",
+      "反",
+      "对",
+      "率",
+      "的",
+      "候",
+      "选",
+      "人",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            7,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.name FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id WHERE t2.support_rate  <  t2.oppose_rate",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "WHERE",
+      "t2.support_rate",
+      "<",
+      "t2.oppose_rate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t2",
+      ".",
+      "support_rate",
+      "<",
+      "t2",
+      ".",
+      "oppose_rate"
+    ],
+    "question_spider": "What are the names of candidates who have a lower support rate than oppose rate?",
+    "question": "支持率低于反对率的候选人姓名是什么？",
+    "question_cspider": "支持率低于反对率的候选人姓名是什么？",
+    "Harold": "BLEU = 74.44, 89.5/77.8/70.6/62.5 (BP=1.000, ratio=1.056, hyp_len=19, ref_len=18)",
+    "question_toks": [
+      "支",
+      "持",
+      "率",
+      "低",
+      "于",
+      "反",
+      "对",
+      "率",
+      "的",
+      "候",
+      "选",
+      "人",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            7,
+            false
+          ],
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT count(*) ,  sex FROM people WHERE weight  >  85 GROUP BY sex",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "sex",
+      "FROM",
+      "people",
+      "WHERE",
+      "weight",
+      ">",
+      "85",
+      "GROUP",
+      "BY",
+      "sex"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "sex",
+      "from",
+      "people",
+      "where",
+      "weight",
+      ">",
+      "value",
+      "group",
+      "by",
+      "sex"
+    ],
+    "question_spider": "how many people are there whose weight is higher than 85 for each gender?",
+    "question": "针对每个性别有多少人的体重高于85？",
+    "question_cspider": "针对每个性别有多少人的体重高于85？",
+    "Harold": "BLEU = 49.90, 94.1/62.5/46.7/28.6 (BP=0.943, ratio=0.944, hyp_len=17, ref_len=18)",
+    "question_toks": [
+      "每",
+      "个",
+      "性",
+      "别",
+      "中",
+      "有",
+      "多",
+      "少",
+      "体",
+      "重",
+      "高",
+      "于",
+      "8",
+      "5",
+      "的",
+      "人",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          85,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT count(*) ,  sex FROM people WHERE weight  >  85 GROUP BY sex",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "sex",
+      "FROM",
+      "people",
+      "WHERE",
+      "weight",
+      ">",
+      "85",
+      "GROUP",
+      "BY",
+      "sex"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "sex",
+      "from",
+      "people",
+      "where",
+      "weight",
+      ">",
+      "value",
+      "group",
+      "by",
+      "sex"
+    ],
+    "question_spider": "Count the number of people of each sex who have a weight higher than 85.",
+    "question": "统计每一个体重超过85的人的数量。",
+    "question_cspider": "统计每一个体重超过85的人的数量。",
+    "Harold": "BLEU = 0.00, 64.7/25.0/6.7/0.0 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "计",
+      "算",
+      "体",
+      "重",
+      "大",
+      "于",
+      "8",
+      "5",
+      "的",
+      "每",
+      "种",
+      "性",
+      "别",
+      "的",
+      "人",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          85,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT max(support_rate) ,  min(consider_rate) ,  min(oppose_rate) FROM candidate",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "support_rate",
+      ")",
+      ",",
+      "min",
+      "(",
+      "consider_rate",
+      ")",
+      ",",
+      "min",
+      "(",
+      "oppose_rate",
+      ")",
+      "FROM",
+      "candidate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "support_rate",
+      ")",
+      ",",
+      "min",
+      "(",
+      "consider_rate",
+      ")",
+      ",",
+      "min",
+      "(",
+      "oppose_rate",
+      ")",
+      "from",
+      "candidate"
+    ],
+    "question_spider": "find the highest support percentage, lowest consider rate and oppose rate of all candidates.",
+    "question": "找出所有候选人的最高支持率、最低考虑率和反对率。",
+    "question_cspider": "找出所有候选人的最高支持率、最低考虑率和反对率。",
+    "Harold": "BLEU = 48.39, 81.5/57.7/40.0/29.2 (BP=1.000, ratio=1.125, hyp_len=27, ref_len=24)",
+    "question_toks": [
+      "在",
+      "所",
+      "有",
+      "候",
+      "选",
+      "人",
+      "中",
+      "找",
+      "到",
+      "最",
+      "高",
+      "的",
+      "支",
+      "持",
+      "率",
+      "，",
+      "最",
+      "低",
+      "的",
+      "考",
+      "虑",
+      "率",
+      "和",
+      "反",
+      "对",
+      "率",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT max(support_rate) ,  min(consider_rate) ,  min(oppose_rate) FROM candidate",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "support_rate",
+      ")",
+      ",",
+      "min",
+      "(",
+      "consider_rate",
+      ")",
+      ",",
+      "min",
+      "(",
+      "oppose_rate",
+      ")",
+      "FROM",
+      "candidate"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "support_rate",
+      ")",
+      ",",
+      "min",
+      "(",
+      "consider_rate",
+      ")",
+      ",",
+      "min",
+      "(",
+      "oppose_rate",
+      ")",
+      "from",
+      "candidate"
+    ],
+    "question_spider": "Return the maximum support rate, minimum consider rate, and minimum oppose rate across all candidates?",
+    "question": "返回所有候选人的最大支持率、最小考虑率和最小反对率？",
+    "question_cspider": "返回所有候选人的最大支持率、最小考虑率和最小反对率？",
+    "Harold": "BLEU = 59.10, 84.6/68.0/54.2/39.1 (BP=1.000, ratio=1.000, hyp_len=26, ref_len=26)",
+    "question_toks": [
+      "返",
+      "回",
+      "所",
+      "有",
+      "候",
+      "选",
+      "人",
+      "的",
+      "最",
+      "高",
+      "支",
+      "持",
+      "率",
+      "，",
+      "最",
+      "低",
+      "考",
+      "虑",
+      "率",
+      "和",
+      "最",
+      "低",
+      "反",
+      "对",
+      "率",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.name FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id WHERE t1.sex  =  'F' ORDER BY t1.name",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "WHERE",
+      "t1.sex",
+      "=",
+      "'F",
+      "'",
+      "ORDER",
+      "BY",
+      "t1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t1",
+      ".",
+      "sex",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question_spider": "list all female (sex is F) candidate names in the alphabetical order.",
+    "question": "按字母顺序列出所有女性(性别是“F”)候选人姓名。",
+    "question_cspider": "按字母顺序列出所有女性(性别是“F”)候选人姓名。",
+    "Harold": "BLEU = 49.94, 78.3/59.1/47.6/40.0 (BP=0.917, ratio=0.920, hyp_len=23, ref_len=25)",
+    "question_toks": [
+      "按",
+      "字",
+      "母",
+      "顺",
+      "序",
+      "列",
+      "出",
+      "所",
+      "有",
+      "女",
+      "性",
+      "（",
+      "性",
+      "别",
+      "为",
+      "F",
+      "）",
+      "候",
+      "选",
+      "人",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"F\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT t1.name FROM people AS t1 JOIN candidate AS t2 ON t1.people_id  =  t2.people_id WHERE t1.sex  =  'F' ORDER BY t1.name",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "people",
+      "AS",
+      "t1",
+      "JOIN",
+      "candidate",
+      "AS",
+      "t2",
+      "ON",
+      "t1.people_id",
+      "=",
+      "t2.people_id",
+      "WHERE",
+      "t1.sex",
+      "=",
+      "'F",
+      "'",
+      "ORDER",
+      "BY",
+      "t1.name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "candidate",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t1",
+      ".",
+      "sex",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question_spider": "What are the names of all female candidates in alphabetical order (sex is F)?",
+    "question": "按字母顺序排列所有女性候选人的姓名(性别是“F”)？",
+    "question_cspider": "按字母顺序排列所有女性候选人的姓名(性别是“F”)？",
+    "Harold": "BLEU = 52.15, 79.2/60.9/50.0/42.9 (BP=0.920, ratio=0.923, hyp_len=24, ref_len=26)",
+    "question_toks": [
+      "所",
+      "有",
+      "女",
+      "性",
+      "候",
+      "选",
+      "人",
+      "的",
+      "名",
+      "字",
+      "按",
+      "字",
+      "母",
+      "顺",
+      "序",
+      "排",
+      "列",
+      "（",
+      "性",
+      "别",
+      "为",
+      "F",
+      "）",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"F\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT name FROM people WHERE height  <  (SELECT avg(height) FROM people)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "people",
+      "WHERE",
+      "height",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "height",
+      ")",
+      "FROM",
+      "people",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "height",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "height",
+      ")",
+      "from",
+      "people",
+      ")"
+    ],
+    "question_spider": "find the name of people whose height is lower than the average.",
+    "question": "找出身高低于平均值的人的名字。",
+    "question_cspider": "找出身高低于平均值的人的名字。",
+    "Harold": "BLEU = 61.48, 81.2/66.7/57.1/46.2 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "身",
+      "高",
+      "低",
+      "于",
+      "平",
+      "均",
+      "水",
+      "平",
+      "的",
+      "人",
+      "的",
+      "名",
+      "字",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT name FROM people WHERE height  <  (SELECT avg(height) FROM people)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "people",
+      "WHERE",
+      "height",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "height",
+      ")",
+      "FROM",
+      "people",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "height",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "height",
+      ")",
+      "from",
+      "people",
+      ")"
+    ],
+    "question_spider": "What are the names of people who are shorter than average?",
+    "question": "身高低于平均水平的人的名字是什么？",
+    "question_cspider": "身高低于平均水平的人的名字是什么？",
+    "Harold": "BLEU = 48.08, 64.3/61.5/58.3/54.5 (BP=0.807, ratio=0.824, hyp_len=14, ref_len=17)",
+    "question_toks": [
+      "比",
+      "普",
+      "通",
+      "人",
+      "矮",
+      "的",
+      "人",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT * FROM people",
+    "query_toks": [
+      "SELECT",
+      "*",
+      "FROM",
+      "people"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "*",
+      "from",
+      "people"
+    ],
+    "question_spider": "List all info about all people.",
+    "question": "列出所有人的所有信息。",
+    "question_cspider": "列出所有人的所有信息。",
+    "Harold": "BLEU = 70.16, 84.6/75.0/63.6/60.0 (BP=1.000, ratio=1.182, hyp_len=13, ref_len=11)",
+    "question_toks": [
+      "列",
+      "出",
+      "有",
+      "关",
+      "所",
+      "有",
+      "人",
+      "的",
+      "所",
+      "有",
+      "信",
+      "息",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "candidate_poll",
+    "query": "SELECT * FROM people",
+    "query_toks": [
+      "SELECT",
+      "*",
+      "FROM",
+      "people"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "*",
+      "from",
+      "people"
+    ],
+    "question_spider": "What is all the information about all people?",
+    "question": "所有人的全部信息是什么？",
+    "question_cspider": "所有人的全部信息是什么？",
+    "Harold": "BLEU = 53.17, 71.4/61.5/50.0/36.4 (BP=1.000, ratio=1.167, hyp_len=14, ref_len=12)",
+    "question_toks": [
+      "关",
+      "于",
+      "所",
+      "有",
+      "人",
+      "的",
+      "所",
+      "有",
+      "信",
+      "息",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

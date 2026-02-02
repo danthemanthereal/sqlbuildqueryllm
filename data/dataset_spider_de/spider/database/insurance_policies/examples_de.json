@@ -1,0 +1,6146 @@
+[
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.Date_Claim_Made ,  T1.Claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id GROUP BY T1.Claim_id HAVING count(*)  >  2 UNION SELECT T1.Date_Claim_Made ,  T1.Claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id WHERE T1.Amount_Claimed  =  ( SELECT max(Amount_Claimed) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "T1.Date_Claim_Made",
+      ",",
+      "T1.Claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "GROUP",
+      "BY",
+      "T1.Claim_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2",
+      "UNION",
+      "SELECT",
+      "T1.Date_Claim_Made",
+      ",",
+      "T1.Claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "WHERE",
+      "T1.Amount_Claimed",
+      "=",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value",
+      "union",
+      "select",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "where",
+      "t1",
+      ".",
+      "amount_claimed",
+      "=",
+      "(",
+      "select",
+      "max",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question": "Welche Ansprüche haben mehr als 2 Siedlungenen verursacht oder haben den maximalen Anspruchswert? Geben Sie das Datum an, an dem der Anspruch geltend gemacht wurde, und die Anspruchs-ID.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              3
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            {
+              "from": {
+                "table_units": [
+                  [
+                    "table_unit",
+                    2
+                  ]
+                ],
+                "conds": []
+              },
+              "select": [
+                false,
+                [
+                  [
+                    1,
+                    [
+                      0,
+                      [
+                        0,
+                        12,
+                        false
+                      ],
+                      null
+                    ]
+                  ]
+                ]
+              ],
+              "where": [],
+              "groupBy": [],
+              "having": [],
+              "orderBy": [],
+              "limit": null,
+              "intersect": null,
+              "union": null,
+              "except": null
+            },
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.Date_Claim_Made ,  T1.Claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id GROUP BY T1.Claim_id HAVING count(*)  >  2 UNION SELECT T1.Date_Claim_Made ,  T1.Claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id WHERE T1.Amount_Claimed  =  ( SELECT max(Amount_Claimed) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "T1.Date_Claim_Made",
+      ",",
+      "T1.Claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "GROUP",
+      "BY",
+      "T1.Claim_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2",
+      "UNION",
+      "SELECT",
+      "T1.Date_Claim_Made",
+      ",",
+      "T1.Claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "WHERE",
+      "T1.Amount_Claimed",
+      "=",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value",
+      "union",
+      "select",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "where",
+      "t1",
+      ".",
+      "amount_claimed",
+      "=",
+      "(",
+      "select",
+      "max",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question": "Finden Sie die Ansprüche, die zu mehr als zwei Siedlungenen geführt haben, oder haben Sie den maximalen Anspruchswert. Geben Sie für jeden von ihnen das Datum, an dem der Anspruch geltend gemacht wurde, und die ID des Anspruchs zurück.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              3
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            {
+              "from": {
+                "table_units": [
+                  [
+                    "table_unit",
+                    2
+                  ]
+                ],
+                "conds": []
+              },
+              "select": [
+                false,
+                [
+                  [
+                    1,
+                    [
+                      0,
+                      [
+                        0,
+                        12,
+                        false
+                      ],
+                      null
+                    ]
+                  ]
+                ]
+              ],
+              "where": [],
+              "groupBy": [],
+              "having": [],
+              "orderBy": [],
+              "limit": null,
+              "intersect": null,
+              "union": null,
+              "except": null
+            },
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.customer_id GROUP BY T1.customer_id HAVING count(*)  >=  2 EXCEPT SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.customer_id JOIN Claims AS T3 ON T2.policy_id  =  T3.policy_id",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2",
+      "EXCEPT",
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.customer_id",
+      "JOIN",
+      "Claims",
+      "AS",
+      "T3",
+      "ON",
+      "T2.policy_id",
+      "=",
+      "T3.policy_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "join",
+      "claims",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "policy_id",
+      "=",
+      "t3",
+      ".",
+      "policy_id"
+    ],
+    "question": "Welcher Kunde hatte mindestens 2 Richtlinien, reichte jedoch keine Ansprüche ein? Listen Sie die Kundendetails und die ID auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.customer_id GROUP BY T1.customer_id HAVING count(*)  >=  2 EXCEPT SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.customer_id JOIN Claims AS T3 ON T2.policy_id  =  T3.policy_id",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2",
+      "EXCEPT",
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.customer_id",
+      "JOIN",
+      "Claims",
+      "AS",
+      "T3",
+      "ON",
+      "T2.policy_id",
+      "=",
+      "T3.policy_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "join",
+      "claims",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "policy_id",
+      "=",
+      "t3",
+      ".",
+      "policy_id"
+    ],
+    "question": "Geben Sie mir die Kundendaten und die ID für die Kunden, die zwei oder mehr Richtlinien hatten, aber keine Ansprüche geltend machten.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code ,  Date_Payment_Made ,  Amount_Payment FROM Payments ORDER BY Date_Payment_Made ASC",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      ",",
+      "Date_Payment_Made",
+      ",",
+      "Amount_Payment",
+      "FROM",
+      "Payments",
+      "ORDER",
+      "BY",
+      "Date_Payment_Made",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      ",",
+      "date_payment_made",
+      ",",
+      "amount_payment",
+      "from",
+      "payments",
+      "order",
+      "by",
+      "date_payment_made",
+      "asc"
+    ],
+    "question": "Listen Sie die Methode, das Datum und den Betrag aller Zahlungen in aufsteigender Reihenfolge des Datums auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code ,  Date_Payment_Made ,  Amount_Payment FROM Payments ORDER BY Date_Payment_Made ASC",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      ",",
+      "Date_Payment_Made",
+      ",",
+      "Amount_Payment",
+      "FROM",
+      "Payments",
+      "ORDER",
+      "BY",
+      "Date_Payment_Made",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      ",",
+      "date_payment_made",
+      ",",
+      "amount_payment",
+      "from",
+      "payments",
+      "order",
+      "by",
+      "date_payment_made",
+      "asc"
+    ],
+    "question": "Was sind die Methode, das Datum und der Betrag jeder Zahlung? Sortieren Sie die Liste in aufsteigender Reihenfolge des Datums.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Amount_Settled ,  Amount_Claimed FROM Claims ORDER BY Amount_Claimed DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Amount_Settled",
+      ",",
+      "Amount_Claimed",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Amount_Claimed",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount_settled",
+      ",",
+      "amount_claimed",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "amount_claimed",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie hoch ist unter allen Ansprüchen der Siedlungsbetrag des Anspruchs mit dem größten Anspruchsbetrag? Listen Sie sowohl den Siedlungsbetrag als auch den Forderungsbetrag auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Amount_Settled ,  Amount_Claimed FROM Claims ORDER BY Amount_Claimed DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Amount_Settled",
+      ",",
+      "Amount_Claimed",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Amount_Claimed",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount_settled",
+      ",",
+      "amount_claimed",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "amount_claimed",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Finden Sie den Siedlungsbetrag des Anspruchs mit dem größten Anspruchsbetrag. Zeigen Sie sowohl den Siedlungsbetrag als auch den Anspruchsbetrag an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Amount_Settled ,  Amount_Claimed FROM Claims ORDER BY Amount_Settled ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Amount_Settled",
+      ",",
+      "Amount_Claimed",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Amount_Settled",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount_settled",
+      ",",
+      "amount_claimed",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "amount_settled",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie hoch ist unter allen Ansprüchen der in der Forderung geltend gemachte Betrag mit dem geringsten abgerechneten Betrag? Listen Sie sowohl den Siedlungsbetrag als auch den Anspruchsbetrag auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Amount_Settled ,  Amount_Claimed FROM Claims ORDER BY Amount_Settled ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Amount_Settled",
+      ",",
+      "Amount_Claimed",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Amount_Settled",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount_settled",
+      ",",
+      "amount_claimed",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "amount_settled",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Finden Sie den beanspruchten Betrag im Anspruch mit dem geringsten abgerechneten Betrag. Zeigen Sie sowohl den Siedlungsbetrag als auch den Anspruchsbetrag an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made ,  Date_Claim_Settled FROM Claims WHERE Amount_Claimed  >  ( SELECT avg(Amount_Claimed) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      ",",
+      "Date_Claim_Settled",
+      "FROM",
+      "Claims",
+      "WHERE",
+      "Amount_Claimed",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      ",",
+      "date_claim_settled",
+      "from",
+      "claims",
+      "where",
+      "amount_claimed",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question": "Welche Ansprüche haben unter allen Ansprüchen einen über dem Durchschnitt liegenden Anspruchsbetrag? Geben Sie das Datum an, an dem der Anspruch geltend gemacht wurde, und das Datum, an dem er geltend gemacht wurde.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made ,  Date_Claim_Settled FROM Claims WHERE Amount_Claimed  >  ( SELECT avg(Amount_Claimed) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      ",",
+      "Date_Claim_Settled",
+      "FROM",
+      "Claims",
+      "WHERE",
+      "Amount_Claimed",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      ",",
+      "date_claim_settled",
+      "from",
+      "claims",
+      "where",
+      "amount_claimed",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question": "Geben Sie mir das Anspruchsdatum und das Siedlungsdatum für alle Ansprüche an, deren geltend gemachter Betrag über dem Durchschnitt liegt.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made FROM Claims WHERE Amount_Settled  <=  ( SELECT avg(Amount_Settled) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      "FROM",
+      "Claims",
+      "WHERE",
+      "Amount_Settled",
+      "<",
+      "=",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "Amount_Settled",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      "from",
+      "claims",
+      "where",
+      "amount_settled",
+      "<",
+      "=",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "amount_settled",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question": "Welche Vergleiche haben unter allen Ansprüchen einen geltend gemachten Betrag, der nicht über dem Durchschnitt liegt? Geben Sie das Startdatum des Anspruchs an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          6,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made FROM Claims WHERE Amount_Settled  <=  ( SELECT avg(Amount_Settled) FROM Claims )",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      "FROM",
+      "Claims",
+      "WHERE",
+      "Amount_Settled",
+      "<",
+      "=",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "Amount_Settled",
+      ")",
+      "FROM",
+      "Claims",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      "from",
+      "claims",
+      "where",
+      "amount_settled",
+      "<",
+      "=",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "amount_settled",
+      ")",
+      "from",
+      "claims",
+      ")"
+    ],
+    "question": "Geben Sie das Anspruchsbeginndatum für die Ansprüche zurück, deren geltend gemachter Betrag nicht mehr als der Durchschnitt beträgt",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          6,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.Claim_id ,  count(*) FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id",
+    "query_toks": [
+      "SELECT",
+      "T1.Claim_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id"
+    ],
+    "question": "Wie vielen Siedlungen entspricht jeder Anspruch? Listen Sie die Anspruchs-ID und die Anzahl der Siedlungen auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.Claim_id ,  count(*) FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id",
+    "query_toks": [
+      "SELECT",
+      "T1.Claim_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id"
+    ],
+    "question": "Finden Sie die Anzahl der Siedlungen, denen jeder Anspruch entspricht. Zeigen Sie die Nummer zusammen mit der Anspruchs-ID an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.claim_id ,  T1.date_claim_made ,  count(*) FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.claim_id",
+      ",",
+      "T1.date_claim_made",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Welcher Anspruch hat die meisten Siedlungen verursacht? Geben Sie die Anspruchs-ID, das Datum, an dem der Anspruch geltend gemacht wurde, und die Nummer an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.claim_id ,  T1.date_claim_made ,  count(*) FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.claim_id",
+      ",",
+      "T1.date_claim_made",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Suchen Sie die Anspruchs-ID und das Anspruchsdatum des Anspruchs, bei dem die meisten Siedlungen vorgenommen wurden. Sag mir auch die Zählung.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT count(*) ,  T1.claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id ORDER BY T1.Date_Claim_Settled DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "ORDER",
+      "BY",
+      "T1.Date_Claim_Settled",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "date_claim_settled",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie viele Siedlungen wurden für den Anspruch mit dem letzten Datum der Schadensabwicklung vorgenommen? Listen Sie die Nummer und die Anspruchs-ID auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT count(*) ,  T1.claim_id FROM Claims AS T1 JOIN Settlements AS T2 ON T1.claim_id  =  T2.claim_id GROUP BY T1.claim_id ORDER BY T1.Date_Claim_Settled DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.claim_id",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.claim_id",
+      "=",
+      "T2.claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "ORDER",
+      "BY",
+      "T1.Date_Claim_Settled",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "claim_id",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "date_claim_settled",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Suchen Sie die Anspruchs-ID und die Anzahl der für den Anspruch vorgenommenen Siedlungen mit dem letzten Siedlungsdatum.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made FROM Claims ORDER BY Date_Claim_Made ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Date_Claim_Made",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "date_claim_made",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Wann war von allen Ansprüchen der früheste Zeitpunkt, an dem ein Anspruch geltend gemacht wurde?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made FROM Claims ORDER BY Date_Claim_Made ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      "FROM",
+      "Claims",
+      "ORDER",
+      "BY",
+      "Date_Claim_Made",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      "from",
+      "claims",
+      "order",
+      "by",
+      "date_claim_made",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Sagen Sie mir das Datum, an dem der erste Anspruch geltend gemacht wurde.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Settled) FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Settled",
+      ")",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_settled",
+      ")",
+      "from",
+      "settlements"
+    ],
+    "question": "Wie hoch ist der Gesamtbetrag der Siedlung für alle Siedlungen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Settled) FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Settled",
+      ")",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_settled",
+      ")",
+      "from",
+      "settlements"
+    ],
+    "question": "Berechnen Sie den Gesamtbetrag der Siedlung über alle Siedlungen hinweg.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.Customer_id GROUP BY T1.customer_id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.Customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Wer waren die Kunden, die mehr als eine Richtlinie hatten? Listen Sie die Kundendaten und die ID auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.customer_details ,  T1.customer_id FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.Customer_id GROUP BY T1.customer_id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_details",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_id",
+      "=",
+      "T2.Customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Finden Sie die Kundendaten und die ID für die Kunden, die mehr als eine Richtlinie hatten.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made ,  Date_Claim_Settled FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      ",",
+      "Date_Claim_Settled",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      ",",
+      "date_claim_settled",
+      "from",
+      "settlements"
+    ],
+    "question": "Was sind die Anspruchs- und Siedlungsdaten aller Siedlungen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Date_Claim_Made ,  Date_Claim_Settled FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "Date_Claim_Made",
+      ",",
+      "Date_Claim_Settled",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date_claim_made",
+      ",",
+      "date_claim_settled",
+      "from",
+      "settlements"
+    ],
+    "question": "Teilen Sie mir das Anspruchsdatum und das Abrechnungsdatum für jeden Siedlungsfall mit.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "Payment_Method_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "payment_method_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Was ist die beliebteste Zahlungsmethode?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "Payment_Method_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "payment_method_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Welche Zahlungsmethode wird am häufigsten verwendet?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "Payment_Method_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "payment_method_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Mit welcher Zahlungsmethode wurden am wenigsten Zahlungen verarbeitet?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Payment_Method_Code",
+      "FROM",
+      "Payments",
+      "GROUP",
+      "BY",
+      "Payment_Method_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_method_code",
+      "from",
+      "payments",
+      "group",
+      "by",
+      "payment_method_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Welche Zahlungsmethode wurde am seltensten verwendet?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Payment) FROM Payments",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Payment",
+      ")",
+      "FROM",
+      "Payments"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_payment",
+      ")",
+      "from",
+      "payments"
+    ],
+    "question": "Was ist der Gesamtbetrag der Zahlung?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Payment) FROM Payments",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Payment",
+      ")",
+      "FROM",
+      "Payments"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_payment",
+      ")",
+      "from",
+      "payments"
+    ],
+    "question": "Berechnen Sie den Gesamtbetrag der verarbeiteten Zahlung.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT DISTINCT customer_details FROM Customers",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "customer_details",
+      "FROM",
+      "Customers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "customer_details",
+      "from",
+      "customers"
+    ],
+    "question": "Was sind die besonderen Details der Kunden?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT DISTINCT customer_details FROM Customers",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "customer_details",
+      "FROM",
+      "Customers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "customer_details",
+      "from",
+      "customers"
+    ],
+    "question": "Geben Sie die eindeutigen Kundendetails zurück.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Policy_Type_Code FROM Customer_Policies GROUP BY Policy_Type_Code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Policy_Type_Code",
+      "FROM",
+      "Customer_Policies",
+      "GROUP",
+      "BY",
+      "Policy_Type_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "policy_type_code",
+      "from",
+      "customer_policies",
+      "group",
+      "by",
+      "policy_type_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Welche Art von Versicherungspolice wurde von den meisten Kunden gewählt?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Policy_Type_Code FROM Customer_Policies GROUP BY Policy_Type_Code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Policy_Type_Code",
+      "FROM",
+      "Customer_Policies",
+      "GROUP",
+      "BY",
+      "Policy_Type_Code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "policy_type_code",
+      "from",
+      "customer_policies",
+      "group",
+      "by",
+      "policy_type_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Finden Sie den Richtlinientyp, den die meisten Kunden auswählen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT count(*) FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "settlements"
+    ],
+    "question": "Wie viele Siedlungen gibt es insgesamt?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT count(*) FROM Settlements",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Settlements"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "settlements"
+    ],
+    "question": "Zählen Sie die Gesamtzahl der vorgenommenen Abrechnungen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_ID ,  Date_Payment_Made ,  Amount_Payment FROM Payments WHERE Payment_Method_Code  =  'Visa'",
+    "query_toks": [
+      "SELECT",
+      "Payment_ID",
+      ",",
+      "Date_Payment_Made",
+      ",",
+      "Amount_Payment",
+      "FROM",
+      "Payments",
+      "WHERE",
+      "Payment_Method_Code",
+      "=",
+      "'Visa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_id",
+      ",",
+      "date_payment_made",
+      ",",
+      "amount_payment",
+      "from",
+      "payments",
+      "where",
+      "payment_method_code",
+      "=",
+      "value"
+    ],
+    "question": "Welche Zahlungen wurden mit \"Visa\" bearbeitet? Listen Sie die Zahlungs-ID, das Datum und den Betrag auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          "\"Visa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT Payment_ID ,  Date_Payment_Made ,  Amount_Payment FROM Payments WHERE Payment_Method_Code  =  'Visa'",
+    "query_toks": [
+      "SELECT",
+      "Payment_ID",
+      ",",
+      "Date_Payment_Made",
+      ",",
+      "Amount_Payment",
+      "FROM",
+      "Payments",
+      "WHERE",
+      "Payment_Method_Code",
+      "=",
+      "'Visa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_id",
+      ",",
+      "date_payment_made",
+      ",",
+      "amount_payment",
+      "from",
+      "payments",
+      "where",
+      "payment_method_code",
+      "=",
+      "value"
+    ],
+    "question": "Geben Sie mir die Zahlungs-ID, das Datum und den Betrag für alle mit \"Visa\" verarbeiteten Zahlungen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          "\"Visa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT customer_details FROM Customers EXCEPT SELECT T1.customer_details FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.customer_id  =  T2.customer_id",
+    "query_toks": [
+      "SELECT",
+      "customer_details",
+      "FROM",
+      "Customers",
+      "EXCEPT",
+      "SELECT",
+      "T1.customer_details",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_details",
+      "from",
+      "customers",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id"
+    ],
+    "question": "Listen Sie die Details der Kunden auf, die keine Richtlinien haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT customer_details FROM Customers EXCEPT SELECT T1.customer_details FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.customer_id  =  T2.customer_id",
+    "query_toks": [
+      "SELECT",
+      "customer_details",
+      "FROM",
+      "Customers",
+      "EXCEPT",
+      "SELECT",
+      "T1.customer_details",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Policies",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_details",
+      "from",
+      "customers",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "customer_details",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_policies",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id"
+    ],
+    "question": "Welche Kunden haben keine Richtlinien? Finden Sie die Details dieser Kunden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.claim_id ,  T1.date_claim_made ,  T1.Date_Claim_Settled FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id GROUP BY T1.claim_id HAVING count(*)  =  1",
+    "query_toks": [
+      "SELECT",
+      "T1.claim_id",
+      ",",
+      "T1.date_claim_made",
+      ",",
+      "T1.Date_Claim_Settled",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "date_claim_settled",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question": "Geben Sie das Datum an, an dem der Anspruch geltend gemacht wurde, das Datum, an dem der Anspruch beglichen wurde, und den Betrag, der für alle Ansprüche mit genau einer Begleichung beglichen wurde.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT T1.claim_id ,  T1.date_claim_made ,  T1.Date_Claim_Settled FROM Claims AS T1 JOIN Settlements AS T2 ON T1.Claim_id  =  T2.Claim_id GROUP BY T1.claim_id HAVING count(*)  =  1",
+    "query_toks": [
+      "SELECT",
+      "T1.claim_id",
+      ",",
+      "T1.date_claim_made",
+      ",",
+      "T1.Date_Claim_Settled",
+      "FROM",
+      "Claims",
+      "AS",
+      "T1",
+      "JOIN",
+      "Settlements",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Claim_id",
+      "=",
+      "T2.Claim_id",
+      "GROUP",
+      "BY",
+      "T1.claim_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "claim_id",
+      ",",
+      "t1",
+      ".",
+      "date_claim_made",
+      ",",
+      "t1",
+      ".",
+      "date_claim_settled",
+      "from",
+      "claims",
+      "as",
+      "t1",
+      "join",
+      "settlements",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "claim_id",
+      "=",
+      "t2",
+      ".",
+      "claim_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "claim_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question": "Welche Ansprüche hatten genau eine Abrechnung? Teilen Sie mir jeweils das Datum mit, an dem der Anspruch geltend gemacht wurde, das Datum, an dem er beglichen wurde, und den Betrag, an dem der Anspruch beglichen wurde.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Claimed) FROM Claims",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims"
+    ],
+    "question": "Finden Sie den Gesamtbetrag aller Ansprüche.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "insurance_policies",
+    "query": "SELECT sum(Amount_Claimed) FROM Claims",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "Amount_Claimed",
+      ")",
+      "FROM",
+      "Claims"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount_claimed",
+      ")",
+      "from",
+      "claims"
+    ],
+    "question": "Wie hoch ist der geltend gemachte Gesamtbetrag, der über alle Ansprüche summiert wird?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

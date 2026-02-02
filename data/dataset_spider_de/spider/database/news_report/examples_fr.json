@@ -1,0 +1,2070 @@
+[
+  {
+    "db_id": "news_report",
+    "query": "SELECT count(*) FROM journalist",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "journalist"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "journalist"
+    ],
+    "question": "Combien de journalistes y a-t-il?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Name FROM journalist ORDER BY Years_working ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "journalist",
+      "ORDER",
+      "BY",
+      "Years_working",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "journalist",
+      "order",
+      "by",
+      "years_working",
+      "asc"
+    ],
+    "question": "Énumérez les noms des journalistes par ordre croissant d'années de travail.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality ,  Age FROM journalist",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      ",",
+      "Age",
+      "FROM",
+      "journalist"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      ",",
+      "age",
+      "from",
+      "journalist"
+    ],
+    "question": "Quels sont les nationalités et âges des journalistes?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Name FROM journalist WHERE Nationality  =  \"England\" OR Nationality  =  \"Wales\"",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "journalist",
+      "WHERE",
+      "Nationality",
+      "=",
+      "``",
+      "England",
+      "''",
+      "OR",
+      "Nationality",
+      "=",
+      "``",
+      "Wales",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "journalist",
+      "where",
+      "nationality",
+      "=",
+      "value",
+      "or",
+      "nationality",
+      "=",
+      "value"
+    ],
+    "question": "Montrez les noms des journalistes de \"England\" ou \"Wales\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"England\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Wales\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT avg(Years_working) FROM journalist",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Years_working",
+      ")",
+      "FROM",
+      "journalist"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "years_working",
+      ")",
+      "from",
+      "journalist"
+    ],
+    "question": "Quel est le nombre moyen d'années passées à travailler comme journaliste?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality FROM journalist ORDER BY Years_working DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "journalist",
+      "ORDER",
+      "BY",
+      "Years_working",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      "from",
+      "journalist",
+      "order",
+      "by",
+      "years_working",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quelle est la nationalité du journaliste avec le plus grand nombre d'années de travail?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality ,  COUNT(*) FROM journalist GROUP BY Nationality",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "journalist",
+      "GROUP",
+      "BY",
+      "Nationality"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "journalist",
+      "group",
+      "by",
+      "nationality"
+    ],
+    "question": "Affichez les différentes nationalités et le nombre de journalistes de chaque nationalité.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality FROM journalist GROUP BY Nationality ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "journalist",
+      "GROUP",
+      "BY",
+      "Nationality",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      "from",
+      "journalist",
+      "group",
+      "by",
+      "nationality",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Affichez la nationalité la plus courante pour les journalistes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality FROM journalist WHERE Years_working  >  10 INTERSECT SELECT Nationality FROM journalist WHERE Years_working  <  3",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "journalist",
+      "WHERE",
+      "Years_working",
+      ">",
+      "10",
+      "INTERSECT",
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "journalist",
+      "WHERE",
+      "Years_working",
+      "<",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      "from",
+      "journalist",
+      "where",
+      "years_working",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "nationality",
+      "from",
+      "journalist",
+      "where",
+      "years_working",
+      "<",
+      "value"
+    ],
+    "question": "Montrez les nations qui ont à la fois des journalistes avec plus de 10 ans de travail et des journalistes avec moins de 3 ans de travail.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            3.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Date ,  Name ,  venue FROM event ORDER BY Event_Attendance DESC",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      ",",
+      "Name",
+      ",",
+      "venue",
+      "FROM",
+      "event",
+      "ORDER",
+      "BY",
+      "Event_Attendance",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      ",",
+      "name",
+      ",",
+      "venue",
+      "from",
+      "event",
+      "order",
+      "by",
+      "event_attendance",
+      "desc"
+    ],
+    "question": "Affichez les dates, les lieux et les noms des événements par ordre décroissant de participation.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT T3.Name ,  T2.Date FROM news_report AS T1 JOIN event AS T2 ON T1.Event_ID  =  T2.Event_ID JOIN journalist AS T3 ON T1.journalist_ID  =  T3.journalist_ID",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "T2.Date",
+      "FROM",
+      "news_report",
+      "AS",
+      "T1",
+      "JOIN",
+      "event",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Event_ID",
+      "=",
+      "T2.Event_ID",
+      "JOIN",
+      "journalist",
+      "AS",
+      "T3",
+      "ON",
+      "T1.journalist_ID",
+      "=",
+      "T3.journalist_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "date",
+      "from",
+      "news_report",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "event_id",
+      "join",
+      "journalist",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t3",
+      ".",
+      "journalist_id"
+    ],
+    "question": "Montrez les noms des journalistes et les dates des événements qu'ils ont rapportés.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT T3.Name ,  T2.Name FROM news_report AS T1 JOIN event AS T2 ON T1.Event_ID  =  T2.Event_ID JOIN journalist AS T3 ON T1.journalist_ID  =  T3.journalist_ID ORDER BY T2.Event_Attendance ASC",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "T2.Name",
+      "FROM",
+      "news_report",
+      "AS",
+      "T1",
+      "JOIN",
+      "event",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Event_ID",
+      "=",
+      "T2.Event_ID",
+      "JOIN",
+      "journalist",
+      "AS",
+      "T3",
+      "ON",
+      "T1.journalist_ID",
+      "=",
+      "T3.journalist_ID",
+      "ORDER",
+      "BY",
+      "T2.Event_Attendance",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "news_report",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "event_id",
+      "join",
+      "journalist",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t3",
+      ".",
+      "journalist_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "event_attendance",
+      "asc"
+    ],
+    "question": "Affichez les noms des journalistes et les noms des événements qu'ils ont rapportés par ordre croissant",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT T3.Name ,  COUNT(*) FROM news_report AS T1 JOIN event AS T2 ON T1.Event_ID  =  T2.Event_ID JOIN journalist AS T3 ON T1.journalist_ID  =  T3.journalist_ID GROUP BY T3.Name",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "news_report",
+      "AS",
+      "T1",
+      "JOIN",
+      "event",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Event_ID",
+      "=",
+      "T2.Event_ID",
+      "JOIN",
+      "journalist",
+      "AS",
+      "T3",
+      "ON",
+      "T1.journalist_ID",
+      "=",
+      "T3.journalist_ID",
+      "GROUP",
+      "BY",
+      "T3.Name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "news_report",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "event_id",
+      "join",
+      "journalist",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t3",
+      ".",
+      "journalist_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "name"
+    ],
+    "question": "Montrez les noms des journalistes et le nombre d'événements qu'ils ont rapportés.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT T3.Name FROM news_report AS T1 JOIN event AS T2 ON T1.Event_ID  =  T2.Event_ID JOIN journalist AS T3 ON T1.journalist_ID  =  T3.journalist_ID GROUP BY T3.Name HAVING COUNT(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      "FROM",
+      "news_report",
+      "AS",
+      "T1",
+      "JOIN",
+      "event",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Event_ID",
+      "=",
+      "T2.Event_ID",
+      "JOIN",
+      "journalist",
+      "AS",
+      "T3",
+      "ON",
+      "T1.journalist_ID",
+      "=",
+      "T3.journalist_ID",
+      "GROUP",
+      "BY",
+      "T3.Name",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "news_report",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "event_id",
+      "join",
+      "journalist",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t3",
+      ".",
+      "journalist_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Montrez les noms des journalistes qui ont rapporté plus d'un événement.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Name FROM journalist WHERE journalist_ID NOT IN (SELECT journalist_ID FROM news_report)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "journalist",
+      "WHERE",
+      "journalist_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "journalist_ID",
+      "FROM",
+      "news_report",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "journalist",
+      "where",
+      "journalist_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "journalist_id",
+      "from",
+      "news_report",
+      ")"
+    ],
+    "question": "Dressez la liste des noms des journalistes qui n'ont rapporté aucun événement.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT avg(Event_Attendance) ,  max(Event_Attendance) FROM event",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Event_Attendance",
+      ")",
+      ",",
+      "max",
+      "(",
+      "Event_Attendance",
+      ")",
+      "FROM",
+      "event"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "event_attendance",
+      ")",
+      ",",
+      "max",
+      "(",
+      "event_attendance",
+      ")",
+      "from",
+      "event"
+    ],
+    "question": "quelle est la fréquentation moyenne et maximale de tous les événements?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT avg(t1.age) ,  avg(Years_working) ,  t2.work_type FROM journalist AS t1 JOIN news_report AS t2 ON t1.journalist_id  =  t2.journalist_id GROUP BY t2.work_type",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "t1.age",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "Years_working",
+      ")",
+      ",",
+      "t2.work_type",
+      "FROM",
+      "journalist",
+      "AS",
+      "t1",
+      "JOIN",
+      "news_report",
+      "AS",
+      "t2",
+      "ON",
+      "t1.journalist_id",
+      "=",
+      "t2.journalist_id",
+      "GROUP",
+      "BY",
+      "t2.work_type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "t1",
+      ".",
+      "age",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "t2",
+      ".",
+      "work_type",
+      "from",
+      "journalist",
+      "as",
+      "t1",
+      "join",
+      "news_report",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t2",
+      ".",
+      "journalist_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "work_type"
+    ],
+    "question": "Trouvez l'âge moyen et l'expérience de la durée de travail des journalistes travaillant à différents types de rôles.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT venue ,  name FROM event ORDER BY Event_Attendance DESC LIMIT 2",
+    "query_toks": [
+      "SELECT",
+      "venue",
+      ",",
+      "name",
+      "FROM",
+      "event",
+      "ORDER",
+      "BY",
+      "Event_Attendance",
+      "DESC",
+      "LIMIT",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "venue",
+      ",",
+      "name",
+      "from",
+      "event",
+      "order",
+      "by",
+      "event_attendance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Dressez la liste des lieux de l'événement et des noms qui comptent le plus grand nombre de participants.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 2,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

@@ -1,0 +1,2824 @@
+[
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT count(*) FROM visitor WHERE age  <  30",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "visitor",
+      "WHERE",
+      "age",
+      "<",
+      "30"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "visitor",
+      "where",
+      "age",
+      "<",
+      "value"
+    ],
+    "question": "How many visitors below age 30 are there?",
+    "question_toks": [
+      "How",
+      "many",
+      "visitors",
+      "below",
+      "age",
+      "30",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          30,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT name FROM visitor WHERE Level_of_membership  >  4 ORDER BY Level_of_membership DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "visitor",
+      "WHERE",
+      "Level_of_membership",
+      ">",
+      "4",
+      "ORDER",
+      "BY",
+      "Level_of_membership",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "visitor",
+      "where",
+      "level_of_membership",
+      ">",
+      "value",
+      "order",
+      "by",
+      "level_of_membership",
+      "desc"
+    ],
+    "question": "Find the names of the visitors whose membership level is higher than 4, and order the results by the level from high to low.",
+    "question_toks": [
+      "Find",
+      "the",
+      "names",
+      "of",
+      "the",
+      "visitors",
+      "whose",
+      "membership",
+      "level",
+      "is",
+      "higher",
+      "than",
+      "4",
+      ",",
+      "and",
+      "order",
+      "the",
+      "results",
+      "by",
+      "the",
+      "level",
+      "from",
+      "high",
+      "to",
+      "low",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          4,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT avg(age) FROM visitor WHERE Level_of_membership  <=  4",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "FROM",
+      "visitor",
+      "WHERE",
+      "Level_of_membership",
+      "<",
+      "=",
+      "4"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "from",
+      "visitor",
+      "where",
+      "level_of_membership",
+      "<",
+      "=",
+      "value"
+    ],
+    "question": "What is the average age of the visitors whose membership level is not higher than 4?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "age",
+      "of",
+      "the",
+      "visitors",
+      "whose",
+      "membership",
+      "level",
+      "is",
+      "not",
+      "higher",
+      "than",
+      "4",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          6,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          4,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT name ,  Level_of_membership FROM visitor WHERE Level_of_membership  >  4 ORDER BY age DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "Level_of_membership",
+      "FROM",
+      "visitor",
+      "WHERE",
+      "Level_of_membership",
+      ">",
+      "4",
+      "ORDER",
+      "BY",
+      "age",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "level_of_membership",
+      "from",
+      "visitor",
+      "where",
+      "level_of_membership",
+      ">",
+      "value",
+      "order",
+      "by",
+      "age",
+      "desc"
+    ],
+    "question": "Find the name and membership level of the visitors whose membership level is higher than 4, and sort by their age from old to young.",
+    "question_toks": [
+      "Find",
+      "the",
+      "name",
+      "and",
+      "membership",
+      "level",
+      "of",
+      "the",
+      "visitors",
+      "whose",
+      "membership",
+      "level",
+      "is",
+      "higher",
+      "than",
+      "4",
+      ",",
+      "and",
+      "sort",
+      "by",
+      "their",
+      "age",
+      "from",
+      "old",
+      "to",
+      "young",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          4,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT museum_id ,  name FROM museum ORDER BY num_of_staff DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "museum_id",
+      ",",
+      "name",
+      "FROM",
+      "museum",
+      "ORDER",
+      "BY",
+      "num_of_staff",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "museum_id",
+      ",",
+      "name",
+      "from",
+      "museum",
+      "order",
+      "by",
+      "num_of_staff",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Find the id and name of the museum that has the most staff members?",
+    "question_toks": [
+      "Find",
+      "the",
+      "id",
+      "and",
+      "name",
+      "of",
+      "the",
+      "museum",
+      "that",
+      "has",
+      "the",
+      "most",
+      "staff",
+      "members",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT avg(num_of_staff) FROM museum WHERE open_year  <  2009",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "num_of_staff",
+      ")",
+      "FROM",
+      "museum",
+      "WHERE",
+      "open_year",
+      "<",
+      "2009"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "num_of_staff",
+      ")",
+      "from",
+      "museum",
+      "where",
+      "open_year",
+      "<",
+      "value"
+    ],
+    "question": "Find the average number of staff working for the museums that were open before 2009.",
+    "question_toks": [
+      "Find",
+      "the",
+      "average",
+      "number",
+      "of",
+      "staff",
+      "working",
+      "for",
+      "the",
+      "museums",
+      "that",
+      "were",
+      "open",
+      "before",
+      "2009",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          2009,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT Num_of_Staff ,  Open_Year FROM museum WHERE name  =  'Plaza Museum'",
+    "query_toks": [
+      "SELECT",
+      "Num_of_Staff",
+      ",",
+      "Open_Year",
+      "FROM",
+      "museum",
+      "WHERE",
+      "name",
+      "=",
+      "'Plaza",
+      "Museum",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "num_of_staff",
+      ",",
+      "open_year",
+      "from",
+      "museum",
+      "where",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "What are the opening year and staff number of the museum named Plaza Museum?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "opening",
+      "year",
+      "and",
+      "staff",
+      "number",
+      "of",
+      "the",
+      "museum",
+      "named",
+      "Plaza",
+      "Museum",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Plaza Museum\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT name FROM museum WHERE num_of_staff  >  (SELECT min(num_of_staff) FROM museum WHERE open_year  >  2010)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "museum",
+      "WHERE",
+      "num_of_staff",
+      ">",
+      "(",
+      "SELECT",
+      "min",
+      "(",
+      "num_of_staff",
+      ")",
+      "FROM",
+      "museum",
+      "WHERE",
+      "open_year",
+      ">",
+      "2010",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "museum",
+      "where",
+      "num_of_staff",
+      ">",
+      "(",
+      "select",
+      "min",
+      "(",
+      "num_of_staff",
+      ")",
+      "from",
+      "museum",
+      "where",
+      "open_year",
+      ">",
+      "value",
+      ")"
+    ],
+    "question": "find the names of museums which have more staff than the minimum staff number of all museums opened after 2010.",
+    "question_toks": [
+      "find",
+      "the",
+      "names",
+      "of",
+      "museums",
+      "which",
+      "have",
+      "more",
+      "staff",
+      "than",
+      "the",
+      "minimum",
+      "staff",
+      "number",
+      "of",
+      "all",
+      "museums",
+      "opened",
+      "after",
+      "2010",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      3,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    4,
+                    false
+                  ],
+                  null
+                ],
+                2010,
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT t1.id ,  t1.name ,  t1.age FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id GROUP BY t1.id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "t1.id",
+      ",",
+      "t1.name",
+      ",",
+      "t1.age",
+      "FROM",
+      "visitor",
+      "AS",
+      "t1",
+      "JOIN",
+      "visit",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.visitor_id",
+      "GROUP",
+      "BY",
+      "t1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "age",
+      "from",
+      "visitor",
+      "as",
+      "t1",
+      "join",
+      "visit",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "visitor_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "find the id, name and age for visitors who visited some museums more than once.",
+    "question_toks": [
+      "find",
+      "the",
+      "id",
+      ",",
+      "name",
+      "and",
+      "age",
+      "for",
+      "visitors",
+      "who",
+      "visited",
+      "some",
+      "museums",
+      "more",
+      "than",
+      "once",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT t2.visitor_id ,  t1.name ,  t1.Level_of_membership FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id GROUP BY t2.visitor_id ORDER BY sum(t2.Total_spent) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t2.visitor_id",
+      ",",
+      "t1.name",
+      ",",
+      "t1.Level_of_membership",
+      "FROM",
+      "visitor",
+      "AS",
+      "t1",
+      "JOIN",
+      "visit",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.visitor_id",
+      "GROUP",
+      "BY",
+      "t2.visitor_id",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "t2.Total_spent",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "visitor_id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "level_of_membership",
+      "from",
+      "visitor",
+      "as",
+      "t1",
+      "join",
+      "visit",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "visitor_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "visitor_id",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "total_spent",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What are the id, name and membership level of visitors who have spent the largest amount of money in total in all museum tickets?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "id",
+      ",",
+      "name",
+      "and",
+      "membership",
+      "level",
+      "of",
+      "visitors",
+      "who",
+      "have",
+      "spent",
+      "the",
+      "largest",
+      "amount",
+      "of",
+      "money",
+      "in",
+      "total",
+      "in",
+      "all",
+      "museum",
+      "tickets",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              4,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT t2.Museum_ID ,  t1.name FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID GROUP BY t2.Museum_ID ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t2.Museum_ID",
+      ",",
+      "t1.name",
+      "FROM",
+      "museum",
+      "AS",
+      "t1",
+      "JOIN",
+      "visit",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Museum_ID",
+      "=",
+      "t2.Museum_ID",
+      "GROUP",
+      "BY",
+      "t2.Museum_ID",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "museum_id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "museum",
+      "as",
+      "t1",
+      "join",
+      "visit",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "museum_id",
+      "=",
+      "t2",
+      ".",
+      "museum_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "museum_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What are the id and name of the museum visited most times?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "id",
+      "and",
+      "name",
+      "of",
+      "the",
+      "museum",
+      "visited",
+      "most",
+      "times",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT name FROM museum WHERE Museum_ID NOT IN (SELECT museum_id FROM visit)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "museum",
+      "WHERE",
+      "Museum_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "museum_id",
+      "FROM",
+      "visit",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "museum",
+      "where",
+      "museum_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "museum_id",
+      "from",
+      "visit",
+      ")"
+    ],
+    "question": "What is the name of the museum that had no visitor yet?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "name",
+      "of",
+      "the",
+      "museum",
+      "that",
+      "had",
+      "no",
+      "visitor",
+      "yet",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      9,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT t1.name ,  t1.age FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id ORDER BY t2.num_of_ticket DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t1.age",
+      "FROM",
+      "visitor",
+      "AS",
+      "t1",
+      "JOIN",
+      "visit",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.visitor_id",
+      "ORDER",
+      "BY",
+      "t2.num_of_ticket",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "age",
+      "from",
+      "visitor",
+      "as",
+      "t1",
+      "join",
+      "visit",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "visitor_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "num_of_ticket",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Find the name and age of the visitor who bought the most tickets at once.",
+    "question_toks": [
+      "Find",
+      "the",
+      "name",
+      "and",
+      "age",
+      "of",
+      "the",
+      "visitor",
+      "who",
+      "bought",
+      "the",
+      "most",
+      "tickets",
+      "at",
+      "once",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT avg(num_of_ticket) ,  max(num_of_ticket) FROM visit",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "num_of_ticket",
+      ")",
+      ",",
+      "max",
+      "(",
+      "num_of_ticket",
+      ")",
+      "FROM",
+      "visit"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "num_of_ticket",
+      ")",
+      ",",
+      "max",
+      "(",
+      "num_of_ticket",
+      ")",
+      "from",
+      "visit"
+    ],
+    "question": "What are the average and maximum number of tickets bought in all visits?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "average",
+      "and",
+      "maximum",
+      "number",
+      "of",
+      "tickets",
+      "bought",
+      "in",
+      "all",
+      "visits",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT sum(t2.Total_spent) FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id WHERE t1.Level_of_membership  =  1",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "t2.Total_spent",
+      ")",
+      "FROM",
+      "visitor",
+      "AS",
+      "t1",
+      "JOIN",
+      "visit",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.visitor_id",
+      "WHERE",
+      "t1.Level_of_membership",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "total_spent",
+      ")",
+      "from",
+      "visitor",
+      "as",
+      "t1",
+      "join",
+      "visit",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "visitor_id",
+      "where",
+      "t1",
+      ".",
+      "level_of_membership",
+      "=",
+      "value"
+    ],
+    "question": "What is the total ticket expense of the visitors whose membership level is 1?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "total",
+      "ticket",
+      "expense",
+      "of",
+      "the",
+      "visitors",
+      "whose",
+      "membership",
+      "level",
+      "is",
+      "1",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  <  2009 INTERSECT SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  >  2011",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "visitor",
+      "AS",
+      "t1",
+      "JOIN",
+      "visit",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.visitor_id",
+      "JOIN",
+      "museum",
+      "AS",
+      "t3",
+      "ON",
+      "t3.Museum_ID",
+      "=",
+      "t2.Museum_ID",
+      "WHERE",
+      "t3.open_year",
+      "<",
+      "2009",
+      "INTERSECT",
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "visitor",
+      "AS",
+      "t1",
+      "JOIN",
+      "visit",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.visitor_id",
+      "JOIN",
+      "museum",
+      "AS",
+      "t3",
+      "ON",
+      "t3.Museum_ID",
+      "=",
+      "t2.Museum_ID",
+      "WHERE",
+      "t3.open_year",
+      ">",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "visitor",
+      "as",
+      "t1",
+      "join",
+      "visit",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "visitor_id",
+      "join",
+      "museum",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "museum_id",
+      "=",
+      "t2",
+      ".",
+      "museum_id",
+      "where",
+      "t3",
+      ".",
+      "open_year",
+      "<",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "visitor",
+      "as",
+      "t1",
+      "join",
+      "visit",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "visitor_id",
+      "join",
+      "museum",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "museum_id",
+      "=",
+      "t2",
+      ".",
+      "museum_id",
+      "where",
+      "t3",
+      ".",
+      "open_year",
+      ">",
+      "value"
+    ],
+    "question": "What is the name of the visitor who visited both a museum opened before 2009 and a museum opened after 2011?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "name",
+      "of",
+      "the",
+      "visitor",
+      "who",
+      "visited",
+      "both",
+      "a",
+      "museum",
+      "opened",
+      "before",
+      "2009",
+      "and",
+      "a",
+      "museum",
+      "opened",
+      "after",
+      "2011",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          2009,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  5,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            2011,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT count(*) FROM visitor WHERE id NOT IN (SELECT t2.visitor_id FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID WHERE t1.open_year  >  2010)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "visitor",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "t2.visitor_id",
+      "FROM",
+      "museum",
+      "AS",
+      "t1",
+      "JOIN",
+      "visit",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Museum_ID",
+      "=",
+      "t2.Museum_ID",
+      "WHERE",
+      "t1.open_year",
+      ">",
+      "2010",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "visitor",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "t2",
+      ".",
+      "visitor_id",
+      "from",
+      "museum",
+      "as",
+      "t1",
+      "join",
+      "visit",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "museum_id",
+      "=",
+      "t2",
+      ".",
+      "museum_id",
+      "where",
+      "t1",
+      ".",
+      "open_year",
+      ">",
+      "value",
+      ")"
+    ],
+    "question": "Find the number of visitors who did not visit any museum opened after 2010.",
+    "question_toks": [
+      "Find",
+      "the",
+      "number",
+      "of",
+      "visitors",
+      "who",
+      "did",
+      "not",
+      "visit",
+      "any",
+      "museum",
+      "opened",
+      "after",
+      "2010",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ],
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": [
+                [
+                  false,
+                  2,
+                  [
+                    0,
+                    [
+                      0,
+                      1,
+                      false
+                    ],
+                    null
+                  ],
+                  [
+                    0,
+                    9,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      10,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    4,
+                    false
+                  ],
+                  null
+                ],
+                2010,
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "museum_visit",
+    "query": "SELECT count(*) FROM museum WHERE open_year  >  2013 OR open_year  <  2008",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "museum",
+      "WHERE",
+      "open_year",
+      ">",
+      "2013",
+      "OR",
+      "open_year",
+      "<",
+      "2008"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "museum",
+      "where",
+      "open_year",
+      ">",
+      "value",
+      "or",
+      "open_year",
+      "<",
+      "value"
+    ],
+    "question": "How many museums were opened after 2013 or before 2008?",
+    "question_toks": [
+      "How",
+      "many",
+      "museums",
+      "were",
+      "opened",
+      "after",
+      "2013",
+      "or",
+      "before",
+      "2008",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          2013,
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          2008,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

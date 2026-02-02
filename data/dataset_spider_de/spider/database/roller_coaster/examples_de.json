@@ -1,0 +1,1912 @@
+[
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT count(*) FROM roller_coaster",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "roller_coaster"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "roller_coaster"
+    ],
+    "question": "Wie viele Achterbahnen gibt es?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT Name FROM roller_coaster ORDER BY LENGTH ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "roller_coaster",
+      "ORDER",
+      "BY",
+      "LENGTH",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "roller_coaster",
+      "order",
+      "by",
+      "length",
+      "asc"
+    ],
+    "question": "Listen Sie die Namen der Achterbahnen in aufsteigender Reihenfolge der Länge auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT LENGTH ,  Height FROM roller_coaster",
+    "query_toks": [
+      "SELECT",
+      "LENGTH",
+      ",",
+      "Height",
+      "FROM",
+      "roller_coaster"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "length",
+      ",",
+      "height",
+      "from",
+      "roller_coaster"
+    ],
+    "question": "Was sind die Längen und Höhen von Achterbahnen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT Name FROM country WHERE Languages != \"German\"",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "country",
+      "WHERE",
+      "Languages",
+      "!",
+      "=",
+      "``",
+      "German",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "country",
+      "where",
+      "languages",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Listen Sie die Namen der Länder auf, deren Sprache nicht \"German\" ist.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"German\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT Status FROM roller_coaster WHERE LENGTH  >  3300 OR Height  >  100",
+    "query_toks": [
+      "SELECT",
+      "Status",
+      "FROM",
+      "roller_coaster",
+      "WHERE",
+      "LENGTH",
+      ">",
+      "3300",
+      "OR",
+      "Height",
+      ">",
+      "100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "status",
+      "from",
+      "roller_coaster",
+      "where",
+      "length",
+      ">",
+      "value",
+      "or",
+      "height",
+      ">",
+      "value"
+    ],
+    "question": "Zeigen Sie den Status von Achterbahnen an, die länger als 3300 oder höher als 100 sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          3300.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          100.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT Speed FROM roller_coaster ORDER BY LENGTH DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Speed",
+      "FROM",
+      "roller_coaster",
+      "ORDER",
+      "BY",
+      "LENGTH",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "speed",
+      "from",
+      "roller_coaster",
+      "order",
+      "by",
+      "length",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Was sind die Geschwindigkeiten der längsten Achterbahn?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT avg(Speed) FROM roller_coaster",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Speed",
+      ")",
+      "FROM",
+      "roller_coaster"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "speed",
+      ")",
+      "from",
+      "roller_coaster"
+    ],
+    "question": "Was ist die durchschnittliche Geschwindigkeit von Achterbahnen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT Status ,  COUNT(*) FROM roller_coaster GROUP BY Status",
+    "query_toks": [
+      "SELECT",
+      "Status",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "roller_coaster",
+      "GROUP",
+      "BY",
+      "Status"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "status",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "roller_coaster",
+      "group",
+      "by",
+      "status"
+    ],
+    "question": "Zeigen Sie die verschiedenen Status und die Anzahl der Achterbahnen für jeden Status an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT Status FROM roller_coaster GROUP BY Status ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Status",
+      "FROM",
+      "roller_coaster",
+      "GROUP",
+      "BY",
+      "Status",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "status",
+      "from",
+      "roller_coaster",
+      "group",
+      "by",
+      "status",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Bitte zeigen Sie den häufigsten Status von Achterbahnen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT Status FROM roller_coaster GROUP BY Status HAVING COUNT(*)  >  2",
+    "query_toks": [
+      "SELECT",
+      "Status",
+      "FROM",
+      "roller_coaster",
+      "GROUP",
+      "BY",
+      "Status",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "status",
+      "from",
+      "roller_coaster",
+      "group",
+      "by",
+      "status",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Listen Sie den Status auf, den mehr als zwei Achterbahnen gemeinsam haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT Park FROM roller_coaster ORDER BY Speed DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Park",
+      "FROM",
+      "roller_coaster",
+      "ORDER",
+      "BY",
+      "Speed",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "park",
+      "from",
+      "roller_coaster",
+      "order",
+      "by",
+      "speed",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Zeigen Sie den Park der Achterbahn mit der höchsten Geschwindigkeit.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT T2.Name ,  T1.Name FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T1.Name",
+      "FROM",
+      "country",
+      "AS",
+      "T1",
+      "JOIN",
+      "roller_coaster",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Country_ID",
+      "=",
+      "T2.Country_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "country",
+      "as",
+      "t1",
+      "join",
+      "roller_coaster",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id"
+    ],
+    "question": "Zeigen Sie die Namen der Achterbahnen und die Namen des Landes an, in dem sie sich befinden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT T1.Name FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID GROUP BY T1.Name HAVING COUNT(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "country",
+      "AS",
+      "T1",
+      "JOIN",
+      "roller_coaster",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Country_ID",
+      "=",
+      "T2.Country_ID",
+      "GROUP",
+      "BY",
+      "T1.Name",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "country",
+      "as",
+      "t1",
+      "join",
+      "roller_coaster",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Zeigen Sie die Namen von Ländern an, die mehr als eine Achterbahn haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT T1.Name ,  T1.population FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID ORDER BY T2.Height DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      ",",
+      "T1.population",
+      "FROM",
+      "country",
+      "AS",
+      "T1",
+      "JOIN",
+      "roller_coaster",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Country_ID",
+      "=",
+      "T2.Country_ID",
+      "ORDER",
+      "BY",
+      "T2.Height",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "population",
+      "from",
+      "country",
+      "as",
+      "t1",
+      "join",
+      "roller_coaster",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "height",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Zeigen Sie den Namen und die Bevölkerung des Landes mit der höchsten Achterbahn an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT T1.Name ,  avg(T2.Speed) FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID GROUP BY T1.Name",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      ",",
+      "avg",
+      "(",
+      "T2.Speed",
+      ")",
+      "FROM",
+      "country",
+      "AS",
+      "T1",
+      "JOIN",
+      "roller_coaster",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Country_ID",
+      "=",
+      "T2.Country_ID",
+      "GROUP",
+      "BY",
+      "T1.Name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "avg",
+      "(",
+      "t2",
+      ".",
+      "speed",
+      ")",
+      "from",
+      "country",
+      "as",
+      "t1",
+      "join",
+      "roller_coaster",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name"
+    ],
+    "question": "Zeigen Sie die Namen der Länder und die Durchschnittsgeschwindigkeit der Achterbahnen aus jedem Land an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT count(*) FROM country WHERE country_id NOT IN ( SELECT country_id FROM roller_coaster WHERE LENGTH  >  3000 )",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "country",
+      "WHERE",
+      "country_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "country_id",
+      "FROM",
+      "roller_coaster",
+      "WHERE",
+      "LENGTH",
+      ">",
+      "3000",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "country",
+      "where",
+      "country_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "country_id",
+      "from",
+      "roller_coaster",
+      "where",
+      "length",
+      ">",
+      "value",
+      ")"
+    ],
+    "question": "Wie viele Länder haben keine Achterbahn länger als 3000?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    5,
+                    false
+                  ],
+                  null
+                ],
+                3000.0,
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "roller_coaster",
+    "query": "SELECT T1.name ,  T1.area ,  T1.population FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID WHERE T2.speed  >  60 INTERSECT SELECT T1.name ,  T1.area ,  T1.population FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID WHERE T2.speed  <  55",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.area",
+      ",",
+      "T1.population",
+      "FROM",
+      "country",
+      "AS",
+      "T1",
+      "JOIN",
+      "roller_coaster",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Country_ID",
+      "=",
+      "T2.Country_ID",
+      "WHERE",
+      "T2.speed",
+      ">",
+      "60",
+      "INTERSECT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.area",
+      ",",
+      "T1.population",
+      "FROM",
+      "country",
+      "AS",
+      "T1",
+      "JOIN",
+      "roller_coaster",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Country_ID",
+      "=",
+      "T2.Country_ID",
+      "WHERE",
+      "T2.speed",
+      "<",
+      "55"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "area",
+      ",",
+      "t1",
+      ".",
+      "population",
+      "from",
+      "country",
+      "as",
+      "t1",
+      "join",
+      "roller_coaster",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "where",
+      "t2",
+      ".",
+      "speed",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "area",
+      ",",
+      "t1",
+      ".",
+      "population",
+      "from",
+      "country",
+      "as",
+      "t1",
+      "join",
+      "roller_coaster",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "where",
+      "t2",
+      ".",
+      "speed",
+      "<",
+      "value"
+    ],
+    "question": "Was sind die Ländernamen, den Bereich und die Bevölkerung, die beide Achterbahnen mit höherer Geschwindigkeit haben",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          60.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  11,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            55.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  }
+]

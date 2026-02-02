@@ -1,0 +1,2078 @@
+[
+  {
+    "db_id": "riding_club",
+    "query": "SELECT count(*) FROM player",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "player"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "player"
+    ],
+    "question": "プレイヤーは何人いますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Player_name FROM player ORDER BY Votes ASC",
+    "query_toks": [
+      "SELECT",
+      "Player_name",
+      "FROM",
+      "player",
+      "ORDER",
+      "BY",
+      "Votes",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player_name",
+      "from",
+      "player",
+      "order",
+      "by",
+      "votes",
+      "asc"
+    ],
+    "question": "投票の昇順でプレーヤーの名前をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Gender ,  Occupation FROM player",
+    "query_toks": [
+      "SELECT",
+      "Gender",
+      ",",
+      "Occupation",
+      "FROM",
+      "player"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "gender",
+      ",",
+      "occupation",
+      "from",
+      "player"
+    ],
+    "question": "プレイヤーの性別と職業は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Player_name ,  residence FROM player WHERE Occupation != \"Researcher\"",
+    "query_toks": [
+      "SELECT",
+      "Player_name",
+      ",",
+      "residence",
+      "FROM",
+      "player",
+      "WHERE",
+      "Occupation",
+      "!",
+      "=",
+      "``",
+      "Researcher",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player_name",
+      ",",
+      "residence",
+      "from",
+      "player",
+      "where",
+      "occupation",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "職業が「Researcher」ではないプレイヤーの名前と居住地をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Researcher\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Sponsor_name FROM player WHERE Residence  =  \"Brandon\" OR Residence  =  \"Birtle\"",
+    "query_toks": [
+      "SELECT",
+      "Sponsor_name",
+      "FROM",
+      "player",
+      "WHERE",
+      "Residence",
+      "=",
+      "``",
+      "Brandon",
+      "''",
+      "OR",
+      "Residence",
+      "=",
+      "``",
+      "Birtle",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sponsor_name",
+      "from",
+      "player",
+      "where",
+      "residence",
+      "=",
+      "value",
+      "or",
+      "residence",
+      "=",
+      "value"
+    ],
+    "question": "居住地が「Brandon」または「Birtle」のプレーヤーのスポンサーの名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Brandon\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Birtle\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Player_name FROM player ORDER BY Votes DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Player_name",
+      "FROM",
+      "player",
+      "ORDER",
+      "BY",
+      "Votes",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player_name",
+      "from",
+      "player",
+      "order",
+      "by",
+      "votes",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "投票数が最も多いプレイヤーの名前は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Occupation ,  COUNT(*) FROM player GROUP BY Occupation",
+    "query_toks": [
+      "SELECT",
+      "Occupation",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "player",
+      "GROUP",
+      "BY",
+      "Occupation"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "occupation",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "player",
+      "group",
+      "by",
+      "occupation"
+    ],
+    "question": "さまざまな職業と、各職業のプレーヤーの数を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Occupation FROM player GROUP BY Occupation ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Occupation",
+      "FROM",
+      "player",
+      "GROUP",
+      "BY",
+      "Occupation",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "occupation",
+      "from",
+      "player",
+      "group",
+      "by",
+      "occupation",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "プレイヤーの最も多い職業を示してください。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Residence FROM player GROUP BY Residence HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "Residence",
+      "FROM",
+      "player",
+      "GROUP",
+      "BY",
+      "Residence",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "residence",
+      "from",
+      "player",
+      "group",
+      "by",
+      "residence",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "少なくとも2人のプレーヤーがいる住所を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T3.Player_name ,  T2.coach_name FROM player_coach AS T1 JOIN coach AS T2 ON T1.Coach_ID  =  T2.Coach_ID JOIN player AS T3 ON T1.Player_ID  =  T3.Player_ID",
+    "query_toks": [
+      "SELECT",
+      "T3.Player_name",
+      ",",
+      "T2.coach_name",
+      "FROM",
+      "player_coach",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Coach_ID",
+      "=",
+      "T2.Coach_ID",
+      "JOIN",
+      "player",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Player_ID",
+      "=",
+      "T3.Player_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "player_name",
+      ",",
+      "t2",
+      ".",
+      "coach_name",
+      "from",
+      "player_coach",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coach_id",
+      "=",
+      "t2",
+      ".",
+      "coach_id",
+      "join",
+      "player",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "player_id",
+      "=",
+      "t3",
+      ".",
+      "player_id"
+    ],
+    "question": "選手の名前とコーチの名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T3.Player_name FROM player_coach AS T1 JOIN coach AS T2 ON T1.Coach_ID  =  T2.Coach_ID JOIN player AS T3 ON T1.Player_ID  =  T3.Player_ID WHERE T2.Rank  =  1",
+    "query_toks": [
+      "SELECT",
+      "T3.Player_name",
+      "FROM",
+      "player_coach",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Coach_ID",
+      "=",
+      "T2.Coach_ID",
+      "JOIN",
+      "player",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Player_ID",
+      "=",
+      "T3.Player_ID",
+      "WHERE",
+      "T2.Rank",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "player_name",
+      "from",
+      "player_coach",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coach_id",
+      "=",
+      "t2",
+      ".",
+      "coach_id",
+      "join",
+      "player",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "player_id",
+      "=",
+      "t3",
+      ".",
+      "player_id",
+      "where",
+      "t2",
+      ".",
+      "rank",
+      "=",
+      "value"
+    ],
+    "question": "ランク1のコーチがコーチを務めた選手の名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T3.Player_name ,  T3.gender FROM player_coach AS T1 JOIN coach AS T2 ON T1.Coach_ID  =  T2.Coach_ID JOIN player AS T3 ON T1.Player_ID  =  T3.Player_ID WHERE T1.Starting_year  >  2011",
+    "query_toks": [
+      "SELECT",
+      "T3.Player_name",
+      ",",
+      "T3.gender",
+      "FROM",
+      "player_coach",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Coach_ID",
+      "=",
+      "T2.Coach_ID",
+      "JOIN",
+      "player",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Player_ID",
+      "=",
+      "T3.Player_ID",
+      "WHERE",
+      "T1.Starting_year",
+      ">",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "player_name",
+      ",",
+      "t3",
+      ".",
+      "gender",
+      "from",
+      "player_coach",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coach_id",
+      "=",
+      "t2",
+      ".",
+      "coach_id",
+      "join",
+      "player",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "player_id",
+      "=",
+      "t3",
+      ".",
+      "player_id",
+      "where",
+      "t1",
+      ".",
+      "starting_year",
+      ">",
+      "value"
+    ],
+    "question": "2011年以降、コーチがある選手の名前と性別を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          2011.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T3.Player_name ,  T2.coach_name FROM player_coach AS T1 JOIN coach AS T2 ON T1.Coach_ID  =  T2.Coach_ID JOIN player AS T3 ON T1.Player_ID  =  T3.Player_ID ORDER BY T3.Votes DESC",
+    "query_toks": [
+      "SELECT",
+      "T3.Player_name",
+      ",",
+      "T2.coach_name",
+      "FROM",
+      "player_coach",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Coach_ID",
+      "=",
+      "T2.Coach_ID",
+      "JOIN",
+      "player",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Player_ID",
+      "=",
+      "T3.Player_ID",
+      "ORDER",
+      "BY",
+      "T3.Votes",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "player_name",
+      ",",
+      "t2",
+      ".",
+      "coach_name",
+      "from",
+      "player_coach",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coach_id",
+      "=",
+      "t2",
+      ".",
+      "coach_id",
+      "join",
+      "player",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "player_id",
+      "=",
+      "t3",
+      ".",
+      "player_id",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "votes",
+      "desc"
+    ],
+    "question": "選手の投票の降順で選手の名前とコーチの名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Player_name FROM player WHERE Player_ID NOT IN (SELECT Player_ID FROM player_coach)",
+    "query_toks": [
+      "SELECT",
+      "Player_name",
+      "FROM",
+      "player",
+      "WHERE",
+      "Player_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Player_ID",
+      "FROM",
+      "player_coach",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player_name",
+      "from",
+      "player",
+      "where",
+      "player_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "player_id",
+      "from",
+      "player_coach",
+      ")"
+    ],
+    "question": "コーチがいない選手の名前をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  3
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      18,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Residence FROM player WHERE gender  =  \"M\" INTERSECT SELECT Residence FROM player WHERE gender  =  \"F\"",
+    "query_toks": [
+      "SELECT",
+      "Residence",
+      "FROM",
+      "player",
+      "WHERE",
+      "gender",
+      "=",
+      "``",
+      "M",
+      "''",
+      "INTERSECT",
+      "SELECT",
+      "Residence",
+      "FROM",
+      "player",
+      "WHERE",
+      "gender",
+      "=",
+      "``",
+      "F",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "residence",
+      "from",
+      "player",
+      "where",
+      "gender",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "residence",
+      "from",
+      "player",
+      "where",
+      "gender",
+      "=",
+      "value"
+    ],
+    "question": "性別「M」のプレーヤーと性別「F」のプレーヤーの両方がいる住所を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"M\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  5,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "\"F\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T1.club_id ,  T1.club_name, count(*) FROM club AS T1 JOIN coach AS T2 ON T1.club_id  =  T2.club_id GROUP BY T1.club_id",
+    "query_toks": [
+      "SELECT",
+      "T1.club_id",
+      ",",
+      "T1.club_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "club",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.club_id",
+      "=",
+      "T2.club_id",
+      "GROUP",
+      "BY",
+      "T1.club_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "club_id",
+      ",",
+      "t1",
+      ".",
+      "club_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "club",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "club_id",
+      "=",
+      "t2",
+      ".",
+      "club_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "club_id"
+    ],
+    "question": "各クラブには何人のコーチがいますか？クラブID、名前、コーチの数を記載してください。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T1.club_id ,  T1.gold FROM match_result AS T1 JOIN coach AS T2 ON T1.club_id  =  T2.club_id GROUP BY T1.club_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.club_id",
+      ",",
+      "T1.gold",
+      "FROM",
+      "match_result",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.club_id",
+      "=",
+      "T2.club_id",
+      "GROUP",
+      "BY",
+      "T1.club_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "club_id",
+      ",",
+      "t1",
+      ".",
+      "gold",
+      "from",
+      "match_result",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "club_id",
+      "=",
+      "t2",
+      ".",
+      "club_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "club_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "コーチが最も多いクラブは何個の金メダルを獲得しましたか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          22,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

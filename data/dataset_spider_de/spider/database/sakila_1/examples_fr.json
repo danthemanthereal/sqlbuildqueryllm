@@ -1,0 +1,10640 @@
+[
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(DISTINCT last_name) FROM actor",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "last_name",
+      ")",
+      "FROM",
+      "actor"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "last_name",
+      ")",
+      "from",
+      "actor"
+    ],
+    "question": "Combien de noms de famille différents les acteurs et actrices ont-ils?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                3,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(DISTINCT last_name) FROM actor",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "last_name",
+      ")",
+      "FROM",
+      "actor"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "last_name",
+      ")",
+      "from",
+      "actor"
+    ],
+    "question": "Comptez le nombre de noms de famille différents que possèdent les acteurs.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                3,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT first_name FROM actor GROUP BY first_name ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "first_name",
+      "FROM",
+      "actor",
+      "GROUP",
+      "BY",
+      "first_name",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "first_name",
+      "from",
+      "actor",
+      "group",
+      "by",
+      "first_name",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le prénom le plus populaire des acteurs?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT first_name FROM actor GROUP BY first_name ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "first_name",
+      "FROM",
+      "actor",
+      "GROUP",
+      "BY",
+      "first_name",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "first_name",
+      "from",
+      "actor",
+      "group",
+      "by",
+      "first_name",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Renvoyez le prénom le plus courant parmi tous les acteurs.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT first_name ,  last_name FROM actor GROUP BY first_name ,  last_name ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "first_name",
+      ",",
+      "last_name",
+      "FROM",
+      "actor",
+      "GROUP",
+      "BY",
+      "first_name",
+      ",",
+      "last_name",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "first_name",
+      ",",
+      "last_name",
+      "from",
+      "actor",
+      "group",
+      "by",
+      "first_name",
+      ",",
+      "last_name",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le nom complet le plus populaire des acteurs?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ],
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT first_name ,  last_name FROM actor GROUP BY first_name ,  last_name ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "first_name",
+      ",",
+      "last_name",
+      "FROM",
+      "actor",
+      "GROUP",
+      "BY",
+      "first_name",
+      ",",
+      "last_name",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "first_name",
+      ",",
+      "last_name",
+      "from",
+      "actor",
+      "group",
+      "by",
+      "first_name",
+      ",",
+      "last_name",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Renvoyez le nom complet le plus courant parmi tous les acteurs.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          2,
+          false
+        ],
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT district FROM address GROUP BY district HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "district",
+      "FROM",
+      "address",
+      "GROUP",
+      "BY",
+      "district",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district",
+      "from",
+      "address",
+      "group",
+      "by",
+      "district",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Quels quartiers ont au moins deux adresses?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT district FROM address GROUP BY district HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "district",
+      "FROM",
+      "address",
+      "GROUP",
+      "BY",
+      "district",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district",
+      "from",
+      "address",
+      "group",
+      "by",
+      "district",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Donnez les quartiers qui ont deux adresses ou plus.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT phone ,  postal_code FROM address WHERE address  =  '1031 Daugavpils Parkway'",
+    "query_toks": [
+      "SELECT",
+      "phone",
+      ",",
+      "postal_code",
+      "FROM",
+      "address",
+      "WHERE",
+      "address",
+      "=",
+      "'1031",
+      "Daugavpils",
+      "Parkway",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "phone",
+      ",",
+      "postal_code",
+      "from",
+      "address",
+      "where",
+      "address",
+      "=",
+      "value"
+    ],
+    "question": "Quel est le numéro de téléphone et le code postal de l'adresse \"1031 Daugavpils Parkway\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"1031 Daugavpils Parkway\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT phone ,  postal_code FROM address WHERE address  =  '1031 Daugavpils Parkway'",
+    "query_toks": [
+      "SELECT",
+      "phone",
+      ",",
+      "postal_code",
+      "FROM",
+      "address",
+      "WHERE",
+      "address",
+      "=",
+      "'1031",
+      "Daugavpils",
+      "Parkway",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "phone",
+      ",",
+      "postal_code",
+      "from",
+      "address",
+      "where",
+      "address",
+      "=",
+      "value"
+    ],
+    "question": "Indiquez le téléphone et le code postal correspondant à l'adresse \"1031 Daugavpils Parkway\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"1031 Daugavpils Parkway\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.city ,  count(*) ,  T1.city_id FROM address AS T1 JOIN city AS T2 ON T1.city_id  =  T2.city_id GROUP BY T1.city_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.city_id",
+      "FROM",
+      "address",
+      "AS",
+      "T1",
+      "JOIN",
+      "city",
+      "AS",
+      "T2",
+      "ON",
+      "T1.city_id",
+      "=",
+      "T2.city_id",
+      "GROUP",
+      "BY",
+      "T1.city_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "city_id",
+      "from",
+      "address",
+      "as",
+      "t1",
+      "join",
+      "city",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "city_id",
+      "=",
+      "t2",
+      ".",
+      "city_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "city_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quelle ville a le plus d'adresses? Indiquez le nom de la ville, le nombre d'adresses et l'identifiant de la ville.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.city ,  count(*) ,  T1.city_id FROM address AS T1 JOIN city AS T2 ON T1.city_id  =  T2.city_id GROUP BY T1.city_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.city_id",
+      "FROM",
+      "address",
+      "AS",
+      "T1",
+      "JOIN",
+      "city",
+      "AS",
+      "T2",
+      "ON",
+      "T1.city_id",
+      "=",
+      "T2.city_id",
+      "GROUP",
+      "BY",
+      "T1.city_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "city_id",
+      "from",
+      "address",
+      "as",
+      "t1",
+      "join",
+      "city",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "city_id",
+      "=",
+      "t2",
+      ".",
+      "city_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "city_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quels sont le nom de la ville, l'identifiant et le nombre d'adresses correspondant à la ville avec le plus d’ adresse?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM address WHERE district  =  'California'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "address",
+      "WHERE",
+      "district",
+      "=",
+      "'California",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "address",
+      "where",
+      "district",
+      "=",
+      "value"
+    ],
+    "question": "Combien d'adresses y a-t-il dans le district de \"California\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"California\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM address WHERE district  =  'California'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "address",
+      "WHERE",
+      "district",
+      "=",
+      "'California",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "address",
+      "where",
+      "district",
+      "=",
+      "value"
+    ],
+    "question": "Comptez le nombre d'adresses dans le district de \"California\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"California\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title ,  film_id FROM film WHERE rental_rate  =  0.99 INTERSECT SELECT T1.title ,  T1.film_id FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id HAVING count(*)  <  3",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "film_id",
+      "FROM",
+      "film",
+      "WHERE",
+      "rental_rate",
+      "=",
+      "0.99",
+      "INTERSECT",
+      "SELECT",
+      "T1.title",
+      ",",
+      "T1.film_id",
+      "FROM",
+      "film",
+      "AS",
+      "T1",
+      "JOIN",
+      "inventory",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "film_id",
+      "from",
+      "film",
+      "where",
+      "rental_rate",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "title",
+      ",",
+      "t1",
+      ".",
+      "film_id",
+      "from",
+      "film",
+      "as",
+      "t1",
+      "join",
+      "inventory",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "value"
+    ],
+    "question": "Quel film est loué au tarif de 0,99 et en a moins de 3 en inventaire? Énumérez le titre et l'identifiant du film.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              39,
+              false
+            ],
+            null
+          ],
+          0.99,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              6
+            ],
+            [
+              "table_unit",
+              10
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  32,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                55,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  33,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  32,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [
+          [
+            0,
+            32,
+            false
+          ]
+        ],
+        "having": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                3,
+                0,
+                false
+              ],
+              null
+            ],
+            3.0,
+            null
+          ]
+        ],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title ,  film_id FROM film WHERE rental_rate  =  0.99 INTERSECT SELECT T1.title ,  T1.film_id FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id HAVING count(*)  <  3",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "film_id",
+      "FROM",
+      "film",
+      "WHERE",
+      "rental_rate",
+      "=",
+      "0.99",
+      "INTERSECT",
+      "SELECT",
+      "T1.title",
+      ",",
+      "T1.film_id",
+      "FROM",
+      "film",
+      "AS",
+      "T1",
+      "JOIN",
+      "inventory",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "film_id",
+      "from",
+      "film",
+      "where",
+      "rental_rate",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "title",
+      ",",
+      "t1",
+      ".",
+      "film_id",
+      "from",
+      "film",
+      "as",
+      "t1",
+      "join",
+      "inventory",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "value"
+    ],
+    "question": "Quels sont le titre et l'identifiant du film qui a un taux de location de 0,99 et un inventaire inférieur à 3?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              39,
+              false
+            ],
+            null
+          ],
+          0.99,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              6
+            ],
+            [
+              "table_unit",
+              10
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  32,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                55,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  33,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  32,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [
+          [
+            0,
+            32,
+            false
+          ]
+        ],
+        "having": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                3,
+                0,
+                false
+              ],
+              null
+            ],
+            3.0,
+            null
+          ]
+        ],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM city AS T1 JOIN country AS T2 ON T1.country_id  =  T2.country_id WHERE T2.country  =  'Australia'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "city",
+      "AS",
+      "T1",
+      "JOIN",
+      "country",
+      "AS",
+      "T2",
+      "ON",
+      "T1.country_id",
+      "=",
+      "T2.country_id",
+      "WHERE",
+      "T2.country",
+      "=",
+      "'Australia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "city",
+      "as",
+      "t1",
+      "join",
+      "country",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "where",
+      "t2",
+      ".",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "Combien de villes y a-t-il en \"Australia\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "\"Australia\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM city AS T1 JOIN country AS T2 ON T1.country_id  =  T2.country_id WHERE T2.country  =  'Australia'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "city",
+      "AS",
+      "T1",
+      "JOIN",
+      "country",
+      "AS",
+      "T2",
+      "ON",
+      "T1.country_id",
+      "=",
+      "T2.country_id",
+      "WHERE",
+      "T2.country",
+      "=",
+      "'Australia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "city",
+      "as",
+      "t1",
+      "join",
+      "country",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "where",
+      "t2",
+      ".",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "Comptez le nombre de villes en \"Australia\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "\"Australia\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.country FROM city AS T1 JOIN country AS T2 ON T1.country_id  =  T2.country_id GROUP BY T2.country_id HAVING count(*)  >=  3",
+    "query_toks": [
+      "SELECT",
+      "T2.country",
+      "FROM",
+      "city",
+      "AS",
+      "T1",
+      "JOIN",
+      "country",
+      "AS",
+      "T2",
+      "ON",
+      "T1.country_id",
+      "=",
+      "T2.country_id",
+      "GROUP",
+      "BY",
+      "T2.country_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "country",
+      "from",
+      "city",
+      "as",
+      "t1",
+      "join",
+      "country",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "country_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Quels pays ont au moins 3 villes?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          20,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.country FROM city AS T1 JOIN country AS T2 ON T1.country_id  =  T2.country_id GROUP BY T2.country_id HAVING count(*)  >=  3",
+    "query_toks": [
+      "SELECT",
+      "T2.country",
+      "FROM",
+      "city",
+      "AS",
+      "T1",
+      "JOIN",
+      "country",
+      "AS",
+      "T2",
+      "ON",
+      "T1.country_id",
+      "=",
+      "T2.country_id",
+      "GROUP",
+      "BY",
+      "T2.country_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "country",
+      "from",
+      "city",
+      "as",
+      "t1",
+      "join",
+      "country",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "country_id",
+      "=",
+      "t2",
+      ".",
+      "country_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "country_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Quels sont les pays qui contiennent 3 villes ou plus?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          20,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT payment_date FROM payment WHERE amount  >  10 UNION SELECT T1.payment_date FROM payment AS T1 JOIN staff AS T2 ON T1.staff_id  =  T2.staff_id WHERE T2.first_name  =  'Elsa'",
+    "query_toks": [
+      "SELECT",
+      "payment_date",
+      "FROM",
+      "payment",
+      "WHERE",
+      "amount",
+      ">",
+      "10",
+      "UNION",
+      "SELECT",
+      "T1.payment_date",
+      "FROM",
+      "payment",
+      "AS",
+      "T1",
+      "JOIN",
+      "staff",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.staff_id",
+      "WHERE",
+      "T2.first_name",
+      "=",
+      "'Elsa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_date",
+      "from",
+      "payment",
+      "where",
+      "amount",
+      ">",
+      "value",
+      "union",
+      "select",
+      "t1",
+      ".",
+      "payment_date",
+      "from",
+      "payment",
+      "as",
+      "t1",
+      "join",
+      "staff",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "where",
+      "t2",
+      ".",
+      "first_name",
+      "=",
+      "value"
+    ],
+    "question": "Trouvez toutes les dates de paiement pour les paiements d'un montant supérieur à 10 et les paiements traités par un membre du personnel avec le prénom \"Elsa\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                66,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              65,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              12
+            ],
+            [
+              "table_unit",
+              14
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  63,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                75,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  66,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                76,
+                false
+              ],
+              null
+            ],
+            "\"Elsa\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT payment_date FROM payment WHERE amount  >  10 UNION SELECT T1.payment_date FROM payment AS T1 JOIN staff AS T2 ON T1.staff_id  =  T2.staff_id WHERE T2.first_name  =  'Elsa'",
+    "query_toks": [
+      "SELECT",
+      "payment_date",
+      "FROM",
+      "payment",
+      "WHERE",
+      "amount",
+      ">",
+      "10",
+      "UNION",
+      "SELECT",
+      "T1.payment_date",
+      "FROM",
+      "payment",
+      "AS",
+      "T1",
+      "JOIN",
+      "staff",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.staff_id",
+      "WHERE",
+      "T2.first_name",
+      "=",
+      "'Elsa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_date",
+      "from",
+      "payment",
+      "where",
+      "amount",
+      ">",
+      "value",
+      "union",
+      "select",
+      "t1",
+      ".",
+      "payment_date",
+      "from",
+      "payment",
+      "as",
+      "t1",
+      "join",
+      "staff",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "where",
+      "t2",
+      ".",
+      "first_name",
+      "=",
+      "value"
+    ],
+    "question": "Quelles sont les dates de paiement pour les paiements d'un montant supérieur à 10 ou traités par un membre du personnel du prénom \"Elsa\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                66,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              65,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              12
+            ],
+            [
+              "table_unit",
+              14
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  63,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                75,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  66,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                76,
+                false
+              ],
+              null
+            ],
+            "\"Elsa\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM customer WHERE active = '1'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customer",
+      "WHERE",
+      "active",
+      "=",
+      "'1",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customer",
+      "where",
+      "active",
+      "=",
+      "value"
+    ],
+    "question": "Combien de clients ont une valeur active de \"1\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ],
+          "\"1\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM customer WHERE active = '1'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customer",
+      "WHERE",
+      "active",
+      "=",
+      "'1",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customer",
+      "where",
+      "active",
+      "=",
+      "value"
+    ],
+    "question": "Comptez le nombre de clients actifs.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ],
+          "\"1\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title ,  rental_rate FROM film ORDER BY rental_rate DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "rental_rate",
+      "FROM",
+      "film",
+      "ORDER",
+      "BY",
+      "rental_rate",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "rental_rate",
+      "from",
+      "film",
+      "order",
+      "by",
+      "rental_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel film a le tarif de location le plus élevé? Et quel est le tarif?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                39,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              39,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title ,  rental_rate FROM film ORDER BY rental_rate DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "rental_rate",
+      "FROM",
+      "film",
+      "ORDER",
+      "BY",
+      "rental_rate",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "rental_rate",
+      "from",
+      "film",
+      "order",
+      "by",
+      "rental_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quels sont le titre et le tarif de location du film avec le tarif de location le plus élevé?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                39,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              39,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.title ,  T2.film_id ,  T2.description FROM film_actor AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T2.film_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "T2.film_id",
+      ",",
+      "T2.description",
+      "FROM",
+      "film_actor",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T2.film_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "t2",
+      ".",
+      "film_id",
+      ",",
+      "t2",
+      ".",
+      "description",
+      "from",
+      "film_actor",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "film_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel film a le plus grand nombre d'acteurs ou d'actrices? Indiquez le nom du film, l'identifiant et la description du film.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                46,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              32,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          32,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.title ,  T2.film_id ,  T2.description FROM film_actor AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T2.film_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "T2.film_id",
+      ",",
+      "T2.description",
+      "FROM",
+      "film_actor",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T2.film_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "t2",
+      ".",
+      "film_id",
+      ",",
+      "t2",
+      ".",
+      "description",
+      "from",
+      "film_actor",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "film_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quels sont le titre, l'identifiant et la description du film avec le plus grand nombre d'acteurs?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                46,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              32,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          32,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.first_name ,  T2.last_name ,  T2.actor_id FROM film_actor AS T1 JOIN actor AS T2 ON T1.actor_id  =  T2.actor_id GROUP BY T2.actor_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.first_name",
+      ",",
+      "T2.last_name",
+      ",",
+      "T2.actor_id",
+      "FROM",
+      "film_actor",
+      "AS",
+      "T1",
+      "JOIN",
+      "actor",
+      "AS",
+      "T2",
+      "ON",
+      "T1.actor_id",
+      "=",
+      "T2.actor_id",
+      "GROUP",
+      "BY",
+      "T2.actor_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "first_name",
+      ",",
+      "t2",
+      ".",
+      "last_name",
+      ",",
+      "t2",
+      ".",
+      "actor_id",
+      "from",
+      "film_actor",
+      "as",
+      "t1",
+      "join",
+      "actor",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "actor_id",
+      "=",
+      "t2",
+      ".",
+      "actor_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "actor_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel acteur de cinéma (actrice) a joué le plus de films? Indiquez son prénom, son nom et son identifiant d'acteur.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                45,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.first_name ,  T2.last_name ,  T2.actor_id FROM film_actor AS T1 JOIN actor AS T2 ON T1.actor_id  =  T2.actor_id GROUP BY T2.actor_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.first_name",
+      ",",
+      "T2.last_name",
+      ",",
+      "T2.actor_id",
+      "FROM",
+      "film_actor",
+      "AS",
+      "T1",
+      "JOIN",
+      "actor",
+      "AS",
+      "T2",
+      "ON",
+      "T1.actor_id",
+      "=",
+      "T2.actor_id",
+      "GROUP",
+      "BY",
+      "T2.actor_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "first_name",
+      ",",
+      "t2",
+      ".",
+      "last_name",
+      ",",
+      "t2",
+      ".",
+      "actor_id",
+      "from",
+      "film_actor",
+      "as",
+      "t1",
+      "join",
+      "actor",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "actor_id",
+      "=",
+      "t2",
+      ".",
+      "actor_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "actor_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Renvoyez le nom complet et l'identifiant de l'acteur ou de l'actrice qui a joué dans le plus grand nombre de films.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                45,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.first_name ,  T2.last_name FROM film_actor AS T1 JOIN actor AS T2 ON T1.actor_id  =  T2.actor_id GROUP BY T2.actor_id HAVING count(*)  >  30",
+    "query_toks": [
+      "SELECT",
+      "T2.first_name",
+      ",",
+      "T2.last_name",
+      "FROM",
+      "film_actor",
+      "AS",
+      "T1",
+      "JOIN",
+      "actor",
+      "AS",
+      "T2",
+      "ON",
+      "T1.actor_id",
+      "=",
+      "T2.actor_id",
+      "GROUP",
+      "BY",
+      "T2.actor_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "30"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "first_name",
+      ",",
+      "t2",
+      ".",
+      "last_name",
+      "from",
+      "film_actor",
+      "as",
+      "t1",
+      "join",
+      "actor",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "actor_id",
+      "=",
+      "t2",
+      ".",
+      "actor_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "actor_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Quels acteurs de cinéma (actrices) ont joué un rôle dans plus de 30 films? Inscrivez son prénom et son nom de famille.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                45,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          30.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.first_name ,  T2.last_name FROM film_actor AS T1 JOIN actor AS T2 ON T1.actor_id  =  T2.actor_id GROUP BY T2.actor_id HAVING count(*)  >  30",
+    "query_toks": [
+      "SELECT",
+      "T2.first_name",
+      ",",
+      "T2.last_name",
+      "FROM",
+      "film_actor",
+      "AS",
+      "T1",
+      "JOIN",
+      "actor",
+      "AS",
+      "T2",
+      "ON",
+      "T1.actor_id",
+      "=",
+      "T2.actor_id",
+      "GROUP",
+      "BY",
+      "T2.actor_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "30"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "first_name",
+      ",",
+      "t2",
+      ".",
+      "last_name",
+      "from",
+      "film_actor",
+      "as",
+      "t1",
+      "join",
+      "actor",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "actor_id",
+      "=",
+      "t2",
+      ".",
+      "actor_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "actor_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Quels sont les noms complets des acteurs qui ont joué dans plus de 30 films?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                45,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          30.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT store_id FROM inventory GROUP BY store_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "store_id",
+      "FROM",
+      "inventory",
+      "GROUP",
+      "BY",
+      "store_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "store_id",
+      "from",
+      "inventory",
+      "group",
+      "by",
+      "store_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel magasin possède le plus d'articles?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            10
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                56,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          56,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT store_id FROM inventory GROUP BY store_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "store_id",
+      "FROM",
+      "inventory",
+      "GROUP",
+      "BY",
+      "store_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "store_id",
+      "from",
+      "inventory",
+      "group",
+      "by",
+      "store_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est l'identifiant du magasin qui a le plus d'articles en inventaire?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            10
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                56,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          56,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT sum(amount) FROM payment",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "amount",
+      ")",
+      "FROM",
+      "payment"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount",
+      ")",
+      "from",
+      "payment"
+    ],
+    "question": "Quel est le montant total de tous les paiements?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                65,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT sum(amount) FROM payment",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "amount",
+      ")",
+      "FROM",
+      "payment"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "amount",
+      ")",
+      "from",
+      "payment"
+    ],
+    "question": "Renvoyez la somme de tous les montants de paiement.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                65,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.first_name ,  T1.last_name ,  T1.customer_id FROM customer AS T1 JOIN payment AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY sum(amount) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "customer",
+      "AS",
+      "T1",
+      "JOIN",
+      "payment",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "amount",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customer",
+      "as",
+      "t1",
+      "join",
+      "payment",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "amount",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel client, qui a effectué au moins un paiement, a dépensé le moins d'argent? Indiquez son prénom, son nom et son identifiant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              62,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              4,
+              65,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.first_name ,  T1.last_name ,  T1.customer_id FROM customer AS T1 JOIN payment AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY sum(amount) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      ",",
+      "T1.customer_id",
+      "FROM",
+      "customer",
+      "AS",
+      "T1",
+      "JOIN",
+      "payment",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "amount",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      "from",
+      "customer",
+      "as",
+      "t1",
+      "join",
+      "payment",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "amount",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le nom complet et l'identifiant du client qui a le montant total de paiement le plus bas?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              62,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              4,
+              65,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.name FROM category AS T1 JOIN film_category AS T2 ON T1.category_id  =  T2.category_id JOIN film AS T3 ON T2.film_id  =  T3.film_id WHERE T3.title  =  'HUNGER ROOF'",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "category",
+      "AS",
+      "T1",
+      "JOIN",
+      "film_category",
+      "AS",
+      "T2",
+      "ON",
+      "T1.category_id",
+      "=",
+      "T2.category_id",
+      "JOIN",
+      "film",
+      "AS",
+      "T3",
+      "ON",
+      "T2.film_id",
+      "=",
+      "T3.film_id",
+      "WHERE",
+      "T3.title",
+      "=",
+      "'HUNGER",
+      "ROOF",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "category",
+      "as",
+      "t1",
+      "join",
+      "film_category",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "category_id",
+      "=",
+      "t2",
+      ".",
+      "category_id",
+      "join",
+      "film",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "film_id",
+      "=",
+      "t3",
+      ".",
+      "film_id",
+      "where",
+      "t3",
+      ".",
+      "title",
+      "=",
+      "value"
+    ],
+    "question": "Quel est le nom de genre du film \"HUNGER ROOF\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            8
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              49,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                48,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              32,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              33,
+              false
+            ],
+            null
+          ],
+          "\"HUNGER ROOF\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.name FROM category AS T1 JOIN film_category AS T2 ON T1.category_id  =  T2.category_id JOIN film AS T3 ON T2.film_id  =  T3.film_id WHERE T3.title  =  'HUNGER ROOF'",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "category",
+      "AS",
+      "T1",
+      "JOIN",
+      "film_category",
+      "AS",
+      "T2",
+      "ON",
+      "T1.category_id",
+      "=",
+      "T2.category_id",
+      "JOIN",
+      "film",
+      "AS",
+      "T3",
+      "ON",
+      "T2.film_id",
+      "=",
+      "T3.film_id",
+      "WHERE",
+      "T3.title",
+      "=",
+      "'HUNGER",
+      "ROOF",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "category",
+      "as",
+      "t1",
+      "join",
+      "film_category",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "category_id",
+      "=",
+      "t2",
+      ".",
+      "category_id",
+      "join",
+      "film",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "film_id",
+      "=",
+      "t3",
+      ".",
+      "film_id",
+      "where",
+      "t3",
+      ".",
+      "title",
+      "=",
+      "value"
+    ],
+    "question": "Renvoyez le nom de la catégorie à laquelle appartient le film \"HUNGER ROOF\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            8
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              49,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                48,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              32,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              33,
+              false
+            ],
+            null
+          ],
+          "\"HUNGER ROOF\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.name ,  T1.category_id ,  count(*) FROM film_category AS T1 JOIN category AS T2 ON T1.category_id  =  T2.category_id GROUP BY T1.category_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T1.category_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film_category",
+      "AS",
+      "T1",
+      "JOIN",
+      "category",
+      "AS",
+      "T2",
+      "ON",
+      "T1.category_id",
+      "=",
+      "T2.category_id",
+      "GROUP",
+      "BY",
+      "T1.category_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "category_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film_category",
+      "as",
+      "t1",
+      "join",
+      "category",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "category_id",
+      "=",
+      "t2",
+      ".",
+      "category_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "category_id"
+    ],
+    "question": "Combien de films y a-t-il dans chaque catégorie? Énumérez le nom du genre, l'identifiant du genre et le nombre.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            8
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                49,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                49,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          49,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.name ,  T1.category_id ,  count(*) FROM film_category AS T1 JOIN category AS T2 ON T1.category_id  =  T2.category_id GROUP BY T1.category_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T1.category_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film_category",
+      "AS",
+      "T1",
+      "JOIN",
+      "category",
+      "AS",
+      "T2",
+      "ON",
+      "T1.category_id",
+      "=",
+      "T2.category_id",
+      "GROUP",
+      "BY",
+      "T1.category_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "category_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film_category",
+      "as",
+      "t1",
+      "join",
+      "category",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "category_id",
+      "=",
+      "t2",
+      ".",
+      "category_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "category_id"
+    ],
+    "question": "Quels sont les noms et les identifiants des différentes catégories, et combien de films y a-t-il dans chacune?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            8
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                49,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                49,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          49,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.title ,  T1.film_id FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.title",
+      ",",
+      "T1.film_id",
+      "FROM",
+      "film",
+      "AS",
+      "T1",
+      "JOIN",
+      "inventory",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "title",
+      ",",
+      "t1",
+      ".",
+      "film_id",
+      "from",
+      "film",
+      "as",
+      "t1",
+      "join",
+      "inventory",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel film a le plus d'exemplaires dans l'inventaire? Énumérez à la fois le titre et l'identifiant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            10
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              55,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          32,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.title ,  T1.film_id FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.title",
+      ",",
+      "T1.film_id",
+      "FROM",
+      "film",
+      "AS",
+      "T1",
+      "JOIN",
+      "inventory",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "title",
+      ",",
+      "t1",
+      ".",
+      "film_id",
+      "from",
+      "film",
+      "as",
+      "t1",
+      "join",
+      "inventory",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le titre et l'ID du film qui a le plus grand nombre d'exemplaires en inventaire?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            10
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              55,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          32,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.title ,  T2.inventory_id FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id JOIN rental AS T3 ON T2.inventory_id  =  T3.inventory_id GROUP BY T2.inventory_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.title",
+      ",",
+      "T2.inventory_id",
+      "FROM",
+      "film",
+      "AS",
+      "T1",
+      "JOIN",
+      "inventory",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "JOIN",
+      "rental",
+      "AS",
+      "T3",
+      "ON",
+      "T2.inventory_id",
+      "=",
+      "T3.inventory_id",
+      "GROUP",
+      "BY",
+      "T2.inventory_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "title",
+      ",",
+      "t2",
+      ".",
+      "inventory_id",
+      "from",
+      "film",
+      "as",
+      "t1",
+      "join",
+      "inventory",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "join",
+      "rental",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "inventory_id",
+      "=",
+      "t3",
+      ".",
+      "inventory_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "inventory_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le titre du film et l'ID de l'inventaire de l'article de l'inventaire qui a été loué le plus fréquemment?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            10
+          ],
+          [
+            "table_unit",
+            13
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              55,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                54,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              70,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                54,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          54,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.title ,  T2.inventory_id FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id JOIN rental AS T3 ON T2.inventory_id  =  T3.inventory_id GROUP BY T2.inventory_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.title",
+      ",",
+      "T2.inventory_id",
+      "FROM",
+      "film",
+      "AS",
+      "T1",
+      "JOIN",
+      "inventory",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "JOIN",
+      "rental",
+      "AS",
+      "T3",
+      "ON",
+      "T2.inventory_id",
+      "=",
+      "T3.inventory_id",
+      "GROUP",
+      "BY",
+      "T2.inventory_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "title",
+      ",",
+      "t2",
+      ".",
+      "inventory_id",
+      "from",
+      "film",
+      "as",
+      "t1",
+      "join",
+      "inventory",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "join",
+      "rental",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "inventory_id",
+      "=",
+      "t3",
+      ".",
+      "inventory_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "inventory_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Renvoyez le titre et l'identifiant de l'inventaire du film loué le plus souvent.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            10
+          ],
+          [
+            "table_unit",
+            13
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                32,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              55,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                54,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              70,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                54,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          54,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(DISTINCT language_id) FROM film",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "language_id",
+      ")",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "language_id",
+      ")",
+      "from",
+      "film"
+    ],
+    "question": "Combien de langues y a-t-il dans ces films?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                36,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(DISTINCT language_id) FROM film",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "language_id",
+      ")",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "language_id",
+      ")",
+      "from",
+      "film"
+    ],
+    "question": "Comptez le nombre de langues différentes dans ces films.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                36,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title FROM film WHERE rating  =  'R'",
+    "query_toks": [
+      "SELECT",
+      "title",
+      "FROM",
+      "film",
+      "WHERE",
+      "rating",
+      "=",
+      "'R",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      "from",
+      "film",
+      "where",
+      "rating",
+      "=",
+      "value"
+    ],
+    "question": "Quels sont tous les films classés comme \"R\"? Énumérez les titres.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              42,
+              false
+            ],
+            null
+          ],
+          "\"R\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title FROM film WHERE rating  =  'R'",
+    "query_toks": [
+      "SELECT",
+      "title",
+      "FROM",
+      "film",
+      "WHERE",
+      "rating",
+      "=",
+      "'R",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      "from",
+      "film",
+      "where",
+      "rating",
+      "=",
+      "value"
+    ],
+    "question": "Renvoyez les titres de tous les films avec une cote \"R\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              42,
+              false
+            ],
+            null
+          ],
+          "\"R\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.address FROM store AS T1 JOIN address AS T2 ON T1.address_id  =  T2.address_id WHERE store_id  =  1",
+    "query_toks": [
+      "SELECT",
+      "T2.address",
+      "FROM",
+      "store",
+      "AS",
+      "T1",
+      "JOIN",
+      "address",
+      "AS",
+      "T2",
+      "ON",
+      "T1.address_id",
+      "=",
+      "T2.address_id",
+      "WHERE",
+      "store_id",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "address",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "address",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "address_id",
+      "=",
+      "t2",
+      ".",
+      "address_id",
+      "where",
+      "store_id",
+      "=",
+      "value"
+    ],
+    "question": "Où se trouve le magasin 1?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            15
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                88,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              86,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.address FROM store AS T1 JOIN address AS T2 ON T1.address_id  =  T2.address_id WHERE store_id  =  1",
+    "query_toks": [
+      "SELECT",
+      "T2.address",
+      "FROM",
+      "store",
+      "AS",
+      "T1",
+      "JOIN",
+      "address",
+      "AS",
+      "T2",
+      "ON",
+      "T1.address_id",
+      "=",
+      "T2.address_id",
+      "WHERE",
+      "store_id",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "address",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "address",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "address_id",
+      "=",
+      "t2",
+      ".",
+      "address_id",
+      "where",
+      "store_id",
+      "=",
+      "value"
+    ],
+    "question": "Renvoyez l'adresse du magasin 1.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            15
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                88,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              86,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.first_name ,  T1.last_name ,  T1.staff_id FROM staff AS T1 JOIN payment AS T2 ON T1.staff_id  =  T2.staff_id GROUP BY T1.staff_id ORDER BY count(*) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      ",",
+      "T1.staff_id",
+      "FROM",
+      "staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "payment",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.staff_id",
+      "GROUP",
+      "BY",
+      "T1.staff_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      ",",
+      "t1",
+      ".",
+      "staff_id",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "payment",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "staff_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel personnel a traité le moins de paiements? Répertoriez le nom complet et l'identifiant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            14
+          ],
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                75,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              63,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                76,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                77,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                75,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          75,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.first_name ,  T1.last_name ,  T1.staff_id FROM staff AS T1 JOIN payment AS T2 ON T1.staff_id  =  T2.staff_id GROUP BY T1.staff_id ORDER BY count(*) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      ",",
+      "T1.staff_id",
+      "FROM",
+      "staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "payment",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.staff_id",
+      "GROUP",
+      "BY",
+      "T1.staff_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      ",",
+      "t1",
+      ".",
+      "staff_id",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "payment",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "staff_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Indiquez le nom complet et l'identifiant du personnel qui a traité le moins de paiements.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            14
+          ],
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                75,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              63,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                76,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                77,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                75,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          75,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.name FROM film AS T1 JOIN LANGUAGE AS T2 ON T1.language_id  =  T2.language_id WHERE T1.title  =  'AIRPORT POLLOCK'",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "film",
+      "AS",
+      "T1",
+      "JOIN",
+      "LANGUAGE",
+      "AS",
+      "T2",
+      "ON",
+      "T1.language_id",
+      "=",
+      "T2.language_id",
+      "WHERE",
+      "T1.title",
+      "=",
+      "'AIRPORT",
+      "POLLOCK",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "film",
+      "as",
+      "t1",
+      "join",
+      "language",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "language_id",
+      "=",
+      "t2",
+      ".",
+      "language_id",
+      "where",
+      "t1",
+      ".",
+      "title",
+      "=",
+      "value"
+    ],
+    "question": "Quelle langue utilise le film \"AIRPORT POLLOCK\"? Listez le nom de la langue.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            11
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                36,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              58,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                59,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              33,
+              false
+            ],
+            null
+          ],
+          "\"AIRPORT POLLOCK\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.name FROM film AS T1 JOIN LANGUAGE AS T2 ON T1.language_id  =  T2.language_id WHERE T1.title  =  'AIRPORT POLLOCK'",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "film",
+      "AS",
+      "T1",
+      "JOIN",
+      "LANGUAGE",
+      "AS",
+      "T2",
+      "ON",
+      "T1.language_id",
+      "=",
+      "T2.language_id",
+      "WHERE",
+      "T1.title",
+      "=",
+      "'AIRPORT",
+      "POLLOCK",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "film",
+      "as",
+      "t1",
+      "join",
+      "language",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "language_id",
+      "=",
+      "t2",
+      ".",
+      "language_id",
+      "where",
+      "t1",
+      ".",
+      "title",
+      "=",
+      "value"
+    ],
+    "question": "Quel est le nom de la langue du film \"AIRPORT POLLOCK\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            11
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                36,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              58,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                59,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              33,
+              false
+            ],
+            null
+          ],
+          "\"AIRPORT POLLOCK\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM store",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "store"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "store"
+    ],
+    "question": "Combien de magasins y a-t-il?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            15
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM store",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "store"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "store"
+    ],
+    "question": "Comptez le nombre de magasins.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            15
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(DISTINCT rating) FROM film",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "rating",
+      ")",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "rating",
+      ")",
+      "from",
+      "film"
+    ],
+    "question": "Combien de types de notes différentes sont répertoriés?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                42,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(DISTINCT rating) FROM film",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "rating",
+      ")",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "rating",
+      ")",
+      "from",
+      "film"
+    ],
+    "question": "Comptez le nombre de cotes de films différentes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                42,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title FROM film WHERE special_features LIKE '%Deleted Scenes%'",
+    "query_toks": [
+      "SELECT",
+      "title",
+      "FROM",
+      "film",
+      "WHERE",
+      "special_features",
+      "LIKE",
+      "'",
+      "%",
+      "Deleted",
+      "Scenes",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      "from",
+      "film",
+      "where",
+      "special_features",
+      "like",
+      "value"
+    ],
+    "question": "Quels films ont des \"Deleted Scenes\" comme sous-chaîne dans la fonction spéciale?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              43,
+              false
+            ],
+            null
+          ],
+          "\"%Deleted Scenes%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title FROM film WHERE special_features LIKE '%Deleted Scenes%'",
+    "query_toks": [
+      "SELECT",
+      "title",
+      "FROM",
+      "film",
+      "WHERE",
+      "special_features",
+      "LIKE",
+      "'",
+      "%",
+      "Deleted",
+      "Scenes",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      "from",
+      "film",
+      "where",
+      "special_features",
+      "like",
+      "value"
+    ],
+    "question": "Renvoyez les titres des films contenant des \"Deleted Scenes\" dans leur section spéciale.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              43,
+              false
+            ],
+            null
+          ],
+          "\"%Deleted Scenes%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM inventory WHERE store_id  =  1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "inventory",
+      "WHERE",
+      "store_id",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "inventory",
+      "where",
+      "store_id",
+      "=",
+      "value"
+    ],
+    "question": "Combien d'articles en inventaire le magasin 1 a-t-il?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            10
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              56,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT count(*) FROM inventory WHERE store_id  =  1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "inventory",
+      "WHERE",
+      "store_id",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "inventory",
+      "where",
+      "store_id",
+      "=",
+      "value"
+    ],
+    "question": "Comptez le nombre d'articles que le magasin 1 a en stock.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            10
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              56,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT payment_date FROM payment ORDER BY payment_date ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "payment_date",
+      "FROM",
+      "payment",
+      "ORDER",
+      "BY",
+      "payment_date",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_date",
+      "from",
+      "payment",
+      "order",
+      "by",
+      "payment_date",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Quand le premier paiement a-t-il eu lieu?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                66,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              66,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT payment_date FROM payment ORDER BY payment_date ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "payment_date",
+      "FROM",
+      "payment",
+      "ORDER",
+      "BY",
+      "payment_date",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "payment_date",
+      "from",
+      "payment",
+      "order",
+      "by",
+      "payment_date",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Quelle était la date du premier paiement?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                66,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              66,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.address ,  T1.email FROM customer AS T1 JOIN address AS T2 ON T2.address_id  =  T1.address_id WHERE T1.first_name  =  'LINDA'",
+    "query_toks": [
+      "SELECT",
+      "T2.address",
+      ",",
+      "T1.email",
+      "FROM",
+      "customer",
+      "AS",
+      "T1",
+      "JOIN",
+      "address",
+      "AS",
+      "T2",
+      "ON",
+      "T2.address_id",
+      "=",
+      "T1.address_id",
+      "WHERE",
+      "T1.first_name",
+      "=",
+      "'LINDA",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "address",
+      ",",
+      "t1",
+      ".",
+      "email",
+      "from",
+      "customer",
+      "as",
+      "t1",
+      "join",
+      "address",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "address_id",
+      "=",
+      "t1",
+      ".",
+      "address_id",
+      "where",
+      "t1",
+      ".",
+      "first_name",
+      "=",
+      "value"
+    ],
+    "question": "Où habite la cliente du prénom \"Linda\"? Et quel est son e-mail?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ],
+          "\"LINDA\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.address ,  T1.email FROM customer AS T1 JOIN address AS T2 ON T2.address_id  =  T1.address_id WHERE T1.first_name  =  'LINDA'",
+    "query_toks": [
+      "SELECT",
+      "T2.address",
+      ",",
+      "T1.email",
+      "FROM",
+      "customer",
+      "AS",
+      "T1",
+      "JOIN",
+      "address",
+      "AS",
+      "T2",
+      "ON",
+      "T2.address_id",
+      "=",
+      "T1.address_id",
+      "WHERE",
+      "T1.first_name",
+      "=",
+      "'LINDA",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "address",
+      ",",
+      "t1",
+      ".",
+      "email",
+      "from",
+      "customer",
+      "as",
+      "t1",
+      "join",
+      "address",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "address_id",
+      "=",
+      "t1",
+      ".",
+      "address_id",
+      "where",
+      "t1",
+      ".",
+      "first_name",
+      "=",
+      "value"
+    ],
+    "question": "Renvoyez l'adresse et l'email du client avec le prénom \"Linda\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ],
+          "\"LINDA\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title FROM film WHERE LENGTH  >  100 OR rating  =  'PG' EXCEPT SELECT title FROM film WHERE replacement_cost  >  200",
+    "query_toks": [
+      "SELECT",
+      "title",
+      "FROM",
+      "film",
+      "WHERE",
+      "LENGTH",
+      ">",
+      "100",
+      "OR",
+      "rating",
+      "=",
+      "'PG",
+      "'",
+      "EXCEPT",
+      "SELECT",
+      "title",
+      "FROM",
+      "film",
+      "WHERE",
+      "replacement_cost",
+      ">",
+      "200"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      "from",
+      "film",
+      "where",
+      "length",
+      ">",
+      "value",
+      "or",
+      "rating",
+      "=",
+      "value",
+      "except",
+      "select",
+      "title",
+      "from",
+      "film",
+      "where",
+      "replacement_cost",
+      ">",
+      "value"
+    ],
+    "question": "Retrouvez tous les films de plus de 100 minutes, ou notés \"PG\", sauf ceux qui coûtent plus de 200 minutes pour le remplacement. Énumérez les titres.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              40,
+              false
+            ],
+            null
+          ],
+          100.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              42,
+              false
+            ],
+            null
+          ],
+          "\"PG\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              6
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  33,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ],
+            200.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT title FROM film WHERE LENGTH  >  100 OR rating  =  'PG' EXCEPT SELECT title FROM film WHERE replacement_cost  >  200",
+    "query_toks": [
+      "SELECT",
+      "title",
+      "FROM",
+      "film",
+      "WHERE",
+      "LENGTH",
+      ">",
+      "100",
+      "OR",
+      "rating",
+      "=",
+      "'PG",
+      "'",
+      "EXCEPT",
+      "SELECT",
+      "title",
+      "FROM",
+      "film",
+      "WHERE",
+      "replacement_cost",
+      ">",
+      "200"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      "from",
+      "film",
+      "where",
+      "length",
+      ">",
+      "value",
+      "or",
+      "rating",
+      "=",
+      "value",
+      "except",
+      "select",
+      "title",
+      "from",
+      "film",
+      "where",
+      "replacement_cost",
+      ">",
+      "value"
+    ],
+    "question": "Quels sont les titres des films qui durent plus de 100 minutes ou qui sont classés PG autres que ceux dont le remplacement coûte plus de 200 minutes?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              40,
+              false
+            ],
+            null
+          ],
+          100.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              42,
+              false
+            ],
+            null
+          ],
+          "\"PG\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              6
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  33,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ],
+            200.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.first_name ,  T1.last_name FROM customer AS T1 JOIN rental AS T2 ON T1.customer_id  =  T2.customer_id ORDER BY T2.rental_date ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      "FROM",
+      "customer",
+      "AS",
+      "T1",
+      "JOIN",
+      "rental",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "ORDER",
+      "BY",
+      "T2.rental_date",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "customer",
+      "as",
+      "t1",
+      "join",
+      "rental",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "rental_date",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le prénom et le nom du client qui a effectué la location la plus ancienne?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            13
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              71,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              69,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T1.first_name ,  T1.last_name FROM customer AS T1 JOIN rental AS T2 ON T1.customer_id  =  T2.customer_id ORDER BY T2.rental_date ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      "FROM",
+      "customer",
+      "AS",
+      "T1",
+      "JOIN",
+      "rental",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "ORDER",
+      "BY",
+      "T2.rental_date",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "customer",
+      "as",
+      "t1",
+      "join",
+      "rental",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "rental_date",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Renvoyez le nom complet du client qui a effectué la première location.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            13
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              71,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              69,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT DISTINCT T1.first_name ,  T1.last_name FROM staff AS T1 JOIN rental AS T2 ON T1.staff_id  =  T2.staff_id JOIN customer AS T3 ON T2.customer_id  =  T3.customer_id WHERE T3.first_name  =  'APRIL' AND T3.last_name  =  'BURNS'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      "FROM",
+      "staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "rental",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.staff_id",
+      "JOIN",
+      "customer",
+      "AS",
+      "T3",
+      "ON",
+      "T2.customer_id",
+      "=",
+      "T3.customer_id",
+      "WHERE",
+      "T3.first_name",
+      "=",
+      "'APRIL",
+      "'",
+      "AND",
+      "T3.last_name",
+      "=",
+      "'BURNS",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "rental",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "join",
+      "customer",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "customer_id",
+      "=",
+      "t3",
+      ".",
+      "customer_id",
+      "where",
+      "t3",
+      ".",
+      "first_name",
+      "=",
+      "value",
+      "and",
+      "t3",
+      ".",
+      "last_name",
+      "=",
+      "value"
+    ],
+    "question": "Quel est le nom complet du membre du personnel qui a loué un film à un client avec le prénom \"April\" et le nom de famille \"Burns\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            14
+          ],
+          [
+            "table_unit",
+            13
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                75,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              73,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                71,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                76,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                77,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ],
+          "\"APRIL\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              26,
+              false
+            ],
+            null
+          ],
+          "\"BURNS\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT DISTINCT T1.first_name ,  T1.last_name FROM staff AS T1 JOIN rental AS T2 ON T1.staff_id  =  T2.staff_id JOIN customer AS T3 ON T2.customer_id  =  T3.customer_id WHERE T3.first_name  =  'APRIL' AND T3.last_name  =  'BURNS'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      "FROM",
+      "staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "rental",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.staff_id",
+      "JOIN",
+      "customer",
+      "AS",
+      "T3",
+      "ON",
+      "T2.customer_id",
+      "=",
+      "T3.customer_id",
+      "WHERE",
+      "T3.first_name",
+      "=",
+      "'APRIL",
+      "'",
+      "AND",
+      "T3.last_name",
+      "=",
+      "'BURNS",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "rental",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "join",
+      "customer",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "customer_id",
+      "=",
+      "t3",
+      ".",
+      "customer_id",
+      "where",
+      "t3",
+      ".",
+      "first_name",
+      "=",
+      "value",
+      "and",
+      "t3",
+      ".",
+      "last_name",
+      "=",
+      "value"
+    ],
+    "question": "Renvoyez le nom complet du personnel qui a fourni à un client dont le prénom \"April\" et le nom de famille \"Burns\" avec une location de film.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            14
+          ],
+          [
+            "table_unit",
+            13
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                75,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              73,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                71,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                76,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                77,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ],
+          "\"APRIL\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              26,
+              false
+            ],
+            null
+          ],
+          "\"BURNS\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT store_id FROM customer GROUP BY store_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "store_id",
+      "FROM",
+      "customer",
+      "GROUP",
+      "BY",
+      "store_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "store_id",
+      "from",
+      "customer",
+      "group",
+      "by",
+      "store_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel magasin a le plus de clients?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          24,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT store_id FROM customer GROUP BY store_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "store_id",
+      "FROM",
+      "customer",
+      "GROUP",
+      "BY",
+      "store_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "store_id",
+      "from",
+      "customer",
+      "group",
+      "by",
+      "store_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Renvoyez l'identifiant du magasin avec le plus de clients.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          24,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT amount FROM payment ORDER BY amount DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "amount",
+      "FROM",
+      "payment",
+      "ORDER",
+      "BY",
+      "amount",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount",
+      "from",
+      "payment",
+      "order",
+      "by",
+      "amount",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le montant du paiement le plus élevé?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                65,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              65,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT amount FROM payment ORDER BY amount DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "amount",
+      "FROM",
+      "payment",
+      "ORDER",
+      "BY",
+      "amount",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "amount",
+      "from",
+      "payment",
+      "order",
+      "by",
+      "amount",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Renvoyez le montant du paiement le plus élevé.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                65,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              65,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.address FROM staff AS T1 JOIN address AS T2 ON T1.address_id  =  T2.address_id WHERE T1.first_name  =  'Elsa'",
+    "query_toks": [
+      "SELECT",
+      "T2.address",
+      "FROM",
+      "staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "address",
+      "AS",
+      "T2",
+      "ON",
+      "T1.address_id",
+      "=",
+      "T2.address_id",
+      "WHERE",
+      "T1.first_name",
+      "=",
+      "'Elsa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "address",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "address",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "address_id",
+      "=",
+      "t2",
+      ".",
+      "address_id",
+      "where",
+      "t1",
+      ".",
+      "first_name",
+      "=",
+      "value"
+    ],
+    "question": "Où habite le membre du personnel du prénom \"Elsa\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            14
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                78,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              76,
+              false
+            ],
+            null
+          ],
+          "\"Elsa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT T2.address FROM staff AS T1 JOIN address AS T2 ON T1.address_id  =  T2.address_id WHERE T1.first_name  =  'Elsa'",
+    "query_toks": [
+      "SELECT",
+      "T2.address",
+      "FROM",
+      "staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "address",
+      "AS",
+      "T2",
+      "ON",
+      "T1.address_id",
+      "=",
+      "T2.address_id",
+      "WHERE",
+      "T1.first_name",
+      "=",
+      "'Elsa",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "address",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "address",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "address_id",
+      "=",
+      "t2",
+      ".",
+      "address_id",
+      "where",
+      "t1",
+      ".",
+      "first_name",
+      "=",
+      "value"
+    ],
+    "question": "Donnez l'adresse du membre du personnel qui porte le prénom \"Elsa\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            14
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                78,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              76,
+              false
+            ],
+            null
+          ],
+          "\"Elsa\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT first_name FROM customer WHERE customer_id NOT IN( SELECT customer_id FROM rental WHERE rental_date  >  '2005-08-23 02:06:01' )",
+    "query_toks": [
+      "SELECT",
+      "first_name",
+      "FROM",
+      "customer",
+      "WHERE",
+      "customer_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "customer_id",
+      "FROM",
+      "rental",
+      "WHERE",
+      "rental_date",
+      ">",
+      "'2005-08-23",
+      "02:06:01",
+      "'",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "first_name",
+      "from",
+      "customer",
+      "where",
+      "customer_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "customer_id",
+      "from",
+      "rental",
+      "where",
+      "rental_date",
+      ">",
+      "value",
+      ")"
+    ],
+    "question": "Quels sont les prénoms des clients qui n'ont loué aucun film après le \"2005-08-23 02:06:01\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  13
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      71,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    69,
+                    false
+                  ],
+                  null
+                ],
+                "\"2005-08-23 02:06:01\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "sakila_1",
+    "query": "SELECT first_name FROM customer WHERE customer_id NOT IN( SELECT customer_id FROM rental WHERE rental_date  >  '2005-08-23 02:06:01' )",
+    "query_toks": [
+      "SELECT",
+      "first_name",
+      "FROM",
+      "customer",
+      "WHERE",
+      "customer_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "customer_id",
+      "FROM",
+      "rental",
+      "WHERE",
+      "rental_date",
+      ">",
+      "'2005-08-23",
+      "02:06:01",
+      "'",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "first_name",
+      "from",
+      "customer",
+      "where",
+      "customer_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "customer_id",
+      "from",
+      "rental",
+      "where",
+      "rental_date",
+      ">",
+      "value",
+      ")"
+    ],
+    "question": "Renvoyez les prénoms des clients n'ayant pas loué de film après la date \"2005-08-23 02:06:01\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  13
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      71,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                3,
+                [
+                  0,
+                  [
+                    0,
+                    69,
+                    false
+                  ],
+                  null
+                ],
+                "\"2005-08-23 02:06:01\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

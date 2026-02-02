@@ -1,0 +1,2137 @@
+[
+  {
+    "db_id": "station_weather",
+    "query": "SELECT local_authority ,  services FROM station",
+    "query_toks": [
+      "SELECT",
+      "local_authority",
+      ",",
+      "services",
+      "FROM",
+      "station"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "local_authority",
+      ",",
+      "services",
+      "from",
+      "station"
+    ],
+    "question": "list the local authorities and services provided by all stations.",
+    "question_toks": [
+      "list",
+      "the",
+      "local",
+      "authorities",
+      "and",
+      "services",
+      "provided",
+      "by",
+      "all",
+      "stations",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT train_number ,  name FROM train ORDER BY TIME",
+    "query_toks": [
+      "SELECT",
+      "train_number",
+      ",",
+      "name",
+      "FROM",
+      "train",
+      "ORDER",
+      "BY",
+      "TIME"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "train_number",
+      ",",
+      "name",
+      "from",
+      "train",
+      "order",
+      "by",
+      "time"
+    ],
+    "question": "show all train numbers and names ordered by their time from early to late.",
+    "question_toks": [
+      "show",
+      "all",
+      "train",
+      "numbers",
+      "and",
+      "names",
+      "ordered",
+      "by",
+      "their",
+      "time",
+      "from",
+      "early",
+      "to",
+      "late",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT TIME ,  train_number FROM train WHERE destination  =  'Chennai' ORDER BY TIME",
+    "query_toks": [
+      "SELECT",
+      "TIME",
+      ",",
+      "train_number",
+      "FROM",
+      "train",
+      "WHERE",
+      "destination",
+      "=",
+      "'Chennai",
+      "'",
+      "ORDER",
+      "BY",
+      "TIME"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "time",
+      ",",
+      "train_number",
+      "from",
+      "train",
+      "where",
+      "destination",
+      "=",
+      "value",
+      "order",
+      "by",
+      "time"
+    ],
+    "question": "Give me the times and numbers of all trains that go to Chennai, ordered by time.",
+    "question_toks": [
+      "Give",
+      "me",
+      "the",
+      "times",
+      "and",
+      "numbers",
+      "of",
+      "all",
+      "trains",
+      "that",
+      "go",
+      "to",
+      "Chennai",
+      ",",
+      "ordered",
+      "by",
+      "time",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Chennai\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT count(*) FROM train WHERE name LIKE \"%Express%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "train",
+      "WHERE",
+      "name",
+      "LIKE",
+      "``",
+      "%",
+      "Express",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "train",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question": "How many trains have 'Express' in their names?",
+    "question_toks": [
+      "How",
+      "many",
+      "trains",
+      "have",
+      "'Express",
+      "'",
+      "in",
+      "their",
+      "names",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"%Express%\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT train_number ,  TIME FROM train WHERE origin  =  'Chennai' AND destination  =  'Guruvayur'",
+    "query_toks": [
+      "SELECT",
+      "train_number",
+      ",",
+      "TIME",
+      "FROM",
+      "train",
+      "WHERE",
+      "origin",
+      "=",
+      "'Chennai",
+      "'",
+      "AND",
+      "destination",
+      "=",
+      "'Guruvayur",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "train_number",
+      ",",
+      "time",
+      "from",
+      "train",
+      "where",
+      "origin",
+      "=",
+      "value",
+      "and",
+      "destination",
+      "=",
+      "value"
+    ],
+    "question": "Find the number and time of the train that goes from Chennai to Guruvayur.",
+    "question_toks": [
+      "Find",
+      "the",
+      "number",
+      "and",
+      "time",
+      "of",
+      "the",
+      "train",
+      "that",
+      "goes",
+      "from",
+      "Chennai",
+      "to",
+      "Guruvayur",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Chennai\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Guruvayur\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT origin ,  count(*) FROM train GROUP BY origin",
+    "query_toks": [
+      "SELECT",
+      "origin",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "train",
+      "GROUP",
+      "BY",
+      "origin"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "origin",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "train",
+      "group",
+      "by",
+      "origin"
+    ],
+    "question": "Find the number of trains starting from each origin.",
+    "question_toks": [
+      "Find",
+      "the",
+      "number",
+      "of",
+      "trains",
+      "starting",
+      "from",
+      "each",
+      "origin",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT t1.name FROM train AS t1 JOIN route AS t2 ON t1.id  =  t2.train_id GROUP BY t2.train_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "train",
+      "AS",
+      "t1",
+      "JOIN",
+      "route",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.train_id",
+      "GROUP",
+      "BY",
+      "t2.train_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "train",
+      "as",
+      "t1",
+      "join",
+      "route",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "train_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "train_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Find the name of the train whose route runs through greatest number of stations.",
+    "question_toks": [
+      "Find",
+      "the",
+      "name",
+      "of",
+      "the",
+      "train",
+      "whose",
+      "route",
+      "runs",
+      "through",
+      "greatest",
+      "number",
+      "of",
+      "stations",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT count(*) ,  t1.network_name ,  t1.services FROM station AS t1 JOIN route AS t2 ON t1.id  =  t2.station_id GROUP BY t2.station_id",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1.network_name",
+      ",",
+      "t1.services",
+      "FROM",
+      "station",
+      "AS",
+      "t1",
+      "JOIN",
+      "route",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.station_id",
+      "GROUP",
+      "BY",
+      "t2.station_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "network_name",
+      ",",
+      "t1",
+      ".",
+      "services",
+      "from",
+      "station",
+      "as",
+      "t1",
+      "join",
+      "route",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "station_id"
+    ],
+    "question": "Find the number of trains for each station, as well as the station network name and services.",
+    "question_toks": [
+      "Find",
+      "the",
+      "number",
+      "of",
+      "trains",
+      "for",
+      "each",
+      "station",
+      ",",
+      "as",
+      "well",
+      "as",
+      "the",
+      "station",
+      "network",
+      "name",
+      "and",
+      "services",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT avg(high_temperature) ,  day_of_week FROM weekly_weather GROUP BY day_of_week",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "high_temperature",
+      ")",
+      ",",
+      "day_of_week",
+      "FROM",
+      "weekly_weather",
+      "GROUP",
+      "BY",
+      "day_of_week"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "high_temperature",
+      ")",
+      ",",
+      "day_of_week",
+      "from",
+      "weekly_weather",
+      "group",
+      "by",
+      "day_of_week"
+    ],
+    "question": "What is the average high temperature for each day of week?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "high",
+      "temperature",
+      "for",
+      "each",
+      "day",
+      "of",
+      "week",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT max(t1.low_temperature) ,  avg(t1.precipitation) FROM weekly_weather AS t1 JOIN station AS t2 ON t1.station_id  =  t2.id WHERE t2.network_name  =  \"Amersham\"",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "t1.low_temperature",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "t1.precipitation",
+      ")",
+      "FROM",
+      "weekly_weather",
+      "AS",
+      "t1",
+      "JOIN",
+      "station",
+      "AS",
+      "t2",
+      "ON",
+      "t1.station_id",
+      "=",
+      "t2.id",
+      "WHERE",
+      "t2.network_name",
+      "=",
+      "``",
+      "Amersham",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "low_temperature",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "t1",
+      ".",
+      "precipitation",
+      ")",
+      "from",
+      "weekly_weather",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "network_name",
+      "=",
+      "value"
+    ],
+    "question": "Give me the maximum low temperature and average precipitation at the Amersham station.",
+    "question_toks": [
+      "Give",
+      "me",
+      "the",
+      "maximum",
+      "low",
+      "temperature",
+      "and",
+      "average",
+      "precipitation",
+      "at",
+      "the",
+      "Amersham",
+      "station",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Amersham\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT t3.name ,  t3.time FROM station AS t1 JOIN route AS t2 ON t1.id  =  t2.station_id JOIN train AS t3 ON t2.train_id  =  t3.id WHERE t1.local_authority  =  \"Chiltern\"",
+    "query_toks": [
+      "SELECT",
+      "t3.name",
+      ",",
+      "t3.time",
+      "FROM",
+      "station",
+      "AS",
+      "t1",
+      "JOIN",
+      "route",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.station_id",
+      "JOIN",
+      "train",
+      "AS",
+      "t3",
+      "ON",
+      "t2.train_id",
+      "=",
+      "t3.id",
+      "WHERE",
+      "t1.local_authority",
+      "=",
+      "``",
+      "Chiltern",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "time",
+      "from",
+      "station",
+      "as",
+      "t1",
+      "join",
+      "route",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "station_id",
+      "join",
+      "train",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "train_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t1",
+      ".",
+      "local_authority",
+      "=",
+      "value"
+    ],
+    "question": "Find names and times of trains that run through stations for the local authority Chiltern.",
+    "question_toks": [
+      "Find",
+      "names",
+      "and",
+      "times",
+      "of",
+      "trains",
+      "that",
+      "run",
+      "through",
+      "stations",
+      "for",
+      "the",
+      "local",
+      "authority",
+      "Chiltern",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "\"Chiltern\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT count(DISTINCT services) FROM station",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "services",
+      ")",
+      "FROM",
+      "station"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "services",
+      ")",
+      "from",
+      "station"
+    ],
+    "question": "How many different services are provided by all stations?",
+    "question_toks": [
+      "How",
+      "many",
+      "different",
+      "services",
+      "are",
+      "provided",
+      "by",
+      "all",
+      "stations",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                10,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT t2.id ,  t2.local_authority FROM weekly_weather AS t1 JOIN station AS t2 ON t1.station_id  =  t2.id GROUP BY t1.station_id ORDER BY avg(high_temperature) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t2.id",
+      ",",
+      "t2.local_authority",
+      "FROM",
+      "weekly_weather",
+      "AS",
+      "t1",
+      "JOIN",
+      "station",
+      "AS",
+      "t2",
+      "ON",
+      "t1.station_id",
+      "=",
+      "t2.id",
+      "GROUP",
+      "BY",
+      "t1.station_id",
+      "ORDER",
+      "BY",
+      "avg",
+      "(",
+      "high_temperature",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "id",
+      ",",
+      "t2",
+      ".",
+      "local_authority",
+      "from",
+      "weekly_weather",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "station_id",
+      "order",
+      "by",
+      "avg",
+      "(",
+      "high_temperature",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Find the id and local authority of the station with has the highest average high temperature.",
+    "question_toks": [
+      "Find",
+      "the",
+      "id",
+      "and",
+      "local",
+      "authority",
+      "of",
+      "the",
+      "station",
+      "with",
+      "has",
+      "the",
+      "highest",
+      "average",
+      "high",
+      "temperature",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              5,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT t2.id ,  t2.local_authority FROM weekly_weather AS t1 JOIN station AS t2 ON t1.station_id  =  t2.id GROUP BY t1.station_id HAVING max(t1.precipitation)  >  50",
+    "query_toks": [
+      "SELECT",
+      "t2.id",
+      ",",
+      "t2.local_authority",
+      "FROM",
+      "weekly_weather",
+      "AS",
+      "t1",
+      "JOIN",
+      "station",
+      "AS",
+      "t2",
+      "ON",
+      "t1.station_id",
+      "=",
+      "t2.id",
+      "GROUP",
+      "BY",
+      "t1.station_id",
+      "HAVING",
+      "max",
+      "(",
+      "t1.precipitation",
+      ")",
+      ">",
+      "50"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "id",
+      ",",
+      "t2",
+      ".",
+      "local_authority",
+      "from",
+      "weekly_weather",
+      "as",
+      "t1",
+      "join",
+      "station",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "station_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "station_id",
+      "having",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "precipitation",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Find the id and local authority of the station whose maximum precipitation is higher than 50.",
+    "question_toks": [
+      "Find",
+      "the",
+      "id",
+      "and",
+      "local",
+      "authority",
+      "of",
+      "the",
+      "station",
+      "whose",
+      "maximum",
+      "precipitation",
+      "is",
+      "higher",
+      "than",
+      "50",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              1,
+              18,
+              false
+            ],
+            null
+          ],
+          50.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT min(low_temperature) ,  max(wind_speed_mph) FROM weekly_weather",
+    "query_toks": [
+      "SELECT",
+      "min",
+      "(",
+      "low_temperature",
+      ")",
+      ",",
+      "max",
+      "(",
+      "wind_speed_mph",
+      ")",
+      "FROM",
+      "weekly_weather"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "min",
+      "(",
+      "low_temperature",
+      ")",
+      ",",
+      "max",
+      "(",
+      "wind_speed_mph",
+      ")",
+      "from",
+      "weekly_weather"
+    ],
+    "question": "show the lowest low temperature and highest wind speed in miles per hour.",
+    "question_toks": [
+      "show",
+      "the",
+      "lowest",
+      "low",
+      "temperature",
+      "and",
+      "highest",
+      "wind",
+      "speed",
+      "in",
+      "miles",
+      "per",
+      "hour",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "station_weather",
+    "query": "SELECT origin FROM train GROUP BY origin HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "origin",
+      "FROM",
+      "train",
+      "GROUP",
+      "BY",
+      "origin",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "origin",
+      "from",
+      "train",
+      "group",
+      "by",
+      "origin",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Find the origins from which more than 1 train starts.",
+    "question_toks": [
+      "Find",
+      "the",
+      "origins",
+      "from",
+      "which",
+      "more",
+      "than",
+      "1",
+      "train",
+      "starts",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  }
+]

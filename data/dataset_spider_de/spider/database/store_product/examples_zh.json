@@ -1,0 +1,6903 @@
+[
+  {
+    "db_id": "store_product",
+    "query": "SELECT DISTINCT District_name FROM district ORDER BY city_area DESC",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "District_name",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_area",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "district_name",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_area",
+      "desc"
+    ],
+    "question_spider": "Find all the distinct district names ordered by city area in descending.",
+    "question": "查找城市区域降序排列的所有区域名称。",
+    "question_cspider": "查找城市区域降序排列的所有区域名称。",
+    "Harold": "BLEU = 68.92, 85.7/75.0/63.2/55.6 (BP=1.000, ratio=1.167, hyp_len=21, ref_len=18)",
+    "question_toks": [
+      "查",
+      "找",
+      "按",
+      "城",
+      "市",
+      "区",
+      "域",
+      "降",
+      "序",
+      "排",
+      "列",
+      "的",
+      "所",
+      "有",
+      "不",
+      "同",
+      "区",
+      "域",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT DISTINCT District_name FROM district ORDER BY city_area DESC",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "District_name",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_area",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "district_name",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_area",
+      "desc"
+    ],
+    "question_spider": "What are the different district names in order of descending city area?",
+    "question": "按市区区域降序排列的不同的区域名称是什么？",
+    "question_cspider": "按市区区域降序排列的不同的区域名称是什么？",
+    "Harold": "BLEU = 32.13, 76.5/50.0/33.3/21.4 (BP=0.790, ratio=0.810, hyp_len=17, ref_len=21)",
+    "question_toks": [
+      "降",
+      "序",
+      "排",
+      "列",
+      "的",
+      "城",
+      "市",
+      "地",
+      "区",
+      "名",
+      "称",
+      "分",
+      "别",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT max_page_size FROM product GROUP BY max_page_size HAVING count(*)  >  3",
+    "query_toks": [
+      "SELECT",
+      "max_page_size",
+      "FROM",
+      "product",
+      "GROUP",
+      "BY",
+      "max_page_size",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max_page_size",
+      "from",
+      "product",
+      "group",
+      "by",
+      "max_page_size",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the list of page size which have more than 3 product listed",
+    "question": "找出具有超过3个产品列表的页面大小列表",
+    "question_cspider": "找出具有超过3个产品列表的页面大小列表",
+    "Harold": "BLEU = 43.35, 83.3/52.9/37.5/26.7 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "列",
+      "出",
+      "了",
+      "超",
+      "过",
+      "3",
+      "种",
+      "产",
+      "品",
+      "的",
+      "页",
+      "面",
+      "大",
+      "小",
+      "列",
+      "表"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT max_page_size FROM product GROUP BY max_page_size HAVING count(*)  >  3",
+    "query_toks": [
+      "SELECT",
+      "max_page_size",
+      "FROM",
+      "product",
+      "GROUP",
+      "BY",
+      "max_page_size",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max_page_size",
+      "from",
+      "product",
+      "group",
+      "by",
+      "max_page_size",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "What is the maximum page size for everything that has more than 3 products listed?",
+    "question": "超过3个产品列表的所有产品的最大页面大小是多少？",
+    "question_cspider": "超过3个产品列表的所有产品的最大页面大小是多少？",
+    "Harold": "BLEU = 51.99, 72.0/58.3/47.8/36.4 (BP=1.000, ratio=1.042, hyp_len=25, ref_len=24)",
+    "question_toks": [
+      "列",
+      "出",
+      "了",
+      "3",
+      "种",
+      "以",
+      "上",
+      "产",
+      "品",
+      "的",
+      "所",
+      "有",
+      "页",
+      "面",
+      "的",
+      "最",
+      "大",
+      "页",
+      "面",
+      "大",
+      "小",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT District_name ,  City_Population FROM district WHERE City_Population BETWEEN 200000 AND 2000000",
+    "query_toks": [
+      "SELECT",
+      "District_name",
+      ",",
+      "City_Population",
+      "FROM",
+      "district",
+      "WHERE",
+      "City_Population",
+      "BETWEEN",
+      "200000",
+      "AND",
+      "2000000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district_name",
+      ",",
+      "city_population",
+      "from",
+      "district",
+      "where",
+      "city_population",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question_spider": "Find the name and population of district with population between 200000 and 2000000",
+    "question": "查找人口在200000到2000000之间的地区的名称和人口",
+    "question_cspider": "查找人口在200000到2000000之间的地区的名称和人口",
+    "Harold": "BLEU = 60.30, 73.3/65.5/57.1/48.1 (BP=1.000, ratio=1.250, hyp_len=30, ref_len=24)",
+    "question_toks": [
+      "查",
+      "找",
+      "人",
+      "口",
+      "在",
+      "2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "到",
+      "2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "之",
+      "间",
+      "的",
+      "地",
+      "区",
+      "的",
+      "名",
+      "称",
+      "和",
+      "人",
+      "口"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          200000,
+          2000000
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT District_name ,  City_Population FROM district WHERE City_Population BETWEEN 200000 AND 2000000",
+    "query_toks": [
+      "SELECT",
+      "District_name",
+      ",",
+      "City_Population",
+      "FROM",
+      "district",
+      "WHERE",
+      "City_Population",
+      "BETWEEN",
+      "200000",
+      "AND",
+      "2000000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district_name",
+      ",",
+      "city_population",
+      "from",
+      "district",
+      "where",
+      "city_population",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question_spider": "What are the district names and city populations for all districts that between 200,000 and 2,000,000 residents?",
+    "question": "200000到2000000居民之间的所有地区的区名和城市人口是多少？",
+    "question_cspider": "200000到2000000居民之间的所有地区的区名和城市人口是多少？",
+    "Harold": "BLEU = 47.12, 65.0/51.3/42.1/35.1 (BP=1.000, ratio=1.379, hyp_len=40, ref_len=29)",
+    "question_toks": [
+      "2",
+      "0",
+      "0",
+      ",",
+      "0",
+      "0",
+      "0",
+      "至",
+      "2",
+      ",",
+      "0",
+      "0",
+      "0",
+      ",",
+      "0",
+      "0",
+      "0",
+      "居",
+      "民",
+      "之",
+      "间",
+      "的",
+      "所",
+      "有",
+      "地",
+      "区",
+      "的",
+      "地",
+      "区",
+      "名",
+      "称",
+      "和",
+      "城",
+      "市",
+      "人",
+      "口",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          200000,
+          2000000
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT district_name FROM district WHERE city_area  >  10 OR City_Population  >  100000",
+    "query_toks": [
+      "SELECT",
+      "district_name",
+      "FROM",
+      "district",
+      "WHERE",
+      "city_area",
+      ">",
+      "10",
+      "OR",
+      "City_Population",
+      ">",
+      "100000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district_name",
+      "from",
+      "district",
+      "where",
+      "city_area",
+      ">",
+      "value",
+      "or",
+      "city_population",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the name all districts with city area greater than 10 or population larger than 100000",
+    "question": "查找城市面积大于10或人口大于100000的所有地区的名称",
+    "question_cspider": "查找城市面积大于10或人口大于100000的所有地区的名称",
+    "Harold": "BLEU = 65.90, 82.8/71.4/59.3/53.8 (BP=1.000, ratio=1.115, hyp_len=29, ref_len=26)",
+    "question_toks": [
+      "查",
+      "找",
+      "名",
+      "称",
+      "为",
+      "城",
+      "市",
+      "面",
+      "积",
+      "大",
+      "于",
+      "1",
+      "0",
+      "或",
+      "人",
+      "口",
+      "大",
+      "于",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "的",
+      "所",
+      "有",
+      "地",
+      "区"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          10,
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          100000,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT district_name FROM district WHERE city_area  >  10 OR City_Population  >  100000",
+    "query_toks": [
+      "SELECT",
+      "district_name",
+      "FROM",
+      "district",
+      "WHERE",
+      "city_area",
+      ">",
+      "10",
+      "OR",
+      "City_Population",
+      ">",
+      "100000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district_name",
+      "from",
+      "district",
+      "where",
+      "city_area",
+      ">",
+      "value",
+      "or",
+      "city_population",
+      ">",
+      "value"
+    ],
+    "question_spider": "What are the names of all districts with a city area greater than 10 or have more than 100000 people living there?",
+    "question": "市区面积大于10或居住100000人以上的地区名称是什么？",
+    "question_cspider": "市区面积大于10或居住100000人以上的地区名称是什么？",
+    "Harold": "BLEU = 48.85, 69.7/53.1/41.9/36.7 (BP=1.000, ratio=1.269, hyp_len=33, ref_len=26)",
+    "question_toks": [
+      "市",
+      "区",
+      "面",
+      "积",
+      "大",
+      "于",
+      "1",
+      "0",
+      "或",
+      "居",
+      "住",
+      "人",
+      "口",
+      "超",
+      "过",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "的",
+      "所",
+      "有",
+      "地",
+      "区",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          10,
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          100000,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT district_name FROM district ORDER BY city_population DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "district_name",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_population",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district_name",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_population",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which district has the largest population?",
+    "question": "哪个地区人口最多？",
+    "question_cspider": "哪个地区人口最多？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=9, ref_len=9)",
+    "question_toks": [
+      "哪",
+      "个",
+      "地",
+      "区",
+      "人",
+      "口",
+      "最",
+      "多",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT district_name FROM district ORDER BY city_population DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "district_name",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_population",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district_name",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_population",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name of the district with the most residents?",
+    "question": "居民最多的地区叫什么名字？",
+    "question_cspider": "居民最多的地区叫什么名字？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "居",
+      "民",
+      "最",
+      "多",
+      "的",
+      "地",
+      "区",
+      "叫",
+      "什",
+      "么",
+      "名",
+      "字",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT district_name FROM district ORDER BY city_area ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "district_name",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_area",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district_name",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_area",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which district has the least area?",
+    "question": "哪个地区的面积最少？",
+    "question_cspider": "哪个地区的面积最少？",
+    "Harold": "BLEU = 47.88, 100.0/71.4/50.0/40.0 (BP=0.779, ratio=0.800, hyp_len=8, ref_len=10)",
+    "question_toks": [
+      "哪",
+      "个",
+      "区",
+      "面",
+      "积",
+      "最",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT district_name FROM district ORDER BY city_area ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "district_name",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_area",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "district_name",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_area",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name of the district with the smallest area?",
+    "question": "面积最小的地区叫什么名字？",
+    "question_cspider": "面积最小的地区叫什么名字？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "面",
+      "积",
+      "最",
+      "小",
+      "的",
+      "地",
+      "区",
+      "叫",
+      "什",
+      "么",
+      "名",
+      "字",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT sum(city_population) FROM district ORDER BY city_area DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "city_population",
+      ")",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_area",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "city_population",
+      ")",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_area",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the total population of the top 3 districts with the largest area.",
+    "question": "找出总面积最大的3个区的总人口。",
+    "question_cspider": "找出总面积最大的3个区的总人口。",
+    "Harold": "BLEU = 54.12, 82.4/62.5/46.7/35.7 (BP=1.000, ratio=1.062, hyp_len=17, ref_len=16)",
+    "question_toks": [
+      "查",
+      "找",
+      "面",
+      "积",
+      "最",
+      "大",
+      "的",
+      "前",
+      "3",
+      "个",
+      "地",
+      "区",
+      "的",
+      "总",
+      "人",
+      "口",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT sum(city_population) FROM district ORDER BY city_area DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "city_population",
+      ")",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_area",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "city_population",
+      ")",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_area",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the total number of residents for the districts with the 3 largest areas?",
+    "question": "三大最大区域的居民总数是多少？",
+    "question_cspider": "三大最大区域的居民总数是多少？",
+    "Harold": "BLEU = 56.77, 75.0/60.0/50.0/46.2 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "3",
+      "个",
+      "最",
+      "大",
+      "的",
+      "地",
+      "区",
+      "的",
+      "居",
+      "民",
+      "总",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT TYPE ,  count(*) FROM store GROUP BY TYPE",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "store",
+      "GROUP",
+      "BY",
+      "TYPE"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "store",
+      "group",
+      "by",
+      "type"
+    ],
+    "question_spider": "Find all types of store and number of them.",
+    "question": "查找所有类型的商店和其对应的数量。",
+    "question_cspider": "查找所有类型的商店和其对应的数量。",
+    "Harold": "BLEU = 62.58, 100.0/91.7/81.8/70.0 (BP=0.735, ratio=0.765, hyp_len=13, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "类",
+      "型",
+      "的",
+      "商",
+      "店",
+      "和",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT TYPE ,  count(*) FROM store GROUP BY TYPE",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "store",
+      "GROUP",
+      "BY",
+      "TYPE"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "store",
+      "group",
+      "by",
+      "type"
+    ],
+    "question_spider": "For each type of store, how many of them are there?",
+    "question": "对于每种类型的商店，有多少种？",
+    "question_cspider": "对于每种类型的商店，有多少种？",
+    "Harold": "BLEU = 75.42, 82.4/75.0/73.3/71.4 (BP=1.000, ratio=1.133, hyp_len=17, ref_len=15)",
+    "question_toks": [
+      "对",
+      "于",
+      "每",
+      "种",
+      "类",
+      "型",
+      "的",
+      "商",
+      "店",
+      "，",
+      "有",
+      "多",
+      "少",
+      "家",
+      "商",
+      "店",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t1.store_name FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id WHERE t3.district_name  =  \"Khanewal District\"",
+    "query_toks": [
+      "SELECT",
+      "t1.store_name",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "WHERE",
+      "t3.district_name",
+      "=",
+      "``",
+      "Khanewal",
+      "District",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "store_name",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "where",
+      "t3",
+      ".",
+      "district_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the names of all stores in Khanewal District.",
+    "question": "找到“Khanewal District”所有商店的名称。",
+    "question_cspider": "找到“Khanewal District”所有商店的名称。",
+    "Harold": "BLEU = 25.88, 33.3/26.9/24.0/20.8 (BP=1.000, ratio=1.800, hyp_len=27, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "K",
+      "h",
+      "a",
+      "n",
+      "e",
+      "w",
+      "a",
+      "l",
+      " ",
+      "D",
+      "i",
+      "s",
+      "t",
+      "r",
+      "i",
+      "c",
+      "t",
+      "中",
+      "所",
+      "有",
+      "商",
+      "店",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Khanewal District\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t1.store_name FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id WHERE t3.district_name  =  \"Khanewal District\"",
+    "query_toks": [
+      "SELECT",
+      "t1.store_name",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "WHERE",
+      "t3.district_name",
+      "=",
+      "``",
+      "Khanewal",
+      "District",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "store_name",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "where",
+      "t3",
+      ".",
+      "district_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of all the stores located in Khanewal District?",
+    "question": "“Khanewal District”所有商店的名称是什么？",
+    "question_cspider": "“Khanewal District”所有商店的名称是什么？",
+    "Harold": "BLEU = 33.13, 36.7/34.5/32.1/29.6 (BP=1.000, ratio=1.875, hyp_len=30, ref_len=16)",
+    "question_toks": [
+      "位",
+      "于",
+      "K",
+      "h",
+      "a",
+      "n",
+      "e",
+      "w",
+      "a",
+      "l",
+      " ",
+      "D",
+      "i",
+      "s",
+      "t",
+      "r",
+      "i",
+      "c",
+      "t",
+      "的",
+      "所",
+      "有",
+      "商",
+      "店",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Khanewal District\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t1.store_name FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id WHERE district_id  =  (SELECT district_id FROM district ORDER BY city_population DESC LIMIT 1)",
+    "query_toks": [
+      "SELECT",
+      "t1.store_name",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "WHERE",
+      "district_id",
+      "=",
+      "(",
+      "SELECT",
+      "district_id",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_population",
+      "DESC",
+      "LIMIT",
+      "1",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "store_name",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "where",
+      "district_id",
+      "=",
+      "(",
+      "select",
+      "district_id",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_population",
+      "desc",
+      "limit",
+      "value",
+      ")"
+    ],
+    "question_spider": "Find all the stores in the district with the most population.",
+    "question": "找到人口最多的地区所有的商店。",
+    "question_cspider": "找到人口最多的地区所有的商店。",
+    "Harold": "BLEU = 39.92, 86.7/57.1/30.8/16.7 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "该",
+      "地",
+      "区",
+      "人",
+      "口",
+      "最",
+      "多",
+      "的",
+      "所",
+      "有",
+      "商",
+      "店",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+              "desc",
+              [
+                [
+                  0,
+                  [
+                    0,
+                    17,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t1.store_name FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id WHERE district_id  =  (SELECT district_id FROM district ORDER BY city_population DESC LIMIT 1)",
+    "query_toks": [
+      "SELECT",
+      "t1.store_name",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "WHERE",
+      "district_id",
+      "=",
+      "(",
+      "SELECT",
+      "district_id",
+      "FROM",
+      "district",
+      "ORDER",
+      "BY",
+      "city_population",
+      "DESC",
+      "LIMIT",
+      "1",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "store_name",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "where",
+      "district_id",
+      "=",
+      "(",
+      "select",
+      "district_id",
+      "from",
+      "district",
+      "order",
+      "by",
+      "city_population",
+      "desc",
+      "limit",
+      "value",
+      ")"
+    ],
+    "question_spider": "What are the names of all the stores in the largest district by population?",
+    "question": "人口最多的地区所有商店的名称是什么？",
+    "question_cspider": "人口最多的地区所有商店的名称是什么？",
+    "Harold": "BLEU = 52.97, 72.7/57.1/45.0/42.1 (BP=1.000, ratio=1.222, hyp_len=22, ref_len=18)",
+    "question_toks": [
+      "按",
+      "人",
+      "口",
+      "计",
+      "算",
+      "，",
+      "最",
+      "大",
+      "地",
+      "区",
+      "中",
+      "所",
+      "有",
+      "商",
+      "店",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+              "desc",
+              [
+                [
+                  0,
+                  [
+                    0,
+                    17,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t3.headquartered_city FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id WHERE t1.store_name  =  \"Blackville\"",
+    "query_toks": [
+      "SELECT",
+      "t3.headquartered_city",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "WHERE",
+      "t1.store_name",
+      "=",
+      "``",
+      "Blackville",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "headquartered_city",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "where",
+      "t1",
+      ".",
+      "store_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Which city is the headquarter of the store named \"Blackville\" in?",
+    "question": "哪个城市是“Blackville”店的总部？",
+    "question_cspider": "哪个城市是“Blackville”店的总部？",
+    "Harold": "BLEU = 18.11, 39.3/22.2/15.4/8.0 (BP=1.000, ratio=1.867, hyp_len=28, ref_len=15)",
+    "question_toks": [
+      "这",
+      "家",
+      "名",
+      "为",
+      "“",
+      " ",
+      "B",
+      "l",
+      "a",
+      "c",
+      "k",
+      "v",
+      "i",
+      "l",
+      "l",
+      "e",
+      "”",
+      "的",
+      "商",
+      "店",
+      "的",
+      "总",
+      "部",
+      "在",
+      "哪",
+      "个",
+      "城",
+      "市",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Blackville\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t3.headquartered_city FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id WHERE t1.store_name  =  \"Blackville\"",
+    "query_toks": [
+      "SELECT",
+      "t3.headquartered_city",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "WHERE",
+      "t1.store_name",
+      "=",
+      "``",
+      "Blackville",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "headquartered_city",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "where",
+      "t1",
+      ".",
+      "store_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What city is the headquarter of the store Blackville?",
+    "question": "哪个商店是“Blackville”商场的总部？",
+    "question_cspider": "哪个商店是“Blackville”商场的总部？",
+    "Harold": "BLEU = 0.00, 50.0/26.7/7.1/0.0 (BP=1.000, ratio=1.000, hyp_len=16, ref_len=16)",
+    "question_toks": [
+      "布",
+      "莱",
+      "克",
+      "维",
+      "尔",
+      "商",
+      "店",
+      "的",
+      "总",
+      "部",
+      "在",
+      "哪",
+      "个",
+      "城",
+      "市",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Blackville\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t3.headquartered_city ,  count(*) FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id GROUP BY t3.headquartered_city",
+    "query_toks": [
+      "SELECT",
+      "t3.headquartered_city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "GROUP",
+      "BY",
+      "t3.headquartered_city"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "headquartered_city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "headquartered_city"
+    ],
+    "question_spider": "Find the number of stores in each city.",
+    "question": "查找每个城市的商店数量。",
+    "question_cspider": "查找每个城市的商店数量。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "城",
+      "市",
+      "的",
+      "商",
+      "店",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t3.headquartered_city ,  count(*) FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id GROUP BY t3.headquartered_city",
+    "query_toks": [
+      "SELECT",
+      "t3.headquartered_city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "GROUP",
+      "BY",
+      "t3.headquartered_city"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "headquartered_city",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "headquartered_city"
+    ],
+    "question_spider": "How many stores are headquarted in each city?",
+    "question": "每个城市都有多少商店的总部？",
+    "question_cspider": "每个城市都有多少商店的总部？",
+    "Harold": "BLEU = 62.21, 91.7/81.8/70.0/55.6 (BP=0.846, ratio=0.857, hyp_len=12, ref_len=14)",
+    "question_toks": [
+      "每",
+      "个",
+      "城",
+      "市",
+      "都",
+      "有",
+      "多",
+      "少",
+      "家",
+      "总",
+      "部",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t3.headquartered_city FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id GROUP BY t3.headquartered_city ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t3.headquartered_city",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "GROUP",
+      "BY",
+      "t3.headquartered_city",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "headquartered_city",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "headquartered_city",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the city with the most number of stores.",
+    "question": "找到拥有最多商店的城市。",
+    "question_cspider": "找到拥有最多商店的城市。",
+    "Harold": "BLEU = 82.65, 91.7/81.8/80.0/77.8 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "查",
+      "找",
+      "拥",
+      "有",
+      "最",
+      "多",
+      "商",
+      "店",
+      "的",
+      "城",
+      "市",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t3.headquartered_city FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id GROUP BY t3.headquartered_city ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t3.headquartered_city",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "GROUP",
+      "BY",
+      "t3.headquartered_city",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "headquartered_city",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "headquartered_city",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the city with the most number of flagship stores?",
+    "question": "哪一个城市的旗舰店数量最多？",
+    "question_cspider": "哪一个城市的旗舰店数量最多？",
+    "Harold": "BLEU = 50.32, 78.6/53.8/41.7/36.4 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "旗",
+      "舰",
+      "店",
+      "数",
+      "量",
+      "最",
+      "多",
+      "的",
+      "城",
+      "市",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT avg(pages_per_minute_color) FROM product",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "pages_per_minute_color",
+      ")",
+      "FROM",
+      "product"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "pages_per_minute_color",
+      ")",
+      "from",
+      "product"
+    ],
+    "question_spider": "What is the average pages per minute color?",
+    "question": "每分钟扫描的平均页数数量是多少？",
+    "question_cspider": "每分钟颜色的平均页数是多少？",
+    "Harold": "BLEU = 0.00, 91.7/45.5/10.0/0.0 (BP=0.846, ratio=0.857, hyp_len=12, ref_len=14)",
+    "question_toks": [
+      "每",
+      "分",
+      "钟",
+      "平",
+      "均",
+      "颜",
+      "色",
+      "为",
+      "多",
+      "少",
+      "页",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT avg(pages_per_minute_color) FROM product",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "pages_per_minute_color",
+      ")",
+      "FROM",
+      "product"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "pages_per_minute_color",
+      ")",
+      "from",
+      "product"
+    ],
+    "question_spider": "What is the average number of pages per minute color?",
+    "question": "每分钟扫描的平均页数数量是多少？",
+    "question_cspider": "每分钟颜色的平均页数的数量是多少？",
+    "Harold": "BLEU = 50.36, 92.9/76.9/58.3/36.4 (BP=0.807, ratio=0.824, hyp_len=14, ref_len=17)",
+    "question_toks": [
+      "每",
+      "分",
+      "钟",
+      "彩",
+      "色",
+      "的",
+      "平",
+      "均",
+      "页",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t1.product FROM product AS t1 JOIN store_product AS t2 ON t1.product_id  =  t2.product_id JOIN store AS t3 ON t2.store_id  =  t3.store_id WHERE t3.store_name  =  \"Miramichi\"",
+    "query_toks": [
+      "SELECT",
+      "t1.product",
+      "FROM",
+      "product",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_product",
+      "AS",
+      "t2",
+      "ON",
+      "t1.product_id",
+      "=",
+      "t2.product_id",
+      "JOIN",
+      "store",
+      "AS",
+      "t3",
+      "ON",
+      "t2.store_id",
+      "=",
+      "t3.store_id",
+      "WHERE",
+      "t3.store_name",
+      "=",
+      "``",
+      "Miramichi",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product",
+      "from",
+      "product",
+      "as",
+      "t1",
+      "join",
+      "store_product",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "join",
+      "store",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "store_id",
+      "=",
+      "t3",
+      ".",
+      "store_id",
+      "where",
+      "t3",
+      ".",
+      "store_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What products are available at store named \"Miramichi\"?",
+    "question": "“Miramichi”商店里有什么产品？",
+    "question_cspider": "叫“Miramichi”商店里有什么产品？",
+    "Harold": "BLEU = 0.00, 33.3/8.7/0.0/0.0 (BP=1.000, ratio=1.714, hyp_len=24, ref_len=14)",
+    "question_toks": [
+      "名",
+      "为",
+      "“",
+      " ",
+      "M",
+      "i",
+      "r",
+      "a",
+      "m",
+      "i",
+      "c",
+      "h",
+      "i",
+      "”",
+      "的",
+      "商",
+      "店",
+      "有",
+      "哪",
+      "些",
+      "产",
+      "品",
+      "可",
+      "用",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Miramichi\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t1.product FROM product AS t1 JOIN store_product AS t2 ON t1.product_id  =  t2.product_id JOIN store AS t3 ON t2.store_id  =  t3.store_id WHERE t3.store_name  =  \"Miramichi\"",
+    "query_toks": [
+      "SELECT",
+      "t1.product",
+      "FROM",
+      "product",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_product",
+      "AS",
+      "t2",
+      "ON",
+      "t1.product_id",
+      "=",
+      "t2.product_id",
+      "JOIN",
+      "store",
+      "AS",
+      "t3",
+      "ON",
+      "t2.store_id",
+      "=",
+      "t3.store_id",
+      "WHERE",
+      "t3.store_name",
+      "=",
+      "``",
+      "Miramichi",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product",
+      "from",
+      "product",
+      "as",
+      "t1",
+      "join",
+      "store_product",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "join",
+      "store",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "store_id",
+      "=",
+      "t3",
+      ".",
+      "store_id",
+      "where",
+      "t3",
+      ".",
+      "store_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What products are sold at the store named Miramichi?",
+    "question": "在“Miramichi”店里卖什么产品？",
+    "question_cspider": "在“Miramichi”店里卖什么产品？",
+    "Harold": "BLEU = 0.00, 19.0/10.0/5.3/0.0 (BP=1.000, ratio=1.615, hyp_len=21, ref_len=13)",
+    "question_toks": [
+      "名",
+      "为",
+      "M",
+      "i",
+      "r",
+      "a",
+      "m",
+      "i",
+      "c",
+      "h",
+      "i",
+      "的",
+      "商",
+      "店",
+      "出",
+      "售",
+      "哪",
+      "些",
+      "产",
+      "品",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Miramichi\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT product FROM product WHERE max_page_size  =  \"A4\" AND pages_per_minute_color  <  5",
+    "query_toks": [
+      "SELECT",
+      "product",
+      "FROM",
+      "product",
+      "WHERE",
+      "max_page_size",
+      "=",
+      "``",
+      "A4",
+      "''",
+      "AND",
+      "pages_per_minute_color",
+      "<",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product",
+      "from",
+      "product",
+      "where",
+      "max_page_size",
+      "=",
+      "value",
+      "and",
+      "pages_per_minute_color",
+      "<",
+      "value"
+    ],
+    "question_spider": "Find products with max page size as \"A4\" and pages per minute color smaller than 5.",
+    "question": "找到最大页面大小为“A4”且每分钟扫描页数小于5的产品。",
+    "question_cspider": "找到最大页面大小为“A4”且每分钟页面颜色小于5的产品。",
+    "Harold": "BLEU = 60.66, 85.7/66.7/53.8/44.0 (BP=1.000, ratio=1.000, hyp_len=28, ref_len=28)",
+    "question_toks": [
+      "查",
+      "找",
+      "最",
+      "大",
+      "页",
+      "面",
+      "尺",
+      "寸",
+      "为",
+      "“",
+      " ",
+      "A",
+      "4",
+      "”",
+      "且",
+      "每",
+      "分",
+      "钟",
+      "彩",
+      "色",
+      "页",
+      "面",
+      "小",
+      "于",
+      "5",
+      "的",
+      "产",
+      "品",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"A4\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          5,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT product FROM product WHERE max_page_size  =  \"A4\" AND pages_per_minute_color  <  5",
+    "query_toks": [
+      "SELECT",
+      "product",
+      "FROM",
+      "product",
+      "WHERE",
+      "max_page_size",
+      "=",
+      "``",
+      "A4",
+      "''",
+      "AND",
+      "pages_per_minute_color",
+      "<",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product",
+      "from",
+      "product",
+      "where",
+      "max_page_size",
+      "=",
+      "value",
+      "and",
+      "pages_per_minute_color",
+      "<",
+      "value"
+    ],
+    "question_spider": "What are the products with the maximum page size A4 that also have a pages per minute color smaller than 5?",
+    "question": "哪些产品具有最大页面大小为“A4”，并且每分钟扫描页数小于5？",
+    "question_cspider": "哪些产品具有最大页面大小为“A4”，并且每分钟页面颜色小于5？",
+    "Harold": "BLEU = 23.18, 74.1/42.3/20.0/8.3 (BP=0.862, ratio=0.871, hyp_len=27, ref_len=31)",
+    "question_toks": [
+      "什",
+      "么",
+      "是",
+      "最",
+      "大",
+      "页",
+      "面",
+      "尺",
+      "寸",
+      "为",
+      "A",
+      "4",
+      "且",
+      "每",
+      "分",
+      "钟",
+      "彩",
+      "色",
+      "页",
+      "面",
+      "小",
+      "于",
+      "5",
+      "的",
+      "产",
+      "品",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"A4\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          5,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT product FROM product WHERE max_page_size  =  \"A4\" OR pages_per_minute_color  <  5",
+    "query_toks": [
+      "SELECT",
+      "product",
+      "FROM",
+      "product",
+      "WHERE",
+      "max_page_size",
+      "=",
+      "``",
+      "A4",
+      "''",
+      "OR",
+      "pages_per_minute_color",
+      "<",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product",
+      "from",
+      "product",
+      "where",
+      "max_page_size",
+      "=",
+      "value",
+      "or",
+      "pages_per_minute_color",
+      "<",
+      "value"
+    ],
+    "question_spider": "Find products with max page size as \"A4\" or pages per minute color smaller than 5.",
+    "question": "找出最大页面大小为“A4”或每分钟扫描页数小于5的产品。",
+    "question_cspider": "找出最大页面大小为“A4”或每分钟页面颜色小于5的产品。",
+    "Harold": "BLEU = 60.66, 85.7/66.7/53.8/44.0 (BP=1.000, ratio=1.000, hyp_len=28, ref_len=28)",
+    "question_toks": [
+      "查",
+      "找",
+      "最",
+      "大",
+      "页",
+      "面",
+      "尺",
+      "寸",
+      "为",
+      "“",
+      " ",
+      "A",
+      "4",
+      "”",
+      "或",
+      "每",
+      "分",
+      "钟",
+      "彩",
+      "色",
+      "页",
+      "面",
+      "小",
+      "于",
+      "5",
+      "的",
+      "产",
+      "品",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"A4\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          5,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT product FROM product WHERE max_page_size  =  \"A4\" OR pages_per_minute_color  <  5",
+    "query_toks": [
+      "SELECT",
+      "product",
+      "FROM",
+      "product",
+      "WHERE",
+      "max_page_size",
+      "=",
+      "``",
+      "A4",
+      "''",
+      "OR",
+      "pages_per_minute_color",
+      "<",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product",
+      "from",
+      "product",
+      "where",
+      "max_page_size",
+      "=",
+      "value",
+      "or",
+      "pages_per_minute_color",
+      "<",
+      "value"
+    ],
+    "question_spider": "What are the products with the maximum page size eqal to A4 or a pages per minute color less than 5?",
+    "question": "什么是最大页面大小等于“A4”或每分钟扫描页数小于5的产品？",
+    "question_cspider": "什么是最大页面大小等于“A4”或每分钟页面颜色小于5的产品？",
+    "Harold": "BLEU = 52.21, 89.3/66.7/46.2/36.0 (BP=0.931, ratio=0.933, hyp_len=28, ref_len=30)",
+    "question_toks": [
+      "什",
+      "么",
+      "是",
+      "最",
+      "大",
+      "页",
+      "面",
+      "尺",
+      "寸",
+      "等",
+      "于",
+      "A",
+      "4",
+      "或",
+      "每",
+      "分",
+      "钟",
+      "彩",
+      "色",
+      "页",
+      "面",
+      "小",
+      "于",
+      "5",
+      "的",
+      "产",
+      "品",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"A4\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          5,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT product FROM product WHERE product LIKE \"%Scanner%\"",
+    "query_toks": [
+      "SELECT",
+      "product",
+      "FROM",
+      "product",
+      "WHERE",
+      "product",
+      "LIKE",
+      "``",
+      "%",
+      "Scanner",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product",
+      "from",
+      "product",
+      "where",
+      "product",
+      "like",
+      "value"
+    ],
+    "question_spider": "Find all the product whose name contains the word \"Scanner\".",
+    "question": "查找所有包含“Scanner”一词产品的名称。",
+    "question_cspider": "查找所有包含“扫描仪”一词产品的名称。",
+    "Harold": "BLEU = 0.00, 65.2/22.7/0.0/0.0 (BP=1.000, ratio=1.211, hyp_len=23, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "名",
+      "称",
+      "包",
+      "含",
+      "单",
+      "词",
+      "“",
+      " ",
+      "S",
+      "c",
+      "a",
+      "n",
+      "n",
+      "e",
+      "r",
+      "”",
+      "的",
+      "所",
+      "有",
+      "产",
+      "品",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"%Scanner%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT product FROM product WHERE product LIKE \"%Scanner%\"",
+    "query_toks": [
+      "SELECT",
+      "product",
+      "FROM",
+      "product",
+      "WHERE",
+      "product",
+      "LIKE",
+      "``",
+      "%",
+      "Scanner",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product",
+      "from",
+      "product",
+      "where",
+      "product",
+      "like",
+      "value"
+    ],
+    "question_spider": "What are all of the products whose name includes the substring \"Scanner\"?",
+    "question": "所有的其名称包括子字符串“Scanner”的产品有哪些？",
+    "question_cspider": "所有的其名称包括子字符串“扫描仪”的产品有哪些？",
+    "Harold": "BLEU = 40.19, 69.2/52.0/33.3/21.7 (BP=1.000, ratio=1.083, hyp_len=26, ref_len=24)",
+    "question_toks": [
+      "名",
+      "称",
+      "包",
+      "含",
+      "子",
+      "字",
+      "符",
+      "串",
+      "“",
+      " ",
+      "S",
+      "c",
+      "a",
+      "n",
+      "n",
+      "e",
+      "r",
+      "”",
+      "的",
+      "所",
+      "有",
+      "产",
+      "品",
+      "有",
+      "哪",
+      "些",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"%Scanner%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT max_page_size FROM product GROUP BY max_page_size ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "max_page_size",
+      "FROM",
+      "product",
+      "GROUP",
+      "BY",
+      "max_page_size",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max_page_size",
+      "from",
+      "product",
+      "group",
+      "by",
+      "max_page_size",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the most prominent max page size among all the products.",
+    "question": "找出在所有产品中最常用的最大页面大小。",
+    "question_cspider": "找出在所有产品中最常用的最大页面大小。",
+    "Harold": "BLEU = 46.83, 77.8/52.9/43.8/33.3 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "产",
+      "品",
+      "中",
+      "最",
+      "突",
+      "出",
+      "的",
+      "最",
+      "大",
+      "页",
+      "面",
+      "尺",
+      "寸",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT max_page_size FROM product GROUP BY max_page_size ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "max_page_size",
+      "FROM",
+      "product",
+      "GROUP",
+      "BY",
+      "max_page_size",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max_page_size",
+      "from",
+      "product",
+      "group",
+      "by",
+      "max_page_size",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the most common maximum page size?",
+    "question": "最常用的最大页面的大小是什么？",
+    "question_cspider": "最常用的最大页面的大小是什么？",
+    "Harold": "BLEU = 30.32, 64.3/38.5/25.0/18.2 (BP=0.931, ratio=0.933, hyp_len=14, ref_len=15)",
+    "question_toks": [
+      "最",
+      "常",
+      "见",
+      "的",
+      "最",
+      "大",
+      "页",
+      "面",
+      "尺",
+      "寸",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT product FROM product WHERE product != (SELECT max_page_size FROM product GROUP BY max_page_size ORDER BY count(*) DESC LIMIT 1)",
+    "query_toks": [
+      "SELECT",
+      "product",
+      "FROM",
+      "product",
+      "WHERE",
+      "product",
+      "!",
+      "=",
+      "(",
+      "SELECT",
+      "max_page_size",
+      "FROM",
+      "product",
+      "GROUP",
+      "BY",
+      "max_page_size",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product",
+      "from",
+      "product",
+      "where",
+      "product",
+      "!",
+      "=",
+      "(",
+      "select",
+      "max_page_size",
+      "from",
+      "product",
+      "group",
+      "by",
+      "max_page_size",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value",
+      ")"
+    ],
+    "question_spider": "Find the name of the products that are not using the most frequently-used max page size.",
+    "question": "查找不使用最常用最大页面大小的产品的名称。",
+    "question_cspider": "查找不使用最常用最大页面大小的产品的名称。",
+    "Harold": "BLEU = 42.16, 85.7/60.0/36.8/16.7 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "查",
+      "找",
+      "未",
+      "使",
+      "用",
+      "最",
+      "常",
+      "用",
+      "的",
+      "最",
+      "大",
+      "页",
+      "面",
+      "尺",
+      "寸",
+      "的",
+      "产",
+      "品",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [
+              [
+                0,
+                6,
+                false
+              ]
+            ],
+            "having": [],
+            "orderBy": [
+              "desc",
+              [
+                [
+                  0,
+                  [
+                    3,
+                    0,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT product FROM product WHERE product != (SELECT max_page_size FROM product GROUP BY max_page_size ORDER BY count(*) DESC LIMIT 1)",
+    "query_toks": [
+      "SELECT",
+      "product",
+      "FROM",
+      "product",
+      "WHERE",
+      "product",
+      "!",
+      "=",
+      "(",
+      "SELECT",
+      "max_page_size",
+      "FROM",
+      "product",
+      "GROUP",
+      "BY",
+      "max_page_size",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product",
+      "from",
+      "product",
+      "where",
+      "product",
+      "!",
+      "=",
+      "(",
+      "select",
+      "max_page_size",
+      "from",
+      "product",
+      "group",
+      "by",
+      "max_page_size",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value",
+      ")"
+    ],
+    "question_spider": "What are the names of all products that are not the most frequently-used maximum page size?",
+    "question": "不是最常使用的最大页面大小的所有产品的名称是什么？",
+    "question_cspider": "不是最常使用的最大页面大小的所有产品的名称是什么？",
+    "Harold": "BLEU = 89.12, 100.0/95.7/90.9/85.7 (BP=0.959, ratio=0.960, hyp_len=24, ref_len=25)",
+    "question_toks": [
+      "不",
+      "是",
+      "最",
+      "常",
+      "用",
+      "的",
+      "最",
+      "大",
+      "页",
+      "面",
+      "大",
+      "小",
+      "的",
+      "所",
+      "有",
+      "产",
+      "品",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      6,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [
+              [
+                0,
+                6,
+                false
+              ]
+            ],
+            "having": [],
+            "orderBy": [
+              "desc",
+              [
+                [
+                  0,
+                  [
+                    3,
+                    0,
+                    false
+                  ],
+                  null
+                ]
+              ]
+            ],
+            "limit": 1,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT sum(city_population) FROM district WHERE city_area  >  (SELECT avg(city_area) FROM district)",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "city_population",
+      ")",
+      "FROM",
+      "district",
+      "WHERE",
+      "city_area",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "city_area",
+      ")",
+      "FROM",
+      "district",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "city_population",
+      ")",
+      "from",
+      "district",
+      "where",
+      "city_area",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "city_area",
+      ")",
+      "from",
+      "district",
+      ")"
+    ],
+    "question_spider": "Find the total population of the districts where the area is bigger than the average city area.",
+    "question": "找出面积大于平均城市面积的区域的总人口。",
+    "question_cspider": "找出面积大于平均城市面积的区域的总人口。",
+    "Harold": "BLEU = 71.41, 90.0/73.7/66.7/58.8 (BP=1.000, ratio=1.000, hyp_len=20, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "面",
+      "积",
+      "大",
+      "于",
+      "平",
+      "均",
+      "城",
+      "市",
+      "面",
+      "积",
+      "的",
+      "地",
+      "区",
+      "的",
+      "总",
+      "人",
+      "口",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      18,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT sum(city_population) FROM district WHERE city_area  >  (SELECT avg(city_area) FROM district)",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "city_population",
+      ")",
+      "FROM",
+      "district",
+      "WHERE",
+      "city_area",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "city_area",
+      ")",
+      "FROM",
+      "district",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "city_population",
+      ")",
+      "from",
+      "district",
+      "where",
+      "city_area",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "city_area",
+      ")",
+      "from",
+      "district",
+      ")"
+    ],
+    "question_spider": "What is the total population for all the districts that have an area larger tahn the average city area?",
+    "question": "面积大于城市平均面积的所有地区的人口总数是多少？",
+    "question_cspider": "面积大于城市平均面积的所有地区的人口总数是多少？",
+    "Harold": "BLEU = 56.49, 100.0/72.7/47.6/35.0 (BP=0.957, ratio=0.958, hyp_len=23, ref_len=24)",
+    "question_toks": [
+      "面",
+      "积",
+      "大",
+      "于",
+      "平",
+      "均",
+      "城",
+      "市",
+      "面",
+      "积",
+      "的",
+      "所",
+      "有",
+      "地",
+      "区",
+      "的",
+      "总",
+      "人",
+      "口",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      18,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t3.District_name FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id WHERE t1.Type  =  \"City Mall\" INTERSECT SELECT t3.District_name FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id WHERE t1.Type  =  \"Village Store\"",
+    "query_toks": [
+      "SELECT",
+      "t3.District_name",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "WHERE",
+      "t1.Type",
+      "=",
+      "``",
+      "City",
+      "Mall",
+      "''",
+      "INTERSECT",
+      "SELECT",
+      "t3.District_name",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "WHERE",
+      "t1.Type",
+      "=",
+      "``",
+      "Village",
+      "Store",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "district_name",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "where",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t3",
+      ".",
+      "district_name",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "where",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the names of districts where have both city mall and village store type stores.",
+    "question": "查找同时具有“City Mall”和“Village Store”类型的商店的地区的名称。",
+    "question_cspider": "查找同时具有“City Mall”和“Village Store”类型的商店的地区的名称。",
+    "Harold": "BLEU = 22.91, 64.3/37.0/19.2/8.0 (BP=0.931, ratio=0.933, hyp_len=28, ref_len=30)",
+    "question_toks": [
+      "查",
+      "找",
+      "同",
+      "时",
+      "拥",
+      "有",
+      "城",
+      "市",
+      "购",
+      "物",
+      "中",
+      "心",
+      "和",
+      "乡",
+      "村",
+      "商",
+      "店",
+      "类",
+      "型",
+      "商",
+      "店",
+      "的",
+      "区",
+      "域",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"City Mall\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              4
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  22,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  15,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            "\"Village Store\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "store_product",
+    "query": "SELECT t3.District_name FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id WHERE t1.Type  =  \"City Mall\" INTERSECT SELECT t3.District_name FROM store AS t1 JOIN store_district AS t2 ON t1.store_id  =  t2.store_id JOIN district AS t3 ON t2.district_id  =  t3.district_id WHERE t1.Type  =  \"Village Store\"",
+    "query_toks": [
+      "SELECT",
+      "t3.District_name",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "WHERE",
+      "t1.Type",
+      "=",
+      "``",
+      "City",
+      "Mall",
+      "''",
+      "INTERSECT",
+      "SELECT",
+      "t3.District_name",
+      "FROM",
+      "store",
+      "AS",
+      "t1",
+      "JOIN",
+      "store_district",
+      "AS",
+      "t2",
+      "ON",
+      "t1.store_id",
+      "=",
+      "t2.store_id",
+      "JOIN",
+      "district",
+      "AS",
+      "t3",
+      "ON",
+      "t2.district_id",
+      "=",
+      "t3.district_id",
+      "WHERE",
+      "t1.Type",
+      "=",
+      "``",
+      "Village",
+      "Store",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "district_name",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "where",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t3",
+      ".",
+      "district_name",
+      "from",
+      "store",
+      "as",
+      "t1",
+      "join",
+      "store_district",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "store_id",
+      "=",
+      "t2",
+      ".",
+      "store_id",
+      "join",
+      "district",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "district_id",
+      "=",
+      "t3",
+      ".",
+      "district_id",
+      "where",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of the districts that have both mall and village store style shops?",
+    "question": "同时有“City Mall”和“Village Store”的地区叫什么名字？",
+    "question_cspider": "同时有“City Mall”和“Village Store”的地区叫什么名字？",
+    "Harold": "BLEU = 0.00, 40.0/12.5/4.3/0.0 (BP=1.000, ratio=1.042, hyp_len=25, ref_len=24)",
+    "question_toks": [
+      "既",
+      "有",
+      "购",
+      "物",
+      "中",
+      "心",
+      "又",
+      "有",
+      "乡",
+      "村",
+      "商",
+      "店",
+      "风",
+      "格",
+      "商",
+      "店",
+      "的",
+      "地",
+      "区",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"City Mall\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              4
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  22,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  15,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            "\"Village Store\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  }
+]

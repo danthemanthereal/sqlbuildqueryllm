@@ -1,0 +1,2480 @@
+[
+  {
+    "db_id": "wedding",
+    "query": "SELECT count(*) FROM Church WHERE Open_Date  <  1850",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Church",
+      "WHERE",
+      "Open_Date",
+      "<",
+      "1850"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "church",
+      "where",
+      "open_date",
+      "<",
+      "value"
+    ],
+    "question": "Wie viele Kirchen, die vor 1850 eröffnet wurden, gibt es?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          1850.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT name ,  open_date ,  organized_by FROM Church",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "open_date",
+      ",",
+      "organized_by",
+      "FROM",
+      "Church"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "open_date",
+      ",",
+      "organized_by",
+      "from",
+      "church"
+    ],
+    "question": "Zeigen Sie den Namen, das Eröffnungsdatum und den Veranstalter aller Kirchen an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT name FROM church ORDER BY open_date DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "church",
+      "ORDER",
+      "BY",
+      "open_date",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "church",
+      "order",
+      "by",
+      "open_date",
+      "desc"
+    ],
+    "question": "Listen Sie alle Kirchennamen in absteigender Reihenfolge des Eröffnungsdatums auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT open_date FROM church GROUP BY open_date HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "open_date",
+      "FROM",
+      "church",
+      "GROUP",
+      "BY",
+      "open_date",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "open_date",
+      "from",
+      "church",
+      "group",
+      "by",
+      "open_date",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie das Eröffnungsjahr, in dem mindestens zwei Kirchen eröffnet wurden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT organized_by ,  name FROM church WHERE open_date BETWEEN 1830 AND 1840",
+    "query_toks": [
+      "SELECT",
+      "organized_by",
+      ",",
+      "name",
+      "FROM",
+      "church",
+      "WHERE",
+      "open_date",
+      "BETWEEN",
+      "1830",
+      "AND",
+      "1840"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "organized_by",
+      ",",
+      "name",
+      "from",
+      "church",
+      "where",
+      "open_date",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question": "Zeigen Sie den Veranstalter und den Namen der Kirchen an, die zwischen 1830 und 1840 eröffnet wurden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          1830.0,
+          1840.0
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT open_date ,  count(*) FROM church GROUP BY open_date",
+    "query_toks": [
+      "SELECT",
+      "open_date",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "church",
+      "GROUP",
+      "BY",
+      "open_date"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "open_date",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "church",
+      "group",
+      "by",
+      "open_date"
+    ],
+    "question": "Zeigen Sie alle Eröffnungsjahre und die Anzahl der Kirchen an, die in diesem Jahr eröffnet wurden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT name ,  open_date FROM church ORDER BY open_date DESC LIMIT 3",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "open_date",
+      "FROM",
+      "church",
+      "ORDER",
+      "BY",
+      "open_date",
+      "DESC",
+      "LIMIT",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "open_date",
+      "from",
+      "church",
+      "order",
+      "by",
+      "open_date",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Zeigen Sie den Namen und das Eröffnungsjahr für drei Kirchen an, die zuletzt eröffnet wurden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 3,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT count(*) FROM people WHERE is_male  =  'F' AND age  >  30",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "people",
+      "WHERE",
+      "is_male",
+      "=",
+      "'F",
+      "'",
+      "AND",
+      "age",
+      ">",
+      "30"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "people",
+      "where",
+      "is_male",
+      "=",
+      "value",
+      "and",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "Wie viele weibliche Personen sind in unserer Akte älter als 30 Jahre?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"F\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          30.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT country FROM people WHERE age  <  25 INTERSECT SELECT country FROM people WHERE age  >  30",
+    "query_toks": [
+      "SELECT",
+      "country",
+      "FROM",
+      "people",
+      "WHERE",
+      "age",
+      "<",
+      "25",
+      "INTERSECT",
+      "SELECT",
+      "country",
+      "FROM",
+      "people",
+      "WHERE",
+      "age",
+      ">",
+      "30"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "people",
+      "where",
+      "age",
+      "<",
+      "value",
+      "intersect",
+      "select",
+      "country",
+      "from",
+      "people",
+      "where",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "Zeigen Sie das Land, aus dem Personen älter als 30 Jahre und jünger als 25 Jahre stammen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          25.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            30.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT min(age) ,  max(age) ,  avg(age) FROM people",
+    "query_toks": [
+      "SELECT",
+      "min",
+      "(",
+      "age",
+      ")",
+      ",",
+      "max",
+      "(",
+      "age",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "FROM",
+      "people"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "min",
+      "(",
+      "age",
+      ")",
+      ",",
+      "max",
+      "(",
+      "age",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "from",
+      "people"
+    ],
+    "question": "Zeigen Sie das Mindest-, Höchst- und Durchschnittsalter für alle Personen an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT name ,  country FROM people WHERE age  <  (SELECT avg(age) FROM people)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "country",
+      "FROM",
+      "people",
+      "WHERE",
+      "age",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "FROM",
+      "people",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "country",
+      "from",
+      "people",
+      "where",
+      "age",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "from",
+      "people",
+      ")"
+    ],
+    "question": "Zeigen Sie den Namen und das Land für alle Personen an, deren Alter unter dem Durchschnitt liegt.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      5,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT T2.name ,  T3.name FROM wedding AS T1 JOIN people AS T2 ON T1.male_id  =  T2.people_id JOIN people AS T3 ON T1.female_id  =  T3.people_id WHERE T1.year  >  2014",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T3.name",
+      "FROM",
+      "wedding",
+      "AS",
+      "T1",
+      "JOIN",
+      "people",
+      "AS",
+      "T2",
+      "ON",
+      "T1.male_id",
+      "=",
+      "T2.people_id",
+      "JOIN",
+      "people",
+      "AS",
+      "T3",
+      "ON",
+      "T1.female_id",
+      "=",
+      "T3.people_id",
+      "WHERE",
+      "T1.year",
+      ">",
+      "2014"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "wedding",
+      "as",
+      "t1",
+      "join",
+      "people",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "male_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "join",
+      "people",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "female_id",
+      "=",
+      "t3",
+      ".",
+      "people_id",
+      "where",
+      "t1",
+      ".",
+      "year",
+      ">",
+      "value"
+    ],
+    "question": "Zeigen Sie das Paar männlicher und weiblicher Namen bei allen Hochzeiten nach dem Jahr 2014",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2014.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT name ,  age FROM people WHERE is_male  =  'T' AND people_id NOT IN (SELECT male_id FROM wedding)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "age",
+      "FROM",
+      "people",
+      "WHERE",
+      "is_male",
+      "=",
+      "'T",
+      "'",
+      "AND",
+      "people_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "male_id",
+      "FROM",
+      "wedding",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "age",
+      "from",
+      "people",
+      "where",
+      "is_male",
+      "=",
+      "value",
+      "and",
+      "people_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "male_id",
+      "from",
+      "wedding",
+      ")"
+    ],
+    "question": "Zeigen Sie den Namen und das Alter aller männlichen Personen an, die keine Hochzeit haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"T\"",
+          null
+        ],
+        "and",
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT name FROM church EXCEPT SELECT T1.name FROM church AS T1 JOIN wedding AS T2 ON T1.church_id  =  T2.church_id WHERE T2.year  =  2015",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "church",
+      "EXCEPT",
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "church",
+      "AS",
+      "T1",
+      "JOIN",
+      "wedding",
+      "AS",
+      "T2",
+      "ON",
+      "T1.church_id",
+      "=",
+      "T2.church_id",
+      "WHERE",
+      "T2.year",
+      "=",
+      "2015"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "church",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "church",
+      "as",
+      "t1",
+      "join",
+      "wedding",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "church_id",
+      "=",
+      "t2",
+      ".",
+      "church_id",
+      "where",
+      "t2",
+      ".",
+      "year",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie alle Kirchennamen mit Ausnahme derjenigen, die im Jahr 2015 eine Hochzeit hatten.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            2015.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT T1.name FROM church AS T1 JOIN wedding AS T2 ON T1.church_id  =  T2.church_id GROUP BY T1.church_id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "church",
+      "AS",
+      "T1",
+      "JOIN",
+      "wedding",
+      "AS",
+      "T2",
+      "ON",
+      "T1.church_id",
+      "=",
+      "T2.church_id",
+      "GROUP",
+      "BY",
+      "T1.church_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "church",
+      "as",
+      "t1",
+      "join",
+      "wedding",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "church_id",
+      "=",
+      "t2",
+      ".",
+      "church_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "church_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie alle Kirchennamen an, bei denen mindestens zwei Hochzeiten stattgefunden haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT T2.name FROM wedding AS T1 JOIN people AS T2 ON T1.female_id  =  T2.people_id WHERE T1.year  =  2016 AND T2.is_male  =  'F' AND T2.country  =  'Canada'",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "wedding",
+      "AS",
+      "T1",
+      "JOIN",
+      "people",
+      "AS",
+      "T2",
+      "ON",
+      "T1.female_id",
+      "=",
+      "T2.people_id",
+      "WHERE",
+      "T1.year",
+      "=",
+      "2016",
+      "AND",
+      "T2.is_male",
+      "=",
+      "'F",
+      "'",
+      "AND",
+      "T2.country",
+      "=",
+      "'Canada",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "wedding",
+      "as",
+      "t1",
+      "join",
+      "people",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "female_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t1",
+      ".",
+      "year",
+      "=",
+      "value",
+      "and",
+      "t2",
+      ".",
+      "is_male",
+      "=",
+      "value",
+      "and",
+      "t2",
+      ".",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie die Namen für alle Frauen aus \"Canada\", die im Jahr 2016 eine Hochzeit haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016.0,
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"F\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"Canada\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT count(*) FROM wedding WHERE YEAR  =  2016",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "wedding",
+      "WHERE",
+      "YEAR",
+      "=",
+      "2016"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "wedding",
+      "where",
+      "year",
+      "=",
+      "value"
+    ],
+    "question": "Wie viele Hochzeiten gibt es im Jahr 2016?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT T4.name FROM wedding AS T1 JOIN people AS T2 ON T1.male_id  =  T2.people_id JOIN people AS T3 ON T1.female_id  =  T3.people_id JOIN church AS T4 ON T4.church_id  =  T1.church_id WHERE T2.age  >  30 OR T3.age  >  30",
+    "query_toks": [
+      "SELECT",
+      "T4.name",
+      "FROM",
+      "wedding",
+      "AS",
+      "T1",
+      "JOIN",
+      "people",
+      "AS",
+      "T2",
+      "ON",
+      "T1.male_id",
+      "=",
+      "T2.people_id",
+      "JOIN",
+      "people",
+      "AS",
+      "T3",
+      "ON",
+      "T1.female_id",
+      "=",
+      "T3.people_id",
+      "JOIN",
+      "church",
+      "AS",
+      "T4",
+      "ON",
+      "T4.church_id",
+      "=",
+      "T1.church_id",
+      "WHERE",
+      "T2.age",
+      ">",
+      "30",
+      "OR",
+      "T3.age",
+      ">",
+      "30"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t4",
+      ".",
+      "name",
+      "from",
+      "wedding",
+      "as",
+      "t1",
+      "join",
+      "people",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "male_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "join",
+      "people",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "female_id",
+      "=",
+      "t3",
+      ".",
+      "people_id",
+      "join",
+      "church",
+      "as",
+      "t4",
+      "on",
+      "t4",
+      ".",
+      "church_id",
+      "=",
+      "t1",
+      ".",
+      "church_id",
+      "where",
+      "t2",
+      ".",
+      "age",
+      ">",
+      "value",
+      "or",
+      "t3",
+      ".",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "Zeigen Sie die Kirchennamen für die Hochzeiten aller Personen, die älter als 30 Jahre sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          30.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          30.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT country ,  count(*) FROM people GROUP BY country",
+    "query_toks": [
+      "SELECT",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "people",
+      "GROUP",
+      "BY",
+      "country"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "people",
+      "group",
+      "by",
+      "country"
+    ],
+    "question": "Zeigen Sie alle Länder und die Anzahl der Personen aus jedem Land an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "wedding",
+    "query": "SELECT COUNT (DISTINCT church_id) FROM wedding WHERE YEAR  =  2016",
+    "query_toks": [
+      "SELECT",
+      "COUNT",
+      "(",
+      "DISTINCT",
+      "church_id",
+      ")",
+      "FROM",
+      "wedding",
+      "WHERE",
+      "YEAR",
+      "=",
+      "2016"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "church_id",
+      ")",
+      "from",
+      "wedding",
+      "where",
+      "year",
+      "=",
+      "value"
+    ],
+    "question": "Wie viele Kirchen haben im Jahr 2016 eine Hochzeit?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2016.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

@@ -1,0 +1,2856 @@
+[
+  {
+    "db_id": "flight_company",
+    "query": "SELECT count(*) FROM flight WHERE velocity  >  200",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "flight",
+      "WHERE",
+      "velocity",
+      ">",
+      "200"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "flight",
+      "where",
+      "velocity",
+      ">",
+      "value"
+    ],
+    "question_spider": "How many flights have a velocity larger than 200?",
+    "question": "有多少航班的速度大于200？",
+    "question_cspider": "有多少航班的速度大于200？",
+    "Harold": "BLEU = 80.91, 92.9/84.6/75.0/72.7 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "多",
+      "少",
+      "个",
+      "航",
+      "班",
+      "的",
+      "速",
+      "度",
+      "大",
+      "于",
+      "2",
+      "0",
+      "0",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          200,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT vehicle_flight_number ,  date ,  pilot FROM flight ORDER BY altitude ASC",
+    "query_toks": [
+      "SELECT",
+      "vehicle_flight_number",
+      ",",
+      "date",
+      ",",
+      "pilot",
+      "FROM",
+      "flight",
+      "ORDER",
+      "BY",
+      "altitude",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "vehicle_flight_number",
+      ",",
+      "date",
+      ",",
+      "pilot",
+      "from",
+      "flight",
+      "order",
+      "by",
+      "altitude",
+      "asc"
+    ],
+    "question_spider": "List the vehicle flight number, date and pilot of all the flights, ordered by altitude.",
+    "question": "列出所有按高度排序的航班的车辆航班号、日期和飞行员。",
+    "question_cspider": "列出所有按高度排序的航班的车辆航班号、日期和飞行员。",
+    "Harold": "BLEU = 48.46, 81.5/61.5/44.0/25.0 (BP=1.000, ratio=1.038, hyp_len=27, ref_len=26)",
+    "question_toks": [
+      "列",
+      "出",
+      "所",
+      "有",
+      "航",
+      "班",
+      "的",
+      "飞",
+      "行",
+      "航",
+      "班",
+      "号",
+      "，",
+      "日",
+      "期",
+      "和",
+      "飞",
+      "行",
+      "员",
+      "，",
+      "并",
+      "按",
+      "高",
+      "度",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT id ,  country ,  city ,  name FROM airport ORDER BY name",
+    "query_toks": [
+      "SELECT",
+      "id",
+      ",",
+      "country",
+      ",",
+      "city",
+      ",",
+      "name",
+      "FROM",
+      "airport",
+      "ORDER",
+      "BY",
+      "name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "id",
+      ",",
+      "country",
+      ",",
+      "city",
+      ",",
+      "name",
+      "from",
+      "airport",
+      "order",
+      "by",
+      "name"
+    ],
+    "question_spider": "List the id, country, city and name of the airports ordered alphabetically by the name.",
+    "question": "按名称的字母顺序列出ID、国家、城市和机场的名称。",
+    "question_cspider": "按名称的字母顺序列出ID、国家、城市和机场的名称。",
+    "Harold": "BLEU = 23.28, 76.7/48.3/21.4/3.7 (BP=1.000, ratio=1.200, hyp_len=30, ref_len=25)",
+    "question_toks": [
+      "列",
+      "出",
+      "按",
+      "名",
+      "称",
+      "顺",
+      "序",
+      "按",
+      "字",
+      "母",
+      "顺",
+      "序",
+      "排",
+      "列",
+      "的",
+      "机",
+      "场",
+      "的",
+      "I",
+      "D",
+      "，",
+      "国",
+      "家",
+      "，",
+      "城",
+      "市",
+      "和",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT max(group_equity_shareholding) FROM operate_company",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "group_equity_shareholding",
+      ")",
+      "FROM",
+      "operate_company"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "group_equity_shareholding",
+      ")",
+      "from",
+      "operate_company"
+    ],
+    "question_spider": "What is maximum group equity shareholding of the companies?",
+    "question": "最大的集团股权的公司是什么？",
+    "question_cspider": "最大的集团股权的公司是什么？",
+    "Harold": "BLEU = 26.20, 84.6/41.7/18.2/10.0 (BP=0.926, ratio=0.929, hyp_len=13, ref_len=14)",
+    "question_toks": [
+      "公",
+      "司",
+      "的",
+      "最",
+      "大",
+      "集",
+      "团",
+      "股",
+      "权",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT avg(velocity) FROM flight WHERE pilot  =  'Thompson'",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "velocity",
+      ")",
+      "FROM",
+      "flight",
+      "WHERE",
+      "pilot",
+      "=",
+      "'Thompson",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "velocity",
+      ")",
+      "from",
+      "flight",
+      "where",
+      "pilot",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the velocity of the pilot named 'Thompson'?",
+    "question": "叫“Thompson”的飞行员的速度是多少？",
+    "question_cspider": "叫“Thompson”的飞行员的速度是多少？",
+    "Harold": "BLEU = 64.70, 72.2/64.7/62.5/60.0 (BP=1.000, ratio=1.125, hyp_len=18, ref_len=16)",
+    "question_toks": [
+      "名",
+      "为",
+      "“",
+      "汤",
+      "普",
+      "森",
+      "”",
+      "的",
+      "飞",
+      "行",
+      "员",
+      "的",
+      "速",
+      "度",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"Thompson\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T1.name ,  T1.type FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.type",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "type",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id"
+    ],
+    "question_spider": "What are the names and types of the companies that have ever operated a flight?",
+    "question": "曾经经营过航班的公司的名称和类型是什么？",
+    "question_cspider": "曾经经营过航班的公司的名称和类型是什么？",
+    "Harold": "BLEU = 87.39, 95.0/89.5/83.3/82.4 (BP=1.000, ratio=1.000, hyp_len=20, ref_len=20)",
+    "question_toks": [
+      "曾",
+      "经",
+      "运",
+      "营",
+      "过",
+      "航",
+      "班",
+      "的",
+      "公",
+      "司",
+      "的",
+      "名",
+      "称",
+      "和",
+      "类",
+      "型",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT name FROM airport WHERE country != 'Iceland'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "airport",
+      "WHERE",
+      "country",
+      "!",
+      "=",
+      "'Iceland",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "airport",
+      "where",
+      "country",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of the airports which are not in the country 'Iceland'?",
+    "question": "不在“Iceland”这个国家的机场名称是什么？",
+    "question_cspider": "不在“Iceland”这个国家的机场名称是什么？",
+    "Harold": "BLEU = 51.06, 77.3/61.9/45.0/31.6 (BP=1.000, ratio=1.158, hyp_len=22, ref_len=19)",
+    "question_toks": [
+      "不",
+      "在",
+      "“",
+      "冰",
+      "岛",
+      "”",
+      "国",
+      "家",
+      "/",
+      "地",
+      "区",
+      "中",
+      "的",
+      "机",
+      "场",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"Iceland\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT DISTINCT T1.type FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id WHERE T2.velocity  <  200",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.type",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "WHERE",
+      "T2.velocity",
+      "<",
+      "200"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "type",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "where",
+      "t2",
+      ".",
+      "velocity",
+      "<",
+      "value"
+    ],
+    "question_spider": "What are the distinct types of the companies that have operated any flights with velocity less than 200?",
+    "question": "运营速度小于200的公司有哪些独特的类型？",
+    "question_cspider": "运营速度小于200的公司有哪些独特的类型？",
+    "Harold": "BLEU = 54.41, 82.6/63.6/47.6/35.0 (BP=1.000, ratio=1.095, hyp_len=23, ref_len=21)",
+    "question_toks": [
+      "运",
+      "营",
+      "速",
+      "度",
+      "小",
+      "于",
+      "2",
+      "0",
+      "0",
+      "的",
+      "航",
+      "班",
+      "有",
+      "哪",
+      "些",
+      "不",
+      "同",
+      "类",
+      "型",
+      "的",
+      "公",
+      "司",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          200,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T1.id ,  T1.name FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id GROUP BY T1.id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "What are the ids and names of the companies that operated more than one flight?",
+    "question": "经营多个航班的公司的ID和名称是什么？",
+    "question_cspider": "经营多个航班的公司的ID和名称是什么？",
+    "Harold": "BLEU = 72.54, 81.0/75.0/68.4/66.7 (BP=1.000, ratio=1.105, hyp_len=21, ref_len=19)",
+    "question_toks": [
+      "经",
+      "营",
+      "超",
+      "过",
+      "一",
+      "次",
+      "航",
+      "班",
+      "的",
+      "公",
+      "司",
+      "的",
+      "I",
+      "D",
+      "和",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T1.id ,  T1.name ,  T1.IATA FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id GROUP BY T2.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      ",",
+      "T1.IATA",
+      "FROM",
+      "airport",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.airport_id",
+      "GROUP",
+      "BY",
+      "T2.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "iata",
+      "from",
+      "airport",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "airport_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the id, name and IATA code of the airport that had most number of flights?",
+    "question": "航班最多的机场的ID、名称和IATA代码是什么？",
+    "question_cspider": "航班最多的机场的ID、名称和IATA代码是什么？",
+    "Harold": "BLEU = 88.44, 95.8/91.3/86.4/81.0 (BP=1.000, ratio=1.000, hyp_len=24, ref_len=24)",
+    "question_toks": [
+      "航",
+      "班",
+      "最",
+      "多",
+      "的",
+      "机",
+      "场",
+      "的",
+      "I",
+      "D",
+      "，",
+      "名",
+      "称",
+      "和",
+      "I",
+      "A",
+      "T",
+      "A",
+      "代",
+      "码",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT DISTINCT T2.pilot FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id WHERE T1.country  =  'United States' OR T1.name  =  'Billund Airport'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.pilot",
+      "FROM",
+      "airport",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.airport_id",
+      "WHERE",
+      "T1.country",
+      "=",
+      "'United",
+      "States",
+      "'",
+      "OR",
+      "T1.name",
+      "=",
+      "'Billund",
+      "Airport",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "pilot",
+      "from",
+      "airport",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "airport_id",
+      "where",
+      "t1",
+      ".",
+      "country",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the different pilot names who had piloted a flight in the country 'United States' or in the airport named 'Billund Airport'?",
+    "question": "在“United States”或“Billund Airport”飞行的不同的飞行员的名字是什么？",
+    "question_cspider": "在“China”或“宝安机场”飞行的不同的飞行员的名字是什么？",
+    "Harold": "BLEU = 18.33, 52.6/27.0/13.9/5.7 (BP=1.000, ratio=1.357, hyp_len=38, ref_len=28)",
+    "question_toks": [
+      "在",
+      "“",
+      "美",
+      "国",
+      "”",
+      "国",
+      "家",
+      "或",
+      "名",
+      "为",
+      "“",
+      "比",
+      "隆",
+      "机",
+      "场",
+      "”",
+      "的",
+      "机",
+      "场",
+      "进",
+      "行",
+      "过",
+      "航",
+      "班",
+      "驾",
+      "驶",
+      "的",
+      "飞",
+      "行",
+      "员",
+      "姓",
+      "名",
+      "分",
+      "别",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"United States\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Billund Airport\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT TYPE ,  count(*) FROM operate_company GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "operate_company",
+      "GROUP",
+      "BY",
+      "TYPE",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "operate_company",
+      "group",
+      "by",
+      "type",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the most common company type, and how many are there?",
+    "question": "什么是最常见的公司类型，每种有多少？",
+    "question_cspider": "什么是最常见的公司类型，每种有多少？",
+    "Harold": "BLEU = 74.18, 100.0/81.2/73.3/64.3 (BP=0.943, ratio=0.944, hyp_len=17, ref_len=18)",
+    "question_toks": [
+      "什",
+      "么",
+      "是",
+      "最",
+      "常",
+      "见",
+      "的",
+      "公",
+      "司",
+      "类",
+      "型",
+      "，",
+      "有",
+      "多",
+      "少",
+      "种",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT count(*) FROM airport WHERE id NOT IN ( SELECT airport_id FROM flight WHERE pilot  =  'Thompson' );",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "airport",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "airport_id",
+      "FROM",
+      "flight",
+      "WHERE",
+      "pilot",
+      "=",
+      "'Thompson",
+      "'",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "airport",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "airport_id",
+      "from",
+      "flight",
+      "where",
+      "pilot",
+      "=",
+      "value",
+      ")"
+    ],
+    "question_spider": "How many airports haven't the pilot 'Thompson' driven an aircraft?",
+    "question": "有多少机场没有飞行员“Thompson”驾驶的飞机？",
+    "question_cspider": "有多少机场没有飞行员“Thompson”驾驶的飞机？",
+    "Harold": "BLEU = 21.99, 66.7/40.0/15.8/5.6 (BP=1.000, ratio=1.050, hyp_len=21, ref_len=20)",
+    "question_toks": [
+      "飞",
+      "行",
+      "员",
+      "“",
+      "汤",
+      "普",
+      "森",
+      "”",
+      "还",
+      "没",
+      "有",
+      "几",
+      "个",
+      "机",
+      "场",
+      "驾",
+      "驶",
+      "过",
+      "飞",
+      "机",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      19,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    16,
+                    false
+                  ],
+                  null
+                ],
+                "\"Thompson\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T2.pilot FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id WHERE T1.principal_activities  =  'Cargo' INTERSECT SELECT T2.pilot FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id WHERE T1.principal_activities  =  'Catering services'",
+    "query_toks": [
+      "SELECT",
+      "T2.pilot",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "WHERE",
+      "T1.principal_activities",
+      "=",
+      "'Cargo",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T2.pilot",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "WHERE",
+      "T1.principal_activities",
+      "=",
+      "'Catering",
+      "services",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "pilot",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "where",
+      "t1",
+      ".",
+      "principal_activities",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "pilot",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "where",
+      "t1",
+      ".",
+      "principal_activities",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the name of the pilots who have flied for both a company that mainly provide 'Cargo' services and a company that runs 'Catering services' activities.",
+    "question": "列出主要提供“Cargo”服务的公司以及从事“Catering services”活动的公司的飞行员的名字。",
+    "question_cspider": "列出主要提供“Cargo”服务的公司以及从事“Catering services”活动的公司的飞行员的名字。",
+    "Harold": "BLEU = 63.10, 80.0/66.7/57.9/51.4 (BP=1.000, ratio=1.053, hyp_len=40, ref_len=38)",
+    "question_toks": [
+      "列",
+      "出",
+      "已",
+      "逃",
+      "离",
+      "主",
+      "要",
+      "提",
+      "供",
+      "“",
+      "货",
+      "运",
+      "”",
+      "服",
+      "务",
+      "的",
+      "公",
+      "司",
+      "和",
+      "开",
+      "展",
+      "“",
+      "餐",
+      "饮",
+      "服",
+      "务",
+      "”",
+      "活",
+      "动",
+      "的",
+      "公",
+      "司",
+      "的",
+      "飞",
+      "行",
+      "员",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"Cargo\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  16,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            "\"Catering services\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT name FROM airport WHERE name LIKE '%international%'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "airport",
+      "WHERE",
+      "name",
+      "LIKE",
+      "'",
+      "%",
+      "international",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "airport",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question_spider": "Which of the airport names contains the word 'international'?",
+    "question": "哪些机场名称包含“international”一词？",
+    "question_cspider": "哪些机场名称包含“international”一词？",
+    "Harold": "BLEU = 86.66, 93.3/85.7/84.6/83.3 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "哪",
+      "个",
+      "机",
+      "场",
+      "名",
+      "称",
+      "包",
+      "含",
+      "“",
+      "国",
+      "际",
+      "”",
+      "一",
+      "词",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"%international%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T3.id ,  count(*) FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id JOIN airport AS T3 ON T2.airport_id  =  T3.id GROUP BY T3.id",
+    "query_toks": [
+      "SELECT",
+      "T3.id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "JOIN",
+      "airport",
+      "AS",
+      "T3",
+      "ON",
+      "T2.airport_id",
+      "=",
+      "T3.id",
+      "GROUP",
+      "BY",
+      "T3.id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "join",
+      "airport",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "airport_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "id"
+    ],
+    "question_spider": "How many companies operates airlines in each airport?",
+    "question": "每个机场有多少家公司经营航空公司？",
+    "question_cspider": "每个机场有多少家公司经营航空公司？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "每",
+      "个",
+      "机",
+      "场",
+      "有",
+      "多",
+      "少",
+      "家",
+      "公",
+      "司",
+      "经",
+      "营",
+      "航",
+      "空",
+      "公",
+      "司",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT count(*) ,  country FROM airport GROUP BY country",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "country",
+      "FROM",
+      "airport",
+      "GROUP",
+      "BY",
+      "country"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "country",
+      "from",
+      "airport",
+      "group",
+      "by",
+      "country"
+    ],
+    "question_spider": "how many airports are there in each country?",
+    "question": "每个国家有多少个机场？",
+    "question_cspider": "每个国家有多少个机场？",
+    "Harold": "BLEU = 59.54, 90.0/77.8/62.5/42.9 (BP=0.905, ratio=0.909, hyp_len=10, ref_len=11)",
+    "question_toks": [
+      "每",
+      "个",
+      "国",
+      "家",
+      "有",
+      "几",
+      "个",
+      "机",
+      "场",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT country FROM airport GROUP BY country HAVING count(*)  >  2",
+    "query_toks": [
+      "SELECT",
+      "country",
+      "FROM",
+      "airport",
+      "GROUP",
+      "BY",
+      "country",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "airport",
+      "group",
+      "by",
+      "country",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "which countries have more than 2 airports?",
+    "question": "哪些国家拥有超过2个机场？",
+    "question_cspider": "哪些国家拥有超过2个机场？",
+    "Harold": "BLEU = 32.00, 76.9/50.0/27.3/10.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "哪",
+      "些",
+      "国",
+      "家",
+      "有",
+      "2",
+      "个",
+      "以",
+      "上",
+      "的",
+      "机",
+      "场",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT pilot FROM flight GROUP BY pilot ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "pilot",
+      "FROM",
+      "flight",
+      "GROUP",
+      "BY",
+      "pilot",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "pilot",
+      "from",
+      "flight",
+      "group",
+      "by",
+      "pilot",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "which pilot is in charge of the most number of flights?",
+    "question": "哪个飞行员负责最多的航班？",
+    "question_cspider": "哪个飞行员负责最多的航班？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "哪",
+      "个",
+      "飞",
+      "行",
+      "员",
+      "负",
+      "责",
+      "最",
+      "多",
+      "的",
+      "航",
+      "班",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

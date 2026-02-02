@@ -1,0 +1,2426 @@
+[
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT sum(num_of_component) FROM furniture",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "num_of_component",
+      ")",
+      "FROM",
+      "furniture"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "num_of_component",
+      ")",
+      "from",
+      "furniture"
+    ],
+    "question_spider": "How many furniture components are there in total?",
+    "question": "总共有多少家具部件？",
+    "question_cspider": "总共有多少家具部件？",
+    "Harold": "BLEU = 44.97, 81.8/60.0/33.3/25.0 (BP=1.000, ratio=1.100, hyp_len=11, ref_len=10)",
+    "question_toks": [
+      "总",
+      "共",
+      "有",
+      "多",
+      "少",
+      "个",
+      "家",
+      "具",
+      "零",
+      "件",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT name ,  furniture_id FROM furniture ORDER BY market_rate DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "furniture_id",
+      "FROM",
+      "furniture",
+      "ORDER",
+      "BY",
+      "market_rate",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "furniture_id",
+      "from",
+      "furniture",
+      "order",
+      "by",
+      "market_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Return the name and id of the furniture with the highest market rate.",
+    "question": "以最高的市场价格返回家具的名称和ID。",
+    "question_cspider": "以最高的市场价格返回家具的名称和ID。",
+    "Harold": "BLEU = 48.15, 88.9/64.7/43.8/26.7 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "返",
+      "回",
+      "市",
+      "场",
+      "价",
+      "格",
+      "最",
+      "高",
+      "的",
+      "家",
+      "具",
+      "的",
+      "名",
+      "称",
+      "和",
+      "编",
+      "号",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT sum(market_rate) FROM furniture ORDER BY market_rate DESC LIMIT 2",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "market_rate",
+      ")",
+      "FROM",
+      "furniture",
+      "ORDER",
+      "BY",
+      "market_rate",
+      "DESC",
+      "LIMIT",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "market_rate",
+      ")",
+      "from",
+      "furniture",
+      "order",
+      "by",
+      "market_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "find the total market rate of the furnitures that have the top 2 market shares.",
+    "question": "找到市场份额前2的家具的总市场价格。",
+    "question_cspider": "找到市场份额前2的家具的总市场价格。",
+    "Harold": "BLEU = 59.23, 81.0/65.0/52.6/44.4 (BP=1.000, ratio=1.167, hyp_len=21, ref_len=18)",
+    "question_toks": [
+      "找",
+      "出",
+      "拥",
+      "有",
+      "前",
+      "2",
+      "个",
+      "市",
+      "场",
+      "份",
+      "额",
+      "的",
+      "家",
+      "具",
+      "的",
+      "总",
+      "市",
+      "场",
+      "价",
+      "格",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 2,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT Num_of_Component ,  name FROM furniture WHERE Num_of_Component  >  10",
+    "query_toks": [
+      "SELECT",
+      "Num_of_Component",
+      ",",
+      "name",
+      "FROM",
+      "furniture",
+      "WHERE",
+      "Num_of_Component",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "num_of_component",
+      ",",
+      "name",
+      "from",
+      "furniture",
+      "where",
+      "num_of_component",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the component amounts and names of all furnitures that have more than 10 components.",
+    "question": "查找有超过10个组件的所有家具的组件数量和名称。",
+    "question_cspider": "查找有超过10个组件的所有家具的组件数量和名称。",
+    "Harold": "BLEU = 70.19, 84.0/75.0/65.2/59.1 (BP=1.000, ratio=1.042, hyp_len=25, ref_len=24)",
+    "question_toks": [
+      "查",
+      "找",
+      "包",
+      "含",
+      "1",
+      "0",
+      "个",
+      "以",
+      "上",
+      "组",
+      "件",
+      "的",
+      "所",
+      "有",
+      "家",
+      "具",
+      "的",
+      "组",
+      "件",
+      "数",
+      "量",
+      "和",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          10,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT name ,  Num_of_Component FROM furniture ORDER BY market_rate LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "Num_of_Component",
+      "FROM",
+      "furniture",
+      "ORDER",
+      "BY",
+      "market_rate",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "num_of_component",
+      "from",
+      "furniture",
+      "order",
+      "by",
+      "market_rate",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name and component amount of the least popular furniture.",
+    "question": "找出最不受欢迎的家具的名称和部件数量。",
+    "question_cspider": "找出最不受欢迎的家具的名称和部件数量。",
+    "Harold": "BLEU = 58.02, 83.3/64.7/56.2/46.7 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "最",
+      "受",
+      "欢",
+      "迎",
+      "的",
+      "家",
+      "具",
+      "的",
+      "名",
+      "称",
+      "和",
+      "组",
+      "成",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT t1.name FROM furniture AS t1 JOIN furniture_manufacte AS t2 ON t1.Furniture_ID  =  t2.Furniture_ID WHERE t2.Price_in_Dollar  <  (SELECT max(Price_in_Dollar) FROM furniture_manufacte)",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "furniture",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Furniture_ID",
+      "=",
+      "t2.Furniture_ID",
+      "WHERE",
+      "t2.Price_in_Dollar",
+      "<",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "Price_in_Dollar",
+      ")",
+      "FROM",
+      "furniture_manufacte",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "furniture",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "furniture_id",
+      "=",
+      "t2",
+      ".",
+      "furniture_id",
+      "where",
+      "t2",
+      ".",
+      "price_in_dollar",
+      "<",
+      "(",
+      "select",
+      "max",
+      "(",
+      "price_in_dollar",
+      ")",
+      "from",
+      "furniture_manufacte",
+      ")"
+    ],
+    "question_spider": "Find the names of furnitures whose prices are lower than the highest price.",
+    "question": "查找价格低于最高价格的家具名称。",
+    "question_cspider": "查找价格低于最高价格的家具名称。",
+    "Harold": "BLEU = 82.82, 94.1/87.5/80.0/71.4 (BP=1.000, ratio=1.062, hyp_len=17, ref_len=16)",
+    "question_toks": [
+      "查",
+      "找",
+      "价",
+      "格",
+      "低",
+      "于",
+      "最",
+      "高",
+      "价",
+      "格",
+      "的",
+      "家",
+      "具",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  1,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT open_year ,  name FROM manufacturer ORDER BY num_of_shops DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "open_year",
+      ",",
+      "name",
+      "FROM",
+      "manufacturer",
+      "ORDER",
+      "BY",
+      "num_of_shops",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "open_year",
+      ",",
+      "name",
+      "from",
+      "manufacturer",
+      "order",
+      "by",
+      "num_of_shops",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Which manufacturer has the most number of shops? List its name and year of opening.",
+    "question": "哪个制造商的商店最多？列出其名称和开业年份。",
+    "question_cspider": "哪个制造商的商店最多？列出其名称和开业年份。",
+    "Harold": "BLEU = 83.96, 91.7/87.0/81.8/76.2 (BP=1.000, ratio=1.091, hyp_len=24, ref_len=22)",
+    "question_toks": [
+      "哪",
+      "个",
+      "制",
+      "造",
+      "商",
+      "的",
+      "商",
+      "店",
+      "数",
+      "量",
+      "最",
+      "多",
+      "？",
+      "列",
+      "出",
+      "其",
+      "名",
+      "称",
+      "和",
+      "开",
+      "业",
+      "年",
+      "份",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT avg(Num_of_Factories) FROM manufacturer WHERE num_of_shops  >  20",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Num_of_Factories",
+      ")",
+      "FROM",
+      "manufacturer",
+      "WHERE",
+      "num_of_shops",
+      ">",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "num_of_factories",
+      ")",
+      "from",
+      "manufacturer",
+      "where",
+      "num_of_shops",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the average number of factories for the manufacturers that have more than 20 shops.",
+    "question": "找出拥有超过20个商店的制造商的平均工厂数量。",
+    "question_cspider": "找出拥有超过20个商店的制造商的平均工厂数量。",
+    "Harold": "BLEU = 65.01, 86.4/71.4/60.0/57.9 (BP=0.956, ratio=0.957, hyp_len=22, ref_len=23)",
+    "question_toks": [
+      "查",
+      "找",
+      "拥",
+      "有",
+      "2",
+      "0",
+      "多",
+      "家",
+      "商",
+      "店",
+      "的",
+      "制",
+      "造",
+      "商",
+      "的",
+      "平",
+      "均",
+      "工",
+      "厂",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          20,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT name ,  manufacturer_id FROM manufacturer ORDER BY open_year",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "manufacturer_id",
+      "FROM",
+      "manufacturer",
+      "ORDER",
+      "BY",
+      "open_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "manufacturer_id",
+      "from",
+      "manufacturer",
+      "order",
+      "by",
+      "open_year"
+    ],
+    "question_spider": "List all manufacturer names and ids ordered by their opening year.",
+    "question": "列出其开张年度所订购的所有制造商名称和ID。",
+    "question_cspider": "列出其开张年度所订购的所有制造商名称和ID。",
+    "Harold": "BLEU = 46.41, 69.6/50.0/38.1/35.0 (BP=1.000, ratio=1.045, hyp_len=23, ref_len=22)",
+    "question_toks": [
+      "列",
+      "出",
+      "所",
+      "有",
+      "制",
+      "造",
+      "商",
+      "名",
+      "称",
+      "和",
+      "I",
+      "D",
+      "（",
+      "按",
+      "其",
+      "开",
+      "业",
+      "年",
+      "份",
+      "排",
+      "序",
+      "）",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT name ,  open_year FROM manufacturer WHERE num_of_shops  >  10 OR Num_of_Factories  <  10",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "open_year",
+      "FROM",
+      "manufacturer",
+      "WHERE",
+      "num_of_shops",
+      ">",
+      "10",
+      "OR",
+      "Num_of_Factories",
+      "<",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "open_year",
+      "from",
+      "manufacturer",
+      "where",
+      "num_of_shops",
+      ">",
+      "value",
+      "or",
+      "num_of_factories",
+      "<",
+      "value"
+    ],
+    "question_spider": "Give me the name and year of opening of the manufacturers that have either less than 10 factories or more than 10 shops.",
+    "question": "请告诉我工厂少于10家或商店多于10家的制造商的名称和开业年份。",
+    "question_cspider": "请告诉我工厂少于10家或商店多于10家的制造商的名称和开业年份。",
+    "Harold": "BLEU = 45.34, 71.0/50.0/37.9/35.7 (BP=0.968, ratio=0.969, hyp_len=31, ref_len=32)",
+    "question_toks": [
+      "请",
+      "给",
+      "我",
+      "提",
+      "供",
+      "少",
+      "于",
+      "十",
+      "个",
+      "工",
+      "厂",
+      "或",
+      "十",
+      "个",
+      "以",
+      "上",
+      "商",
+      "店",
+      "的",
+      "制",
+      "造",
+      "商",
+      "的",
+      "名",
+      "称",
+      "和",
+      "开",
+      "业",
+      "年",
+      "份",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          10,
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          10,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT max(num_of_shops) ,  avg(Num_of_Factories) FROM manufacturer WHERE open_year  <  1990",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "num_of_shops",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "Num_of_Factories",
+      ")",
+      "FROM",
+      "manufacturer",
+      "WHERE",
+      "open_year",
+      "<",
+      "1990"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "num_of_shops",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "num_of_factories",
+      ")",
+      "from",
+      "manufacturer",
+      "where",
+      "open_year",
+      "<",
+      "value"
+    ],
+    "question_spider": "what is the average number of factories and maximum number of shops for manufacturers that opened before 1990.",
+    "question": "工厂的平均数量和1990年前开业的制造商的最大商店数量是多少？",
+    "question_cspider": "工厂的平均数量和1990年前开业的制造商的最大商店数量是多少？",
+    "Harold": "BLEU = 71.69, 96.8/83.3/65.5/50.0 (BP=1.000, ratio=1.000, hyp_len=31, ref_len=31)",
+    "question_toks": [
+      "1",
+      "9",
+      "9",
+      "0",
+      "年",
+      "之",
+      "前",
+      "开",
+      "业",
+      "的",
+      "制",
+      "造",
+      "商",
+      "的",
+      "平",
+      "均",
+      "工",
+      "厂",
+      "数",
+      "量",
+      "和",
+      "最",
+      "大",
+      "商",
+      "店",
+      "数",
+      "量",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          1990,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT t1.manufacturer_id ,  t1.num_of_shops FROM manufacturer AS t1 JOIN furniture_manufacte AS t2 ON t1.manufacturer_id  =  t2.manufacturer_id ORDER BY t2.Price_in_Dollar DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.manufacturer_id",
+      ",",
+      "t1.num_of_shops",
+      "FROM",
+      "manufacturer",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.manufacturer_id",
+      "=",
+      "t2.manufacturer_id",
+      "ORDER",
+      "BY",
+      "t2.Price_in_Dollar",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "manufacturer_id",
+      ",",
+      "t1",
+      ".",
+      "num_of_shops",
+      "from",
+      "manufacturer",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "manufacturer_id",
+      "=",
+      "t2",
+      ".",
+      "manufacturer_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "price_in_dollar",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the id and number of shops for the company that produces the most expensive furniture.",
+    "question": "查找生产最贵家具的公司的id和商店的数量。",
+    "question_cspider": "查找生产最贵家具的公司的id和商店的数量。",
+    "Harold": "BLEU = 47.00, 69.6/54.5/42.9/30.0 (BP=1.000, ratio=1.095, hyp_len=23, ref_len=21)",
+    "question_toks": [
+      "查",
+      "找",
+      "生",
+      "产",
+      "最",
+      "昂",
+      "贵",
+      "家",
+      "具",
+      "的",
+      "公",
+      "司",
+      "的",
+      "商",
+      "店",
+      "编",
+      "号",
+      "和",
+      "商",
+      "店",
+      "编",
+      "号",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT count(*) ,  t1.name FROM manufacturer AS t1 JOIN furniture_manufacte AS t2 ON t1.manufacturer_id  =  t2.manufacturer_id GROUP BY t1.manufacturer_id",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1.name",
+      "FROM",
+      "manufacturer",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.manufacturer_id",
+      "=",
+      "t2.manufacturer_id",
+      "GROUP",
+      "BY",
+      "t1.manufacturer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "manufacturer",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "manufacturer_id",
+      "=",
+      "t2",
+      ".",
+      "manufacturer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "manufacturer_id"
+    ],
+    "question_spider": "Find the number of funiture types produced by each manufacturer as well as the company names.",
+    "question": "查找每个制造商生产的产品类型以及公司名称。",
+    "question_cspider": "查找每个制造商生产的产品类型以及公司名称。",
+    "Harold": "BLEU = 67.25, 82.6/72.7/61.9/55.0 (BP=1.000, ratio=1.095, hyp_len=23, ref_len=21)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "制",
+      "造",
+      "商",
+      "生",
+      "产",
+      "的",
+      "家",
+      "具",
+      "类",
+      "型",
+      "数",
+      "量",
+      "以",
+      "及",
+      "公",
+      "司",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT t1.name ,  t2.price_in_dollar FROM furniture AS t1 JOIN furniture_manufacte AS t2 ON t1.Furniture_ID  =  t2.Furniture_ID",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t2.price_in_dollar",
+      "FROM",
+      "furniture",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Furniture_ID",
+      "=",
+      "t2.Furniture_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "price_in_dollar",
+      "from",
+      "furniture",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "furniture_id",
+      "=",
+      "t2",
+      ".",
+      "furniture_id"
+    ],
+    "question_spider": "Give me the names and prices of furnitures which some companies are manufacturing.",
+    "question": "请告诉我一些公司制造的家具的名称和价格。",
+    "question_cspider": "请告诉我一些公司制造的家具的名称和价格。",
+    "Harold": "BLEU = 61.53, 76.2/65.0/57.9/50.0 (BP=1.000, ratio=1.050, hyp_len=21, ref_len=20)",
+    "question_toks": [
+      "请",
+      "给",
+      "我",
+      "一",
+      "些",
+      "公",
+      "司",
+      "正",
+      "在",
+      "生",
+      "产",
+      "的",
+      "家",
+      "具",
+      "的",
+      "名",
+      "称",
+      "和",
+      "价",
+      "格",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT Market_Rate ,  name FROM furniture WHERE Furniture_ID NOT IN (SELECT Furniture_ID FROM furniture_manufacte)",
+    "query_toks": [
+      "SELECT",
+      "Market_Rate",
+      ",",
+      "name",
+      "FROM",
+      "furniture",
+      "WHERE",
+      "Furniture_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Furniture_ID",
+      "FROM",
+      "furniture_manufacte",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "market_rate",
+      ",",
+      "name",
+      "from",
+      "furniture",
+      "where",
+      "furniture_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "furniture_id",
+      "from",
+      "furniture_manufacte",
+      ")"
+    ],
+    "question_spider": "Find the market shares and names of furnitures which no any company is producing in our records.",
+    "question": "查找我们的记录里没有公司正在生产的家具的市场份额和名称。",
+    "question_cspider": "查找我们的记录里没有公司正在生产的家具的市场份额和名称。",
+    "Harold": "BLEU = 64.94, 89.7/71.4/55.6/50.0 (BP=1.000, ratio=1.036, hyp_len=29, ref_len=28)",
+    "question_toks": [
+      "在",
+      "我",
+      "们",
+      "的",
+      "记",
+      "录",
+      "中",
+      "查",
+      "找",
+      "没",
+      "有",
+      "任",
+      "何",
+      "公",
+      "司",
+      "生",
+      "产",
+      "的",
+      "家",
+      "具",
+      "的",
+      "市",
+      "场",
+      "份",
+      "额",
+      "和",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT t3.name FROM furniture AS t1 JOIN furniture_manufacte AS t2 ON t1.Furniture_ID  =  t2.Furniture_ID JOIN manufacturer AS t3 ON t2.manufacturer_id  =  t3.manufacturer_id WHERE t1.num_of_component  <  6 INTERSECT SELECT t3.name FROM furniture AS t1 JOIN furniture_manufacte AS t2 ON t1.Furniture_ID  =  t2.Furniture_ID JOIN manufacturer AS t3 ON t2.manufacturer_id  =  t3.manufacturer_id WHERE t1.num_of_component  >  10",
+    "query_toks": [
+      "SELECT",
+      "t3.name",
+      "FROM",
+      "furniture",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Furniture_ID",
+      "=",
+      "t2.Furniture_ID",
+      "JOIN",
+      "manufacturer",
+      "AS",
+      "t3",
+      "ON",
+      "t2.manufacturer_id",
+      "=",
+      "t3.manufacturer_id",
+      "WHERE",
+      "t1.num_of_component",
+      "<",
+      "6",
+      "INTERSECT",
+      "SELECT",
+      "t3.name",
+      "FROM",
+      "furniture",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Furniture_ID",
+      "=",
+      "t2.Furniture_ID",
+      "JOIN",
+      "manufacturer",
+      "AS",
+      "t3",
+      "ON",
+      "t2.manufacturer_id",
+      "=",
+      "t3.manufacturer_id",
+      "WHERE",
+      "t1.num_of_component",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "furniture",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "furniture_id",
+      "=",
+      "t2",
+      ".",
+      "furniture_id",
+      "join",
+      "manufacturer",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "manufacturer_id",
+      "=",
+      "t3",
+      ".",
+      "manufacturer_id",
+      "where",
+      "t1",
+      ".",
+      "num_of_component",
+      "<",
+      "value",
+      "intersect",
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "furniture",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "furniture_id",
+      "=",
+      "t2",
+      ".",
+      "furniture_id",
+      "join",
+      "manufacturer",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "manufacturer_id",
+      "=",
+      "t3",
+      ".",
+      "manufacturer_id",
+      "where",
+      "t1",
+      ".",
+      "num_of_component",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the name of the company that produces both furnitures with less than 6 components and furnitures with more than 10 components.",
+    "question": "请查找生产的家具的部件小于6和多于10的公司的名称。",
+    "question_cspider": "请查找生产的家具的部件小于6和多于10的公司的名称。",
+    "Harold": "BLEU = 19.55, 65.6/38.7/16.7/3.4 (BP=1.000, ratio=1.231, hyp_len=32, ref_len=26)",
+    "question_toks": [
+      "查",
+      "找",
+      "同",
+      "时",
+      "生",
+      "产",
+      "少",
+      "于",
+      "6",
+      "个",
+      "组",
+      "件",
+      "的",
+      "家",
+      "具",
+      "和",
+      "少",
+      "于",
+      "1",
+      "0",
+      "个",
+      "组",
+      "件",
+      "的",
+      "家",
+      "具",
+      "的",
+      "公",
+      "司",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          6,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            10,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  }
+]

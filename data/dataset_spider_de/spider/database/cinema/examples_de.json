@@ -1,0 +1,3152 @@
+[
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema EXCEPT SELECT LOCATION FROM cinema WHERE capacity  >  800",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "EXCEPT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "800"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "except",
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value"
+    ],
+    "question": "Zeigen Sie alle Orte an, an denen kein Kino eine Kapazität von mehr als 800 hat.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            800.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE openning_year  =  2010 INTERSECT SELECT LOCATION FROM cinema WHERE openning_year  =  2011",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      "=",
+      "2010",
+      "INTERSECT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      "=",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie alle Orte an, an denen einige Kinos sowohl im Jahr 2010 als auch im Jahr 2011 eröffnet wurden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            2011.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema"
+    ],
+    "question": "Wie viele Kinos haben wir?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema"
+    ],
+    "question": "Zählen Sie die Anzahl der Kinos.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  openning_year ,  capacity FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "openning_year",
+      ",",
+      "capacity",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "openning_year",
+      ",",
+      "capacity",
+      "from",
+      "cinema"
+    ],
+    "question": "Showname, Eröffnungsjahr und Kapazität für jedes Kino.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  LOCATION FROM cinema WHERE capacity  >  (SELECT avg(capacity) FROM cinema)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "cinema",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "cinema",
+      ")"
+    ],
+    "question": "Zeigen Sie den Namen und den Ort des Kinos für Kinos mit überdurchschnittlicher Kapazität an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT LOCATION FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "cinema"
+    ],
+    "question": "Was sind all die Orte mit einem Kino?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT LOCATION FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "cinema"
+    ],
+    "question": "Finden Sie die verschiedenen Orte, an denen es ein Kino gibt.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  openning_year FROM cinema ORDER BY openning_year DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "openning_year",
+      "FROM",
+      "cinema",
+      "ORDER",
+      "BY",
+      "openning_year",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "openning_year",
+      "from",
+      "cinema",
+      "order",
+      "by",
+      "openning_year",
+      "desc"
+    ],
+    "question": "Zeigen Sie alle Kinonamen und Eröffnungsjahre in absteigender Reihenfolge des Eröffnungsjahres an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  LOCATION FROM cinema ORDER BY capacity DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "ORDER",
+      "BY",
+      "capacity",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "cinema",
+      "order",
+      "by",
+      "capacity",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie heißt das Kino mit der größten Kapazität?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT avg(capacity) ,  min(capacity) ,  max(capacity) FROM cinema WHERE openning_year  >=  2011",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "min",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "max",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      ">",
+      "=",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "min",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "max",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie die durchschnittliche, minimale und maximale Kapazität aller im Jahr 2011 oder später eröffneten Kinos an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2011.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION ,  count(*) FROM cinema GROUP BY LOCATION",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema",
+      "GROUP",
+      "BY",
+      "LOCATION"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema",
+      "group",
+      "by",
+      "location"
+    ],
+    "question": "Zeigen Sie jeden Ort und die Anzahl der Kinos dort an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE openning_year  >=  2010 GROUP BY LOCATION ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      ">",
+      "=",
+      "2010",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      ">",
+      "=",
+      "value",
+      "group",
+      "by",
+      "location",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Was ist der Ort mit den meisten Kinos, die im Jahr 2010 oder später eröffnet wurden?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie alle Standorte mit mindestens zwei Kinos mit einer Kapazität über 300 an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Welche Standorte haben 2 oder mehr Kinos mit einer Kapazität von über 300?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Zeigen Sie den Titel und den Regisseur für alle Filme.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Was sind der Titel und der Regisseur eines jeden Films?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Zeige alle Regisseure.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Wer sind alle Regisseure?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT directed_by ,  count(*) FROM film GROUP BY directed_by",
+    "query_toks": [
+      "SELECT",
+      "directed_by",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "GROUP",
+      "BY",
+      "directed_by"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "directed_by",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "group",
+      "by",
+      "directed_by"
+    ],
+    "question": "Listen Sie alle Regisseure zusammen mit der Anzahl der Filme auf, die von jedem Regisseur gedreht wurden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.name ,  sum(T1.show_times_per_day) FROM schedule AS T1 JOIN cinema AS T2 ON T1.cinema_id  =  T2.cinema_id GROUP BY T1.cinema_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "sum",
+      "(",
+      "T1.show_times_per_day",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "cinema",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cinema_id",
+      "=",
+      "T2.cinema_id",
+      "GROUP",
+      "BY",
+      "T1.cinema_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "sum",
+      "(",
+      "t1",
+      ".",
+      "show_times_per_day",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "cinema",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cinema_id",
+      "=",
+      "t2",
+      ".",
+      "cinema_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "cinema_id"
+    ],
+    "question": "Was ist die Gesamtzahl der Showzeiten pro Datum für jedes Kino?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.title ,  max(T1.price) FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "max",
+      "(",
+      "T1.price",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "price",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id"
+    ],
+    "question": "Was sind der Titel und der Höchstpreis für jeden Film?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.title ,  max(T1.price) FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "max",
+      "(",
+      "T1.price",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "price",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id"
+    ],
+    "question": "Gib mir den Titel und den höchsten Preis für jeden Film.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T3.name ,  T2.title ,  T1.date ,  T1.price FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id JOIN cinema AS T3 ON T1.cinema_id  =  T3.cinema_id",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T2.title",
+      ",",
+      "T1.date",
+      ",",
+      "T1.price",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "JOIN",
+      "cinema",
+      "AS",
+      "T3",
+      "ON",
+      "T1.cinema_id",
+      "=",
+      "T3.cinema_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "t1",
+      ".",
+      "date",
+      ",",
+      "t1",
+      ".",
+      "price",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "join",
+      "cinema",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "cinema_id",
+      "=",
+      "t3",
+      ".",
+      "cinema_id"
+    ],
+    "question": "Zeigen Sie den Kinonamen, den Filmtitel, das Datum und den Preis für jede Aufnahme im Zeitplan an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film WHERE film_id NOT IN (SELECT film_id FROM schedule)",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film",
+      "WHERE",
+      "film_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "film_id",
+      "FROM",
+      "schedule",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film",
+      "where",
+      "film_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "film_id",
+      "from",
+      "schedule",
+      ")"
+    ],
+    "question": "Was sind der Titel und der Regisseur der Filme ohne Zeitplan?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.directed_by FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T2.directed_by ORDER BY sum(T1.show_times_per_day) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.directed_by",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T2.directed_by",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "T1.show_times_per_day",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "directed_by",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "directed_by",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "t1",
+      ".",
+      "show_times_per_day",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Showdirektor mit der größten Anzahl von Showzeiten insgesamt.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              4,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Suchen Sie nach Standorten mit mehr als einem Kino mit einer Kapazität von mehr als 300 Personen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "An welchen Orten gibt es mehr als ein Kino mit einer Kapazität von über 300?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "WHERE",
+      "title",
+      "LIKE",
+      "``",
+      "%",
+      "Dummy",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "where",
+      "title",
+      "like",
+      "value"
+    ],
+    "question": "Wie viele Filme haben das Wort \"Dummy\" in ihren Titeln?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Dummy%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "WHERE",
+      "title",
+      "LIKE",
+      "``",
+      "%",
+      "Dummy",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "where",
+      "title",
+      "like",
+      "value"
+    ],
+    "question": "Zählen Sie die Anzahl der Filme, deren Titel das Wort \"Dummy\" enthält.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Dummy%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

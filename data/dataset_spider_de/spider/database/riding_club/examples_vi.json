@@ -1,0 +1,2340 @@
+[
+  {
+    "db_id": "riding_club",
+    "query": "SELECT count(*) FROM player",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "player"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "player"
+    ],
+    "question": "Có bao nhiêu người chơi ?",
+    "question_toks": [
+      "How",
+      "many",
+      "players",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Player_name FROM player ORDER BY Votes ASC",
+    "query_toks": [
+      "SELECT",
+      "Player_name",
+      "FROM",
+      "player",
+      "ORDER",
+      "BY",
+      "Votes",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player_name",
+      "from",
+      "player",
+      "order",
+      "by",
+      "votes",
+      "asc"
+    ],
+    "question": "Liệt kê tên của các người chơi theo thứ tự tăng dần về số lượng phiếu bầu .",
+    "question_toks": [
+      "List",
+      "the",
+      "names",
+      "of",
+      "players",
+      "in",
+      "ascending",
+      "order",
+      "of",
+      "votes",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Gender ,  Occupation FROM player",
+    "query_toks": [
+      "SELECT",
+      "Gender",
+      ",",
+      "Occupation",
+      "FROM",
+      "player"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "gender",
+      ",",
+      "occupation",
+      "from",
+      "player"
+    ],
+    "question": "Giới tính và nghề nghiệp của mỗi người chơi ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "gender",
+      "and",
+      "occupation",
+      "of",
+      "players",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Player_name ,  residence FROM player WHERE Occupation != \"Researcher\"",
+    "query_toks": [
+      "SELECT",
+      "Player_name",
+      ",",
+      "residence",
+      "FROM",
+      "player",
+      "WHERE",
+      "Occupation",
+      "!",
+      "=",
+      "``",
+      "Researcher",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player_name",
+      ",",
+      "residence",
+      "from",
+      "player",
+      "where",
+      "occupation",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Liệt kê tên và nơi cư trú của người chơi có nghề nghiệp không phải là ' Nhà nghiên cứu ' .",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      "and",
+      "residence",
+      "for",
+      "players",
+      "whose",
+      "occupation",
+      "is",
+      "not",
+      "``",
+      "Researcher",
+      "''",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Researcher\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Sponsor_name FROM player WHERE Residence  =  \"Brandon\" OR Residence  =  \"Birtle\"",
+    "query_toks": [
+      "SELECT",
+      "Sponsor_name",
+      "FROM",
+      "player",
+      "WHERE",
+      "Residence",
+      "=",
+      "``",
+      "Brandon",
+      "''",
+      "OR",
+      "Residence",
+      "=",
+      "``",
+      "Birtle",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sponsor_name",
+      "from",
+      "player",
+      "where",
+      "residence",
+      "=",
+      "value",
+      "or",
+      "residence",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tên của các nhà tài trợ cho người chơi có nơi cư trú là ' Brandon ' hoặc ' Birtle ' .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "sponsors",
+      "of",
+      "players",
+      "whose",
+      "residence",
+      "is",
+      "either",
+      "``",
+      "Brandon",
+      "''",
+      "or",
+      "``",
+      "Birtle",
+      "''",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Brandon\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Birtle\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Player_name FROM player ORDER BY Votes DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Player_name",
+      "FROM",
+      "player",
+      "ORDER",
+      "BY",
+      "Votes",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player_name",
+      "from",
+      "player",
+      "order",
+      "by",
+      "votes",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Tên của người chơi có số lượng phiếu bầu cao nhất ?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "name",
+      "of",
+      "the",
+      "player",
+      "with",
+      "the",
+      "largest",
+      "number",
+      "of",
+      "votes",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Occupation ,  COUNT(*) FROM player GROUP BY Occupation",
+    "query_toks": [
+      "SELECT",
+      "Occupation",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "player",
+      "GROUP",
+      "BY",
+      "Occupation"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "occupation",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "player",
+      "group",
+      "by",
+      "occupation"
+    ],
+    "question": "Hiển thị tất cả các ngành nghề khác nhau cũng như là số lượng người chơi thuộc về từng ngành nghề .",
+    "question_toks": [
+      "Show",
+      "different",
+      "occupations",
+      "along",
+      "with",
+      "the",
+      "number",
+      "of",
+      "players",
+      "in",
+      "each",
+      "occupation",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Occupation FROM player GROUP BY Occupation ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Occupation",
+      "FROM",
+      "player",
+      "GROUP",
+      "BY",
+      "Occupation",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "occupation",
+      "from",
+      "player",
+      "group",
+      "by",
+      "occupation",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết nghề nghiệp phổ biến nhất của mọi người chơi .",
+    "question_toks": [
+      "Please",
+      "show",
+      "the",
+      "most",
+      "common",
+      "occupation",
+      "of",
+      "players",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Residence FROM player GROUP BY Residence HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "Residence",
+      "FROM",
+      "player",
+      "GROUP",
+      "BY",
+      "Residence",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "residence",
+      "from",
+      "player",
+      "group",
+      "by",
+      "residence",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị các khu dân cư có ít nhất hai người chơi .",
+    "question_toks": [
+      "Show",
+      "the",
+      "residences",
+      "that",
+      "have",
+      "at",
+      "least",
+      "two",
+      "players",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T3.Player_name ,  T2.coach_name FROM player_coach AS T1 JOIN coach AS T2 ON T1.Coach_ID  =  T2.Coach_ID JOIN player AS T3 ON T1.Player_ID  =  T3.Player_ID",
+    "query_toks": [
+      "SELECT",
+      "T3.Player_name",
+      ",",
+      "T2.coach_name",
+      "FROM",
+      "player_coach",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Coach_ID",
+      "=",
+      "T2.Coach_ID",
+      "JOIN",
+      "player",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Player_ID",
+      "=",
+      "T3.Player_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "player_name",
+      ",",
+      "t2",
+      ".",
+      "coach_name",
+      "from",
+      "player_coach",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coach_id",
+      "=",
+      "t2",
+      ".",
+      "coach_id",
+      "join",
+      "player",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "player_id",
+      "=",
+      "t3",
+      ".",
+      "player_id"
+    ],
+    "question": "Hiển thị tên của các người chơi và tên huấn luyện viên của từng người chơi .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "players",
+      "and",
+      "names",
+      "of",
+      "their",
+      "coaches",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T3.Player_name FROM player_coach AS T1 JOIN coach AS T2 ON T1.Coach_ID  =  T2.Coach_ID JOIN player AS T3 ON T1.Player_ID  =  T3.Player_ID WHERE T2.Rank  =  1",
+    "query_toks": [
+      "SELECT",
+      "T3.Player_name",
+      "FROM",
+      "player_coach",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Coach_ID",
+      "=",
+      "T2.Coach_ID",
+      "JOIN",
+      "player",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Player_ID",
+      "=",
+      "T3.Player_ID",
+      "WHERE",
+      "T2.Rank",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "player_name",
+      "from",
+      "player_coach",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coach_id",
+      "=",
+      "t2",
+      ".",
+      "coach_id",
+      "join",
+      "player",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "player_id",
+      "=",
+      "t3",
+      ".",
+      "player_id",
+      "where",
+      "t2",
+      ".",
+      "rank",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tên của các người chơi được huấn luyện bởi huấn luyện viên hạng 1 .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "players",
+      "coached",
+      "by",
+      "the",
+      "rank",
+      "1",
+      "coach",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T3.Player_name ,  T3.gender FROM player_coach AS T1 JOIN coach AS T2 ON T1.Coach_ID  =  T2.Coach_ID JOIN player AS T3 ON T1.Player_ID  =  T3.Player_ID WHERE T1.Starting_year  >  2011",
+    "query_toks": [
+      "SELECT",
+      "T3.Player_name",
+      ",",
+      "T3.gender",
+      "FROM",
+      "player_coach",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Coach_ID",
+      "=",
+      "T2.Coach_ID",
+      "JOIN",
+      "player",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Player_ID",
+      "=",
+      "T3.Player_ID",
+      "WHERE",
+      "T1.Starting_year",
+      ">",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "player_name",
+      ",",
+      "t3",
+      ".",
+      "gender",
+      "from",
+      "player_coach",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coach_id",
+      "=",
+      "t2",
+      ".",
+      "coach_id",
+      "join",
+      "player",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "player_id",
+      "=",
+      "t3",
+      ".",
+      "player_id",
+      "where",
+      "t1",
+      ".",
+      "starting_year",
+      ">",
+      "value"
+    ],
+    "question": "Hiển thị tên và giới tính của những người chơi có huấn luyện viên và bắt đầu chơi sau năm 2011 .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "and",
+      "genders",
+      "of",
+      "players",
+      "with",
+      "a",
+      "coach",
+      "starting",
+      "after",
+      "2011",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          2011.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T3.Player_name ,  T2.coach_name FROM player_coach AS T1 JOIN coach AS T2 ON T1.Coach_ID  =  T2.Coach_ID JOIN player AS T3 ON T1.Player_ID  =  T3.Player_ID ORDER BY T3.Votes DESC",
+    "query_toks": [
+      "SELECT",
+      "T3.Player_name",
+      ",",
+      "T2.coach_name",
+      "FROM",
+      "player_coach",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Coach_ID",
+      "=",
+      "T2.Coach_ID",
+      "JOIN",
+      "player",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Player_ID",
+      "=",
+      "T3.Player_ID",
+      "ORDER",
+      "BY",
+      "T3.Votes",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "player_name",
+      ",",
+      "t2",
+      ".",
+      "coach_name",
+      "from",
+      "player_coach",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "coach_id",
+      "=",
+      "t2",
+      ".",
+      "coach_id",
+      "join",
+      "player",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "player_id",
+      "=",
+      "t3",
+      ".",
+      "player_id",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "votes",
+      "desc"
+    ],
+    "question": "Hiển thị tên của những người chơi và tên của những huấn luyện viên theo thứ tự giảm dần về số lượng phiếu bầu của từng người chơi .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "players",
+      "and",
+      "names",
+      "of",
+      "their",
+      "coaches",
+      "in",
+      "descending",
+      "order",
+      "of",
+      "the",
+      "votes",
+      "of",
+      "players",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Player_name FROM player WHERE Player_ID NOT IN (SELECT Player_ID FROM player_coach)",
+    "query_toks": [
+      "SELECT",
+      "Player_name",
+      "FROM",
+      "player",
+      "WHERE",
+      "Player_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Player_ID",
+      "FROM",
+      "player_coach",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "player_name",
+      "from",
+      "player",
+      "where",
+      "player_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "player_id",
+      "from",
+      "player_coach",
+      ")"
+    ],
+    "question": "Liệt kê tên của những người chơi không có huấn luyện viên .",
+    "question_toks": [
+      "List",
+      "the",
+      "names",
+      "of",
+      "players",
+      "that",
+      "do",
+      "not",
+      "have",
+      "coaches",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  3
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      18,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT Residence FROM player WHERE gender  =  \"M\" INTERSECT SELECT Residence FROM player WHERE gender  =  \"F\"",
+    "query_toks": [
+      "SELECT",
+      "Residence",
+      "FROM",
+      "player",
+      "WHERE",
+      "gender",
+      "=",
+      "``",
+      "M",
+      "''",
+      "INTERSECT",
+      "SELECT",
+      "Residence",
+      "FROM",
+      "player",
+      "WHERE",
+      "gender",
+      "=",
+      "``",
+      "F",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "residence",
+      "from",
+      "player",
+      "where",
+      "gender",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "residence",
+      "from",
+      "player",
+      "where",
+      "gender",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị các khu dân cư có cả một số người chơi với giới tính ' M ' và một số người chơi với giới tính ' F ' .",
+    "question_toks": [
+      "Show",
+      "the",
+      "residences",
+      "that",
+      "have",
+      "both",
+      "a",
+      "player",
+      "of",
+      "gender",
+      "``",
+      "M",
+      "''",
+      "and",
+      "a",
+      "player",
+      "of",
+      "gender",
+      "``",
+      "F",
+      "''",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  5,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ],
+            "\"F\"",
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"M\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T1.club_id ,  T1.club_name, count(*) FROM club AS T1 JOIN coach AS T2 ON T1.club_id  =  T2.club_id GROUP BY T1.club_id",
+    "query_toks": [
+      "SELECT",
+      "T1.club_id",
+      ",",
+      "T1.club_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "club",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.club_id",
+      "=",
+      "T2.club_id",
+      "GROUP",
+      "BY",
+      "T1.club_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "club_id",
+      ",",
+      "t1",
+      ".",
+      "club_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "club",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "club_id",
+      "=",
+      "t2",
+      ".",
+      "club_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "club_id"
+    ],
+    "question": "Mỗi câu lạc bộ có bao nhiêu huấn luyện viên ? Liệt kê id , tên và số lượng huấn luyện viên của từng câu lạc bộ .",
+    "question_toks": [
+      "How",
+      "many",
+      "coaches",
+      "does",
+      "each",
+      "club",
+      "has",
+      "?",
+      "List",
+      "the",
+      "club",
+      "id",
+      ",",
+      "name",
+      "and",
+      "the",
+      "number",
+      "of",
+      "coaches",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "riding_club",
+    "query": "SELECT T1.club_id ,  T1.gold FROM match_result AS T1 JOIN coach AS T2 ON T1.club_id  =  T2.club_id GROUP BY T1.club_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.club_id",
+      ",",
+      "T1.gold",
+      "FROM",
+      "match_result",
+      "AS",
+      "T1",
+      "JOIN",
+      "coach",
+      "AS",
+      "T2",
+      "ON",
+      "T1.club_id",
+      "=",
+      "T2.club_id",
+      "GROUP",
+      "BY",
+      "T1.club_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "club_id",
+      ",",
+      "t1",
+      ".",
+      "gold",
+      "from",
+      "match_result",
+      "as",
+      "t1",
+      "join",
+      "coach",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "club_id",
+      "=",
+      "t2",
+      ".",
+      "club_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "club_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Có bao nhiêu huy chương vàng mà câu lạc bộ có nhiều huấn luyện viên nhất giành được ?",
+    "question_toks": [
+      "How",
+      "many",
+      "gold",
+      "medals",
+      "has",
+      "the",
+      "club",
+      "with",
+      "the",
+      "most",
+      "coaches",
+      "won",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          22,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  }
+]

@@ -1,0 +1,2349 @@
+[
+  {
+    "db_id": "news_report",
+    "query": "SELECT count(*) FROM journalist",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "journalist"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "journalist"
+    ],
+    "question": "Có bao nhiêu nhà báo ?",
+    "question_toks": [
+      "How",
+      "many",
+      "journalists",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Name FROM journalist ORDER BY Years_working ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "journalist",
+      "ORDER",
+      "BY",
+      "Years_working",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "journalist",
+      "order",
+      "by",
+      "years_working",
+      "asc"
+    ],
+    "question": "Liệt kê tên của các nhà báo theo thứ tự tăng dần về số năm làm việc .",
+    "question_toks": [
+      "List",
+      "the",
+      "names",
+      "of",
+      "journalists",
+      "in",
+      "ascending",
+      "order",
+      "of",
+      "years",
+      "working",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality ,  Age FROM journalist",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      ",",
+      "Age",
+      "FROM",
+      "journalist"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      ",",
+      "age",
+      "from",
+      "journalist"
+    ],
+    "question": "Cho biết quốc tịch và độ tuổi của các nhà báo .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "nationalities",
+      "and",
+      "ages",
+      "of",
+      "journalists",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Name FROM journalist WHERE Nationality  =  \"England\" OR Nationality  =  \"Wales\"",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "journalist",
+      "WHERE",
+      "Nationality",
+      "=",
+      "``",
+      "England",
+      "''",
+      "OR",
+      "Nationality",
+      "=",
+      "``",
+      "Wales",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "journalist",
+      "where",
+      "nationality",
+      "=",
+      "value",
+      "or",
+      "nationality",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tên của các nhà báo đến từ ' Anh ' hoặc ' Xứ Wales ' .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "journalists",
+      "from",
+      "``",
+      "England",
+      "''",
+      "or",
+      "``",
+      "Wales",
+      "''",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"England\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Wales\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT avg(Years_working) FROM journalist",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Years_working",
+      ")",
+      "FROM",
+      "journalist"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "years_working",
+      ")",
+      "from",
+      "journalist"
+    ],
+    "question": "Cho biết số năm làm việc trung bình của một nhà báo .",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "number",
+      "of",
+      "years",
+      "spent",
+      "working",
+      "as",
+      "a",
+      "journalist",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality FROM journalist ORDER BY Years_working DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "journalist",
+      "ORDER",
+      "BY",
+      "Years_working",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      "from",
+      "journalist",
+      "order",
+      "by",
+      "years_working",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết quốc tịch của nhà báo có số năm làm việc nhiều nhất .",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "nationality",
+      "of",
+      "the",
+      "journalist",
+      "with",
+      "the",
+      "largest",
+      "number",
+      "of",
+      "years",
+      "working",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality ,  COUNT(*) FROM journalist GROUP BY Nationality",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "journalist",
+      "GROUP",
+      "BY",
+      "Nationality"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "journalist",
+      "group",
+      "by",
+      "nationality"
+    ],
+    "question": "Hiển thị tất cả các quốc tịch khác nhau và số lượng nhà báo ứng với từng quốc tịch .",
+    "question_toks": [
+      "Show",
+      "the",
+      "different",
+      "nationalities",
+      "and",
+      "the",
+      "number",
+      "of",
+      "journalists",
+      "of",
+      "each",
+      "nationality",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality FROM journalist GROUP BY Nationality ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "journalist",
+      "GROUP",
+      "BY",
+      "Nationality",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      "from",
+      "journalist",
+      "group",
+      "by",
+      "nationality",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Hiển thị quốc tịch phổ biến nhất trong số tất cả các nhà báo .",
+    "question_toks": [
+      "Show",
+      "the",
+      "most",
+      "common",
+      "nationality",
+      "for",
+      "journalists",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Nationality FROM journalist WHERE Years_working  >  10 INTERSECT SELECT Nationality FROM journalist WHERE Years_working  <  3",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "journalist",
+      "WHERE",
+      "Years_working",
+      ">",
+      "10",
+      "INTERSECT",
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "journalist",
+      "WHERE",
+      "Years_working",
+      "<",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      "from",
+      "journalist",
+      "where",
+      "years_working",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "nationality",
+      "from",
+      "journalist",
+      "where",
+      "years_working",
+      "<",
+      "value"
+    ],
+    "question": "Hiển thị các quốc gia có đồng thời một số nhà báo với hơn 10 năm làm việc và một số nhà báo với ít hơn 3 năm làm việc .",
+    "question_toks": [
+      "Show",
+      "the",
+      "nations",
+      "that",
+      "have",
+      "both",
+      "journalists",
+      "with",
+      "more",
+      "than",
+      "10",
+      "years",
+      "of",
+      "working",
+      "and",
+      "journalists",
+      "with",
+      "less",
+      "than",
+      "3",
+      "years",
+      "of",
+      "working",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            3.0,
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Date ,  Name ,  venue FROM event ORDER BY Event_Attendance DESC",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      ",",
+      "Name",
+      ",",
+      "venue",
+      "FROM",
+      "event",
+      "ORDER",
+      "BY",
+      "Event_Attendance",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      ",",
+      "name",
+      ",",
+      "venue",
+      "from",
+      "event",
+      "order",
+      "by",
+      "event_attendance",
+      "desc"
+    ],
+    "question": "Hiển thị ngày , địa điểm và tên của các sự kiện theo thứ tự giảm dần về số lượng người tham dự .",
+    "question_toks": [
+      "Show",
+      "the",
+      "dates",
+      ",",
+      "places",
+      ",",
+      "and",
+      "names",
+      "of",
+      "events",
+      "in",
+      "descending",
+      "order",
+      "of",
+      "the",
+      "attendance",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT T3.Name ,  T2.Date FROM news_report AS T1 JOIN event AS T2 ON T1.Event_ID  =  T2.Event_ID JOIN journalist AS T3 ON T1.journalist_ID  =  T3.journalist_ID",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "T2.Date",
+      "FROM",
+      "news_report",
+      "AS",
+      "T1",
+      "JOIN",
+      "event",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Event_ID",
+      "=",
+      "T2.Event_ID",
+      "JOIN",
+      "journalist",
+      "AS",
+      "T3",
+      "ON",
+      "T1.journalist_ID",
+      "=",
+      "T3.journalist_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "date",
+      "from",
+      "news_report",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "event_id",
+      "join",
+      "journalist",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t3",
+      ".",
+      "journalist_id"
+    ],
+    "question": "Hiển thị tên của các nhà báo và ngày diễn ra các sự kiện mà họ đã báo cáo .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "journalists",
+      "and",
+      "the",
+      "dates",
+      "of",
+      "the",
+      "events",
+      "they",
+      "reported",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT T3.Name ,  T2.Name FROM news_report AS T1 JOIN event AS T2 ON T1.Event_ID  =  T2.Event_ID JOIN journalist AS T3 ON T1.journalist_ID  =  T3.journalist_ID ORDER BY T2.Event_Attendance ASC",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "T2.Name",
+      "FROM",
+      "news_report",
+      "AS",
+      "T1",
+      "JOIN",
+      "event",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Event_ID",
+      "=",
+      "T2.Event_ID",
+      "JOIN",
+      "journalist",
+      "AS",
+      "T3",
+      "ON",
+      "T1.journalist_ID",
+      "=",
+      "T3.journalist_ID",
+      "ORDER",
+      "BY",
+      "T2.Event_Attendance",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "news_report",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "event_id",
+      "join",
+      "journalist",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t3",
+      ".",
+      "journalist_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "event_attendance",
+      "asc"
+    ],
+    "question": "Hiển thị tên của các nhà báo và tên của các sự kiện mà họ đã báo cáo theo thứ tự tăng dần về số lượng người tham dự .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "journalists",
+      "and",
+      "the",
+      "names",
+      "of",
+      "the",
+      "events",
+      "they",
+      "reported",
+      "in",
+      "ascending",
+      "order"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT T3.Name ,  COUNT(*) FROM news_report AS T1 JOIN event AS T2 ON T1.Event_ID  =  T2.Event_ID JOIN journalist AS T3 ON T1.journalist_ID  =  T3.journalist_ID GROUP BY T3.Name",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "news_report",
+      "AS",
+      "T1",
+      "JOIN",
+      "event",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Event_ID",
+      "=",
+      "T2.Event_ID",
+      "JOIN",
+      "journalist",
+      "AS",
+      "T3",
+      "ON",
+      "T1.journalist_ID",
+      "=",
+      "T3.journalist_ID",
+      "GROUP",
+      "BY",
+      "T3.Name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "news_report",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "event_id",
+      "join",
+      "journalist",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t3",
+      ".",
+      "journalist_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "name"
+    ],
+    "question": "Hiển thị tên của các nhà báo và số lượng sự kiện được báo cáo bởi từng nhà báo .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "journalists",
+      "and",
+      "the",
+      "number",
+      "of",
+      "events",
+      "they",
+      "reported",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT T3.Name FROM news_report AS T1 JOIN event AS T2 ON T1.Event_ID  =  T2.Event_ID JOIN journalist AS T3 ON T1.journalist_ID  =  T3.journalist_ID GROUP BY T3.Name HAVING COUNT(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      "FROM",
+      "news_report",
+      "AS",
+      "T1",
+      "JOIN",
+      "event",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Event_ID",
+      "=",
+      "T2.Event_ID",
+      "JOIN",
+      "journalist",
+      "AS",
+      "T3",
+      "ON",
+      "T1.journalist_ID",
+      "=",
+      "T3.journalist_ID",
+      "GROUP",
+      "BY",
+      "T3.Name",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "news_report",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "event_id",
+      "join",
+      "journalist",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t3",
+      ".",
+      "journalist_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Hiển thị tên của các nhà báo đã báo cáo nhiều hơn một sự kiện .",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "journalists",
+      "that",
+      "have",
+      "reported",
+      "more",
+      "than",
+      "one",
+      "event",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT Name FROM journalist WHERE journalist_ID NOT IN (SELECT journalist_ID FROM news_report)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "journalist",
+      "WHERE",
+      "journalist_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "journalist_ID",
+      "FROM",
+      "news_report",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "journalist",
+      "where",
+      "journalist_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "journalist_id",
+      "from",
+      "news_report",
+      ")"
+    ],
+    "question": "Liệt kê tên của các nhà báo chưa báo cáo bất kỳ tin tức nào .",
+    "question_toks": [
+      "List",
+      "the",
+      "names",
+      "of",
+      "journalists",
+      "who",
+      "have",
+      "not",
+      "reported",
+      "any",
+      "event",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT avg(Event_Attendance) ,  max(Event_Attendance) FROM event",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Event_Attendance",
+      ")",
+      ",",
+      "max",
+      "(",
+      "Event_Attendance",
+      ")",
+      "FROM",
+      "event"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "event_attendance",
+      ")",
+      ",",
+      "max",
+      "(",
+      "event_attendance",
+      ")",
+      "from",
+      "event"
+    ],
+    "question": "Số lượng người tham dự trung bình và số lượng người tham dự tối đa của tất cả các sự kiện là bao nhiêu ?",
+    "question_toks": [
+      "what",
+      "are",
+      "the",
+      "average",
+      "and",
+      "maximum",
+      "attendances",
+      "of",
+      "all",
+      "events",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT avg(t1.age) ,  avg(Years_working) ,  t2.work_type FROM journalist AS t1 JOIN news_report AS t2 ON t1.journalist_id  =  t2.journalist_id GROUP BY t2.work_type",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "t1.age",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "Years_working",
+      ")",
+      ",",
+      "t2.work_type",
+      "FROM",
+      "journalist",
+      "AS",
+      "t1",
+      "JOIN",
+      "news_report",
+      "AS",
+      "t2",
+      "ON",
+      "t1.journalist_id",
+      "=",
+      "t2.journalist_id",
+      "GROUP",
+      "BY",
+      "t2.work_type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "t1",
+      ".",
+      "age",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "t2",
+      ".",
+      "work_type",
+      "from",
+      "journalist",
+      "as",
+      "t1",
+      "join",
+      "news_report",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "journalist_id",
+      "=",
+      "t2",
+      ".",
+      "journalist_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "work_type"
+    ],
+    "question": "Tìm độ tuổi trung bình và số năm làm việc trung bình của các nhà báo trong từng vai trò công việc .",
+    "question_toks": [
+      "Find",
+      "the",
+      "average",
+      "age",
+      "and",
+      "experience",
+      "working",
+      "length",
+      "of",
+      "journalists",
+      "working",
+      "on",
+      "different",
+      "role",
+      "type",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "news_report",
+    "query": "SELECT venue ,  name FROM event ORDER BY Event_Attendance DESC LIMIT 2",
+    "query_toks": [
+      "SELECT",
+      "venue",
+      ",",
+      "name",
+      "FROM",
+      "event",
+      "ORDER",
+      "BY",
+      "Event_Attendance",
+      "DESC",
+      "LIMIT",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "venue",
+      ",",
+      "name",
+      "from",
+      "event",
+      "order",
+      "by",
+      "event_attendance",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Liệt kê địa điểm và tên của 2 sự kiện có số lượng người tham dự nhiều nhất .",
+    "question_toks": [
+      "List",
+      "the",
+      "event",
+      "venues",
+      "and",
+      "names",
+      "that",
+      "have",
+      "the",
+      "top",
+      "2",
+      "most",
+      "number",
+      "of",
+      "people",
+      "attended",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 2,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  }
+]

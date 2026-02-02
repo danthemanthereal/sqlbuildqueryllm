@@ -1,0 +1,3154 @@
+[
+  {
+    "db_id": "browser_web",
+    "query": "SELECT count(*) FROM browser WHERE market_share  >=  5",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "browser",
+      "WHERE",
+      "market_share",
+      ">",
+      "=",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "browser",
+      "where",
+      "market_share",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many main stream browsers whose market share is at least 5 exist?",
+    "question": "市场占有率至少为5的主流浏览器有多少？",
+    "question_cspider": "市场占有率至少为5的主流浏览器有多少？",
+    "Harold": "BLEU = 42.10, 88.9/58.8/37.5/20.0 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "主",
+      "流",
+      "浏",
+      "览",
+      "器",
+      "的",
+      "市",
+      "场",
+      "份",
+      "额",
+      "至",
+      "少",
+      "为",
+      "5",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          5,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT name FROM browser ORDER BY market_share DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "browser",
+      "ORDER",
+      "BY",
+      "market_share",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "browser",
+      "order",
+      "by",
+      "market_share",
+      "desc"
+    ],
+    "question_spider": "List the name of browsers in descending order by market share.",
+    "question": "以市场份额降序的顺序列出浏览器的名称。",
+    "question_cspider": "以市场份额降序的顺序列出浏览器的名称。",
+    "Harold": "BLEU = 55.56, 93.3/85.7/69.2/50.0 (BP=0.766, ratio=0.789, hyp_len=15, ref_len=19)",
+    "question_toks": [
+      "按",
+      "市",
+      "场",
+      "份",
+      "额",
+      "降",
+      "序",
+      "列",
+      "出",
+      "浏",
+      "览",
+      "器",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT id ,  name ,  market_share FROM browser",
+    "query_toks": [
+      "SELECT",
+      "id",
+      ",",
+      "name",
+      ",",
+      "market_share",
+      "FROM",
+      "browser"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "id",
+      ",",
+      "name",
+      ",",
+      "market_share",
+      "from",
+      "browser"
+    ],
+    "question_spider": "List the ids, names and market shares of all browsers.",
+    "question": "列出所有浏览器的ID、名称和市场份额。",
+    "question_cspider": "列出所有浏览器的ID、名称和市场份额。",
+    "Harold": "BLEU = 84.92, 94.7/88.9/82.4/75.0 (BP=1.000, ratio=1.000, hyp_len=19, ref_len=19)",
+    "question_toks": [
+      "列",
+      "出",
+      "所",
+      "有",
+      "浏",
+      "览",
+      "器",
+      "的",
+      "I",
+      "D",
+      "，",
+      "名",
+      "称",
+      "和",
+      "市",
+      "场",
+      "份",
+      "额",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT max(market_share) ,  min(market_share) ,  avg(market_share) FROM browser",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "market_share",
+      ")",
+      ",",
+      "min",
+      "(",
+      "market_share",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "market_share",
+      ")",
+      "FROM",
+      "browser"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "market_share",
+      ")",
+      ",",
+      "min",
+      "(",
+      "market_share",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "market_share",
+      ")",
+      "from",
+      "browser"
+    ],
+    "question_spider": "What is the maximum, minimum and average market share of the listed browsers?",
+    "question": "列出的浏览器的最大、最小和平均市场占有率是多少？",
+    "question_cspider": "列出的浏览器的最大、最小和平均市场占有率是多少？",
+    "Harold": "BLEU = 67.46, 87.0/77.3/66.7/55.0 (BP=0.957, ratio=0.958, hyp_len=23, ref_len=24)",
+    "question_toks": [
+      "列",
+      "出",
+      "的",
+      "浏",
+      "览",
+      "器",
+      "的",
+      "最",
+      "大",
+      "，",
+      "最",
+      "小",
+      "和",
+      "平",
+      "均",
+      "市",
+      "场",
+      "份",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT id ,  market_share FROM browser WHERE name  =  'Safari'",
+    "query_toks": [
+      "SELECT",
+      "id",
+      ",",
+      "market_share",
+      "FROM",
+      "browser",
+      "WHERE",
+      "name",
+      "=",
+      "'Safari",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "id",
+      ",",
+      "market_share",
+      "from",
+      "browser",
+      "where",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the id and market share of the browser Safari?",
+    "question": "浏览器“Safari”的ID和市场份额是什么？",
+    "question_cspider": "浏览器“Safari”的ID和市场份额是什么？",
+    "Harold": "BLEU = 61.86, 90.5/75.0/63.2/50.0 (BP=0.909, ratio=0.913, hyp_len=21, ref_len=23)",
+    "question_toks": [
+      "浏",
+      "览",
+      "器",
+      "S",
+      "a",
+      "f",
+      "a",
+      "r",
+      "i",
+      "的",
+      "I",
+      "D",
+      "和",
+      "市",
+      "场",
+      "份",
+      "额",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Safari\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT name ,  operating_system FROM web_client_accelerator WHERE CONNECTION != 'Broadband'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "operating_system",
+      "FROM",
+      "web_client_accelerator",
+      "WHERE",
+      "CONNECTION",
+      "!",
+      "=",
+      "'Broadband",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "operating_system",
+      "from",
+      "web_client_accelerator",
+      "where",
+      "connection",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the name and os of web client accelerators that do not work with only a 'Broadband' type connection?",
+    "question": "不只使用“Broadband” 类型的连接的网络客户端加速器的名称和操作系统是什么？",
+    "question_cspider": "不只使用“广播” 类型的连接的网络客户端加速器的名称和操作系统是什么？",
+    "Harold": "BLEU = 59.06, 74.4/60.5/54.1/50.0 (BP=1.000, ratio=1.147, hyp_len=39, ref_len=34)",
+    "question_toks": [
+      "不",
+      "能",
+      "仅",
+      "与",
+      "“",
+      "宽",
+      "带",
+      "”",
+      "类",
+      "型",
+      "的",
+      "连",
+      "接",
+      "一",
+      "起",
+      "使",
+      "用",
+      "的",
+      "W",
+      "e",
+      "b",
+      "客",
+      "户",
+      "端",
+      "加",
+      "速",
+      "器",
+      "的",
+      "名",
+      "称",
+      "和",
+      "操",
+      "作",
+      "系",
+      "统",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Broadband\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT T1.name FROM browser AS T1 JOIN accelerator_compatible_browser AS T2 ON T1.id  =  T2.browser_id JOIN web_client_accelerator AS T3 ON T2.accelerator_id  =  T3.id WHERE T3.name  =  'CProxy' AND T2.compatible_since_year  >  1998",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "browser",
+      "AS",
+      "T1",
+      "JOIN",
+      "accelerator_compatible_browser",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.browser_id",
+      "JOIN",
+      "web_client_accelerator",
+      "AS",
+      "T3",
+      "ON",
+      "T2.accelerator_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T3.name",
+      "=",
+      "'CProxy",
+      "'",
+      "AND",
+      "T2.compatible_since_year",
+      ">",
+      "1998"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "browser",
+      "as",
+      "t1",
+      "join",
+      "accelerator_compatible_browser",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "browser_id",
+      "join",
+      "web_client_accelerator",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "accelerator_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t3",
+      ".",
+      "name",
+      "=",
+      "value",
+      "and",
+      "t2",
+      ".",
+      "compatible_since_year",
+      ">",
+      "value"
+    ],
+    "question_spider": "What is the name of the browser that became compatible with the accelerator 'CProxy' after year 1998 ?",
+    "question": "1998年以后与加速器“CProxy”兼容的浏览器叫什么名字？",
+    "question_cspider": "1998年以后与加速器“代理服务器”兼容的浏览器叫什么名字？",
+    "Harold": "BLEU = 47.37, 71.0/53.3/41.4/32.1 (BP=1.000, ratio=1.033, hyp_len=31, ref_len=30)",
+    "question_toks": [
+      "1",
+      "9",
+      "9",
+      "8",
+      "年",
+      "后",
+      "与",
+      "加",
+      "速",
+      "器",
+      "“",
+      " ",
+      "C",
+      "P",
+      "r",
+      "o",
+      "x",
+      "y",
+      "”",
+      "兼",
+      "容",
+      "的",
+      "浏",
+      "览",
+      "器",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"CProxy\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          1998,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT T1.id ,  T1.Name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id GROUP BY T1.id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.Name",
+      "FROM",
+      "web_client_accelerator",
+      "AS",
+      "T1",
+      "JOIN",
+      "accelerator_compatible_browser",
+      "AS",
+      "T2",
+      "ON",
+      "T2.accelerator_id",
+      "=",
+      "T1.id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "web_client_accelerator",
+      "as",
+      "t1",
+      "join",
+      "accelerator_compatible_browser",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "accelerator_id",
+      "=",
+      "t1",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the ids and names of the web accelerators that are compatible with two or more browsers?",
+    "question": "与两个或多个浏览器兼容的网络加速器的ID和名称是什么？",
+    "question_cspider": "与两个或多个浏览器兼容的网络加速器的ID和名称是什么？",
+    "Harold": "BLEU = 82.66, 89.3/85.2/80.8/76.0 (BP=1.000, ratio=1.037, hyp_len=28, ref_len=27)",
+    "question_toks": [
+      "与",
+      "两",
+      "个",
+      "或",
+      "多",
+      "个",
+      "浏",
+      "览",
+      "器",
+      "兼",
+      "容",
+      "的",
+      "W",
+      "e",
+      "b",
+      "加",
+      "速",
+      "器",
+      "的",
+      "I",
+      "D",
+      "和",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT T1.id ,  T1.name FROM browser AS T1 JOIN accelerator_compatible_browser AS T2 ON T1.id  =  T2.browser_id GROUP BY T1.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "browser",
+      "AS",
+      "T1",
+      "JOIN",
+      "accelerator_compatible_browser",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.browser_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "browser",
+      "as",
+      "t1",
+      "join",
+      "accelerator_compatible_browser",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "browser_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the id and name of the browser that is compatible with the most web accelerators?",
+    "question": "与最多数量的网络加速器兼容的浏览器的id和名称是什么？",
+    "question_cspider": "与最多数量的网络加速器兼容的浏览器的id和名称是什么？",
+    "Harold": "BLEU = 72.20, 84.6/76.0/70.8/69.6 (BP=0.962, ratio=0.963, hyp_len=26, ref_len=27)",
+    "question_toks": [
+      "与",
+      "大",
+      "多",
+      "数",
+      "W",
+      "e",
+      "b",
+      "加",
+      "速",
+      "器",
+      "兼",
+      "容",
+      "的",
+      "浏",
+      "览",
+      "器",
+      "的",
+      "I",
+      "D",
+      "和",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT T1.compatible_since_year FROM accelerator_compatible_browser AS T1 JOIN browser AS T2 ON T1.browser_id  =  T2.id JOIN web_client_accelerator AS T3 ON T1.accelerator_id  =  T3.id WHERE T3.name  =  'CACHEbox' AND T2.name  =  'Internet Explorer'",
+    "query_toks": [
+      "SELECT",
+      "T1.compatible_since_year",
+      "FROM",
+      "accelerator_compatible_browser",
+      "AS",
+      "T1",
+      "JOIN",
+      "browser",
+      "AS",
+      "T2",
+      "ON",
+      "T1.browser_id",
+      "=",
+      "T2.id",
+      "JOIN",
+      "web_client_accelerator",
+      "AS",
+      "T3",
+      "ON",
+      "T1.accelerator_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T3.name",
+      "=",
+      "'CACHEbox",
+      "'",
+      "AND",
+      "T2.name",
+      "=",
+      "'Internet",
+      "Explorer",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "compatible_since_year",
+      "from",
+      "accelerator_compatible_browser",
+      "as",
+      "t1",
+      "join",
+      "browser",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "browser_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "web_client_accelerator",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "accelerator_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t3",
+      ".",
+      "name",
+      "=",
+      "value",
+      "and",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "When did the web accelerator 'CACHEbox' and browser 'Internet Explorer' become compatible?",
+    "question": "网络加速器“CACHEbox”和浏览器“Internet Explorer”什么时候兼容的？",
+    "question_cspider": "网络加速器“CACHEbox”和浏览器“IE浏览器”什么时候兼容的？",
+    "Harold": "BLEU = 45.70, 58.1/45.2/41.5/40.0 (BP=1.000, ratio=1.265, hyp_len=43, ref_len=34)",
+    "question_toks": [
+      "W",
+      "e",
+      "b",
+      "加",
+      "速",
+      "器",
+      "“",
+      " ",
+      "C",
+      "A",
+      "C",
+      "H",
+      "E",
+      "b",
+      "o",
+      "x",
+      "”",
+      "和",
+      "浏",
+      "览",
+      "器",
+      "“",
+      " ",
+      "I",
+      "n",
+      "t",
+      "e",
+      "r",
+      "n",
+      "e",
+      "t",
+      " ",
+      "E",
+      "x",
+      "p",
+      "l",
+      "o",
+      "r",
+      "e",
+      "r",
+      "”",
+      "何",
+      "时",
+      "兼",
+      "容",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"CACHEbox\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Internet Explorer\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT count(DISTINCT client) FROM web_client_accelerator",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "client",
+      ")",
+      "FROM",
+      "web_client_accelerator"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "client",
+      ")",
+      "from",
+      "web_client_accelerator"
+    ],
+    "question_spider": "How many different kinds of clients are supported by the web clients accelerators?",
+    "question": "网络客户端加速器支持多少种不同的客户端？",
+    "question_cspider": "网络客户端加速器支持多少种不同的客户端？",
+    "Harold": "BLEU = 69.08, 78.3/72.7/66.7/60.0 (BP=1.000, ratio=1.150, hyp_len=23, ref_len=20)",
+    "question_toks": [
+      "W",
+      "e",
+      "b",
+      "客",
+      "户",
+      "端",
+      "加",
+      "速",
+      "器",
+      "支",
+      "持",
+      "多",
+      "少",
+      "种",
+      "不",
+      "同",
+      "类",
+      "型",
+      "的",
+      "客",
+      "户",
+      "端",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                4,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT count(*) FROM web_client_accelerator WHERE id NOT IN ( SELECT accelerator_id FROM accelerator_compatible_browser );",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "web_client_accelerator",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "accelerator_id",
+      "FROM",
+      "accelerator_compatible_browser",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "web_client_accelerator",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "accelerator_id",
+      "from",
+      "accelerator_compatible_browser",
+      ")"
+    ],
+    "question_spider": "How many accelerators are not compatible with the browsers listed ?",
+    "question": "有多少个加速器与列出的浏览器不兼容？",
+    "question_cspider": "有多少个加速器与列出的浏览器不兼容？",
+    "Harold": "BLEU = 55.02, 93.8/73.3/57.1/38.5 (BP=0.882, ratio=0.889, hyp_len=16, ref_len=18)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "加",
+      "速",
+      "器",
+      "与",
+      "所",
+      "列",
+      "浏",
+      "览",
+      "器",
+      "不",
+      "兼",
+      "容",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      9,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT DISTINCT T1.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T3.market_share  >  15;",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.name",
+      "FROM",
+      "web_client_accelerator",
+      "AS",
+      "T1",
+      "JOIN",
+      "accelerator_compatible_browser",
+      "AS",
+      "T2",
+      "ON",
+      "T2.accelerator_id",
+      "=",
+      "T1.id",
+      "JOIN",
+      "browser",
+      "AS",
+      "T3",
+      "ON",
+      "T2.browser_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T3.market_share",
+      ">",
+      "15",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "web_client_accelerator",
+      "as",
+      "t1",
+      "join",
+      "accelerator_compatible_browser",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "accelerator_id",
+      "=",
+      "t1",
+      ".",
+      "id",
+      "join",
+      "browser",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "browser_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t3",
+      ".",
+      "market_share",
+      ">",
+      "value"
+    ],
+    "question_spider": "What distinct accelerator names are compatible with the browswers that have market share higher than 15?",
+    "question": "哪些不同的加速器与市场占有率高于15的浏览器兼容？",
+    "question_cspider": "哪些不同的加速器与市场占有率高于15的浏览器兼容？",
+    "Harold": "BLEU = 47.09, 69.2/56.0/41.7/30.4 (BP=1.000, ratio=1.040, hyp_len=26, ref_len=25)",
+    "question_toks": [
+      "哪",
+      "些",
+      "独",
+      "特",
+      "的",
+      "加",
+      "速",
+      "器",
+      "名",
+      "称",
+      "与",
+      "市",
+      "场",
+      "份",
+      "额",
+      "超",
+      "过",
+      "1",
+      "5",
+      "的",
+      "浏",
+      "览",
+      "器",
+      "兼",
+      "容",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          15,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT T3.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T1.name  =  'CACHEbox' INTERSECT SELECT T3.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T1.name  =  'Fasterfox'",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      "FROM",
+      "web_client_accelerator",
+      "AS",
+      "T1",
+      "JOIN",
+      "accelerator_compatible_browser",
+      "AS",
+      "T2",
+      "ON",
+      "T2.accelerator_id",
+      "=",
+      "T1.id",
+      "JOIN",
+      "browser",
+      "AS",
+      "T3",
+      "ON",
+      "T2.browser_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'CACHEbox",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T3.name",
+      "FROM",
+      "web_client_accelerator",
+      "AS",
+      "T1",
+      "JOIN",
+      "accelerator_compatible_browser",
+      "AS",
+      "T2",
+      "ON",
+      "T2.accelerator_id",
+      "=",
+      "T1.id",
+      "JOIN",
+      "browser",
+      "AS",
+      "T3",
+      "ON",
+      "T2.browser_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Fasterfox",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "web_client_accelerator",
+      "as",
+      "t1",
+      "join",
+      "accelerator_compatible_browser",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "accelerator_id",
+      "=",
+      "t1",
+      ".",
+      "id",
+      "join",
+      "browser",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "browser_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "web_client_accelerator",
+      "as",
+      "t1",
+      "join",
+      "accelerator_compatible_browser",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "accelerator_id",
+      "=",
+      "t1",
+      ".",
+      "id",
+      "join",
+      "browser",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "browser_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "List the names of the browser that are compatible with both 'CACHEbox' and 'Fasterfox'.",
+    "question": "列出与“CACHEbox”和“Fasterfox”兼容的浏览器的名称。",
+    "question_cspider": "列出与“CACHEbox”和“Fasterfox”兼容的浏览器的名称。",
+    "Harold": "BLEU = 92.43, 100.0/97.0/93.8/90.3 (BP=0.971, ratio=0.971, hyp_len=34, ref_len=35)",
+    "question_toks": [
+      "列",
+      "出",
+      "与",
+      "“",
+      " ",
+      "C",
+      "A",
+      "C",
+      "H",
+      "E",
+      "b",
+      "o",
+      "x",
+      "”",
+      "和",
+      "“",
+      " ",
+      "F",
+      "a",
+      "s",
+      "t",
+      "e",
+      "r",
+      "f",
+      "o",
+      "x",
+      "”",
+      "兼",
+      "容",
+      "的",
+      "浏",
+      "览",
+      "器",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"CACHEbox\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  9,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ],
+            "\"Fasterfox\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT name ,  operating_system FROM web_client_accelerator EXCEPT SELECT T1.name ,  T1.operating_system FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T3.name  =  'Opera'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "operating_system",
+      "FROM",
+      "web_client_accelerator",
+      "EXCEPT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.operating_system",
+      "FROM",
+      "web_client_accelerator",
+      "AS",
+      "T1",
+      "JOIN",
+      "accelerator_compatible_browser",
+      "AS",
+      "T2",
+      "ON",
+      "T2.accelerator_id",
+      "=",
+      "T1.id",
+      "JOIN",
+      "browser",
+      "AS",
+      "T3",
+      "ON",
+      "T2.browser_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T3.name",
+      "=",
+      "'Opera",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "operating_system",
+      "from",
+      "web_client_accelerator",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "operating_system",
+      "from",
+      "web_client_accelerator",
+      "as",
+      "t1",
+      "join",
+      "accelerator_compatible_browser",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "accelerator_id",
+      "=",
+      "t1",
+      ".",
+      "id",
+      "join",
+      "browser",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "browser_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t3",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the accelerator names and supporting operating systems that are not compatible with the browser named 'Opera'.",
+    "question": "显示与名为“Opera”的浏览器不兼容的加速器名称和支持操作系统。",
+    "question_cspider": "显示与名为“Opera”的浏览器不兼容的加速器名称和支持操作系统。",
+    "Harold": "BLEU = 92.11, 97.1/93.9/90.6/87.1 (BP=1.000, ratio=1.030, hyp_len=34, ref_len=33)",
+    "question_toks": [
+      "显",
+      "示",
+      "与",
+      "名",
+      "为",
+      "“",
+      " ",
+      "O",
+      "p",
+      "e",
+      "r",
+      "a",
+      "”",
+      "的",
+      "浏",
+      "览",
+      "器",
+      "不",
+      "兼",
+      "容",
+      "的",
+      "加",
+      "速",
+      "器",
+      "名",
+      "称",
+      "和",
+      "支",
+      "持",
+      "的",
+      "操",
+      "作",
+      "系",
+      "统",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  9,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            "\"Opera\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT name FROM web_client_accelerator WHERE name LIKE \"%Opera%\"",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "web_client_accelerator",
+      "WHERE",
+      "name",
+      "LIKE",
+      "``",
+      "%",
+      "Opera",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "web_client_accelerator",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question_spider": "Which accelerator name contains substring \"Opera\"?",
+    "question": "哪个加速器名称包含子字符串“Opera”？",
+    "question_cspider": "哪个加速器名称包含子字符串“Opera”？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "哪",
+      "个",
+      "加",
+      "速",
+      "器",
+      "名",
+      "称",
+      "包",
+      "含",
+      "子",
+      "字",
+      "符",
+      "串",
+      "“",
+      " ",
+      "O",
+      "p",
+      "e",
+      "r",
+      "a",
+      "”",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"%Opera%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT Operating_system ,  count(*) FROM web_client_accelerator GROUP BY Operating_system",
+    "query_toks": [
+      "SELECT",
+      "Operating_system",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "web_client_accelerator",
+      "GROUP",
+      "BY",
+      "Operating_system"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "operating_system",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "web_client_accelerator",
+      "group",
+      "by",
+      "operating_system"
+    ],
+    "question_spider": "Find the number of web accelerators used for each Operating system.",
+    "question": "查找每个操作系统的网络加速器的数量。",
+    "question_cspider": "查找每个操作系统的网络加速器的数量。",
+    "Harold": "BLEU = 61.53, 76.2/65.0/57.9/50.0 (BP=1.000, ratio=1.167, hyp_len=21, ref_len=18)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "操",
+      "作",
+      "系",
+      "统",
+      "使",
+      "用",
+      "的",
+      "W",
+      "e",
+      "b",
+      "加",
+      "速",
+      "器",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "browser_web",
+    "query": "SELECT T2.name ,  T3.name FROM accelerator_compatible_browser AS T1 JOIN browser AS T2 ON T1.browser_id  =  T2.id JOIN web_client_accelerator AS T3 ON T1.accelerator_id  =  T3.id ORDER BY T1.compatible_since_year DESC",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "T3.name",
+      "FROM",
+      "accelerator_compatible_browser",
+      "AS",
+      "T1",
+      "JOIN",
+      "browser",
+      "AS",
+      "T2",
+      "ON",
+      "T1.browser_id",
+      "=",
+      "T2.id",
+      "JOIN",
+      "web_client_accelerator",
+      "AS",
+      "T3",
+      "ON",
+      "T1.accelerator_id",
+      "=",
+      "T3.id",
+      "ORDER",
+      "BY",
+      "T1.compatible_since_year",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "accelerator_compatible_browser",
+      "as",
+      "t1",
+      "join",
+      "browser",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "browser_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "web_client_accelerator",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "accelerator_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "compatible_since_year",
+      "desc"
+    ],
+    "question_spider": "give me names of all compatible browsers and accelerators in the descending order of compatible year",
+    "question": "按照兼容年份的降序给出所有兼容浏览器和加速器的名称。",
+    "question_cspider": "按照兼容年份的降序给出所有兼容浏览器和加速器的名称。",
+    "Harold": "BLEU = 71.72, 85.2/73.1/68.0/62.5 (BP=1.000, ratio=1.038, hyp_len=27, ref_len=26)",
+    "question_toks": [
+      "给",
+      "我",
+      "所",
+      "有",
+      "兼",
+      "容",
+      "浏",
+      "览",
+      "器",
+      "和",
+      "加",
+      "速",
+      "器",
+      "的",
+      "名",
+      "称",
+      "，",
+      "按",
+      "兼",
+      "容",
+      "年",
+      "份",
+      "的",
+      "降",
+      "序",
+      "排",
+      "列"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

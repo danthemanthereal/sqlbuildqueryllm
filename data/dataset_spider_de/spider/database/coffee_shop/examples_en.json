@@ -1,0 +1,2269 @@
+[
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT count(*) FROM member WHERE Membership_card  =  'Black'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "member",
+      "WHERE",
+      "Membership_card",
+      "=",
+      "'Black",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "member",
+      "where",
+      "membership_card",
+      "=",
+      "value"
+    ],
+    "question": "How many members have the black membership card?",
+    "question_toks": [
+      "How",
+      "many",
+      "members",
+      "have",
+      "the",
+      "black",
+      "membership",
+      "card",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Black\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT count(*) ,  address FROM member GROUP BY address",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "address",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "address"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "address",
+      "from",
+      "member",
+      "group",
+      "by",
+      "address"
+    ],
+    "question": "Find the number of members living in each address.",
+    "question_toks": [
+      "Find",
+      "the",
+      "number",
+      "of",
+      "members",
+      "living",
+      "in",
+      "each",
+      "address",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT name FROM member WHERE address  =  'Harford' OR address  =  'Waterbury'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "member",
+      "WHERE",
+      "address",
+      "=",
+      "'Harford",
+      "'",
+      "OR",
+      "address",
+      "=",
+      "'Waterbury",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "where",
+      "address",
+      "=",
+      "value",
+      "or",
+      "address",
+      "=",
+      "value"
+    ],
+    "question": "Give me the names of members whose address is in Harford or Waterbury.",
+    "question_toks": [
+      "Give",
+      "me",
+      "the",
+      "names",
+      "of",
+      "members",
+      "whose",
+      "address",
+      "is",
+      "in",
+      "Harford",
+      "or",
+      "Waterbury",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"Harford\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"Waterbury\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT name ,  member_id FROM member WHERE Membership_card  =  'Black' OR age  <  30",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "member_id",
+      "FROM",
+      "member",
+      "WHERE",
+      "Membership_card",
+      "=",
+      "'Black",
+      "'",
+      "OR",
+      "age",
+      "<",
+      "30"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "member_id",
+      "from",
+      "member",
+      "where",
+      "membership_card",
+      "=",
+      "value",
+      "or",
+      "age",
+      "<",
+      "value"
+    ],
+    "question": "Find the ids and names of members who are under age 30 or with black membership card.",
+    "question_toks": [
+      "Find",
+      "the",
+      "ids",
+      "and",
+      "names",
+      "of",
+      "members",
+      "who",
+      "are",
+      "under",
+      "age",
+      "30",
+      "or",
+      "with",
+      "black",
+      "membership",
+      "card",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Black\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          30.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT Time_of_purchase ,  age ,  address FROM member ORDER BY Time_of_purchase",
+    "query_toks": [
+      "SELECT",
+      "Time_of_purchase",
+      ",",
+      "age",
+      ",",
+      "address",
+      "FROM",
+      "member",
+      "ORDER",
+      "BY",
+      "Time_of_purchase"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "time_of_purchase",
+      ",",
+      "age",
+      ",",
+      "address",
+      "from",
+      "member",
+      "order",
+      "by",
+      "time_of_purchase"
+    ],
+    "question": "Find the purchase time, age and address of each member, and show the results in the order of purchase time.",
+    "question_toks": [
+      "Find",
+      "the",
+      "purchase",
+      "time",
+      ",",
+      "age",
+      "and",
+      "address",
+      "of",
+      "each",
+      "member",
+      ",",
+      "and",
+      "show",
+      "the",
+      "results",
+      "in",
+      "the",
+      "order",
+      "of",
+      "purchase",
+      "time",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT Membership_card FROM member GROUP BY Membership_card HAVING count(*)  >  5",
+    "query_toks": [
+      "SELECT",
+      "Membership_card",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "Membership_card",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "membership_card",
+      "from",
+      "member",
+      "group",
+      "by",
+      "membership_card",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Which membership card has more than 5 members?",
+    "question_toks": [
+      "Which",
+      "membership",
+      "card",
+      "has",
+      "more",
+      "than",
+      "5",
+      "members",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          5.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT address FROM member WHERE age  <  30 INTERSECT SELECT address FROM member WHERE age  >  40",
+    "query_toks": [
+      "SELECT",
+      "address",
+      "FROM",
+      "member",
+      "WHERE",
+      "age",
+      "<",
+      "30",
+      "INTERSECT",
+      "SELECT",
+      "address",
+      "FROM",
+      "member",
+      "WHERE",
+      "age",
+      ">",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "address",
+      "from",
+      "member",
+      "where",
+      "age",
+      "<",
+      "value",
+      "intersect",
+      "select",
+      "address",
+      "from",
+      "member",
+      "where",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "Which address has both members younger than 30 and members older than 40?",
+    "question_toks": [
+      "Which",
+      "address",
+      "has",
+      "both",
+      "members",
+      "younger",
+      "than",
+      "30",
+      "and",
+      "members",
+      "older",
+      "than",
+      "40",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            40.0,
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          30.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT membership_card FROM member WHERE address  =  'Hartford' INTERSECT SELECT membership_card FROM member WHERE address  =  'Waterbury'",
+    "query_toks": [
+      "SELECT",
+      "membership_card",
+      "FROM",
+      "member",
+      "WHERE",
+      "address",
+      "=",
+      "'Hartford",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "membership_card",
+      "FROM",
+      "member",
+      "WHERE",
+      "address",
+      "=",
+      "'Waterbury",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "membership_card",
+      "from",
+      "member",
+      "where",
+      "address",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "membership_card",
+      "from",
+      "member",
+      "where",
+      "address",
+      "=",
+      "value"
+    ],
+    "question": "What is the membership card held by both members living in Hartford and ones living in Waterbury address?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "membership",
+      "card",
+      "held",
+      "by",
+      "both",
+      "members",
+      "living",
+      "in",
+      "Hartford",
+      "and",
+      "ones",
+      "living",
+      "in",
+      "Waterbury",
+      "address",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            "\"Waterbury\"",
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"Hartford\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT count(*) FROM member WHERE address != 'Hartford'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "member",
+      "WHERE",
+      "address",
+      "!",
+      "=",
+      "'Hartford",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "member",
+      "where",
+      "address",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "How many members are not living in Hartford?",
+    "question_toks": [
+      "How",
+      "many",
+      "members",
+      "are",
+      "not",
+      "living",
+      "in",
+      "Hartford",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"Hartford\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT address FROM member EXCEPT SELECT address FROM member WHERE Membership_card  =  'Black'",
+    "query_toks": [
+      "SELECT",
+      "address",
+      "FROM",
+      "member",
+      "EXCEPT",
+      "SELECT",
+      "address",
+      "FROM",
+      "member",
+      "WHERE",
+      "Membership_card",
+      "=",
+      "'Black",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "address",
+      "from",
+      "member",
+      "except",
+      "select",
+      "address",
+      "from",
+      "member",
+      "where",
+      "membership_card",
+      "=",
+      "value"
+    ],
+    "question": "Which address do not have any member with the black membership card?",
+    "question_toks": [
+      "Which",
+      "address",
+      "do",
+      "not",
+      "have",
+      "any",
+      "member",
+      "with",
+      "the",
+      "black",
+      "membership",
+      "card",
+      "?"
+    ],
+    "sql": {
+      "except": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            "\"Black\"",
+            null
+          ]
+        ]
+      },
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT address FROM shop ORDER BY open_year",
+    "query_toks": [
+      "SELECT",
+      "address",
+      "FROM",
+      "shop",
+      "ORDER",
+      "BY",
+      "open_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "address",
+      "from",
+      "shop",
+      "order",
+      "by",
+      "open_year"
+    ],
+    "question": "Show the shop addresses ordered by their opening year.",
+    "question_toks": [
+      "Show",
+      "the",
+      "shop",
+      "addresses",
+      "ordered",
+      "by",
+      "their",
+      "opening",
+      "year",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT avg(num_of_staff) ,  avg(score) FROM shop",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "num_of_staff",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "score",
+      ")",
+      "FROM",
+      "shop"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "num_of_staff",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "score",
+      ")",
+      "from",
+      "shop"
+    ],
+    "question": "What are the average score and average staff number of all shops?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "average",
+      "score",
+      "and",
+      "average",
+      "staff",
+      "number",
+      "of",
+      "all",
+      "shops",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT shop_id ,  address FROM shop WHERE score  <  (SELECT avg(score) FROM shop)",
+    "query_toks": [
+      "SELECT",
+      "shop_id",
+      ",",
+      "address",
+      "FROM",
+      "shop",
+      "WHERE",
+      "score",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "score",
+      ")",
+      "FROM",
+      "shop",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "shop_id",
+      ",",
+      "address",
+      "from",
+      "shop",
+      "where",
+      "score",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "score",
+      ")",
+      "from",
+      "shop",
+      ")"
+    ],
+    "question": "Find the id and address of the shops whose score is below the average score.",
+    "question_toks": [
+      "Find",
+      "the",
+      "id",
+      "and",
+      "address",
+      "of",
+      "the",
+      "shops",
+      "whose",
+      "score",
+      "is",
+      "below",
+      "the",
+      "average",
+      "score",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      4,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT address ,  num_of_staff FROM shop WHERE shop_id NOT IN (SELECT shop_id FROM happy_hour)",
+    "query_toks": [
+      "SELECT",
+      "address",
+      ",",
+      "num_of_staff",
+      "FROM",
+      "shop",
+      "WHERE",
+      "shop_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "shop_id",
+      "FROM",
+      "happy_hour",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "address",
+      ",",
+      "num_of_staff",
+      "from",
+      "shop",
+      "where",
+      "shop_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "shop_id",
+      "from",
+      "happy_hour",
+      ")"
+    ],
+    "question": "Find the address and staff number of the shops that do not have any happy hour.",
+    "question_toks": [
+      "Find",
+      "the",
+      "address",
+      "and",
+      "staff",
+      "number",
+      "of",
+      "the",
+      "shops",
+      "that",
+      "do",
+      "not",
+      "have",
+      "any",
+      "happy",
+      "hour",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT t1.address ,  t1.shop_id FROM shop AS t1 JOIN happy_hour AS t2 ON t1.shop_id  =  t2.shop_id WHERE MONTH  =  'May'",
+    "query_toks": [
+      "SELECT",
+      "t1.address",
+      ",",
+      "t1.shop_id",
+      "FROM",
+      "shop",
+      "AS",
+      "t1",
+      "JOIN",
+      "happy_hour",
+      "AS",
+      "t2",
+      "ON",
+      "t1.shop_id",
+      "=",
+      "t2.shop_id",
+      "WHERE",
+      "MONTH",
+      "=",
+      "'May",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "address",
+      ",",
+      "t1",
+      ".",
+      "shop_id",
+      "from",
+      "shop",
+      "as",
+      "t1",
+      "join",
+      "happy_hour",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "shop_id",
+      "=",
+      "t2",
+      ".",
+      "shop_id",
+      "where",
+      "month",
+      "=",
+      "value"
+    ],
+    "question": "What are the id and address of the shops which have a happy hour in May?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "id",
+      "and",
+      "address",
+      "of",
+      "the",
+      "shops",
+      "which",
+      "have",
+      "a",
+      "happy",
+      "hour",
+      "in",
+      "May",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"May\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT shop_id ,  count(*) FROM happy_hour GROUP BY shop_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "shop_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "happy_hour",
+      "GROUP",
+      "BY",
+      "shop_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "shop_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "happy_hour",
+      "group",
+      "by",
+      "shop_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "which shop has happy hour most frequently? List its id and number of happy hours.",
+    "question_toks": [
+      "which",
+      "shop",
+      "has",
+      "happy",
+      "hour",
+      "most",
+      "frequently",
+      "?",
+      "List",
+      "its",
+      "id",
+      "and",
+      "number",
+      "of",
+      "happy",
+      "hours",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT MONTH FROM happy_hour GROUP BY MONTH ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "MONTH",
+      "FROM",
+      "happy_hour",
+      "GROUP",
+      "BY",
+      "MONTH",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "month",
+      "from",
+      "happy_hour",
+      "group",
+      "by",
+      "month",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Which month has the most happy hours?",
+    "question_toks": [
+      "Which",
+      "month",
+      "has",
+      "the",
+      "most",
+      "happy",
+      "hours",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "coffee_shop",
+    "query": "SELECT MONTH FROM happy_hour GROUP BY MONTH HAVING count(*)  >  2",
+    "query_toks": [
+      "SELECT",
+      "MONTH",
+      "FROM",
+      "happy_hour",
+      "GROUP",
+      "BY",
+      "MONTH",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "month",
+      "from",
+      "happy_hour",
+      "group",
+      "by",
+      "month",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Which months have more than 2 happy hours?",
+    "question_toks": [
+      "Which",
+      "months",
+      "have",
+      "more",
+      "than",
+      "2",
+      "happy",
+      "hours",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  }
+]

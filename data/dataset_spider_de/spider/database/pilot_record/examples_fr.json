@@ -1,0 +1,1751 @@
+[
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT count(*) FROM pilot",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "pilot"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "pilot"
+    ],
+    "question": "Combien de pilotes y a-t-il?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT Pilot_name FROM pilot ORDER BY Rank ASC",
+    "query_toks": [
+      "SELECT",
+      "Pilot_name",
+      "FROM",
+      "pilot",
+      "ORDER",
+      "BY",
+      "Rank",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "pilot_name",
+      "from",
+      "pilot",
+      "order",
+      "by",
+      "rank",
+      "asc"
+    ],
+    "question": "Dressez la liste des noms des pilotes par ordre croissant de rang.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT POSITION ,  Team FROM pilot",
+    "query_toks": [
+      "SELECT",
+      "POSITION",
+      ",",
+      "Team",
+      "FROM",
+      "pilot"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "position",
+      ",",
+      "team",
+      "from",
+      "pilot"
+    ],
+    "question": "Quels sont les postes et les équipes de pilotes?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT DISTINCT POSITION FROM pilot WHERE Age  >  30",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "POSITION",
+      "FROM",
+      "pilot",
+      "WHERE",
+      "Age",
+      ">",
+      "30"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "position",
+      "from",
+      "pilot",
+      "where",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "Énumérez les positions distinctes des pilotes de plus de 30 ans.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          30.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT Pilot_name FROM pilot WHERE Team  =  \"Bradley\" OR Team  =  \"Fordham\"",
+    "query_toks": [
+      "SELECT",
+      "Pilot_name",
+      "FROM",
+      "pilot",
+      "WHERE",
+      "Team",
+      "=",
+      "``",
+      "Bradley",
+      "''",
+      "OR",
+      "Team",
+      "=",
+      "``",
+      "Fordham",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "pilot_name",
+      "from",
+      "pilot",
+      "where",
+      "team",
+      "=",
+      "value",
+      "or",
+      "team",
+      "=",
+      "value"
+    ],
+    "question": "Montrez les noms des pilotes de l'équipe \"Bradley\" ou \"Fordham\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Bradley\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Fordham\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT Join_Year FROM pilot ORDER BY Rank ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Join_Year",
+      "FROM",
+      "pilot",
+      "ORDER",
+      "BY",
+      "Rank",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "join_year",
+      "from",
+      "pilot",
+      "order",
+      "by",
+      "rank",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Quelle est l'année d'adhésion du pilote du plus haut rang?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT Nationality ,  COUNT(*) FROM pilot GROUP BY Nationality",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "pilot",
+      "GROUP",
+      "BY",
+      "Nationality"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "pilot",
+      "group",
+      "by",
+      "nationality"
+    ],
+    "question": "Quelles sont les différentes nationalités des pilotes? Montrez chaque nationalité et le nombre de pilotes de chaque nationalité.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT Nationality FROM pilot GROUP BY Nationality ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Nationality",
+      "FROM",
+      "pilot",
+      "GROUP",
+      "BY",
+      "Nationality",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      "from",
+      "pilot",
+      "group",
+      "by",
+      "nationality",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Affichez la nationalité la plus courante des pilotes.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT POSITION FROM pilot WHERE Join_Year\t <  2000 INTERSECT SELECT POSITION FROM pilot WHERE Join_Year\t >  2005",
+    "query_toks": [
+      "SELECT",
+      "POSITION",
+      "FROM",
+      "pilot",
+      "WHERE",
+      "Join_Year",
+      "<",
+      "2000",
+      "INTERSECT",
+      "SELECT",
+      "POSITION",
+      "FROM",
+      "pilot",
+      "WHERE",
+      "Join_Year",
+      ">",
+      "2005"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "position",
+      "from",
+      "pilot",
+      "where",
+      "join_year",
+      "<",
+      "value",
+      "intersect",
+      "select",
+      "position",
+      "from",
+      "pilot",
+      "where",
+      "join_year",
+      ">",
+      "value"
+    ],
+    "question": "Montrez les postes de pilotes auxquels les pilotes ont rejoint après 2005 et les pilotes qui ont rejoint avant 2000.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          2000.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            2005.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT T3.Pilot_name ,  T2.Model FROM pilot_record AS T1 JOIN aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN pilot AS T3 ON T1.Pilot_ID  =  T3.Pilot_ID",
+    "query_toks": [
+      "SELECT",
+      "T3.Pilot_name",
+      ",",
+      "T2.Model",
+      "FROM",
+      "pilot_record",
+      "AS",
+      "T1",
+      "JOIN",
+      "aircraft",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Aircraft_ID",
+      "=",
+      "T2.Aircraft_ID",
+      "JOIN",
+      "pilot",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Pilot_ID",
+      "=",
+      "T3.Pilot_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "pilot_name",
+      ",",
+      "t2",
+      ".",
+      "model",
+      "from",
+      "pilot_record",
+      "as",
+      "t1",
+      "join",
+      "aircraft",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "aircraft_id",
+      "=",
+      "t2",
+      ".",
+      "aircraft_id",
+      "join",
+      "pilot",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "pilot_id",
+      "=",
+      "t3",
+      ".",
+      "pilot_id"
+    ],
+    "question": "Montrez les noms des pilotes et des modèles d'avions avec lesquels ils ont volé.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT T3.Pilot_name ,  T2.Fleet_Series FROM pilot_record AS T1 JOIN aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN pilot AS T3 ON T1.Pilot_ID  =  T3.Pilot_ID ORDER BY T3.Rank",
+    "query_toks": [
+      "SELECT",
+      "T3.Pilot_name",
+      ",",
+      "T2.Fleet_Series",
+      "FROM",
+      "pilot_record",
+      "AS",
+      "T1",
+      "JOIN",
+      "aircraft",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Aircraft_ID",
+      "=",
+      "T2.Aircraft_ID",
+      "JOIN",
+      "pilot",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Pilot_ID",
+      "=",
+      "T3.Pilot_ID",
+      "ORDER",
+      "BY",
+      "T3.Rank"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "pilot_name",
+      ",",
+      "t2",
+      ".",
+      "fleet_series",
+      "from",
+      "pilot_record",
+      "as",
+      "t1",
+      "join",
+      "aircraft",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "aircraft_id",
+      "=",
+      "t2",
+      ".",
+      "aircraft_id",
+      "join",
+      "pilot",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "pilot_id",
+      "=",
+      "t3",
+      ".",
+      "pilot_id",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "rank"
+    ],
+    "question": "Montrez les noms des pilotes et des séries de la flotte des avions avec lesquels ils ont volé dans l'ordre croissant du grade du pilote.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT T2.Fleet_Series FROM pilot_record AS T1 JOIN aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN pilot AS T3 ON T1.Pilot_ID  =  T3.Pilot_ID WHERE T3.Age  <  34",
+    "query_toks": [
+      "SELECT",
+      "T2.Fleet_Series",
+      "FROM",
+      "pilot_record",
+      "AS",
+      "T1",
+      "JOIN",
+      "aircraft",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Aircraft_ID",
+      "=",
+      "T2.Aircraft_ID",
+      "JOIN",
+      "pilot",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Pilot_ID",
+      "=",
+      "T3.Pilot_ID",
+      "WHERE",
+      "T3.Age",
+      "<",
+      "34"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "fleet_series",
+      "from",
+      "pilot_record",
+      "as",
+      "t1",
+      "join",
+      "aircraft",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "aircraft_id",
+      "=",
+      "t2",
+      ".",
+      "aircraft_id",
+      "join",
+      "pilot",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "pilot_id",
+      "=",
+      "t3",
+      ".",
+      "pilot_id",
+      "where",
+      "t3",
+      ".",
+      "age",
+      "<",
+      "value"
+    ],
+    "question": "Affichez la série de la flotte des avions pilotés par des pilotes de moins de 34 ans",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          34.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT T2.Pilot_name ,  COUNT(*) FROM pilot_record AS T1 JOIN pilot AS T2 ON T1.pilot_ID  =  T2.pilot_ID GROUP BY T2.Pilot_name",
+    "query_toks": [
+      "SELECT",
+      "T2.Pilot_name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "pilot_record",
+      "AS",
+      "T1",
+      "JOIN",
+      "pilot",
+      "AS",
+      "T2",
+      "ON",
+      "T1.pilot_ID",
+      "=",
+      "T2.pilot_ID",
+      "GROUP",
+      "BY",
+      "T2.Pilot_name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "pilot_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "pilot_record",
+      "as",
+      "t1",
+      "join",
+      "pilot",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "pilot_id",
+      "=",
+      "t2",
+      ".",
+      "pilot_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "pilot_name"
+    ],
+    "question": "Montrez les noms des pilotes et le nombre d'enregistrements dont ils disposent.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT T2.Pilot_name ,  COUNT(*) FROM pilot_record AS T1 JOIN pilot AS T2 ON T1.pilot_ID  =  T2.pilot_ID GROUP BY T2.Pilot_name HAVING COUNT(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T2.Pilot_name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "pilot_record",
+      "AS",
+      "T1",
+      "JOIN",
+      "pilot",
+      "AS",
+      "T2",
+      "ON",
+      "T1.pilot_ID",
+      "=",
+      "T2.pilot_ID",
+      "GROUP",
+      "BY",
+      "T2.Pilot_name",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "pilot_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "pilot_record",
+      "as",
+      "t1",
+      "join",
+      "pilot",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "pilot_id",
+      "=",
+      "t2",
+      ".",
+      "pilot_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "pilot_name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Affichez les noms des pilotes qui ont plus d'un enregistrement.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "pilot_record",
+    "query": "SELECT Pilot_name FROM pilot WHERE Pilot_ID NOT IN (SELECT Pilot_ID FROM pilot_record)",
+    "query_toks": [
+      "SELECT",
+      "Pilot_name",
+      "FROM",
+      "pilot",
+      "WHERE",
+      "Pilot_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Pilot_ID",
+      "FROM",
+      "pilot_record",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "pilot_name",
+      "from",
+      "pilot",
+      "where",
+      "pilot_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "pilot_id",
+      "from",
+      "pilot_record",
+      ")"
+    ],
+    "question": "Énumérez les noms des pilotes qui n'ont aucun dossier.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      17,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

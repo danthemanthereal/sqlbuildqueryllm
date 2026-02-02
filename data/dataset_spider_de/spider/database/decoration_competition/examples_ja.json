@@ -1,0 +1,1553 @@
+[
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT count(*) FROM member",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "member"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "member"
+    ],
+    "question": "メンバーは何人いますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT Name FROM member ORDER BY Name ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "member",
+      "ORDER",
+      "BY",
+      "Name",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "order",
+      "by",
+      "name",
+      "asc"
+    ],
+    "question": "メンバーの名前をアルファベットの昇順でリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT Name ,  Country FROM member",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      ",",
+      "Country",
+      "FROM",
+      "member"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "country",
+      "from",
+      "member"
+    ],
+    "question": "メンバーの名前と国は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT Name FROM member WHERE Country  =  \"United States\" OR Country  =  \"Canada\"",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "member",
+      "WHERE",
+      "Country",
+      "=",
+      "``",
+      "United",
+      "States",
+      "''",
+      "OR",
+      "Country",
+      "=",
+      "``",
+      "Canada",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "where",
+      "country",
+      "=",
+      "value",
+      "or",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "国が「United States」または「カナダ」であるメンバーの名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"United States\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Canada\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT Country ,  COUNT(*) FROM member GROUP BY Country",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "Country"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "member",
+      "group",
+      "by",
+      "country"
+    ],
+    "question": "さまざまな国とそれぞれの国のメンバー数を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT Country FROM member GROUP BY Country ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "Country",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "member",
+      "group",
+      "by",
+      "country",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "メンバー間で最も一般的な国を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT Country FROM member GROUP BY Country HAVING COUNT(*)  >  2",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      "FROM",
+      "member",
+      "GROUP",
+      "BY",
+      "Country",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "member",
+      "group",
+      "by",
+      "country",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "2人以上のメンバーがいる国はどれですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT Leader_Name ,  College_Location FROM college",
+    "query_toks": [
+      "SELECT",
+      "Leader_Name",
+      ",",
+      "College_Location",
+      "FROM",
+      "college"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "leader_name",
+      ",",
+      "college_location",
+      "from",
+      "college"
+    ],
+    "question": "大学のリーダーの名前と場所を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT T2.Name ,  T1.Name FROM college AS T1 JOIN member AS T2 ON T1.College_ID  =  T2.College_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T1.Name",
+      "FROM",
+      "college",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.College_ID",
+      "=",
+      "T2.College_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "college",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "college_id",
+      "=",
+      "t2",
+      ".",
+      "college_id"
+    ],
+    "question": "メンバーの名前と彼らが通っている大学の名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT T2.Name ,  T1.College_Location FROM college AS T1 JOIN member AS T2 ON T1.College_ID  =  T2.College_ID ORDER BY T2.Name ASC",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T1.College_Location",
+      "FROM",
+      "college",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.College_ID",
+      "=",
+      "T2.College_ID",
+      "ORDER",
+      "BY",
+      "T2.Name",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "college_location",
+      "from",
+      "college",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "college_id",
+      "=",
+      "t2",
+      ".",
+      "college_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "name",
+      "asc"
+    ],
+    "question": "メンバーの名前と、メンバーが通っている大学の場所を、メンバー名のアルファベットの昇順で表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT DISTINCT T1.Leader_Name FROM college AS T1 JOIN member AS T2 ON T1.College_ID  =  T2.College_ID WHERE T2.Country  =  \"Canada\"",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.Leader_Name",
+      "FROM",
+      "college",
+      "AS",
+      "T1",
+      "JOIN",
+      "member",
+      "AS",
+      "T2",
+      "ON",
+      "T1.College_ID",
+      "=",
+      "T2.College_ID",
+      "WHERE",
+      "T2.Country",
+      "=",
+      "``",
+      "Canada",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "leader_name",
+      "from",
+      "college",
+      "as",
+      "t1",
+      "join",
+      "member",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "college_id",
+      "=",
+      "t2",
+      ".",
+      "college_id",
+      "where",
+      "t2",
+      ".",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "国「Canada」のメンバーに関連付けられている大学のリーダー名を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Canada\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT T1.Name ,  T2.Decoration_Theme FROM member AS T1 JOIN round AS T2 ON T1.Member_ID  =  T2.Member_ID",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      ",",
+      "T2.Decoration_Theme",
+      "FROM",
+      "member",
+      "AS",
+      "T1",
+      "JOIN",
+      "round",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Member_ID",
+      "=",
+      "T2.Member_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "decoration_theme",
+      "from",
+      "member",
+      "as",
+      "t1",
+      "join",
+      "round",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id"
+    ],
+    "question": "メンバーの名前と彼らが持っている装飾のテーマを表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT T1.Name FROM member AS T1 JOIN round AS T2 ON T1.Member_ID  =  T2.Member_ID WHERE T2.Rank_in_Round  >  3",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "member",
+      "AS",
+      "T1",
+      "JOIN",
+      "round",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Member_ID",
+      "=",
+      "T2.Member_ID",
+      "WHERE",
+      "T2.Rank_in_Round",
+      ">",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "member",
+      "as",
+      "t1",
+      "join",
+      "round",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "where",
+      "t2",
+      ".",
+      "rank_in_round",
+      ">",
+      "value"
+    ],
+    "question": "ラウンドでランクが3より高いメンバーの名前を表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT T1.Name FROM member AS T1 JOIN round AS T2 ON T1.Member_ID  =  T2.Member_ID ORDER BY Rank_in_Round ASC",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "member",
+      "AS",
+      "T1",
+      "JOIN",
+      "round",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Member_ID",
+      "=",
+      "T2.Member_ID",
+      "ORDER",
+      "BY",
+      "Rank_in_Round",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "member",
+      "as",
+      "t1",
+      "join",
+      "round",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "member_id",
+      "=",
+      "t2",
+      ".",
+      "member_id",
+      "order",
+      "by",
+      "rank_in_round",
+      "asc"
+    ],
+    "question": "メンバーの名前をランクの昇順でラウンドで表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "decoration_competition",
+    "query": "SELECT Name FROM member WHERE Member_ID NOT IN (SELECT Member_ID FROM round)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "member",
+      "WHERE",
+      "Member_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Member_ID",
+      "FROM",
+      "round",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "member",
+      "where",
+      "member_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "member_id",
+      "from",
+      "round",
+      ")"
+    ],
+    "question": "どのラウンドにも参加しなかったメンバーの名前をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      10,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

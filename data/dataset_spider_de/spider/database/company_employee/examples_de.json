@@ -1,0 +1,1867 @@
+[
+  {
+    "db_id": "company_employee",
+    "query": "SELECT count(*) FROM company WHERE Headquarters  =  'USA'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "company",
+      "WHERE",
+      "Headquarters",
+      "=",
+      "'USA",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "company",
+      "where",
+      "headquarters",
+      "=",
+      "value"
+    ],
+    "question": "Wie viele Unternehmen haben ihren Hauptsitz in den \"US\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"USA\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Name FROM company ORDER BY Sales_in_Billion ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "company",
+      "ORDER",
+      "BY",
+      "Sales_in_Billion",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "company",
+      "order",
+      "by",
+      "sales_in_billion",
+      "asc"
+    ],
+    "question": "Listen Sie die Namen der Unternehmen nach aufsteigender Anzahl der Verkäufe auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Headquarters ,  Industry FROM company",
+    "query_toks": [
+      "SELECT",
+      "Headquarters",
+      ",",
+      "Industry",
+      "FROM",
+      "company"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "headquarters",
+      ",",
+      "industry",
+      "from",
+      "company"
+    ],
+    "question": "Was sind der Hauptsitz und die Branchen aller Unternehmen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Name FROM company WHERE Industry  =  \"Banking\" OR Industry  =  \"Retailing\"",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "company",
+      "WHERE",
+      "Industry",
+      "=",
+      "``",
+      "Banking",
+      "''",
+      "OR",
+      "Industry",
+      "=",
+      "``",
+      "Retailing",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "company",
+      "where",
+      "industry",
+      "=",
+      "value",
+      "or",
+      "industry",
+      "=",
+      "value"
+    ],
+    "question": "Namen von Unternehmen der \"banking\" oder \"retailing industry\" anzeigen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Banking\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Retailing\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT max(Market_Value_in_Billion) ,  min(Market_Value_in_Billion) FROM company",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "Market_Value_in_Billion",
+      ")",
+      ",",
+      "min",
+      "(",
+      "Market_Value_in_Billion",
+      ")",
+      "FROM",
+      "company"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "market_value_in_billion",
+      ")",
+      ",",
+      "min",
+      "(",
+      "market_value_in_billion",
+      ")",
+      "from",
+      "company"
+    ],
+    "question": "Was ist der maximale und minimale Marktwert von Unternehmen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Headquarters FROM company ORDER BY Sales_in_Billion DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Headquarters",
+      "FROM",
+      "company",
+      "ORDER",
+      "BY",
+      "Sales_in_Billion",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "headquarters",
+      "from",
+      "company",
+      "order",
+      "by",
+      "sales_in_billion",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Was ist der Hauptsitz des Unternehmens mit dem größten Umsatz?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Headquarters ,  COUNT(*) FROM company GROUP BY Headquarters",
+    "query_toks": [
+      "SELECT",
+      "Headquarters",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "company",
+      "GROUP",
+      "BY",
+      "Headquarters"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "headquarters",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "company",
+      "group",
+      "by",
+      "headquarters"
+    ],
+    "question": "Zeigen Sie den unterschiedlichen Hauptsitz und die Anzahl der Unternehmen in jedem Hauptsitz an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Headquarters FROM company GROUP BY Headquarters ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Headquarters",
+      "FROM",
+      "company",
+      "GROUP",
+      "BY",
+      "Headquarters",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "headquarters",
+      "from",
+      "company",
+      "group",
+      "by",
+      "headquarters",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Zeigen Sie den häufigsten Hauptsitz für Unternehmen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Headquarters FROM company GROUP BY Headquarters HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "Headquarters",
+      "FROM",
+      "company",
+      "GROUP",
+      "BY",
+      "Headquarters",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "headquarters",
+      "from",
+      "company",
+      "group",
+      "by",
+      "headquarters",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie den Hauptsitz mit mindestens zwei Unternehmen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Headquarters FROM company WHERE Industry  =  \"Banking\" INTERSECT SELECT Headquarters FROM company WHERE Industry  =  \"Oil and gas\"",
+    "query_toks": [
+      "SELECT",
+      "Headquarters",
+      "FROM",
+      "company",
+      "WHERE",
+      "Industry",
+      "=",
+      "``",
+      "Banking",
+      "''",
+      "INTERSECT",
+      "SELECT",
+      "Headquarters",
+      "FROM",
+      "company",
+      "WHERE",
+      "Industry",
+      "=",
+      "``",
+      "Oil",
+      "and",
+      "gas",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "headquarters",
+      "from",
+      "company",
+      "where",
+      "industry",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "headquarters",
+      "from",
+      "company",
+      "where",
+      "industry",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie den Hauptsitz, in dem sowohl Unternehmen der \"banking industry\" als auch Unternehmen der \"oil and gas industry\" tätig sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Banking\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "\"Oil and gas\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT T3.Name ,  T2.Name FROM employment AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID JOIN company AS T3 ON T1.Company_ID  =  T3.Company_ID",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "T2.Name",
+      "FROM",
+      "employment",
+      "AS",
+      "T1",
+      "JOIN",
+      "people",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "JOIN",
+      "company",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Company_ID",
+      "=",
+      "T3.Company_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "employment",
+      "as",
+      "t1",
+      "join",
+      "people",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "join",
+      "company",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "company_id",
+      "=",
+      "t3",
+      ".",
+      "company_id"
+    ],
+    "question": "Zeigen Sie die Namen von Unternehmen und Mitarbeitern an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT T3.Name ,  T2.Name FROM employment AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID JOIN company AS T3 ON T1.Company_ID  =  T3.Company_ID ORDER BY T1.Year_working",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "T2.Name",
+      "FROM",
+      "employment",
+      "AS",
+      "T1",
+      "JOIN",
+      "people",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "JOIN",
+      "company",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Company_ID",
+      "=",
+      "T3.Company_ID",
+      "ORDER",
+      "BY",
+      "T1.Year_working"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "employment",
+      "as",
+      "t1",
+      "join",
+      "people",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "join",
+      "company",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "company_id",
+      "=",
+      "t3",
+      ".",
+      "company_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "year_working"
+    ],
+    "question": "Zeigen Sie die Namen der Unternehmen und der Mitarbeiter in absteigender Reihenfolge der Anzahl der Jahre an, die für diesen Mitarbeiter gearbeitet haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT T2.Name FROM employment AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID JOIN company AS T3 ON T1.Company_ID  =  T3.Company_ID WHERE T3.Sales_in_Billion  >  200",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      "FROM",
+      "employment",
+      "AS",
+      "T1",
+      "JOIN",
+      "people",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "JOIN",
+      "company",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Company_ID",
+      "=",
+      "T3.Company_ID",
+      "WHERE",
+      "T3.Sales_in_Billion",
+      ">",
+      "200"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "employment",
+      "as",
+      "t1",
+      "join",
+      "people",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "join",
+      "company",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "company_id",
+      "=",
+      "t3",
+      ".",
+      "company_id",
+      "where",
+      "t3",
+      ".",
+      "sales_in_billion",
+      ">",
+      "value"
+    ],
+    "question": "Zeigen Sie die Namen der Mitarbeiter an, die für Unternehmen mit einem Umsatz von mehr als 200 arbeiten.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          200.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT T3.Name ,  COUNT(*) FROM employment AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID JOIN company AS T3 ON T1.Company_ID  =  T3.Company_ID GROUP BY T3.Name",
+    "query_toks": [
+      "SELECT",
+      "T3.Name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "employment",
+      "AS",
+      "T1",
+      "JOIN",
+      "people",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "JOIN",
+      "company",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Company_ID",
+      "=",
+      "T3.Company_ID",
+      "GROUP",
+      "BY",
+      "T3.Name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "employment",
+      "as",
+      "t1",
+      "join",
+      "people",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "join",
+      "company",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "company_id",
+      "=",
+      "t3",
+      ".",
+      "company_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "name"
+    ],
+    "question": "Zeigen Sie die Namen der Unternehmen und die Anzahl der Mitarbeiter an",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM employment)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "people",
+      "WHERE",
+      "People_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "People_ID",
+      "FROM",
+      "employment",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "people_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "people_id",
+      "from",
+      "employment",
+      ")"
+    ],
+    "question": "Listen Sie die Namen von Personen auf, die von keinem Unternehmen beschäftigt werden",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      15,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "company_employee",
+    "query": "SELECT name FROM company WHERE Sales_in_Billion  >  200 ORDER BY Sales_in_Billion ,  Profits_in_Billion DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "company",
+      "WHERE",
+      "Sales_in_Billion",
+      ">",
+      "200",
+      "ORDER",
+      "BY",
+      "Sales_in_Billion",
+      ",",
+      "Profits_in_Billion",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "company",
+      "where",
+      "sales_in_billion",
+      ">",
+      "value",
+      "order",
+      "by",
+      "sales_in_billion",
+      ",",
+      "profits_in_billion",
+      "desc"
+    ],
+    "question": "Listen Sie die Namen der Unternehmen mit mehr als 200 Verkäufen in absteigender Reihenfolge von Umsatz und Gewinn auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          200.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

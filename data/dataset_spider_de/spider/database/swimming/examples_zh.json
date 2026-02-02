@@ -1,0 +1,4225 @@
+[
+  {
+    "db_id": "swimming",
+    "query": "SELECT count(*) FROM event",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "event"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "event"
+    ],
+    "question_spider": "How many events are there?",
+    "question": "有多少活动？",
+    "question_cspider": "有多少活动？",
+    "Harold": "BLEU = 0.00, 66.7/40.0/25.0/0.0 (BP=1.000, ratio=1.000, hyp_len=6, ref_len=6)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "事",
+      "件",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT name FROM event ORDER BY YEAR DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "event",
+      "ORDER",
+      "BY",
+      "YEAR",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "event",
+      "order",
+      "by",
+      "year",
+      "desc"
+    ],
+    "question_spider": "List all the event names by year from the most recent to the oldest.",
+    "question": "将所有事件名称按从最新到最老的年份列出。",
+    "question_cspider": "将所有事件名称按从最新到最老的年份列出。",
+    "Harold": "BLEU = 42.76, 84.2/55.6/35.3/25.0 (BP=0.949, ratio=0.950, hyp_len=19, ref_len=20)",
+    "question_toks": [
+      "按",
+      "年",
+      "份",
+      "列",
+      "出",
+      "所",
+      "有",
+      "事",
+      "件",
+      "名",
+      "称",
+      "，",
+      "从",
+      "最",
+      "近",
+      "到",
+      "最",
+      "早",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT name FROM event ORDER BY YEAR DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "event",
+      "ORDER",
+      "BY",
+      "YEAR",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "event",
+      "order",
+      "by",
+      "year",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name of the event that happened in the most recent year?",
+    "question": "最近的一年发生的事件的名称是什么？",
+    "question_cspider": "最近的一年发生的事件的名称是什么？",
+    "Harold": "BLEU = 85.21, 100.0/93.3/85.7/84.6 (BP=0.939, ratio=0.941, hyp_len=16, ref_len=17)",
+    "question_toks": [
+      "最",
+      "近",
+      "一",
+      "年",
+      "发",
+      "生",
+      "的",
+      "事",
+      "件",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT count(*) FROM stadium",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "stadium"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "stadium"
+    ],
+    "question_spider": "How many stadiums are there?",
+    "question": "有多少个体育场？",
+    "question_cspider": "有多少个体育场？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=8, ref_len=8)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "个",
+      "体",
+      "育",
+      "场",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT name FROM stadium ORDER BY capacity DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "stadium",
+      "ORDER",
+      "BY",
+      "capacity",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "stadium",
+      "order",
+      "by",
+      "capacity",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name of the stadium that has the maximum capacity.",
+    "question": "找出具有最大容量的体育场名称。",
+    "question_cspider": "找出具有最大容量的体育场名称。",
+    "Harold": "BLEU = 68.65, 87.5/73.3/64.3/53.8 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "最",
+      "大",
+      "容",
+      "量",
+      "的",
+      "体",
+      "育",
+      "场",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT name FROM stadium WHERE capacity  <  (SELECT avg(capacity) FROM stadium)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "capacity",
+      "<",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "stadium",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "stadium",
+      "where",
+      "capacity",
+      "<",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "stadium",
+      ")"
+    ],
+    "question_spider": "Find the names of stadiums whose capacity is smaller than the average capacity.",
+    "question": "找出容量小于平均容量的体育场馆的名称。",
+    "question_cspider": "找出容量小于平均容量的体育场馆的名称。",
+    "Harold": "BLEU = 74.70, 94.4/82.4/75.0/66.7 (BP=0.946, ratio=0.947, hyp_len=18, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "容",
+      "量",
+      "小",
+      "于",
+      "平",
+      "均",
+      "容",
+      "量",
+      "的",
+      "体",
+      "育",
+      "场",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT country FROM stadium GROUP BY country ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "country",
+      "FROM",
+      "stadium",
+      "GROUP",
+      "BY",
+      "country",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "stadium",
+      "group",
+      "by",
+      "country",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the country that has the most stadiums.",
+    "question": "找到拥有最多球场的国家。",
+    "question_cspider": "找到拥有最多球场的国家。",
+    "Harold": "BLEU = 37.60, 71.4/46.2/33.3/18.2 (BP=1.000, ratio=1.167, hyp_len=14, ref_len=12)",
+    "question_toks": [
+      "查",
+      "找",
+      "拥",
+      "有",
+      "最",
+      "多",
+      "体",
+      "育",
+      "场",
+      "馆",
+      "的",
+      "国",
+      "家",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT country FROM stadium GROUP BY country HAVING count(*)  <=  3",
+    "query_toks": [
+      "SELECT",
+      "country",
+      "FROM",
+      "stadium",
+      "GROUP",
+      "BY",
+      "country",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "stadium",
+      "group",
+      "by",
+      "country",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "=",
+      "value"
+    ],
+    "question_spider": "Which country has at most 3 stadiums listed?",
+    "question": "哪个国家有最多3个体育场馆在名单上？",
+    "question_cspider": "哪个国家有最多3个体育场馆在名单上？",
+    "Harold": "BLEU = 37.18, 85.7/61.5/41.7/27.3 (BP=0.751, ratio=0.778, hyp_len=14, ref_len=18)",
+    "question_toks": [
+      "哪",
+      "个",
+      "国",
+      "家",
+      "最",
+      "多",
+      "列",
+      "出",
+      "3",
+      "个",
+      "体",
+      "育",
+      "场",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          6,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT country FROM stadium WHERE capacity  >  60000 INTERSECT SELECT country FROM stadium WHERE capacity  <  50000",
+    "query_toks": [
+      "SELECT",
+      "country",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "capacity",
+      ">",
+      "60000",
+      "INTERSECT",
+      "SELECT",
+      "country",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "capacity",
+      "<",
+      "50000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "stadium",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "country",
+      "from",
+      "stadium",
+      "where",
+      "capacity",
+      "<",
+      "value"
+    ],
+    "question_spider": "Which country has both stadiums with capacity greater than 60000 and stadiums with capacity less than 50000?",
+    "question": "哪个国家既有容量大于60000个的体育场馆，又有容量小于50000个的体育场？",
+    "question_cspider": "哪个国家既有容量大于60000个的体育场馆，又有容量小于50000个的体育场？",
+    "Harold": "BLEU = 44.72, 73.8/51.2/37.5/28.2 (BP=1.000, ratio=1.077, hyp_len=42, ref_len=39)",
+    "question_toks": [
+      "哪",
+      "个",
+      "国",
+      "家",
+      "/",
+      "地",
+      "区",
+      "的",
+      "体",
+      "育",
+      "馆",
+      "和",
+      "体",
+      "育",
+      "馆",
+      "的",
+      "容",
+      "量",
+      "都",
+      "大",
+      "于",
+      "6",
+      "0",
+      "0",
+      "0",
+      "0",
+      "，",
+      "而",
+      "体",
+      "育",
+      "馆",
+      "的",
+      "容",
+      "量",
+      "小",
+      "于",
+      "5",
+      "0",
+      "0",
+      "0",
+      "0",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          60000,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  16,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            50000,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT count(DISTINCT city) FROM stadium WHERE opening_year  <  2006",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "city",
+      ")",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "opening_year",
+      "<",
+      "2006"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "city",
+      ")",
+      "from",
+      "stadium",
+      "where",
+      "opening_year",
+      "<",
+      "value"
+    ],
+    "question_spider": "How many cities have a stadium that was opened before the year of 2006?",
+    "question": "有多少个城市有在2006年前开放的体育场？",
+    "question_cspider": "有多少个城市有在2006年前开放的体育场？",
+    "Harold": "BLEU = 52.77, 85.0/63.2/50.0/35.3 (BP=0.951, ratio=0.952, hyp_len=20, ref_len=21)",
+    "question_toks": [
+      "2",
+      "0",
+      "0",
+      "6",
+      "年",
+      "之",
+      "前",
+      "有",
+      "多",
+      "少",
+      "个",
+      "城",
+      "市",
+      "开",
+      "设",
+      "了",
+      "体",
+      "育",
+      "场",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                15,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          2006,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT country ,  count(*) FROM stadium GROUP BY country",
+    "query_toks": [
+      "SELECT",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "stadium",
+      "GROUP",
+      "BY",
+      "country"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "stadium",
+      "group",
+      "by",
+      "country"
+    ],
+    "question_spider": "How many stadiums does each country have?",
+    "question": "每个国家有多少个体育场馆？",
+    "question_cspider": "每个国家有多少个体育场馆？",
+    "Harold": "BLEU = 50.31, 90.9/70.0/55.6/37.5 (BP=0.834, ratio=0.846, hyp_len=11, ref_len=13)",
+    "question_toks": [
+      "每",
+      "个",
+      "国",
+      "家",
+      "有",
+      "几",
+      "个",
+      "体",
+      "育",
+      "场",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT country FROM stadium EXCEPT SELECT country FROM stadium WHERE opening_year  >  2006",
+    "query_toks": [
+      "SELECT",
+      "country",
+      "FROM",
+      "stadium",
+      "EXCEPT",
+      "SELECT",
+      "country",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "opening_year",
+      ">",
+      "2006"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "stadium",
+      "except",
+      "select",
+      "country",
+      "from",
+      "stadium",
+      "where",
+      "opening_year",
+      ">",
+      "value"
+    ],
+    "question_spider": "Which countries do not have a stadium that was opened after 2006?",
+    "question": "哪些国家没有在2006后开放的体育场？",
+    "question_cspider": "哪些国家没有在2006后开放的体育场？",
+    "Harold": "BLEU = 53.68, 78.3/63.6/47.6/35.0 (BP=1.000, ratio=1.211, hyp_len=23, ref_len=19)",
+    "question_toks": [
+      "哪",
+      "些",
+      "国",
+      "家",
+      "/",
+      "地",
+      "区",
+      "没",
+      "有",
+      "2",
+      "0",
+      "0",
+      "6",
+      "年",
+      "以",
+      "后",
+      "开",
+      "放",
+      "的",
+      "体",
+      "育",
+      "场",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  16,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            2006,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT count(*) FROM stadium WHERE country != 'Russia'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "country",
+      "!",
+      "=",
+      "'Russia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "stadium",
+      "where",
+      "country",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "How many stadiums are not in country \"Russia\"?",
+    "question": "在“Russia”这个国家有多少个体育场？",
+    "question_cspider": "在“Russia”这个国家有多少个体育场？",
+    "Harold": "BLEU = 62.99, 93.8/80.0/64.3/53.8 (BP=0.882, ratio=0.889, hyp_len=16, ref_len=18)",
+    "question_toks": [
+      "国",
+      "家",
+      "“",
+      "俄",
+      "罗",
+      "斯",
+      "”",
+      "没",
+      "有",
+      "多",
+      "少",
+      "个",
+      "体",
+      "育",
+      "场",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"Russia\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT name FROM swimmer ORDER BY meter_100",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "swimmer",
+      "ORDER",
+      "BY",
+      "meter_100"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "swimmer",
+      "order",
+      "by",
+      "meter_100"
+    ],
+    "question_spider": "Find the names of all swimmers, sorted by their 100 meter scores in ascending order.",
+    "question": "找出所有游泳运动员的名字，按他们的100米成绩按升序排列。",
+    "question_cspider": "找出所有游泳运动员的名字，按他们的100米成绩按升序排列。",
+    "Harold": "BLEU = 31.09, 73.1/40.0/29.2/17.4 (BP=0.891, ratio=0.897, hyp_len=26, ref_len=29)",
+    "question_toks": [
+      "查",
+      "找",
+      "所",
+      "有",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "姓",
+      "名",
+      "，",
+      "并",
+      "按",
+      "其",
+      "1",
+      "0",
+      "0",
+      "米",
+      "得",
+      "分",
+      "的",
+      "升",
+      "序",
+      "排",
+      "列",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT count(DISTINCT nationality) FROM swimmer",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "nationality",
+      ")",
+      "FROM",
+      "swimmer"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "nationality",
+      ")",
+      "from",
+      "swimmer"
+    ],
+    "question_spider": "How many different countries are all the swimmers from?",
+    "question": "游泳运动员来自多少个不同的国家？",
+    "question_cspider": "游泳运动员来自多少个不同的国家？",
+    "Harold": "BLEU = 44.93, 84.6/66.7/45.5/40.0 (BP=0.794, ratio=0.812, hyp_len=13, ref_len=16)",
+    "question_toks": [
+      "游",
+      "泳",
+      "者",
+      "来",
+      "自",
+      "几",
+      "个",
+      "不",
+      "同",
+      "的",
+      "国",
+      "家",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                3,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT nationality ,  count(*) FROM swimmer GROUP BY nationality HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "nationality",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "swimmer",
+      "GROUP",
+      "BY",
+      "nationality",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "nationality",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "swimmer",
+      "group",
+      "by",
+      "nationality",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "List countries that have more than one swimmer.",
+    "question": "列出有一个以上游泳运动员的国家。",
+    "question_cspider": "列出有一个以上游泳运动员的国家。",
+    "Harold": "BLEU = 23.05, 71.4/46.2/16.7/9.1 (BP=0.867, ratio=0.875, hyp_len=14, ref_len=16)",
+    "question_toks": [
+      "列",
+      "出",
+      "游",
+      "泳",
+      "人",
+      "数",
+      "不",
+      "止",
+      "一",
+      "个",
+      "的",
+      "国",
+      "家",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT meter_200 ,  meter_300 FROM swimmer WHERE nationality  =  'Australia'",
+    "query_toks": [
+      "SELECT",
+      "meter_200",
+      ",",
+      "meter_300",
+      "FROM",
+      "swimmer",
+      "WHERE",
+      "nationality",
+      "=",
+      "'Australia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "meter_200",
+      ",",
+      "meter_300",
+      "from",
+      "swimmer",
+      "where",
+      "nationality",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find all 200 meter and 300 meter results of swimmers with nationality \"Australia\".",
+    "question": "找出所有200米和300米游泳成绩且国籍是“Australia”的游泳运动员。",
+    "question_cspider": "找出所有200米和300米游泳成绩且国籍是“Australia”的游泳运动员。",
+    "Harold": "BLEU = 40.15, 62.9/44.1/33.3/28.1 (BP=1.000, ratio=1.029, hyp_len=35, ref_len=34)",
+    "question_toks": [
+      "查",
+      "找",
+      "国",
+      "籍",
+      "为",
+      "“",
+      " ",
+      "A",
+      "u",
+      "s",
+      "t",
+      "r",
+      "a",
+      "l",
+      "i",
+      "a",
+      "”",
+      "的",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "所",
+      "有",
+      "2",
+      "0",
+      "0",
+      "米",
+      "和",
+      "3",
+      "0",
+      "0",
+      "米",
+      "成",
+      "绩",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"Australia\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t1.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id WHERE RESULT  =  'Win'",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "swimmer",
+      "AS",
+      "t1",
+      "JOIN",
+      "record",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.swimmer_id",
+      "WHERE",
+      "RESULT",
+      "=",
+      "'Win",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "swimmer",
+      "as",
+      "t1",
+      "join",
+      "record",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "swimmer_id",
+      "where",
+      "result",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the names of swimmers who has a result of \"win\".",
+    "question": "找出有结果是“win”的游泳运动员的名字。",
+    "question_cspider": "找出有结果是“win”的游泳运动员的名字。",
+    "Harold": "BLEU = 16.65, 61.1/23.5/12.5/6.7 (BP=0.895, ratio=0.900, hyp_len=18, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "结",
+      "果",
+      "为",
+      "“",
+      " ",
+      "w",
+      "i",
+      "n",
+      "”",
+      "的",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          "\"Win\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t1.name FROM stadium AS t1 JOIN event AS t2 ON t1.id  =  t2.stadium_id GROUP BY t2.stadium_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "stadium",
+      "AS",
+      "t1",
+      "JOIN",
+      "event",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.stadium_id",
+      "GROUP",
+      "BY",
+      "t2.stadium_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "stadium",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "stadium_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "stadium_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name of the stadium which held the most events?",
+    "question": "举办最多赛事的体育场叫什么名字？",
+    "question_cspider": "举办最多赛事的体育场叫什么名字？",
+    "Harold": "BLEU = 68.65, 87.5/73.3/64.3/53.8 (BP=1.000, ratio=1.000, hyp_len=16, ref_len=16)",
+    "question_toks": [
+      "举",
+      "行",
+      "最",
+      "多",
+      "赛",
+      "事",
+      "的",
+      "体",
+      "育",
+      "馆",
+      "叫",
+      "什",
+      "么",
+      "名",
+      "字",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          20,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t1.name ,  t1.capacity FROM stadium AS t1 JOIN event AS t2 ON t1.id  =  t2.stadium_id WHERE t2.name  =  'World Junior'",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t1.capacity",
+      "FROM",
+      "stadium",
+      "AS",
+      "t1",
+      "JOIN",
+      "event",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.stadium_id",
+      "WHERE",
+      "t2.name",
+      "=",
+      "'World",
+      "Junior",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "capacity",
+      "from",
+      "stadium",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "stadium_id",
+      "where",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the name and capacity of the stadium where the event named \"World Junior\" happened.",
+    "question": "找出“World Junior”活动发生的体育场的名称及其容量。",
+    "question_cspider": "找出“World Junior”活动发生的体育场的名称及其容量。",
+    "Harold": "BLEU = 23.97, 45.5/28.1/19.4/13.3 (BP=1.000, ratio=1.435, hyp_len=33, ref_len=23)",
+    "question_toks": [
+      "查",
+      "找",
+      "发",
+      "生",
+      "名",
+      "为",
+      "“",
+      " ",
+      "W",
+      "o",
+      "r",
+      "l",
+      "d",
+      " ",
+      "J",
+      "u",
+      "n",
+      "i",
+      "o",
+      "r",
+      "”",
+      "的",
+      "事",
+      "件",
+      "的",
+      "体",
+      "育",
+      "场",
+      "的",
+      "名",
+      "称",
+      "和",
+      "容",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ],
+          "\"World Junior\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT name FROM stadium WHERE id NOT IN (SELECT stadium_id FROM event)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "stadium_id",
+      "FROM",
+      "event",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "stadium",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "stadium_id",
+      "from",
+      "event",
+      ")"
+    ],
+    "question_spider": "Find the names of stadiums which have never had any event.",
+    "question": "找到那些从来没有举办过活动的体育场馆的名字。",
+    "question_cspider": "找到那些从来没有举办过活动的体育场馆的名字。",
+    "Harold": "BLEU = 13.19, 50.0/17.6/12.5/6.7 (BP=0.801, ratio=0.818, hyp_len=18, ref_len=22)",
+    "question_toks": [
+      "查",
+      "找",
+      "从",
+      "未",
+      "发",
+      "生",
+      "过",
+      "任",
+      "何",
+      "事",
+      "件",
+      "的",
+      "体",
+      "育",
+      "场",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      20,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t1.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id GROUP BY t2.swimmer_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "swimmer",
+      "AS",
+      "t1",
+      "JOIN",
+      "record",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.swimmer_id",
+      "GROUP",
+      "BY",
+      "t2.swimmer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "swimmer",
+      "as",
+      "t1",
+      "join",
+      "record",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "swimmer_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "swimmer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the name of the swimmer who has the most records.",
+    "question": "找出有最多数量记录的游泳者的名字。",
+    "question_cspider": "找出有最多数量记录的游泳者的名字。",
+    "Harold": "BLEU = 49.90, 92.9/69.2/50.0/45.5 (BP=0.807, ratio=0.824, hyp_len=14, ref_len=17)",
+    "question_toks": [
+      "查",
+      "找",
+      "记",
+      "录",
+      "最",
+      "多",
+      "的",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "名",
+      "字",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          24,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t1.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id GROUP BY t2.swimmer_id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "swimmer",
+      "AS",
+      "t1",
+      "JOIN",
+      "record",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.swimmer_id",
+      "GROUP",
+      "BY",
+      "t2.swimmer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "swimmer",
+      "as",
+      "t1",
+      "join",
+      "record",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "swimmer_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "swimmer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the name of the swimmer who has at least 2 records.",
+    "question": "找到至少有2条记录的游泳运动员的名字。",
+    "question_cspider": "找到至少有2条记录的游泳运动员的名字。",
+    "Harold": "BLEU = 52.70, 82.4/56.2/53.3/50.0 (BP=0.889, ratio=0.895, hyp_len=17, ref_len=19)",
+    "question_toks": [
+      "查",
+      "找",
+      "至",
+      "少",
+      "有",
+      "2",
+      "条",
+      "记",
+      "录",
+      "的",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          24,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t1.name ,  t1.nationality FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id WHERE RESULT  =  'Win' GROUP BY t2.swimmer_id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t1.nationality",
+      "FROM",
+      "swimmer",
+      "AS",
+      "t1",
+      "JOIN",
+      "record",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.swimmer_id",
+      "WHERE",
+      "RESULT",
+      "=",
+      "'Win",
+      "'",
+      "GROUP",
+      "BY",
+      "t2.swimmer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "nationality",
+      "from",
+      "swimmer",
+      "as",
+      "t1",
+      "join",
+      "record",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "swimmer_id",
+      "where",
+      "result",
+      "=",
+      "value",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "swimmer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the name and nationality of the swimmer who has won (i.e., has a result of \"win\") more than 1 time.",
+    "question": "找出“win”1次以上比赛的游泳运动员的姓名和国籍。",
+    "question_cspider": "找出“win”1次以上比赛的游泳运动员的姓名和国籍。",
+    "Harold": "BLEU = 26.92, 53.3/31.0/21.4/14.8 (BP=1.000, ratio=1.200, hyp_len=30, ref_len=25)",
+    "question_toks": [
+      "查",
+      "找",
+      "获",
+      "胜",
+      "（",
+      "即",
+      "获",
+      "得",
+      "“",
+      "获",
+      "胜",
+      "”",
+      "结",
+      "果",
+      "）",
+      "超",
+      "过",
+      "1",
+      "次",
+      "的",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "姓",
+      "名",
+      "和",
+      "国",
+      "籍",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          "\"Win\"",
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          24,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT name FROM swimmer WHERE id NOT IN (SELECT swimmer_id FROM record)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "swimmer",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "swimmer_id",
+      "FROM",
+      "record",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "swimmer",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "swimmer_id",
+      "from",
+      "record",
+      ")"
+    ],
+    "question_spider": "Find the names of the swimmers who have no record.",
+    "question": "找出没有记录的游泳运动员的名字。",
+    "question_cspider": "找出没有记录的游泳运动员的名字。",
+    "Harold": "BLEU = 41.97, 78.6/46.2/41.7/36.4 (BP=0.867, ratio=0.875, hyp_len=14, ref_len=16)",
+    "question_toks": [
+      "查",
+      "找",
+      "没",
+      "有",
+      "记",
+      "录",
+      "的",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  3
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      24,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t1.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id WHERE RESULT  =  'Win' INTERSECT SELECT t1.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id WHERE RESULT  =  'Loss'",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "swimmer",
+      "AS",
+      "t1",
+      "JOIN",
+      "record",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.swimmer_id",
+      "WHERE",
+      "RESULT",
+      "=",
+      "'Win",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "swimmer",
+      "AS",
+      "t1",
+      "JOIN",
+      "record",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.swimmer_id",
+      "WHERE",
+      "RESULT",
+      "=",
+      "'Loss",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "swimmer",
+      "as",
+      "t1",
+      "join",
+      "record",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "swimmer_id",
+      "where",
+      "result",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "swimmer",
+      "as",
+      "t1",
+      "join",
+      "record",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "swimmer_id",
+      "where",
+      "result",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the names of the swimmers who have both \"win\" and \"loss\" results in the record.",
+    "question": "找出在记录中同时有“win”和“Fail”结果的游泳运动员的名字。",
+    "question_cspider": "找出在记录中同时有“win”和“Fail”结果的游泳运动员的名字。",
+    "Harold": "BLEU = 32.97, 79.3/42.9/25.9/15.4 (BP=0.966, ratio=0.967, hyp_len=29, ref_len=30)",
+    "question_toks": [
+      "在",
+      "记",
+      "录",
+      "中",
+      "查",
+      "找",
+      "同",
+      "时",
+      "具",
+      "有",
+      "“",
+      "获",
+      "胜",
+      "”",
+      "和",
+      "“",
+      "损",
+      "失",
+      "”",
+      "结",
+      "果",
+      "的",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          "\"Win\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              3
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ],
+            "\"Loss\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t4.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id JOIN event AS t3 ON t2.event_id  =  t3.id JOIN stadium AS t4 ON t4.id  =  t3.stadium_id WHERE t1.nationality  =  'Australia'",
+    "query_toks": [
+      "SELECT",
+      "t4.name",
+      "FROM",
+      "swimmer",
+      "AS",
+      "t1",
+      "JOIN",
+      "record",
+      "AS",
+      "t2",
+      "ON",
+      "t1.id",
+      "=",
+      "t2.swimmer_id",
+      "JOIN",
+      "event",
+      "AS",
+      "t3",
+      "ON",
+      "t2.event_id",
+      "=",
+      "t3.id",
+      "JOIN",
+      "stadium",
+      "AS",
+      "t4",
+      "ON",
+      "t4.id",
+      "=",
+      "t3.stadium_id",
+      "WHERE",
+      "t1.nationality",
+      "=",
+      "'Australia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t4",
+      ".",
+      "name",
+      "from",
+      "swimmer",
+      "as",
+      "t1",
+      "join",
+      "record",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "swimmer_id",
+      "join",
+      "event",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "event_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "join",
+      "stadium",
+      "as",
+      "t4",
+      "on",
+      "t4",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "stadium_id",
+      "where",
+      "t1",
+      ".",
+      "nationality",
+      "=",
+      "value"
+    ],
+    "question_spider": "Find the names of stadiums that some Australian swimmers have been to.",
+    "question": "找出“Australia”游泳运动员去过的体育场馆的名字。",
+    "question_cspider": "找出“Australia”游泳运动员去过的体育场馆的名字。",
+    "Harold": "BLEU = 35.10, 69.6/45.5/28.6/20.0 (BP=0.957, ratio=0.958, hyp_len=23, ref_len=24)",
+    "question_toks": [
+      "查",
+      "找",
+      "一",
+      "些",
+      "澳",
+      "大",
+      "利",
+      "亚",
+      "游",
+      "泳",
+      "者",
+      "曾",
+      "经",
+      "去",
+      "过",
+      "的",
+      "体",
+      "育",
+      "场",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"Australia\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT t3.name FROM record AS t1 JOIN event AS t2 ON t1.event_id  =  t2.id JOIN stadium AS t3 ON t3.id  =  t2.stadium_id GROUP BY t2.stadium_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t3.name",
+      "FROM",
+      "record",
+      "AS",
+      "t1",
+      "JOIN",
+      "event",
+      "AS",
+      "t2",
+      "ON",
+      "t1.event_id",
+      "=",
+      "t2.id",
+      "JOIN",
+      "stadium",
+      "AS",
+      "t3",
+      "ON",
+      "t3.id",
+      "=",
+      "t2.stadium_id",
+      "GROUP",
+      "BY",
+      "t2.stadium_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "record",
+      "as",
+      "t1",
+      "join",
+      "event",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "event_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "stadium",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "stadium_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "stadium_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Find the names of stadiums that the most swimmers have been to.",
+    "question": "找出那些游泳运动员去过的体育场馆的名称。",
+    "question_cspider": "找出那些游泳运动员去过的体育场馆的名称。",
+    "Harold": "BLEU = 39.57, 72.2/52.9/37.5/26.7 (BP=0.895, ratio=0.900, hyp_len=18, ref_len=20)",
+    "question_toks": [
+      "查",
+      "找",
+      "大",
+      "多",
+      "数",
+      "游",
+      "泳",
+      "者",
+      "去",
+      "过",
+      "的",
+      "体",
+      "育",
+      "场",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          20,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT * FROM swimmer",
+    "query_toks": [
+      "SELECT",
+      "*",
+      "FROM",
+      "swimmer"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "*",
+      "from",
+      "swimmer"
+    ],
+    "question_spider": "Find all details for each swimmer.",
+    "question": "找出每个游泳运动员的所有细节。",
+    "question_cspider": "找出每个游泳运动员的所有细节。",
+    "Harold": "BLEU = 26.01, 66.7/35.7/23.1/8.3 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "查",
+      "找",
+      "每",
+      "个",
+      "游",
+      "泳",
+      "者",
+      "的",
+      "所",
+      "有",
+      "详",
+      "细",
+      "信",
+      "息",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "swimming",
+    "query": "SELECT avg(capacity) FROM stadium WHERE opening_year  =  2005",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "stadium",
+      "WHERE",
+      "opening_year",
+      "=",
+      "2005"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "stadium",
+      "where",
+      "opening_year",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the average capacity of the stadiums that were opened in year 2005?",
+    "question": "2005年度开放的体育场的平均容量是多少？",
+    "question_cspider": "2005年度开放的体育场的平均容量是多少？",
+    "Harold": "BLEU = 77.44, 95.0/84.2/77.8/70.6 (BP=0.951, ratio=0.952, hyp_len=20, ref_len=21)",
+    "question_toks": [
+      "2",
+      "0",
+      "0",
+      "5",
+      "年",
+      "开",
+      "业",
+      "的",
+      "体",
+      "育",
+      "场",
+      "的",
+      "平",
+      "均",
+      "容",
+      "量",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          2005,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

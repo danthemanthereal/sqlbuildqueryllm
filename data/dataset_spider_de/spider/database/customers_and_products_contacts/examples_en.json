@@ -1,0 +1,2300 @@
+[
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT count(*) FROM addresses WHERE country  =  'USA'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "addresses",
+      "WHERE",
+      "country",
+      "=",
+      "'USA",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "addresses",
+      "where",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "How many addresses are there in country USA?",
+    "question_toks": [
+      "How",
+      "many",
+      "addresses",
+      "are",
+      "there",
+      "in",
+      "country",
+      "USA",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"USA\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT DISTINCT city FROM addresses",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "city",
+      "FROM",
+      "addresses"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "city",
+      "from",
+      "addresses"
+    ],
+    "question": "Show all distinct cities in the address record.",
+    "question_toks": [
+      "Show",
+      "all",
+      "distinct",
+      "cities",
+      "in",
+      "the",
+      "address",
+      "record",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT state_province_county ,  count(*) FROM addresses GROUP BY state_province_county",
+    "query_toks": [
+      "SELECT",
+      "state_province_county",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "addresses",
+      "GROUP",
+      "BY",
+      "state_province_county"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "state_province_county",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "addresses",
+      "group",
+      "by",
+      "state_province_county"
+    ],
+    "question": "Show each state and the number of addresses in each state.",
+    "question_toks": [
+      "Show",
+      "each",
+      "state",
+      "and",
+      "the",
+      "number",
+      "of",
+      "addresses",
+      "in",
+      "each",
+      "state",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT customer_name ,  customer_phone FROM customers WHERE customer_id NOT IN (SELECT customer_id FROM customer_address_history)",
+    "query_toks": [
+      "SELECT",
+      "customer_name",
+      ",",
+      "customer_phone",
+      "FROM",
+      "customers",
+      "WHERE",
+      "customer_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "customer_id",
+      "FROM",
+      "customer_address_history",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_name",
+      ",",
+      "customer_phone",
+      "from",
+      "customers",
+      "where",
+      "customer_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "customer_id",
+      "from",
+      "customer_address_history",
+      ")"
+    ],
+    "question": "Show names and phones of customers who do not have address information.",
+    "question_toks": [
+      "Show",
+      "names",
+      "and",
+      "phones",
+      "of",
+      "customers",
+      "who",
+      "do",
+      "not",
+      "have",
+      "address",
+      "information",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  4
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      24,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT T1.customer_name FROM customers AS T1 JOIN customer_orders AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_name",
+      "FROM",
+      "customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customer_orders",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_orders",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Show the name of the customer who has the most orders.",
+    "question_toks": [
+      "Show",
+      "the",
+      "name",
+      "of",
+      "the",
+      "customer",
+      "who",
+      "has",
+      "the",
+      "most",
+      "orders",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT product_type_code FROM products GROUP BY product_type_code HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "product_type_code",
+      "FROM",
+      "products",
+      "GROUP",
+      "BY",
+      "product_type_code",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_type_code",
+      "from",
+      "products",
+      "group",
+      "by",
+      "product_type_code",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Show the product type codes which have at least two products.",
+    "question_toks": [
+      "Show",
+      "the",
+      "product",
+      "type",
+      "codes",
+      "which",
+      "have",
+      "at",
+      "least",
+      "two",
+      "products",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT T1.customer_name FROM customers AS T1 JOIN customer_orders AS T2 ON T1.customer_id  =  T2.customer_id WHERE T2.order_status_code  =  'Completed' INTERSECT SELECT T1.customer_name FROM customers AS T1 JOIN customer_orders AS T2 ON T1.customer_id  =  T2.customer_id WHERE T2.order_status_code  =  'Part'",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_name",
+      "FROM",
+      "customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customer_orders",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "WHERE",
+      "T2.order_status_code",
+      "=",
+      "'Completed",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T1.customer_name",
+      "FROM",
+      "customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customer_orders",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "WHERE",
+      "T2.order_status_code",
+      "=",
+      "'Part",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_orders",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "where",
+      "t2",
+      ".",
+      "order_status_code",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_orders",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "where",
+      "t2",
+      ".",
+      "order_status_code",
+      "=",
+      "value"
+    ],
+    "question": "Show the names of customers who have both an order in completed status and an order in part status.",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "customers",
+      "who",
+      "have",
+      "both",
+      "an",
+      "order",
+      "in",
+      "completed",
+      "status",
+      "and",
+      "an",
+      "order",
+      "in",
+      "part",
+      "status",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  11,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                29,
+                false
+              ],
+              null
+            ]
+          ],
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              5
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  14,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ],
+            "\"Part\"",
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              31,
+              false
+            ],
+            null
+          ],
+          "\"Completed\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT customer_name ,  customer_phone ,  payment_method_code FROM customers ORDER BY customer_number DESC",
+    "query_toks": [
+      "SELECT",
+      "customer_name",
+      ",",
+      "customer_phone",
+      ",",
+      "payment_method_code",
+      "FROM",
+      "customers",
+      "ORDER",
+      "BY",
+      "customer_number",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_name",
+      ",",
+      "customer_phone",
+      ",",
+      "payment_method_code",
+      "from",
+      "customers",
+      "order",
+      "by",
+      "customer_number",
+      "desc"
+    ],
+    "question": "Show the name, phone, and payment method code for all customers in descending order of customer number.",
+    "question_toks": [
+      "Show",
+      "the",
+      "name",
+      ",",
+      "phone",
+      ",",
+      "and",
+      "payment",
+      "method",
+      "code",
+      "for",
+      "all",
+      "customers",
+      "in",
+      "descending",
+      "order",
+      "of",
+      "customer",
+      "number",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT T1.product_name ,  sum(T2.order_quantity) FROM products AS T1 JOIN order_items AS T2 ON T1.product_id  =  T2.product_id GROUP BY T1.product_id",
+    "query_toks": [
+      "SELECT",
+      "T1.product_name",
+      ",",
+      "sum",
+      "(",
+      "T2.order_quantity",
+      ")",
+      "FROM",
+      "products",
+      "AS",
+      "T1",
+      "JOIN",
+      "order_items",
+      "AS",
+      "T2",
+      "ON",
+      "T1.product_id",
+      "=",
+      "T2.product_id",
+      "GROUP",
+      "BY",
+      "T1.product_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product_name",
+      ",",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "order_quantity",
+      ")",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "order_items",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "product_id"
+    ],
+    "question": "Show the product name and total order quantity for each product.",
+    "question_toks": [
+      "Show",
+      "the",
+      "product",
+      "name",
+      "and",
+      "total",
+      "order",
+      "quantity",
+      "for",
+      "each",
+      "product",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              34,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                35,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT min(product_price) ,  max(product_price) ,  avg(product_price) FROM products",
+    "query_toks": [
+      "SELECT",
+      "min",
+      "(",
+      "product_price",
+      ")",
+      ",",
+      "max",
+      "(",
+      "product_price",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      "FROM",
+      "products"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "min",
+      "(",
+      "product_price",
+      ")",
+      ",",
+      "max",
+      "(",
+      "product_price",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      "from",
+      "products"
+    ],
+    "question": "Show the minimum, maximum, average price for all products.",
+    "question_toks": [
+      "Show",
+      "the",
+      "minimum",
+      ",",
+      "maximum",
+      ",",
+      "average",
+      "price",
+      "for",
+      "all",
+      "products",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT count(*) FROM products WHERE product_price  >  (SELECT avg(product_price) FROM products)",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "products",
+      "WHERE",
+      "product_price",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      "FROM",
+      "products",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "products",
+      "where",
+      "product_price",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      "from",
+      "products",
+      ")"
+    ],
+    "question": "How many products have a price higher than the average?",
+    "question_toks": [
+      "How",
+      "many",
+      "products",
+      "have",
+      "a",
+      "price",
+      "higher",
+      "than",
+      "the",
+      "average",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      10,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT T2.customer_name ,  T3.city ,  T1.date_from ,  T1.date_to FROM customer_address_history AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id JOIN addresses AS T3 ON T1.address_id  =  T3.address_id",
+    "query_toks": [
+      "SELECT",
+      "T2.customer_name",
+      ",",
+      "T3.city",
+      ",",
+      "T1.date_from",
+      ",",
+      "T1.date_to",
+      "FROM",
+      "customer_address_history",
+      "AS",
+      "T1",
+      "JOIN",
+      "customers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "JOIN",
+      "addresses",
+      "AS",
+      "T3",
+      "ON",
+      "T1.address_id",
+      "=",
+      "T3.address_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "customer_name",
+      ",",
+      "t3",
+      ".",
+      "city",
+      ",",
+      "t1",
+      ".",
+      "date_from",
+      ",",
+      "t1",
+      ".",
+      "date_to",
+      "from",
+      "customer_address_history",
+      "as",
+      "t1",
+      "join",
+      "customers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "join",
+      "addresses",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "address_id",
+      "=",
+      "t3",
+      ".",
+      "address_id"
+    ],
+    "question": "Show the customer name, customer address city, date from, and date to for each customer address history.",
+    "question_toks": [
+      "Show",
+      "the",
+      "customer",
+      "name",
+      ",",
+      "customer",
+      "address",
+      "city",
+      ",",
+      "date",
+      "from",
+      ",",
+      "and",
+      "date",
+      "to",
+      "for",
+      "each",
+      "customer",
+      "address",
+      "history",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                25,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT T1.customer_name FROM customers AS T1 JOIN customer_orders AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.payment_method_code  =  'Credit Card' GROUP BY T1.customer_id HAVING count(*)  >  2",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_name",
+      "FROM",
+      "customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customer_orders",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "WHERE",
+      "T1.payment_method_code",
+      "=",
+      "'Credit",
+      "Card",
+      "'",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_orders",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "where",
+      "t1",
+      ".",
+      "payment_method_code",
+      "=",
+      "value",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Show the names of customers who use Credit Card payment method and have more than 2 orders.",
+    "question_toks": [
+      "Show",
+      "the",
+      "names",
+      "of",
+      "customers",
+      "who",
+      "use",
+      "Credit",
+      "Card",
+      "payment",
+      "method",
+      "and",
+      "have",
+      "more",
+      "than",
+      "2",
+      "orders",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          "\"Credit Card\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT  T1.customer_name ,  T1.customer_phone FROM customers AS T1 JOIN customer_orders AS T2 ON T1.customer_id  =  T2.customer_id JOIN order_items AS T3 ON T3.order_id  =  T2.order_id GROUP BY T1.customer_id ORDER BY sum(T3.order_quantity) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_name",
+      ",",
+      "T1.customer_phone",
+      "FROM",
+      "customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "customer_orders",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "JOIN",
+      "order_items",
+      "AS",
+      "T3",
+      "ON",
+      "T3.order_id",
+      "=",
+      "T2.order_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "T3.order_quantity",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_name",
+      ",",
+      "t1",
+      ".",
+      "customer_phone",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_orders",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "join",
+      "order_items",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "order_id",
+      "=",
+      "t2",
+      ".",
+      "order_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "t3",
+      ".",
+      "order_quantity",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What are the name and phone of the customer with the most ordered product quantity?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "name",
+      "and",
+      "phone",
+      "of",
+      "the",
+      "customer",
+      "with",
+      "the",
+      "most",
+      "ordered",
+      "product",
+      "quantity",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              4,
+              35,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "customers_and_products_contacts",
+    "query": "SELECT product_type_code ,  product_name FROM products WHERE product_price  >  1000 OR product_price  <  500",
+    "query_toks": [
+      "SELECT",
+      "product_type_code",
+      ",",
+      "product_name",
+      "FROM",
+      "products",
+      "WHERE",
+      "product_price",
+      ">",
+      "1000",
+      "OR",
+      "product_price",
+      "<",
+      "500"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_type_code",
+      ",",
+      "product_name",
+      "from",
+      "products",
+      "where",
+      "product_price",
+      ">",
+      "value",
+      "or",
+      "product_price",
+      "<",
+      "value"
+    ],
+    "question": "Show the product type and name for the products with price higher than 1000 or lower than 500.",
+    "question_toks": [
+      "Show",
+      "the",
+      "product",
+      "type",
+      "and",
+      "name",
+      "for",
+      "the",
+      "products",
+      "with",
+      "price",
+      "higher",
+      "than",
+      "1000",
+      "or",
+      "lower",
+      "than",
+      "500",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          1000.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          500.0,
+          null
+        ]
+      ]
+    }
+  }
+]

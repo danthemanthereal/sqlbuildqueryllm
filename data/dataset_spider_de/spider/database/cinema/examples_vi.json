@@ -1,0 +1,3572 @@
+[
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema EXCEPT SELECT LOCATION FROM cinema WHERE capacity  >  800",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "EXCEPT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "800"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "except",
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value"
+    ],
+    "question": "Hiển thị tất cả các địa điểm không có rạp chiếu phim với sức chứa trên 800 .",
+    "question_toks": [
+      "Show",
+      "all",
+      "the",
+      "locations",
+      "where",
+      "no",
+      "cinema",
+      "has",
+      "capacity",
+      "over",
+      "800",
+      "."
+    ],
+    "sql": {
+      "except": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            800.0,
+            null
+          ]
+        ]
+      },
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE openning_year  =  2010 INTERSECT SELECT LOCATION FROM cinema WHERE openning_year  =  2011",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      "=",
+      "2010",
+      "INTERSECT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      "=",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tất cả các địa điểm nơi có một số rạp chiếu phim đã được mở vào năm 2010 và năm 2011 .",
+    "question_toks": [
+      "Show",
+      "all",
+      "the",
+      "locations",
+      "where",
+      "some",
+      "cinemas",
+      "were",
+      "opened",
+      "in",
+      "both",
+      "year",
+      "2010",
+      "and",
+      "year",
+      "2011",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            2011.0,
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema"
+    ],
+    "question": "Có bao nhiêu rạp chiếu phim ?",
+    "question_toks": [
+      "How",
+      "many",
+      "cinema",
+      "do",
+      "we",
+      "have",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema"
+    ],
+    "question": "Đếm số lượng rạp chiếu phim .",
+    "question_toks": [
+      "Count",
+      "the",
+      "number",
+      "of",
+      "cinemas",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  openning_year ,  capacity FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "openning_year",
+      ",",
+      "capacity",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "openning_year",
+      ",",
+      "capacity",
+      "from",
+      "cinema"
+    ],
+    "question": "Hiển thị tên , năm mở cửa , và sức chứa của từng rạp chiếu phim .",
+    "question_toks": [
+      "Show",
+      "name",
+      ",",
+      "opening",
+      "year",
+      ",",
+      "and",
+      "capacity",
+      "for",
+      "each",
+      "cinema",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  LOCATION FROM cinema WHERE capacity  >  (SELECT avg(capacity) FROM cinema)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "cinema",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "cinema",
+      ")"
+    ],
+    "question": "Hiển thị tên và địa điểm của các rạp chiếu phim có sức chứa trên mức trung bình .",
+    "question_toks": [
+      "Show",
+      "the",
+      "cinema",
+      "name",
+      "and",
+      "location",
+      "for",
+      "cinemas",
+      "with",
+      "capacity",
+      "above",
+      "average",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT LOCATION FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "cinema"
+    ],
+    "question": "Những địa điểm có một vài rạp chiếu phim là những địa điểm nào ?",
+    "question_toks": [
+      "What",
+      "are",
+      "all",
+      "the",
+      "locations",
+      "with",
+      "a",
+      "cinema",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT LOCATION FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "cinema"
+    ],
+    "question": "Tìm những địa điểm khác nhau nơi có một vài rạp chiếu phim .",
+    "question_toks": [
+      "Find",
+      "the",
+      "distinct",
+      "locations",
+      "that",
+      "has",
+      "a",
+      "cinema",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  openning_year FROM cinema ORDER BY openning_year DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "openning_year",
+      "FROM",
+      "cinema",
+      "ORDER",
+      "BY",
+      "openning_year",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "openning_year",
+      "from",
+      "cinema",
+      "order",
+      "by",
+      "openning_year",
+      "desc"
+    ],
+    "question": "Hiển thị tên của tất cả các rạp chiếu phim và năm mở cửa của từng rạp theo thứ tự giảm dần về năm mở cửa .",
+    "question_toks": [
+      "Show",
+      "all",
+      "the",
+      "cinema",
+      "names",
+      "and",
+      "opening",
+      "years",
+      "in",
+      "descending",
+      "order",
+      "of",
+      "opening",
+      "year",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  LOCATION FROM cinema ORDER BY capacity DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "ORDER",
+      "BY",
+      "capacity",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "cinema",
+      "order",
+      "by",
+      "capacity",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết tên và địa điểm của rạp chiếu phim có sức chứa lớn nhất .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "name",
+      "and",
+      "location",
+      "of",
+      "the",
+      "cinema",
+      "with",
+      "the",
+      "largest",
+      "capacity",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT avg(capacity) ,  min(capacity) ,  max(capacity) FROM cinema WHERE openning_year  >=  2011",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "min",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "max",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      ">",
+      "=",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "min",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "max",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị sức chứa trung bình , sức chứa tối thiểu và sức chứa tối đa của tất cả các rạp chiếu phim được mở từ sau năm 2011 .",
+    "question_toks": [
+      "Show",
+      "the",
+      "average",
+      ",",
+      "minimum",
+      ",",
+      "and",
+      "maximum",
+      "capacity",
+      "for",
+      "all",
+      "the",
+      "cinemas",
+      "opened",
+      "in",
+      "year",
+      "2011",
+      "or",
+      "later",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2011.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION ,  count(*) FROM cinema GROUP BY LOCATION",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema",
+      "GROUP",
+      "BY",
+      "LOCATION"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema",
+      "group",
+      "by",
+      "location"
+    ],
+    "question": "Hiển thị tất cả các địa điểm và số lượng rạp chiếu phim ở mỗi địa điểm .",
+    "question_toks": [
+      "Show",
+      "each",
+      "location",
+      "and",
+      "the",
+      "number",
+      "of",
+      "cinemas",
+      "there",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE openning_year  >=  2010 GROUP BY LOCATION ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      ">",
+      "=",
+      "2010",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      ">",
+      "=",
+      "value",
+      "group",
+      "by",
+      "location",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Địa điểm có nhiều rạp chiếu phim nhất được mở trong năm 2010 hoặc sau đó nằm ở đâu ?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "location",
+      "with",
+      "the",
+      "most",
+      "cinemas",
+      "opened",
+      "in",
+      "year",
+      "2010",
+      "or",
+      "later",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2010.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tất cả các địa điểm có ít nhất hai rạp chiếu phim với sức chứa trên 300 .",
+    "question_toks": [
+      "Show",
+      "all",
+      "the",
+      "locations",
+      "with",
+      "at",
+      "least",
+      "two",
+      "cinemas",
+      "with",
+      "capacity",
+      "above",
+      "300",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Những địa điểm nào có từ 2 rạp chiếu phim với sức chứa lớn hơn 300 ?",
+    "question_toks": [
+      "Which",
+      "locations",
+      "have",
+      "2",
+      "or",
+      "more",
+      "cinemas",
+      "with",
+      "capacity",
+      "over",
+      "300",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Hiển thị tiêu đề và đạo diễn của tất cả các bộ phim .",
+    "question_toks": [
+      "Show",
+      "the",
+      "title",
+      "and",
+      "director",
+      "for",
+      "all",
+      "films",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Tiêu đề và đạo diễn của từng bộ phim ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "title",
+      "and",
+      "director",
+      "of",
+      "each",
+      "film",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Hiển thị tất cả các đạo diễn .",
+    "question_toks": [
+      "Show",
+      "all",
+      "directors",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question": "Liệt kê tất cả các đạo diễn .",
+    "question_toks": [
+      "Who",
+      "are",
+      "all",
+      "the",
+      "directors",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT directed_by ,  count(*) FROM film GROUP BY directed_by",
+    "query_toks": [
+      "SELECT",
+      "directed_by",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "GROUP",
+      "BY",
+      "directed_by"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "directed_by",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "group",
+      "by",
+      "directed_by"
+    ],
+    "question": "Liệt kê tất cả các đạo diễn cùng với số lượng phim của từng người .",
+    "question_toks": [
+      "List",
+      "all",
+      "directors",
+      "along",
+      "with",
+      "the",
+      "number",
+      "of",
+      "films",
+      "directed",
+      "by",
+      "each",
+      "director",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.name ,  sum(T1.show_times_per_day) FROM schedule AS T1 JOIN cinema AS T2 ON T1.cinema_id  =  T2.cinema_id GROUP BY T1.cinema_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "sum",
+      "(",
+      "T1.show_times_per_day",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "cinema",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cinema_id",
+      "=",
+      "T2.cinema_id",
+      "GROUP",
+      "BY",
+      "T1.cinema_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "sum",
+      "(",
+      "t1",
+      ".",
+      "show_times_per_day",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "cinema",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cinema_id",
+      "=",
+      "t2",
+      ".",
+      "cinema_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "cinema_id"
+    ],
+    "question": "Cho biết tổng số suất chiếu mỗi ngày của từng rạp chiếu phim .",
+    "question_toks": [
+      "What",
+      "is",
+      "total",
+      "number",
+      "of",
+      "show",
+      "times",
+      "per",
+      "dat",
+      "for",
+      "each",
+      "cinema",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.title ,  max(T1.price) FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "max",
+      "(",
+      "T1.price",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "price",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id"
+    ],
+    "question": "Cho biết tiêu đề và giá cao nhất của mỗi bộ phim .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "title",
+      "and",
+      "maximum",
+      "price",
+      "of",
+      "each",
+      "film",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.title ,  max(T1.price) FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "max",
+      "(",
+      "T1.price",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "price",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id"
+    ],
+    "question": "Tiêu đề và giá cao nhất của từng bộ phim ?",
+    "question_toks": [
+      "Give",
+      "me",
+      "the",
+      "title",
+      "and",
+      "highest",
+      "price",
+      "for",
+      "each",
+      "film",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T3.name ,  T2.title ,  T1.date ,  T1.price FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id JOIN cinema AS T3 ON T1.cinema_id  =  T3.cinema_id",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T2.title",
+      ",",
+      "T1.date",
+      ",",
+      "T1.price",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "JOIN",
+      "cinema",
+      "AS",
+      "T3",
+      "ON",
+      "T1.cinema_id",
+      "=",
+      "T3.cinema_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "t1",
+      ".",
+      "date",
+      ",",
+      "t1",
+      ".",
+      "price",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "join",
+      "cinema",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "cinema_id",
+      "=",
+      "t3",
+      ".",
+      "cinema_id"
+    ],
+    "question": "Hiển thị tên rạp chiếu phim , tiêu đề , ngày chiếu và giá của từng bộ phim có trong lịch chiếu .",
+    "question_toks": [
+      "Show",
+      "cinema",
+      "name",
+      ",",
+      "film",
+      "title",
+      ",",
+      "date",
+      ",",
+      "and",
+      "price",
+      "for",
+      "each",
+      "record",
+      "in",
+      "schedule",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film WHERE film_id NOT IN (SELECT film_id FROM schedule)",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film",
+      "WHERE",
+      "film_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "film_id",
+      "FROM",
+      "schedule",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film",
+      "where",
+      "film_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "film_id",
+      "from",
+      "schedule",
+      ")"
+    ],
+    "question": "Cho biết tiêu đề và đạo diễn của những bộ phim không nằm trong lịch chiếu .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "title",
+      "and",
+      "director",
+      "of",
+      "the",
+      "films",
+      "without",
+      "any",
+      "schedule",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.directed_by FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T2.directed_by ORDER BY sum(T1.show_times_per_day) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.directed_by",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T2.directed_by",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "T1.show_times_per_day",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "directed_by",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "directed_by",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "t1",
+      ".",
+      "show_times_per_day",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết người đạo diễn có nhiều lần công chiếu nhất .",
+    "question_toks": [
+      "Show",
+      "director",
+      "with",
+      "the",
+      "largest",
+      "number",
+      "of",
+      "show",
+      "times",
+      "in",
+      "total",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              4,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Tìm các địa điểm có nhiều hơn một rạp chiếu phim với sức chứa trên 300 .",
+    "question_toks": [
+      "Find",
+      "the",
+      "locations",
+      "that",
+      "have",
+      "more",
+      "than",
+      "one",
+      "movie",
+      "theater",
+      "with",
+      "capacity",
+      "above",
+      "300",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Những địa điểm nào có nhiều hơn một rạp chiếu phim với sức chứa trên 300 ?",
+    "question_toks": [
+      "In",
+      "which",
+      "locations",
+      "are",
+      "there",
+      "more",
+      "than",
+      "one",
+      "movie",
+      "theater",
+      "with",
+      "capacity",
+      "above",
+      "300",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "WHERE",
+      "title",
+      "LIKE",
+      "``",
+      "%",
+      "Dummy",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "where",
+      "title",
+      "like",
+      "value"
+    ],
+    "question": "Có bao nhiêu bộ phim có từ ' Dummy ' trong tựa đề ?",
+    "question_toks": [
+      "How",
+      "many",
+      "films",
+      "have",
+      "the",
+      "word",
+      "'Dummy",
+      "'",
+      "in",
+      "their",
+      "titles",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Dummy%\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "WHERE",
+      "title",
+      "LIKE",
+      "``",
+      "%",
+      "Dummy",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "where",
+      "title",
+      "like",
+      "value"
+    ],
+    "question": "Đếm số lượng phim có tựa đề chứa từ ' Dummy ' .",
+    "question_toks": [
+      "Count",
+      "the",
+      "number",
+      "of",
+      "films",
+      "whose",
+      "title",
+      "contains",
+      "the",
+      "word",
+      "'Dummy",
+      "'",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Dummy%\"",
+          null
+        ]
+      ]
+    }
+  }
+]

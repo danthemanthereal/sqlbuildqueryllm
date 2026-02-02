@@ -1,0 +1,2363 @@
+[
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(*) FROM ship WHERE disposition_of_ship  =  'Captured'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "ship",
+      "WHERE",
+      "disposition_of_ship",
+      "=",
+      "'Captured",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "ship",
+      "where",
+      "disposition_of_ship",
+      "=",
+      "value"
+    ],
+    "question": "Có bao nhiêu tàu có kết quả cuối cùng là ' Bị bắt ' ?",
+    "question_toks": [
+      "How",
+      "many",
+      "ships",
+      "ended",
+      "up",
+      "being",
+      "'Captured",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Captured\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  tonnage FROM ship ORDER BY name DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "tonnage",
+      "FROM",
+      "ship",
+      "ORDER",
+      "BY",
+      "name",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "tonnage",
+      "from",
+      "ship",
+      "order",
+      "by",
+      "name",
+      "desc"
+    ],
+    "question": "Liệt kê tên và trọng tải của các tàu theo thứ tự bảng chữ cái giảm dần của tên tàu .",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      "and",
+      "tonnage",
+      "ordered",
+      "by",
+      "in",
+      "descending",
+      "alphaetical",
+      "order",
+      "for",
+      "the",
+      "names",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  date FROM battle",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "date",
+      "FROM",
+      "battle"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "date",
+      "from",
+      "battle"
+    ],
+    "question": "Liệt kê tên , ngày và kết quả của từng trận chiến .",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      ",",
+      "date",
+      "and",
+      "result",
+      "of",
+      "each",
+      "battle",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT max(killed) ,  min(killed) FROM death",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "killed",
+      ")",
+      ",",
+      "min",
+      "(",
+      "killed",
+      ")",
+      "FROM",
+      "death"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "killed",
+      ")",
+      ",",
+      "min",
+      "(",
+      "killed",
+      ")",
+      "from",
+      "death"
+    ],
+    "question": "Số lượng tử vong của trận chiến tử vong nhiều nhất và trận chiến tử vong ít nhất lần lượt là bao nhiêu ?",
+    "question_toks": [
+      "What",
+      "is",
+      "maximum",
+      "and",
+      "minimum",
+      "death",
+      "toll",
+      "caused",
+      "each",
+      "time",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT avg(injured) FROM death",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "injured",
+      ")",
+      "FROM",
+      "death"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "injured",
+      ")",
+      "from",
+      "death"
+    ],
+    "question": "Số lượng thương tật trung bình gây ra bởi mỗi trận chiến là bao nhiêu ?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "number",
+      "of",
+      "injuries",
+      "caused",
+      "each",
+      "time",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.killed ,  T1.injured FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id WHERE T2.tonnage  =  't'",
+    "query_toks": [
+      "SELECT",
+      "T1.killed",
+      ",",
+      "T1.injured",
+      "FROM",
+      "death",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "t2",
+      "ON",
+      "T1.caused_by_ship_id",
+      "=",
+      "T2.id",
+      "WHERE",
+      "T2.tonnage",
+      "=",
+      "'t",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "killed",
+      ",",
+      "t1",
+      ".",
+      "injured",
+      "from",
+      "death",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "caused_by_ship_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "tonnage",
+      "=",
+      "value"
+    ],
+    "question": "Liệt kê số lượng tử vong và thương tích do tàu có trọng tải t gây ra .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "death",
+      "and",
+      "injury",
+      "situations",
+      "caused",
+      "by",
+      "the",
+      "ship",
+      "with",
+      "tonnage",
+      "'t",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"t\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  RESULT FROM battle WHERE bulgarian_commander != 'Boril'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "RESULT",
+      "FROM",
+      "battle",
+      "WHERE",
+      "bulgarian_commander",
+      "!",
+      "=",
+      "'Boril",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "result",
+      "from",
+      "battle",
+      "where",
+      "bulgarian_commander",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết tên và kết quả của các trận chiến mà chỉ huy của ' Bungari ' không phải là ' Boril ' .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "name",
+      "and",
+      "results",
+      "of",
+      "the",
+      "battles",
+      "when",
+      "the",
+      "bulgarian",
+      "commander",
+      "is",
+      "not",
+      "'Boril",
+      "'"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Boril\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT DISTINCT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.ship_type  =  'Brig'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.ship_type",
+      "=",
+      "'Brig",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "ship_type",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết id và tên của các trận chiến khác nhau đã gây ra mất mát là một số con tàu thuộc loại ' Brig ' .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "different",
+      "ids",
+      "and",
+      "names",
+      "of",
+      "the",
+      "battles",
+      "that",
+      "lost",
+      "any",
+      "'Brig",
+      "'",
+      "type",
+      "shipes",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "\"Brig\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle JOIN death AS T3 ON T2.id  =  T3.caused_by_ship_id GROUP BY T1.id HAVING sum(T3.killed)  >  10",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "JOIN",
+      "death",
+      "AS",
+      "T3",
+      "ON",
+      "T2.id",
+      "=",
+      "T3.caused_by_ship_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "sum",
+      "(",
+      "T3.killed",
+      ")",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "join",
+      "death",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "caused_by_ship_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "sum",
+      "(",
+      "t3",
+      ".",
+      "killed",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Cho biết id và tên của các trận chiến đã làm cho hơn 10 người thiệt mạng .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "ids",
+      "and",
+      "names",
+      "of",
+      "the",
+      "battles",
+      "that",
+      "led",
+      "to",
+      "more",
+      "than",
+      "10",
+      "people",
+      "killed",
+      "in",
+      "total",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              4,
+              17,
+              false
+            ],
+            null
+          ],
+          10,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T2.id ,  T2.name FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id GROUP BY T2.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.id",
+      ",",
+      "T2.name",
+      "FROM",
+      "death",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "t2",
+      "ON",
+      "T1.caused_by_ship_id",
+      "=",
+      "T2.id",
+      "GROUP",
+      "BY",
+      "T2.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "id",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "death",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "caused_by_ship_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết id và tên của tàu đã gây ra nhiều thương tích nhất .",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "ship",
+      "id",
+      "and",
+      "name",
+      "that",
+      "caused",
+      "most",
+      "total",
+      "injuries",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name FROM battle WHERE bulgarian_commander  =  'Kaloyan' AND latin_commander  =  'Baldwin I'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "battle",
+      "WHERE",
+      "bulgarian_commander",
+      "=",
+      "'Kaloyan",
+      "'",
+      "AND",
+      "latin_commander",
+      "=",
+      "'Baldwin",
+      "I",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "battle",
+      "where",
+      "bulgarian_commander",
+      "=",
+      "value",
+      "and",
+      "latin_commander",
+      "=",
+      "value"
+    ],
+    "question": "Những trận chiến giữa chỉ huy của ' Bungari ' là ' Kaloyan ' và chỉ huy của ' Latin ' là ' Baldwin I ' có tên là gì ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "battle",
+      "names",
+      "which",
+      "are",
+      "between",
+      "bulgarian",
+      "commander",
+      "'Kaloyan",
+      "'",
+      "and",
+      "latin",
+      "commander",
+      "'Baldwin",
+      "I",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Kaloyan\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Baldwin I\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(DISTINCT RESULT) FROM battle",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "RESULT",
+      ")",
+      "FROM",
+      "battle"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "result",
+      ")",
+      "from",
+      "battle"
+    ],
+    "question": "Có bao nhiêu kết quả khác nhau cho các trận chiến ?",
+    "question_toks": [
+      "How",
+      "many",
+      "different",
+      "results",
+      "are",
+      "there",
+      "for",
+      "the",
+      "battles",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                6,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "battle",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "lost_in_battle",
+      "FROM",
+      "ship",
+      "WHERE",
+      "tonnage",
+      "=",
+      "'225",
+      "'",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "battle",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "lost_in_battle",
+      "from",
+      "ship",
+      "where",
+      "tonnage",
+      "=",
+      "value",
+      ")"
+    ],
+    "question": "Có bao nhiêu trận chiến không gây ra mất mát là các con tàu có trọng tải là 225 ?",
+    "question_toks": [
+      "How",
+      "many",
+      "battles",
+      "did",
+      "not",
+      "lose",
+      "any",
+      "ship",
+      "with",
+      "tonnage",
+      "'225",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      7,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    10,
+                    false
+                  ],
+                  null
+                ],
+                "\"225\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'Lettice' INTERSECT SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'HMS Atalanta'",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.date",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.name",
+      "=",
+      "'Lettice",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.date",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.name",
+      "=",
+      "'HMS",
+      "Atalanta",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "date",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "date",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "Liệt kê tên và ngày diễn ra trận chiến đã gây ra mất mát là con tàu có tên ' Lettice ' và con tàu có tên ' HMS Atalanta ' .",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      "and",
+      "date",
+      "the",
+      "battle",
+      "that",
+      "has",
+      "lost",
+      "the",
+      "ship",
+      "named",
+      "'Lettice",
+      "'",
+      "and",
+      "the",
+      "ship",
+      "named",
+      "'HMS",
+      "Atalanta",
+      "'"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Lettice\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "\"HMS Atalanta\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  RESULT ,  bulgarian_commander FROM battle EXCEPT SELECT T1.name ,  T1.result ,  T1.bulgarian_commander FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'English Channel'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "RESULT",
+      ",",
+      "bulgarian_commander",
+      "FROM",
+      "battle",
+      "EXCEPT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.result",
+      ",",
+      "T1.bulgarian_commander",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.location",
+      "=",
+      "'English",
+      "Channel",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "result",
+      ",",
+      "bulgarian_commander",
+      "from",
+      "battle",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "result",
+      ",",
+      "t1",
+      ".",
+      "bulgarian_commander",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "location",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tên , kết quả và chỉ huy của tất cả các trận chiến ở ' Eo biển Măng-sơ ' và không có mất mát nào về tàu .",
+    "question_toks": [
+      "Show",
+      "names",
+      ",",
+      "results",
+      "and",
+      "bulgarian",
+      "commanders",
+      "of",
+      "the",
+      "battles",
+      "with",
+      "no",
+      "ships",
+      "lost",
+      "in",
+      "the",
+      "'English",
+      "Channel",
+      "'",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            "\"English Channel\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT note FROM death WHERE note LIKE '%East%'",
+    "query_toks": [
+      "SELECT",
+      "note",
+      "FROM",
+      "death",
+      "WHERE",
+      "note",
+      "LIKE",
+      "'",
+      "%",
+      "East",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "note",
+      "from",
+      "death",
+      "where",
+      "note",
+      "like",
+      "value"
+    ],
+    "question": "Cho biết những ghi chú có chứa chuỗi con ' Phía Đông ' và liên quan đến các sự kiện thiệt mạng .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "notes",
+      "of",
+      "the",
+      "death",
+      "events",
+      "which",
+      "has",
+      "substring",
+      "'East",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"%East%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

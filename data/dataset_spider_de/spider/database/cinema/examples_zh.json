@@ -1,0 +1,3827 @@
+[
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema EXCEPT SELECT LOCATION FROM cinema WHERE capacity  >  800",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "EXCEPT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "800"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "except",
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value"
+    ],
+    "question_spider": "Show all the locations where no cinema has capacity over 800.",
+    "question": "显示所有容量超过800电影院的位置。",
+    "question_cspider": "显示所有容量超过800电影院的位置。",
+    "Harold": "BLEU = 0.00, 68.2/38.1/15.0/0.0 (BP=1.000, ratio=1.222, hyp_len=22, ref_len=18)",
+    "question_toks": [
+      "显",
+      "示",
+      "没",
+      "有",
+      "电",
+      "影",
+      "院",
+      "可",
+      "容",
+      "纳",
+      "8",
+      "0",
+      "0",
+      "人",
+      "以",
+      "上",
+      "的",
+      "所",
+      "有",
+      "位",
+      "置",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            800,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE openning_year  =  2010 INTERSECT SELECT LOCATION FROM cinema WHERE openning_year  =  2011",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      "=",
+      "2010",
+      "INTERSECT",
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      "=",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show all the locations where some cinemas were opened in both year 2010 and year 2011.",
+    "question": "展示所有在2010年和2011年开业的电影院。",
+    "question_cspider": "展示所有在2010年和2011年开业的电影院。",
+    "Harold": "BLEU = 52.72, 80.8/60.0/45.8/34.8 (BP=1.000, ratio=1.130, hyp_len=26, ref_len=23)",
+    "question_toks": [
+      "显",
+      "示",
+      "2",
+      "0",
+      "1",
+      "0",
+      "年",
+      "和",
+      "2",
+      "0",
+      "1",
+      "1",
+      "年",
+      "部",
+      "分",
+      "电",
+      "影",
+      "院",
+      "开",
+      "业",
+      "的",
+      "所",
+      "有",
+      "地",
+      "点",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2010,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            2011,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema"
+    ],
+    "question_spider": "How many cinema do we have?",
+    "question": "我们有多少电影院？",
+    "question_cspider": "我们有多少电影院？",
+    "Harold": "BLEU = 43.17, 77.8/62.5/42.9/16.7 (BP=1.000, ratio=1.000, hyp_len=9, ref_len=9)",
+    "question_toks": [
+      "我",
+      "们",
+      "有",
+      "几",
+      "家",
+      "电",
+      "影",
+      "院",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema"
+    ],
+    "question_spider": "Count the number of cinemas.",
+    "question": "数一数电影院的数量。",
+    "question_cspider": "数一数电影院的数量。",
+    "Harold": "BLEU = 64.96, 77.8/75.0/71.4/66.7 (BP=0.895, ratio=0.900, hyp_len=9, ref_len=10)",
+    "question_toks": [
+      "计",
+      "算",
+      "电",
+      "影",
+      "院",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  openning_year ,  capacity FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "openning_year",
+      ",",
+      "capacity",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "openning_year",
+      ",",
+      "capacity",
+      "from",
+      "cinema"
+    ],
+    "question_spider": "Show name, opening year, and capacity for each cinema.",
+    "question": "显示每个影院的名称、开张年份和容量。",
+    "question_cspider": "显示每个影院的名称、开张年份和容量。",
+    "Harold": "BLEU = 0.00, 73.7/44.4/17.6/0.0 (BP=1.000, ratio=1.056, hyp_len=19, ref_len=18)",
+    "question_toks": [
+      "节",
+      "目",
+      "名",
+      "称",
+      "，",
+      "开",
+      "业",
+      "年",
+      "份",
+      "和",
+      "每",
+      "个",
+      "电",
+      "影",
+      "院",
+      "的",
+      "容",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  LOCATION FROM cinema WHERE capacity  >  (SELECT avg(capacity) FROM cinema)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "(",
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "cinema",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "(",
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "cinema",
+      ")"
+    ],
+    "question_spider": "Show the cinema name and location for cinemas with capacity above average.",
+    "question": "显示容量高于平均水平的电影院的名称和位置。",
+    "question_cspider": "显示容量高于平均水平的电影院的名称和位置。",
+    "Harold": "BLEU = 62.74, 79.2/69.6/59.1/47.6 (BP=1.000, ratio=1.143, hyp_len=24, ref_len=21)",
+    "question_toks": [
+      "显",
+      "示",
+      "容",
+      "量",
+      "超",
+      "过",
+      "平",
+      "均",
+      "水",
+      "平",
+      "的",
+      "电",
+      "影",
+      "院",
+      "的",
+      "电",
+      "影",
+      "院",
+      "名",
+      "称",
+      "和",
+      "位",
+      "置",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  5,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT LOCATION FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "cinema"
+    ],
+    "question_spider": "What are all the locations with a cinema?",
+    "question": "电影院的所有位置是什么？",
+    "question_cspider": "电影院的所有位置是什么？",
+    "Harold": "BLEU = 0.00, 57.1/33.3/20.0/0.0 (BP=0.490, ratio=0.583, hyp_len=7, ref_len=12)",
+    "question_toks": [
+      "电",
+      "影",
+      "院",
+      "在",
+      "哪",
+      "里",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT LOCATION FROM cinema",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "LOCATION",
+      "FROM",
+      "cinema"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "location",
+      "from",
+      "cinema"
+    ],
+    "question_spider": "Find the distinct locations that has a cinema.",
+    "question": "找到有电影院的不同地点。",
+    "question_cspider": "找到有电影院的不同地点。",
+    "Harold": "BLEU = 54.91, 75.0/54.5/50.0/44.4 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "查",
+      "找",
+      "有",
+      "电",
+      "影",
+      "院",
+      "的",
+      "不",
+      "同",
+      "位",
+      "置",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  openning_year FROM cinema ORDER BY openning_year DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "openning_year",
+      "FROM",
+      "cinema",
+      "ORDER",
+      "BY",
+      "openning_year",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "openning_year",
+      "from",
+      "cinema",
+      "order",
+      "by",
+      "openning_year",
+      "desc"
+    ],
+    "question_spider": "Show all the cinema names and opening years in descending order of opening year.",
+    "question": "按开张年份降序，显示所有的电影名称和开张年份。",
+    "question_cspider": "按开张年份降序，显示所有的电影名称和开张年份。",
+    "Harold": "BLEU = 36.32, 100.0/62.5/40.0/28.6 (BP=0.703, ratio=0.739, hyp_len=17, ref_len=23)",
+    "question_toks": [
+      "按",
+      "开",
+      "年",
+      "降",
+      "序",
+      "显",
+      "示",
+      "所",
+      "有",
+      "电",
+      "影",
+      "名",
+      "称",
+      "和",
+      "开",
+      "年",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT name ,  LOCATION FROM cinema ORDER BY capacity DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "ORDER",
+      "BY",
+      "capacity",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "location",
+      "from",
+      "cinema",
+      "order",
+      "by",
+      "capacity",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What are the name and location of the cinema with the largest capacity?",
+    "question": "最大容量的电影院的名字和位置是什么？",
+    "question_cspider": "最大容量的电影院的名字和位置是什么？",
+    "Harold": "BLEU = 65.99, 94.4/76.5/56.2/46.7 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "容",
+      "量",
+      "最",
+      "大",
+      "的",
+      "电",
+      "影",
+      "院",
+      "的",
+      "名",
+      "称",
+      "和",
+      "位",
+      "置",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT avg(capacity) ,  min(capacity) ,  max(capacity) FROM cinema WHERE openning_year  >=  2011",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "min",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "max",
+      "(",
+      "capacity",
+      ")",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      ">",
+      "=",
+      "2011"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "min",
+      "(",
+      "capacity",
+      ")",
+      ",",
+      "max",
+      "(",
+      "capacity",
+      ")",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the average, minimum, and maximum capacity for all the cinemas opened in year 2011 or later.",
+    "question": "显示2011年或之后所有开业的电影院的平均、最低和最大容量。",
+    "question_cspider": "显示2011年或之后所有开业的电影院的平均、最低和最大容量。",
+    "Harold": "BLEU = 60.67, 90.0/69.0/53.6/40.7 (BP=1.000, ratio=1.000, hyp_len=30, ref_len=30)",
+    "question_toks": [
+      "显",
+      "示",
+      "2",
+      "0",
+      "1",
+      "1",
+      "年",
+      "或",
+      "以",
+      "后",
+      "开",
+      "业",
+      "的",
+      "所",
+      "有",
+      "电",
+      "影",
+      "院",
+      "的",
+      "平",
+      "均",
+      "，",
+      "最",
+      "小",
+      "和",
+      "最",
+      "大",
+      "容",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2011,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION ,  count(*) FROM cinema GROUP BY LOCATION",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "cinema",
+      "GROUP",
+      "BY",
+      "LOCATION"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "cinema",
+      "group",
+      "by",
+      "location"
+    ],
+    "question_spider": "Show each location and the number of cinemas there.",
+    "question": "显示每个位置和对应电影院的数量。",
+    "question_cspider": "显示每个位置和对应电影院的数量。",
+    "Harold": "BLEU = 43.82, 76.5/56.2/40.0/21.4 (BP=1.000, ratio=1.062, hyp_len=17, ref_len=16)",
+    "question_toks": [
+      "显",
+      "示",
+      "每",
+      "个",
+      "位",
+      "置",
+      "以",
+      "及",
+      "那",
+      "里",
+      "的",
+      "电",
+      "影",
+      "院",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE openning_year  >=  2010 GROUP BY LOCATION ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "openning_year",
+      ">",
+      "=",
+      "2010",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "openning_year",
+      ">",
+      "=",
+      "value",
+      "group",
+      "by",
+      "location",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the location with the most cinemas opened in year 2010 or later?",
+    "question": "2010年或以后电影院最多的位置是什么？",
+    "question_cspider": "2010年或以后电影院最多的位置是什么？",
+    "Harold": "BLEU = 48.88, 66.7/56.5/45.5/33.3 (BP=1.000, ratio=1.200, hyp_len=24, ref_len=20)",
+    "question_toks": [
+      "在",
+      "2",
+      "0",
+      "1",
+      "0",
+      "年",
+      "或",
+      "更",
+      "晚",
+      "开",
+      "业",
+      "的",
+      "电",
+      "影",
+      "院",
+      "最",
+      "多",
+      "的",
+      "地",
+      "方",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          2010,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show all the locations with at least two cinemas with capacity above 300.",
+    "question": "显示所有至少有两个容量超过300的电影院的位置。",
+    "question_cspider": "显示所有至少有两个容量超过300的电影院的位置。",
+    "Harold": "BLEU = 19.40, 71.4/40.0/15.8/5.6 (BP=0.867, ratio=0.875, hyp_len=21, ref_len=24)",
+    "question_toks": [
+      "显",
+      "示",
+      "至",
+      "少",
+      "两",
+      "个",
+      "拥",
+      "有",
+      "3",
+      "0",
+      "0",
+      "个",
+      "以",
+      "上",
+      "电",
+      "影",
+      "院",
+      "的",
+      "地",
+      "点",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Which locations have 2 or more cinemas with capacity over 300?",
+    "question": "哪些地方有2个或更多容量超过300的电影院？",
+    "question_cspider": "哪些地方有2个或更多容量超过300的电影院？",
+    "Harold": "BLEU = 57.42, 87.0/68.2/52.4/35.0 (BP=1.000, ratio=1.045, hyp_len=23, ref_len=22)",
+    "question_toks": [
+      "哪",
+      "些",
+      "地",
+      "区",
+      "有",
+      "2",
+      "个",
+      "或",
+      "更",
+      "多",
+      "电",
+      "影",
+      "院",
+      "，",
+      "容",
+      "量",
+      "超",
+      "过",
+      "3",
+      "0",
+      "0",
+      "个",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question_spider": "Show the title and director for all films.",
+    "question": "显示所有电影片名和导演。",
+    "question_cspider": "显示所有电影片名和导演。",
+    "Harold": "BLEU = 57.84, 76.9/66.7/54.5/40.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "电",
+      "影",
+      "的",
+      "标",
+      "题",
+      "和",
+      "导",
+      "演",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question_spider": "What are the title and director of each film?",
+    "question": "每部电影的片名和导演是什么？",
+    "question_cspider": "每部电影的片名和导演是什么？",
+    "Harold": "BLEU = 69.98, 85.7/76.9/66.7/54.5 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "每",
+      "部",
+      "电",
+      "影",
+      "的",
+      "标",
+      "题",
+      "和",
+      "导",
+      "演",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question_spider": "Show all directors.",
+    "question": "显示所有导演。",
+    "question_cspider": "显示所有导演。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=7, ref_len=7)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "导",
+      "演",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT DISTINCT directed_by FROM film",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "directed_by",
+      "FROM",
+      "film"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "directed_by",
+      "from",
+      "film"
+    ],
+    "question_spider": "Who are all the directors?",
+    "question": "所有导演是谁？",
+    "question_cspider": "所有导演是谁？",
+    "Harold": "BLEU = 47.29, 100.0/50.0/40.0/25.0 (BP=1.000, ratio=1.000, hyp_len=7, ref_len=7)",
+    "question_toks": [
+      "谁",
+      "是",
+      "所",
+      "有",
+      "导",
+      "演",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT directed_by ,  count(*) FROM film GROUP BY directed_by",
+    "query_toks": [
+      "SELECT",
+      "directed_by",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "GROUP",
+      "BY",
+      "directed_by"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "directed_by",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "group",
+      "by",
+      "directed_by"
+    ],
+    "question_spider": "List all directors along with the number of films directed by each director.",
+    "question": "列出所有导演和导演导演的电影数量。",
+    "question_cspider": "列出所有导演和导演导演的电影数量。",
+    "Harold": "BLEU = 51.09, 75.0/57.9/44.4/35.3 (BP=1.000, ratio=1.176, hyp_len=20, ref_len=17)",
+    "question_toks": [
+      "列",
+      "出",
+      "所",
+      "有",
+      "导",
+      "演",
+      "以",
+      "及",
+      "每",
+      "位",
+      "导",
+      "演",
+      "执",
+      "导",
+      "的",
+      "电",
+      "影",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.name ,  sum(T1.show_times_per_day) FROM schedule AS T1 JOIN cinema AS T2 ON T1.cinema_id  =  T2.cinema_id GROUP BY T1.cinema_id",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      ",",
+      "sum",
+      "(",
+      "T1.show_times_per_day",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "cinema",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cinema_id",
+      "=",
+      "T2.cinema_id",
+      "GROUP",
+      "BY",
+      "T1.cinema_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "sum",
+      "(",
+      "t1",
+      ".",
+      "show_times_per_day",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "cinema",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cinema_id",
+      "=",
+      "t2",
+      ".",
+      "cinema_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "cinema_id"
+    ],
+    "question_spider": "What is total number of show times per dat for each cinema?",
+    "question": "每家影院每台DAT的显示次数是多少？",
+    "question_cspider": "每家影院每台DAT的显示次数是多少？",
+    "Harold": "BLEU = 28.43, 55.6/35.3/25.0/13.3 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "每",
+      "个",
+      "电",
+      "影",
+      "院",
+      "每",
+      "天",
+      "的",
+      "放",
+      "映",
+      "时",
+      "间",
+      "总",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.title ,  max(T1.price) FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "max",
+      "(",
+      "T1.price",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "price",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id"
+    ],
+    "question_spider": "What are the title and maximum price of each film?",
+    "question": "每部电影的片名和最高价格是多少？",
+    "question_cspider": "每部电影的片名和最高价格是多少？",
+    "Harold": "BLEU = 54.01, 86.7/71.4/53.8/33.3 (BP=0.936, ratio=0.938, hyp_len=15, ref_len=16)",
+    "question_toks": [
+      "每",
+      "部",
+      "电",
+      "影",
+      "的",
+      "标",
+      "题",
+      "和",
+      "最",
+      "高",
+      "价",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.title ,  max(T1.price) FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id",
+    "query_toks": [
+      "SELECT",
+      "T2.title",
+      ",",
+      "max",
+      "(",
+      "T1.price",
+      ")",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T1.film_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "price",
+      ")",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "film_id"
+    ],
+    "question_spider": "Give me the title and highest price for each film.",
+    "question": "给我每个电影的片名和最高价格。",
+    "question_cspider": "给我每个电影的片名和最高价格。",
+    "Harold": "BLEU = 31.33, 78.6/53.8/33.3/9.1 (BP=0.931, ratio=0.933, hyp_len=14, ref_len=15)",
+    "question_toks": [
+      "给",
+      "我",
+      "每",
+      "部",
+      "电",
+      "影",
+      "的",
+      "标",
+      "题",
+      "和",
+      "最",
+      "高",
+      "价",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          14,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T3.name ,  T2.title ,  T1.date ,  T1.price FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id JOIN cinema AS T3 ON T1.cinema_id  =  T3.cinema_id",
+    "query_toks": [
+      "SELECT",
+      "T3.name",
+      ",",
+      "T2.title",
+      ",",
+      "T1.date",
+      ",",
+      "T1.price",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "JOIN",
+      "cinema",
+      "AS",
+      "T3",
+      "ON",
+      "T1.cinema_id",
+      "=",
+      "T3.cinema_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "title",
+      ",",
+      "t1",
+      ".",
+      "date",
+      ",",
+      "t1",
+      ".",
+      "price",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "join",
+      "cinema",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "cinema_id",
+      "=",
+      "t3",
+      ".",
+      "cinema_id"
+    ],
+    "question_spider": "Show cinema name, film title, date, and price for each record in schedule.",
+    "question": "按时间表显示电影院名称、电影片名、日期和价格。",
+    "question_cspider": "按时间表显示电影院名称、电影片名、日期和价格。",
+    "Harold": "BLEU = 27.88, 64.3/40.7/19.2/12.0 (BP=1.000, ratio=1.217, hyp_len=28, ref_len=23)",
+    "question_toks": [
+      "在",
+      "时",
+      "间",
+      "表",
+      "中",
+      "显",
+      "示",
+      "每",
+      "条",
+      "记",
+      "录",
+      "的",
+      "电",
+      "影",
+      "名",
+      "称",
+      "，",
+      "电",
+      "影",
+      "名",
+      "称",
+      "，",
+      "日",
+      "期",
+      "和",
+      "价",
+      "格",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT title ,  directed_by FROM film WHERE film_id NOT IN (SELECT film_id FROM schedule)",
+    "query_toks": [
+      "SELECT",
+      "title",
+      ",",
+      "directed_by",
+      "FROM",
+      "film",
+      "WHERE",
+      "film_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "film_id",
+      "FROM",
+      "schedule",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "title",
+      ",",
+      "directed_by",
+      "from",
+      "film",
+      "where",
+      "film_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "film_id",
+      "from",
+      "schedule",
+      ")"
+    ],
+    "question_spider": "What are the title and director of the films without any schedule?",
+    "question": "没有时间表的电影的片名和导演是什么？",
+    "question_cspider": "没有时间表的电影的片名和导演是什么？",
+    "Harold": "BLEU = 71.89, 88.2/81.2/73.3/64.3 (BP=0.943, ratio=0.944, hyp_len=17, ref_len=18)",
+    "question_toks": [
+      "没",
+      "有",
+      "时",
+      "间",
+      "表",
+      "的",
+      "电",
+      "影",
+      "标",
+      "题",
+      "和",
+      "导",
+      "演",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      14,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT T2.directed_by FROM schedule AS T1 JOIN film AS T2 ON T1.film_id  =  T2.film_id GROUP BY T2.directed_by ORDER BY sum(T1.show_times_per_day) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.directed_by",
+      "FROM",
+      "schedule",
+      "AS",
+      "T1",
+      "JOIN",
+      "film",
+      "AS",
+      "T2",
+      "ON",
+      "T1.film_id",
+      "=",
+      "T2.film_id",
+      "GROUP",
+      "BY",
+      "T2.directed_by",
+      "ORDER",
+      "BY",
+      "sum",
+      "(",
+      "T1.show_times_per_day",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "directed_by",
+      "from",
+      "schedule",
+      "as",
+      "t1",
+      "join",
+      "film",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "film_id",
+      "=",
+      "t2",
+      ".",
+      "film_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "directed_by",
+      "order",
+      "by",
+      "sum",
+      "(",
+      "t1",
+      ".",
+      "show_times_per_day",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show director with the largest number of show times in total.",
+    "question": "显示总共演出时间最多的导演。",
+    "question_cspider": "显示总共演出时间最多的导演。",
+    "Harold": "BLEU = 0.00, 66.7/45.5/20.0/0.0 (BP=0.846, ratio=0.857, hyp_len=12, ref_len=14)",
+    "question_toks": [
+      "演",
+      "出",
+      "次",
+      "数",
+      "最",
+      "多",
+      "的",
+      "演",
+      "出",
+      "导",
+      "演",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              4,
+              16,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "Find the locations that have more than one movie theater with capacity above 300.",
+    "question": "找到有一个以上容量超过300的电影院的位置。",
+    "question_cspider": "找到有一个以上容量超过300的电影院的位置。",
+    "Harold": "BLEU = 59.99, 72.0/58.3/56.5/54.5 (BP=1.000, ratio=1.136, hyp_len=25, ref_len=22)",
+    "question_toks": [
+      "查",
+      "找",
+      "具",
+      "有",
+      "多",
+      "个",
+      "电",
+      "影",
+      "院",
+      "且",
+      "容",
+      "量",
+      "超",
+      "过",
+      "3",
+      "0",
+      "0",
+      "的",
+      "电",
+      "影",
+      "院",
+      "的",
+      "位",
+      "置",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT LOCATION FROM cinema WHERE capacity  >  300 GROUP BY LOCATION HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "cinema",
+      "WHERE",
+      "capacity",
+      ">",
+      "300",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "cinema",
+      "where",
+      "capacity",
+      ">",
+      "value",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question_spider": "In which locations are there more than one movie theater with capacity above 300?",
+    "question": "在哪些地方有不止一个电影院的容量超过300？",
+    "question_cspider": "在哪些地方有不止一个电影院的容量超过300？",
+    "Harold": "BLEU = 31.37, 70.0/42.1/27.8/17.6 (BP=0.905, ratio=0.909, hyp_len=20, ref_len=22)",
+    "question_toks": [
+      "在",
+      "哪",
+      "个",
+      "位",
+      "置",
+      "有",
+      "超",
+      "过",
+      "3",
+      "0",
+      "0",
+      "家",
+      "电",
+      "影",
+      "院",
+      "的",
+      "电",
+      "影",
+      "院",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          300,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "WHERE",
+      "title",
+      "LIKE",
+      "``",
+      "%",
+      "Dummy",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "where",
+      "title",
+      "like",
+      "value"
+    ],
+    "question_spider": "How many films have the word 'Dummy' in their titles?",
+    "question": "有多少电影片名里有“Dummy”？",
+    "question_cspider": "有多少电影片名里有“Dummy”？",
+    "Harold": "BLEU = 0.00, 35.3/12.5/0.0/0.0 (BP=1.000, ratio=1.214, hyp_len=17, ref_len=14)",
+    "question_toks": [
+      "几",
+      "部",
+      "电",
+      "影",
+      "的",
+      "标",
+      "题",
+      "中",
+      "带",
+      "有",
+      "“",
+      "虚",
+      "拟",
+      "”",
+      "一",
+      "词",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Dummy%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "cinema",
+    "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "film",
+      "WHERE",
+      "title",
+      "LIKE",
+      "``",
+      "%",
+      "Dummy",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "film",
+      "where",
+      "title",
+      "like",
+      "value"
+    ],
+    "question_spider": "Count the number of films whose title contains the word 'Dummy'.",
+    "question": "计算标题包含“Dummy”的电影的数量。",
+    "question_cspider": "计算标题包含“Dummy”的电影的数量。",
+    "Harold": "BLEU = 48.81, 75.0/57.9/44.4/29.4 (BP=1.000, ratio=1.176, hyp_len=20, ref_len=17)",
+    "question_toks": [
+      "计",
+      "算",
+      "标",
+      "题",
+      "中",
+      "包",
+      "含",
+      "“",
+      "虚",
+      "拟",
+      "”",
+      "一",
+      "词",
+      "的",
+      "电",
+      "影",
+      "的",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"%Dummy%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

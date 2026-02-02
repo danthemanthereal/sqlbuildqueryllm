@@ -1,0 +1,2332 @@
+[
+  {
+    "db_id": "school_bus",
+    "query": "SELECT count(*) FROM driver",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "driver"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "driver"
+    ],
+    "question_spider": "How many drivers are there?",
+    "question": "那儿有多少司机？",
+    "question_cspider": "那儿有多少司机？",
+    "Harold": "BLEU = 0.00, 62.5/28.6/16.7/0.0 (BP=1.000, ratio=1.000, hyp_len=8, ref_len=8)",
+    "question_toks": [
+      "那",
+      "里",
+      "有",
+      "几",
+      "个",
+      "司",
+      "机",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT name ,  home_city ,  age FROM driver",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "home_city",
+      ",",
+      "age",
+      "FROM",
+      "driver"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "home_city",
+      ",",
+      "age",
+      "from",
+      "driver"
+    ],
+    "question_spider": "Show the name, home city, and age for all drivers.",
+    "question": "显示所有司机的姓名、家乡和年龄。",
+    "question_cspider": "显示所有司机的姓名、家乡和年龄。",
+    "Harold": "BLEU = 31.19, 57.9/44.4/29.4/12.5 (BP=1.000, ratio=1.188, hyp_len=19, ref_len=16)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "驾",
+      "驶",
+      "员",
+      "的",
+      "姓",
+      "名",
+      "，",
+      "居",
+      "住",
+      "城",
+      "市",
+      "和",
+      "年",
+      "龄",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT party ,  count(*) FROM driver GROUP BY party",
+    "query_toks": [
+      "SELECT",
+      "party",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "driver",
+      "GROUP",
+      "BY",
+      "party"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "party",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "driver",
+      "group",
+      "by",
+      "party"
+    ],
+    "question_spider": "Show the party and the number of drivers in each party.",
+    "question": "显示组织和每个组织的司机数量。",
+    "question_cspider": "显示组织和每个组织的司机数量。",
+    "Harold": "BLEU = 0.00, 62.5/33.3/14.3/0.0 (BP=1.000, ratio=1.067, hyp_len=16, ref_len=15)",
+    "question_toks": [
+      "显",
+      "示",
+      "聚",
+      "会",
+      "和",
+      "每",
+      "个",
+      "聚",
+      "会",
+      "中",
+      "的",
+      "司",
+      "机",
+      "人",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT name FROM driver ORDER BY age DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "driver",
+      "ORDER",
+      "BY",
+      "age",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "driver",
+      "order",
+      "by",
+      "age",
+      "desc"
+    ],
+    "question_spider": "Show the name of drivers in descending order of age.",
+    "question": "按年龄递减顺序显示驾驶员姓名。",
+    "question_cspider": "按年龄递减顺序显示驾驶员姓名。",
+    "Harold": "BLEU = 0.00, 53.3/28.6/15.4/0.0 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "按",
+      "年",
+      "龄",
+      "降",
+      "序",
+      "显",
+      "示",
+      "驱",
+      "动",
+      "程",
+      "序",
+      "的",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT DISTINCT home_city FROM driver",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "home_city",
+      "FROM",
+      "driver"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "home_city",
+      "from",
+      "driver"
+    ],
+    "question_spider": "Show all different home cities.",
+    "question": "展示所有不同的家乡城市。",
+    "question_cspider": "展示所有不同的家乡城市。",
+    "Harold": "BLEU = 53.11, 75.0/63.6/50.0/33.3 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "不",
+      "同",
+      "的",
+      "本",
+      "地",
+      "城",
+      "市",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT home_city FROM driver GROUP BY home_city ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "home_city",
+      "FROM",
+      "driver",
+      "GROUP",
+      "BY",
+      "home_city",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "home_city",
+      "from",
+      "driver",
+      "group",
+      "by",
+      "home_city",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show the home city with the most number of drivers.",
+    "question": "显示有最多数量司机的家乡城市。",
+    "question_cspider": "显示有最多数量司机的家乡城市。",
+    "Harold": "BLEU = 43.30, 80.0/57.1/30.8/25.0 (BP=1.000, ratio=1.000, hyp_len=15, ref_len=15)",
+    "question_toks": [
+      "显",
+      "示",
+      "驾",
+      "驶",
+      "员",
+      "数",
+      "量",
+      "最",
+      "多",
+      "的",
+      "家",
+      "乡",
+      "城",
+      "市",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT party FROM driver WHERE home_city  =  'Hartford' AND age  >  40",
+    "query_toks": [
+      "SELECT",
+      "party",
+      "FROM",
+      "driver",
+      "WHERE",
+      "home_city",
+      "=",
+      "'Hartford",
+      "'",
+      "AND",
+      "age",
+      ">",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "party",
+      "from",
+      "driver",
+      "where",
+      "home_city",
+      "=",
+      "value",
+      "and",
+      "age",
+      ">",
+      "value"
+    ],
+    "question_spider": "Show the party with drivers from Hartford and drivers older than 40.",
+    "question": "显示40岁以上的来自“Hartford”的司机的组织。",
+    "question_cspider": "显示40岁以上的来自“Hartford”的司机的组织。",
+    "Harold": "BLEU = 21.63, 40.0/27.6/17.9/11.1 (BP=1.000, ratio=1.429, hyp_len=30, ref_len=21)",
+    "question_toks": [
+      "与",
+      "来",
+      "自",
+      "H",
+      "a",
+      "r",
+      "t",
+      "f",
+      "o",
+      "r",
+      "d",
+      "的",
+      "司",
+      "机",
+      "和",
+      "4",
+      "0",
+      "岁",
+      "以",
+      "上",
+      "的",
+      "司",
+      "机",
+      "一",
+      "起",
+      "参",
+      "加",
+      "聚",
+      "会",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Hartford\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          40,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT home_city FROM driver WHERE age  >  40 GROUP BY home_city HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "home_city",
+      "FROM",
+      "driver",
+      "WHERE",
+      "age",
+      ">",
+      "40",
+      "GROUP",
+      "BY",
+      "home_city",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "home_city",
+      "from",
+      "driver",
+      "where",
+      "age",
+      ">",
+      "value",
+      "group",
+      "by",
+      "home_city",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show home city where at least two drivers older than 40 are from.",
+    "question": "显示至少有两个40岁以上的司机的家乡城市。",
+    "question_cspider": "显示至少有两个40岁以上的司机的家乡城市。",
+    "Harold": "BLEU = 54.41, 82.6/63.6/47.6/35.0 (BP=1.000, ratio=1.095, hyp_len=23, ref_len=21)",
+    "question_toks": [
+      "显",
+      "示",
+      "家",
+      "乡",
+      "城",
+      "市",
+      "，",
+      "至",
+      "少",
+      "有",
+      "两",
+      "名",
+      "4",
+      "0",
+      "岁",
+      "以",
+      "上",
+      "的",
+      "司",
+      "机",
+      "来",
+      "自",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          40,
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          4,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT home_city FROM driver EXCEPT SELECT home_city FROM driver WHERE age  >  40",
+    "query_toks": [
+      "SELECT",
+      "home_city",
+      "FROM",
+      "driver",
+      "EXCEPT",
+      "SELECT",
+      "home_city",
+      "FROM",
+      "driver",
+      "WHERE",
+      "age",
+      ">",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "home_city",
+      "from",
+      "driver",
+      "except",
+      "select",
+      "home_city",
+      "from",
+      "driver",
+      "where",
+      "age",
+      ">",
+      "value"
+    ],
+    "question_spider": "Show all home cities except for those having a driver older than 40.",
+    "question": "显示除了超过40岁以上的司机的所有家乡城市。",
+    "question_cspider": "显示除了超过40岁以上的司机的所有家乡城市。",
+    "Harold": "BLEU = 24.74, 53.8/32.0/16.7/13.0 (BP=1.000, ratio=1.182, hyp_len=26, ref_len=22)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "居",
+      "住",
+      "城",
+      "市",
+      "，",
+      "驾",
+      "驶",
+      "员",
+      "年",
+      "龄",
+      "在",
+      "4",
+      "0",
+      "岁",
+      "以",
+      "上",
+      "的",
+      "城",
+      "市",
+      "除",
+      "外",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            40,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT name FROM driver WHERE driver_id NOT IN (SELECT driver_id FROM school_bus)",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "driver",
+      "WHERE",
+      "driver_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "driver_id",
+      "FROM",
+      "school_bus",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "driver",
+      "where",
+      "driver_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "driver_id",
+      "from",
+      "school_bus",
+      ")"
+    ],
+    "question_spider": "Show the names of the drivers without a school bus.",
+    "question": "显示没有校车的司机名字。",
+    "question_cspider": "显示没有校车的司机名字。",
+    "Harold": "BLEU = 74.68, 91.7/72.7/70.0/66.7 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "显",
+      "示",
+      "没",
+      "有",
+      "校",
+      "车",
+      "的",
+      "司",
+      "机",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT TYPE FROM school GROUP BY TYPE HAVING count(*)  =  2",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      "FROM",
+      "school",
+      "GROUP",
+      "BY",
+      "TYPE",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      "from",
+      "school",
+      "group",
+      "by",
+      "type",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the types of schools that have two schools.",
+    "question": "展示有两所学校的学校类型。",
+    "question_cspider": "展示有两所学校的学校类型。",
+    "Harold": "BLEU = 91.22, 92.3/91.7/90.9/90.0 (BP=1.000, ratio=1.000, hyp_len=13, ref_len=13)",
+    "question_toks": [
+      "显",
+      "示",
+      "有",
+      "两",
+      "所",
+      "学",
+      "校",
+      "的",
+      "学",
+      "校",
+      "类",
+      "型",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT T2.school ,  T3.name FROM school_bus AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id JOIN driver AS T3 ON T1.driver_id  =  T3.driver_id",
+    "query_toks": [
+      "SELECT",
+      "T2.school",
+      ",",
+      "T3.name",
+      "FROM",
+      "school_bus",
+      "AS",
+      "T1",
+      "JOIN",
+      "school",
+      "AS",
+      "T2",
+      "ON",
+      "T1.school_id",
+      "=",
+      "T2.school_id",
+      "JOIN",
+      "driver",
+      "AS",
+      "T3",
+      "ON",
+      "T1.driver_id",
+      "=",
+      "T3.driver_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "school",
+      ",",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "school_bus",
+      "as",
+      "t1",
+      "join",
+      "school",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "school_id",
+      "=",
+      "t2",
+      ".",
+      "school_id",
+      "join",
+      "driver",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "driver_id",
+      "=",
+      "t3",
+      ".",
+      "driver_id"
+    ],
+    "question_spider": "Show the school name and driver name for all school buses.",
+    "question": "显示所有校车的学校名称和司机姓名。",
+    "question_cspider": "显示所有校车的学校名称和司机姓名。",
+    "Harold": "BLEU = 65.91, 77.8/64.7/62.5/60.0 (BP=1.000, ratio=1.059, hyp_len=18, ref_len=17)",
+    "question_toks": [
+      "显",
+      "示",
+      "所",
+      "有",
+      "校",
+      "车",
+      "的",
+      "学",
+      "校",
+      "名",
+      "称",
+      "和",
+      "驾",
+      "驶",
+      "员",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT max(years_working) ,  min(years_working) ,  avg(years_working) FROM school_bus",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "min",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "years_working",
+      ")",
+      "FROM",
+      "school_bus"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "min",
+      "(",
+      "years_working",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "years_working",
+      ")",
+      "from",
+      "school_bus"
+    ],
+    "question_spider": "What is the maximum, minimum and average years spent working on a school bus?",
+    "question": "在校车上工作的最大、最小和平均年是多少？",
+    "question_cspider": "在校车上工作的最大、最小和平均年是多少？",
+    "Harold": "BLEU = 45.48, 76.2/60.0/42.1/22.2 (BP=1.000, ratio=1.050, hyp_len=21, ref_len=20)",
+    "question_toks": [
+      "在",
+      "校",
+      "车",
+      "上",
+      "度",
+      "过",
+      "的",
+      "最",
+      "大",
+      "，",
+      "最",
+      "小",
+      "和",
+      "平",
+      "均",
+      "时",
+      "间",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT school ,  TYPE FROM school WHERE school_id NOT IN (SELECT school_id FROM school_bus)",
+    "query_toks": [
+      "SELECT",
+      "school",
+      ",",
+      "TYPE",
+      "FROM",
+      "school",
+      "WHERE",
+      "school_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "school_id",
+      "FROM",
+      "school_bus",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "school",
+      ",",
+      "type",
+      "from",
+      "school",
+      "where",
+      "school_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "school_id",
+      "from",
+      "school_bus",
+      ")"
+    ],
+    "question_spider": "Show the school name and type for schools without a school bus.",
+    "question": "显示没有校车的学校名称和学校类型。",
+    "question_cspider": "显示没有校车的学校名称和学校类型。",
+    "Harold": "BLEU = 75.26, 94.4/82.4/68.8/60.0 (BP=1.000, ratio=1.059, hyp_len=18, ref_len=17)",
+    "question_toks": [
+      "显",
+      "示",
+      "没",
+      "有",
+      "校",
+      "车",
+      "的",
+      "学",
+      "校",
+      "的",
+      "学",
+      "校",
+      "名",
+      "称",
+      "和",
+      "类",
+      "型",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT T2.type ,  count(*) FROM school_bus AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id GROUP BY T2.type",
+    "query_toks": [
+      "SELECT",
+      "T2.type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "school_bus",
+      "AS",
+      "T1",
+      "JOIN",
+      "school",
+      "AS",
+      "T2",
+      "ON",
+      "T1.school_id",
+      "=",
+      "T2.school_id",
+      "GROUP",
+      "BY",
+      "T2.type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "school_bus",
+      "as",
+      "t1",
+      "join",
+      "school",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "school_id",
+      "=",
+      "t2",
+      ".",
+      "school_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "type"
+    ],
+    "question_spider": "Show the type of school and the number of buses for each type.",
+    "question": "显示学校的类型和每种类型的公共汽车数量。",
+    "question_cspider": "显示学校的类型和每种类型的公共汽车数量。",
+    "Harold": "BLEU = 65.15, 85.0/73.7/61.1/47.1 (BP=1.000, ratio=1.000, hyp_len=20, ref_len=20)",
+    "question_toks": [
+      "显",
+      "示",
+      "学",
+      "校",
+      "的",
+      "类",
+      "型",
+      "以",
+      "及",
+      "每",
+      "种",
+      "类",
+      "型",
+      "的",
+      "公",
+      "交",
+      "车",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          10,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT count(*) FROM driver WHERE home_city  =  'Hartford' OR age  <  40",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "driver",
+      "WHERE",
+      "home_city",
+      "=",
+      "'Hartford",
+      "'",
+      "OR",
+      "age",
+      "<",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "driver",
+      "where",
+      "home_city",
+      "=",
+      "value",
+      "or",
+      "age",
+      "<",
+      "value"
+    ],
+    "question_spider": "How many drivers are from Hartford city or younger than 40?",
+    "question": "有多少司机来自“Hartford”或年龄是40岁以下？",
+    "question_cspider": "有多少司机来自“Hartford”或年龄是40岁以下？",
+    "Harold": "BLEU = 28.10, 66.7/40.0/21.1/11.1 (BP=1.000, ratio=1.000, hyp_len=21, ref_len=21)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "位",
+      "来",
+      "自",
+      "哈",
+      "特",
+      "福",
+      "德",
+      "市",
+      "或",
+      "4",
+      "0",
+      "岁",
+      "以",
+      "下",
+      "的",
+      "司",
+      "机",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Hartford\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          40,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT name FROM driver WHERE home_city  =  'Hartford' AND age  <  40",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "driver",
+      "WHERE",
+      "home_city",
+      "=",
+      "'Hartford",
+      "'",
+      "AND",
+      "age",
+      "<",
+      "40"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "driver",
+      "where",
+      "home_city",
+      "=",
+      "value",
+      "and",
+      "age",
+      "<",
+      "value"
+    ],
+    "question_spider": "List names for drivers from Hartford city and younger than 40.",
+    "question": "列出“Hartford”且40岁以下司机的名字。",
+    "question_cspider": "列出“Hartford”且40岁以下司机的名字。",
+    "Harold": "BLEU = 14.97, 36.7/17.2/10.7/7.4 (BP=1.000, ratio=1.667, hyp_len=30, ref_len=18)",
+    "question_toks": [
+      "列",
+      "出",
+      "来",
+      "自",
+      "H",
+      "a",
+      "r",
+      "t",
+      "f",
+      "o",
+      "r",
+      "d",
+      "市",
+      "且",
+      "年",
+      "龄",
+      "在",
+      "4",
+      "0",
+      "岁",
+      "以",
+      "下",
+      "的",
+      "驾",
+      "驶",
+      "员",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Hartford\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          40,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "school_bus",
+    "query": "SELECT t1.name FROM driver AS t1 JOIN school_bus AS t2 ON t1.driver_id  =  t2.driver_id ORDER BY years_working DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "driver",
+      "AS",
+      "t1",
+      "JOIN",
+      "school_bus",
+      "AS",
+      "t2",
+      "ON",
+      "t1.driver_id",
+      "=",
+      "t2.driver_id",
+      "ORDER",
+      "BY",
+      "years_working",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "driver",
+      "as",
+      "t1",
+      "join",
+      "school_bus",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "driver_id",
+      "=",
+      "t2",
+      ".",
+      "driver_id",
+      "order",
+      "by",
+      "years_working",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "find the name of driver who is driving the school bus with the longest working history.",
+    "question": "找出驾驶公共汽车的工作历史最悠久的司机的名字。",
+    "question_cspider": "找出驾驶公共汽车的工作历史最悠久的司机的名字。",
+    "Harold": "BLEU = 0.00, 61.1/23.5/6.2/0.0 (BP=0.757, ratio=0.783, hyp_len=18, ref_len=23)",
+    "question_toks": [
+      "查",
+      "找",
+      "驾",
+      "驶",
+      "历",
+      "史",
+      "最",
+      "长",
+      "的",
+      "校",
+      "车",
+      "的",
+      "驾",
+      "驶",
+      "员",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

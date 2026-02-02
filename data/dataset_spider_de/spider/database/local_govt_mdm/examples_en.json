@@ -1,0 +1,1950 @@
+[
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.cmi_details FROM Customer_Master_Index AS T1 JOIN CMI_Cross_References AS T2 ON T1.master_customer_id  =  T2.master_customer_id WHERE T2.source_system_code  =  'Tax'",
+    "query_toks": [
+      "SELECT",
+      "T1.cmi_details",
+      "FROM",
+      "Customer_Master_Index",
+      "AS",
+      "T1",
+      "JOIN",
+      "CMI_Cross_References",
+      "AS",
+      "T2",
+      "ON",
+      "T1.master_customer_id",
+      "=",
+      "T2.master_customer_id",
+      "WHERE",
+      "T2.source_system_code",
+      "=",
+      "'Tax",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "cmi_details",
+      "from",
+      "customer_master_index",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "master_customer_id",
+      "=",
+      "t2",
+      ".",
+      "master_customer_id",
+      "where",
+      "t2",
+      ".",
+      "source_system_code",
+      "=",
+      "value"
+    ],
+    "question": "what are the details of the cmi masters that have the cross reference code 'Tax'?",
+    "question_toks": [
+      "what",
+      "are",
+      "the",
+      "details",
+      "of",
+      "the",
+      "cmi",
+      "masters",
+      "that",
+      "have",
+      "the",
+      "cross",
+      "reference",
+      "code",
+      "'Tax",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Tax\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.cmi_cross_ref_id ,  T1.source_system_code FROM CMI_Cross_References AS T1 JOIN Council_Tax AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id GROUP BY T1.cmi_cross_ref_id HAVING count(*)  >=  1",
+    "query_toks": [
+      "SELECT",
+      "T1.cmi_cross_ref_id",
+      ",",
+      "T1.source_system_code",
+      "FROM",
+      "CMI_Cross_References",
+      "AS",
+      "T1",
+      "JOIN",
+      "Council_Tax",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "GROUP",
+      "BY",
+      "T1.cmi_cross_ref_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      ",",
+      "t1",
+      ".",
+      "source_system_code",
+      "from",
+      "cmi_cross_references",
+      "as",
+      "t1",
+      "join",
+      "council_tax",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "What is the cmi cross reference id that is related to at least one council tax entry? List the cross reference id and source system code.",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "cmi",
+      "cross",
+      "reference",
+      "id",
+      "that",
+      "is",
+      "related",
+      "to",
+      "at",
+      "least",
+      "one",
+      "council",
+      "tax",
+      "entry",
+      "?",
+      "List",
+      "the",
+      "cross",
+      "reference",
+      "id",
+      "and",
+      "source",
+      "system",
+      "code",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T2.cmi_cross_ref_id ,  T2.master_customer_id ,  count(*) FROM Business_Rates AS T1 JOIN CMI_Cross_References AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id GROUP BY T2.cmi_cross_ref_id",
+    "query_toks": [
+      "SELECT",
+      "T2.cmi_cross_ref_id",
+      ",",
+      "T2.master_customer_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Business_Rates",
+      "AS",
+      "T1",
+      "JOIN",
+      "CMI_Cross_References",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "GROUP",
+      "BY",
+      "T2.cmi_cross_ref_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      ",",
+      "t2",
+      ".",
+      "master_customer_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "business_rates",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "cmi_cross_ref_id"
+    ],
+    "question": "How many business rates are related to each cmi cross reference? List cross reference id, master customer id and the n",
+    "question_toks": [
+      "How",
+      "many",
+      "business",
+      "rates",
+      "are",
+      "related",
+      "to",
+      "each",
+      "cmi",
+      "cross",
+      "reference",
+      "?",
+      "List",
+      "cross",
+      "reference",
+      "id",
+      ",",
+      "master",
+      "customer",
+      "id",
+      "and",
+      "the",
+      "n"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.source_system_code ,  T2.council_tax_id FROM CMI_Cross_References AS T1 JOIN Benefits_Overpayments AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id ORDER BY T2.council_tax_id",
+    "query_toks": [
+      "SELECT",
+      "T1.source_system_code",
+      ",",
+      "T2.council_tax_id",
+      "FROM",
+      "CMI_Cross_References",
+      "AS",
+      "T1",
+      "JOIN",
+      "Benefits_Overpayments",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "ORDER",
+      "BY",
+      "T2.council_tax_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "source_system_code",
+      ",",
+      "t2",
+      ".",
+      "council_tax_id",
+      "from",
+      "cmi_cross_references",
+      "as",
+      "t1",
+      "join",
+      "benefits_overpayments",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "council_tax_id"
+    ],
+    "question": "What is the tax source system code related to the benefits and overpayments? List the code and the benifit id, order by benifit id.",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "tax",
+      "source",
+      "system",
+      "code",
+      "related",
+      "to",
+      "the",
+      "benefits",
+      "and",
+      "overpayments",
+      "?",
+      "List",
+      "the",
+      "code",
+      "and",
+      "the",
+      "benifit",
+      "id",
+      ",",
+      "order",
+      "by",
+      "benifit",
+      "id",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.source_system_code ,  T1.master_customer_id ,  T2.council_tax_id FROM CMI_Cross_References AS T1 JOIN Parking_Fines AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id",
+    "query_toks": [
+      "SELECT",
+      "T1.source_system_code",
+      ",",
+      "T1.master_customer_id",
+      ",",
+      "T2.council_tax_id",
+      "FROM",
+      "CMI_Cross_References",
+      "AS",
+      "T1",
+      "JOIN",
+      "Parking_Fines",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "source_system_code",
+      ",",
+      "t1",
+      ".",
+      "master_customer_id",
+      ",",
+      "t2",
+      ".",
+      "council_tax_id",
+      "from",
+      "cmi_cross_references",
+      "as",
+      "t1",
+      "join",
+      "parking_fines",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id"
+    ],
+    "question": "Wat is the tax source system code and master customer id of the taxes related to each parking fine id?",
+    "question_toks": [
+      "Wat",
+      "is",
+      "the",
+      "tax",
+      "source",
+      "system",
+      "code",
+      "and",
+      "master",
+      "customer",
+      "id",
+      "of",
+      "the",
+      "taxes",
+      "related",
+      "to",
+      "each",
+      "parking",
+      "fine",
+      "id",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.council_tax_id FROM Rent_Arrears AS T1 JOIN CMI_Cross_References AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id JOIN Customer_Master_Index AS T3 ON T3.master_customer_id  =  T2.master_customer_id WHERE T3.cmi_details != 'Schmidt ,  Kertzmann and Lubowitz'",
+    "query_toks": [
+      "SELECT",
+      "T1.council_tax_id",
+      "FROM",
+      "Rent_Arrears",
+      "AS",
+      "T1",
+      "JOIN",
+      "CMI_Cross_References",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "JOIN",
+      "Customer_Master_Index",
+      "AS",
+      "T3",
+      "ON",
+      "T3.master_customer_id",
+      "=",
+      "T2.master_customer_id",
+      "WHERE",
+      "T3.cmi_details",
+      "!",
+      "=",
+      "'Schmidt",
+      ",",
+      "Kertzmann",
+      "and",
+      "Lubowitz",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "council_tax_id",
+      "from",
+      "rent_arrears",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "join",
+      "customer_master_index",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "master_customer_id",
+      "=",
+      "t2",
+      ".",
+      "master_customer_id",
+      "where",
+      "t3",
+      ".",
+      "cmi_details",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "What are the renting arrears tax ids related to the customer master index whose detail is not 'Schmidt, Kertzmann and Lubowitz'?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "renting",
+      "arrears",
+      "tax",
+      "ids",
+      "related",
+      "to",
+      "the",
+      "customer",
+      "master",
+      "index",
+      "whose",
+      "detail",
+      "is",
+      "not",
+      "'Schmidt",
+      ",",
+      "Kertzmann",
+      "and",
+      "Lubowitz",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Schmidt ,  Kertzmann and Lubowitz\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.electoral_register_id FROM Electoral_Register AS T1 JOIN CMI_Cross_References AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id WHERE T2.source_system_code  =  'Electoral' OR T2.source_system_code  =  'Tax'",
+    "query_toks": [
+      "SELECT",
+      "T1.electoral_register_id",
+      "FROM",
+      "Electoral_Register",
+      "AS",
+      "T1",
+      "JOIN",
+      "CMI_Cross_References",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "WHERE",
+      "T2.source_system_code",
+      "=",
+      "'Electoral",
+      "'",
+      "OR",
+      "T2.source_system_code",
+      "=",
+      "'Tax",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "electoral_register_id",
+      "from",
+      "electoral_register",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "where",
+      "t2",
+      ".",
+      "source_system_code",
+      "=",
+      "value",
+      "or",
+      "t2",
+      ".",
+      "source_system_code",
+      "=",
+      "value"
+    ],
+    "question": "What are the register ids of electoral registries that have the cross reference source system code 'Electoral' or 'Tax'?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "register",
+      "ids",
+      "of",
+      "electoral",
+      "registries",
+      "that",
+      "have",
+      "the",
+      "cross",
+      "reference",
+      "source",
+      "system",
+      "code",
+      "'Electoral",
+      "'",
+      "or",
+      "'Tax",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Electoral\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Tax\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT count(DISTINCT source_system_code) FROM CMI_cross_references",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "source_system_code",
+      ")",
+      "FROM",
+      "CMI_cross_references"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "source_system_code",
+      ")",
+      "from",
+      "cmi_cross_references"
+    ],
+    "question": "How many different source system code for the cmi cross references are there?",
+    "question_toks": [
+      "How",
+      "many",
+      "different",
+      "source",
+      "system",
+      "code",
+      "for",
+      "the",
+      "cmi",
+      "cross",
+      "references",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT * FROM customer_master_index ORDER BY cmi_details DESC",
+    "query_toks": [
+      "SELECT",
+      "*",
+      "FROM",
+      "customer_master_index",
+      "ORDER",
+      "BY",
+      "cmi_details",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "*",
+      "from",
+      "customer_master_index",
+      "order",
+      "by",
+      "cmi_details",
+      "desc"
+    ],
+    "question": "List all information about customer master index, and sort them by details in descending order.",
+    "question_toks": [
+      "List",
+      "all",
+      "information",
+      "about",
+      "customer",
+      "master",
+      "index",
+      ",",
+      "and",
+      "sort",
+      "them",
+      "by",
+      "details",
+      "in",
+      "descending",
+      "order",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT council_tax_id ,  cmi_cross_ref_id FROM parking_fines",
+    "query_toks": [
+      "SELECT",
+      "council_tax_id",
+      ",",
+      "cmi_cross_ref_id",
+      "FROM",
+      "parking_fines"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "council_tax_id",
+      ",",
+      "cmi_cross_ref_id",
+      "from",
+      "parking_fines"
+    ],
+    "question": "List the council tax ids and their related cmi cross references of all the parking fines.",
+    "question_toks": [
+      "List",
+      "the",
+      "council",
+      "tax",
+      "ids",
+      "and",
+      "their",
+      "related",
+      "cmi",
+      "cross",
+      "references",
+      "of",
+      "all",
+      "the",
+      "parking",
+      "fines",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT count(*) FROM rent_arrears",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "rent_arrears"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "rent_arrears"
+    ],
+    "question": "How many council taxes are collected for renting arrears ?",
+    "question_toks": [
+      "How",
+      "many",
+      "council",
+      "taxes",
+      "are",
+      "collected",
+      "for",
+      "renting",
+      "arrears",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT DISTINCT T2.source_system_code FROM customer_master_index AS T1 JOIN cmi_cross_references AS T2 ON T1.master_customer_id  =  T2.master_customer_id WHERE T1.cmi_details  =  'Gottlieb ,  Becker and Wyman'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.source_system_code",
+      "FROM",
+      "customer_master_index",
+      "AS",
+      "T1",
+      "JOIN",
+      "cmi_cross_references",
+      "AS",
+      "T2",
+      "ON",
+      "T1.master_customer_id",
+      "=",
+      "T2.master_customer_id",
+      "WHERE",
+      "T1.cmi_details",
+      "=",
+      "'Gottlieb",
+      ",",
+      "Becker",
+      "and",
+      "Wyman",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "source_system_code",
+      "from",
+      "customer_master_index",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "master_customer_id",
+      "=",
+      "t2",
+      ".",
+      "master_customer_id",
+      "where",
+      "t1",
+      ".",
+      "cmi_details",
+      "=",
+      "value"
+    ],
+    "question": "What are the distinct cross reference source system codes which are related to the master customer details 'Gottlieb, Becker and Wyman'?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "cross",
+      "reference",
+      "source",
+      "system",
+      "codes",
+      "which",
+      "are",
+      "related",
+      "to",
+      "the",
+      "master",
+      "customer",
+      "details",
+      "'Gottlieb",
+      ",",
+      "Becker",
+      "and",
+      "Wyman",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Gottlieb ,  Becker and Wyman\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT cmi_cross_ref_id FROM cmi_cross_references EXCEPT SELECT cmi_cross_ref_id FROM parking_fines",
+    "query_toks": [
+      "SELECT",
+      "cmi_cross_ref_id",
+      "FROM",
+      "cmi_cross_references",
+      "EXCEPT",
+      "SELECT",
+      "cmi_cross_ref_id",
+      "FROM",
+      "parking_fines"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "cmi_cross_ref_id",
+      "from",
+      "cmi_cross_references",
+      "except",
+      "select",
+      "cmi_cross_ref_id",
+      "from",
+      "parking_fines"
+    ],
+    "question": "Which cmi cross reference id is not related to any parking taxes?",
+    "question_toks": [
+      "Which",
+      "cmi",
+      "cross",
+      "reference",
+      "id",
+      "is",
+      "not",
+      "related",
+      "to",
+      "any",
+      "parking",
+      "taxes",
+      "?"
+    ],
+    "sql": {
+      "except": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              5
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": []
+      },
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT DISTINCT source_system_code FROM cmi_cross_references WHERE source_system_code LIKE '%en%'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "source_system_code",
+      "FROM",
+      "cmi_cross_references",
+      "WHERE",
+      "source_system_code",
+      "LIKE",
+      "'",
+      "%",
+      "en",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "source_system_code",
+      "from",
+      "cmi_cross_references",
+      "where",
+      "source_system_code",
+      "like",
+      "value"
+    ],
+    "question": "Which distinct source system code includes the substring 'en'?",
+    "question_toks": [
+      "Which",
+      "distinct",
+      "source",
+      "system",
+      "code",
+      "includes",
+      "the",
+      "substring",
+      "'en",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"%en%\"",
+          null
+        ]
+      ]
+    }
+  }
+]

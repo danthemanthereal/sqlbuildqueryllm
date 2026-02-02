@@ -1,0 +1,2365 @@
+[
+  {
+    "db_id": "flight_company",
+    "query": "SELECT count(*) FROM flight WHERE velocity  >  200",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "flight",
+      "WHERE",
+      "velocity",
+      ">",
+      "200"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "flight",
+      "where",
+      "velocity",
+      ">",
+      "value"
+    ],
+    "question": "速度が200を超えるフライトはいくつありますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          200.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT vehicle_flight_number ,  date ,  pilot FROM flight ORDER BY altitude ASC",
+    "query_toks": [
+      "SELECT",
+      "vehicle_flight_number",
+      ",",
+      "date",
+      ",",
+      "pilot",
+      "FROM",
+      "flight",
+      "ORDER",
+      "BY",
+      "altitude",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "vehicle_flight_number",
+      ",",
+      "date",
+      ",",
+      "pilot",
+      "from",
+      "flight",
+      "order",
+      "by",
+      "altitude",
+      "asc"
+    ],
+    "question": "高度順にすべてのフライトの番号、日付、パイロットを一覧表示します。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT id ,  country ,  city ,  name FROM airport ORDER BY name",
+    "query_toks": [
+      "SELECT",
+      "id",
+      ",",
+      "country",
+      ",",
+      "city",
+      ",",
+      "name",
+      "FROM",
+      "airport",
+      "ORDER",
+      "BY",
+      "name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "id",
+      ",",
+      "country",
+      ",",
+      "city",
+      ",",
+      "name",
+      "from",
+      "airport",
+      "order",
+      "by",
+      "name"
+    ],
+    "question": "空港のID、国、都市、名前を名前のアルファベット順にリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT max(group_equity_shareholding) FROM operate_company",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "group_equity_shareholding",
+      ")",
+      "FROM",
+      "operate_company"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "group_equity_shareholding",
+      ")",
+      "from",
+      "operate_company"
+    ],
+    "question": "会社の最大グループ株式保有はどれくらいですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT avg(velocity) FROM flight WHERE pilot  =  'Thompson'",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "velocity",
+      ")",
+      "FROM",
+      "flight",
+      "WHERE",
+      "pilot",
+      "=",
+      "'Thompson",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "velocity",
+      ")",
+      "from",
+      "flight",
+      "where",
+      "pilot",
+      "=",
+      "value"
+    ],
+    "question": "「Thompson」という名前のパイロットの速度はどれくらいですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"Thompson\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T1.name ,  T1.type FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.type",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "type",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id"
+    ],
+    "question": "これまでにフライトを運航した会社の名前と種類は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT name FROM airport WHERE country != 'Iceland'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "airport",
+      "WHERE",
+      "country",
+      "!",
+      "=",
+      "'Iceland",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "airport",
+      "where",
+      "country",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "国「Iceland」にない空港の名前は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"Iceland\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT DISTINCT T1.type FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id WHERE T2.velocity  <  200",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.type",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "WHERE",
+      "T2.velocity",
+      "<",
+      "200"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "type",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "where",
+      "t2",
+      ".",
+      "velocity",
+      "<",
+      "value"
+    ],
+    "question": "速度が200未満のフライトを運航している会社の種類は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          200.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T1.id ,  T1.name FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id GROUP BY T1.id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "複数のフライトを運航している会社のIDと名前は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T1.id ,  T1.name ,  T1.IATA FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id GROUP BY T2.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      ",",
+      "T1.IATA",
+      "FROM",
+      "airport",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.airport_id",
+      "GROUP",
+      "BY",
+      "T2.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "iata",
+      "from",
+      "airport",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "airport_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "フライト数が最も多かった空港のID、名前、IATAコードは何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT DISTINCT T2.pilot FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id WHERE T1.country  =  'United States' OR T1.name  =  'Billund Airport'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.pilot",
+      "FROM",
+      "airport",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.airport_id",
+      "WHERE",
+      "T1.country",
+      "=",
+      "'United",
+      "States",
+      "'",
+      "OR",
+      "T1.name",
+      "=",
+      "'Billund",
+      "Airport",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "pilot",
+      "from",
+      "airport",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "airport_id",
+      "where",
+      "t1",
+      ".",
+      "country",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "「United States」の国または「Billund Airport」という名前の空港でフライトを操縦したさまざまなパイロット名は何ですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"United States\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Billund Airport\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT TYPE ,  count(*) FROM operate_company GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "operate_company",
+      "GROUP",
+      "BY",
+      "TYPE",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "operate_company",
+      "group",
+      "by",
+      "type",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "最も多い会社の種類は何ですか？また、いくつありますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT count(*) FROM airport WHERE id NOT IN ( SELECT airport_id FROM flight WHERE pilot  =  'Thompson' );",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "airport",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "airport_id",
+      "FROM",
+      "flight",
+      "WHERE",
+      "pilot",
+      "=",
+      "'Thompson",
+      "'",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "airport",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "airport_id",
+      "from",
+      "flight",
+      "where",
+      "pilot",
+      "=",
+      "value",
+      ")"
+    ],
+    "question": "パイロットの「Thompson」が航空機を運転していない空港はいくつありますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      19,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    16,
+                    false
+                  ],
+                  null
+                ],
+                "\"Thompson\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T2.pilot FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id WHERE T1.principal_activities  =  'Cargo' INTERSECT SELECT T2.pilot FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id WHERE T1.principal_activities  =  'Catering services'",
+    "query_toks": [
+      "SELECT",
+      "T2.pilot",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "WHERE",
+      "T1.principal_activities",
+      "=",
+      "'Cargo",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T2.pilot",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "WHERE",
+      "T1.principal_activities",
+      "=",
+      "'Catering",
+      "services",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "pilot",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "where",
+      "t1",
+      ".",
+      "principal_activities",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t2",
+      ".",
+      "pilot",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "where",
+      "t1",
+      ".",
+      "principal_activities",
+      "=",
+      "value"
+    ],
+    "question": "主に「Cargo」サービスを提供して「Catering services」活動を行う会社のパイロットの名前をリストします。",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"Cargo\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  7,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  16,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            "\"Catering services\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT name FROM airport WHERE name LIKE '%international%'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "airport",
+      "WHERE",
+      "name",
+      "LIKE",
+      "'",
+      "%",
+      "international",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "airport",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question": "「international」という言葉が含まれている空港名はどれですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"%international%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT T3.id ,  count(*) FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id JOIN airport AS T3 ON T2.airport_id  =  T3.id GROUP BY T3.id",
+    "query_toks": [
+      "SELECT",
+      "T3.id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "operate_company",
+      "AS",
+      "T1",
+      "JOIN",
+      "flight",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.company_id",
+      "JOIN",
+      "airport",
+      "AS",
+      "T3",
+      "ON",
+      "T2.airport_id",
+      "=",
+      "T3.id",
+      "GROUP",
+      "BY",
+      "T3.id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "operate_company",
+      "as",
+      "t1",
+      "join",
+      "flight",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "join",
+      "airport",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "airport_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "id"
+    ],
+    "question": "各空港で航空会社を運営している会社はいくつありますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT count(*) ,  country FROM airport GROUP BY country",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "country",
+      "FROM",
+      "airport",
+      "GROUP",
+      "BY",
+      "country"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "country",
+      "from",
+      "airport",
+      "group",
+      "by",
+      "country"
+    ],
+    "question": "各国にいくつの空港がありますか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT country FROM airport GROUP BY country HAVING count(*)  >  2",
+    "query_toks": [
+      "SELECT",
+      "country",
+      "FROM",
+      "airport",
+      "GROUP",
+      "BY",
+      "country",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "airport",
+      "group",
+      "by",
+      "country",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "2つ以上の空港がある国はどれですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "flight_company",
+    "query": "SELECT pilot FROM flight GROUP BY pilot ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "pilot",
+      "FROM",
+      "flight",
+      "GROUP",
+      "BY",
+      "pilot",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "pilot",
+      "from",
+      "flight",
+      "group",
+      "by",
+      "pilot",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "最も多くのフライトを担当しているパイロットはどれですか？",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

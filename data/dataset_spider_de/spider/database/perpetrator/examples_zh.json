@@ -1,0 +1,2606 @@
+[
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT count(*) FROM perpetrator",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "perpetrator"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "perpetrator"
+    ],
+    "question_spider": "How many perpetrators are there?",
+    "question": "有多少犯罪者在那里？",
+    "question_cspider": "有多少犯罪者在那里？",
+    "Harold": "BLEU = 0.00, 87.5/57.1/33.3/0.0 (BP=0.779, ratio=0.800, hyp_len=8, ref_len=10)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "个",
+      "犯",
+      "罪",
+      "者",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Date FROM perpetrator ORDER BY Killed DESC",
+    "query_toks": [
+      "SELECT",
+      "Date",
+      "FROM",
+      "perpetrator",
+      "ORDER",
+      "BY",
+      "Killed",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      "from",
+      "perpetrator",
+      "order",
+      "by",
+      "killed",
+      "desc"
+    ],
+    "question_spider": "List the date of perpetrators in descending order of the number of people killed.",
+    "question": "按死亡人数的降序列出犯罪者的日期。",
+    "question_cspider": "按死亡人数的降序列出犯罪者的日期。",
+    "Harold": "BLEU = 80.53, 82.4/81.2/80.0/78.6 (BP=1.000, ratio=1.000, hyp_len=17, ref_len=17)",
+    "question_toks": [
+      "以",
+      "被",
+      "杀",
+      "人",
+      "数",
+      "的",
+      "降",
+      "序",
+      "列",
+      "出",
+      "犯",
+      "罪",
+      "者",
+      "的",
+      "日",
+      "期",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Injured FROM perpetrator ORDER BY Injured ASC",
+    "query_toks": [
+      "SELECT",
+      "Injured",
+      "FROM",
+      "perpetrator",
+      "ORDER",
+      "BY",
+      "Injured",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "injured",
+      "from",
+      "perpetrator",
+      "order",
+      "by",
+      "injured",
+      "asc"
+    ],
+    "question_spider": "List the number of people injured by perpetrators in ascending order.",
+    "question": "以受伤人数的升序列出犯罪者伤害的人数。",
+    "question_cspider": "以受伤人数的升序列出犯罪者伤害的人数。",
+    "Harold": "BLEU = 28.00, 78.6/53.8/33.3/18.2 (BP=0.700, ratio=0.737, hyp_len=14, ref_len=19)",
+    "question_toks": [
+      "按",
+      "升",
+      "序",
+      "列",
+      "出",
+      "肇",
+      "事",
+      "者",
+      "受",
+      "伤",
+      "的",
+      "人",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT avg(Injured) FROM perpetrator",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Injured",
+      ")",
+      "FROM",
+      "perpetrator"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "injured",
+      ")",
+      "from",
+      "perpetrator"
+    ],
+    "question_spider": "What is the average number of people injured by all perpetrators?",
+    "question": "所有犯罪者伤害的平均人数是多少？",
+    "question_cspider": "所有犯罪者伤害的平均人数是多少？",
+    "Harold": "BLEU = 57.91, 81.2/60.0/50.0/46.2 (BP=1.000, ratio=1.000, hyp_len=16, ref_len=16)",
+    "question_toks": [
+      "所",
+      "有",
+      "肇",
+      "事",
+      "者",
+      "受",
+      "伤",
+      "的",
+      "平",
+      "均",
+      "人",
+      "数",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT LOCATION FROM perpetrator ORDER BY Killed DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "perpetrator",
+      "ORDER",
+      "BY",
+      "Killed",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "perpetrator",
+      "order",
+      "by",
+      "killed",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the location of the perpetrator with the largest kills.",
+    "question": "有着最大死亡人数的犯罪者地点是什么？",
+    "question_cspider": "有着最大死亡人数的犯罪者地点是什么？",
+    "Harold": "BLEU = 15.89, 57.1/23.1/16.7/9.1 (BP=0.751, ratio=0.778, hyp_len=14, ref_len=18)",
+    "question_toks": [
+      "死",
+      "亡",
+      "人",
+      "数",
+      "最",
+      "多",
+      "的",
+      "肇",
+      "事",
+      "者",
+      "在",
+      "哪",
+      "里",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Name FROM People ORDER BY Height ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "People",
+      "ORDER",
+      "BY",
+      "Height",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "order",
+      "by",
+      "height",
+      "asc"
+    ],
+    "question_spider": "What are the names of people in ascending order of height?",
+    "question": "按身高的上升顺序列出的人的名字是什么？",
+    "question_cspider": "按身高的上升顺序列出的人的名字是什么？",
+    "Harold": "BLEU = 0.00, 91.7/36.4/0.0/0.0 (BP=0.558, ratio=0.632, hyp_len=12, ref_len=19)",
+    "question_toks": [
+      "身",
+      "高",
+      "升",
+      "序",
+      "的",
+      "人",
+      "叫",
+      "什",
+      "么",
+      "名",
+      "字",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id"
+    ],
+    "question_spider": "What are the names of perpetrators?",
+    "question": "犯罪者的名字是什么？",
+    "question_cspider": "犯罪者的名字是什么？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=10, ref_len=10)",
+    "question_toks": [
+      "犯",
+      "罪",
+      "者",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Country != \"China\"",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "WHERE",
+      "T2.Country",
+      "!",
+      "=",
+      "``",
+      "China",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t2",
+      ".",
+      "country",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of perpetrators whose country is not \"China\"?",
+    "question": "那些国家不是“China”的犯罪者的名字是什么？",
+    "question_cspider": "那些国家不是“China”的犯罪者的名字是什么？",
+    "Harold": "BLEU = 71.22, 89.5/83.3/76.5/68.8 (BP=0.900, ratio=0.905, hyp_len=19, ref_len=21)",
+    "question_toks": [
+      "国",
+      "家",
+      "不",
+      "是",
+      "“",
+      "中",
+      "国",
+      "”",
+      "的",
+      "肇",
+      "事",
+      "者",
+      "的",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"China\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Weight DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "ORDER",
+      "BY",
+      "T1.Weight",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "weight",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name of the perpetrator with the biggest weight.",
+    "question": "体重最大的犯罪者的名字是什么？",
+    "question_cspider": "体重最大的犯罪者的名字是什么？",
+    "Harold": "BLEU = 0.00, 64.3/30.8/8.3/0.0 (BP=0.931, ratio=0.933, hyp_len=14, ref_len=15)",
+    "question_toks": [
+      "重",
+      "量",
+      "最",
+      "大",
+      "的",
+      "肇",
+      "事",
+      "者",
+      "叫",
+      "什",
+      "么",
+      "名",
+      "字",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT sum(T2.Killed) FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T1.Height  >  1.84",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "T2.Killed",
+      ")",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "WHERE",
+      "T1.Height",
+      ">",
+      "1.84"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "t2",
+      ".",
+      "killed",
+      ")",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t1",
+      ".",
+      "height",
+      ">",
+      "value"
+    ],
+    "question_spider": "What is the total kills of the perpetrators with height more than 1.84.",
+    "question": "身高超过1.84的犯罪者的总杀害的人数是什么。",
+    "question_cspider": "身高超过1.84的犯罪者的总杀害的人数是什么。",
+    "Harold": "BLEU = 44.06, 71.4/55.0/42.1/33.3 (BP=0.909, ratio=0.913, hyp_len=21, ref_len=23)",
+    "question_toks": [
+      "身",
+      "高",
+      "超",
+      "过",
+      "1",
+      ".",
+      "8",
+      "4",
+      "的",
+      "凶",
+      "手",
+      "的",
+      "总",
+      "死",
+      "亡",
+      "人",
+      "数",
+      "是",
+      "多",
+      "少",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          1.84,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Country  =  \"China\" OR T2.Country  =  \"Japan\"",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "WHERE",
+      "T2.Country",
+      "=",
+      "``",
+      "China",
+      "''",
+      "OR",
+      "T2.Country",
+      "=",
+      "``",
+      "Japan",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "where",
+      "t2",
+      ".",
+      "country",
+      "=",
+      "value",
+      "or",
+      "t2",
+      ".",
+      "country",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the names of perpetrators in country \"China\" or \"Japan\"?",
+    "question": "国家是“China”或“Japan”的犯罪者姓名是什么？",
+    "question_cspider": "国家是“China”或“Japan”的犯罪者姓名是什么？",
+    "Harold": "BLEU = 52.90, 85.7/60.0/47.4/38.9 (BP=0.953, ratio=0.955, hyp_len=21, ref_len=22)",
+    "question_toks": [
+      "“",
+      "中",
+      "国",
+      "”",
+      "或",
+      "“",
+      "日",
+      "本",
+      "”",
+      "国",
+      "家",
+      "的",
+      "肇",
+      "事",
+      "者",
+      "名",
+      "字",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"China\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Japan\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Height FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Injured DESC",
+    "query_toks": [
+      "SELECT",
+      "T1.Height",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "ORDER",
+      "BY",
+      "T2.Injured",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "height",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "injured",
+      "desc"
+    ],
+    "question_spider": "What are the heights of perpetrators in descending order of the number of people they injured?",
+    "question": "按照他们受伤人数的下降顺序，犯罪者的身高是多少？",
+    "question_cspider": "按照他们受伤人数的下降顺序，犯罪者的身高是多少？",
+    "Harold": "BLEU = 18.67, 70.6/31.2/20.0/14.3 (BP=0.662, ratio=0.708, hyp_len=17, ref_len=24)",
+    "question_toks": [
+      "肇",
+      "事",
+      "者",
+      "的",
+      "高",
+      "度",
+      "按",
+      "受",
+      "伤",
+      "人",
+      "数",
+      "的",
+      "降",
+      "序",
+      "排",
+      "列",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "perpetrator",
+      "GROUP",
+      "BY",
+      "Country"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "perpetrator",
+      "group",
+      "by",
+      "country"
+    ],
+    "question_spider": "What are the countries of perpetrators? Show each country and the corresponding number of perpetrators there.",
+    "question": "犯罪者的国家是什么？显示每个国家和相应的犯罪者数量。",
+    "question_cspider": "犯罪者的国家是什么？显示每个国家和相应的犯罪者数量。",
+    "Harold": "BLEU = 86.46, 92.9/88.9/84.6/80.0 (BP=1.000, ratio=1.077, hyp_len=28, ref_len=26)",
+    "question_toks": [
+      "犯",
+      "罪",
+      "者",
+      "的",
+      "国",
+      "家",
+      "是",
+      "什",
+      "么",
+      "？",
+      "显",
+      "示",
+      "每",
+      "个",
+      "国",
+      "家",
+      "和",
+      "那",
+      "里",
+      "相",
+      "应",
+      "的",
+      "犯",
+      "罪",
+      "者",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "perpetrator",
+      "GROUP",
+      "BY",
+      "Country",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "perpetrator",
+      "group",
+      "by",
+      "country",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the country that has the most perpetrators?",
+    "question": "哪个国家的犯罪分子最多？",
+    "question_cspider": "哪个国家的犯罪分子最多？",
+    "Harold": "BLEU = 42.85, 72.7/60.0/44.4/25.0 (BP=0.913, ratio=0.917, hyp_len=11, ref_len=12)",
+    "question_toks": [
+      "哪",
+      "个",
+      "国",
+      "家",
+      "的",
+      "肇",
+      "事",
+      "者",
+      "最",
+      "多",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "perpetrator",
+      "GROUP",
+      "BY",
+      "Country",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "perpetrator",
+      "group",
+      "by",
+      "country",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the countries that have at least two perpetrators?",
+    "question": "哪些国家至少有两个犯罪者？",
+    "question_cspider": "哪些国家至少有两个犯罪者？",
+    "Harold": "BLEU = 57.21, 86.7/64.3/46.2/41.7 (BP=1.000, ratio=1.154, hyp_len=15, ref_len=13)",
+    "question_toks": [
+      "至",
+      "少",
+      "有",
+      "两",
+      "个",
+      "犯",
+      "罪",
+      "者",
+      "的",
+      "国",
+      "家",
+      "是",
+      "哪",
+      "些",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Year DESC",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "ORDER",
+      "BY",
+      "T2.Year",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "year",
+      "desc"
+    ],
+    "question_spider": "List the names of perpetrators in descending order of the year.",
+    "question": "按年份降序列出犯罪者的姓名。",
+    "question_cspider": "按年份降序列出犯罪者的姓名。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "按",
+      "年",
+      "份",
+      "降",
+      "序",
+      "列",
+      "出",
+      "犯",
+      "罪",
+      "者",
+      "的",
+      "姓",
+      "名",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM perpetrator)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "people",
+      "WHERE",
+      "People_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "People_ID",
+      "FROM",
+      "perpetrator",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "people",
+      "where",
+      "people_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "people_id",
+      "from",
+      "perpetrator",
+      ")"
+    ],
+    "question_spider": "List the names of people that are not perpetrators.",
+    "question": "列出那些不是犯罪者的人的名字。",
+    "question_cspider": "列出那些不是犯罪者的人的名字。",
+    "Harold": "BLEU = 75.46, 100.0/91.7/81.8/80.0 (BP=0.857, ratio=0.867, hyp_len=13, ref_len=15)",
+    "question_toks": [
+      "列",
+      "出",
+      "不",
+      "是",
+      "犯",
+      "罪",
+      "者",
+      "的",
+      "人",
+      "的",
+      "名",
+      "字",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  0
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      2,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT Country FROM perpetrator WHERE Injured  >  50 INTERSECT SELECT Country FROM perpetrator WHERE Injured  <  20",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      "FROM",
+      "perpetrator",
+      "WHERE",
+      "Injured",
+      ">",
+      "50",
+      "INTERSECT",
+      "SELECT",
+      "Country",
+      "FROM",
+      "perpetrator",
+      "WHERE",
+      "Injured",
+      "<",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "perpetrator",
+      "where",
+      "injured",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "country",
+      "from",
+      "perpetrator",
+      "where",
+      "injured",
+      "<",
+      "value"
+    ],
+    "question_spider": "Show the countries that have both perpetrators with injures more than 50 and perpetrators with injures smaller than 20.",
+    "question": "显示那些既有50多人受伤的犯罪者，又有少于20人受伤的犯罪者所在的国家。",
+    "question_cspider": "显示那些既有50多人受伤的犯罪者，又有少于20人受伤的犯罪者所在的国家。",
+    "Harold": "BLEU = 16.63, 75.0/43.5/18.2/9.5 (BP=0.607, ratio=0.667, hyp_len=24, ref_len=36)",
+    "question_toks": [
+      "显",
+      "示",
+      "受",
+      "伤",
+      "人",
+      "数",
+      "都",
+      "超",
+      "过",
+      "5",
+      "0",
+      "且",
+      "受",
+      "伤",
+      "人",
+      "数",
+      "少",
+      "于",
+      "2",
+      "0",
+      "的",
+      "国",
+      "家",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          50,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            20,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT count(DISTINCT LOCATION) FROM perpetrator",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "LOCATION",
+      ")",
+      "FROM",
+      "perpetrator"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "location",
+      ")",
+      "from",
+      "perpetrator"
+    ],
+    "question_spider": "How many distinct locations of perpetrators are there?",
+    "question": "犯罪者有几个不同的位置？",
+    "question_cspider": "犯罪者有几个不同的位置？",
+    "Harold": "BLEU = 52.06, 69.2/58.3/45.5/40.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "肇",
+      "事",
+      "者",
+      "有",
+      "多",
+      "少",
+      "个",
+      "不",
+      "同",
+      "的",
+      "位",
+      "置",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT T2.Date FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.Date",
+      "FROM",
+      "people",
+      "AS",
+      "T1",
+      "JOIN",
+      "perpetrator",
+      "AS",
+      "T2",
+      "ON",
+      "T1.People_ID",
+      "=",
+      "T2.People_ID",
+      "ORDER",
+      "BY",
+      "T1.Height",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "date",
+      "from",
+      "people",
+      "as",
+      "t1",
+      "join",
+      "perpetrator",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "people_id",
+      "=",
+      "t2",
+      ".",
+      "people_id",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "height",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show the date of the tallest perpetrator.",
+    "question": "显示身高最高犯罪者的犯罪日期。",
+    "question_cspider": "显示身高最高犯罪者的犯罪日期。",
+    "Harold": "BLEU = 44.42, 100.0/80.0/55.6/37.5 (BP=0.695, ratio=0.733, hyp_len=11, ref_len=15)",
+    "question_toks": [
+      "显",
+      "示",
+      "最",
+      "高",
+      "犯",
+      "罪",
+      "者",
+      "的",
+      "日",
+      "期",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "perpetrator",
+    "query": "SELECT max(YEAR) FROM perpetrator;",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "YEAR",
+      ")",
+      "FROM",
+      "perpetrator",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "year",
+      ")",
+      "from",
+      "perpetrator"
+    ],
+    "question_spider": "In which year did the most recent crime happen?",
+    "question": "最近的犯罪发生在哪一年？",
+    "question_cspider": "最近的犯罪发生在哪一年？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "最",
+      "近",
+      "的",
+      "犯",
+      "罪",
+      "发",
+      "生",
+      "在",
+      "哪",
+      "一",
+      "年",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

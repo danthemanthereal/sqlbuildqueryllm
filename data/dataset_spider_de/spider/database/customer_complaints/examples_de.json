@@ -1,0 +1,5140 @@
+[
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT count(*) FROM customers",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customers"
+    ],
+    "question": "Wie viele Kunden gibt es?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT count(*) FROM customers",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customers"
+    ],
+    "question": "Zählen Sie die Anzahl der Kunden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT email_address ,  phone_number FROM customers ORDER BY email_address ,  phone_number",
+    "query_toks": [
+      "SELECT",
+      "email_address",
+      ",",
+      "phone_number",
+      "FROM",
+      "customers",
+      "ORDER",
+      "BY",
+      "email_address",
+      ",",
+      "phone_number"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "email_address",
+      ",",
+      "phone_number",
+      "from",
+      "customers",
+      "order",
+      "by",
+      "email_address",
+      ",",
+      "phone_number"
+    ],
+    "question": "Finden Sie die E-Mails und Telefonnummern aller Kunden, sortiert nach E-Mail-Adresse und Telefonnummer.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT email_address ,  phone_number FROM customers ORDER BY email_address ,  phone_number",
+    "query_toks": [
+      "SELECT",
+      "email_address",
+      ",",
+      "phone_number",
+      "FROM",
+      "customers",
+      "ORDER",
+      "BY",
+      "email_address",
+      ",",
+      "phone_number"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "email_address",
+      ",",
+      "phone_number",
+      "from",
+      "customers",
+      "order",
+      "by",
+      "email_address",
+      ",",
+      "phone_number"
+    ],
+    "question": "Wie lauten die E-Mails und Telefonnummern aller Kunden, sortiert nach E-Mail-Adresse und Telefonnummer?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT town_city FROM customers WHERE customer_type_code  =  \"Good Credit Rating\" GROUP BY town_city ORDER BY count(*) LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "town_city",
+      "FROM",
+      "customers",
+      "WHERE",
+      "customer_type_code",
+      "=",
+      "``",
+      "Good",
+      "Credit",
+      "Rating",
+      "''",
+      "GROUP",
+      "BY",
+      "town_city",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "town_city",
+      "from",
+      "customers",
+      "where",
+      "customer_type_code",
+      "=",
+      "value",
+      "group",
+      "by",
+      "town_city",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Welche Stadt hat die geringste Anzahl von Kunden, deren Typcode \"Good Credit Rating\" lautet?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Good Credit Rating\"",
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT town_city FROM customers WHERE customer_type_code  =  \"Good Credit Rating\" GROUP BY town_city ORDER BY count(*) LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "town_city",
+      "FROM",
+      "customers",
+      "WHERE",
+      "customer_type_code",
+      "=",
+      "``",
+      "Good",
+      "Credit",
+      "Rating",
+      "''",
+      "GROUP",
+      "BY",
+      "town_city",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "town_city",
+      "from",
+      "customers",
+      "where",
+      "customer_type_code",
+      "=",
+      "value",
+      "group",
+      "by",
+      "town_city",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Geben Sie die Stadt mit dem Kundentypcode \"Good Credit Rating\" zurück, der die wenigsten Kunden hatte.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Good Credit Rating\"",
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.product_name ,  count(*) FROM products AS t1 JOIN complaints AS t2 ON t1.product_id  =  t2.product_id GROUP BY t1.product_name",
+    "query_toks": [
+      "SELECT",
+      "t1.product_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "products",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.product_id",
+      "=",
+      "t2.product_id",
+      "GROUP",
+      "BY",
+      "t1.product_name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "product_name"
+    ],
+    "question": "Listen Sie den Namen aller Produkte zusammen mit der Anzahl der eingegangenen Beschwerden auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          20,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.product_name ,  count(*) FROM products AS t1 JOIN complaints AS t2 ON t1.product_id  =  t2.product_id GROUP BY t1.product_name",
+    "query_toks": [
+      "SELECT",
+      "t1.product_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "products",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.product_id",
+      "=",
+      "t2.product_id",
+      "GROUP",
+      "BY",
+      "t1.product_name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "product_name"
+    ],
+    "question": "Was sind die verschiedenen Produktnamen und wie viele Beschwerden hat jeder erhalten?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          20,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.email_address FROM customers AS t1 JOIN complaints AS t2 ON t1.customer_id  =  t2.customer_id GROUP BY t1.customer_id ORDER BY count(*) LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.email_address",
+      "FROM",
+      "customers",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.customer_id",
+      "=",
+      "t2.customer_id",
+      "GROUP",
+      "BY",
+      "t1.customer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "email_address",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Finden Sie die E-Mails von Kunden, die Beschwerden über das Produkt mit den meisten Beschwerden eingereicht haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.email_address FROM customers AS t1 JOIN complaints AS t2 ON t1.customer_id  =  t2.customer_id GROUP BY t1.customer_id ORDER BY count(*) LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.email_address",
+      "FROM",
+      "customers",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.customer_id",
+      "=",
+      "t2.customer_id",
+      "GROUP",
+      "BY",
+      "t1.customer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "email_address",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Was sind die E-Mails von Kunden, die Beschwerden über das Produkt eingereicht haben, bei dem die meisten Beschwerden aufgetreten sind?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT DISTINCT t1.product_name FROM products AS t1 JOIN complaints AS t2 ON t1.product_id  =  t2.product_id JOIN customers AS t3 GROUP BY t3.customer_id ORDER BY count(*) LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "t1.product_name",
+      "FROM",
+      "products",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.product_id",
+      "=",
+      "t2.product_id",
+      "JOIN",
+      "customers",
+      "AS",
+      "t3",
+      "GROUP",
+      "BY",
+      "t3.customer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "product_name",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "join",
+      "customers",
+      "as",
+      "t3",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Welche Produkte wurden vom Kunden beanstandet, der am wenigsten Beschwerden eingereicht hat?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT DISTINCT t1.product_name FROM products AS t1 JOIN complaints AS t2 ON t1.product_id  =  t2.product_id JOIN customers AS t3 GROUP BY t3.customer_id ORDER BY count(*) LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "t1.product_name",
+      "FROM",
+      "products",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.product_id",
+      "=",
+      "t2.product_id",
+      "JOIN",
+      "customers",
+      "AS",
+      "t3",
+      "GROUP",
+      "BY",
+      "t3.customer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "product_name",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "join",
+      "customers",
+      "as",
+      "t3",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Geben Sie die Namen der Produkte zurück, bei denen der Kunde, der die wenigsten Beschwerden eingereicht hat, Beschwerden eingereicht hat.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.phone_number FROM customers AS t1 JOIN complaints AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.date_complaint_raised DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.phone_number",
+      "FROM",
+      "customers",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.customer_id",
+      "=",
+      "t2.customer_id",
+      "ORDER",
+      "BY",
+      "t2.date_complaint_raised",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "phone_number",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "date_complaint_raised",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie lautet die Telefonnummer des Kunden, der die letzte Beschwerde eingereicht hat?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.phone_number FROM customers AS t1 JOIN complaints AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.date_complaint_raised DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.phone_number",
+      "FROM",
+      "customers",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.customer_id",
+      "=",
+      "t2.customer_id",
+      "ORDER",
+      "BY",
+      "t2.date_complaint_raised",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "phone_number",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "date_complaint_raised",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Geben Sie die Telefonnummer des Kunden zurück, der die zuletzt erhobene Beschwerde eingereicht hat.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT email_address ,  phone_number FROM customers WHERE customer_id NOT IN (SELECT customer_id FROM complaints)",
+    "query_toks": [
+      "SELECT",
+      "email_address",
+      ",",
+      "phone_number",
+      "FROM",
+      "customers",
+      "WHERE",
+      "customer_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "customer_id",
+      "FROM",
+      "complaints",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "email_address",
+      ",",
+      "phone_number",
+      "from",
+      "customers",
+      "where",
+      "customer_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "customer_id",
+      "from",
+      "complaints",
+      ")"
+    ],
+    "question": "Finden Sie die E-Mail-Adresse und die Telefonnummer der Kunden, die noch nie eine Beschwerde eingereicht haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  3
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      25,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT email_address ,  phone_number FROM customers WHERE customer_id NOT IN (SELECT customer_id FROM complaints)",
+    "query_toks": [
+      "SELECT",
+      "email_address",
+      ",",
+      "phone_number",
+      "FROM",
+      "customers",
+      "WHERE",
+      "customer_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "customer_id",
+      "FROM",
+      "complaints",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "email_address",
+      ",",
+      "phone_number",
+      "from",
+      "customers",
+      "where",
+      "customer_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "customer_id",
+      "from",
+      "complaints",
+      ")"
+    ],
+    "question": "Wie lauten die E-Mails und Telefonnummern von Kunden, die noch nie eine Beschwerde eingereicht haben?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  3
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      25,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT phone_number FROM customers UNION SELECT phone_number FROM staff",
+    "query_toks": [
+      "SELECT",
+      "phone_number",
+      "FROM",
+      "customers",
+      "UNION",
+      "SELECT",
+      "phone_number",
+      "FROM",
+      "staff"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "phone_number",
+      "from",
+      "customers",
+      "union",
+      "select",
+      "phone_number",
+      "from",
+      "staff"
+    ],
+    "question": "Finden Sie die Telefonnummer aller Kunden und Mitarbeiter.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT phone_number FROM customers UNION SELECT phone_number FROM staff",
+    "query_toks": [
+      "SELECT",
+      "phone_number",
+      "FROM",
+      "customers",
+      "UNION",
+      "SELECT",
+      "phone_number",
+      "FROM",
+      "staff"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "phone_number",
+      "from",
+      "customers",
+      "union",
+      "select",
+      "phone_number",
+      "from",
+      "staff"
+    ],
+    "question": "Wie lauten die Telefonnummern aller Kunden und aller Mitarbeiter?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT product_description FROM products WHERE product_name  =  \"Chocolate\"",
+    "query_toks": [
+      "SELECT",
+      "product_description",
+      "FROM",
+      "products",
+      "WHERE",
+      "product_name",
+      "=",
+      "``",
+      "Chocolate",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_description",
+      "from",
+      "products",
+      "where",
+      "product_name",
+      "=",
+      "value"
+    ],
+    "question": "Wie lautet die Beschreibung des Produkts \"Chocolate\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "\"Chocolate\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT product_description FROM products WHERE product_name  =  \"Chocolate\"",
+    "query_toks": [
+      "SELECT",
+      "product_description",
+      "FROM",
+      "products",
+      "WHERE",
+      "product_name",
+      "=",
+      "``",
+      "Chocolate",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_description",
+      "from",
+      "products",
+      "where",
+      "product_name",
+      "=",
+      "value"
+    ],
+    "question": "Geben Sie die Beschreibung des Produkts \"Chocolate\" zurück.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "\"Chocolate\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT product_name ,  product_category_code FROM products ORDER BY product_price DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "product_name",
+      ",",
+      "product_category_code",
+      "FROM",
+      "products",
+      "ORDER",
+      "BY",
+      "product_price",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_name",
+      ",",
+      "product_category_code",
+      "from",
+      "products",
+      "order",
+      "by",
+      "product_price",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Finden Sie den Namen und die Kategorie des teuersten Produkts.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT product_name ,  product_category_code FROM products ORDER BY product_price DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "product_name",
+      ",",
+      "product_category_code",
+      "FROM",
+      "products",
+      "ORDER",
+      "BY",
+      "product_price",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_name",
+      ",",
+      "product_category_code",
+      "from",
+      "products",
+      "order",
+      "by",
+      "product_price",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie lautet der Name und der Kategoriecode des Produkts mit dem höchsten Preis?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT product_price FROM products WHERE product_id NOT IN (SELECT product_id FROM complaints)",
+    "query_toks": [
+      "SELECT",
+      "product_price",
+      "FROM",
+      "products",
+      "WHERE",
+      "product_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "product_id",
+      "FROM",
+      "complaints",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_price",
+      "from",
+      "products",
+      "where",
+      "product_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "product_id",
+      "from",
+      "complaints",
+      ")"
+    ],
+    "question": "Finden Sie die Preise für Produkte, die noch nie eine einzige Beschwerde erhalten haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  3
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      24,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT product_price FROM products WHERE product_id NOT IN (SELECT product_id FROM complaints)",
+    "query_toks": [
+      "SELECT",
+      "product_price",
+      "FROM",
+      "products",
+      "WHERE",
+      "product_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "product_id",
+      "FROM",
+      "complaints",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_price",
+      "from",
+      "products",
+      "where",
+      "product_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "product_id",
+      "from",
+      "complaints",
+      ")"
+    ],
+    "question": "Was sind die Preise für Produkte, die noch nie eine Beschwerde erhalten haben?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  3
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      24,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT avg(product_price) ,  product_category_code FROM products GROUP BY product_category_code",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      ",",
+      "product_category_code",
+      "FROM",
+      "products",
+      "GROUP",
+      "BY",
+      "product_category_code"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      ",",
+      "product_category_code",
+      "from",
+      "products",
+      "group",
+      "by",
+      "product_category_code"
+    ],
+    "question": "Was ist der Durchschnittspreis der Produkte für jede Kategorie?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          17,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT avg(product_price) ,  product_category_code FROM products GROUP BY product_category_code",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      ",",
+      "product_category_code",
+      "FROM",
+      "products",
+      "GROUP",
+      "BY",
+      "product_category_code"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      ",",
+      "product_category_code",
+      "from",
+      "products",
+      "group",
+      "by",
+      "product_category_code"
+    ],
+    "question": "Geben Sie den Durchschnittspreis der Produkte mit jedem Kategoriecode zurück.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                22,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          17,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.last_name FROM staff AS t1 JOIN complaints AS t2 ON t1.staff_id  =  t2.staff_id JOIN products AS t3 ON t2.product_id  =  t3.product_id ORDER BY t3.product_price LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.last_name",
+      "FROM",
+      "staff",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.staff_id",
+      "=",
+      "t2.staff_id",
+      "JOIN",
+      "products",
+      "AS",
+      "t3",
+      "ON",
+      "t2.product_id",
+      "=",
+      "t3.product_id",
+      "ORDER",
+      "BY",
+      "t3.product_price",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "join",
+      "products",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "product_id",
+      "=",
+      "t3",
+      ".",
+      "product_id",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "product_price",
+      "limit",
+      "value"
+    ],
+    "question": "Suchen Sie den Nachnamen des Mitarbeiters, der die Beschwerde über das billigste Produkt bearbeitet hat.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              31,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.last_name FROM staff AS t1 JOIN complaints AS t2 ON t1.staff_id  =  t2.staff_id JOIN products AS t3 ON t2.product_id  =  t3.product_id ORDER BY t3.product_price LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.last_name",
+      "FROM",
+      "staff",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.staff_id",
+      "=",
+      "t2.staff_id",
+      "JOIN",
+      "products",
+      "AS",
+      "t3",
+      "ON",
+      "t2.product_id",
+      "=",
+      "t3.product_id",
+      "ORDER",
+      "BY",
+      "t3.product_price",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "join",
+      "products",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "product_id",
+      "=",
+      "t3",
+      ".",
+      "product_id",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "product_price",
+      "limit",
+      "value"
+    ],
+    "question": "Wie lautet der Nachname des Mitarbeiters, der für die Beschwerde über das Produkt mit dem niedrigsten Preis verantwortlich ist?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              31,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                24,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              22,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT complaint_status_code FROM complaints GROUP BY complaint_status_code HAVING count(*)  >  3",
+    "query_toks": [
+      "SELECT",
+      "complaint_status_code",
+      "FROM",
+      "complaints",
+      "GROUP",
+      "BY",
+      "complaint_status_code",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "complaint_status_code",
+      "from",
+      "complaints",
+      "group",
+      "by",
+      "complaint_status_code",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "In welchem ​​Beschwerdestatus sind mehr als 3 Datensätze gespeichert?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          27,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT complaint_status_code FROM complaints GROUP BY complaint_status_code HAVING count(*)  >  3",
+    "query_toks": [
+      "SELECT",
+      "complaint_status_code",
+      "FROM",
+      "complaints",
+      "GROUP",
+      "BY",
+      "complaint_status_code",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "complaint_status_code",
+      "from",
+      "complaints",
+      "group",
+      "by",
+      "complaint_status_code",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Gebe Reklamationsstatuscodes zurück, die mehr als 3 entsprechende Beschwerden haben?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          27,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT last_name FROM staff WHERE email_address LIKE \"%wrau%\"",
+    "query_toks": [
+      "SELECT",
+      "last_name",
+      "FROM",
+      "staff",
+      "WHERE",
+      "email_address",
+      "LIKE",
+      "``",
+      "%",
+      "wrau",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "last_name",
+      "from",
+      "staff",
+      "where",
+      "email_address",
+      "like",
+      "value"
+    ],
+    "question": "Suchen Sie den Nachnamen des Mitarbeiters, dessen E-Mail-Adresse \"wrau\" enthält.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"%wrau%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT last_name FROM staff WHERE email_address LIKE \"%wrau%\"",
+    "query_toks": [
+      "SELECT",
+      "last_name",
+      "FROM",
+      "staff",
+      "WHERE",
+      "email_address",
+      "LIKE",
+      "``",
+      "%",
+      "wrau",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "last_name",
+      "from",
+      "staff",
+      "where",
+      "email_address",
+      "like",
+      "value"
+    ],
+    "question": "Wie lauten die Nachnamen von Mitarbeitern mit E-Mail-Adresse, die den Teilstring \"wrau\" enthalten?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"%wrau%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT count(*) FROM customers GROUP BY customer_type_code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customers",
+      "GROUP",
+      "BY",
+      "customer_type_code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customers",
+      "group",
+      "by",
+      "customer_type_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie viele Kunden gibt es im Kundentyp mit den meisten Kunden?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT count(*) FROM customers GROUP BY customer_type_code ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customers",
+      "GROUP",
+      "BY",
+      "customer_type_code",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customers",
+      "group",
+      "by",
+      "customer_type_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Zählen Sie die Anzahl der Kunden mit dem am häufigsten verwendeten Kundentyp.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.last_name FROM staff AS t1 JOIN complaints AS t2 ON t1.staff_id  =  t2.staff_id ORDER BY t2.date_complaint_raised LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.last_name",
+      "FROM",
+      "staff",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.staff_id",
+      "=",
+      "t2.staff_id",
+      "ORDER",
+      "BY",
+      "t2.date_complaint_raised",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "date_complaint_raised",
+      "limit",
+      "value"
+    ],
+    "question": "Wie lautet der Nachname des Mitarbeiters, das die erste Beschwerde bearbeitet hat?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              31,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.last_name FROM staff AS t1 JOIN complaints AS t2 ON t1.staff_id  =  t2.staff_id ORDER BY t2.date_complaint_raised LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.last_name",
+      "FROM",
+      "staff",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.staff_id",
+      "=",
+      "t2.staff_id",
+      "ORDER",
+      "BY",
+      "t2.date_complaint_raised",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "date_complaint_raised",
+      "limit",
+      "value"
+    ],
+    "question": "Geben Sie den Nachnamen des Mitarbeiters zurück, der die Beschwerde mit dem frühesten Datum bearbeitet hat.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              31,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT count(DISTINCT complaint_type_code) FROM complaints",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "complaint_type_code",
+      ")",
+      "FROM",
+      "complaints"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "complaint_type_code",
+      ")",
+      "from",
+      "complaints"
+    ],
+    "question": "Wie viele unterschiedliche Codes des Beschwerdetyps gibt es in der Datenbank?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                28,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT count(DISTINCT complaint_type_code) FROM complaints",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "complaint_type_code",
+      ")",
+      "FROM",
+      "complaints"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "complaint_type_code",
+      ")",
+      "from",
+      "complaints"
+    ],
+    "question": "Zählen Sie die Anzahl der verschiedenen Codes des Beschwerdetyps.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                28,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT address_line_1 ,  address_line_2 FROM customers WHERE email_address  =  \"vbogisich@example.org\"",
+    "query_toks": [
+      "SELECT",
+      "address_line_1",
+      ",",
+      "address_line_2",
+      "FROM",
+      "customers",
+      "WHERE",
+      "email_address",
+      "=",
+      "``",
+      "vbogisich",
+      "@",
+      "example.org",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "address_line_1",
+      ",",
+      "address_line_2",
+      "from",
+      "customers",
+      "where",
+      "email_address",
+      "=",
+      "value"
+    ],
+    "question": "Finden Sie die Adresse-Linie 1 und 2 des Kunden mit der E-Mail \"vbogisich@example.org\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"vbogisich@example.org\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT address_line_1 ,  address_line_2 FROM customers WHERE email_address  =  \"vbogisich@example.org\"",
+    "query_toks": [
+      "SELECT",
+      "address_line_1",
+      ",",
+      "address_line_2",
+      "FROM",
+      "customers",
+      "WHERE",
+      "email_address",
+      "=",
+      "``",
+      "vbogisich",
+      "@",
+      "example.org",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "address_line_1",
+      ",",
+      "address_line_2",
+      "from",
+      "customers",
+      "where",
+      "email_address",
+      "=",
+      "value"
+    ],
+    "question": "Wie lauten die Linie 1 und 2 der Adresse des Kunden mit der E-Mail \"vbogisich@example.org\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"vbogisich@example.org\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT complaint_status_code ,  count(*) FROM complaints WHERE complaint_type_code  =  \"Product Failure\" GROUP BY complaint_status_code",
+    "query_toks": [
+      "SELECT",
+      "complaint_status_code",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "complaints",
+      "WHERE",
+      "complaint_type_code",
+      "=",
+      "``",
+      "Product",
+      "Failure",
+      "''",
+      "GROUP",
+      "BY",
+      "complaint_status_code"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "complaint_status_code",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "complaints",
+      "where",
+      "complaint_type_code",
+      "=",
+      "value",
+      "group",
+      "by",
+      "complaint_status_code"
+    ],
+    "question": "Ermitteln Sie die Anzahl der Beschwerden mit dem Typ \"Product Failure\" für jeden Beschwerdestatus.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          "\"Product Failure\"",
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          27,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT complaint_status_code ,  count(*) FROM complaints WHERE complaint_type_code  =  \"Product Failure\" GROUP BY complaint_status_code",
+    "query_toks": [
+      "SELECT",
+      "complaint_status_code",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "complaints",
+      "WHERE",
+      "complaint_type_code",
+      "=",
+      "``",
+      "Product",
+      "Failure",
+      "''",
+      "GROUP",
+      "BY",
+      "complaint_status_code"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "complaint_status_code",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "complaints",
+      "where",
+      "complaint_type_code",
+      "=",
+      "value",
+      "group",
+      "by",
+      "complaint_status_code"
+    ],
+    "question": "Wie viele Beschwerden mit dem Typcode \"Product Failure\" hatten jeweils unterschiedliche Statuscodes?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              28,
+              false
+            ],
+            null
+          ],
+          "\"Product Failure\"",
+          null
+        ]
+      ],
+      "groupBy": [
+        [
+          0,
+          27,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.first_name FROM staff AS t1 JOIN complaints AS t2 ON t1.staff_id  =  t2.staff_id GROUP BY t2.staff_id ORDER BY count(*) LIMIT 5",
+    "query_toks": [
+      "SELECT",
+      "t1.first_name",
+      "FROM",
+      "staff",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.staff_id",
+      "=",
+      "t2.staff_id",
+      "GROUP",
+      "BY",
+      "t2.staff_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "staff_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Wie lauten die Vornamen der Top-5-Mitarbeiter, die die meisten Beschwerden bearbeitet haben?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              31,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          31,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 5,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT t1.first_name FROM staff AS t1 JOIN complaints AS t2 ON t1.staff_id  =  t2.staff_id GROUP BY t2.staff_id ORDER BY count(*) LIMIT 5",
+    "query_toks": [
+      "SELECT",
+      "t1.first_name",
+      "FROM",
+      "staff",
+      "AS",
+      "t1",
+      "JOIN",
+      "complaints",
+      "AS",
+      "t2",
+      "ON",
+      "t1.staff_id",
+      "=",
+      "t2.staff_id",
+      "GROUP",
+      "BY",
+      "t2.staff_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "5"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "complaints",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "staff_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "staff_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Geben Sie die Vornamen der 5 Mitarbeiter zurück, die die meisten Beschwerden bearbeitet haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              31,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          31,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 5,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT state FROM customers GROUP BY state ORDER BY count(*) LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "state",
+      "FROM",
+      "customers",
+      "GROUP",
+      "BY",
+      "state",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "state",
+      "from",
+      "customers",
+      "group",
+      "by",
+      "state",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Welches Bundesland hat die meisten Kunden?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "customer_complaints",
+    "query": "SELECT state FROM customers GROUP BY state ORDER BY count(*) LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "state",
+      "FROM",
+      "customers",
+      "GROUP",
+      "BY",
+      "state",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "state",
+      "from",
+      "customers",
+      "group",
+      "by",
+      "state",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "limit",
+      "value"
+    ],
+    "question": "Geben Sie das Bundesland an, das die meisten Kunden hat.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

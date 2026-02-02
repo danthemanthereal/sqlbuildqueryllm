@@ -1,0 +1,2652 @@
+[
+  {
+    "db_id": "architecture",
+    "query": "SELECT count(*) FROM architect WHERE gender  =  'female'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "architect",
+      "WHERE",
+      "gender",
+      "=",
+      "'female",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "architect",
+      "where",
+      "gender",
+      "=",
+      "value"
+    ],
+    "question": "How many architects are female?",
+    "question_toks": [
+      "How",
+      "many",
+      "architects",
+      "are",
+      "female",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"female\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT name ,  nationality ,  id FROM architect WHERE gender  =  'male' ORDER BY name",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "nationality",
+      ",",
+      "id",
+      "FROM",
+      "architect",
+      "WHERE",
+      "gender",
+      "=",
+      "'male",
+      "'",
+      "ORDER",
+      "BY",
+      "name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "nationality",
+      ",",
+      "id",
+      "from",
+      "architect",
+      "where",
+      "gender",
+      "=",
+      "value",
+      "order",
+      "by",
+      "name"
+    ],
+    "question": "List the name, nationality and id of all male architects ordered by their names lexicographically.",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      ",",
+      "nationality",
+      "and",
+      "id",
+      "of",
+      "all",
+      "male",
+      "architects",
+      "ordered",
+      "by",
+      "their",
+      "names",
+      "lexicographically",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"male\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT max(T1.length_meters) ,  T2.name FROM bridge AS T1 JOIN architect AS T2 ON T1.architect_id  =  T2.id",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "T1.length_meters",
+      ")",
+      ",",
+      "T2.name",
+      "FROM",
+      "bridge",
+      "AS",
+      "T1",
+      "JOIN",
+      "architect",
+      "AS",
+      "T2",
+      "ON",
+      "T1.architect_id",
+      "=",
+      "T2.id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "length_meters",
+      ")",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "bridge",
+      "as",
+      "t1",
+      "join",
+      "architect",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id"
+    ],
+    "question": "What is the maximum length in meters for the bridges and what are the architects' names?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "maximum",
+      "length",
+      "in",
+      "meters",
+      "for",
+      "the",
+      "bridges",
+      "and",
+      "what",
+      "are",
+      "the",
+      "architects",
+      "'",
+      "names",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT avg(length_feet) FROM bridge",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "length_feet",
+      ")",
+      "FROM",
+      "bridge"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "length_feet",
+      ")",
+      "from",
+      "bridge"
+    ],
+    "question": "What is the average length in feet of the bridges?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "length",
+      "in",
+      "feet",
+      "of",
+      "the",
+      "bridges",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT name ,  built_year FROM mill WHERE TYPE  =  'Grondzeiler'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "built_year",
+      "FROM",
+      "mill",
+      "WHERE",
+      "TYPE",
+      "=",
+      "'Grondzeiler",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "built_year",
+      "from",
+      "mill",
+      "where",
+      "type",
+      "=",
+      "value"
+    ],
+    "question": "What are the names and year of construction for the mills of 'Grondzeiler' type?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "names",
+      "and",
+      "year",
+      "of",
+      "construction",
+      "for",
+      "the",
+      "mills",
+      "of",
+      "'Grondzeiler",
+      "'",
+      "type",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Grondzeiler\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT DISTINCT T1.name ,  T1.nationality FROM architect AS T1 JOIN mill AS t2 ON T1.id  =  T2.architect_id",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.name",
+      ",",
+      "T1.nationality",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "mill",
+      "AS",
+      "t2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "nationality",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "mill",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id"
+    ],
+    "question": "What are the distinct names and nationalities of the architects who have ever built a mill?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "names",
+      "and",
+      "nationalities",
+      "of",
+      "the",
+      "architects",
+      "who",
+      "have",
+      "ever",
+      "built",
+      "a",
+      "mill",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT name FROM mill WHERE LOCATION != 'Donceel'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "mill",
+      "WHERE",
+      "LOCATION",
+      "!",
+      "=",
+      "'Donceel",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "mill",
+      "where",
+      "location",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "What are the names of the mills which are not located in 'Donceel'?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "names",
+      "of",
+      "the",
+      "mills",
+      "which",
+      "are",
+      "not",
+      "located",
+      "in",
+      "'Donceel",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Donceel\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT DISTINCT T1.type FROM mill AS T1 JOIN architect AS t2 ON T1.architect_id  =  T2.id WHERE T2.nationality  =  'American' OR T2.nationality  =  'Canadian'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.type",
+      "FROM",
+      "mill",
+      "AS",
+      "T1",
+      "JOIN",
+      "architect",
+      "AS",
+      "t2",
+      "ON",
+      "T1.architect_id",
+      "=",
+      "T2.id",
+      "WHERE",
+      "T2.nationality",
+      "=",
+      "'American",
+      "'",
+      "OR",
+      "T2.nationality",
+      "=",
+      "'Canadian",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "type",
+      "from",
+      "mill",
+      "as",
+      "t1",
+      "join",
+      "architect",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "nationality",
+      "=",
+      "value",
+      "or",
+      "t2",
+      ".",
+      "nationality",
+      "=",
+      "value"
+    ],
+    "question": "What are the distinct types of mills that are built by American or Canadian architects?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "types",
+      "of",
+      "mills",
+      "that",
+      "are",
+      "built",
+      "by",
+      "American",
+      "or",
+      "Canadian",
+      "architects",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"American\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"Canadian\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT T1.id ,  T1.name FROM architect AS T1 JOIN bridge AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id HAVING count(*)  >=  3",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "bridge",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "bridge",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "What are the ids and names of the architects who built at least 3 bridges ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "ids",
+      "and",
+      "names",
+      "of",
+      "the",
+      "architects",
+      "who",
+      "built",
+      "at",
+      "least",
+      "3",
+      "bridges",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT T1.id ,  T1.name ,  T1.nationality FROM architect AS T1 JOIN mill AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      ",",
+      "T1.nationality",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "mill",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "nationality",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "mill",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What is the id, name and nationality of the architect who built most mills?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "id",
+      ",",
+      "name",
+      "and",
+      "nationality",
+      "of",
+      "the",
+      "architect",
+      "who",
+      "built",
+      "most",
+      "mills",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT T1.id ,  T1.name ,  T1.gender FROM architect AS T1 JOIN bridge AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id HAVING count(*)  =  2 UNION SELECT T1.id ,  T1.name ,  T1.gender FROM architect AS T1 JOIN mill AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id HAVING count(*)  =  1",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      ",",
+      "T1.gender",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "bridge",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "2",
+      "UNION",
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      ",",
+      "T1.gender",
+      "FROM",
+      "architect",
+      "AS",
+      "T1",
+      "JOIN",
+      "mill",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.architect_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "gender",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "bridge",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value",
+      "union",
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "gender",
+      "from",
+      "architect",
+      "as",
+      "t1",
+      "join",
+      "mill",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "architect_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value"
+    ],
+    "question": "What are the ids, names and genders of the architects who built two bridges or one mill?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "ids",
+      ",",
+      "names",
+      "and",
+      "genders",
+      "of",
+      "the",
+      "architects",
+      "who",
+      "built",
+      "two",
+      "bridges",
+      "or",
+      "one",
+      "mill",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": {
+        "except": null,
+        "from": {
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ]
+        },
+        "groupBy": [
+          [
+            0,
+            1,
+            false
+          ]
+        ],
+        "having": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                3,
+                0,
+                false
+              ],
+              null
+            ],
+            1.0,
+            null
+          ]
+        ],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": []
+      },
+      "where": []
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT LOCATION FROM bridge WHERE name  =  'Kolob Arch' OR name  =  'Rainbow Bridge'",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "bridge",
+      "WHERE",
+      "name",
+      "=",
+      "'Kolob",
+      "Arch",
+      "'",
+      "OR",
+      "name",
+      "=",
+      "'Rainbow",
+      "Bridge",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "bridge",
+      "where",
+      "name",
+      "=",
+      "value",
+      "or",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "What is the location of the bridge named 'Kolob Arch' or 'Rainbow Bridge'?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "location",
+      "of",
+      "the",
+      "bridge",
+      "named",
+      "'Kolob",
+      "Arch",
+      "'",
+      "or",
+      "'Rainbow",
+      "Bridge",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Kolob Arch\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Rainbow Bridge\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT name FROM mill WHERE name LIKE '%Moulin%'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "mill",
+      "WHERE",
+      "name",
+      "LIKE",
+      "'",
+      "%",
+      "Moulin",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "mill",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question": "Which of the mill names contains the french word 'Moulin'?",
+    "question_toks": [
+      "Which",
+      "of",
+      "the",
+      "mill",
+      "names",
+      "contains",
+      "the",
+      "french",
+      "word",
+      "'Moulin",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"%Moulin%\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT DISTINCT T1.name FROM mill AS T1 JOIN architect AS t2 ON T1.architect_id  =  T2.id JOIN bridge AS T3 ON T3.architect_id  =  T2.id WHERE T3.length_meters  >  80",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.name",
+      "FROM",
+      "mill",
+      "AS",
+      "T1",
+      "JOIN",
+      "architect",
+      "AS",
+      "t2",
+      "ON",
+      "T1.architect_id",
+      "=",
+      "T2.id",
+      "JOIN",
+      "bridge",
+      "AS",
+      "T3",
+      "ON",
+      "T3.architect_id",
+      "=",
+      "T2.id",
+      "WHERE",
+      "T3.length_meters",
+      ">",
+      "80"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "mill",
+      "as",
+      "t1",
+      "join",
+      "architect",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "join",
+      "bridge",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t3",
+      ".",
+      "length_meters",
+      ">",
+      "value"
+    ],
+    "question": "What are the distinct name of the mills built by the architects who have also built a bridge longer than 80 meters?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "name",
+      "of",
+      "the",
+      "mills",
+      "built",
+      "by",
+      "the",
+      "architects",
+      "who",
+      "have",
+      "also",
+      "built",
+      "a",
+      "bridge",
+      "longer",
+      "than",
+      "80",
+      "meters",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          80.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT TYPE ,  count(*) FROM mill GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "TYPE",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "mill",
+      "GROUP",
+      "BY",
+      "TYPE",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "mill",
+      "group",
+      "by",
+      "type",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "What is the most common mill type, and how many are there?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "most",
+      "common",
+      "mill",
+      "type",
+      ",",
+      "and",
+      "how",
+      "many",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT count(*) FROM architect WHERE id NOT IN ( SELECT architect_id FROM mill WHERE built_year  <  1850 );",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "architect",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "architect_id",
+      "FROM",
+      "mill",
+      "WHERE",
+      "built_year",
+      "<",
+      "1850",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "architect",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "architect_id",
+      "from",
+      "mill",
+      "where",
+      "built_year",
+      "<",
+      "value",
+      ")"
+    ],
+    "question": "How many architects haven't built a mill before year 1850?",
+    "question_toks": [
+      "How",
+      "many",
+      "architects",
+      "have",
+      "n't",
+      "built",
+      "a",
+      "mill",
+      "before",
+      "year",
+      "1850",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": [
+              [
+                false,
+                4,
+                [
+                  0,
+                  [
+                    0,
+                    16,
+                    false
+                  ],
+                  null
+                ],
+                1850.0,
+                null
+              ]
+            ]
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "architecture",
+    "query": "SELECT t1.name FROM bridge AS t1 JOIN architect AS t2 ON t1.architect_id  =  t2.id WHERE t2.nationality  =  'American' ORDER BY t1.length_feet",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "bridge",
+      "AS",
+      "t1",
+      "JOIN",
+      "architect",
+      "AS",
+      "t2",
+      "ON",
+      "t1.architect_id",
+      "=",
+      "t2.id",
+      "WHERE",
+      "t2.nationality",
+      "=",
+      "'American",
+      "'",
+      "ORDER",
+      "BY",
+      "t1.length_feet"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "bridge",
+      "as",
+      "t1",
+      "join",
+      "architect",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "architect_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "nationality",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "length_feet"
+    ],
+    "question": "show the name of all bridges that was designed by american archtect, and sort the result by the bridge feet length.",
+    "question_toks": [
+      "show",
+      "the",
+      "name",
+      "of",
+      "all",
+      "bridges",
+      "that",
+      "was",
+      "designed",
+      "by",
+      "american",
+      "archtect",
+      ",",
+      "and",
+      "sort",
+      "the",
+      "result",
+      "by",
+      "the",
+      "bridge",
+      "feet",
+      "length",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "\"American\"",
+          null
+        ]
+      ]
+    }
+  }
+]

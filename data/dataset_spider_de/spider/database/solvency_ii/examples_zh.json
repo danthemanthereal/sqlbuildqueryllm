@@ -1,0 +1,1963 @@
+[
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT count(*) FROM Products",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Products"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "products"
+    ],
+    "question_spider": "How many products are there?",
+    "question": "有多少产品？",
+    "question_cspider": "有多少产品？",
+    "Harold": "BLEU = 0.00, 85.7/66.7/40.0/0.0 (BP=1.000, ratio=1.167, hyp_len=7, ref_len=6)",
+    "question_toks": [
+      "有",
+      "多",
+      "少",
+      "种",
+      "产",
+      "品",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Name FROM Products ORDER BY Product_Price ASC",
+    "query_toks": [
+      "SELECT",
+      "Product_Name",
+      "FROM",
+      "Products",
+      "ORDER",
+      "BY",
+      "Product_Price",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_name",
+      "from",
+      "products",
+      "order",
+      "by",
+      "product_price",
+      "asc"
+    ],
+    "question_spider": "List the name of products in ascending order of price.",
+    "question": "按价格升序列出产品名称。",
+    "question_cspider": "按价格升序列出产品名称。",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=12, ref_len=12)",
+    "question_toks": [
+      "按",
+      "价",
+      "格",
+      "升",
+      "序",
+      "列",
+      "出",
+      "产",
+      "品",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Name ,  Product_Type_Code FROM Products",
+    "query_toks": [
+      "SELECT",
+      "Product_Name",
+      ",",
+      "Product_Type_Code",
+      "FROM",
+      "Products"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_name",
+      ",",
+      "product_type_code",
+      "from",
+      "products"
+    ],
+    "question_spider": "What are the names and type codes of products?",
+    "question": "产品名称和型号代码是什么？",
+    "question_cspider": "产品名称和型号代码是什么？",
+    "Harold": "BLEU = 49.48, 85.7/61.5/41.7/27.3 (BP=1.000, ratio=1.077, hyp_len=14, ref_len=13)",
+    "question_toks": [
+      "产",
+      "品",
+      "的",
+      "名",
+      "称",
+      "和",
+      "类",
+      "型",
+      "代",
+      "码",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Price FROM Products WHERE Product_Name  =  \"Dining\" OR Product_Name  =  \"Trading Policy\"",
+    "query_toks": [
+      "SELECT",
+      "Product_Price",
+      "FROM",
+      "Products",
+      "WHERE",
+      "Product_Name",
+      "=",
+      "``",
+      "Dining",
+      "''",
+      "OR",
+      "Product_Name",
+      "=",
+      "``",
+      "Trading",
+      "Policy",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_price",
+      "from",
+      "products",
+      "where",
+      "product_name",
+      "=",
+      "value",
+      "or",
+      "product_name",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the prices of the products named \"Dining\" or \"Trading Policy\".",
+    "question": "名字是“Dining”或“Trading Policy”的产品的价格。",
+    "question_cspider": "名字是“快餐”或“交易守则”的产品的价格。",
+    "Harold": "BLEU = 54.39, 72.7/57.1/50.0/42.1 (BP=1.000, ratio=1.048, hyp_len=22, ref_len=21)",
+    "question_toks": [
+      "显",
+      "示",
+      "名",
+      "为",
+      "“",
+      "用",
+      "餐",
+      "”",
+      "或",
+      "“",
+      "交",
+      "易",
+      "政",
+      "策",
+      "”",
+      "的",
+      "产",
+      "品",
+      "的",
+      "价",
+      "格",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Dining\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "\"Trading Policy\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT avg(Product_Price) FROM Products",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Product_Price",
+      ")",
+      "FROM",
+      "Products"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "product_price",
+      ")",
+      "from",
+      "products"
+    ],
+    "question_spider": "What is the average price for products?",
+    "question": "产品的平均价格是多少？",
+    "question_cspider": "产品的平均价格是多少？",
+    "Harold": "BLEU = 100.00, 100.0/100.0/100.0/100.0 (BP=1.000, ratio=1.000, hyp_len=11, ref_len=11)",
+    "question_toks": [
+      "产",
+      "品",
+      "的",
+      "平",
+      "均",
+      "价",
+      "格",
+      "是",
+      "多",
+      "少",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Name FROM Products ORDER BY Product_Price DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Product_Name",
+      "FROM",
+      "Products",
+      "ORDER",
+      "BY",
+      "Product_Price",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_name",
+      "from",
+      "products",
+      "order",
+      "by",
+      "product_price",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "What is the name of the product with the highest price?",
+    "question": "价格最高的产品叫什么名字？",
+    "question_cspider": "价格最高的产品叫什么名字？",
+    "Harold": "BLEU = 50.32, 78.6/53.8/41.7/36.4 (BP=1.000, ratio=1.077, hyp_len=14, ref_len=13)",
+    "question_toks": [
+      "价",
+      "格",
+      "最",
+      "高",
+      "的",
+      "产",
+      "品",
+      "的",
+      "名",
+      "称",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Type_Code ,  COUNT(*) FROM Products GROUP BY Product_Type_Code",
+    "query_toks": [
+      "SELECT",
+      "Product_Type_Code",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Products",
+      "GROUP",
+      "BY",
+      "Product_Type_Code"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_type_code",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "products",
+      "group",
+      "by",
+      "product_type_code"
+    ],
+    "question_spider": "Show different type codes of products and the number of products with each type code.",
+    "question": "显示不同的产品类型代码以及每个类型代码的产品数量。",
+    "question_cspider": "显示不同的产品类型代码以及每个类型代码的产品数量。",
+    "Harold": "BLEU = 88.95, 96.0/91.7/87.0/81.8 (BP=1.000, ratio=1.000, hyp_len=25, ref_len=25)",
+    "question_toks": [
+      "显",
+      "示",
+      "不",
+      "同",
+      "的",
+      "产",
+      "品",
+      "类",
+      "型",
+      "代",
+      "码",
+      "以",
+      "及",
+      "每",
+      "种",
+      "类",
+      "型",
+      "代",
+      "码",
+      "的",
+      "产",
+      "品",
+      "数",
+      "量",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Type_Code FROM Products GROUP BY Product_Type_Code ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Product_Type_Code",
+      "FROM",
+      "Products",
+      "GROUP",
+      "BY",
+      "Product_Type_Code",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_type_code",
+      "from",
+      "products",
+      "group",
+      "by",
+      "product_type_code",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question_spider": "Show the most common type code across products.",
+    "question": "显示跨产品间最常见类型代码。",
+    "question_cspider": "显示跨产品间最常见类型代码。",
+    "Harold": "BLEU = 42.28, 85.7/61.5/33.3/18.2 (BP=1.000, ratio=1.000, hyp_len=14, ref_len=14)",
+    "question_toks": [
+      "显",
+      "示",
+      "产",
+      "品",
+      "中",
+      "最",
+      "常",
+      "见",
+      "的",
+      "类",
+      "型",
+      "代",
+      "码",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Type_Code FROM Products GROUP BY Product_Type_Code HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "Product_Type_Code",
+      "FROM",
+      "Products",
+      "GROUP",
+      "BY",
+      "Product_Type_Code",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_type_code",
+      "from",
+      "products",
+      "group",
+      "by",
+      "product_type_code",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the product type codes that have at least two products.",
+    "question": "显示具有至少两个产品的产品类型代码。",
+    "question_cspider": "显示具有至少两个产品的产品类型代码。",
+    "Harold": "BLEU = 71.05, 88.9/76.5/62.5/60.0 (BP=1.000, ratio=1.000, hyp_len=18, ref_len=18)",
+    "question_toks": [
+      "显",
+      "示",
+      "至",
+      "少",
+      "包",
+      "含",
+      "两",
+      "个",
+      "产",
+      "品",
+      "的",
+      "产",
+      "品",
+      "类",
+      "型",
+      "代",
+      "码",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Type_Code FROM Products WHERE Product_Price  >  4500 INTERSECT SELECT Product_Type_Code FROM Products WHERE Product_Price  <  3000",
+    "query_toks": [
+      "SELECT",
+      "Product_Type_Code",
+      "FROM",
+      "Products",
+      "WHERE",
+      "Product_Price",
+      ">",
+      "4500",
+      "INTERSECT",
+      "SELECT",
+      "Product_Type_Code",
+      "FROM",
+      "Products",
+      "WHERE",
+      "Product_Price",
+      "<",
+      "3000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_type_code",
+      "from",
+      "products",
+      "where",
+      "product_price",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "product_type_code",
+      "from",
+      "products",
+      "where",
+      "product_price",
+      "<",
+      "value"
+    ],
+    "question_spider": "Show the product type codes that have both products with price higher than 4500 and products with price lower than 3000.",
+    "question": "展示产品价格高于4500和产品价格低于3000的产品型号代码。",
+    "question_cspider": "展示产品价格高于4500和产品价格低于3000的产品型号代码。",
+    "Harold": "BLEU = 59.01, 79.4/63.6/53.1/45.2 (BP=1.000, ratio=1.097, hyp_len=34, ref_len=31)",
+    "question_toks": [
+      "显",
+      "示",
+      "同",
+      "时",
+      "具",
+      "有",
+      "价",
+      "格",
+      "高",
+      "于",
+      "4",
+      "5",
+      "0",
+      "0",
+      "和",
+      "价",
+      "格",
+      "低",
+      "于",
+      "3",
+      "0",
+      "0",
+      "0",
+      "的",
+      "产",
+      "品",
+      "的",
+      "产",
+      "品",
+      "类",
+      "型",
+      "代",
+      "码",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          4500,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            3000,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT T1.Product_Name ,  COUNT(*) FROM Products AS T1 JOIN Products_in_Events AS T2 ON T1.Product_ID  =  T2.Product_ID GROUP BY T1.Product_Name",
+    "query_toks": [
+      "SELECT",
+      "T1.Product_Name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Products",
+      "AS",
+      "T1",
+      "JOIN",
+      "Products_in_Events",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Product_ID",
+      "=",
+      "T2.Product_ID",
+      "GROUP",
+      "BY",
+      "T1.Product_Name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "products_in_events",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "product_name"
+    ],
+    "question_spider": "Show the names of products and the number of events they are in.",
+    "question": "显示产品的名称和事件的数量。",
+    "question_cspider": "显示产品的名称和事件的数量。",
+    "Harold": "BLEU = 24.07, 73.3/35.7/15.4/8.3 (BP=1.000, ratio=1.071, hyp_len=15, ref_len=14)",
+    "question_toks": [
+      "显",
+      "示",
+      "产",
+      "品",
+      "名",
+      "称",
+      "及",
+      "其",
+      "所",
+      "属",
+      "的",
+      "事",
+      "件",
+      "数",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            8
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT T1.Product_Name ,  COUNT(*) FROM Products AS T1 JOIN Products_in_Events AS T2 ON T1.Product_ID  =  T2.Product_ID GROUP BY T1.Product_Name ORDER BY COUNT(*) DESC",
+    "query_toks": [
+      "SELECT",
+      "T1.Product_Name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Products",
+      "AS",
+      "T1",
+      "JOIN",
+      "Products_in_Events",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Product_ID",
+      "=",
+      "T2.Product_ID",
+      "GROUP",
+      "BY",
+      "T1.Product_Name",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "products_in_events",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "product_name",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc"
+    ],
+    "question_spider": "Show the names of products and the number of events they are in, sorted by the number of events in descending order.",
+    "question": "按照事件的数量按降序排序显示产品的名称和它们对应的事件数量。",
+    "question_cspider": "按照事件的数量按降序排序显示产品的名称和它们对应的事件数量。",
+    "Harold": "BLEU = 22.72, 72.0/41.7/21.7/9.1 (BP=0.819, ratio=0.833, hyp_len=25, ref_len=30)",
+    "question_toks": [
+      "显",
+      "示",
+      "产",
+      "品",
+      "名",
+      "称",
+      "及",
+      "其",
+      "所",
+      "属",
+      "的",
+      "事",
+      "件",
+      "数",
+      "，",
+      "并",
+      "按",
+      "事",
+      "件",
+      "数",
+      "降",
+      "序",
+      "排",
+      "列",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            8
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT T1.Product_Name FROM Products AS T1 JOIN Products_in_Events AS T2 ON T1.Product_ID  =  T2.Product_ID GROUP BY T1.Product_Name HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.Product_Name",
+      "FROM",
+      "Products",
+      "AS",
+      "T1",
+      "JOIN",
+      "Products_in_Events",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Product_ID",
+      "=",
+      "T2.Product_ID",
+      "GROUP",
+      "BY",
+      "T1.Product_Name",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product_name",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "products_in_events",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "product_name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "Show the names of products that are in at least two events.",
+    "question": "显示至少有两个事件中的产品名称。",
+    "question_cspider": "显示至少有两个事件中的产品名称。",
+    "Harold": "BLEU = 81.97, 100.0/92.9/84.6/75.0 (BP=0.936, ratio=0.938, hyp_len=15, ref_len=16)",
+    "question_toks": [
+      "显",
+      "示",
+      "至",
+      "少",
+      "两",
+      "个",
+      "事",
+      "件",
+      "中",
+      "的",
+      "产",
+      "品",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            8
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT T1.Product_Name FROM Products AS T1 JOIN Products_in_Events AS T2 ON T1.Product_ID  =  T2.Product_ID GROUP BY T1.Product_Name HAVING COUNT(*)  >=  2 ORDER BY T1.Product_Name",
+    "query_toks": [
+      "SELECT",
+      "T1.Product_Name",
+      "FROM",
+      "Products",
+      "AS",
+      "T1",
+      "JOIN",
+      "Products_in_Events",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Product_ID",
+      "=",
+      "T2.Product_ID",
+      "GROUP",
+      "BY",
+      "T1.Product_Name",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2",
+      "ORDER",
+      "BY",
+      "T1.Product_Name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "product_name",
+      "from",
+      "products",
+      "as",
+      "t1",
+      "join",
+      "products_in_events",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "product_id",
+      "=",
+      "t2",
+      ".",
+      "product_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "product_name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "product_name"
+    ],
+    "question_spider": "Show the names of products that are in at least two events in ascending alphabetical order of product name.",
+    "question": "按照产品名称字母升序显示至少包含两个事件中的产品名称。",
+    "question_cspider": "按照产品名称字母升序显示至少包含两个事件中的产品名称。",
+    "Harold": "BLEU = 71.53, 92.0/83.3/73.9/63.6 (BP=0.923, ratio=0.926, hyp_len=25, ref_len=27)",
+    "question_toks": [
+      "以",
+      "产",
+      "品",
+      "名",
+      "称",
+      "的",
+      "字",
+      "母",
+      "升",
+      "序",
+      "显",
+      "示",
+      "至",
+      "少",
+      "两",
+      "个",
+      "事",
+      "件",
+      "中",
+      "的",
+      "产",
+      "品",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            8
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2,
+          null
+        ]
+      ],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "solvency_ii",
+    "query": "SELECT Product_Name FROM Products WHERE Product_ID NOT IN (SELECT Product_ID FROM Products_in_Events)",
+    "query_toks": [
+      "SELECT",
+      "Product_Name",
+      "FROM",
+      "Products",
+      "WHERE",
+      "Product_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Product_ID",
+      "FROM",
+      "Products_in_Events",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "product_name",
+      "from",
+      "products",
+      "where",
+      "product_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "product_id",
+      "from",
+      "products_in_events",
+      ")"
+    ],
+    "question_spider": "List the names of products that are not in any event.",
+    "question": "列出没有任何事件的产品名称。",
+    "question_cspider": "列出没有任何事件的产品名称。",
+    "Harold": "BLEU = 40.30, 75.0/53.3/28.6/23.1 (BP=1.000, ratio=1.143, hyp_len=16, ref_len=14)",
+    "question_toks": [
+      "列",
+      "出",
+      "任",
+      "何",
+      "情",
+      "况",
+      "下",
+      "都",
+      "没",
+      "有",
+      "的",
+      "产",
+      "品",
+      "名",
+      "称",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  8
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      25,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

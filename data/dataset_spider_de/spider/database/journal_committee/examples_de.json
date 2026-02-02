@@ -1,0 +1,2189 @@
+[
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT count(*) FROM editor",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "editor"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "editor"
+    ],
+    "question": "Wie viele Redakteure gibt es?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT Name FROM editor ORDER BY Age ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "editor",
+      "ORDER",
+      "BY",
+      "Age",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "editor",
+      "order",
+      "by",
+      "age",
+      "asc"
+    ],
+    "question": "Listen Sie die Namen der Redakteure in aufsteigender Reihenfolge des Alters auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT Name ,  Age FROM editor",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      ",",
+      "Age",
+      "FROM",
+      "editor"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "age",
+      "from",
+      "editor"
+    ],
+    "question": "Wie lauten die Namen und das Alter der Redakteure?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT Name FROM editor WHERE Age  >  25",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "editor",
+      "WHERE",
+      "Age",
+      ">",
+      "25"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "editor",
+      "where",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "Listen Sie die Namen der Redakteure auf, die älter als 25 Jahre sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          25.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT Name FROM editor WHERE Age  =  24 OR Age  =  25",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "editor",
+      "WHERE",
+      "Age",
+      "=",
+      "24",
+      "OR",
+      "Age",
+      "=",
+      "25"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "editor",
+      "where",
+      "age",
+      "=",
+      "value",
+      "or",
+      "age",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie die Namen der Redakteure im Alter von 24 oder 25 Jahren an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          24.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          25.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT Name FROM editor ORDER BY Age ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "editor",
+      "ORDER",
+      "BY",
+      "Age",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "editor",
+      "order",
+      "by",
+      "age",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Wie heißt der jüngste Redakteur?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT Age ,  COUNT(*) FROM editor GROUP BY Age",
+    "query_toks": [
+      "SELECT",
+      "Age",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "editor",
+      "GROUP",
+      "BY",
+      "Age"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "age",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "editor",
+      "group",
+      "by",
+      "age"
+    ],
+    "question": "Was ist das unterschiedliche Alter der Redakteure? Zeigen Sie jedes Alter zusammen mit der Anzahl der Redakteure dieses Alters an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT Age FROM editor GROUP BY Age ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Age",
+      "FROM",
+      "editor",
+      "GROUP",
+      "BY",
+      "Age",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "age",
+      "from",
+      "editor",
+      "group",
+      "by",
+      "age",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Bitte geben Sie das häufigste Alter der Redakteure an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT DISTINCT Theme FROM journal",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "Theme",
+      "FROM",
+      "journal"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "theme",
+      "from",
+      "journal"
+    ],
+    "question": "Zeigen Sie die verschiedenen Themen von Zeitschriften.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT T2.Name ,  T3.Theme FROM journal_committee AS T1 JOIN editor AS T2 ON T1.Editor_ID  =  T2.Editor_ID JOIN journal AS T3 ON T1.Journal_ID  =  T3.Journal_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T3.Theme",
+      "FROM",
+      "journal_committee",
+      "AS",
+      "T1",
+      "JOIN",
+      "editor",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Editor_ID",
+      "=",
+      "T2.Editor_ID",
+      "JOIN",
+      "journal",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Journal_ID",
+      "=",
+      "T3.Journal_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "theme",
+      "from",
+      "journal_committee",
+      "as",
+      "t1",
+      "join",
+      "editor",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "editor_id",
+      "=",
+      "t2",
+      ".",
+      "editor_id",
+      "join",
+      "journal",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journal_id",
+      "=",
+      "t3",
+      ".",
+      "journal_id"
+    ],
+    "question": "Zeigen Sie die Namen der Redakteure und das Thema der Zeitschriften an, für die sie in Ausschüssen tätig sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT T2.Name ,  T3.Theme FROM journal_committee AS T1 JOIN editor AS T2 ON T1.Editor_ID  =  T2.Editor_ID JOIN journal AS T3 ON T1.Journal_ID  =  T3.Journal_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T3.Theme",
+      "FROM",
+      "journal_committee",
+      "AS",
+      "T1",
+      "JOIN",
+      "editor",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Editor_ID",
+      "=",
+      "T2.Editor_ID",
+      "JOIN",
+      "journal",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Journal_ID",
+      "=",
+      "T3.Journal_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t3",
+      ".",
+      "theme",
+      "from",
+      "journal_committee",
+      "as",
+      "t1",
+      "join",
+      "editor",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "editor_id",
+      "=",
+      "t2",
+      ".",
+      "editor_id",
+      "join",
+      "journal",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journal_id",
+      "=",
+      "t3",
+      ".",
+      "journal_id"
+    ],
+    "question": "Suchen Sie für jedes journal_committee den Namen des Redakteurs und das Zeitschriftenthema.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT T2.Name ,  T2.age ,  T3.Theme FROM journal_committee AS T1 JOIN editor AS T2 ON T1.Editor_ID  =  T2.Editor_ID JOIN journal AS T3 ON T1.Journal_ID  =  T3.Journal_ID ORDER BY T3.Theme ASC",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T2.age",
+      ",",
+      "T3.Theme",
+      "FROM",
+      "journal_committee",
+      "AS",
+      "T1",
+      "JOIN",
+      "editor",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Editor_ID",
+      "=",
+      "T2.Editor_ID",
+      "JOIN",
+      "journal",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Journal_ID",
+      "=",
+      "T3.Journal_ID",
+      "ORDER",
+      "BY",
+      "T3.Theme",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "age",
+      ",",
+      "t3",
+      ".",
+      "theme",
+      "from",
+      "journal_committee",
+      "as",
+      "t1",
+      "join",
+      "editor",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "editor_id",
+      "=",
+      "t2",
+      ".",
+      "editor_id",
+      "join",
+      "journal",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journal_id",
+      "=",
+      "t3",
+      ".",
+      "journal_id",
+      "order",
+      "by",
+      "t3",
+      ".",
+      "theme",
+      "asc"
+    ],
+    "question": "Zeigen Sie die Namen und das Alter der Redakteure und das Thema der Zeitschriften, für die sie in Ausschüssen tätig sind, in aufsteigender alphabetischer Reihenfolge des Themas an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT T2.Name FROM journal_committee AS T1 JOIN editor AS T2 ON T1.Editor_ID  =  T2.Editor_ID JOIN journal AS T3 ON T1.Journal_ID  =  T3.Journal_ID WHERE T3.Sales  >  3000",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      "FROM",
+      "journal_committee",
+      "AS",
+      "T1",
+      "JOIN",
+      "editor",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Editor_ID",
+      "=",
+      "T2.Editor_ID",
+      "JOIN",
+      "journal",
+      "AS",
+      "T3",
+      "ON",
+      "T1.Journal_ID",
+      "=",
+      "T3.Journal_ID",
+      "WHERE",
+      "T3.Sales",
+      ">",
+      "3000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "journal_committee",
+      "as",
+      "t1",
+      "join",
+      "editor",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "editor_id",
+      "=",
+      "t2",
+      ".",
+      "editor_id",
+      "join",
+      "journal",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "journal_id",
+      "=",
+      "t3",
+      ".",
+      "journal_id",
+      "where",
+      "t3",
+      ".",
+      "sales",
+      ">",
+      "value"
+    ],
+    "question": "Zeigen Sie die Namen der Redakteure an, die im Ausschuss der Zeitschriften mit einem Umsatz von mehr als 3000 vertreten sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          3000.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT T1.editor_id ,  T1.Name ,  COUNT(*) FROM editor AS T1 JOIN journal_committee AS T2 ON T1.Editor_ID  =  T2.Editor_ID GROUP BY T1.editor_id",
+    "query_toks": [
+      "SELECT",
+      "T1.editor_id",
+      ",",
+      "T1.Name",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "editor",
+      "AS",
+      "T1",
+      "JOIN",
+      "journal_committee",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Editor_ID",
+      "=",
+      "T2.Editor_ID",
+      "GROUP",
+      "BY",
+      "T1.editor_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "editor_id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "editor",
+      "as",
+      "t1",
+      "join",
+      "journal_committee",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "editor_id",
+      "=",
+      "t2",
+      ".",
+      "editor_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "editor_id"
+    ],
+    "question": "Zeigen Sie die ID, den Namen jedes Redakteurs und die Anzahl der Zeitschriftenausschüsse an, in denen sie tätig sind.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          5,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT T1.Name FROM editor AS T1 JOIN journal_committee AS T2 ON T1.Editor_ID  =  T2.Editor_ID GROUP BY T1.Name HAVING COUNT(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.Name",
+      "FROM",
+      "editor",
+      "AS",
+      "T1",
+      "JOIN",
+      "journal_committee",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Editor_ID",
+      "=",
+      "T2.Editor_ID",
+      "GROUP",
+      "BY",
+      "T1.Name",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "editor",
+      "as",
+      "t1",
+      "join",
+      "journal_committee",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "editor_id",
+      "=",
+      "t2",
+      ".",
+      "editor_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Zeigen Sie die Namen der Redakteure an, die sich in mindestens zwei Journalausschüssen befinden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT Name FROM editor WHERE editor_id NOT IN (SELECT editor_id FROM journal_committee)",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "editor",
+      "WHERE",
+      "editor_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "editor_id",
+      "FROM",
+      "journal_committee",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "editor",
+      "where",
+      "editor_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "editor_id",
+      "from",
+      "journal_committee",
+      ")"
+    ],
+    "question": "Listen Sie die Namen der Redakteure auf, die keinem Zeitschriftenausschuss angehören.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      8,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT date ,  theme ,  sales FROM journal EXCEPT SELECT T1.date ,  T1.theme ,  T1.sales FROM journal AS T1 JOIN journal_committee AS T2 ON T1.journal_ID  =  T2.journal_ID",
+    "query_toks": [
+      "SELECT",
+      "date",
+      ",",
+      "theme",
+      ",",
+      "sales",
+      "FROM",
+      "journal",
+      "EXCEPT",
+      "SELECT",
+      "T1.date",
+      ",",
+      "T1.theme",
+      ",",
+      "T1.sales",
+      "FROM",
+      "journal",
+      "AS",
+      "T1",
+      "JOIN",
+      "journal_committee",
+      "AS",
+      "T2",
+      "ON",
+      "T1.journal_ID",
+      "=",
+      "T2.journal_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "date",
+      ",",
+      "theme",
+      ",",
+      "sales",
+      "from",
+      "journal",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "date",
+      ",",
+      "t1",
+      ".",
+      "theme",
+      ",",
+      "t1",
+      ".",
+      "sales",
+      "from",
+      "journal",
+      "as",
+      "t1",
+      "join",
+      "journal_committee",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "journal_id",
+      "=",
+      "t2",
+      ".",
+      "journal_id"
+    ],
+    "question": "Listen Sie das Datum, das Thema und den Verkauf der Zeitschrift auf, für die keiner der aufgeführten Redakteure im Ausschuss tätig war.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "journal_committee",
+    "query": "SELECT avg(T1.sales) FROM journal AS T1 JOIN journal_committee AS T2 ON T1.journal_ID  =  T2.journal_ID WHERE T2.work_type  =  'Photo'",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "T1.sales",
+      ")",
+      "FROM",
+      "journal",
+      "AS",
+      "T1",
+      "JOIN",
+      "journal_committee",
+      "AS",
+      "T2",
+      "ON",
+      "T1.journal_ID",
+      "=",
+      "T2.journal_ID",
+      "WHERE",
+      "T2.work_type",
+      "=",
+      "'Photo",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "t1",
+      ".",
+      "sales",
+      ")",
+      "from",
+      "journal",
+      "as",
+      "t1",
+      "join",
+      "journal_committee",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "journal_id",
+      "=",
+      "t2",
+      ".",
+      "journal_id",
+      "where",
+      "t2",
+      ".",
+      "work_type",
+      "=",
+      "value"
+    ],
+    "question": "Was ist der durchschnittliche Umsatz der Zeitschriften mit einem Redakteur, dessen Arbeitstyp \"Photo\" ist?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"Photo\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

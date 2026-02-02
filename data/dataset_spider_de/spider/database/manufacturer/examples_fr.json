@@ -1,0 +1,1977 @@
+[
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT sum(num_of_component) FROM furniture",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "num_of_component",
+      ")",
+      "FROM",
+      "furniture"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "num_of_component",
+      ")",
+      "from",
+      "furniture"
+    ],
+    "question": "Combien de composants de meubles y a-t-il au total?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT name ,  furniture_id FROM furniture ORDER BY market_rate DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "furniture_id",
+      "FROM",
+      "furniture",
+      "ORDER",
+      "BY",
+      "market_rate",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "furniture_id",
+      "from",
+      "furniture",
+      "order",
+      "by",
+      "market_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Renvoyez le nom et l'identifiant du meuble avec le taux le plus élevé du marché.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT sum(market_rate) FROM furniture ORDER BY market_rate DESC LIMIT 2",
+    "query_toks": [
+      "SELECT",
+      "sum",
+      "(",
+      "market_rate",
+      ")",
+      "FROM",
+      "furniture",
+      "ORDER",
+      "BY",
+      "market_rate",
+      "DESC",
+      "LIMIT",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "sum",
+      "(",
+      "market_rate",
+      ")",
+      "from",
+      "furniture",
+      "order",
+      "by",
+      "market_rate",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "trouvez le taux de marché total des meubles qui détiennent les 2 premières parts de marché.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            4,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 2,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT Num_of_Component ,  name FROM furniture WHERE Num_of_Component  >  10",
+    "query_toks": [
+      "SELECT",
+      "Num_of_Component",
+      ",",
+      "name",
+      "FROM",
+      "furniture",
+      "WHERE",
+      "Num_of_Component",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "num_of_component",
+      ",",
+      "name",
+      "from",
+      "furniture",
+      "where",
+      "num_of_component",
+      ">",
+      "value"
+    ],
+    "question": "Trouvez les quantités de composants et les noms de tous les meubles qui ont plus de 10 composants.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT name ,  Num_of_Component FROM furniture ORDER BY market_rate LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "Num_of_Component",
+      "FROM",
+      "furniture",
+      "ORDER",
+      "BY",
+      "market_rate",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "num_of_component",
+      "from",
+      "furniture",
+      "order",
+      "by",
+      "market_rate",
+      "limit",
+      "value"
+    ],
+    "question": "Trouvez le nom et la quantité de composants des meubles les moins populaires.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT t1.name FROM furniture AS t1 JOIN furniture_manufacte AS t2 ON t1.Furniture_ID  =  t2.Furniture_ID WHERE t2.Price_in_Dollar  <  (SELECT max(Price_in_Dollar) FROM furniture_manufacte)",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      "FROM",
+      "furniture",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Furniture_ID",
+      "=",
+      "t2.Furniture_ID",
+      "WHERE",
+      "t2.Price_in_Dollar",
+      "<",
+      "(",
+      "SELECT",
+      "max",
+      "(",
+      "Price_in_Dollar",
+      ")",
+      "FROM",
+      "furniture_manufacte",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "furniture",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "furniture_id",
+      "=",
+      "t2",
+      ".",
+      "furniture_id",
+      "where",
+      "t2",
+      ".",
+      "price_in_dollar",
+      "<",
+      "(",
+      "select",
+      "max",
+      "(",
+      "price_in_dollar",
+      ")",
+      "from",
+      "furniture_manufacte",
+      ")"
+    ],
+    "question": "Trouvez les noms des meubles dont les prix sont inférieurs au prix le plus élevé.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  1,
+                  [
+                    0,
+                    [
+                      0,
+                      12,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT open_year ,  name FROM manufacturer ORDER BY num_of_shops DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "open_year",
+      ",",
+      "name",
+      "FROM",
+      "manufacturer",
+      "ORDER",
+      "BY",
+      "num_of_shops",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "open_year",
+      ",",
+      "name",
+      "from",
+      "manufacturer",
+      "order",
+      "by",
+      "num_of_shops",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel fabricant a le plus de magasins? Indiquez son nom et l'année d'ouverture.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT avg(Num_of_Factories) FROM manufacturer WHERE num_of_shops  >  20",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Num_of_Factories",
+      ")",
+      "FROM",
+      "manufacturer",
+      "WHERE",
+      "num_of_shops",
+      ">",
+      "20"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "num_of_factories",
+      ")",
+      "from",
+      "manufacturer",
+      "where",
+      "num_of_shops",
+      ">",
+      "value"
+    ],
+    "question": "Trouvez le nombre moyen d'usines pour les fabricants qui ont plus de 20 magasins.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          20.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT name ,  manufacturer_id FROM manufacturer ORDER BY open_year",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "manufacturer_id",
+      "FROM",
+      "manufacturer",
+      "ORDER",
+      "BY",
+      "open_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "manufacturer_id",
+      "from",
+      "manufacturer",
+      "order",
+      "by",
+      "open_year"
+    ],
+    "question": "Répertoriez tous les noms et identifiants des fabricants classés par année d'ouverture.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT name ,  open_year FROM manufacturer WHERE num_of_shops  >  10 OR Num_of_Factories  <  10",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "open_year",
+      "FROM",
+      "manufacturer",
+      "WHERE",
+      "num_of_shops",
+      ">",
+      "10",
+      "OR",
+      "Num_of_Factories",
+      "<",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "open_year",
+      "from",
+      "manufacturer",
+      "where",
+      "num_of_shops",
+      ">",
+      "value",
+      "or",
+      "num_of_factories",
+      "<",
+      "value"
+    ],
+    "question": "Donnez-moi le nom et l'année d'ouverture des fabricants qui ont moins de 10 usines ou plus de 10 magasins.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          10.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT max(num_of_shops) ,  avg(Num_of_Factories) FROM manufacturer WHERE open_year  <  1990",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "num_of_shops",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "Num_of_Factories",
+      ")",
+      "FROM",
+      "manufacturer",
+      "WHERE",
+      "open_year",
+      "<",
+      "1990"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "num_of_shops",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "num_of_factories",
+      ")",
+      "from",
+      "manufacturer",
+      "where",
+      "open_year",
+      "<",
+      "value"
+    ],
+    "question": "quel est le nombre moyen d'usines et le nombre maximal de magasins pour les fabricants qui ont ouvert avant 1990.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          1990.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT t1.manufacturer_id ,  t1.num_of_shops FROM manufacturer AS t1 JOIN furniture_manufacte AS t2 ON t1.manufacturer_id  =  t2.manufacturer_id ORDER BY t2.Price_in_Dollar DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "t1.manufacturer_id",
+      ",",
+      "t1.num_of_shops",
+      "FROM",
+      "manufacturer",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.manufacturer_id",
+      "=",
+      "t2.manufacturer_id",
+      "ORDER",
+      "BY",
+      "t2.Price_in_Dollar",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "manufacturer_id",
+      ",",
+      "t1",
+      ".",
+      "num_of_shops",
+      "from",
+      "manufacturer",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "manufacturer_id",
+      "=",
+      "t2",
+      ".",
+      "manufacturer_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "price_in_dollar",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Trouvez l'identifiant et le nombre de magasins de l'entreprise qui produit les meubles les plus chers.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT count(*) ,  t1.name FROM manufacturer AS t1 JOIN furniture_manufacte AS t2 ON t1.manufacturer_id  =  t2.manufacturer_id GROUP BY t1.manufacturer_id",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1.name",
+      "FROM",
+      "manufacturer",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.manufacturer_id",
+      "=",
+      "t2.manufacturer_id",
+      "GROUP",
+      "BY",
+      "t1.manufacturer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "manufacturer",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "manufacturer_id",
+      "=",
+      "t2",
+      ".",
+      "manufacturer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "manufacturer_id"
+    ],
+    "question": "Trouvez le nombre de types de meubles produits par chaque fabricant ainsi que les noms des entreprises.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT t1.name ,  t2.price_in_dollar FROM furniture AS t1 JOIN furniture_manufacte AS t2 ON t1.Furniture_ID  =  t2.Furniture_ID",
+    "query_toks": [
+      "SELECT",
+      "t1.name",
+      ",",
+      "t2.price_in_dollar",
+      "FROM",
+      "furniture",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Furniture_ID",
+      "=",
+      "t2.Furniture_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t2",
+      ".",
+      "price_in_dollar",
+      "from",
+      "furniture",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "furniture_id",
+      "=",
+      "t2",
+      ".",
+      "furniture_id"
+    ],
+    "question": "Donnez-moi les noms et les prix des meubles que certaines entreprises fabriquent.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT Market_Rate ,  name FROM furniture WHERE Furniture_ID NOT IN (SELECT Furniture_ID FROM furniture_manufacte)",
+    "query_toks": [
+      "SELECT",
+      "Market_Rate",
+      ",",
+      "name",
+      "FROM",
+      "furniture",
+      "WHERE",
+      "Furniture_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Furniture_ID",
+      "FROM",
+      "furniture_manufacte",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "market_rate",
+      ",",
+      "name",
+      "from",
+      "furniture",
+      "where",
+      "furniture_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "furniture_id",
+      "from",
+      "furniture_manufacte",
+      ")"
+    ],
+    "question": "Trouvez les parts de marché et les noms de meubles qu'aucune entreprise ne produit dans nos enregistrements.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "manufacturer",
+    "query": "SELECT t3.name FROM furniture AS t1 JOIN furniture_manufacte AS t2 ON t1.Furniture_ID  =  t2.Furniture_ID JOIN manufacturer AS t3 ON t2.manufacturer_id  =  t3.manufacturer_id WHERE t1.num_of_component  <  6 INTERSECT SELECT t3.name FROM furniture AS t1 JOIN furniture_manufacte AS t2 ON t1.Furniture_ID  =  t2.Furniture_ID JOIN manufacturer AS t3 ON t2.manufacturer_id  =  t3.manufacturer_id WHERE t1.num_of_component  >  10",
+    "query_toks": [
+      "SELECT",
+      "t3.name",
+      "FROM",
+      "furniture",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Furniture_ID",
+      "=",
+      "t2.Furniture_ID",
+      "JOIN",
+      "manufacturer",
+      "AS",
+      "t3",
+      "ON",
+      "t2.manufacturer_id",
+      "=",
+      "t3.manufacturer_id",
+      "WHERE",
+      "t1.num_of_component",
+      "<",
+      "6",
+      "INTERSECT",
+      "SELECT",
+      "t3.name",
+      "FROM",
+      "furniture",
+      "AS",
+      "t1",
+      "JOIN",
+      "furniture_manufacte",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Furniture_ID",
+      "=",
+      "t2.Furniture_ID",
+      "JOIN",
+      "manufacturer",
+      "AS",
+      "t3",
+      "ON",
+      "t2.manufacturer_id",
+      "=",
+      "t3.manufacturer_id",
+      "WHERE",
+      "t1.num_of_component",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "furniture",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "furniture_id",
+      "=",
+      "t2",
+      ".",
+      "furniture_id",
+      "join",
+      "manufacturer",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "manufacturer_id",
+      "=",
+      "t3",
+      ".",
+      "manufacturer_id",
+      "where",
+      "t1",
+      ".",
+      "num_of_component",
+      "<",
+      "value",
+      "intersect",
+      "select",
+      "t3",
+      ".",
+      "name",
+      "from",
+      "furniture",
+      "as",
+      "t1",
+      "join",
+      "furniture_manufacte",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "furniture_id",
+      "=",
+      "t2",
+      ".",
+      "furniture_id",
+      "join",
+      "manufacturer",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "manufacturer_id",
+      "=",
+      "t3",
+      ".",
+      "manufacturer_id",
+      "where",
+      "t1",
+      ".",
+      "num_of_component",
+      ">",
+      "value"
+    ],
+    "question": "Trouvez le nom de l'entreprise qui produit à la fois des meubles avec moins de 6 composants et des meubles avec plus de 10 composants.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          6.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              0
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            10.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  }
+]

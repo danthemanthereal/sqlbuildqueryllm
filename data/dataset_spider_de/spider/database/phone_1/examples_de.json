@@ -1,0 +1,3671 @@
+[
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Model_name FROM chip_model WHERE Launch_year BETWEEN 2002 AND 2004;",
+    "query_toks": [
+      "SELECT",
+      "Model_name",
+      "FROM",
+      "chip_model",
+      "WHERE",
+      "Launch_year",
+      "BETWEEN",
+      "2002",
+      "AND",
+      "2004",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "model_name",
+      "from",
+      "chip_model",
+      "where",
+      "launch_year",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question": "die Namen der Modelle, die zwischen 2002 und 2004 auf den Markt kamen.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          2002.0,
+          2004.0
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Model_name ,  RAM_MiB FROM chip_model ORDER BY RAM_MiB ASC LIMIT 1;",
+    "query_toks": [
+      "SELECT",
+      "Model_name",
+      ",",
+      "RAM_MiB",
+      "FROM",
+      "chip_model",
+      "ORDER",
+      "BY",
+      "RAM_MiB",
+      "ASC",
+      "LIMIT",
+      "1",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "model_name",
+      ",",
+      "ram_mib",
+      "from",
+      "chip_model",
+      "order",
+      "by",
+      "ram_mib",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Welches Modell hat den geringsten Arbeitsspeicher? Listen Sie den Modellnamen und die Größe des Arbeitsspeichers auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT chip_model ,  screen_mode FROM phone WHERE Hardware_Model_name = \"LG-P760\";",
+    "query_toks": [
+      "SELECT",
+      "chip_model",
+      ",",
+      "screen_mode",
+      "FROM",
+      "phone",
+      "WHERE",
+      "Hardware_Model_name",
+      "=",
+      "``",
+      "LG-P760",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "chip_model",
+      ",",
+      "screen_mode",
+      "from",
+      "phone",
+      "where",
+      "hardware_model_name",
+      "=",
+      "value"
+    ],
+    "question": "Was sind das Chipmodell und der Bildschirmmodus des Telefons mit dem Hardwaremodellnamen \"LG-P760\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"LG-P760\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT count(*) FROM phone WHERE Company_name = \"Nokia Corporation\";",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "phone",
+      "WHERE",
+      "Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "phone",
+      "where",
+      "company_name",
+      "=",
+      "value"
+    ],
+    "question": "Wie viele Telefonhardwaremodelle werden von der Firma \"Nokia Corporation\" hergestellt?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT max(T1.RAM_MiB) ,  min(T1.RAM_MiB) FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model WHERE T2.Company_name = \"Nokia Corporation\";",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "T1.RAM_MiB",
+      ")",
+      ",",
+      "min",
+      "(",
+      "T1.RAM_MiB",
+      ")",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "WHERE",
+      "T2.Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "t1",
+      ".",
+      "ram_mib",
+      ")",
+      ",",
+      "min",
+      "(",
+      "t1",
+      ".",
+      "ram_mib",
+      ")",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "where",
+      "t2",
+      ".",
+      "company_name",
+      "=",
+      "value"
+    ],
+    "question": "Was ist die maximale und minimale RAM-Größe des Telefons, das von der Firma \"Nokia Corporation\" hergestellt wird?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT avg(T1.ROM_MiB) FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model WHERE T2.Company_name = \"Nokia Corporation\";",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "T1.ROM_MiB",
+      ")",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "WHERE",
+      "T2.Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "t1",
+      ".",
+      "rom_mib",
+      ")",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "where",
+      "t2",
+      ".",
+      "company_name",
+      "=",
+      "value"
+    ],
+    "question": "Was ist die durchschnittliche ROM-Größe von Telefonen, die von der Firma \"Nokia Corporation\" hergestellt werden?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T2.Hardware_Model_name ,  T2.Company_name FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model WHERE T1.Launch_year = 2002 OR T1.RAM_MiB  >  32;",
+    "query_toks": [
+      "SELECT",
+      "T2.Hardware_Model_name",
+      ",",
+      "T2.Company_name",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "WHERE",
+      "T1.Launch_year",
+      "=",
+      "2002",
+      "OR",
+      "T1.RAM_MiB",
+      ">",
+      "32",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "hardware_model_name",
+      ",",
+      "t2",
+      ".",
+      "company_name",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "where",
+      "t1",
+      ".",
+      "launch_year",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "ram_mib",
+      ">",
+      "value"
+    ],
+    "question": "Geben Sie den Namen des Hardwaremodells und den Firmennamen für alle Telefone an, die im Jahr 2002 auf den Markt gebracht wurden oder eine RAM-Größe von mehr als 32 haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          2002.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          32.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Hardware_Model_name ,  Company_name FROM phone WHERE Accreditation_type LIKE 'Full';",
+    "query_toks": [
+      "SELECT",
+      "Hardware_Model_name",
+      ",",
+      "Company_name",
+      "FROM",
+      "phone",
+      "WHERE",
+      "Accreditation_type",
+      "LIKE",
+      "'Full",
+      "'",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "hardware_model_name",
+      ",",
+      "company_name",
+      "from",
+      "phone",
+      "where",
+      "accreditation_type",
+      "like",
+      "value"
+    ],
+    "question": "Finden Sie alle Telefone, deren Akkreditierungstypen das Wort \"Full\" enthalten. Listen Sie den Namen des Hardwaremodells und den Firmennamen auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          "\"Full\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T1.Char_cells ,  T1.Pixels ,  T1.Hardware_colours FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T2.Hardware_Model_name = \"LG-P760\";",
+    "query_toks": [
+      "SELECT",
+      "T1.Char_cells",
+      ",",
+      "T1.Pixels",
+      ",",
+      "T1.Hardware_colours",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "T2.Hardware_Model_name",
+      "=",
+      "``",
+      "LG-P760",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "char_cells",
+      ",",
+      "t1",
+      ".",
+      "pixels",
+      ",",
+      "t1",
+      ".",
+      "hardware_colours",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "=",
+      "value"
+    ],
+    "question": "Suchen Sie die Zeichenzellen, Pixel und Hardwarefarben für den Bildschirm des Telefons, dessen Hardwaremodellname \"LG-P760\" lautet.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"LG-P760\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T2.Hardware_Model_name ,  T2.Company_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.Type  =  \"Graphics\";",
+    "query_toks": [
+      "SELECT",
+      "T2.Hardware_Model_name",
+      ",",
+      "T2.Company_name",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "T1.Type",
+      "=",
+      "``",
+      "Graphics",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "hardware_model_name",
+      ",",
+      "t2",
+      ".",
+      "company_name",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value"
+    ],
+    "question": "Geben Sie den Namen des Hardwaremodells und den Firmennamen für das Telefon an, dessen Bildschirmmodustyp \"Graphics\" ist.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Graphics\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Company_name ,  count(*) FROM phone GROUP BY Company_name ORDER BY count(*) ASC LIMIT 1;",
+    "query_toks": [
+      "SELECT",
+      "Company_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Company_name",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "company_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "company_name",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Suchen Sie den Namen des Unternehmens mit der geringsten Anzahl von Telefonmodellen. Geben Sie den Firmennamen und die Nummer des von dieser Firma hergestellten Telefonmodells an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Company_name FROM phone GROUP BY Company_name HAVING count(*)  >  1;",
+    "query_toks": [
+      "SELECT",
+      "Company_name",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Company_name",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "company_name",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "company_name",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Geben Sie den Namen des Unternehmens an, das mehr als ein Telefonmodell hergestellt hat.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT max(used_kb) , min(used_kb) , avg(used_kb) FROM screen_mode;",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "used_kb",
+      ")",
+      ",",
+      "min",
+      "(",
+      "used_kb",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "used_kb",
+      ")",
+      "FROM",
+      "screen_mode",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "used_kb",
+      ")",
+      ",",
+      "min",
+      "(",
+      "used_kb",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "used_kb",
+      ")",
+      "from",
+      "screen_mode"
+    ],
+    "question": "Listen Sie die maximale, minimale und durchschnittliche Anzahl der verwendeten KB im Bildschirmmodus auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T2.Hardware_Model_name FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model WHERE T1.Launch_year = 2002 ORDER BY T1.RAM_MiB DESC LIMIT 1;",
+    "query_toks": [
+      "SELECT",
+      "T2.Hardware_Model_name",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "WHERE",
+      "T1.Launch_year",
+      "=",
+      "2002",
+      "ORDER",
+      "BY",
+      "T1.RAM_MiB",
+      "DESC",
+      "LIMIT",
+      "1",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "where",
+      "t1",
+      ".",
+      "launch_year",
+      "=",
+      "value",
+      "order",
+      "by",
+      "t1",
+      ".",
+      "ram_mib",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Geben Sie den Namen des im Jahr 2002 eingeführten Telefonmodells mit der höchsten RAM-Größe an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          2002.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T1.WiFi , T3.Type FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model JOIN screen_mode AS T3 ON T2.screen_mode = T3.Graphics_mode WHERE T2.Hardware_Model_name = \"LG-P760\";",
+    "query_toks": [
+      "SELECT",
+      "T1.WiFi",
+      ",",
+      "T3.Type",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "JOIN",
+      "screen_mode",
+      "AS",
+      "T3",
+      "ON",
+      "T2.screen_mode",
+      "=",
+      "T3.Graphics_mode",
+      "WHERE",
+      "T2.Hardware_Model_name",
+      "=",
+      "``",
+      "LG-P760",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "wifi",
+      ",",
+      "t3",
+      ".",
+      "type",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "join",
+      "screen_mode",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "screen_mode",
+      "=",
+      "t3",
+      ".",
+      "graphics_mode",
+      "where",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "=",
+      "value"
+    ],
+    "question": "Was ist der WLAN- und Bildschirmmodus des Hardwaremodells \"LG-P760\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"LG-P760\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT T2.Hardware_Model_name FROM chip_model AS T1 JOIN phone AS T2 ON T1.Model_name  =  T2.chip_model JOIN screen_mode AS T3 ON T2.screen_mode = T3.Graphics_mode WHERE T3.Type = \"Text\" OR T1.RAM_MiB  >  32;",
+    "query_toks": [
+      "SELECT",
+      "T2.Hardware_Model_name",
+      "FROM",
+      "chip_model",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Model_name",
+      "=",
+      "T2.chip_model",
+      "JOIN",
+      "screen_mode",
+      "AS",
+      "T3",
+      "ON",
+      "T2.screen_mode",
+      "=",
+      "T3.Graphics_mode",
+      "WHERE",
+      "T3.Type",
+      "=",
+      "``",
+      "Text",
+      "''",
+      "OR",
+      "T1.RAM_MiB",
+      ">",
+      "32",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "from",
+      "chip_model",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "model_name",
+      "=",
+      "t2",
+      ".",
+      "chip_model",
+      "join",
+      "screen_mode",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "screen_mode",
+      "=",
+      "t3",
+      ".",
+      "graphics_mode",
+      "where",
+      "t3",
+      ".",
+      "type",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "ram_mib",
+      ">",
+      "value"
+    ],
+    "question": "Geben Sie den Namen des Hardwaremodells für Telefone mit dem Bildschirmmodustyp \"Text\" oder einer RAM-Größe von mehr als 32 an.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Text\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          32.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT DISTINCT T2.Hardware_Model_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.Type  =  \"Graphics\" OR t2.Company_name  =  \"Nokia Corporation\"",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.Hardware_Model_name",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "T1.Type",
+      "=",
+      "``",
+      "Graphics",
+      "''",
+      "OR",
+      "t2.Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t1",
+      ".",
+      "type",
+      "=",
+      "value",
+      "or",
+      "t2",
+      ".",
+      "company_name",
+      "=",
+      "value"
+    ],
+    "question": "Geben Sie den Namen des Hardwaremodells für die Telefone an, die von \"Nokia Corporation\" hergestellt wurden oder deren Bildschirmmodustyp \"Graphics\" ist.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Graphics\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT DISTINCT T2.Hardware_Model_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE t2.Company_name  =  \"Nokia Corporation\" AND T1.Type != \"Text\";",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.Hardware_Model_name",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "t2.Company_name",
+      "=",
+      "``",
+      "Nokia",
+      "Corporation",
+      "''",
+      "AND",
+      "T1.Type",
+      "!",
+      "=",
+      "``",
+      "Text",
+      "''",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "hardware_model_name",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t2",
+      ".",
+      "company_name",
+      "=",
+      "value",
+      "and",
+      "t1",
+      ".",
+      "type",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Geben Sie den Namen des Hardwaremodells für die Telefone an, die von \"Nokia Corporation\" hergestellt wurden, deren Bildschirmmodustyp jedoch nicht \"Text\" ist.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              15,
+              false
+            ],
+            null
+          ],
+          "\"Nokia Corporation\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Text\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT DISTINCT T2.Hardware_Model_name , T2.Company_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.used_kb BETWEEN 10 AND 15;",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.Hardware_Model_name",
+      ",",
+      "T2.Company_name",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "T1",
+      "JOIN",
+      "phone",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Graphics_mode",
+      "=",
+      "T2.screen_mode",
+      "WHERE",
+      "T1.used_kb",
+      "BETWEEN",
+      "10",
+      "AND",
+      "15",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "hardware_model_name",
+      ",",
+      "t2",
+      ".",
+      "company_name",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t1",
+      ".",
+      "used_kb",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question": "Listen Sie das Telefonhardwaremodell und den Firmennamen für die Telefone auf, deren Bildschirmnutzung in zwischen 10KB und 15KB liegt.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ],
+          10.0,
+          15.0
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Accreditation_type ,  count(*) FROM phone GROUP BY Accreditation_type",
+    "query_toks": [
+      "SELECT",
+      "Accreditation_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Accreditation_type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "accreditation_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "accreditation_type"
+    ],
+    "question": "Finden Sie die Anzahl der Telefone für jeden Akkreditierungstyp.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          17,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Accreditation_type ,  count(*) FROM phone GROUP BY Accreditation_type",
+    "query_toks": [
+      "SELECT",
+      "Accreditation_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Accreditation_type"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "accreditation_type",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "accreditation_type"
+    ],
+    "question": "Wie viele Telefone gehören zu jedem Akkreditierungstyp?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          17,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT Accreditation_level FROM phone GROUP BY Accreditation_level HAVING count(*)  >  3",
+    "query_toks": [
+      "SELECT",
+      "Accreditation_level",
+      "FROM",
+      "phone",
+      "GROUP",
+      "BY",
+      "Accreditation_level",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "accreditation_level",
+      "from",
+      "phone",
+      "group",
+      "by",
+      "accreditation_level",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Finden Sie die Akkreditierungsstufe, die mehr als 3 Telefone verwenden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          18,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT * FROM chip_model",
+    "query_toks": [
+      "SELECT",
+      "*",
+      "FROM",
+      "chip_model"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "*",
+      "from",
+      "chip_model"
+    ],
+    "question": "Hier finden Sie die Details für alle Chipmodelle.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT count(*) FROM chip_model WHERE wifi  =  'No'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "chip_model",
+      "WHERE",
+      "wifi",
+      "=",
+      "'No",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "chip_model",
+      "where",
+      "wifi",
+      "=",
+      "value"
+    ],
+    "question": "Wie viele Modelle haben keine WLAN-Funktion?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"No\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT count(*) FROM chip_model WHERE wifi  =  'No'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "chip_model",
+      "WHERE",
+      "wifi",
+      "=",
+      "'No",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "chip_model",
+      "where",
+      "wifi",
+      "=",
+      "value"
+    ],
+    "question": "Zählen Sie die Anzahl der Chipmodelle, die kein WLAN haben.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"No\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT model_name FROM chip_model ORDER BY launch_year",
+    "query_toks": [
+      "SELECT",
+      "model_name",
+      "FROM",
+      "chip_model",
+      "ORDER",
+      "BY",
+      "launch_year"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "model_name",
+      "from",
+      "chip_model",
+      "order",
+      "by",
+      "launch_year"
+    ],
+    "question": "Listen Sie alle Modellnamen sortiert nach ihrem Startjahr auf.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT avg(RAM_MiB) FROM chip_model WHERE model_name NOT IN (SELECT chip_model FROM phone)",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "RAM_MiB",
+      ")",
+      "FROM",
+      "chip_model",
+      "WHERE",
+      "model_name",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "chip_model",
+      "FROM",
+      "phone",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "ram_mib",
+      ")",
+      "from",
+      "chip_model",
+      "where",
+      "model_name",
+      "not",
+      "in",
+      "(",
+      "select",
+      "chip_model",
+      "from",
+      "phone",
+      ")"
+    ],
+    "question": "Finden Sie die durchschnittliche RAM-Mib-Größe der Chip-Modelle, die von keinem Telefon verwendet werden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      20,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT model_name FROM chip_model EXCEPT SELECT chip_model FROM phone WHERE Accreditation_type  =  'Full'",
+    "query_toks": [
+      "SELECT",
+      "model_name",
+      "FROM",
+      "chip_model",
+      "EXCEPT",
+      "SELECT",
+      "chip_model",
+      "FROM",
+      "phone",
+      "WHERE",
+      "Accreditation_type",
+      "=",
+      "'Full",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "model_name",
+      "from",
+      "chip_model",
+      "except",
+      "select",
+      "chip_model",
+      "from",
+      "phone",
+      "where",
+      "accreditation_type",
+      "=",
+      "value"
+    ],
+    "question": "Suchen Sie die Namen der Chipmodelle, die von keinem Telefon mit vollständiger Akkreditierung verwendet werden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  20,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            "\"Full\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "phone_1",
+    "query": "SELECT t1.pixels FROM screen_mode AS t1 JOIN phone AS t2 ON t1.Graphics_mode  =  t2.screen_mode WHERE t2.Accreditation_type  =  'Provisional' INTERSECT SELECT t1.pixels FROM screen_mode AS t1 JOIN phone AS t2 ON t1.Graphics_mode  =  t2.screen_mode WHERE t2.Accreditation_type  =  'Full'",
+    "query_toks": [
+      "SELECT",
+      "t1.pixels",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "t1",
+      "JOIN",
+      "phone",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Graphics_mode",
+      "=",
+      "t2.screen_mode",
+      "WHERE",
+      "t2.Accreditation_type",
+      "=",
+      "'Provisional",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "t1.pixels",
+      "FROM",
+      "screen_mode",
+      "AS",
+      "t1",
+      "JOIN",
+      "phone",
+      "AS",
+      "t2",
+      "ON",
+      "t1.Graphics_mode",
+      "=",
+      "t2.screen_mode",
+      "WHERE",
+      "t2.Accreditation_type",
+      "=",
+      "'Full",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "pixels",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t2",
+      ".",
+      "accreditation_type",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "pixels",
+      "from",
+      "screen_mode",
+      "as",
+      "t1",
+      "join",
+      "phone",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "graphics_mode",
+      "=",
+      "t2",
+      ".",
+      "screen_mode",
+      "where",
+      "t2",
+      ".",
+      "accreditation_type",
+      "=",
+      "value"
+    ],
+    "question": "Suchen Sie die Pixel der Bildschirmmodi, die sowohl von Telefonen mit vollständigen Akkreditierungstypen als auch von Telefonen mit vorläufigen Akkreditierungstypen verwendet werden.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              21,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              17,
+              false
+            ],
+            null
+          ],
+          "\"Provisional\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              1
+            ],
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  10,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            "\"Full\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  }
+]

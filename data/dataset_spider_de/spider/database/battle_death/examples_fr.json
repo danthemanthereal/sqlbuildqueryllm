@@ -1,0 +1,2363 @@
+[
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(*) FROM ship WHERE disposition_of_ship  =  'Captured'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "ship",
+      "WHERE",
+      "disposition_of_ship",
+      "=",
+      "'Captured",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "ship",
+      "where",
+      "disposition_of_ship",
+      "=",
+      "value"
+    ],
+    "question": "Combien de navires ont fini par être «Captured»?",
+    "question_toks": [
+      "How",
+      "many",
+      "ships",
+      "ended",
+      "up",
+      "being",
+      "'Captured",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Captured\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  tonnage FROM ship ORDER BY name DESC",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "tonnage",
+      "FROM",
+      "ship",
+      "ORDER",
+      "BY",
+      "name",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "tonnage",
+      "from",
+      "ship",
+      "order",
+      "by",
+      "name",
+      "desc"
+    ],
+    "question": "Listez le nom et le tonnage classés par ordre alphabétique décroissant des noms.",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      "and",
+      "tonnage",
+      "ordered",
+      "by",
+      "in",
+      "descending",
+      "alphaetical",
+      "order",
+      "for",
+      "the",
+      "names",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  date FROM battle",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "date",
+      "FROM",
+      "battle"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "date",
+      "from",
+      "battle"
+    ],
+    "question": "Listez le nom, la date et le résultat de chaque bataille.",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      ",",
+      "date",
+      "and",
+      "result",
+      "of",
+      "each",
+      "battle",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT max(killed) ,  min(killed) FROM death",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "killed",
+      ")",
+      ",",
+      "min",
+      "(",
+      "killed",
+      ")",
+      "FROM",
+      "death"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "killed",
+      ")",
+      ",",
+      "min",
+      "(",
+      "killed",
+      ")",
+      "from",
+      "death"
+    ],
+    "question": "Quel est le nombre de morts maximum et minimum causé à chaque fois?",
+    "question_toks": [
+      "What",
+      "is",
+      "maximum",
+      "and",
+      "minimum",
+      "death",
+      "toll",
+      "caused",
+      "each",
+      "time",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT avg(injured) FROM death",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "injured",
+      ")",
+      "FROM",
+      "death"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "injured",
+      ")",
+      "from",
+      "death"
+    ],
+    "question": "Quel est le nombre moyen de blessures causées à chaque fois?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "number",
+      "of",
+      "injuries",
+      "caused",
+      "each",
+      "time",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.killed ,  T1.injured FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id WHERE T2.tonnage  =  't'",
+    "query_toks": [
+      "SELECT",
+      "T1.killed",
+      ",",
+      "T1.injured",
+      "FROM",
+      "death",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "t2",
+      "ON",
+      "T1.caused_by_ship_id",
+      "=",
+      "T2.id",
+      "WHERE",
+      "T2.tonnage",
+      "=",
+      "'t",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "killed",
+      ",",
+      "t1",
+      ".",
+      "injured",
+      "from",
+      "death",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "caused_by_ship_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "where",
+      "t2",
+      ".",
+      "tonnage",
+      "=",
+      "value"
+    ],
+    "question": "Quelles sont les situations de morts et de blessures causées par le navire de tonnage «T»?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "death",
+      "and",
+      "injury",
+      "situations",
+      "caused",
+      "by",
+      "the",
+      "ship",
+      "with",
+      "tonnage",
+      "'t",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"t\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  RESULT FROM battle WHERE bulgarian_commander != 'Boril'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "RESULT",
+      "FROM",
+      "battle",
+      "WHERE",
+      "bulgarian_commander",
+      "!",
+      "=",
+      "'Boril",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "result",
+      "from",
+      "battle",
+      "where",
+      "bulgarian_commander",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Quels sont les noms et les résultats des batailles lorsque le commandant bulgare n'est pas «Boril».",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "name",
+      "and",
+      "results",
+      "of",
+      "the",
+      "battles",
+      "when",
+      "the",
+      "bulgarian",
+      "commander",
+      "is",
+      "not",
+      "'Boril",
+      "'"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Boril\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT DISTINCT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.ship_type  =  'Brig'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.ship_type",
+      "=",
+      "'Brig",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "ship_type",
+      "=",
+      "value"
+    ],
+    "question": "Quels sont les différents ids et les noms des batailles qui ont perdu des navires de type «Brig»?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "different",
+      "ids",
+      "and",
+      "names",
+      "of",
+      "the",
+      "battles",
+      "that",
+      "lost",
+      "any",
+      "'Brig",
+      "'",
+      "type",
+      "shipes",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "\"Brig\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle JOIN death AS T3 ON T2.id  =  T3.caused_by_ship_id GROUP BY T1.id HAVING sum(T3.killed)  >  10",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "JOIN",
+      "death",
+      "AS",
+      "T3",
+      "ON",
+      "T2.id",
+      "=",
+      "T3.caused_by_ship_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "sum",
+      "(",
+      "T3.killed",
+      ")",
+      ">",
+      "10"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "join",
+      "death",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "id",
+      "=",
+      "t3",
+      ".",
+      "caused_by_ship_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "sum",
+      "(",
+      "t3",
+      ".",
+      "killed",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Quels sont les ids et les noms des batailles qui ont fait plus de 10 morts au total.",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "ids",
+      "and",
+      "names",
+      "of",
+      "the",
+      "battles",
+      "that",
+      "led",
+      "to",
+      "more",
+      "than",
+      "10",
+      "people",
+      "killed",
+      "in",
+      "total",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              4,
+              17,
+              false
+            ],
+            null
+          ],
+          10,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T2.id ,  T2.name FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id GROUP BY T2.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.id",
+      ",",
+      "T2.name",
+      "FROM",
+      "death",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "t2",
+      "ON",
+      "T1.caused_by_ship_id",
+      "=",
+      "T2.id",
+      "GROUP",
+      "BY",
+      "T2.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "id",
+      ",",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "death",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "caused_by_ship_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quels sont l'id et le nom du navire qui ont causé au total le plus de victimes ?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "ship",
+      "id",
+      "and",
+      "name",
+      "that",
+      "caused",
+      "most",
+      "total",
+      "injuries",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          8,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name FROM battle WHERE bulgarian_commander  =  'Kaloyan' AND latin_commander  =  'Baldwin I'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "battle",
+      "WHERE",
+      "bulgarian_commander",
+      "=",
+      "'Kaloyan",
+      "'",
+      "AND",
+      "latin_commander",
+      "=",
+      "'Baldwin",
+      "I",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "battle",
+      "where",
+      "bulgarian_commander",
+      "=",
+      "value",
+      "and",
+      "latin_commander",
+      "=",
+      "value"
+    ],
+    "question": "Quelle est la différence entre les noms de bataille du commandant bulgare «Kaloyan» et du commandant latin «Baldwin I» ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "battle",
+      "names",
+      "which",
+      "are",
+      "between",
+      "bulgarian",
+      "commander",
+      "'Kaloyan",
+      "'",
+      "and",
+      "latin",
+      "commander",
+      "'Baldwin",
+      "I",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          "\"Kaloyan\"",
+          null
+        ],
+        "and",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Baldwin I\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(DISTINCT RESULT) FROM battle",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "RESULT",
+      ")",
+      "FROM",
+      "battle"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "result",
+      ")",
+      "from",
+      "battle"
+    ],
+    "question": "Combien de résultats différents y a-t-il pour les batailles?",
+    "question_toks": [
+      "How",
+      "many",
+      "different",
+      "results",
+      "are",
+      "there",
+      "for",
+      "the",
+      "battles",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                6,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "battle",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "lost_in_battle",
+      "FROM",
+      "ship",
+      "WHERE",
+      "tonnage",
+      "=",
+      "'225",
+      "'",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "battle",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "lost_in_battle",
+      "from",
+      "ship",
+      "where",
+      "tonnage",
+      "=",
+      "value",
+      ")"
+    ],
+    "question": "Dans combien de batailles ont été perdus des navires de tonnage «225» ?",
+    "question_toks": [
+      "How",
+      "many",
+      "battles",
+      "did",
+      "not",
+      "lose",
+      "any",
+      "ship",
+      "with",
+      "tonnage",
+      "'225",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      7,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [
+              [
+                false,
+                2,
+                [
+                  0,
+                  [
+                    0,
+                    10,
+                    false
+                  ],
+                  null
+                ],
+                "\"225\"",
+                null
+              ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'Lettice' INTERSECT SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'HMS Atalanta'",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.date",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.name",
+      "=",
+      "'Lettice",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.date",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.name",
+      "=",
+      "'HMS",
+      "Atalanta",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "date",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "date",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "Indiquez le nom et la date de la bataille qui a perdu le navire nommé «Lettice» et le navire nommé «HMS Atalanta».",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      "and",
+      "date",
+      "the",
+      "battle",
+      "that",
+      "has",
+      "lost",
+      "the",
+      "ship",
+      "named",
+      "'Lettice",
+      "'",
+      "and",
+      "the",
+      "ship",
+      "named",
+      "'HMS",
+      "Atalanta",
+      "'"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Lettice\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            "\"HMS Atalanta\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT name ,  RESULT ,  bulgarian_commander FROM battle EXCEPT SELECT T1.name ,  T1.result ,  T1.bulgarian_commander FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'English Channel'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "RESULT",
+      ",",
+      "bulgarian_commander",
+      "FROM",
+      "battle",
+      "EXCEPT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.result",
+      ",",
+      "T1.bulgarian_commander",
+      "FROM",
+      "battle",
+      "AS",
+      "T1",
+      "JOIN",
+      "ship",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.lost_in_battle",
+      "WHERE",
+      "T2.location",
+      "=",
+      "'English",
+      "Channel",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "result",
+      ",",
+      "bulgarian_commander",
+      "from",
+      "battle",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "result",
+      ",",
+      "t1",
+      ".",
+      "bulgarian_commander",
+      "from",
+      "battle",
+      "as",
+      "t1",
+      "join",
+      "ship",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "lost_in_battle",
+      "where",
+      "t2",
+      ".",
+      "location",
+      "=",
+      "value"
+    ],
+    "question": "Affichez les noms, les résultats et les commandants bulgares des batailles sans navire perdu dans la «English Channel».",
+    "question_toks": [
+      "Show",
+      "names",
+      ",",
+      "results",
+      "and",
+      "bulgarian",
+      "commanders",
+      "of",
+      "the",
+      "battles",
+      "with",
+      "no",
+      "ships",
+      "lost",
+      "in",
+      "the",
+      "'English",
+      "Channel",
+      "'",
+      "."
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  6,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            "\"English Channel\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "battle_death",
+    "query": "SELECT note FROM death WHERE note LIKE '%East%'",
+    "query_toks": [
+      "SELECT",
+      "note",
+      "FROM",
+      "death",
+      "WHERE",
+      "note",
+      "LIKE",
+      "'",
+      "%",
+      "East",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "note",
+      "from",
+      "death",
+      "where",
+      "note",
+      "like",
+      "value"
+    ],
+    "question": "Quelles sont les notes des événements qui comprennet le texte de «East»",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "notes",
+      "of",
+      "the",
+      "death",
+      "events",
+      "which",
+      "has",
+      "substring",
+      "'East",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"%East%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

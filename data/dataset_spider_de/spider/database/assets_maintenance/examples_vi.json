@@ -1,0 +1,5282 @@
+[
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.asset_id ,  T1.asset_details FROM Assets AS T1 JOIN Asset_Parts AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  =  2 INTERSECT SELECT T1.asset_id ,  T1.asset_details FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  <  2",
+    "query_toks": [
+      "SELECT",
+      "T1.asset_id",
+      ",",
+      "T1.asset_details",
+      "FROM",
+      "Assets",
+      "AS",
+      "T1",
+      "JOIN",
+      "Asset_Parts",
+      "AS",
+      "T2",
+      "ON",
+      "T1.asset_id",
+      "=",
+      "T2.asset_id",
+      "GROUP",
+      "BY",
+      "T1.asset_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "2",
+      "INTERSECT",
+      "SELECT",
+      "T1.asset_id",
+      ",",
+      "T1.asset_details",
+      "FROM",
+      "Assets",
+      "AS",
+      "T1",
+      "JOIN",
+      "Fault_Log",
+      "AS",
+      "T2",
+      "ON",
+      "T1.asset_id",
+      "=",
+      "T2.asset_id",
+      "GROUP",
+      "BY",
+      "T1.asset_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "asset_id",
+      ",",
+      "t1",
+      ".",
+      "asset_details",
+      "from",
+      "assets",
+      "as",
+      "t1",
+      "join",
+      "asset_parts",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "asset_id",
+      "=",
+      "t2",
+      ".",
+      "asset_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "asset_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t1",
+      ".",
+      "asset_id",
+      ",",
+      "t1",
+      ".",
+      "asset_details",
+      "from",
+      "assets",
+      "as",
+      "t1",
+      "join",
+      "fault_log",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "asset_id",
+      "=",
+      "t2",
+      ".",
+      "asset_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "asset_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "<",
+      "value"
+    ],
+    "question": "Những tài sản nào có 2 bộ phận và có ít hơn 2 nhật kí lỗi ? Liệt kê id và chi tiết của những tài sản này .",
+    "question_toks": [
+      "Which",
+      "assets",
+      "have",
+      "2",
+      "parts",
+      "and",
+      "have",
+      "less",
+      "than",
+      "2",
+      "fault",
+      "logs",
+      "?",
+      "List",
+      "the",
+      "asset",
+      "id",
+      "and",
+      "detail",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              42,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          23,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  23,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                42,
+                false
+              ],
+              null
+            ]
+          ],
+          "table_units": [
+            [
+              "table_unit",
+              5
+            ],
+            [
+              "table_unit",
+              9
+            ]
+          ]
+        },
+        "groupBy": [
+          [
+            0,
+            23,
+            false
+          ]
+        ],
+        "having": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                3,
+                0,
+                false
+              ],
+              null
+            ],
+            2.0,
+            null
+          ]
+        ],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  23,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  26,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": []
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT count(*) ,  T1.maintenance_contract_id FROM Maintenance_Contracts AS T1 JOIN Assets AS T2 ON T1.maintenance_contract_id  =  T2.maintenance_contract_id GROUP BY T1.maintenance_contract_id",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.maintenance_contract_id",
+      "FROM",
+      "Maintenance_Contracts",
+      "AS",
+      "T1",
+      "JOIN",
+      "Assets",
+      "AS",
+      "T2",
+      "ON",
+      "T1.maintenance_contract_id",
+      "=",
+      "T2.maintenance_contract_id",
+      "GROUP",
+      "BY",
+      "T1.maintenance_contract_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "maintenance_contract_id",
+      "from",
+      "maintenance_contracts",
+      "as",
+      "t1",
+      "join",
+      "assets",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "maintenance_contract_id",
+      "=",
+      "t2",
+      ".",
+      "maintenance_contract_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "maintenance_contract_id"
+    ],
+    "question": "Mỗi hợp đồng bảo trì có bao nhiêu tài sản ? Liệt kê id hợp đồng và số lượng tài sản trong từng hợp đồng .",
+    "question_toks": [
+      "How",
+      "many",
+      "assets",
+      "does",
+      "each",
+      "maintenance",
+      "contract",
+      "contain",
+      "?",
+      "List",
+      "the",
+      "number",
+      "and",
+      "the",
+      "contract",
+      "id",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              24,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT count(*) ,  T1.company_id FROM Third_Party_Companies AS T1 JOIN Assets AS T2 ON T1.company_id  =  T2.supplier_company_id GROUP BY T1.company_id",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.company_id",
+      "FROM",
+      "Third_Party_Companies",
+      "AS",
+      "T1",
+      "JOIN",
+      "Assets",
+      "AS",
+      "T2",
+      "ON",
+      "T1.company_id",
+      "=",
+      "T2.supplier_company_id",
+      "GROUP",
+      "BY",
+      "T1.company_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "company_id",
+      "from",
+      "third_party_companies",
+      "as",
+      "t1",
+      "join",
+      "assets",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "company_id",
+      "=",
+      "t2",
+      ".",
+      "supplier_company_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "company_id"
+    ],
+    "question": "Đếm số lượng tài sản được cung cấp bởi từng công ty bên thứ ba . Hiển thị đồng thời id của những công ty này .",
+    "question_toks": [
+      "How",
+      "many",
+      "assets",
+      "does",
+      "each",
+      "third",
+      "party",
+      "company",
+      "supply",
+      "?",
+      "List",
+      "the",
+      "count",
+      "and",
+      "the",
+      "company",
+      "id",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              25,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.company_id ,  T1.company_name FROM Third_Party_Companies AS T1 JOIN Maintenance_Engineers AS T2 ON T1.company_id  =  T2.company_id GROUP BY T1.company_id HAVING count(*)  >=  2 UNION SELECT T3.company_id ,  T3.company_name FROM Third_Party_Companies AS T3 JOIN Maintenance_Contracts AS T4 ON T3.company_id  =  T4.maintenance_contract_company_id GROUP BY T3.company_id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.company_id",
+      ",",
+      "T1.company_name",
+      "FROM",
+      "Third_Party_Companies",
+      "AS",
+      "T1",
+      "JOIN",
+      "Maintenance_Engineers",
+      "AS",
+      "T2",
+      "ON",
+      "T1.company_id",
+      "=",
+      "T2.company_id",
+      "GROUP",
+      "BY",
+      "T1.company_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2",
+      "UNION",
+      "SELECT",
+      "T3.company_id",
+      ",",
+      "T3.company_name",
+      "FROM",
+      "Third_Party_Companies",
+      "AS",
+      "T3",
+      "JOIN",
+      "Maintenance_Contracts",
+      "AS",
+      "T4",
+      "ON",
+      "T3.company_id",
+      "=",
+      "T4.maintenance_contract_company_id",
+      "GROUP",
+      "BY",
+      "T3.company_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "company_id",
+      ",",
+      "t1",
+      ".",
+      "company_name",
+      "from",
+      "third_party_companies",
+      "as",
+      "t1",
+      "join",
+      "maintenance_engineers",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "company_id",
+      "=",
+      "t2",
+      ".",
+      "company_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "company_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value",
+      "union",
+      "select",
+      "t3",
+      ".",
+      "company_id",
+      ",",
+      "t3",
+      ".",
+      "company_name",
+      "from",
+      "third_party_companies",
+      "as",
+      "t3",
+      "join",
+      "maintenance_contracts",
+      "as",
+      "t4",
+      "on",
+      "t3",
+      ".",
+      "company_id",
+      "=",
+      "t4",
+      ".",
+      "maintenance_contract_company_id",
+      "group",
+      "by",
+      "t3",
+      ".",
+      "company_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Công ty bên thứ ba nào có ít nhất 2 kỹ sư bảo trì hoặc có ít nhất 2 hợp đồng bảo trì ? Liệt kê tên và id của những công ty này .",
+    "question_toks": [
+      "Which",
+      "third",
+      "party",
+      "companies",
+      "have",
+      "at",
+      "least",
+      "2",
+      "maintenance",
+      "engineers",
+      "or",
+      "have",
+      "at",
+      "least",
+      "2",
+      "maintenance",
+      "contracts",
+      "?",
+      "List",
+      "the",
+      "company",
+      "id",
+      "and",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              35,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            7
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": {
+        "except": null,
+        "from": {
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [
+          [
+            0,
+            1,
+            false
+          ]
+        ],
+        "having": [
+          [
+            false,
+            5,
+            [
+              0,
+              [
+                3,
+                0,
+                false
+              ],
+              null
+            ],
+            2.0,
+            null
+          ]
+        ],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  3,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": []
+      },
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.staff_name ,  T1.staff_id FROM Staff AS T1 JOIN Fault_Log AS T2 ON T1.staff_id  =  T2.recorded_by_staff_id EXCEPT SELECT T3.staff_name ,  T3.staff_id FROM Staff AS T3 JOIN Engineer_Visits AS T4 ON T3.staff_id  =  T4.contact_staff_id",
+    "query_toks": [
+      "SELECT",
+      "T1.staff_name",
+      ",",
+      "T1.staff_id",
+      "FROM",
+      "Staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "Fault_Log",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.recorded_by_staff_id",
+      "EXCEPT",
+      "SELECT",
+      "T3.staff_name",
+      ",",
+      "T3.staff_id",
+      "FROM",
+      "Staff",
+      "AS",
+      "T3",
+      "JOIN",
+      "Engineer_Visits",
+      "AS",
+      "T4",
+      "ON",
+      "T3.staff_id",
+      "=",
+      "T4.contact_staff_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "staff_name",
+      ",",
+      "t1",
+      ".",
+      "staff_id",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "fault_log",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "recorded_by_staff_id",
+      "except",
+      "select",
+      "t3",
+      ".",
+      "staff_name",
+      ",",
+      "t3",
+      ".",
+      "staff_id",
+      "from",
+      "staff",
+      "as",
+      "t3",
+      "join",
+      "engineer_visits",
+      "as",
+      "t4",
+      "on",
+      "t3",
+      ".",
+      "staff_id",
+      "=",
+      "t4",
+      ".",
+      "contact_staff_id"
+    ],
+    "question": "Cho biết tên và id của những nhân viên đã ghi lại nhật ký lỗi nhưng chưa liên hệ với bất kỳ kỹ sư nào .",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "name",
+      "and",
+      "id",
+      "of",
+      "the",
+      "staff",
+      "who",
+      "recorded",
+      "the",
+      "fault",
+      "log",
+      "but",
+      "has",
+      "not",
+      "contacted",
+      "any",
+      "visiting",
+      "engineers",
+      "?"
+    ],
+    "sql": {
+      "except": {
+        "except": null,
+        "from": {
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  19,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                48,
+                false
+              ],
+              null
+            ]
+          ],
+          "table_units": [
+            [
+              "table_unit",
+              4
+            ],
+            [
+              "table_unit",
+              10
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  20,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  19,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": []
+      },
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              43,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            9
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.engineer_id ,  T1.first_name ,  T1.last_name FROM Maintenance_Engineers AS T1 JOIN Engineer_Visits AS T2 GROUP BY T1.engineer_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.engineer_id",
+      ",",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      "FROM",
+      "Maintenance_Engineers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Engineer_Visits",
+      "AS",
+      "T2",
+      "GROUP",
+      "BY",
+      "T1.engineer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "engineer_id",
+      ",",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "maintenance_engineers",
+      "as",
+      "t1",
+      "join",
+      "engineer_visits",
+      "as",
+      "t2",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "engineer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Kỹ sư nào đã đến nhiều lần nhất ? Hiển thị id , tên và họ của kỹ sư này .",
+    "question_toks": [
+      "Which",
+      "engineer",
+      "has",
+      "visited",
+      "the",
+      "most",
+      "times",
+      "?",
+      "Show",
+      "the",
+      "engineer",
+      "id",
+      ",",
+      "first",
+      "name",
+      "and",
+      "last",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            10
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          34,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                36,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                37,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.part_name ,  T1.part_id FROM Parts AS T1 JOIN Part_Faults AS T2 ON T1.part_id  =  T2.part_id GROUP BY T1.part_id HAVING count(*)  >  2",
+    "query_toks": [
+      "SELECT",
+      "T1.part_name",
+      ",",
+      "T1.part_id",
+      "FROM",
+      "Parts",
+      "AS",
+      "T1",
+      "JOIN",
+      "Part_Faults",
+      "AS",
+      "T2",
+      "ON",
+      "T1.part_id",
+      "=",
+      "T2.part_id",
+      "GROUP",
+      "BY",
+      "T1.part_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "part_name",
+      ",",
+      "t1",
+      ".",
+      "part_id",
+      "from",
+      "parts",
+      "as",
+      "t1",
+      "join",
+      "part_faults",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "part_id",
+      "=",
+      "t2",
+      ".",
+      "part_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "part_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Cho biết những bộ phận nào bị nhiều hơn 2 lỗi . Hiển thị tên và id của những bộ phận này .",
+    "question_toks": [
+      "Which",
+      "parts",
+      "have",
+      "more",
+      "than",
+      "2",
+      "faults",
+      "?",
+      "Show",
+      "the",
+      "part",
+      "name",
+      "and",
+      "id",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              56,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            11
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.first_name ,  T1.last_name ,  T1.other_details ,  T3.skill_description FROM Maintenance_Engineers AS T1 JOIN Engineer_Skills AS T2 ON T1.engineer_id  =  T2.engineer_id JOIN Skills AS T3 ON T2.skill_id  =  T3.skill_id",
+    "query_toks": [
+      "SELECT",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      ",",
+      "T1.other_details",
+      ",",
+      "T3.skill_description",
+      "FROM",
+      "Maintenance_Engineers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Engineer_Skills",
+      "AS",
+      "T2",
+      "ON",
+      "T1.engineer_id",
+      "=",
+      "T2.engineer_id",
+      "JOIN",
+      "Skills",
+      "AS",
+      "T3",
+      "ON",
+      "T2.skill_id",
+      "=",
+      "T3.skill_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      ",",
+      "t1",
+      ".",
+      "other_details",
+      ",",
+      "t3",
+      ".",
+      "skill_description",
+      "from",
+      "maintenance_engineers",
+      "as",
+      "t1",
+      "join",
+      "engineer_skills",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "engineer_id",
+      "=",
+      "t2",
+      ".",
+      "engineer_id",
+      "join",
+      "skills",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "skill_id",
+      "=",
+      "t3",
+      ".",
+      "skill_id"
+    ],
+    "question": "Liệt kê tên , họ , chi tiết và mô tả về kỹ năng của tất cả các kỹ sư .",
+    "question_toks": [
+      "List",
+      "all",
+      "every",
+      "engineer",
+      "'s",
+      "first",
+      "name",
+      ",",
+      "last",
+      "name",
+      ",",
+      "details",
+      "and",
+      "coresponding",
+      "skill",
+      "description",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              39,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                40,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            8
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                36,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                37,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                38,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.fault_short_name ,  T3.skill_description FROM Part_Faults AS T1 JOIN Skills_Required_To_Fix AS T2 ON T1.part_fault_id  =  T2.part_fault_id JOIN Skills AS T3 ON T2.skill_id  =  T3.skill_id",
+    "query_toks": [
+      "SELECT",
+      "T1.fault_short_name",
+      ",",
+      "T3.skill_description",
+      "FROM",
+      "Part_Faults",
+      "AS",
+      "T1",
+      "JOIN",
+      "Skills_Required_To_Fix",
+      "AS",
+      "T2",
+      "ON",
+      "T1.part_fault_id",
+      "=",
+      "T2.part_fault_id",
+      "JOIN",
+      "Skills",
+      "AS",
+      "T3",
+      "ON",
+      "T2.skill_id",
+      "=",
+      "T3.skill_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fault_short_name",
+      ",",
+      "t3",
+      ".",
+      "skill_description",
+      "from",
+      "part_faults",
+      "as",
+      "t1",
+      "join",
+      "skills_required_to_fix",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "part_fault_id",
+      "=",
+      "t2",
+      ".",
+      "part_fault_id",
+      "join",
+      "skills",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "skill_id",
+      "=",
+      "t3",
+      ".",
+      "skill_id"
+    ],
+    "question": "Đối với tất cả các lỗi liên quan đến các bộ phận khác nhau , cho biết mô tả về những kỹ năng cần thiết của các kỹ sư để khắc phục chúng . Liệt kê tên của các lỗi và mô tả về kỹ năng tương ứng .",
+    "question_toks": [
+      "For",
+      "all",
+      "the",
+      "faults",
+      "of",
+      "different",
+      "parts",
+      ",",
+      "what",
+      "are",
+      "all",
+      "the",
+      "decriptions",
+      "of",
+      "the",
+      "skills",
+      "required",
+      "to",
+      "fix",
+      "them",
+      "?",
+      "List",
+      "the",
+      "name",
+      "of",
+      "the",
+      "faults",
+      "and",
+      "the",
+      "skill",
+      "description",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                55,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              63,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                64,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            11
+          ],
+          [
+            "table_unit",
+            13
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                57,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.part_name ,  count(*) FROM Parts AS T1 JOIN Asset_Parts AS T2 ON T1.part_id  =  T2.part_id GROUP BY T1.part_name",
+    "query_toks": [
+      "SELECT",
+      "T1.part_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Parts",
+      "AS",
+      "T1",
+      "JOIN",
+      "Asset_Parts",
+      "AS",
+      "T2",
+      "ON",
+      "T1.part_id",
+      "=",
+      "T2.part_id",
+      "GROUP",
+      "BY",
+      "T1.part_name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "part_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "parts",
+      "as",
+      "t1",
+      "join",
+      "asset_parts",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "part_id",
+      "=",
+      "t2",
+      ".",
+      "part_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "part_name"
+    ],
+    "question": "Mỗi bộ phận có thể được sử dụng trong bao nhiêu tài sản ? Liệt kê tên của tất cả các bộ phận và số lượng tài sản có thể sử dụng từng bộ phận .",
+    "question_toks": [
+      "How",
+      "many",
+      "assets",
+      "can",
+      "each",
+      "parts",
+      "be",
+      "used",
+      "in",
+      "?",
+      "List",
+      "the",
+      "part",
+      "name",
+      "and",
+      "the",
+      "number",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              33,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.fault_description ,  T2.fault_status FROM Fault_Log AS T1 JOIN Fault_Log_Parts AS T2 ON T1.fault_log_entry_id  =  T2.fault_log_entry_id",
+    "query_toks": [
+      "SELECT",
+      "T1.fault_description",
+      ",",
+      "T2.fault_status",
+      "FROM",
+      "Fault_Log",
+      "AS",
+      "T1",
+      "JOIN",
+      "Fault_Log_Parts",
+      "AS",
+      "T2",
+      "ON",
+      "T1.fault_log_entry_id",
+      "=",
+      "T2.fault_log_entry_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fault_description",
+      ",",
+      "t2",
+      ".",
+      "fault_status",
+      "from",
+      "fault_log",
+      "as",
+      "t1",
+      "join",
+      "fault_log_parts",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "fault_log_entry_id",
+      "=",
+      "t2",
+      ".",
+      "fault_log_entry_id"
+    ],
+    "question": "Cho biết mô tả lỗi và tình trạng lỗi của tất cả các lỗi được ghi lại trong nhật ký .",
+    "question_toks": [
+      "What",
+      "are",
+      "all",
+      "the",
+      "fault",
+      "descriptions",
+      "and",
+      "the",
+      "fault",
+      "status",
+      "of",
+      "all",
+      "the",
+      "faults",
+      "recoreded",
+      "in",
+      "the",
+      "logs",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              60,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            9
+          ],
+          [
+            "table_unit",
+            12
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                45,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                62,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT count(*) ,  T1.fault_log_entry_id FROM Fault_Log AS T1 JOIN Engineer_Visits AS T2 ON T1.fault_log_entry_id  =  T2.fault_log_entry_id GROUP BY T1.fault_log_entry_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "T1.fault_log_entry_id",
+      "FROM",
+      "Fault_Log",
+      "AS",
+      "T1",
+      "JOIN",
+      "Engineer_Visits",
+      "AS",
+      "T2",
+      "ON",
+      "T1.fault_log_entry_id",
+      "=",
+      "T2.fault_log_entry_id",
+      "GROUP",
+      "BY",
+      "T1.fault_log_entry_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      ",",
+      "t1",
+      ".",
+      "fault_log_entry_id",
+      "from",
+      "fault_log",
+      "as",
+      "t1",
+      "join",
+      "engineer_visits",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "fault_log_entry_id",
+      "=",
+      "t2",
+      ".",
+      "fault_log_entry_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "fault_log_entry_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Nhật ký lỗi nào đòi hỏi nhiều lượt ghé thăm từ các kỹ sư nhất ? Liệt kê id của nhật ký lỗi này và số lượng lượt ghé thăm tương ứng .",
+    "question_toks": [
+      "How",
+      "many",
+      "engineer",
+      "visits",
+      "are",
+      "required",
+      "at",
+      "most",
+      "for",
+      "a",
+      "single",
+      "fault",
+      "log",
+      "?",
+      "List",
+      "the",
+      "number",
+      "and",
+      "the",
+      "log",
+      "entry",
+      "id",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              50,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            9
+          ],
+          [
+            "table_unit",
+            10
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          41,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT DISTINCT last_name FROM Maintenance_Engineers",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "last_name",
+      "FROM",
+      "Maintenance_Engineers"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "last_name",
+      "from",
+      "maintenance_engineers"
+    ],
+    "question": "Cho biết danh sách không trùng lặp bao gồm họ của tất cả các kỹ sư .",
+    "question_toks": [
+      "What",
+      "are",
+      "all",
+      "the",
+      "distinct",
+      "last",
+      "names",
+      "of",
+      "all",
+      "the",
+      "engineers",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                37,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT DISTINCT fault_status FROM Fault_Log_Parts",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "fault_status",
+      "FROM",
+      "Fault_Log_Parts"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "fault_status",
+      "from",
+      "fault_log_parts"
+    ],
+    "question": "Cho biết các tình trạng lỗi khác nhau đã được ghi lại .",
+    "question_toks": [
+      "How",
+      "many",
+      "fault",
+      "status",
+      "codes",
+      "are",
+      "recorded",
+      "in",
+      "the",
+      "fault",
+      "log",
+      "parts",
+      "table",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            12
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                62,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT first_name ,  last_name FROM Maintenance_Engineers WHERE engineer_id NOT IN (SELECT engineer_id FROM Engineer_Visits)",
+    "query_toks": [
+      "SELECT",
+      "first_name",
+      ",",
+      "last_name",
+      "FROM",
+      "Maintenance_Engineers",
+      "WHERE",
+      "engineer_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "engineer_id",
+      "FROM",
+      "Engineer_Visits",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "first_name",
+      ",",
+      "last_name",
+      "from",
+      "maintenance_engineers",
+      "where",
+      "engineer_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "engineer_id",
+      "from",
+      "engineer_visits",
+      ")"
+    ],
+    "question": "Những kỹ sư nào chưa bao giờ ghé thăm để bảo trì tài sản ? Cho biết tên và họ của những kỹ sư này .",
+    "question_toks": [
+      "Which",
+      "engineers",
+      "have",
+      "never",
+      "visited",
+      "to",
+      "maintain",
+      "the",
+      "assets",
+      "?",
+      "List",
+      "the",
+      "engineer",
+      "first",
+      "name",
+      "and",
+      "last",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                36,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                37,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              34,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  10
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      49,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT asset_id ,  asset_details ,  asset_make ,  asset_model FROM Assets",
+    "query_toks": [
+      "SELECT",
+      "asset_id",
+      ",",
+      "asset_details",
+      ",",
+      "asset_make",
+      ",",
+      "asset_model",
+      "FROM",
+      "Assets"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "asset_id",
+      ",",
+      "asset_details",
+      ",",
+      "asset_make",
+      ",",
+      "asset_model",
+      "from",
+      "assets"
+    ],
+    "question": "Liệt kê id tài sản , chi tiết , thương hiệu và mẫu mã của từng tài sản .",
+    "question_toks": [
+      "List",
+      "the",
+      "asset",
+      "id",
+      ",",
+      "details",
+      ",",
+      "make",
+      "and",
+      "model",
+      "for",
+      "every",
+      "asset",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                23,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT asset_acquired_date FROM Assets ORDER BY asset_acquired_date ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "asset_acquired_date",
+      "FROM",
+      "Assets",
+      "ORDER",
+      "BY",
+      "asset_acquired_date",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "asset_acquired_date",
+      "from",
+      "assets",
+      "order",
+      "by",
+      "asset_acquired_date",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Tài sản đầu tiên được mua vào thời điểm nào ?",
+    "question_toks": [
+      "When",
+      "was",
+      "the",
+      "first",
+      "asset",
+      "acquired",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              29,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                29,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.part_id ,  T1.part_name FROM Parts AS T1 JOIN Part_Faults AS T2 ON T1.part_id  =  T2.part_id JOIN Skills_Required_To_Fix AS T3 ON T2.part_fault_id  =  T3.part_fault_id GROUP BY T1.part_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.part_id",
+      ",",
+      "T1.part_name",
+      "FROM",
+      "Parts",
+      "AS",
+      "T1",
+      "JOIN",
+      "Part_Faults",
+      "AS",
+      "T2",
+      "ON",
+      "T1.part_id",
+      "=",
+      "T2.part_id",
+      "JOIN",
+      "Skills_Required_To_Fix",
+      "AS",
+      "T3",
+      "ON",
+      "T2.part_fault_id",
+      "=",
+      "T3.part_fault_id",
+      "GROUP",
+      "BY",
+      "T1.part_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "part_id",
+      ",",
+      "t1",
+      ".",
+      "part_name",
+      "from",
+      "parts",
+      "as",
+      "t1",
+      "join",
+      "part_faults",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "part_id",
+      "=",
+      "t2",
+      ".",
+      "part_id",
+      "join",
+      "skills_required_to_fix",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "part_fault_id",
+      "=",
+      "t3",
+      ".",
+      "part_fault_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "part_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Lỗi bộ phận nào đòi hỏi số lượng kỹ năng nhiều nhất để khắc phục ? Liệt kê id và tên của bộ phận gặp phải loại lỗi này .",
+    "question_toks": [
+      "Which",
+      "part",
+      "fault",
+      "requires",
+      "the",
+      "most",
+      "number",
+      "of",
+      "skills",
+      "to",
+      "fix",
+      "?",
+      "List",
+      "part",
+      "id",
+      "and",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              56,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                55,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              63,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            11
+          ],
+          [
+            "table_unit",
+            13
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          11,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.part_name FROM Parts AS T1 JOIN Part_Faults AS T2 ON T1.part_id  =  T2.part_id GROUP BY T1.part_name ORDER BY count(*) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.part_name",
+      "FROM",
+      "Parts",
+      "AS",
+      "T1",
+      "JOIN",
+      "Part_Faults",
+      "AS",
+      "T2",
+      "ON",
+      "T1.part_id",
+      "=",
+      "T2.part_id",
+      "GROUP",
+      "BY",
+      "T1.part_name",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "part_name",
+      "from",
+      "parts",
+      "as",
+      "t1",
+      "join",
+      "part_faults",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "part_id",
+      "=",
+      "t2",
+      ".",
+      "part_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "part_name",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết tên của bộ phận gặp phải ít lỗi nhất .",
+    "question_toks": [
+      "Which",
+      "kind",
+      "of",
+      "part",
+      "has",
+      "the",
+      "least",
+      "number",
+      "of",
+      "faults",
+      "?",
+      "List",
+      "the",
+      "part",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              56,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            11
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          12,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.engineer_id ,  T1.first_name ,  T1.last_name FROM Maintenance_Engineers AS T1 JOIN Engineer_Visits AS T2 ON T1.engineer_id  =  T2.engineer_id GROUP BY T1.engineer_id ORDER BY count(*) ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.engineer_id",
+      ",",
+      "T1.first_name",
+      ",",
+      "T1.last_name",
+      "FROM",
+      "Maintenance_Engineers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Engineer_Visits",
+      "AS",
+      "T2",
+      "ON",
+      "T1.engineer_id",
+      "=",
+      "T2.engineer_id",
+      "GROUP",
+      "BY",
+      "T1.engineer_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "engineer_id",
+      ",",
+      "t1",
+      ".",
+      "first_name",
+      ",",
+      "t1",
+      ".",
+      "last_name",
+      "from",
+      "maintenance_engineers",
+      "as",
+      "t1",
+      "join",
+      "engineer_visits",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "engineer_id",
+      "=",
+      "t2",
+      ".",
+      "engineer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "engineer_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Trong số những kỹ sư đã ghé thăm , kỹ sư nào có số lượt ghé thăm ít nhất ? Liệt kê id , tên và họ của kỹ sư này .",
+    "question_toks": [
+      "Among",
+      "those",
+      "engineers",
+      "who",
+      "have",
+      "visited",
+      ",",
+      "which",
+      "engineer",
+      "makes",
+      "the",
+      "least",
+      "number",
+      "of",
+      "visits",
+      "?",
+      "List",
+      "the",
+      "engineer",
+      "id",
+      ",",
+      "first",
+      "name",
+      "and",
+      "last",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              49,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            10
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          34,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                36,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                37,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.staff_name ,  T3.first_name ,  T3.last_name FROM Staff AS T1 JOIN Engineer_Visits AS T2 ON T1.staff_id  =  T2.contact_staff_id JOIN Maintenance_Engineers AS T3 ON T2.engineer_id  =  T3.engineer_id",
+    "query_toks": [
+      "SELECT",
+      "T1.staff_name",
+      ",",
+      "T3.first_name",
+      ",",
+      "T3.last_name",
+      "FROM",
+      "Staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "Engineer_Visits",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.contact_staff_id",
+      "JOIN",
+      "Maintenance_Engineers",
+      "AS",
+      "T3",
+      "ON",
+      "T2.engineer_id",
+      "=",
+      "T3.engineer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "staff_name",
+      ",",
+      "t3",
+      ".",
+      "first_name",
+      ",",
+      "t3",
+      ".",
+      "last_name",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "engineer_visits",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "contact_staff_id",
+      "join",
+      "maintenance_engineers",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "engineer_id",
+      "=",
+      "t3",
+      ".",
+      "engineer_id"
+    ],
+    "question": "Những nhân viên đã liên lạc với những kỹ sư nào ? Liệt kê tên của tất cả các nhân viên cũng như là tên và họ của những kỹ sư mà họ đã liên lạc .",
+    "question_toks": [
+      "Which",
+      "staff",
+      "have",
+      "contacted",
+      "which",
+      "engineers",
+      "?",
+      "List",
+      "the",
+      "staff",
+      "name",
+      "and",
+      "the",
+      "engineer",
+      "first",
+      "name",
+      "and",
+      "last",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              48,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                49,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              34,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            10
+          ],
+          [
+            "table_unit",
+            7
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                36,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                37,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.fault_log_entry_id ,  T1.fault_description ,  T1.fault_log_entry_datetime FROM Fault_Log AS T1 JOIN Fault_Log_Parts AS T2 ON T1.fault_log_entry_id  =  T2.fault_log_entry_id GROUP BY T1.fault_log_entry_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.fault_log_entry_id",
+      ",",
+      "T1.fault_description",
+      ",",
+      "T1.fault_log_entry_datetime",
+      "FROM",
+      "Fault_Log",
+      "AS",
+      "T1",
+      "JOIN",
+      "Fault_Log_Parts",
+      "AS",
+      "T2",
+      "ON",
+      "T1.fault_log_entry_id",
+      "=",
+      "T2.fault_log_entry_id",
+      "GROUP",
+      "BY",
+      "T1.fault_log_entry_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "fault_log_entry_id",
+      ",",
+      "t1",
+      ".",
+      "fault_description",
+      ",",
+      "t1",
+      ".",
+      "fault_log_entry_datetime",
+      "from",
+      "fault_log",
+      "as",
+      "t1",
+      "join",
+      "fault_log_parts",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "fault_log_entry_id",
+      "=",
+      "t2",
+      ".",
+      "fault_log_entry_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "fault_log_entry_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Nhật ký lỗi nào bao gồm nhiều bộ phận bị lỗi nhất ? Liệt kê id , mô tả và thời gian ghi lại của nhật ký lỗi này .",
+    "question_toks": [
+      "Which",
+      "fault",
+      "log",
+      "included",
+      "the",
+      "most",
+      "number",
+      "of",
+      "faulty",
+      "parts",
+      "?",
+      "List",
+      "the",
+      "fault",
+      "log",
+      "id",
+      ",",
+      "description",
+      "and",
+      "record",
+      "time",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              60,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            9
+          ],
+          [
+            "table_unit",
+            12
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          41,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                41,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                45,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                44,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.skill_id ,  T1.skill_description FROM Skills AS T1 JOIN Skills_Required_To_Fix AS T2 ON T1.skill_id  =  T2.skill_id GROUP BY T1.skill_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.skill_id",
+      ",",
+      "T1.skill_description",
+      "FROM",
+      "Skills",
+      "AS",
+      "T1",
+      "JOIN",
+      "Skills_Required_To_Fix",
+      "AS",
+      "T2",
+      "ON",
+      "T1.skill_id",
+      "=",
+      "T2.skill_id",
+      "GROUP",
+      "BY",
+      "T1.skill_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "skill_id",
+      ",",
+      "t1",
+      ".",
+      "skill_description",
+      "from",
+      "skills",
+      "as",
+      "t1",
+      "join",
+      "skills_required_to_fix",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "skill_id",
+      "=",
+      "t2",
+      ".",
+      "skill_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "skill_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Kỹ năng nào được sử dụng để sửa nhiều loại lỗi nhất ? Liệt kê id và mô tả của kỹ năng này .",
+    "question_toks": [
+      "Which",
+      "skill",
+      "is",
+      "used",
+      "in",
+      "fixing",
+      "the",
+      "most",
+      "number",
+      "of",
+      "faults",
+      "?",
+      "List",
+      "the",
+      "skill",
+      "id",
+      "and",
+      "description",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              64,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            13
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          16,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT DISTINCT asset_model FROM Assets",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "asset_model",
+      "FROM",
+      "Assets"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "asset_model",
+      "from",
+      "assets"
+    ],
+    "question": "Cho biết những mẫu mã khác nhau của tất cả các tài sản .",
+    "question_toks": [
+      "What",
+      "are",
+      "all",
+      "the",
+      "distinct",
+      "asset",
+      "models",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT asset_make ,  asset_model ,  asset_details FROM Assets ORDER BY asset_disposed_date ASC",
+    "query_toks": [
+      "SELECT",
+      "asset_make",
+      ",",
+      "asset_model",
+      ",",
+      "asset_details",
+      "FROM",
+      "Assets",
+      "ORDER",
+      "BY",
+      "asset_disposed_date",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "asset_make",
+      ",",
+      "asset_model",
+      ",",
+      "asset_details",
+      "from",
+      "assets",
+      "order",
+      "by",
+      "asset_disposed_date",
+      "asc"
+    ],
+    "question": "Liệt kê thương hiệu , mẫu mã và chi tiết của tất cả các tài sản theo thứ tự ngày thanh lý tăng dần .",
+    "question_toks": [
+      "List",
+      "the",
+      "all",
+      "the",
+      "assets",
+      "make",
+      ",",
+      "model",
+      ",",
+      "details",
+      "by",
+      "the",
+      "disposed",
+      "date",
+      "ascendingly",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              30,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT part_id ,  chargeable_amount FROM Parts ORDER BY chargeable_amount ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "part_id",
+      ",",
+      "chargeable_amount",
+      "FROM",
+      "Parts",
+      "ORDER",
+      "BY",
+      "chargeable_amount",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "part_id",
+      ",",
+      "chargeable_amount",
+      "from",
+      "parts",
+      "order",
+      "by",
+      "chargeable_amount",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Bộ phận nào có số tiền phải trả ít nhất ? Liệt kê id của bộ phận này và số tiền tương ứng phải trả .",
+    "question_toks": [
+      "Which",
+      "part",
+      "has",
+      "the",
+      "least",
+      "chargeable",
+      "amount",
+      "?",
+      "List",
+      "the",
+      "part",
+      "id",
+      "and",
+      "amount",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.company_name FROM Third_Party_Companies AS T1 JOIN Maintenance_Contracts AS T2 ON T1.company_id  =  T2.maintenance_contract_company_id ORDER BY T2.contract_start_date ASC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.company_name",
+      "FROM",
+      "Third_Party_Companies",
+      "AS",
+      "T1",
+      "JOIN",
+      "Maintenance_Contracts",
+      "AS",
+      "T2",
+      "ON",
+      "T1.company_id",
+      "=",
+      "T2.maintenance_contract_company_id",
+      "ORDER",
+      "BY",
+      "T2.contract_start_date",
+      "ASC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "company_name",
+      "from",
+      "third_party_companies",
+      "as",
+      "t1",
+      "join",
+      "maintenance_contracts",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "company_id",
+      "=",
+      "t2",
+      ".",
+      "maintenance_contract_company_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "contract_start_date",
+      "asc",
+      "limit",
+      "value"
+    ],
+    "question": "Công ty nào đã bắt đầu các hợp đồng bảo trì sớm nhất ? Cho biết tên của công ty này .",
+    "question_toks": [
+      "Which",
+      "company",
+      "started",
+      "the",
+      "earliest",
+      "the",
+      "maintenance",
+      "contract",
+      "?",
+      "Show",
+      "the",
+      "company",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.company_name FROM Third_Party_Companies AS T1 JOIN Maintenance_Contracts AS T2 ON T1.company_id  =  T2.maintenance_contract_company_id JOIN Ref_Company_Types AS T3 ON T1.company_type_code  =  T3.company_type_code ORDER BY T2.contract_end_date DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.company_name",
+      "FROM",
+      "Third_Party_Companies",
+      "AS",
+      "T1",
+      "JOIN",
+      "Maintenance_Contracts",
+      "AS",
+      "T2",
+      "ON",
+      "T1.company_id",
+      "=",
+      "T2.maintenance_contract_company_id",
+      "JOIN",
+      "Ref_Company_Types",
+      "AS",
+      "T3",
+      "ON",
+      "T1.company_type_code",
+      "=",
+      "T3.company_type_code",
+      "ORDER",
+      "BY",
+      "T2.contract_end_date",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "company_name",
+      "from",
+      "third_party_companies",
+      "as",
+      "t1",
+      "join",
+      "maintenance_contracts",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "company_id",
+      "=",
+      "t2",
+      ".",
+      "maintenance_contract_company_id",
+      "join",
+      "ref_company_types",
+      "as",
+      "t3",
+      "on",
+      "t1",
+      ".",
+      "company_type_code",
+      "=",
+      "t3",
+      ".",
+      "company_type_code",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "contract_end_date",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Công ty nào đã kết thúc các hợp đồng bảo trì muộn nhất ? Cho biết tên của công ty này .",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "description",
+      "of",
+      "the",
+      "type",
+      "of",
+      "the",
+      "company",
+      "who",
+      "concluded",
+      "its",
+      "contracts",
+      "most",
+      "recently",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT gender FROM staff GROUP BY gender ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "gender",
+      "FROM",
+      "staff",
+      "GROUP",
+      "BY",
+      "gender",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "gender",
+      "from",
+      "staff",
+      "group",
+      "by",
+      "gender",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết giới tính có nhiều nhân viên nhất .",
+    "question_toks": [
+      "Which",
+      "gender",
+      "makes",
+      "up",
+      "the",
+      "majority",
+      "of",
+      "the",
+      "staff",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          21,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                21,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT T1.staff_name ,  count(*) FROM Staff AS T1 JOIN Engineer_Visits AS T2 ON T1.staff_id  =  T2.contact_staff_id GROUP BY T1.staff_name",
+    "query_toks": [
+      "SELECT",
+      "T1.staff_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Staff",
+      "AS",
+      "T1",
+      "JOIN",
+      "Engineer_Visits",
+      "AS",
+      "T2",
+      "ON",
+      "T1.staff_id",
+      "=",
+      "T2.contact_staff_id",
+      "GROUP",
+      "BY",
+      "T1.staff_name"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "staff_name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "staff",
+      "as",
+      "t1",
+      "join",
+      "engineer_visits",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "staff_id",
+      "=",
+      "t2",
+      ".",
+      "contact_staff_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "staff_name"
+    ],
+    "question": "Mỗi nhân viên đã liên lạc với bao nhiêu kỹ sư ? Cho biết tên của những nhân viên này và số lượng kỹ sư mà họ đã liên lạc .",
+    "question_toks": [
+      "How",
+      "many",
+      "engineers",
+      "did",
+      "each",
+      "staff",
+      "contact",
+      "?",
+      "List",
+      "both",
+      "the",
+      "contact",
+      "staff",
+      "name",
+      "and",
+      "number",
+      "of",
+      "engineers",
+      "contacted",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              48,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            10
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          20,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                20,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "assets_maintenance",
+    "query": "SELECT asset_model FROM Assets WHERE asset_id NOT IN (SELECT asset_id FROM Fault_Log)",
+    "query_toks": [
+      "SELECT",
+      "asset_model",
+      "FROM",
+      "Assets",
+      "WHERE",
+      "asset_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "asset_id",
+      "FROM",
+      "Fault_Log",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "asset_model",
+      "from",
+      "assets",
+      "where",
+      "asset_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "asset_id",
+      "from",
+      "fault_log",
+      ")"
+    ],
+    "question": "Cho biết mẫu mã của những tài sản không phát sinh bất cứ lỗi nào .",
+    "question_toks": [
+      "Which",
+      "assets",
+      "did",
+      "not",
+      "incur",
+      "any",
+      "fault",
+      "log",
+      "?",
+      "List",
+      "the",
+      "asset",
+      "model",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              23,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  9
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      42,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,2326 @@
+[
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT count(*) FROM camera_lens WHERE focal_length_mm  >  15",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "camera_lens",
+      "WHERE",
+      "focal_length_mm",
+      ">",
+      "15"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "camera_lens",
+      "where",
+      "focal_length_mm",
+      ">",
+      "value"
+    ],
+    "question": "¿Cuántas lentes de cámara tienen una distancia focal superior a 15 mm?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          15.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT brand ,  name FROM camera_lens ORDER BY max_aperture DESC",
+    "query_toks": [
+      "SELECT",
+      "brand",
+      ",",
+      "name",
+      "FROM",
+      "camera_lens",
+      "ORDER",
+      "BY",
+      "max_aperture",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "brand",
+      ",",
+      "name",
+      "from",
+      "camera_lens",
+      "order",
+      "by",
+      "max_aperture",
+      "desc"
+    ],
+    "question": "Busque la marca y el nombre de cada lente de la cámara y ordene en orden descendente de apertura máxima.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT id ,  color ,  name FROM photos",
+    "query_toks": [
+      "SELECT",
+      "id",
+      ",",
+      "color",
+      ",",
+      "name",
+      "FROM",
+      "photos"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "id",
+      ",",
+      "color",
+      ",",
+      "name",
+      "from",
+      "photos"
+    ],
+    "question": "Enumere la identificación, el plan de color y el nombre de todas las fotos.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT max(height) ,  avg(height) FROM mountain",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "height",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "height",
+      ")",
+      "FROM",
+      "mountain"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "height",
+      ")",
+      ",",
+      "avg",
+      "(",
+      "height",
+      ")",
+      "from",
+      "mountain"
+    ],
+    "question": "¿Cuáles son la altura máxima y media de las montañas?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT avg(prominence) FROM mountain WHERE country  =  'Morocco'",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "prominence",
+      ")",
+      "FROM",
+      "mountain",
+      "WHERE",
+      "country",
+      "=",
+      "'Morocco",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "prominence",
+      ")",
+      "from",
+      "mountain",
+      "where",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "¿Cuál es la prominencia media de las montañas en el país ''Marruecos''?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Morocco\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT name ,  height ,  prominence FROM mountain WHERE range != 'Aberdare Range'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "height",
+      ",",
+      "prominence",
+      "FROM",
+      "mountain",
+      "WHERE",
+      "range",
+      "!",
+      "=",
+      "'Aberdare",
+      "Range",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "height",
+      ",",
+      "prominence",
+      "from",
+      "mountain",
+      "where",
+      "range",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "¿Cuáles son el nombre, la altura y la prominencia de las montañas que no pertenecen a la cordillera ''Aberdare Range''?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Aberdare Range\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT T1.id ,  T1.name FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id WHERE T1.height  >  4000",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "mountain",
+      "AS",
+      "T1",
+      "JOIN",
+      "photos",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.mountain_id",
+      "WHERE",
+      "T1.height",
+      ">",
+      "4000"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "mountain",
+      "as",
+      "t1",
+      "join",
+      "photos",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "mountain_id",
+      "where",
+      "t1",
+      ".",
+      "height",
+      ">",
+      "value"
+    ],
+    "question": "¿Cuál es la identificación y el nombre de las fotos de las montañas?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          4000.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT T1.id ,  T1.name FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id GROUP BY T1.id HAVING count(*)  >=  2",
+    "query_toks": [
+      "SELECT",
+      "T1.id",
+      ",",
+      "T1.name",
+      "FROM",
+      "mountain",
+      "AS",
+      "T1",
+      "JOIN",
+      "photos",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.mountain_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "2"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "mountain",
+      "as",
+      "t1",
+      "join",
+      "photos",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "mountain_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "¿Cuál es la identificación y el nombre de las montañas que tienen al menos 2 fotos?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          2.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT T2.name FROM photos AS T1 JOIN camera_lens AS T2 ON T1.camera_lens_id  =  T2.id GROUP BY T2.id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.name",
+      "FROM",
+      "photos",
+      "AS",
+      "T1",
+      "JOIN",
+      "camera_lens",
+      "AS",
+      "T2",
+      "ON",
+      "T1.camera_lens_id",
+      "=",
+      "T2.id",
+      "GROUP",
+      "BY",
+      "T2.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      "from",
+      "photos",
+      "as",
+      "t1",
+      "join",
+      "camera_lens",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "camera_lens_id",
+      "=",
+      "t2",
+      ".",
+      "id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "¿Cuáles son los nombres de las cámaras que han fotografiado la mayoría de las montañas?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT T1.name FROM camera_lens AS T1 JOIN photos AS T2 ON T2.camera_lens_id  =  T1.id WHERE T1.brand  =  'Sigma' OR T1.brand  =  'Olympus'",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      "FROM",
+      "camera_lens",
+      "AS",
+      "T1",
+      "JOIN",
+      "photos",
+      "AS",
+      "T2",
+      "ON",
+      "T2.camera_lens_id",
+      "=",
+      "T1.id",
+      "WHERE",
+      "T1.brand",
+      "=",
+      "'Sigma",
+      "'",
+      "OR",
+      "T1.brand",
+      "=",
+      "'Olympus",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      "from",
+      "camera_lens",
+      "as",
+      "t1",
+      "join",
+      "photos",
+      "as",
+      "t2",
+      "on",
+      "t2",
+      ".",
+      "camera_lens_id",
+      "=",
+      "t1",
+      ".",
+      "id",
+      "where",
+      "t1",
+      ".",
+      "brand",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "brand",
+      "=",
+      "value"
+    ],
+    "question": "¿Cuáles son los nombres de las fotos tomadas con la marca de lentes ''Sigma'' o ''Olympus''?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Sigma\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"Olympus\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT count(DISTINCT brand) FROM camera_lens",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "brand",
+      ")",
+      "FROM",
+      "camera_lens"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "brand",
+      ")",
+      "from",
+      "camera_lens"
+    ],
+    "question": "¿Cuántos tipos diferentes de marcas de lentes existen?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                8,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT count(*) FROM camera_lens WHERE id NOT IN ( SELECT camera_lens_id FROM photos )",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "camera_lens",
+      "WHERE",
+      "id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "camera_lens_id",
+      "FROM",
+      "photos",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "camera_lens",
+      "where",
+      "id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "camera_lens_id",
+      "from",
+      "photos",
+      ")"
+    ],
+    "question": "¿Cuántas lentes de cámara no se utilizan para tomar fotografías?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT count(DISTINCT T2.camera_lens_id) FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id WHERE T1.country  =  'Ethiopia'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "T2.camera_lens_id",
+      ")",
+      "FROM",
+      "mountain",
+      "AS",
+      "T1",
+      "JOIN",
+      "photos",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.mountain_id",
+      "WHERE",
+      "T1.country",
+      "=",
+      "'Ethiopia",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "t2",
+      ".",
+      "camera_lens_id",
+      ")",
+      "from",
+      "mountain",
+      "as",
+      "t1",
+      "join",
+      "photos",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "mountain_id",
+      "where",
+      "t1",
+      ".",
+      "country",
+      "=",
+      "value"
+    ],
+    "question": "¿Cuántos tipos distintos de lentes de cámara se utilizan para tomar fotografías de montañas en el país ''Etiopía''?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                13,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              6,
+              false
+            ],
+            null
+          ],
+          "\"Ethiopia\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT T3.brand FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id JOIN camera_lens AS T3 ON T2.camera_lens_id  =  T3.id WHERE T1.range  =  'Toubkal Atlas' INTERSECT SELECT T3.brand FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id JOIN camera_lens AS T3 ON T2.camera_lens_id  =  T3.id WHERE T1.range  =  'Lasta Massif'",
+    "query_toks": [
+      "SELECT",
+      "T3.brand",
+      "FROM",
+      "mountain",
+      "AS",
+      "T1",
+      "JOIN",
+      "photos",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.mountain_id",
+      "JOIN",
+      "camera_lens",
+      "AS",
+      "T3",
+      "ON",
+      "T2.camera_lens_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T1.range",
+      "=",
+      "'Toubkal",
+      "Atlas",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T3.brand",
+      "FROM",
+      "mountain",
+      "AS",
+      "T1",
+      "JOIN",
+      "photos",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.mountain_id",
+      "JOIN",
+      "camera_lens",
+      "AS",
+      "T3",
+      "ON",
+      "T2.camera_lens_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T1.range",
+      "=",
+      "'Lasta",
+      "Massif",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "brand",
+      "from",
+      "mountain",
+      "as",
+      "t1",
+      "join",
+      "photos",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "mountain_id",
+      "join",
+      "camera_lens",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "camera_lens_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t1",
+      ".",
+      "range",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t3",
+      ".",
+      "brand",
+      "from",
+      "mountain",
+      "as",
+      "t1",
+      "join",
+      "photos",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "mountain_id",
+      "join",
+      "camera_lens",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "camera_lens_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t1",
+      ".",
+      "range",
+      "=",
+      "value"
+    ],
+    "question": "Enumere las marcas de lentes que tomaron tanto una imagen de montañas con rango ''Toubkal Atlas'' como una imagen de montañas con rango ''Lasta Massif''.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Toubkal Atlas\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  8,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ],
+            "\"Lasta Massif\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT name ,  prominence FROM mountain EXCEPT SELECT T1.name ,  T1.prominence FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id JOIN camera_lens AS T3 ON T2.camera_lens_id  =  T3.id WHERE T3.brand  =  'Sigma'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "prominence",
+      "FROM",
+      "mountain",
+      "EXCEPT",
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.prominence",
+      "FROM",
+      "mountain",
+      "AS",
+      "T1",
+      "JOIN",
+      "photos",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.mountain_id",
+      "JOIN",
+      "camera_lens",
+      "AS",
+      "T3",
+      "ON",
+      "T2.camera_lens_id",
+      "=",
+      "T3.id",
+      "WHERE",
+      "T3.brand",
+      "=",
+      "'Sigma",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "prominence",
+      "from",
+      "mountain",
+      "except",
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "prominence",
+      "from",
+      "mountain",
+      "as",
+      "t1",
+      "join",
+      "photos",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "mountain_id",
+      "join",
+      "camera_lens",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "camera_lens_id",
+      "=",
+      "t3",
+      ".",
+      "id",
+      "where",
+      "t3",
+      ".",
+      "brand",
+      "=",
+      "value"
+    ],
+    "question": "Muestre el nombre y protagonismo de las montañas cuya fotografía no es tomada por una lente de la marca ''Sigma''.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ],
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  2,
+                  false
+                ],
+                null
+              ]
+            ],
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  4,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ],
+            "\"Sigma\"",
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT name FROM camera_lens WHERE name LIKE \"%Digital%\"",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "camera_lens",
+      "WHERE",
+      "name",
+      "LIKE",
+      "``",
+      "%",
+      "Digital",
+      "%",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "camera_lens",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question": "Enumere los nombres de las lentes de la cámara que contiene \"Digital\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"%Digital%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "mountain_photos",
+    "query": "SELECT T1.name ,  count(*) FROM camera_lens AS T1 JOIN photos AS T2 ON T1.id  =  T2.camera_lens_id GROUP BY T1.id ORDER BY count(*)",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "camera_lens",
+      "AS",
+      "T1",
+      "JOIN",
+      "photos",
+      "AS",
+      "T2",
+      "ON",
+      "T1.id",
+      "=",
+      "T2.camera_lens_id",
+      "GROUP",
+      "BY",
+      "T1.id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "camera_lens",
+      "as",
+      "t1",
+      "join",
+      "photos",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "id",
+      "=",
+      "t2",
+      ".",
+      "camera_lens_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")"
+    ],
+    "question": "¿Cuál es el nombre de cada lente de la cámara y la cantidad de fotos que toma? Ordene el resultado por la cantidad de fotos.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

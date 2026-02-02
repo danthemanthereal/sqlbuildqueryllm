@@ -1,0 +1,2178 @@
+[
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.cmi_details FROM Customer_Master_Index AS T1 JOIN CMI_Cross_References AS T2 ON T1.master_customer_id  =  T2.master_customer_id WHERE T2.source_system_code  =  'Tax'",
+    "query_toks": [
+      "SELECT",
+      "T1.cmi_details",
+      "FROM",
+      "Customer_Master_Index",
+      "AS",
+      "T1",
+      "JOIN",
+      "CMI_Cross_References",
+      "AS",
+      "T2",
+      "ON",
+      "T1.master_customer_id",
+      "=",
+      "T2.master_customer_id",
+      "WHERE",
+      "T2.source_system_code",
+      "=",
+      "'Tax",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "cmi_details",
+      "from",
+      "customer_master_index",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "master_customer_id",
+      "=",
+      "t2",
+      ".",
+      "master_customer_id",
+      "where",
+      "t2",
+      ".",
+      "source_system_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "what are the details of the cmi masters that have the cross reference code 'Tax'?",
+    "question": "交叉参考码的“Tax”的cmi的详细信息是什么？",
+    "question_cspider": "交叉参考码的“税收”的cmi的详细信息是什么？",
+    "Harold": "BLEU = 50.67, 71.4/55.6/46.2/36.0 (BP=1.000, ratio=1.217, hyp_len=28, ref_len=23)",
+    "question_toks": [
+      "带",
+      "有",
+      "交",
+      "叉",
+      "参",
+      "考",
+      "代",
+      "码",
+      "“",
+      " ",
+      "T",
+      "a",
+      "x",
+      "”",
+      "的",
+      "c",
+      "m",
+      "i",
+      "母",
+      "版",
+      "的",
+      "详",
+      "细",
+      "信",
+      "息",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Tax\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.cmi_cross_ref_id ,  T1.source_system_code FROM CMI_Cross_References AS T1 JOIN Council_Tax AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id GROUP BY T1.cmi_cross_ref_id HAVING count(*)  >=  1",
+    "query_toks": [
+      "SELECT",
+      "T1.cmi_cross_ref_id",
+      ",",
+      "T1.source_system_code",
+      "FROM",
+      "CMI_Cross_References",
+      "AS",
+      "T1",
+      "JOIN",
+      "Council_Tax",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "GROUP",
+      "BY",
+      "T1.cmi_cross_ref_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      ",",
+      "t1",
+      ".",
+      "source_system_code",
+      "from",
+      "cmi_cross_references",
+      "as",
+      "t1",
+      "join",
+      "council_tax",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question_spider": "What is the cmi cross reference id that is related to at least one council tax entry? List the cross reference id and source system code.",
+    "question": "与至少一个理事会税务条目相关的cmi交叉参考ID是什么？列出交叉引用ID和源系统代码。",
+    "question_cspider": "与至少一个理事会税务条目相关的cmi交叉参考ID是什么？列出交叉引用ID和源系统代码。",
+    "Harold": "BLEU = 76.07, 90.2/82.5/76.9/71.1 (BP=0.952, ratio=0.953, hyp_len=41, ref_len=43)",
+    "question_toks": [
+      "与",
+      "至",
+      "少",
+      "一",
+      "个",
+      "市",
+      "政",
+      "税",
+      "条",
+      "目",
+      "相",
+      "关",
+      "的",
+      "c",
+      "m",
+      "i",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "I",
+      "D",
+      "是",
+      "什",
+      "么",
+      "？",
+      "列",
+      "出",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "I",
+      "D",
+      "和",
+      "源",
+      "系",
+      "统",
+      "代",
+      "码",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T2.cmi_cross_ref_id ,  T2.master_customer_id ,  count(*) FROM Business_Rates AS T1 JOIN CMI_Cross_References AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id GROUP BY T2.cmi_cross_ref_id",
+    "query_toks": [
+      "SELECT",
+      "T2.cmi_cross_ref_id",
+      ",",
+      "T2.master_customer_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Business_Rates",
+      "AS",
+      "T1",
+      "JOIN",
+      "CMI_Cross_References",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "GROUP",
+      "BY",
+      "T2.cmi_cross_ref_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      ",",
+      "t2",
+      ".",
+      "master_customer_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "business_rates",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "cmi_cross_ref_id"
+    ],
+    "question_spider": "How many business rates are related to each cmi cross reference? List cross reference id, master customer id and the n",
+    "question": "与每个CMI交叉引用相关的业务费率有多少？列出交叉引用ID、主客户ID和数量。",
+    "question_cspider": "与每个CMI交叉引用相关的业务费率有多少？列出交叉引用ID、主客户ID和数量。",
+    "Harold": "BLEU = 58.82, 88.2/75.8/62.5/51.6 (BP=0.863, ratio=0.872, hyp_len=34, ref_len=39)",
+    "question_toks": [
+      "每",
+      "个",
+      "c",
+      "m",
+      "i",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "涉",
+      "及",
+      "多",
+      "少",
+      "业",
+      "务",
+      "费",
+      "率",
+      "？",
+      "列",
+      "出",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "I",
+      "D",
+      "，",
+      "主",
+      "客",
+      "户",
+      "I",
+      "D",
+      "和",
+      "n"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.source_system_code ,  T2.council_tax_id FROM CMI_Cross_References AS T1 JOIN Benefits_Overpayments AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id ORDER BY T2.council_tax_id",
+    "query_toks": [
+      "SELECT",
+      "T1.source_system_code",
+      ",",
+      "T2.council_tax_id",
+      "FROM",
+      "CMI_Cross_References",
+      "AS",
+      "T1",
+      "JOIN",
+      "Benefits_Overpayments",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "ORDER",
+      "BY",
+      "T2.council_tax_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "source_system_code",
+      ",",
+      "t2",
+      ".",
+      "council_tax_id",
+      "from",
+      "cmi_cross_references",
+      "as",
+      "t1",
+      "join",
+      "benefits_overpayments",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "order",
+      "by",
+      "t2",
+      ".",
+      "council_tax_id"
+    ],
+    "question_spider": "What is the tax source system code related to the benefits and overpayments? List the code and the benifit id, order by benifit id.",
+    "question": "什么是与利润和超额支付有关的税源系统代码？按利润ID排序列出代码和利润ID，。",
+    "question_cspider": "什么是与利润和超额支付有关的税源系统代码？按利润ID排序列出代码和利润ID，。",
+    "Harold": "BLEU = 43.01, 80.5/50.0/35.9/23.7 (BP=1.000, ratio=1.051, hyp_len=41, ref_len=39)",
+    "question_toks": [
+      "与",
+      "福",
+      "利",
+      "和",
+      "超",
+      "额",
+      "付",
+      "款",
+      "有",
+      "关",
+      "的",
+      "税",
+      "源",
+      "系",
+      "统",
+      "代",
+      "码",
+      "是",
+      "什",
+      "么",
+      "？",
+      "列",
+      "出",
+      "代",
+      "码",
+      "和",
+      "受",
+      "益",
+      "人",
+      "I",
+      "D",
+      "，",
+      "按",
+      "受",
+      "益",
+      "人",
+      "I",
+      "D",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            4
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.source_system_code ,  T1.master_customer_id ,  T2.council_tax_id FROM CMI_Cross_References AS T1 JOIN Parking_Fines AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id",
+    "query_toks": [
+      "SELECT",
+      "T1.source_system_code",
+      ",",
+      "T1.master_customer_id",
+      ",",
+      "T2.council_tax_id",
+      "FROM",
+      "CMI_Cross_References",
+      "AS",
+      "T1",
+      "JOIN",
+      "Parking_Fines",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "source_system_code",
+      ",",
+      "t1",
+      ".",
+      "master_customer_id",
+      ",",
+      "t2",
+      ".",
+      "council_tax_id",
+      "from",
+      "cmi_cross_references",
+      "as",
+      "t1",
+      "join",
+      "parking_fines",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id"
+    ],
+    "question_spider": "Wat is the tax source system code and master customer id of the taxes related to each parking fine id?",
+    "question": "与每个停车罚款ID相关税的税源系统代码和主客户ID是什么？",
+    "question_cspider": "与每个停车罚款ID相关税的税源系统代码和主客户ID是什么？",
+    "Harold": "BLEU = 74.80, 86.7/75.9/71.4/66.7 (BP=1.000, ratio=1.034, hyp_len=30, ref_len=29)",
+    "question_toks": [
+      "W",
+      "a",
+      "t",
+      "是",
+      "与",
+      "每",
+      "个",
+      "停",
+      "车",
+      "罚",
+      "款",
+      "I",
+      "D",
+      "相",
+      "关",
+      "的",
+      "税",
+      "源",
+      "系",
+      "统",
+      "代",
+      "码",
+      "和",
+      "主",
+      "客",
+      "户",
+      "I",
+      "D",
+      "吗",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                4,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.council_tax_id FROM Rent_Arrears AS T1 JOIN CMI_Cross_References AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id JOIN Customer_Master_Index AS T3 ON T3.master_customer_id  =  T2.master_customer_id WHERE T3.cmi_details != 'Schmidt ,  Kertzmann and Lubowitz'",
+    "query_toks": [
+      "SELECT",
+      "T1.council_tax_id",
+      "FROM",
+      "Rent_Arrears",
+      "AS",
+      "T1",
+      "JOIN",
+      "CMI_Cross_References",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "JOIN",
+      "Customer_Master_Index",
+      "AS",
+      "T3",
+      "ON",
+      "T3.master_customer_id",
+      "=",
+      "T2.master_customer_id",
+      "WHERE",
+      "T3.cmi_details",
+      "!",
+      "=",
+      "'Schmidt",
+      ",",
+      "Kertzmann",
+      "and",
+      "Lubowitz",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "council_tax_id",
+      "from",
+      "rent_arrears",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "join",
+      "customer_master_index",
+      "as",
+      "t3",
+      "on",
+      "t3",
+      ".",
+      "master_customer_id",
+      "=",
+      "t2",
+      ".",
+      "master_customer_id",
+      "where",
+      "t3",
+      ".",
+      "cmi_details",
+      "!",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the renting arrears tax ids related to the customer master index whose detail is not 'Schmidt, Kertzmann and Lubowitz'?",
+    "question": "客户主指数的详细信息不是与“Schmidt, Kertzmann and Lubowitz”相关的租金拖欠税id是什么？",
+    "question_cspider": "客户主指数的详细信息不是与“高端”相关的租金拖欠税id是什么？",
+    "Harold": "BLEU = 26.91, 43.9/30.4/23.6/16.7 (BP=1.000, ratio=1.839, hyp_len=57, ref_len=31)",
+    "question_toks": [
+      "与",
+      "客",
+      "户",
+      "主",
+      "索",
+      "引",
+      "（",
+      "其",
+      "详",
+      "细",
+      "信",
+      "息",
+      "不",
+      "是",
+      "“",
+      " ",
+      "S",
+      "c",
+      "h",
+      "m",
+      "i",
+      "d",
+      "t",
+      "，",
+      "K",
+      "e",
+      "r",
+      "t",
+      "z",
+      "m",
+      "a",
+      "n",
+      "n",
+      "和",
+      "L",
+      "u",
+      "b",
+      "o",
+      "w",
+      "i",
+      "t",
+      "z",
+      "”",
+      "）",
+      "相",
+      "关",
+      "的",
+      "租",
+      "金",
+      "欠",
+      "款",
+      "税",
+      "I",
+      "D",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Schmidt ,  Kertzmann and Lubowitz\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT T1.electoral_register_id FROM Electoral_Register AS T1 JOIN CMI_Cross_References AS T2 ON T1.cmi_cross_ref_id  =  T2.cmi_cross_ref_id WHERE T2.source_system_code  =  'Electoral' OR T2.source_system_code  =  'Tax'",
+    "query_toks": [
+      "SELECT",
+      "T1.electoral_register_id",
+      "FROM",
+      "Electoral_Register",
+      "AS",
+      "T1",
+      "JOIN",
+      "CMI_Cross_References",
+      "AS",
+      "T2",
+      "ON",
+      "T1.cmi_cross_ref_id",
+      "=",
+      "T2.cmi_cross_ref_id",
+      "WHERE",
+      "T2.source_system_code",
+      "=",
+      "'Electoral",
+      "'",
+      "OR",
+      "T2.source_system_code",
+      "=",
+      "'Tax",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "electoral_register_id",
+      "from",
+      "electoral_register",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "cmi_cross_ref_id",
+      "=",
+      "t2",
+      ".",
+      "cmi_cross_ref_id",
+      "where",
+      "t2",
+      ".",
+      "source_system_code",
+      "=",
+      "value",
+      "or",
+      "t2",
+      ".",
+      "source_system_code",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the register ids of electoral registries that have the cross reference source system code 'Electoral' or 'Tax'?",
+    "question": "有交叉参考源代码“Electoral”或“Tax”的选举登记处的登记ID是什么？",
+    "question_cspider": "有交叉参考源代码“选举”或“税收”的选举登记处的登记ID是什么？",
+    "Harold": "BLEU = 50.91, 65.8/54.1/47.2/40.0 (BP=1.000, ratio=1.188, hyp_len=38, ref_len=32)",
+    "question_toks": [
+      "具",
+      "有",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "源",
+      "系",
+      "统",
+      "代",
+      "码",
+      "“",
+      "选",
+      "举",
+      "”",
+      "或",
+      "“",
+      "税",
+      "收",
+      "”",
+      "的",
+      "选",
+      "举",
+      "注",
+      "册",
+      "管",
+      "理",
+      "机",
+      "构",
+      "的",
+      "注",
+      "册",
+      "I",
+      "D",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Electoral\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"Tax\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT count(DISTINCT source_system_code) FROM CMI_cross_references",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "source_system_code",
+      ")",
+      "FROM",
+      "CMI_cross_references"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "source_system_code",
+      ")",
+      "from",
+      "cmi_cross_references"
+    ],
+    "question_spider": "How many different source system code for the cmi cross references are there?",
+    "question": "CMI交叉引用有多少种不同的源代码？",
+    "question_cspider": "CMI交叉引用有多少种不同的源代码？",
+    "Harold": "BLEU = 65.15, 85.0/73.7/61.1/47.1 (BP=1.000, ratio=1.111, hyp_len=20, ref_len=18)",
+    "question_toks": [
+      "c",
+      "m",
+      "i",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "有",
+      "多",
+      "少",
+      "个",
+      "不",
+      "同",
+      "的",
+      "源",
+      "系",
+      "统",
+      "代",
+      "码",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                5,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT * FROM customer_master_index ORDER BY cmi_details DESC",
+    "query_toks": [
+      "SELECT",
+      "*",
+      "FROM",
+      "customer_master_index",
+      "ORDER",
+      "BY",
+      "cmi_details",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "*",
+      "from",
+      "customer_master_index",
+      "order",
+      "by",
+      "cmi_details",
+      "desc"
+    ],
+    "question_spider": "List all information about customer master index, and sort them by details in descending order.",
+    "question": "按详细信息按降序排序列出有关客户主索引的所有信息。",
+    "question_cspider": "按详细信息按降序排序列出有关客户主索引的所有信息。",
+    "Harold": "BLEU = 68.14, 83.3/72.4/64.3/55.6 (BP=1.000, ratio=1.200, hyp_len=30, ref_len=25)",
+    "question_toks": [
+      "列",
+      "出",
+      "有",
+      "关",
+      "客",
+      "户",
+      "主",
+      "索",
+      "引",
+      "的",
+      "所",
+      "有",
+      "信",
+      "息",
+      "，",
+      "并",
+      "按",
+      "详",
+      "细",
+      "信",
+      "息",
+      "将",
+      "它",
+      "们",
+      "按",
+      "降",
+      "序",
+      "排",
+      "序",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT council_tax_id ,  cmi_cross_ref_id FROM parking_fines",
+    "query_toks": [
+      "SELECT",
+      "council_tax_id",
+      ",",
+      "cmi_cross_ref_id",
+      "FROM",
+      "parking_fines"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "council_tax_id",
+      ",",
+      "cmi_cross_ref_id",
+      "from",
+      "parking_fines"
+    ],
+    "question_spider": "List the council tax ids and their related cmi cross references of all the parking fines.",
+    "question": "列出所有停车罚款的市政税ID和相关的cmi。",
+    "question_cspider": "列出所有停车罚款的市政税ID和相关的cmi。",
+    "Harold": "BLEU = 66.96, 77.8/69.2/64.0/58.3 (BP=1.000, ratio=1.227, hyp_len=27, ref_len=22)",
+    "question_toks": [
+      "列",
+      "出",
+      "所",
+      "有",
+      "停",
+      "车",
+      "罚",
+      "款",
+      "的",
+      "市",
+      "政",
+      "税",
+      "I",
+      "D",
+      "及",
+      "其",
+      "相",
+      "关",
+      "的",
+      "C",
+      "M",
+      "I",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "。"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            5
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT count(*) FROM rent_arrears",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "rent_arrears"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "rent_arrears"
+    ],
+    "question_spider": "How many council taxes are collected for renting arrears ?",
+    "question": "征收拖欠的市政税有多少？",
+    "question_cspider": "征收拖欠的市政税有多少？",
+    "Harold": "BLEU = 0.00, 61.5/25.0/9.1/0.0 (BP=1.000, ratio=1.083, hyp_len=13, ref_len=12)",
+    "question_toks": [
+      "出",
+      "租",
+      "欠",
+      "款",
+      "会",
+      "收",
+      "取",
+      "多",
+      "少",
+      "市",
+      "政",
+      "税",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT DISTINCT T2.source_system_code FROM customer_master_index AS T1 JOIN cmi_cross_references AS T2 ON T1.master_customer_id  =  T2.master_customer_id WHERE T1.cmi_details  =  'Gottlieb ,  Becker and Wyman'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.source_system_code",
+      "FROM",
+      "customer_master_index",
+      "AS",
+      "T1",
+      "JOIN",
+      "cmi_cross_references",
+      "AS",
+      "T2",
+      "ON",
+      "T1.master_customer_id",
+      "=",
+      "T2.master_customer_id",
+      "WHERE",
+      "T1.cmi_details",
+      "=",
+      "'Gottlieb",
+      ",",
+      "Becker",
+      "and",
+      "Wyman",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "source_system_code",
+      "from",
+      "customer_master_index",
+      "as",
+      "t1",
+      "join",
+      "cmi_cross_references",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "master_customer_id",
+      "=",
+      "t2",
+      ".",
+      "master_customer_id",
+      "where",
+      "t1",
+      ".",
+      "cmi_details",
+      "=",
+      "value"
+    ],
+    "question_spider": "What are the distinct cross reference source system codes which are related to the master customer details 'Gottlieb, Becker and Wyman'?",
+    "question": "与主客户详细信息“Gottlieb, Becker and Wyman”相关的不同的交叉参考源系统代码是什么？",
+    "question_cspider": "与主客户详细信息“普通”相关的不同的交叉参考源系统代码是什么？",
+    "Harold": "BLEU = 38.06, 50.0/42.9/35.4/27.7 (BP=1.000, ratio=1.613, hyp_len=50, ref_len=31)",
+    "question_toks": [
+      "与",
+      "主",
+      "客",
+      "户",
+      "详",
+      "细",
+      "信",
+      "息",
+      "“",
+      " ",
+      "G",
+      "o",
+      "t",
+      "t",
+      "l",
+      "i",
+      "e",
+      "b",
+      "，",
+      "B",
+      "e",
+      "c",
+      "k",
+      "e",
+      "r",
+      "和",
+      "W",
+      "y",
+      "m",
+      "a",
+      "n",
+      "”",
+      "相",
+      "关",
+      "的",
+      "独",
+      "特",
+      "的",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "源",
+      "系",
+      "统",
+      "代",
+      "码",
+      "是",
+      "什",
+      "么",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Gottlieb ,  Becker and Wyman\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT cmi_cross_ref_id FROM cmi_cross_references EXCEPT SELECT cmi_cross_ref_id FROM parking_fines",
+    "query_toks": [
+      "SELECT",
+      "cmi_cross_ref_id",
+      "FROM",
+      "cmi_cross_references",
+      "EXCEPT",
+      "SELECT",
+      "cmi_cross_ref_id",
+      "FROM",
+      "parking_fines"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "cmi_cross_ref_id",
+      "from",
+      "cmi_cross_references",
+      "except",
+      "select",
+      "cmi_cross_ref_id",
+      "from",
+      "parking_fines"
+    ],
+    "question_spider": "Which cmi cross reference id is not related to any parking taxes?",
+    "question": "哪一个CMI交叉参考ID与任何停车税无关？",
+    "question_cspider": "哪一个CMI交叉参考ID与任何停车税无关？",
+    "Harold": "BLEU = 72.21, 90.0/78.9/72.2/64.7 (BP=0.951, ratio=0.952, hyp_len=20, ref_len=21)",
+    "question_toks": [
+      "哪",
+      "个",
+      "c",
+      "m",
+      "i",
+      "交",
+      "叉",
+      "引",
+      "用",
+      "I",
+      "D",
+      "与",
+      "任",
+      "何",
+      "停",
+      "车",
+      "税",
+      "无",
+      "关",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              5
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      }
+    }
+  },
+  {
+    "db_id": "local_govt_mdm",
+    "query": "SELECT DISTINCT source_system_code FROM cmi_cross_references WHERE source_system_code LIKE '%en%'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "source_system_code",
+      "FROM",
+      "cmi_cross_references",
+      "WHERE",
+      "source_system_code",
+      "LIKE",
+      "'",
+      "%",
+      "en",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "source_system_code",
+      "from",
+      "cmi_cross_references",
+      "where",
+      "source_system_code",
+      "like",
+      "value"
+    ],
+    "question_spider": "Which distinct source system code includes the substring 'en'?",
+    "question": "哪种不同的源代码包含子字符串'en'？",
+    "question_cspider": "哪种不同的源代码包含子字符串'en'？",
+    "Harold": "BLEU = 49.25, 76.2/55.0/42.1/33.3 (BP=1.000, ratio=1.105, hyp_len=21, ref_len=19)",
+    "question_toks": [
+      "哪",
+      "个",
+      "不",
+      "同",
+      "的",
+      "源",
+      "系",
+      "统",
+      "代",
+      "码",
+      "包",
+      "含",
+      "子",
+      "字",
+      "符",
+      "串",
+      "“",
+      " ",
+      "e",
+      "n",
+      "”",
+      "？"
+    ],
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              5,
+              false
+            ],
+            null
+          ],
+          "\"%en%\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

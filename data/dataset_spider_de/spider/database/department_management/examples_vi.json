@@ -1,0 +1,2257 @@
+[
+  {
+    "db_id": "department_management",
+    "query": "SELECT count(*) FROM head WHERE age  >  56",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "head",
+      "WHERE",
+      "age",
+      ">",
+      "56"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "head",
+      "where",
+      "age",
+      ">",
+      "value"
+    ],
+    "question": "Có bao nhiêu bộ trưởng có tuổi lớn hơn 56 ?",
+    "question_toks": [
+      "How",
+      "many",
+      "heads",
+      "of",
+      "the",
+      "departments",
+      "are",
+      "older",
+      "than",
+      "56",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          56.0,
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT name ,  born_state ,  age FROM head ORDER BY age",
+    "query_toks": [
+      "SELECT",
+      "name",
+      ",",
+      "born_state",
+      ",",
+      "age",
+      "FROM",
+      "head",
+      "ORDER",
+      "BY",
+      "age"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "born_state",
+      ",",
+      "age",
+      "from",
+      "head",
+      "order",
+      "by",
+      "age"
+    ],
+    "question": "Liệt kê tên , tiểu bang nơi sinh và tuổi của những người đứng đầu các bộ , và sắp xếp theo tuổi .",
+    "question_toks": [
+      "List",
+      "the",
+      "name",
+      ",",
+      "born",
+      "state",
+      "and",
+      "age",
+      "of",
+      "the",
+      "heads",
+      "of",
+      "departments",
+      "ordered",
+      "by",
+      "age",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT creation ,  name ,  budget_in_billions FROM department",
+    "query_toks": [
+      "SELECT",
+      "creation",
+      ",",
+      "name",
+      ",",
+      "budget_in_billions",
+      "FROM",
+      "department"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "creation",
+      ",",
+      "name",
+      ",",
+      "budget_in_billions",
+      "from",
+      "department"
+    ],
+    "question": "Liệt kê năm thành lập , tên và ngân sách của từng bộ .",
+    "question_toks": [
+      "List",
+      "the",
+      "creation",
+      "year",
+      ",",
+      "name",
+      "and",
+      "budget",
+      "of",
+      "each",
+      "department",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT max(budget_in_billions) ,  min(budget_in_billions) FROM department",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "budget_in_billions",
+      ")",
+      ",",
+      "min",
+      "(",
+      "budget_in_billions",
+      ")",
+      "FROM",
+      "department"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "budget_in_billions",
+      ")",
+      ",",
+      "min",
+      "(",
+      "budget_in_billions",
+      ")",
+      "from",
+      "department"
+    ],
+    "question": "Ngân sách tối đa và tối thiểu của các bộ là bao nhiêu ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "maximum",
+      "and",
+      "minimum",
+      "budget",
+      "of",
+      "the",
+      "departments",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            2,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT avg(num_employees) FROM department WHERE ranking BETWEEN 10 AND 15",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "num_employees",
+      ")",
+      "FROM",
+      "department",
+      "WHERE",
+      "ranking",
+      "BETWEEN",
+      "10",
+      "AND",
+      "15"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "num_employees",
+      ")",
+      "from",
+      "department",
+      "where",
+      "ranking",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question": "Số lượng nhân viên trung bình của các phòng ban có cấp bậc từ 10 đến 15 là bao nhiêu ?",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "average",
+      "number",
+      "of",
+      "employees",
+      "of",
+      "the",
+      "departments",
+      "whose",
+      "rank",
+      "is",
+      "between",
+      "10",
+      "and",
+      "15",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              0,
+              4,
+              false
+            ],
+            null
+          ],
+          10.0,
+          15.0
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT name FROM head WHERE born_state != 'California'",
+    "query_toks": [
+      "SELECT",
+      "name",
+      "FROM",
+      "head",
+      "WHERE",
+      "born_state",
+      "!",
+      "=",
+      "'California",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "head",
+      "where",
+      "born_state",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Tên của những người đứng đầu được sinh ra bên ngoài tiểu bang ' California ' là gì ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "names",
+      "of",
+      "the",
+      "heads",
+      "who",
+      "are",
+      "born",
+      "outside",
+      "the",
+      "California",
+      "state",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"California\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT DISTINCT T1.creation FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T3.born_state  =  'Alabama'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.creation",
+      "FROM",
+      "department",
+      "AS",
+      "T1",
+      "JOIN",
+      "management",
+      "AS",
+      "T2",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "JOIN",
+      "head",
+      "AS",
+      "T3",
+      "ON",
+      "T2.head_id",
+      "=",
+      "T3.head_id",
+      "WHERE",
+      "T3.born_state",
+      "=",
+      "'Alabama",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "creation",
+      "from",
+      "department",
+      "as",
+      "t1",
+      "join",
+      "management",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "join",
+      "head",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "head_id",
+      "=",
+      "t3",
+      ".",
+      "head_id",
+      "where",
+      "t3",
+      ".",
+      "born_state",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết những năm thành lập khác nhau của các bộ được quản lý bởi một bộ trưởng có nơi sinh ở tiểu bang ' Alabama ' ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "creation",
+      "years",
+      "of",
+      "the",
+      "departments",
+      "managed",
+      "by",
+      "a",
+      "secretary",
+      "born",
+      "in",
+      "state",
+      "'Alabama",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              9,
+              false
+            ],
+            null
+          ],
+          "\"Alabama\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT born_state FROM head GROUP BY born_state HAVING count(*)  >=  3",
+    "query_toks": [
+      "SELECT",
+      "born_state",
+      "FROM",
+      "head",
+      "GROUP",
+      "BY",
+      "born_state",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "born_state",
+      "from",
+      "head",
+      "group",
+      "by",
+      "born_state",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Tên của các tiểu bang nơi có ít nhất 3 người đứng đầu được sinh ra là gì ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "names",
+      "of",
+      "the",
+      "states",
+      "where",
+      "at",
+      "least",
+      "3",
+      "heads",
+      "were",
+      "born",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          9,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT creation FROM department GROUP BY creation ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "creation",
+      "FROM",
+      "department",
+      "GROUP",
+      "BY",
+      "creation",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "creation",
+      "from",
+      "department",
+      "group",
+      "by",
+      "creation",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Năm nào là năm hầu hết các bộ được thành lập ?",
+    "question_toks": [
+      "In",
+      "which",
+      "year",
+      "were",
+      "most",
+      "departments",
+      "established",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT T1.name ,  T1.num_employees FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id WHERE T2.temporary_acting  =  'Yes'",
+    "query_toks": [
+      "SELECT",
+      "T1.name",
+      ",",
+      "T1.num_employees",
+      "FROM",
+      "department",
+      "AS",
+      "T1",
+      "JOIN",
+      "management",
+      "AS",
+      "T2",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "WHERE",
+      "T2.temporary_acting",
+      "=",
+      "'Yes",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "num_employees",
+      "from",
+      "department",
+      "as",
+      "t1",
+      "join",
+      "management",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "where",
+      "t2",
+      ".",
+      "temporary_acting",
+      "=",
+      "value"
+    ],
+    "question": "Hiển thị tên và số lượng nhân viên trong các bộ được quản lý bởi những người lãnh đạo tạm thời ?",
+    "question_toks": [
+      "Show",
+      "the",
+      "name",
+      "and",
+      "number",
+      "of",
+      "employees",
+      "for",
+      "the",
+      "departments",
+      "managed",
+      "by",
+      "heads",
+      "whose",
+      "temporary",
+      "acting",
+      "value",
+      "is",
+      "'Yes",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Yes\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT count(DISTINCT temporary_acting) FROM management",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "temporary_acting",
+      ")",
+      "FROM",
+      "management"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "temporary_acting",
+      ")",
+      "from",
+      "management"
+    ],
+    "question": "Có bao nhiêu giá trị khác nhau được dùng cho vai trò lãnh đạo tạm thời ?",
+    "question_toks": [
+      "How",
+      "many",
+      "acting",
+      "statuses",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                13,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT count(*) FROM department WHERE department_id NOT IN (SELECT department_id FROM management);",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "department",
+      "WHERE",
+      "department_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "department_id",
+      "FROM",
+      "management",
+      ")",
+      ";"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "department",
+      "where",
+      "department_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "department_id",
+      "from",
+      "management",
+      ")"
+    ],
+    "question": "Có bao nhiêu bộ chưa có người lãnh đạo ?",
+    "question_toks": [
+      "How",
+      "many",
+      "departments",
+      "are",
+      "led",
+      "by",
+      "heads",
+      "who",
+      "are",
+      "not",
+      "mentioned",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  2
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      11,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT DISTINCT T1.age FROM management AS T2 JOIN head AS T1 ON T1.head_id  =  T2.head_id WHERE T2.temporary_acting  =  'Yes'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.age",
+      "FROM",
+      "management",
+      "AS",
+      "T2",
+      "JOIN",
+      "head",
+      "AS",
+      "T1",
+      "ON",
+      "T1.head_id",
+      "=",
+      "T2.head_id",
+      "WHERE",
+      "T2.temporary_acting",
+      "=",
+      "'Yes",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "age",
+      "from",
+      "management",
+      "as",
+      "t2",
+      "join",
+      "head",
+      "as",
+      "t1",
+      "on",
+      "t1",
+      ".",
+      "head_id",
+      "=",
+      "t2",
+      ".",
+      "head_id",
+      "where",
+      "t2",
+      ".",
+      "temporary_acting",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết độ tuổi khác nhau của những người lãnh đạo tạm thời ?",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "ages",
+      "of",
+      "the",
+      "heads",
+      "who",
+      "are",
+      "acting",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ],
+          "\"Yes\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT T3.born_state FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T1.name  =  'Treasury' INTERSECT SELECT T3.born_state FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T1.name  =  'Homeland Security'",
+    "query_toks": [
+      "SELECT",
+      "T3.born_state",
+      "FROM",
+      "department",
+      "AS",
+      "T1",
+      "JOIN",
+      "management",
+      "AS",
+      "T2",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "JOIN",
+      "head",
+      "AS",
+      "T3",
+      "ON",
+      "T2.head_id",
+      "=",
+      "T3.head_id",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Treasury",
+      "'",
+      "INTERSECT",
+      "SELECT",
+      "T3.born_state",
+      "FROM",
+      "department",
+      "AS",
+      "T1",
+      "JOIN",
+      "management",
+      "AS",
+      "T2",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "JOIN",
+      "head",
+      "AS",
+      "T3",
+      "ON",
+      "T2.head_id",
+      "=",
+      "T3.head_id",
+      "WHERE",
+      "T1.name",
+      "=",
+      "'Homeland",
+      "Security",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t3",
+      ".",
+      "born_state",
+      "from",
+      "department",
+      "as",
+      "t1",
+      "join",
+      "management",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "join",
+      "head",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "head_id",
+      "=",
+      "t3",
+      ".",
+      "head_id",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value",
+      "intersect",
+      "select",
+      "t3",
+      ".",
+      "born_state",
+      "from",
+      "department",
+      "as",
+      "t1",
+      "join",
+      "management",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "join",
+      "head",
+      "as",
+      "t3",
+      "on",
+      "t2",
+      ".",
+      "head_id",
+      "=",
+      "t3",
+      ".",
+      "head_id",
+      "where",
+      "t1",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "Liệt kê các tiểu bang là nơi mà cả bộ trưởng Bộ tài chính và bộ trưởng Bộ An ninh nội địa được sinh ra .",
+    "question_toks": [
+      "List",
+      "the",
+      "states",
+      "where",
+      "both",
+      "the",
+      "secretary",
+      "of",
+      "'Treasury",
+      "'",
+      "department",
+      "and",
+      "the",
+      "secretary",
+      "of",
+      "'Homeland",
+      "Security",
+      "'",
+      "were",
+      "born",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "and",
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              7,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": {
+        "except": null,
+        "from": {
+          "conds": [
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  1,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ],
+            "and",
+            [
+              false,
+              2,
+              [
+                0,
+                [
+                  0,
+                  12,
+                  false
+                ],
+                null
+              ],
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          "table_units": [
+            [
+              "table_unit",
+              0
+            ],
+            [
+              "table_unit",
+              2
+            ],
+            [
+              "table_unit",
+              1
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  9,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ],
+            "\"Homeland Security\"",
+            null
+          ]
+        ]
+      },
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              2,
+              false
+            ],
+            null
+          ],
+          "\"Treasury\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT T1.department_id ,  T1.name ,  count(*) FROM management AS T2 JOIN department AS T1 ON T1.department_id  =  T2.department_id GROUP BY T1.department_id HAVING count(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T1.department_id",
+      ",",
+      "T1.name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "management",
+      "AS",
+      "T2",
+      "JOIN",
+      "department",
+      "AS",
+      "T1",
+      "ON",
+      "T1.department_id",
+      "=",
+      "T2.department_id",
+      "GROUP",
+      "BY",
+      "T1.department_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "department_id",
+      ",",
+      "t1",
+      ".",
+      "name",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "management",
+      "as",
+      "t2",
+      "join",
+      "department",
+      "as",
+      "t1",
+      "on",
+      "t1",
+      ".",
+      "department_id",
+      "=",
+      "t2",
+      ".",
+      "department_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "department_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Liệt kê id , tên và số lượng những người lãnh đạo của từng bộ nơi có nhiều hơn 1 người lãnh đạo ở cùng một thời điểm .",
+    "question_toks": [
+      "Which",
+      "department",
+      "has",
+      "more",
+      "than",
+      "1",
+      "head",
+      "at",
+      "a",
+      "time",
+      "?",
+      "List",
+      "the",
+      "id",
+      ",",
+      "name",
+      "and",
+      "the",
+      "number",
+      "of",
+      "heads",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "department_management",
+    "query": "SELECT head_id ,  name FROM head WHERE name LIKE '%Ha%'",
+    "query_toks": [
+      "SELECT",
+      "head_id",
+      ",",
+      "name",
+      "FROM",
+      "head",
+      "WHERE",
+      "name",
+      "LIKE",
+      "'",
+      "%",
+      "Ha",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "head_id",
+      ",",
+      "name",
+      "from",
+      "head",
+      "where",
+      "name",
+      "like",
+      "value"
+    ],
+    "question": "Liệt kê id và tên của người lãnh đạo có chứa chuỗi ' Ha ' trong tên .",
+    "question_toks": [
+      "Which",
+      "head",
+      "'s",
+      "name",
+      "has",
+      "the",
+      "substring",
+      "'Ha",
+      "'",
+      "?",
+      "List",
+      "the",
+      "id",
+      "and",
+      "name",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                8,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ],
+          "\"%Ha%\"",
+          null
+        ]
+      ]
+    }
+  }
+]

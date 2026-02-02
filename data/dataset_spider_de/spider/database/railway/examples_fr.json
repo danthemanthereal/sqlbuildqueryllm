@@ -1,0 +1,2020 @@
+[
+  {
+    "db_id": "railway",
+    "query": "SELECT count(*) FROM railway",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "railway"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "railway"
+    ],
+    "question": "Combien de chemins de fer y a-t-il?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Builder FROM railway ORDER BY Builder ASC",
+    "query_toks": [
+      "SELECT",
+      "Builder",
+      "FROM",
+      "railway",
+      "ORDER",
+      "BY",
+      "Builder",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "builder",
+      "from",
+      "railway",
+      "order",
+      "by",
+      "builder",
+      "asc"
+    ],
+    "question": "Dressez la liste des constructeurs de chemins de fer par ordre alphabétique croissant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              3,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Wheels ,  LOCATION FROM railway",
+    "query_toks": [
+      "SELECT",
+      "Wheels",
+      ",",
+      "LOCATION",
+      "FROM",
+      "railway"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "wheels",
+      ",",
+      "location",
+      "from",
+      "railway"
+    ],
+    "question": "Dressez la liste des roues et des emplacements des chemins de fer.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                5,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT max(LEVEL) FROM manager WHERE Country != \"Australia\t\"",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "LEVEL",
+      ")",
+      "FROM",
+      "manager",
+      "WHERE",
+      "Country",
+      "!",
+      "=",
+      "``",
+      "Australia",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "level",
+      ")",
+      "from",
+      "manager",
+      "where",
+      "country",
+      "!",
+      "=",
+      "value"
+    ],
+    "question": "Quel est le niveau maximum de managers dans les pays qui ne sont pas \"Australia\"?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                19,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          7,
+          [
+            0,
+            [
+              0,
+              16,
+              false
+            ],
+            null
+          ],
+          "\"Australia\t\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT avg(Age) FROM manager",
+    "query_toks": [
+      "SELECT",
+      "avg",
+      "(",
+      "Age",
+      ")",
+      "FROM",
+      "manager"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "avg",
+      "(",
+      "age",
+      ")",
+      "from",
+      "manager"
+    ],
+    "question": "Quel est l'âge moyen de tous les managers?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            5,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Name FROM manager ORDER BY LEVEL ASC",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "manager",
+      "ORDER",
+      "BY",
+      "LEVEL",
+      "ASC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "manager",
+      "order",
+      "by",
+      "level",
+      "asc"
+    ],
+    "question": "Quels sont les noms des managers par ordre croissant de niveau?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "asc",
+        [
+          [
+            0,
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Name ,  Arrival FROM train",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      ",",
+      "Arrival",
+      "FROM",
+      "train"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      ",",
+      "arrival",
+      "from",
+      "train"
+    ],
+    "question": "Quels sont les noms et heures d'arrivée des trains?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Name FROM manager ORDER BY Age DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Name",
+      "FROM",
+      "manager",
+      "ORDER",
+      "BY",
+      "Age",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "name",
+      "from",
+      "manager",
+      "order",
+      "by",
+      "age",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Quel est le nom du plus ancien manager?",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT T2.Name ,  T1.Location FROM railway AS T1 JOIN train AS T2 ON T1.Railway_ID  =  T2.Railway_ID",
+    "query_toks": [
+      "SELECT",
+      "T2.Name",
+      ",",
+      "T1.Location",
+      "FROM",
+      "railway",
+      "AS",
+      "T1",
+      "JOIN",
+      "train",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Railway_ID",
+      "=",
+      "T2.Railway_ID"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "name",
+      ",",
+      "t1",
+      ".",
+      "location",
+      "from",
+      "railway",
+      "as",
+      "t1",
+      "join",
+      "train",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "railway_id",
+      "=",
+      "t2",
+      ".",
+      "railway_id"
+    ],
+    "question": "Affichez les noms des trains et les emplacements des chemins de fer dans lesquels ils se trouvent.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT T1.Builder FROM railway AS T1 JOIN train AS T2 ON T1.Railway_ID  =  T2.Railway_ID WHERE T2.Name  =  \"Andaman Exp\"",
+    "query_toks": [
+      "SELECT",
+      "T1.Builder",
+      "FROM",
+      "railway",
+      "AS",
+      "T1",
+      "JOIN",
+      "train",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Railway_ID",
+      "=",
+      "T2.Railway_ID",
+      "WHERE",
+      "T2.Name",
+      "=",
+      "``",
+      "Andaman",
+      "Exp",
+      "''"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "builder",
+      "from",
+      "railway",
+      "as",
+      "t1",
+      "join",
+      "train",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "railway_id",
+      "=",
+      "t2",
+      ".",
+      "railway_id",
+      "where",
+      "t2",
+      ".",
+      "name",
+      "=",
+      "value"
+    ],
+    "question": "Montrez le constructeur des chemins de fer associés aux trains nommés \"Andaman Exp\".",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"Andaman Exp\"",
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT T2.Railway_ID ,  T1.Location FROM railway AS T1 JOIN train AS T2 ON T1.Railway_ID  =  T2.Railway_ID GROUP BY T2.Railway_ID HAVING COUNT(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "T2.Railway_ID",
+      ",",
+      "T1.Location",
+      "FROM",
+      "railway",
+      "AS",
+      "T1",
+      "JOIN",
+      "train",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Railway_ID",
+      "=",
+      "T2.Railway_ID",
+      "GROUP",
+      "BY",
+      "T2.Railway_ID",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "railway_id",
+      ",",
+      "t1",
+      ".",
+      "location",
+      "from",
+      "railway",
+      "as",
+      "t1",
+      "join",
+      "train",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "railway_id",
+      "=",
+      "t2",
+      ".",
+      "railway_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "railway_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Affichez l'ID et l'emplacement des chemins de fer associés à plusieurs trains.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT T2.Railway_ID ,  T1.Builder FROM railway AS T1 JOIN train AS T2 ON T1.Railway_ID  =  T2.Railway_ID GROUP BY T2.Railway_ID ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T2.Railway_ID",
+      ",",
+      "T1.Builder",
+      "FROM",
+      "railway",
+      "AS",
+      "T1",
+      "JOIN",
+      "train",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Railway_ID",
+      "=",
+      "T2.Railway_ID",
+      "GROUP",
+      "BY",
+      "T2.Railway_ID",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "railway_id",
+      ",",
+      "t1",
+      ".",
+      "builder",
+      "from",
+      "railway",
+      "as",
+      "t1",
+      "join",
+      "train",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "railway_id",
+      "=",
+      "t2",
+      ".",
+      "railway_id",
+      "group",
+      "by",
+      "t2",
+      ".",
+      "railway_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Affichez l'identifiant et le constructeur de la voie ferrée associés au plus grand nombre de trains.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            1
+          ]
+        ],
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              13,
+              false
+            ],
+            null
+          ]
+        ]
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          13,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Builder ,  COUNT(*) FROM railway GROUP BY Builder",
+    "query_toks": [
+      "SELECT",
+      "Builder",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "railway",
+      "GROUP",
+      "BY",
+      "Builder"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "builder",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "railway",
+      "group",
+      "by",
+      "builder"
+    ],
+    "question": "Montrez différents constructeurs de chemins de fer, ainsi que le nombre correspondant de chemins de fer utilisant chaque constructeur.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Builder FROM railway GROUP BY Builder ORDER BY COUNT(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "Builder",
+      "FROM",
+      "railway",
+      "GROUP",
+      "BY",
+      "Builder",
+      "ORDER",
+      "BY",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "builder",
+      "from",
+      "railway",
+      "group",
+      "by",
+      "builder",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Montrez le constructeur de chemins de fer le plus courant.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": 1,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT LOCATION ,  COUNT(*) FROM railway GROUP BY LOCATION",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      ",",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "railway",
+      "GROUP",
+      "BY",
+      "LOCATION"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "railway",
+      "group",
+      "by",
+      "location"
+    ],
+    "question": "Affichez les différents emplacements des chemins de fer ainsi que le nombre correspondant de chemins de fer à chaque emplacement.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT LOCATION FROM railway GROUP BY LOCATION HAVING COUNT(*)  >  1",
+    "query_toks": [
+      "SELECT",
+      "LOCATION",
+      "FROM",
+      "railway",
+      "GROUP",
+      "BY",
+      "LOCATION",
+      "HAVING",
+      "COUNT",
+      "(",
+      "*",
+      ")",
+      ">",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "location",
+      "from",
+      "railway",
+      "group",
+      "by",
+      "location",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "value"
+    ],
+    "question": "Affichez les emplacements qui ont plus d'une voie ferrée.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                6,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [
+        [
+          0,
+          6,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          null
+        ]
+      ],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT ObjectNumber FROM railway WHERE Railway_ID NOT IN (SELECT Railway_ID FROM train)",
+    "query_toks": [
+      "SELECT",
+      "ObjectNumber",
+      "FROM",
+      "railway",
+      "WHERE",
+      "Railway_ID",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "Railway_ID",
+      "FROM",
+      "train",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "objectnumber",
+      "from",
+      "railway",
+      "where",
+      "railway_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "railway_id",
+      "from",
+      "train",
+      ")"
+    ],
+    "question": "Indiquez le numéro d'objet des chemins de fer qui n'ont pas de train.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "from": {
+              "table_units": [
+                [
+                  "table_unit",
+                  1
+                ]
+              ],
+              "conds": []
+            },
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      13,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+          },
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Country FROM manager WHERE Age  >  50 INTERSECT SELECT Country FROM manager WHERE Age  <  46",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      "FROM",
+      "manager",
+      "WHERE",
+      "Age",
+      ">",
+      "50",
+      "INTERSECT",
+      "SELECT",
+      "Country",
+      "FROM",
+      "manager",
+      "WHERE",
+      "Age",
+      "<",
+      "46"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "manager",
+      "where",
+      "age",
+      ">",
+      "value",
+      "intersect",
+      "select",
+      "country",
+      "from",
+      "manager",
+      "where",
+      "age",
+      "<",
+      "value"
+    ],
+    "question": "Indiquez les pays qui comptent à la fois des managers âgés de plus de 50 ans et des managers de moins de 46 ans.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          50.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": {
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              2
+            ]
+          ],
+          "conds": []
+        },
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  16,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "where": [
+          [
+            false,
+            4,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ],
+            46.0,
+            null
+          ]
+        ],
+        "groupBy": [],
+        "having": [],
+        "orderBy": [],
+        "limit": null,
+        "intersect": null,
+        "union": null,
+        "except": null
+      },
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT DISTINCT Country FROM manager",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "Country",
+      "FROM",
+      "manager"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "country",
+      "from",
+      "manager"
+    ],
+    "question": "Montrez les différents pays des managers.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Working_year_starts FROM manager ORDER BY LEVEL DESC",
+    "query_toks": [
+      "SELECT",
+      "Working_year_starts",
+      "FROM",
+      "manager",
+      "ORDER",
+      "BY",
+      "LEVEL",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "working_year_starts",
+      "from",
+      "manager",
+      "order",
+      "by",
+      "level",
+      "desc"
+    ],
+    "question": "Montrez les années de travail des managers par ordre décroissant de leur niveau.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  },
+  {
+    "db_id": "railway",
+    "query": "SELECT Country FROM manager WHERE Age  >  50 OR Age  <  46",
+    "query_toks": [
+      "SELECT",
+      "Country",
+      "FROM",
+      "manager",
+      "WHERE",
+      "Age",
+      ">",
+      "50",
+      "OR",
+      "Age",
+      "<",
+      "46"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "country",
+      "from",
+      "manager",
+      "where",
+      "age",
+      ">",
+      "value",
+      "or",
+      "age",
+      "<",
+      "value"
+    ],
+    "question": "Montrez les pays dont les cadres sont âgés de plus de 50 ans ou de moins de 46 ans.",
+    "sql": {
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ],
+        "conds": []
+      },
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "where": [
+        [
+          false,
+          3,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          50.0,
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              18,
+              false
+            ],
+            null
+          ],
+          46.0,
+          null
+        ]
+      ],
+      "groupBy": [],
+      "having": [],
+      "orderBy": [],
+      "limit": null,
+      "intersect": null,
+      "union": null,
+      "except": null
+    }
+  }
+]

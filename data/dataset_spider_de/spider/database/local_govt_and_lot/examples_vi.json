@@ -1,0 +1,2460 @@
+[
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT T1.property_id ,  count(*) FROM properties AS T1 JOIN residents AS T2 ON T1.property_id  =  T2.property_id GROUP BY T1.property_id",
+    "query_toks": [
+      "SELECT",
+      "T1.property_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "properties",
+      "AS",
+      "T1",
+      "JOIN",
+      "residents",
+      "AS",
+      "T2",
+      "ON",
+      "T1.property_id",
+      "=",
+      "T2.property_id",
+      "GROUP",
+      "BY",
+      "T1.property_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "property_id",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "properties",
+      "as",
+      "t1",
+      "join",
+      "residents",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "property_id",
+      "=",
+      "t2",
+      ".",
+      "property_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "property_id"
+    ],
+    "question": "Có bao nhiêu cư dân sống trong từng căn hộ ? Cho biết id của các căn hộ và số lượng cư dân của từng căn hộ .",
+    "question_toks": [
+      "How",
+      "many",
+      "residents",
+      "does",
+      "each",
+      "property",
+      "have",
+      "?",
+      "List",
+      "property",
+      "id",
+      "and",
+      "resident",
+      "count",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              8,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            1
+          ],
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          3,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                3,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT DISTINCT T1.service_type_code FROM services AS T1 JOIN organizations AS T2 ON T1.organization_id  =  T2.organization_id WHERE T2.organization_details  =  'Denesik and Sons Party'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T1.service_type_code",
+      "FROM",
+      "services",
+      "AS",
+      "T1",
+      "JOIN",
+      "organizations",
+      "AS",
+      "T2",
+      "ON",
+      "T1.organization_id",
+      "=",
+      "T2.organization_id",
+      "WHERE",
+      "T2.organization_details",
+      "=",
+      "'Denesik",
+      "and",
+      "Sons",
+      "Party",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t1",
+      ".",
+      "service_type_code",
+      "from",
+      "services",
+      "as",
+      "t1",
+      "join",
+      "organizations",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "organization_id",
+      "=",
+      "t2",
+      ".",
+      "organization_id",
+      "where",
+      "t2",
+      ".",
+      "organization_details",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết các loại dịch vụ khác nhau được cung cấp bởi tổ chức có chi tiết là ' Bữa tiệc của Denesik và Son ' .",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "distinct",
+      "service",
+      "types",
+      "that",
+      "are",
+      "provided",
+      "by",
+      "the",
+      "organization",
+      "which",
+      "has",
+      "detail",
+      "'Denesik",
+      "and",
+      "Sons",
+      "Party",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                16,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                17,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              14,
+              false
+            ],
+            null
+          ],
+          "\"Denesik and Sons Party\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT T1.resident_id ,  T1.other_details ,  count(*) FROM Residents AS T1 JOIN Residents_Services AS T2 ON T1.resident_id  =  T2.resident_id GROUP BY T1.resident_id ORDER BY count(*) DESC",
+    "query_toks": [
+      "SELECT",
+      "T1.resident_id",
+      ",",
+      "T1.other_details",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Residents",
+      "AS",
+      "T1",
+      "JOIN",
+      "Residents_Services",
+      "AS",
+      "T2",
+      "ON",
+      "T1.resident_id",
+      "=",
+      "T2.resident_id",
+      "GROUP",
+      "BY",
+      "T1.resident_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "resident_id",
+      ",",
+      "t1",
+      ".",
+      "other_details",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "residents",
+      "as",
+      "t1",
+      "join",
+      "residents_services",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "resident_id",
+      "=",
+      "t2",
+      ".",
+      "resident_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "resident_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc"
+    ],
+    "question": "Mỗi cư dân đã yêu cầu bao nhiêu dịch vụ ? Cho biết id , chi tiết và số lượng dịch vụ của từng cư dân theo thứ tự giảm dần về số lượng dịch vụ .",
+    "question_toks": [
+      "How",
+      "many",
+      "services",
+      "has",
+      "each",
+      "resident",
+      "requested",
+      "?",
+      "List",
+      "the",
+      "resident",
+      "id",
+      ",",
+      "details",
+      ",",
+      "and",
+      "the",
+      "count",
+      "in",
+      "descending",
+      "order",
+      "of",
+      "the",
+      "count",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              19,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          7,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                7,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT T1.service_id ,  T1.service_details ,  count(*) FROM Services AS T1 JOIN Residents_Services AS T2 ON T1.service_id  =  T2.service_id GROUP BY T1.service_id ORDER BY count(*) DESC LIMIT 1",
+    "query_toks": [
+      "SELECT",
+      "T1.service_id",
+      ",",
+      "T1.service_details",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "Services",
+      "AS",
+      "T1",
+      "JOIN",
+      "Residents_Services",
+      "AS",
+      "T2",
+      "ON",
+      "T1.service_id",
+      "=",
+      "T2.service_id",
+      "GROUP",
+      "BY",
+      "T1.service_id",
+      "ORDER",
+      "BY",
+      "count",
+      "(",
+      "*",
+      ")",
+      "DESC",
+      "LIMIT",
+      "1"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "service_id",
+      ",",
+      "t1",
+      ".",
+      "service_details",
+      ",",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "services",
+      "as",
+      "t1",
+      "join",
+      "residents_services",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "service_id",
+      "=",
+      "t2",
+      ".",
+      "service_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "service_id",
+      "order",
+      "by",
+      "count",
+      "(",
+      "*",
+      ")",
+      "desc",
+      "limit",
+      "value"
+    ],
+    "question": "Cho biết id , chi tiết và số lần được sử dụng của dịch vụ phổ biến nhất .",
+    "question_toks": [
+      "What",
+      "is",
+      "the",
+      "maximum",
+      "number",
+      "that",
+      "a",
+      "certain",
+      "service",
+      "is",
+      "provided",
+      "?",
+      "List",
+      "the",
+      "service",
+      "id",
+      ",",
+      "details",
+      "and",
+      "number",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              20,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            4
+          ],
+          [
+            "table_unit",
+            5
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          15,
+          false
+        ]
+      ],
+      "having": [],
+      "intersect": null,
+      "limit": 1,
+      "orderBy": [
+        "desc",
+        [
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ]
+        ]
+      ],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                18,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT T1.thing_id ,  T1.type_of_Thing_Code ,  T2.organization_details FROM Things AS T1 JOIN Organizations AS T2 ON T1.organization_id  =  T2.organization_id",
+    "query_toks": [
+      "SELECT",
+      "T1.thing_id",
+      ",",
+      "T1.type_of_Thing_Code",
+      ",",
+      "T2.organization_details",
+      "FROM",
+      "Things",
+      "AS",
+      "T1",
+      "JOIN",
+      "Organizations",
+      "AS",
+      "T2",
+      "ON",
+      "T1.organization_id",
+      "=",
+      "T2.organization_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "thing_id",
+      ",",
+      "t1",
+      ".",
+      "type_of_thing_code",
+      ",",
+      "t2",
+      ".",
+      "organization_details",
+      "from",
+      "things",
+      "as",
+      "t1",
+      "join",
+      "organizations",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "organization_id",
+      "=",
+      "t2",
+      ".",
+      "organization_id"
+    ],
+    "question": "Liệt kê id và loại của từng đồ dùng cũng như là chi tiết về tổ chức đang sở hữu nó .",
+    "question_toks": [
+      "List",
+      "the",
+      "id",
+      "and",
+      "type",
+      "of",
+      "each",
+      "thing",
+      ",",
+      "and",
+      "the",
+      "details",
+      "of",
+      "the",
+      "organization",
+      "that",
+      "owns",
+      "it",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                27,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              12,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                14,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT T1.customer_id ,  T1.customer_details FROM Customers AS T1 JOIN Customer_Events AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id HAVING count(*)  >=  3",
+    "query_toks": [
+      "SELECT",
+      "T1.customer_id",
+      ",",
+      "T1.customer_details",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Events",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id",
+      "GROUP",
+      "BY",
+      "T1.customer_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_id",
+      ",",
+      "t1",
+      ".",
+      "customer_details",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_events",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      ">",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết id của những khách hàng đã tham gia vào ít nhất 3 sự kiện khách hàng và chi tiết về những khách hàng này .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "id",
+      "and",
+      "details",
+      "of",
+      "the",
+      "customers",
+      "who",
+      "have",
+      "at",
+      "least",
+      "3",
+      "events",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              32,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            7
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          1,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          5,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          3.0,
+          null
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT T2.date_moved_in ,  T1.customer_id ,  T1.customer_details FROM Customers AS T1 JOIN Customer_Events AS T2 ON T1.customer_id  =  T2.customer_id",
+    "query_toks": [
+      "SELECT",
+      "T2.date_moved_in",
+      ",",
+      "T1.customer_id",
+      ",",
+      "T1.customer_details",
+      "FROM",
+      "Customers",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Events",
+      "AS",
+      "T2",
+      "ON",
+      "T1.customer_id",
+      "=",
+      "T2.customer_id"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t2",
+      ".",
+      "date_moved_in",
+      ",",
+      "t1",
+      ".",
+      "customer_id",
+      ",",
+      "t1",
+      ".",
+      "customer_details",
+      "from",
+      "customers",
+      "as",
+      "t1",
+      "join",
+      "customer_events",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_id",
+      "=",
+      "t2",
+      ".",
+      "customer_id"
+    ],
+    "question": "Cho biết id và ngày chuyển đến của từng khách hàng cũng như là chi tiết về mỗi người trong số họ .",
+    "question_toks": [
+      "What",
+      "is",
+      "each",
+      "customer",
+      "'s",
+      "move",
+      "in",
+      "date",
+      ",",
+      "and",
+      "the",
+      "corresponding",
+      "customer",
+      "id",
+      "and",
+      "details",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              32,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ],
+          [
+            "table_unit",
+            7
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                1,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                2,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT T1.Customer_Event_ID  ,  T1.property_id FROM Customer_Events AS T1 JOIN Customer_Event_Notes AS T2 ON T1.Customer_Event_ID  =  T2.Customer_Event_ID GROUP BY T1.customer_event_id HAVING count(*) BETWEEN 1 AND 3",
+    "query_toks": [
+      "SELECT",
+      "T1.Customer_Event_ID",
+      ",",
+      "T1.property_id",
+      "FROM",
+      "Customer_Events",
+      "AS",
+      "T1",
+      "JOIN",
+      "Customer_Event_Notes",
+      "AS",
+      "T2",
+      "ON",
+      "T1.Customer_Event_ID",
+      "=",
+      "T2.Customer_Event_ID",
+      "GROUP",
+      "BY",
+      "T1.customer_event_id",
+      "HAVING",
+      "count",
+      "(",
+      "*",
+      ")",
+      "BETWEEN",
+      "1",
+      "AND",
+      "3"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "t1",
+      ".",
+      "customer_event_id",
+      ",",
+      "t1",
+      ".",
+      "property_id",
+      "from",
+      "customer_events",
+      "as",
+      "t1",
+      "join",
+      "customer_event_notes",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "customer_event_id",
+      "=",
+      "t2",
+      ".",
+      "customer_event_id",
+      "group",
+      "by",
+      "t1",
+      ".",
+      "customer_event_id",
+      "having",
+      "count",
+      "(",
+      "*",
+      ")",
+      "between",
+      "value",
+      "and",
+      "value"
+    ],
+    "question": "Những sự kiện nào có số lượng ghi chú nằm trong khoảng từ 1 đến 3 ? Cho biết id của những sự kiện này và id của những căn hộ tương ứng .",
+    "question_toks": [
+      "Which",
+      "events",
+      "have",
+      "the",
+      "number",
+      "of",
+      "notes",
+      "between",
+      "one",
+      "and",
+      "three",
+      "?",
+      "List",
+      "the",
+      "event",
+      "id",
+      "and",
+      "the",
+      "property",
+      "id",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              38,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ],
+          [
+            "table_unit",
+            8
+          ]
+        ]
+      },
+      "groupBy": [
+        [
+          0,
+          31,
+          false
+        ]
+      ],
+      "having": [
+        [
+          false,
+          1,
+          [
+            0,
+            [
+              3,
+              0,
+              false
+            ],
+            null
+          ],
+          1.0,
+          3.0
+        ]
+      ],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT DISTINCT T2.thing_id ,  T2.Type_of_Thing_Code FROM Timed_Status_of_Things AS T1 JOIN Things AS T2 ON T1.thing_id  =  T2.thing_id WHERE T1.Status_of_Thing_Code  =  'Close' OR T1.Date_and_Date  <  '2017-06-19 02:59:21'",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "T2.thing_id",
+      ",",
+      "T2.Type_of_Thing_Code",
+      "FROM",
+      "Timed_Status_of_Things",
+      "AS",
+      "T1",
+      "JOIN",
+      "Things",
+      "AS",
+      "T2",
+      "ON",
+      "T1.thing_id",
+      "=",
+      "T2.thing_id",
+      "WHERE",
+      "T1.Status_of_Thing_Code",
+      "=",
+      "'Close",
+      "'",
+      "OR",
+      "T1.Date_and_Date",
+      "<",
+      "'2017-06-19",
+      "02:59:21",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "t2",
+      ".",
+      "thing_id",
+      ",",
+      "t2",
+      ".",
+      "type_of_thing_code",
+      "from",
+      "timed_status_of_things",
+      "as",
+      "t1",
+      "join",
+      "things",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "thing_id",
+      "=",
+      "t2",
+      ".",
+      "thing_id",
+      "where",
+      "t1",
+      ".",
+      "status_of_thing_code",
+      "=",
+      "value",
+      "or",
+      "t1",
+      ".",
+      "date_and_date",
+      "<",
+      "value"
+    ],
+    "question": "Cho biết id và loại của những đồ dùng có trạng thái hiện tại là ' Đóng ' hoặc có bản ghi trạng thái được lập trước ngày ' 2017-06-19 02:59:21 ' .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "id",
+      "and",
+      "type",
+      "of",
+      "the",
+      "thing",
+      "that",
+      "has",
+      "the",
+      "status",
+      "'Close",
+      "'",
+      "or",
+      "has",
+      "a",
+      "status",
+      "record",
+      "before",
+      "the",
+      "date",
+      "'2017-06-19",
+      "02:59:21",
+      "'"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                43,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              26,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            9
+          ],
+          [
+            "table_unit",
+            6
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                28,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              45,
+              false
+            ],
+            null
+          ],
+          "\"Close\"",
+          null
+        ],
+        "or",
+        [
+          false,
+          4,
+          [
+            0,
+            [
+              0,
+              44,
+              false
+            ],
+            null
+          ],
+          "\"2017-06-19 02:59:21\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT count(DISTINCT T2.Location_Code) FROM Things AS T1 JOIN Timed_Locations_of_Things AS T2 ON T1.thing_id  =  T2.thing_id WHERE T1.service_details  =  'Unsatisfied'",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "T2.Location_Code",
+      ")",
+      "FROM",
+      "Things",
+      "AS",
+      "T1",
+      "JOIN",
+      "Timed_Locations_of_Things",
+      "AS",
+      "T2",
+      "ON",
+      "T1.thing_id",
+      "=",
+      "T2.thing_id",
+      "WHERE",
+      "T1.service_details",
+      "=",
+      "'Unsatisfied",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "t2",
+      ".",
+      "location_code",
+      ")",
+      "from",
+      "things",
+      "as",
+      "t1",
+      "join",
+      "timed_locations_of_things",
+      "as",
+      "t2",
+      "on",
+      "t1",
+      ".",
+      "thing_id",
+      "=",
+      "t2",
+      ".",
+      "thing_id",
+      "where",
+      "t1",
+      ".",
+      "service_details",
+      "=",
+      "value"
+    ],
+    "question": "Cho biết số lượng các địa điểm có các đồ dùng với chi tiết đánh giá dịch vụ là ' Không hài lòng ' .",
+    "question_toks": [
+      "How",
+      "many",
+      "distinct",
+      "locations",
+      "have",
+      "the",
+      "things",
+      "with",
+      "service",
+      "detail",
+      "'Unsatisfied",
+      "'",
+      "been",
+      "located",
+      "in",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                26,
+                false
+              ],
+              null
+            ],
+            [
+              0,
+              46,
+              false
+            ],
+            null
+          ]
+        ],
+        "table_units": [
+          [
+            "table_unit",
+            6
+          ],
+          [
+            "table_unit",
+            10
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                48,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              30,
+              false
+            ],
+            null
+          ],
+          "\"Unsatisfied\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT count(DISTINCT Status_of_Thing_Code) FROM Timed_Status_of_Things",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "DISTINCT",
+      "Status_of_Thing_Code",
+      ")",
+      "FROM",
+      "Timed_Status_of_Things"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "distinct",
+      "status_of_thing_code",
+      ")",
+      "from",
+      "timed_status_of_things"
+    ],
+    "question": "Các đồ dùng có bao nhiêu mã trạng thái khác nhau ?",
+    "question_toks": [
+      "How",
+      "many",
+      "different",
+      "status",
+      "codes",
+      "of",
+      "things",
+      "are",
+      "there",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            9
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                45,
+                true
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT organization_id FROM organizations EXCEPT SELECT parent_organization_id FROM organizations",
+    "query_toks": [
+      "SELECT",
+      "organization_id",
+      "FROM",
+      "organizations",
+      "EXCEPT",
+      "SELECT",
+      "parent_organization_id",
+      "FROM",
+      "organizations"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "organization_id",
+      "from",
+      "organizations",
+      "except",
+      "select",
+      "parent_organization_id",
+      "from",
+      "organizations"
+    ],
+    "question": "Những tổ chức nào không phải là tổ chức mẹ của một số tổ chức khác ? Cho biết id của những tổ chức này .",
+    "question_toks": [
+      "Which",
+      "organizations",
+      "are",
+      "not",
+      "a",
+      "parent",
+      "organization",
+      "of",
+      "others",
+      "?",
+      "List",
+      "the",
+      "organization",
+      "id",
+      "."
+    ],
+    "sql": {
+      "except": {
+        "except": null,
+        "from": {
+          "conds": [],
+          "table_units": [
+            [
+              "table_unit",
+              3
+            ]
+          ]
+        },
+        "groupBy": [],
+        "having": [],
+        "intersect": null,
+        "limit": null,
+        "orderBy": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ],
+        "union": null,
+        "where": []
+      },
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                12,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT max(date_moved_in) FROM Residents",
+    "query_toks": [
+      "SELECT",
+      "max",
+      "(",
+      "date_moved_in",
+      ")",
+      "FROM",
+      "Residents"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "max",
+      "(",
+      "date_moved_in",
+      ")",
+      "from",
+      "residents"
+    ],
+    "question": "Ngày nào là ngày cuối cùng có các hộ dân cư chuyển đến ?",
+    "question_toks": [
+      "When",
+      "is",
+      "the",
+      "last",
+      "day",
+      "any",
+      "resident",
+      "moved",
+      "in",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            1,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT other_details FROM Residents WHERE other_details LIKE '%Miss%'",
+    "query_toks": [
+      "SELECT",
+      "other_details",
+      "FROM",
+      "Residents",
+      "WHERE",
+      "other_details",
+      "LIKE",
+      "'",
+      "%",
+      "Miss",
+      "%",
+      "'"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "other_details",
+      "from",
+      "residents",
+      "where",
+      "other_details",
+      "like",
+      "value"
+    ],
+    "question": "Cho biết chi tiết về các cư dân có chứa chuỗi con ' quý bà ' trong chi tiết của họ .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "resident",
+      "details",
+      "containing",
+      "the",
+      "substring",
+      "'Miss",
+      "'",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                11,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          false,
+          9,
+          [
+            0,
+            [
+              0,
+              11,
+              false
+            ],
+            null
+          ],
+          "\"%Miss%\"",
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT customer_event_id ,  date_moved_in ,  property_id FROM customer_events",
+    "query_toks": [
+      "SELECT",
+      "customer_event_id",
+      ",",
+      "date_moved_in",
+      ",",
+      "property_id",
+      "FROM",
+      "customer_events"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "customer_event_id",
+      ",",
+      "date_moved_in",
+      ",",
+      "property_id",
+      "from",
+      "customer_events"
+    ],
+    "question": "Cho biết id của các sự kiện khách hàng cũng như là ngày chuyển đến và id của căn hộ tương ứng .",
+    "question_toks": [
+      "List",
+      "the",
+      "customer",
+      "event",
+      "id",
+      "and",
+      "the",
+      "corresponding",
+      "move",
+      "in",
+      "date",
+      "and",
+      "property",
+      "id",
+      "."
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            7
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                31,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                33,
+                false
+              ],
+              null
+            ]
+          ],
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                34,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT count(*) FROM customers WHERE customer_id NOT IN ( SELECT customer_id FROM customer_events )",
+    "query_toks": [
+      "SELECT",
+      "count",
+      "(",
+      "*",
+      ")",
+      "FROM",
+      "customers",
+      "WHERE",
+      "customer_id",
+      "NOT",
+      "IN",
+      "(",
+      "SELECT",
+      "customer_id",
+      "FROM",
+      "customer_events",
+      ")"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "count",
+      "(",
+      "*",
+      ")",
+      "from",
+      "customers",
+      "where",
+      "customer_id",
+      "not",
+      "in",
+      "(",
+      "select",
+      "customer_id",
+      "from",
+      "customer_events",
+      ")"
+    ],
+    "question": "Có bao nhiêu khách hàng đã không tham gia bất kỳ sự kiện nào ?",
+    "question_toks": [
+      "How",
+      "many",
+      "customers",
+      "did",
+      "not",
+      "have",
+      "any",
+      "event",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            0
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        false,
+        [
+          [
+            3,
+            [
+              0,
+              [
+                0,
+                0,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": [
+        [
+          true,
+          8,
+          [
+            0,
+            [
+              0,
+              1,
+              false
+            ],
+            null
+          ],
+          {
+            "except": null,
+            "from": {
+              "conds": [],
+              "table_units": [
+                [
+                  "table_unit",
+                  7
+                ]
+              ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+              false,
+              [
+                [
+                  0,
+                  [
+                    0,
+                    [
+                      0,
+                      32,
+                      false
+                    ],
+                    null
+                  ]
+                ]
+              ]
+            ],
+            "union": null,
+            "where": []
+          },
+          null
+        ]
+      ]
+    }
+  },
+  {
+    "db_id": "local_govt_and_lot",
+    "query": "SELECT DISTINCT date_moved_in FROM residents",
+    "query_toks": [
+      "SELECT",
+      "DISTINCT",
+      "date_moved_in",
+      "FROM",
+      "residents"
+    ],
+    "query_toks_no_value": [
+      "select",
+      "distinct",
+      "date_moved_in",
+      "from",
+      "residents"
+    ],
+    "question": "Liệt kê những ngày chuyển đến khác nhau của tất cả các hộ dân cư .",
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "distinct",
+      "move",
+      "in",
+      "dates",
+      "of",
+      "the",
+      "residents",
+      "?"
+    ],
+    "sql": {
+      "except": null,
+      "from": {
+        "conds": [],
+        "table_units": [
+          [
+            "table_unit",
+            2
+          ]
+        ]
+      },
+      "groupBy": [],
+      "having": [],
+      "intersect": null,
+      "limit": null,
+      "orderBy": [],
+      "select": [
+        true,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                9,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ],
+      "union": null,
+      "where": []
+    }
+  }
+]
