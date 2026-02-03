@@ -126,26 +126,17 @@ def get_columns_of_table(G, table_name):
 
 
 def get_foreign_keys_of_table(G, table_name):
-    """
-    Gibt eine Liste der Foreign Keys einer Tabelle zurück.
-    Jede Foreign Key wird als Dictionary mit:
-    {
-        "column": <Spalte in dieser Tabelle>,
-        "references": <Spalte, auf die verwiesen wird, format "table.column">
-    }
-    """
+
     table_node = f"table:{table_name}"
     fks = []
 
     if table_node not in G:
         return []
 
-    # Alle Spalten der Tabelle durchsuchen
     for neighbor in G.successors(table_node):
         if G.nodes[neighbor].get("type") != "column":
             continue
 
-        # Alle Kanten dieser Spalte durchsuchen
         for _, target, edge_data in G.out_edges(neighbor, data=True):
             if edge_data.get("relation") == "FOREIGN_KEY":
                 fks.append({
