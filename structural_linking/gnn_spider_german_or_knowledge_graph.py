@@ -109,10 +109,30 @@ def get_all_columns(G):
     columns = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "column"]
     return columns
 
-# Beispielnutzung
-columns_list = get_all_columns(G)
-print(columns_list)
 
+def get_columns_of_table(G, table_name):
+    """
+    Gibt eine Liste aller Spaltennamen einer bestimmten Tabelle zurück.
+    """
+    table_node = f"table:{table_name}"
+
+    # Prüfen, ob die Tabelle überhaupt existiert
+    if table_node not in G:
+        return []
+
+    # Alle Nachbarn der Tabelle durchsuchen, die Spalten sind
+    columns = [
+        G.nodes[neighbor]["name"]
+        for neighbor in G.successors(table_node)
+        if G.nodes[neighbor].get("type") == "column"
+    ]
+
+    return columns
+
+
+# Beispielnutzung
+columns_of_users = get_columns_of_table(G, "Täter")
+print(columns_of_users)
 
 
 """from pyvis.network import Network
