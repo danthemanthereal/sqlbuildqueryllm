@@ -45,7 +45,7 @@ def read_database_schema(schema_path: str) -> Dict[str, List[Table]]:
 
         for i, (column, text, column_type) in enumerate(
                 zip(db['column_names_original'], db['column_names'], db['column_types'])):
-            table_id, column_name = column
+            table_id, column_name = text
             _, column_text = text
             table_name = db['table_names'][table_id]
 
@@ -102,16 +102,18 @@ for db_id, tables in schema.items():
 
 
 def get_all_tables(G):
-    """
-    Gibt eine Liste aller Tabellen im Graphen zurück.
-    """
     tables = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "table"]
     return tables
 
+def get_all_columns(G):
+    columns = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "column"]
+    return columns
+
 # Beispielnutzung
-tables_list = get_all_tables(G)
-print(len(tables_list))
-print(tables_list)
+columns_list = get_all_columns(G)
+print(columns_list)
+
+
 
 """from pyvis.network import Network
 print(f"Knoten: {G.number_of_nodes()}")
