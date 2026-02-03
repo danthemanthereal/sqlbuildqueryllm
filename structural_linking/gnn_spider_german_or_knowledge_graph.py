@@ -47,7 +47,7 @@ def read_database_schema(schema_path: str) -> Dict[str, List[Table]]:
                 zip(db['column_names_original'], db['column_names'], db['column_types'])):
             table_id, column_name = column
             _, column_text = text
-            table_name = db['table_names_original'][table_id]
+            table_name = db['table_names'][table_id]
 
             if table_name not in schemas[db_id]:
                 table_text = db['table_names'][table_id]
@@ -101,6 +101,17 @@ for db_id, tables in schema.items():
                 G.add_edge(col_node, fk_node, relation="FOREIGN_KEY")
 
 
+def get_all_tables(G):
+    """
+    Gibt eine Liste aller Tabellen im Graphen zurück.
+    """
+    tables = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "table"]
+    return tables
+
+# Beispielnutzung
+tables_list = get_all_tables(G)
+print(len(tables_list))
+print(tables_list)
 
 """from pyvis.network import Network
 print(f"Knoten: {G.number_of_nodes()}")
