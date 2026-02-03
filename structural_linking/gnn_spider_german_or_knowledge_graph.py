@@ -111,16 +111,11 @@ def get_all_columns(G):
 
 
 def get_columns_of_table(G, table_name):
-    """
-    Gibt eine Liste aller Spaltennamen einer bestimmten Tabelle zurück.
-    """
+
     table_node = f"table:{table_name}"
 
-    # Prüfen, ob die Tabelle überhaupt existiert
     if table_node not in G:
         return []
-
-    # Alle Nachbarn der Tabelle durchsuchen, die Spalten sind
     columns = [
         G.nodes[neighbor]["name"]
         for neighbor in G.successors(table_node)
