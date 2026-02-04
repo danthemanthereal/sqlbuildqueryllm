@@ -146,10 +146,6 @@ def get_foreign_keys_of_table(G, table_name):
 
     return fks
 
-fk_list = get_foreign_keys_of_table(G, "Täter")
-print(fk_list)
-
-
 """from pyvis.network import Network
 print(f"Knoten: {G.number_of_nodes()}")
 print(f"Kanten: {G.number_of_edges()}")
