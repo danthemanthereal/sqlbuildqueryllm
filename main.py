@@ -66,7 +66,7 @@ print("table not in query:", table_not_in_query)
     #print("richtiges ergebnis ",description )"""
 
 
-json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
+"""json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 
 with open(json_file, "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -76,4 +76,10 @@ for i, entry in enumerate(data):
     if entry.get('question'):
         #print(f"type oif  {type(entry.get('question'))}")
         #print(f"question: {question}")
-        get_similarity_tables_and_sentence(entry.get("question").split(" "), entry.get("question"))
+        get_similarity_tables_and_sentence(entry.get("question").split(" "), entry.get("question"))"""
+
+for index, row in query_question_test_df.iterrows():
+    """print(f"Zeile {index + 1}:")
+    print(f"Query   : {row['query']}")
+    print(f"Frage   : {row['question']}\n")"""
+    get_similarity_tables_and_sentence([row['question']], row['question'])

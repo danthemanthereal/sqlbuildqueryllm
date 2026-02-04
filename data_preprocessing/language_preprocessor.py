@@ -9,7 +9,8 @@ def reprocess(text:str):
     tokens = _tokenize(lowercase_text)
     non_stop_word_tokens = _get_non_stop_words(tokens)
     lemmatizes = _lemmatize(non_stop_word_tokens)
-    pos_tags = _get_pos_tag(tokens) # anwenden auf non stop tokens ? 
+    pos_tags = _get_pos_tag(tokens) # anwenden auf non stop tokens ?
+    return non_stop_word_tokens
 
 def _lower_text(text: str) -> str:
     return text.lower()
