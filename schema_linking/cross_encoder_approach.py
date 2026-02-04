@@ -4,22 +4,21 @@ from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tabl
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-tables = get_all_tables(G)
-sentences = [
-    "Ich liebe Pizza",
-    "Pizza macht mich glücklich",
-    "Ich gehe heute spazieren"
-]
 
 
-embeddings = model.encode(tables)
+def get_similarity_tables_and_sentence(sentence_tokens: list[str], question: str):
+    tables = get_all_tables(G)
+    token_embeddings = model.encode(sentence_tokens)
+    table_embeddings = model.encode(tables)
 
-threshold = 0.8
+    threshold = 0.8
 
 
-for i in range(len(tables)):
-    for j in range(i + 1, len(tables)):
-        similarity = util.cos_sim(embeddings[i], embeddings[j]).item()
-        if similarity >= threshold:
-            print(f"Sätze:\n  1: {tables[i]}\n  2: {tables[j]}")
-            print(f"Ähnlichkeit: {similarity:.3f}\n")
+    for i, token_emb in enumerate(token_embeddings):
+        for j, table_emb in enumerate(table_embeddings):
+            similarity = util.cos_sim(token_emb, table_emb).item()
+            if similarity >= threshold:
+                print("Frage:", question)
+                print(f"Wort: {sentence_tokens[i]}")
+                print(f"Tabelle: {tables[j]}")
+                print(f"Ähnlichkeit: {similarity:.3f}\n")

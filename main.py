@@ -1,5 +1,8 @@
+import json
+
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
+from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
 from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
 from transformers import AutoTokenizer
 from torch import nn, cosine_similarity
@@ -61,3 +64,16 @@ print("table not in query:", table_not_in_query)
 
     #description = table_description_df.loc[table_description_df["name"] == table_name, "discription"].values[0]
     #print("richtiges ergebnis ",description )"""
+
+
+json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
+
+with open(json_file, "r", encoding="utf-8") as f:
+    data = json.load(f)
+for i, entry in enumerate(data):
+
+    question = "".join(entry.get("question"))
+    if entry.get('question'):
+        #print(f"type oif  {type(entry.get('question'))}")
+        #print(f"question: {question}")
+        get_similarity_tables_and_sentence(entry.get("question").split(" "), entry.get("question"))
