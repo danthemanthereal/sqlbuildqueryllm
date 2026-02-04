@@ -67,6 +67,8 @@ print("table not in query:", table_not_in_query)
 
 
 json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
+hit_counter = 0
+miss_counter = 0
 
 with open(json_file, "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -74,9 +76,21 @@ for i, entry in enumerate(data):
 
     question = "".join(entry.get("question"))
     if entry.get('question'):
-        #print(f"type oif  {type(entry.get('question'))}")
-        #print(f"question: {question}")
-        get_similarity_tables_and_sentence(entry.get("question").split(" "), entry.get("question"))
+        print(f"question: {question}")
+
+        relevant_tables = get_similarity_tables_and_sentence(entry.get("question").split(" "))
+        query = entry.get("query")
+        query_lower = query.lower()
+
+        if any(table.lower() in query_lower for table in relevant_tables):
+            hit_counter += 1
+        else:
+            miss_counter += 1
+
+
+print(f"hit counter {hit_counter}")
+
+print(f"miss counter {miss_counter}")
 
 """for index, row in query_question_test_df.iterrows():
     print(f"Zeile {index + 1}:")
