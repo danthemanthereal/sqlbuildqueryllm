@@ -2,6 +2,7 @@ import json
 
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
+from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
 from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
 from transformers import AutoTokenizer
@@ -65,6 +66,8 @@ print("table not in query:", table_not_in_query)
     #description = table_description_df.loc[table_description_df["name"] == table_name, "discription"].values[0]
     #print("richtiges ergebnis ",description )"""
 
+def _get_relevant_tables(question_as_list: list[str]) -> list:
+    return get_similarity_tables_and_sentence(question_as_list)
 
 json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 hit_counter = 0
@@ -78,7 +81,7 @@ for i, entry in enumerate(data):
     if entry.get('question'):
         print(f"question: {question}")
 
-        relevant_tables = get_similarity_tables_and_sentence(entry.get("question").split(" "))
+        relevant_tables = _get_relevant_tables(entry.get("question").split(" "))
         query = entry.get("query")
         query_lower = query.lower()
 
@@ -86,6 +89,9 @@ for i, entry in enumerate(data):
             hit_counter += 1
         else:
             miss_counter += 1
+        generated_sql_query = get_sql_query(relevant_tables, question)
+
+
 
 
 print(f"hit counter {hit_counter}")

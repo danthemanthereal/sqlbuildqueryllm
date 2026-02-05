@@ -72,33 +72,37 @@ schema = read_database_schema(schema_path_str)
 
 # Knowledge graph
 
+def get_graph():
+    G = nx.MultiDiGraph()
+    current_path = Path(__file__).resolve()
+    project_path = current_path.parent.parent
+    schema_path = project_path / "data" / "dataset_spider_de" / "multispider" / "with_english_value" / "tables_de.json"
+    schema_path_str = schema_path.as_posix()
+    schema = read_database_schema(schema_path_str)
+    for db_id, tables in schema.items():
+        for table_name, table_obj in tables.items():
 
-G = nx.MultiDiGraph()
+            table_node = f"table:{table_name}"
+            G.add_node(table_node, type="table", db=db_id, name=table_name)
 
-for db_id, tables in schema.items():
-    for table_name, table_obj in tables.items():
+            for col in table_obj.columns:
+                col_node = f"column:{table_name}.{col.name}"
 
-        table_node = f"table:{table_name}"
-        G.add_node(table_node, type="table", db=db_id, name=table_name)
+                G.add_node(col_node,
+                           type="column",
+                           name=col.name,
+                           table=table_name,
+                           column_type=col.column_type)
 
-        for col in table_obj.columns:
-            col_node = f"column:{table_name}.{col.name}"
+                G.add_edge(table_node, col_node, relation="HAS_COLUMN")
 
-            G.add_node(col_node,
-                       type="column",
-                       name=col.name,
-                       table=table_name,
-                       column_type=col.column_type)
+                if col.is_primary_key:
+                    G.add_edge(table_node, col_node, relation="PRIMARY_KEY")
 
-            G.add_edge(table_node, col_node, relation="HAS_COLUMN")
-
-            if col.is_primary_key:
-                G.add_edge(table_node, col_node, relation="PRIMARY_KEY")
-
-            if col.foreign_key:
-                fk_table, fk_col = col.foreign_key.split(":")
-                fk_node = f"column:{fk_table}.{fk_col}"
-                G.add_edge(col_node, fk_node, relation="FOREIGN_KEY")
+                if col.foreign_key:
+                    fk_table, fk_col = col.foreign_key.split(":")
+                    fk_node = f"column:{fk_table}.{fk_col}"
+                    G.add_edge(col_node, fk_node, relation="FOREIGN_KEY")
 
 
 def get_all_tables(G):
