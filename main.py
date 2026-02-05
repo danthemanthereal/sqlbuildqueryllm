@@ -79,7 +79,7 @@ for i, entry in enumerate(data):
 
     question = "".join(entry.get("question"))
     if entry.get('question'):
-        print(f"question: {question}")
+        #print(f"question: {question}")
 
         relevant_tables = _get_relevant_tables(entry.get("question").split(" "))
         query = entry.get("query")
@@ -91,6 +91,7 @@ for i, entry in enumerate(data):
             miss_counter += 1
 
         generated_sql_query = get_sql_query(relevant_tables, question)
+        print(f"generated query : {generated_sql_query}")
         gold_query = entry.get("query")
 
 
