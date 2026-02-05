@@ -103,6 +103,7 @@ def get_graph():
                     fk_table, fk_col = col.foreign_key.split(":")
                     fk_node = f"column:{fk_table}.{fk_col}"
                     G.add_edge(col_node, fk_node, relation="FOREIGN_KEY")
+    return G
 
 
 def get_all_tables(G):
@@ -114,8 +115,8 @@ def get_all_columns(G):
     return columns
 
 
-def get_columns_of_table(G, table_name):
-
+def get_columns_of_table(table_name):
+    G = get_graph()
     table_node = f"table:{table_name}"
 
     if table_node not in G:
@@ -129,8 +130,8 @@ def get_columns_of_table(G, table_name):
     return columns
 
 
-def get_foreign_keys_of_table(G, table_name):
-
+def get_foreign_keys_of_table(table_name):
+    G = get_graph()
     table_node = f"table:{table_name}"
     fks = []
 
