@@ -89,8 +89,9 @@ for i, entry in enumerate(data):
             hit_counter += 1
         else:
             miss_counter += 1
-            
+
         generated_sql_query = get_sql_query(relevant_tables, question)
+        gold_query = entry.get("query")
 
 
 
