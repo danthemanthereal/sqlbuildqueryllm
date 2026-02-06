@@ -1,7 +1,8 @@
 from pathlib import Path
 import sqlite3
+import csv
 
-def execute_matching_check(db_file, generated_query, gold_query):
+def execute_matching_check(db_file, generated_query, gold_query, question):
     current_path = Path(__file__).resolve()
     project_path = current_path.parent
 
@@ -9,24 +10,42 @@ def execute_matching_check(db_file, generated_query, gold_query):
 
     sqlite_file_path = spider_data_dict_path / db_file / f"{db_file}.sqlite"
 
-    result_from_generated_query = []#execute_sql(sqlite_file_path, generated_query)
     result_gold_query = execute_sql(sqlite_file_path, gold_query)
 
 
 
     correct = 0
     total = len(result_gold_query)
+    output_csv = "execution_results.csv"
+
+    with open(output_csv, mode="w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+
+        writer.writerow([
+            "question",
+            "generated_query",
+            "gold_query",
+            "is_correct"
+        ])
 
     for gold, pred in zip(gold_query, generated_query):
         gold_res = execute_sql(sqlite_file_path, gold)
         pred_res = execute_sql(sqlite_file_path, pred)
 
         if gold_res is None or pred_res is None:
-            continue  # runtime error → falsch
+            continue
 
-        # Reihenfolge ignorieren
+        is_correct = False
         if sorted(gold_res) == sorted(pred_res):
             correct += 1
+            is_correct = True
+
+        writer.writerow([
+            question,
+            pred,
+            gold,
+            is_correct
+        ])
 
     return correct / total
 
