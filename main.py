@@ -2,6 +2,7 @@ import json
 
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
+from evaluation.eval_spider import execute_matching_check
 from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
 from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
@@ -93,6 +94,7 @@ for i, entry in enumerate(data):
         generated_sql_query = get_sql_query(relevant_tables, question)
         print(f"generated query : {generated_sql_query}")
         gold_query = entry.get("query")
+        execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
 
 
 
