@@ -45,12 +45,12 @@ def read_database_schema(schema_path: str) -> Dict[str, List[Table]]:
 
         for i, (column, text, column_type) in enumerate(
                 zip(db['column_names_original'], db['column_names'], db['column_types'])):
-            table_id, column_name = text
-            _, column_text = text
-            table_name = db['table_names'][table_id]
+            table_id, column_name = column
+            _, column_text = column
+            table_name = db['table_names_original'][table_id]
 
             if table_name not in schemas[db_id]:
-                table_text = db['table_names'][table_id]
+                table_text = db['table_names_original'][table_id]
                 schemas[db_id][table_name] = Table(table_name, table_text, [])
 
             if column_name == "*":
@@ -106,11 +106,13 @@ def get_graph():
     return G
 
 
-def get_all_tables(G):
+def get_all_tables():
+    G = get_graph()
     tables = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "table"]
     return tables
 
-def get_all_columns(G):
+def get_all_columns():
+    G = get_graph()
     columns = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "column"]
     return columns
 
@@ -150,6 +152,7 @@ def get_foreign_keys_of_table(table_name):
                 })
 
     return fks
+
 
 """from pyvis.network import Network
 print(f"Knoten: {G.number_of_nodes()}")
