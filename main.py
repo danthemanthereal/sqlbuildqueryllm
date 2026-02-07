@@ -92,8 +92,8 @@ for i, entry in enumerate(data):
         else:
             miss_counter += 1
 
-        generated_sql_query = get_sql_query(relevant_tables, question)
-        print(f"generated query : {generated_sql_query}")
+        #generated_sql_query = get_sql_query(relevant_tables, question)
+        #print(f"generated query : {generated_sql_query}")
         gold_query = entry.get("query")
         #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
 
