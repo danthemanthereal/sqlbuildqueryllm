@@ -1,7 +1,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables, get_columns_of_table, G
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables, get_columns_of_table
 
 
 def get_relevant_columns(db_schema_graph, question: str):
@@ -38,7 +38,7 @@ def get_relevant_columns(db_schema_graph, question: str):
 def _build_prompt_for_decoder_model(db_schema_graph, question: str):
     prompt = f"Die Frage: {question} \n"
 
-    tables = get_all_tables(db_schema_graph)
+    tables = get_all_tables()
 
     for table in tables:
         columns_of_table = get_columns_of_table(db_schema_graph, table)
@@ -49,5 +49,5 @@ def _build_prompt_for_decoder_model(db_schema_graph, question: str):
 def _format_for_prompt(table: str, columns):
     return f"{table} \n  " + "\n - ".join(columns) + "\n"
 
-get_relevant_columns(G, "")
+
 

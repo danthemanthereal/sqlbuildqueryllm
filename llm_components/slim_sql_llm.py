@@ -3,13 +3,14 @@ import torch
 
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_columns_of_table, get_foreign_keys_of_table
 
+
 model_name = "llmware/slim-sql-1b-v0"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
-    model_name,
-    torch_dtype=torch.float32
-)
+        model_name,
+        torch_dtype=torch.float32
+    )
 
 def get_sql_query(tables, question):
 
@@ -23,36 +24,46 @@ def get_sql_query(tables, question):
             do_sample=False
         )
 
-    sql = tokenizer.decode(output[0], skip_special_tokens=True)
+    prompt_len = inputs["input_ids"].shape[1]
+    generated_tokens = output[0][prompt_len:]
+
+    sql = tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
     return sql
 
 def _get_prompt(tables, question):
     return f"""
-        Du bist ein Experte in Generieren von SQL Queries zu einer Frage. 
-        Du gehst so vor, dass du zu dieser Frage {question} eine SQL Query erstellst. 
-        
-        Dabei darfst du nur folende Tabellen, Spalten und Fremdbeziehungen zwischen den Tabellen benutzen:
-         {_format_prompt(tables)}
-         
-       Dabei gehst du Schritt für Schritt vor und kontrollierst dich in jedem Zwischenschritt, ob 
-       du nur Tabellen und Spalten und Fremdbeziehungen benutzt hast die du gegeben bekommen hast.
-       Außerdem prüfst du auch in jedem Zwischenschritt ob die Frage {question} auch auf die gebaute Query passt.   
+You are an expert text-to-SQL system.
 
-        Deine Antwort erhält nur die generierte Query ohne extra Kommentar oder so.
-    """
+Given the database schema below, write a single valid SQLite SQL query
+that answers the given question.
+
+QUESTION (may be in German):
+{question}
+
+DATABASE SCHEMA:
+{_format_prompt(tables)}
+
+RULES:
+- Use only the tables and columns listed above.
+- Use correct JOIN conditions based on foreign keys.
+- Return ONLY the SQL query.
+- Do NOT include explanations or comments.
+- The output must start with SELECT.
+
+SQL:
+"""
+
 
 def _format_prompt(tables):
-    schema_format_in_prompt = "Hier die Tabellen und Spalten die du nur berücksichtigen muss: \n"
+    schema = ""
     for table in tables:
-        schema_format_in_prompt = schema_format_in_prompt + "Die Tabelle " + table + " \n folgenden Spalten: \n"
-        schema_format_in_prompt += get_columns_of_table(table)
-        schema_format_in_prompt = schema_format_in_prompt + "\n Mit den Folgenden Frembbeziehungen zu anderen Tabellen: \n  "
-        schema_format_in_prompt = schema_format_in_prompt + get_foreign_keys_of_table(table)
-        schema_format_in_prompt = schema_format_in_prompt + "\n "
+        schema += f"Table {table}:\n"
+        schema += "  Columns: " + ", ".join(get_columns_of_table(table)) + "\n"
 
-    return schema_format_in_prompt
-
-
-
-
-    return schema_format_in_prompt
+        fks = get_foreign_keys_of_table(table)
+        if fks:
+            schema += "  Foreign Keys:\n"
+            for fk in fks:
+                schema += f"    {fk['column']} -> {fk['references']}\n"
+        schema += "\n"
+    return schema

@@ -81,8 +81,9 @@ for i, entry in enumerate(data):
     question = "".join(entry.get("question"))
     if entry.get('question'):
         #print(f"question: {question}")
-
+        print(f"question {entry.get('question')}")
         relevant_tables = _get_relevant_tables(entry.get("question").split(" "))
+        print(f"relevant tables : {relevant_tables}")
         query = entry.get("query")
         query_lower = query.lower()
 
@@ -94,7 +95,7 @@ for i, entry in enumerate(data):
         generated_sql_query = get_sql_query(relevant_tables, question)
         print(f"generated query : {generated_sql_query}")
         gold_query = entry.get("query")
-        execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
+        #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
 
 
 

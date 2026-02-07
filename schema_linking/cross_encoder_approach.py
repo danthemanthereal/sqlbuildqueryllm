@@ -3,14 +3,15 @@ from sentence_transformers import SentenceTransformer, util
 from data_preprocessing.german_spider_preprocessor import get_english_table_name
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, query_question_test_df
-from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables, G
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables, get_graph
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
 
 def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
-    tables = get_all_tables(G)
+
+    tables = get_all_tables()
     token_embeddings = model.encode(sentence_tokens)
     # for tables of german spider
    # table_embeddings = model.encode(tables)
@@ -20,7 +21,7 @@ def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
     # Jeden String durch reprocess schicken
     #processed_descriptions = [reprocess(desc) for desc in descriptions]
     table_embeddings = model.encode(tables)
-    threshold = 0.6
+    threshold = 0.7
     relevant_tables = []
 
     for i, token_emb in enumerate(token_embeddings):
