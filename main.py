@@ -86,13 +86,14 @@ for i, entry in enumerate(data):
         print(f"relevant tables : {relevant_tables}")
         query = entry.get("query")
         query_lower = query.lower()
-
-        if any(table.lower() in query_lower for table in relevant_tables):
+        if not relevant_tables:
+            continue
+        if any(table.lower() in query_lower for table in relevant_tables): # change to all ? 
             hit_counter += 1
         else:
             miss_counter += 1
 
-        #generated_sql_query = get_sql_query(relevant_tables, question)
+        generated_sql_query = get_sql_query(relevant_tables, question)
         #print(f"generated query : {generated_sql_query}")
         gold_query = entry.get("query")
         #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)

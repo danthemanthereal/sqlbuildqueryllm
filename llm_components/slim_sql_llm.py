@@ -16,7 +16,7 @@ def get_sql_query(tables, question):
 
     prompt = _get_prompt(tables,question)
     print(f"prompt {prompt}")
-    inputs = tokenizer(prompt, return_tensors="pt")
+    """inputs = tokenizer(prompt, return_tensors="pt")
 
     with torch.no_grad():
         output = model.generate(
@@ -28,8 +28,8 @@ def get_sql_query(tables, question):
     prompt_len = inputs["input_ids"].shape[1]
     generated_tokens = output[0][prompt_len:]
 
-    sql = tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
-    return sql
+    sql = tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()"""
+    return ""
 
 def _get_prompt(tables, question):
     return f"""

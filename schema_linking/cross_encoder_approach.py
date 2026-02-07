@@ -21,7 +21,7 @@ def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
     # Jeden String durch reprocess schicken
     #processed_descriptions = [reprocess(desc) for desc in descriptions]
     table_embeddings = model.encode(tables)
-    threshold = 0.7
+    threshold = 0.9
     relevant_tables = []
 
     for i, token_emb in enumerate(token_embeddings):
