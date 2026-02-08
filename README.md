@@ -26,7 +26,29 @@ Schema Linking Ansätze:
  es wurde keine Tabelle zur Verfügng gestellet vom Cross Encoder Model : 304 
 
  => Performance 79 % Tabellen richtig erkannt/ in der Auswahl , wenn man die leeren wegläasst 
+ 
  => Performance 56 % Tabelle richtig erkannt / in der Auswahl, wenn man die leeren berücksichtigt
+
+
+ wenn alle Tabellen in der liste der relevanten Queries in der Query vorkommen müssen bei treshhold 0.9: 
+
+ => Performance 57 % bei den dass man die leeren liste weglasst 
+
+ => Performance 40 % wenn man die leeren mitberücksichtig 
+
+
+ => es werden nicht alle Tabellen erkannt die benötigt werden 
+  
+  -> eine Ursache kann sein, dass diese nicht explizieht im Satz steht jedoch gebraucht wird für das joinen 
+
+  => um zu viele zu vermeiden : es davor ein anderes LLm geben mit Frage + relevanten Tabellen -> es nochmal fragen welche Relevant sind behalten 
+
+  => um vielleicht fehlende zu bekommen -> ein anderes Model Fragen welche Tabellen notwendig sind -> soll sagen brauche dies und diese Tabellen 
+  
+  -> davon die ähnlichsten ausgeben lassen 
+  
+  -> vlt so ietrativer Prozess : die Tabellen finden wo sicher ist -> dann davon die relevanten die direkt kommen : alle Relationen geben und dann nochmal fragen 
+  welche Tabellen notwendig sind 
 
 NER ? 
  
