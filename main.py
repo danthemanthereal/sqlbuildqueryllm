@@ -114,7 +114,7 @@ for i, entry in enumerate(data):
                 found_no_tables = True
                 continue
 
-            if any(table.lower() in query_lower for table in relevant_tables): # change to all ?
+            if all(table.lower() in query_lower for table in relevant_tables): # change to all ?
                 hit_counter += 1
                 found_some_table = True
             else:
