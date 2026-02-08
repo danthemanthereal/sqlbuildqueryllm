@@ -1,5 +1,6 @@
 import json
-
+import csv
+import os
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
 from evaluation.eval_spider import execute_matching_check
@@ -67,36 +68,71 @@ print("table not in query:", table_not_in_query)
     #description = table_description_df.loc[table_description_df["name"] == table_name, "discription"].values[0]
     #print("richtiges ergebnis ",description )"""
 
+csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/output.csv"
+file_exists = os.path.isfile(csv_file)
+header = ["question", "query", "some_tables_in_query","only_relevant_tables", "no_relevant_tables", "founded_tables", "method"]
+with open(csv_file, "a", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    if not file_exists:
+        writer.writerow(header)
+
+
+
+method = "cross-encoder"
+
 def _get_relevant_tables(question_as_list: list[str]) -> list:
     return get_similarity_tables_and_sentence(question_as_list)
 
 json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 hit_counter = 0
 miss_counter = 0
+no_table_counter = 0
+
+
+
 
 with open(json_file, "r", encoding="utf-8") as f:
     data = json.load(f)
+
 for i, entry in enumerate(data):
+    with open(csv_file, "a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(header)
+        question = "".join(entry.get("question"))
+        if entry.get('question'):
+            found_some_table = False
+            found_only_relevant_tables = False
+            found_no_tables = False
+            print(f"question {entry.get('question')}")
+            relevant_tables = _get_relevant_tables(entry.get("question").split(" "))
+            print(f"relevant tables : {relevant_tables}")
+            query = entry.get("query")
+            query_lower = query.lower()
+            if not relevant_tables:
+                no_table_counter += 1
+                found_no_tables = True
+                continue
 
-    question = "".join(entry.get("question"))
-    if entry.get('question'):
-        #print(f"question: {question}")
-        print(f"question {entry.get('question')}")
-        relevant_tables = _get_relevant_tables(entry.get("question").split(" "))
-        print(f"relevant tables : {relevant_tables}")
-        query = entry.get("query")
-        query_lower = query.lower()
-        if not relevant_tables:
-            continue
-        if any(table.lower() in query_lower for table in relevant_tables): # change to all ? 
-            hit_counter += 1
-        else:
-            miss_counter += 1
+            if any(table.lower() in query_lower for table in relevant_tables): # change to all ?
+                hit_counter += 1
+                found_some_table = True
+            else:
+                miss_counter += 1
 
-        generated_sql_query = get_sql_query(relevant_tables, question)
-        #print(f"generated query : {generated_sql_query}")
-        gold_query = entry.get("query")
-        #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
+            writer.writerow([
+                question,
+                query,
+                found_some_table,
+                found_only_relevant_tables,
+                found_no_tables,
+                relevant_tables,
+                method
+            ])
+            #generated_sql_query = get_sql_query(relevant_tables, question)
+            #print(f"generated query : {generated_sql_query}")
+            gold_query = entry.get("query")
+            #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
 
 
 
