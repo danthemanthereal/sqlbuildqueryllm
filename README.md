@@ -16,6 +16,18 @@ Schema Linking Ansätze:
       -> was ist wenn Tabellenname schlecht ist und dann ähnlichkeit gering -> muss man dann die Bedeutung embedden oder 
        extra Spalte mit guten Namen zu jeder Tabelle bauen -> muss man noch untersuchen wie am besten 
 
+
+ Performance beu Cross Encdoer Ansatz 
+ Aufgabe : Prüfen ob in den Ausgegeben relevanten Tabellen vom Cross Encoder Ansatz:  die Tabelle / Tabellen in der Query vorhanden waren 
+   bei Treshhold = 0.9 
+ hier wurde geschickt ob diese vorhanden ist: also können auch nicht benötigte Tabellen sein   
+ relevante Tabelle vom Cross Encoder Model ist in der Query: 582 
+ keine Tabelle vom Cross Encoder Model ist in der Query: 148
+ es wurde keine Tabelle zur Verfügng gestellet vom Cross Encoder Model : 304 
+
+ => Performance 79 % Tabellen richtig erkannt/ in der Auswahl , wenn man die leeren wegläasst 
+ => Performance 56 % Tabelle richtig erkannt / in der Auswahl, wenn man die leeren berücksichtigt
+
 NER ? 
  
 Fehler behebung ? 
