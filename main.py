@@ -141,6 +141,8 @@ print(f"hit counter {hit_counter}")
 
 print(f"miss counter {miss_counter}")
 
+print(f"no table counter {no_table_counter}")
+
 """for index, row in query_question_test_df.iterrows():
     print(f"Zeile {index + 1}:")
     print(f"Query   : {row['query']}")
