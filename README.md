@@ -59,6 +59,18 @@ Schema Linking Ansätze:
   -> vlt so ietrativer Prozess : die Tabellen finden wo sicher ist -> dann davon die relevanten die direkt kommen : alle Relationen geben und dann nochmal fragen 
   welche Tabellen notwendig sind 
 
+  Wenn man die Tabellennamen und Wörter der Frage lemmatized und Füll wörter entfernt bei Treshhold 0.9
+
+  wenn alleTabellen erhalten sind 
+
+  => Performance  355/ (355 + 505) % wenn man leere weglässt 
+
+  => Performance 355 / 1034 % wenn man leere berücksichtigt 
+  
+  -> vlt so ietrativer Prozess : die Tabellen finden wo sicher ist -> dann davon die relevanten die direkt kommen : alle Relationen geben und dann nochmal fragen 
+  welche Tabellen notwendig sind 
+
+  
 NER ? 
  
 Fehler behebung ? 
