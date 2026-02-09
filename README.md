@@ -46,6 +46,15 @@ Schema Linking Ansätze:
   => um vielleicht fehlende zu bekommen -> ein anderes Model Fragen welche Tabellen notwendig sind -> soll sagen brauche dies und diese Tabellen 
   
   -> davon die ähnlichsten ausgeben lassen 
+
+
+  Wenn man die Tabellennamen und Wörter der Frage lemmatized und Füll wörter entfernt bei Treshhold 0.9
+
+  wenn nur einige Tabellen erhalten sind 
+
+  => Performance 86 % wenn man leere weglässt 
+
+  => Performance 71 % wenn man leere berücksichtigt 
   
   -> vlt so ietrativer Prozess : die Tabellen finden wo sicher ist -> dann davon die relevanten die direkt kommen : alle Relationen geben und dann nochmal fragen 
   welche Tabellen notwendig sind 
