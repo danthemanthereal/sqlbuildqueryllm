@@ -12,9 +12,9 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
 
     tables = get_all_tables()
-    lemmatized_tables = [reprocess(table) for table in tables]
-    lemmatized_tokens = [reprocess(token) for token in sentence_tokens]
-    token_embeddings = model.encode(lemmatized_tokens)
+    #lemmatized_tables = [reprocess(table) for table in tables]
+    #lemmatized_tokens = [reprocess(token) for token in sentence_tokens]
+    token_embeddings = model.encode(sentence_tokens)
     # for tables of german spider
    # table_embeddings = model.encode(tables)
     # for table embdegging swiss tat bot
@@ -22,7 +22,7 @@ def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
 
     # Jeden String durch reprocess schicken
     #processed_descriptions = [reprocess(desc) for desc in descriptions]
-    table_embeddings = model.encode(lemmatized_tables)
+    table_embeddings = model.encode(tables)
     threshold = 0.9
     relevant_tables = []
 
