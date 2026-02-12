@@ -62,3 +62,7 @@ def execute_sql(db_path, sql):
 
 def check_precision(generated_tables, gold_tables):
     return set(generated_tables) == set(gold_tables)
+
+
+def check_recall(generated_tables, gold_tables):
+    return  set(gold_tables) <= set(generated_tables)
