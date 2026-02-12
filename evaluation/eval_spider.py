@@ -59,3 +59,6 @@ def execute_sql(db_path, sql):
         result = None
     conn.close()
     return result
+
+def check_precision(generated_tables, gold_tables):
+    return set(generated_tables) == set(gold_tables)
