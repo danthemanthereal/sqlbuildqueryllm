@@ -87,7 +87,8 @@ json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_d
 hit_counter = 0
 miss_counter = 0
 no_table_counter = 0
-
+precision_amount = 0
+recall_amount = 0
 
 
 
