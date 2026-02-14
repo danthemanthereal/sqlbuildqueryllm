@@ -233,6 +233,12 @@ def get_db_id_and_tables():
         db_id_table_map[db_id] = tables_of_database
     return db_id_table_map
 
+def get_gold_tables_of_db(db_id, valid_index_list):
+    db_table_map = get_db_id_and_tables()
+    all_tables = db_table_map.get(db_id, [])
+
+    filtered_tables = [table for idx, table in enumerate(all_tables) if idx in valid_index_list]
+    return filtered_tables
 
 
 """from pyvis.network import Network

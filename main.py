@@ -6,6 +6,7 @@ from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_
 from evaluation.eval_spider import execute_matching_check
 from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db
 from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
 from transformers import AutoTokenizer
 from torch import nn, cosine_similarity
@@ -83,6 +84,17 @@ method = "cross-encoder"
 def _get_relevant_tables(question_as_list: list[str]) -> list:
     return get_similarity_tables_and_sentence(question_as_list)
 
+TOTAL = 1034
+def get_percentage(amount: int):
+    return round(amount / TOTAL * 100, 2)
+
+def get_table_index(schema_entry):
+    table_index = []
+    for table_index_list in schema_entry["sql"]["from"].get("table_units", []):
+        table_index.append(table_index_list[1])
+    return table_index
+
+
 json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 hit_counter = 0
 miss_counter = 0
@@ -121,7 +133,10 @@ for i, entry in enumerate(data):
             else:
                 miss_counter += 1
 
-            writer.writerow([
+            table_index_map = get_table_index(entry)
+            gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
+            print(f"gold tables : {gold_tables}")
+            """writer.writerow([
                 question,
                 query,
                 found_some_table,
@@ -129,7 +144,7 @@ for i, entry in enumerate(data):
                 found_no_tables,
                 relevant_tables,
                 method
-            ])
+            ])"""
             #generated_sql_query = get_sql_query(relevant_tables, question)
             #print(f"generated query : {generated_sql_query}")
             gold_query = entry.get("query")
@@ -138,11 +153,15 @@ for i, entry in enumerate(data):
 
 
 
-print(f"hit counter {hit_counter}")
+print(f"hit min one table percentage  {get_percentage(hit_counter)}")
 
-print(f"miss counter {miss_counter}")
+print(f"miss table percentage {get_percentage(miss_counter)}")
 
-print(f"no table counter {no_table_counter}")
+print(f"no table percentage {get_percentage(no_table_counter)}")
+
+print(f"precision {get_percentage(precision_amount)}")
+
+print(f"recall {get_percentage(recall_amount)}")
 
 """for index, row in query_question_test_df.iterrows():
     print(f"Zeile {index + 1}:")
