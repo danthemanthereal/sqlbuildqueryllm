@@ -60,9 +60,9 @@ def execute_sql(db_path, sql):
     conn.close()
     return result
 
-def check_precision(generated_tables, gold_tables):
+def check_precision(generated_tables, gold_tables) -> bool:
     return set(generated_tables) == set(gold_tables)
 
 
-def check_recall(generated_tables, gold_tables):
+def check_recall(generated_tables, gold_tables) -> bool:
     return  set(gold_tables) <= set(generated_tables)

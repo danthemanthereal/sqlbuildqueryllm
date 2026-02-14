@@ -3,7 +3,7 @@ import csv
 import os
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
-from evaluation.eval_spider import execute_matching_check
+from evaluation.eval_spider import execute_matching_check, check_precision, check_recall
 from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db
@@ -135,6 +135,14 @@ for i, entry in enumerate(data):
 
             table_index_map = get_table_index(entry)
             gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
+
+            if(check_precision(relevant_tables, gold_tables)):
+                precision_amount += 1
+                print(f"precision erreicht ")
+            if check_recall(relevant_tables, gold_tables):
+                recall_amount += 1
+                print(f"recall erreicht ")
+                
             print(f"gold tables : {gold_tables}")
             """writer.writerow([
                 question,
