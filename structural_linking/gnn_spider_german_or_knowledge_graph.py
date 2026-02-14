@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import List, Dict, Optional
 import networkx as nx
 
-
+from data_preprocessing.german_spider_preprocessor import get_english_table_name
 
 current_path = Path(__file__).resolve()
 project_path = current_path.parent.parent
@@ -220,23 +220,23 @@ def get_foreign_keys_of_table(table_name):
     return fks
 
 def get_db_id_and_tables():
+    map_db_id_table_in_correct_order= {}
     current_path = Path(__file__).resolve()
     project_path = current_path.parent.parent
     schema_path = project_path / "data" / "dataset_spider_de" / "multispider" / "with_english_value" / "tables_de.json"
     schema_path_str = schema_path.as_posix()
-    schema = read_database_schema_german(schema_path_str)
-    db_id_table_map = {}
-    for db_id, tables in schema.items():
-        tables_of_database = []
-        for table_name, table_obj in tables.items():
-            tables_of_database.append(table_name)
-        db_id_table_map[db_id] = tables_of_database
-    return db_id_table_map
+
+    with open(schema_path_str, "r", encoding="utf-8") as f:
+        schema = json.load(f)
+
+    for element in schema:
+        map_db_id_table_in_correct_order[element.get("db_id")] = element.get("table_names_original")
+    return map_db_id_table_in_correct_order
+
 
 def get_gold_tables_of_db(db_id, valid_index_list):
     db_table_map = get_db_id_and_tables()
     all_tables = db_table_map.get(db_id, [])
-
     filtered_tables = [table for idx, table in enumerate(all_tables) if idx in valid_index_list]
     return filtered_tables
 

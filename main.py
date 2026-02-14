@@ -6,7 +6,7 @@ from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_
 from evaluation.eval_spider import execute_matching_check, check_precision, check_recall
 from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
-from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, get_db_id_and_tables
 from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
 from transformers import AutoTokenizer
 from torch import nn, cosine_similarity
@@ -135,15 +135,15 @@ for i, entry in enumerate(data):
 
             table_index_map = get_table_index(entry)
             gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
-
+            print(f"gold tables : {gold_tables}")
             if(check_precision(relevant_tables, gold_tables)):
                 precision_amount += 1
                 print(f"precision erreicht ")
             if check_recall(relevant_tables, gold_tables):
                 recall_amount += 1
                 print(f"recall erreicht ")
-                
-            print(f"gold tables : {gold_tables}")
+
+
             """writer.writerow([
                 question,
                 query,
@@ -155,7 +155,6 @@ for i, entry in enumerate(data):
             ])"""
             #generated_sql_query = get_sql_query(relevant_tables, question)
             #print(f"generated query : {generated_sql_query}")
-            gold_query = entry.get("query")
             #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
 
 
