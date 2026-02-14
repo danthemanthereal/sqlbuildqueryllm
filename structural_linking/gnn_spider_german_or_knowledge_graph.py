@@ -219,6 +219,21 @@ def get_foreign_keys_of_table(table_name):
 
     return fks
 
+def get_db_id_and_tables():
+    current_path = Path(__file__).resolve()
+    project_path = current_path.parent.parent
+    schema_path = project_path / "data" / "dataset_spider_de" / "multispider" / "with_english_value" / "tables_de.json"
+    schema_path_str = schema_path.as_posix()
+    schema = read_database_schema_german(schema_path_str)
+    db_id_table_map = {}
+    for db_id, tables in schema.items():
+        tables_of_database = []
+        for table_name, table_obj in tables.items():
+            tables_of_database.append(table_name)
+        db_id_table_map[db_id] = tables_of_database
+    return db_id_table_map
+
+
 
 """from pyvis.network import Network
 print(f"Knoten: {G.number_of_nodes()}")
