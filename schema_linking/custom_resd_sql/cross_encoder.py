@@ -5,6 +5,8 @@ from transformers import BertTokenizer, BertForSequenceClassification, BertModel
 import torch
 import json
 
+from data_preprocessing.german_spider_preprocessor import get_english_table_name
+
 tokenizer = BertTokenizer.from_pretrained("bert-base-german-cased")
 model = BertModel.from_pretrained("bert-base-german-cased")
 cross_encoder_model_name = "cross-encoder/ms-marco-MiniLM-L-12-v2"
@@ -50,7 +52,7 @@ def get_relevant_tables_and_columns(question: str):
 
     # cross encoder
     scores = cross_encoder.predict(schema_question_pairs)
-    tok_k =3
+    tok_k =5
     topk = sorted(
         zip(schema_elements, scores),
         key=lambda x: x[1],
@@ -104,7 +106,12 @@ def get_relevant_tables_and_columns(question: str):
 
     last_hidden_states = encoder_output["last_hidden_state"]
 
-    print(last_hidden_states)
+    predicted_tables = []
+    for (db_schmema, acc) in topk:
+        table = db_schmema.split(":")[0]
+        predicted_tables.append(get_english_table_name(table))
+
+    return predicted_tables
 
 
 
