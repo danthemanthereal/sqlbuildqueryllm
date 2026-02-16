@@ -81,6 +81,33 @@ def get_relevant_tables_and_columns(question: str):
     top_tables = table_ranking[:top_tables_k]
 
 
+    # ranking enhanced encoder
+
+    schema_input_for_ranking_enhanced_encoder = f"{question} | "
+
+    for (schema, acc) in topk:
+        schema_input_for_ranking_enhanced_encoder += f"{schema} | "
+
+    tokens = tokenizer(schema_input_for_ranking_enhanced_encoder,
+                       return_tensors="pt",
+                       padding="max_length",
+                       max_length=512,
+                       truncation=True,
+                       return_offsets_mapping=True
+                       )
+    input_ids = tokens["input_ids"]
+    attention_mask = tokens["attention_mask"]
+
+    encoder_output = model(input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    return_dict = True)
+
+    last_hidden_states = encoder_output["last_hidden_state"]
+
+    print(last_hidden_states)
+
+
+
 
 
 
