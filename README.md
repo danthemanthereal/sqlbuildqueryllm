@@ -70,6 +70,28 @@ Schema Linking Ansätze:
   -> vlt so ietrativer Prozess : die Tabellen finden wo sicher ist -> dann davon die relevanten die direkt kommen : alle Relationen geben und dann nochmal fragen 
   welche Tabellen notwendig sind 
 
+  Schema Linking Ansatz anhand des Resd SQL Paper: 
+
+  Was wurde übernommen : man hat so Tupel mit (Frage, Tabele: Spalte1, Spalte2 , ...) in einem Cross encoder zum Relevanz Schauen gegeben: 
+  es wurden immer die top 5 Ergebnisse genommen 
+
+   hit min one table percentage  77.27 %
+   miss table percentage 22.73 % 
+   no table percentage 0.0
+   precision 0.19 % 
+   recall 51.84 % 
+
+   Was noch aufgefallen ist: 
+   
+         Im Deutschen heißen manche Tabellen identisch bzw im englischen sehr ähnlich 
+
+         -> daraus wurden manche Tabellen nicht erkannt 
+         -> daraus kann man vlt zu jeder gefundenen Tabelle die Tabellen raussuchen die genau gleich heißen/ sehr ähnlich sind 
+         ->  diese Einfach in den Erweiternden Kreis aufnehmen und dannn kann vlt ein LLM diese Filtern welche wichtig sind 
+         -> was noch hinzugefügt werden muss Spalte erkannt -> automatisch die Tabelle davon 
+         -> werte in Db erkannt aus Frage -> spalte herausfinden -> Tabelle übergeben
+
+
   
 NER ? 
  
