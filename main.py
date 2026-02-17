@@ -119,8 +119,8 @@ for i, entry in enumerate(data):
             found_only_relevant_tables = False
             found_no_tables = False
             print(f"question {entry.get('question')}")
-            relevant_tables = get_relevant_tables_and_columns(entry.get("question"))
-            #  _get_relevant_tables(entry.get("question").split(" "))
+             #get_relevant_tables_and_columns(entry.get("question"))
+            relevant_tables =  _get_relevant_tables(entry.get("question").split(" "))
             print(f"relevant tables : {relevant_tables}")
             query = entry.get("query")
             query_lower = query.lower()
