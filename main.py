@@ -162,15 +162,15 @@ for i, entry in enumerate(data):
 
 
 
-print(f"hit min one table percentage  {get_percentage(hit_counter)}")
+print(f"hit min one table percentage  {get_percentage(hit_counter)} %")
 
-print(f"miss table percentage {get_percentage(miss_counter)}")
+print(f"miss table percentage {get_percentage(miss_counter)} %")
 
-print(f"no table percentage {get_percentage(no_table_counter)}")
+print(f"no table percentage {get_percentage(no_table_counter)} %")
 
-print(f"precision {get_percentage(precision_amount)}")
+print(f"precision {get_percentage(precision_amount)} %")
 
-print(f"recall {get_percentage(recall_amount)}")
+print(f"recall {get_percentage(recall_amount)} %")
 
 """for index, row in query_question_test_df.iterrows():
     print(f"Zeile {index + 1}:")
