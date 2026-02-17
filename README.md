@@ -47,6 +47,16 @@ Schema Linking Ansätze:
   
   -> davon die ähnlichsten ausgeben lassen 
 
+  Wenn man die leeren berücksichtigt mit dem Zusatz immer alle Beziehenden Tabellen hinzufügt 
+  von den aus Frage erkannten bei treshhold 0.9: 
+
+  hit min one table percentage  56.29 %
+  miss table percentage 14.31 %
+  no table percentage 29.4 %
+  precision 19.44 %
+  recall 29.69 %
+
+
 
   Wenn man die Tabellennamen und Wörter der Frage lemmatized und Füll wörter entfernt bei Treshhold 0.9
 
