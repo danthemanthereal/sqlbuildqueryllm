@@ -16,7 +16,6 @@ def get_german_english_translation_map():
 
     return german_english_table_mapping
 
-
 def get_english_table_name(german_table_name: str):
     mapping = get_german_english_translation_map()
     return mapping.get(german_table_name, "")

@@ -37,8 +37,8 @@ def get_table_column_map_per_db_id():
     table_col_map_per_db_id = {}
 
     for db in databases:
-        table_names = db["table_names"]
-        column_names = db["column_names"]
+        table_names = db["table_names_original"]
+        column_names = db["column_names_original"]
         db_id = db["db_id"]
 
         schema = defaultdict(list)
@@ -93,11 +93,36 @@ def execute_sql(db_path: str, sql: str, fetch: Union[str, int] = "all") -> Any:
         raise e
 
 def go_all_dbs():
+    db_table_col_map = get_table_column_map_per_db_id()
     current_path = Path(__file__).resolve()
-    project_path = current_path.parent.parent
+    project_path = current_path.parent.parent.parent
     data_base_path = project_path / "data" / "dataset_spider_de" / "spider" / "database"
     for f in data_base_path.iterdir():
         sql_lite_path = data_base_path / f.name / f"{f.name}.sqlite"
+        if (f.name == "bike_1" or
+                f.name == "wta_1" or
+                f.name == "formula_1" or
+                f.name == "college_2" or
+                f.name == "sakila_1" or
+                f.name == "flight_4" or
+                f.name == "soccer_1" or
+                f.name == "baseball_1" or
+            f.name == "store_1"
+
+        ):
+            continue
+        sql_lite_path_str = str(sql_lite_path)
+        all_table_cols_of_db = db_table_col_map[f.name]
+
+        for table_col_map in all_table_cols_of_db:
+            for key, value in table_col_map.items():
+                table = key
+                columns = value
+                for column in columns:
+                    print(sql_lite_path_str)
+                    get_distinct_val_of_columns(sql_lite_path_str, table, column)
+
+
 
 
 
@@ -107,3 +132,4 @@ def get_distinct_val_of_columns(db_path: str, table: str, column: str):
     sql = f"SELECT DISTINCT `{column}` FROM `{table}`"
 
     query_result = execute_sql(db_path, sql)
+    print(query_result)
