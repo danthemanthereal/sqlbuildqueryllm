@@ -29,6 +29,37 @@ def get_table_column_map():
 
     return table_col_map
 
+def get_table_column_map_per_db_id():
+    schema_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/tables_de.json"
+    with open(schema_path, "r", encoding="utf-8") as f:
+        databases = json.load(f)
+
+    table_col_map_per_db_id = {}
+
+    for db in databases:
+        table_names = db["table_names"]
+        column_names = db["column_names"]
+        db_id = db["db_id"]
+
+        schema = defaultdict(list)
+
+        for table_idx, column_name in column_names:
+            if table_idx == -1:
+                continue
+            table_name = table_names[table_idx]
+            schema[table_name].append(column_name)
+
+        table_col_map = {}
+        for table, columns in schema.items():
+           table_col_map[table] = columns
+
+        if db_id in table_col_map_per_db_id:
+            table_col_map_per_db_id[db_id].append(table_col_map)
+        else:
+            table_col_map_per_db_id[db_id] = [table_col_map]
+
+    return table_col_map_per_db_id
+
 
 def execute_sql(db_path: str, sql: str, fetch: Union[str, int] = "all") -> Any:
     """
