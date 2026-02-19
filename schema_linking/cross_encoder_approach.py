@@ -3,6 +3,7 @@ from sentence_transformers import SentenceTransformer, util
 from data_preprocessing.german_spider_preprocessor import get_english_table_name
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, query_question_test_df
+from schema_linking.custom_e_sql.get_table_based_value_in_col import get_relevant_tables_of_question
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables, get_graph, get_foreign_keys_of_table
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -25,6 +26,7 @@ def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
     table_embeddings = model.encode(tables)
     threshold = 0.9
     relevant_tables = []
+    temp_german = []
 
     for i, token_emb in enumerate(token_embeddings):
         for j, table_emb in enumerate(table_embeddings):
@@ -48,6 +50,7 @@ def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
                         continue
                 #print(f" fks {possible_joined_tables}")
                 get_english = get_english_table_name(tables[j])
+               # temp_german.append(tables[j])
                 relevant_tables.append(get_english)
                # print("Table ", table_value)
                # matchingquery = query_question_test_df[query_question_test_df["question"] == question]
@@ -58,5 +61,9 @@ def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
                # print("Query ", query_value)
                # print(f"is in query {table_value in query_value}")
                 #print(f"Ähnlichkeit: {similarity:.3f}\n")
-
+    # add with value based
+    rel_tabes_based_col_values = get_relevant_tables_of_question(" ".join(sentence_tokens))
+    print(f"tables based on values ", relevant_tables)
+    for german_table in rel_tabes_based_col_values:
+        relevant_tables.append(get_english_table_name(german_table))
     return relevant_tables

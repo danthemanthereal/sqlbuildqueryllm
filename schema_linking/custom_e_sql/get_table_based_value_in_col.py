@@ -4,6 +4,7 @@ import sqlite3
 from collections import defaultdict
 from typing import Union, Any
 from pathlib import Path
+from rank_bm25 import BM25Okapi
 
 def get_table_column_map():
     schema_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/tables_de.json"
@@ -234,3 +235,21 @@ def construct_tokenized_db_table_value_corpus():
     tokenized_db_corpus = [doc.split(" ") for doc in corpus]
     # tokenized_db_corpus = [word_tokenize(doc) for doc in corpus if doc]  # takes too much time, so don't use it
     return tokenized_db_corpus, db_corpus
+
+def get_relevant_tables_of_question(question: str):
+    tokenized_db_corpus, db_corpuse = construct_tokenized_db_table_value_corpus()
+    bm25 = BM25Okapi(tokenized_db_corpus)
+
+    tokenized_query = question.split(" ")
+    scores = bm25.get_scores(tokenized_query)
+
+    import numpy as np
+
+    top_k = 5
+    top_indices = np.argsort(scores)[::-1][:top_k]
+
+    tables = []
+    for idx in top_indices:
+        table, column, value = db_corpuse[idx]
+        tables.append(table)
+    return tables
