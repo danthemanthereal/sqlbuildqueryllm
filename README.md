@@ -101,6 +101,21 @@ Schema Linking Ansätze:
          -> was noch hinzugefügt werden muss Spalte erkannt -> automatisch die Tabelle davon 
          -> werte in Db erkannt aus Frage -> spalte herausfinden -> Tabelle übergeben
 
+Um die Sachen die oben aufgefallen sind 
+ -> habe Tabellen die ähnlich heißen mit eingezogen visitor und Visistors 
+ -> pro db_id ein Knowledge Graph gebaut -> wenn Tabelle gleich heißen -> folgt nicht alle möglichkeiten 
+ -> hier vlt propleme noch ? 
+ -> vlt noch so per value suche Verbssern ? 
+
+ Ergebnisse 
+
+ hit min one table percentage  65.09 % + 9% 
+miss table percentage 5.51 %
+no table percentage 29.4 %
+precision 0.1 %
+recall 51.06 % + ca 20% 
+
+
 
   
 NER ? 
