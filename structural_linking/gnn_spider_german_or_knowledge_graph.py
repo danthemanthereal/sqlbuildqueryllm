@@ -245,6 +245,69 @@ def get_gold_tables_of_db(db_id, valid_index_list):
     filtered_tables = [table for idx, table in enumerate(all_tables) if idx in valid_index_list]
     return filtered_tables
 
+def build_kg_per_db_id():
+    all_kg = []
+    current_path = Path(__file__).resolve()
+    project_path = current_path.parent.parent
+    schema_path = project_path / "data" / "dataset_spider_de" / "multispider" / "with_english_value" / "tables_de.json"
+    schema_path_str = schema_path.as_posix()
+    schema = read_database_schema(schema_path_str)
+    for db_id, tables in schema.items():
+        G = nx.MultiDiGraph()
+        for table_name, table_obj in tables.items():
+
+            table_node = f"table:{table_name}"
+            G.add_node(table_node, type="table", db=db_id, name=table_name)
+
+            for col in table_obj.columns:
+                col_node = f"column:{table_name}.{col.name}"
+
+                G.add_node(col_node,
+                           type="column",
+                           name=col.name,
+                           table=table_name,
+                           column_type=col.column_type)
+
+                G.add_edge(table_node, col_node, relation="HAS_COLUMN")
+
+                if col.is_primary_key:
+                    G.add_edge(table_node, col_node, relation="PRIMARY_KEY")
+
+                if col.foreign_key:
+                    fk_table, fk_col = col.foreign_key.split(":")
+                    fk_node = f"column:{fk_table}.{fk_col}"
+                    G.add_edge(col_node, fk_node, relation="FOREIGN_KEY")
+        all_kg.append(G)
+    return all_kg
+
+def get_relations_per_db(table_name: str):
+    all_fks = []
+    all_kgs =  build_kg_per_db_id()
+    for G in all_kgs:
+
+        table_node = f"table:{table_name}"
+        fks = []
+
+        if table_node not in G:
+            continue
+
+        for neighbor in G.successors(table_node):
+            if G.nodes[neighbor].get("type") != "column":
+                continue
+
+            for _, target, edge_data in G.out_edges(neighbor, data=True):
+                if edge_data.get("relation") == "FOREIGN_KEY":
+                    fks.append({
+                        "column": G.nodes[neighbor]["name"],
+                        "references": target.replace("column:", "")
+                    })
+
+        all_fks.append(fks)
+    all_tables = []
+    for fks in all_fks:
+        for f in fks:
+            all_tables.append(f["references"].split(".")[0])
+    return all_tables
 
 """from pyvis.network import Network
 print(f"Knoten: {G.number_of_nodes()}")

@@ -10,7 +10,7 @@ from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
 from schema_linking.custom_resd_sql.cross_encoder import get_relevant_tables_and_columns
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, get_db_id_and_tables, \
-    get_all_tables_en
+    get_all_tables_en, get_relations_per_db
 from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
 from transformers import AutoTokenizer
 from torch import nn, cosine_similarity
@@ -152,6 +152,10 @@ for i, entry in enumerate(data):
             for table in relevant_tables:
                 tmp_similar_tables.extend(filter_aehnliche_woerter(table, all_tables_en))
             relevant_tables.extend(tmp_similar_tables)
+            possible_joined_tables = []
+            for table in relevant_tables:
+                possible_joined_tables.extend(get_relations_per_db(table))
+            relevant_tables.extend(possible_joined_tables)
             relevant_tables = list(dict.fromkeys(relevant_tables))
             print(f"relevant tables : {relevant_tables}")
             query = entry.get("query")
@@ -209,4 +213,3 @@ print(f"recall {get_percentage(recall_amount)} %")
     print(f"Query   : {row['query']}")
     print(f"Frage   : {row['question']}\n")
     get_similarity_tables_and_sentence([row['question']], row['question'])"""
-

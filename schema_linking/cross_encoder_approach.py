@@ -41,13 +41,7 @@ def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
                # print(f"Wort: {sentence_tokens[i]}")
                 #print(f"Table {tables[j]}")
                 english_table_name = get_english_table_name(tables[i])
-                possible_joined_tables = get_foreign_keys_of_table(english_table_name)
-                for rel_dict in possible_joined_tables:
-                    try:
-                        joined_table = rel_dict["references'"].split(".")[0]
-                        relevant_tables.append(joined_table)
-                    except Exception as e:
-                        continue
+
                 #print(f" fks {possible_joined_tables}")
                 get_english = get_english_table_name(tables[j])
                # temp_german.append(tables[j])
