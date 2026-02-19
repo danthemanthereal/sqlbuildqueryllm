@@ -5,6 +5,10 @@ from collections import defaultdict
 from typing import Union, Any
 from pathlib import Path
 from rank_bm25 import BM25Okapi
+from rapidfuzz import fuzz, process
+
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables_en
+
 
 def get_table_column_map():
     schema_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/tables_de.json"
@@ -251,5 +255,118 @@ def get_relevant_tables_of_question(question: str):
     tables = []
     for idx in top_indices:
         table, column, value = db_corpuse[idx]
+        tables.append(table)
+
+    tokenized_values_only, tokenized_values_col, db_corpus = build_corpora()
+    results_values_only = retrieve(question, tokenized_values_only, db_corpus, top_k=5)
+    results_values_col = retrieve(question, tokenized_values_col, db_corpus, top_k=5)
+    tables.extend(results_values_only)
+    tables.extend(results_values_col)
+
+    # get tables which writes similar
+    tables = list(dict.fromkeys(tables))
+    all_db_tables = get_all_tables_en()
+    simililar_tables_based_on_found = []
+    for table in tables:
+        similar_tables_raw = process.extract(
+            question,
+            all_db_tables,
+            scorer=fuzz.ratio,
+            score_cutoff=80
+        )
+        similar_tables = [candidate for candidate, score, idx in similar_tables_raw]
+        simililar_tables_based_on_found.extend(similar_tables)
+    return tables.extend(simililar_tables_based_on_found)
+
+
+
+def build_corpora():
+    """
+    Baut zwei parallele Korpora:
+    - values_only_corpus: nur die Werte (für values-only Retrieval)
+    - values_col_corpus: Werte + Spaltenname (für values+column Retrieval)
+    db_corpus: parallele Liste (table, column, value)
+    """
+    values_only_corpus = []
+    values_col_corpus = []
+    db_corpus = []
+
+    db_table_col_map = get_table_column_map_per_db_id()
+    db_table_col_map_german = get_table_column_map_per_db_id_german()
+    current_path = Path(__file__).resolve()
+    project_path = current_path.parent.parent.parent
+    data_base_path = project_path / "data" / "dataset_spider_de" / "spider" / "database"
+    for f in data_base_path.iterdir():
+        sql_lite_path = data_base_path / f.name / f"{f.name}.sqlite"
+        if (f.name == "bike_1" or
+                f.name == "wta_1" or
+                f.name == "formula_1" or
+                f.name == "college_2" or
+                f.name == "sakila_1" or
+                f.name == "flight_4" or
+                f.name == "soccer_1" or
+                f.name == "baseball_1" or
+                f.name == "store_1"
+
+        ):
+            continue
+        sql_lite_path_str = str(sql_lite_path)
+        all_table_cols_of_db = db_table_col_map[f.name]
+        all_table_cols_of_db_german = db_table_col_map_german[f.name]
+
+        for idx, table_col_map in enumerate(all_table_cols_of_db):
+            current_table_col_map_german = all_table_cols_of_db_german[idx]
+
+            for (eng_table, eng_columns), (ger_table, ger_columns) in zip(
+                    table_col_map.items(),
+                    current_table_col_map_german.items()
+            ):
+
+                for eng_column, ger_column in zip(eng_columns, ger_columns):
+                    values = execute_sql(
+                        sql_lite_path_str,
+                        f"SELECT DISTINCT `{eng_column}` FROM `{eng_table}`"
+                    )
+
+                    values = [str(v[0]) for v in values if v[0] is not None]
+
+                    if len(values) > 0:
+                        avg_len = sum(len(v) for v in values) / len(values)
+                        if avg_len > 600:
+                            values = [values[0]]
+
+                    for val in values:
+                        values_only_corpus.append(val.lower())
+
+                        values_col_corpus.append(f"{ger_column.lower()} {val.lower()}")
+
+                        db_corpus.append((ger_table, ger_column, val))
+
+
+
+    tokenized_values_only = [v.split() for v in values_only_corpus]
+    tokenized_values_col = [v.split() for v in values_col_corpus]
+
+    return tokenized_values_only, tokenized_values_col, db_corpus
+
+def retrieve(query, tokenized_corpus, db_corpus, top_k=5):
+    """
+    Allgemeine Retrieval-Funktion:
+    - tokenized_corpus: BM25 Tokenized Corpus
+    - db_corpus: parallele Liste (table, column, value)
+    """
+    bm25 = BM25Okapi(tokenized_corpus)
+    import re
+    import numpy as np
+    # Query Tokenization: nur Wörter/Zahlen
+    query_tokens = re.findall(r'\w+', query.lower())
+
+    scores = bm25.get_scores(query_tokens)
+    top_indices = np.argsort(scores)[::-1][:top_k]
+
+    results = []
+    tables = []
+    for idx in top_indices:
+        table, column, value = db_corpus[idx]
         tables.append(table)
     return tables

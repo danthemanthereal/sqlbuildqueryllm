@@ -63,7 +63,7 @@ def get_similarity_tables_and_sentence(sentence_tokens: list[str]):
                 #print(f"Ähnlichkeit: {similarity:.3f}\n")
     # add with value based
     rel_tabes_based_col_values = get_relevant_tables_of_question(" ".join(sentence_tokens))
-    print(f"tables based on values ", relevant_tables)
-    for german_table in rel_tabes_based_col_values:
-        relevant_tables.append(get_english_table_name(german_table))
+    if rel_tabes_based_col_values:
+        for german_table in rel_tabes_based_col_values:
+            relevant_tables.append(get_english_table_name(german_table))
     return relevant_tables

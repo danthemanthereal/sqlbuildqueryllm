@@ -177,6 +177,11 @@ def get_all_tables():
     tables = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "table"]
     return tables
 
+def get_all_tables_en():
+    G = get_graph()
+    tables = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "table"]
+    return tables
+
 def get_all_columns():
     G = get_graph()
     columns = [data["name"] for node, data in G.nodes(data=True) if data.get("type") == "column"]
