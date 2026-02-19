@@ -61,6 +61,38 @@ def get_table_column_map_per_db_id():
     return table_col_map_per_db_id
 
 
+def get_table_column_map_per_db_id_german():
+    schema_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/tables_de.json"
+    with open(schema_path, "r", encoding="utf-8") as f:
+        databases = json.load(f)
+
+    table_col_map_per_db_id = {}
+
+    for db in databases:
+        table_names = db["table_names"]
+        column_names = db["column_names"]
+        db_id = db["db_id"]
+
+        schema = defaultdict(list)
+
+        for table_idx, column_name in column_names:
+            if table_idx == -1:
+                continue
+            table_name = table_names[table_idx]
+            schema[table_name].append(column_name)
+
+        table_col_map = {}
+        for table, columns in schema.items():
+           table_col_map[table] = columns
+
+        if db_id in table_col_map_per_db_id:
+            table_col_map_per_db_id[db_id].append(table_col_map)
+        else:
+            table_col_map_per_db_id[db_id] = [table_col_map]
+
+    return table_col_map_per_db_id
+
+
 def execute_sql(db_path: str, sql: str, fetch: Union[str, int] = "all") -> Any:
     """
     Executes an SQL query on a database and fetches results.
@@ -122,14 +154,83 @@ def go_all_dbs():
                     print(sql_lite_path_str)
                     get_distinct_val_of_columns(sql_lite_path_str, table, column)
 
-
-
-
-
-
-
 def get_distinct_val_of_columns(db_path: str, table: str, column: str):
     sql = f"SELECT DISTINCT `{column}` FROM `{table}`"
 
     query_result = execute_sql(db_path, sql)
-    print(query_result)
+
+
+def construct_tokenized_db_table_value_corpus():
+
+    # generating corpus whose items are tokenized version of "table_name column_name value" for each value and table in the database.
+    corpus = []
+    db_corpus = []
+
+    # with my db schema
+    db_table_col_map = get_table_column_map_per_db_id()
+    db_table_col_map_german = get_table_column_map_per_db_id_german()
+    current_path = Path(__file__).resolve()
+    project_path = current_path.parent.parent.parent
+    data_base_path = project_path / "data" / "dataset_spider_de" / "spider" / "database"
+    for f in data_base_path.iterdir():
+        sql_lite_path = data_base_path / f.name / f"{f.name}.sqlite"
+        if (f.name == "bike_1" or
+                f.name == "wta_1" or
+                f.name == "formula_1" or
+                f.name == "college_2" or
+                f.name == "sakila_1" or
+                f.name == "flight_4" or
+                f.name == "soccer_1" or
+                f.name == "baseball_1" or
+                f.name == "store_1"
+
+        ):
+            continue
+        sql_lite_path_str = str(sql_lite_path)
+        all_table_cols_of_db = db_table_col_map[f.name]
+        all_table_cols_of_db_german = db_table_col_map_german[f.name]
+
+        for idx, table_col_map in enumerate(all_table_cols_of_db):
+            current_table_col_map_german = all_table_cols_of_db_german[idx]
+
+            for (eng_table, eng_columns), (ger_table, ger_columns) in zip(
+                    table_col_map.items(),
+                    current_table_col_map_german.items()
+            ):
+
+                for eng_column, ger_column in zip(eng_columns, ger_columns):
+
+                    col_distinct_values = execute_sql(
+                        sql_lite_path_str,
+                        f"SELECT DISTINCT `{eng_column}` FROM `{eng_table}`"
+                    )
+
+                    col_distinct_values = [
+                        str(value_tuple[0])
+                        for value_tuple in col_distinct_values
+                        if value_tuple[0]
+                    ]
+
+                    if len(col_distinct_values) > 0:
+                        average_length = sum(len(v) for v in col_distinct_values) / len(col_distinct_values)
+                    else:
+                        average_length = 0
+
+                    if average_length > 600:
+                        col_distinct_values = [col_distinct_values[0]]
+
+                    table_col_value_str = [
+                        f"{ger_table} {ger_column} {val}"
+                        for val in col_distinct_values
+                    ]
+                    corpus.extend(table_col_value_str)
+
+                    table_col_value_tuples = [
+                        (eng_table, eng_column, val)
+                        for val in col_distinct_values
+                    ]
+                    db_corpus.extend(table_col_value_tuples)
+
+    tokenized_db_corpus = [doc.split(" ") for doc in corpus]
+    # tokenized_db_corpus = [word_tokenize(doc) for doc in corpus if doc]  # takes too much time, so don't use it
+    return tokenized_db_corpus, db_corpus
