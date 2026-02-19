@@ -269,7 +269,7 @@ def get_relevant_tables_of_question(question: str):
     simililar_tables_based_on_found = []
     for table in tables:
         similar_tables_raw = process.extract(
-            question,
+            table,
             all_db_tables,
             scorer=fuzz.ratio,
             score_cutoff=80

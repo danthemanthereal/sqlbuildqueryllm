@@ -1,13 +1,16 @@
 import json
 import csv
 import os
+from difflib import SequenceMatcher
+
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
 from evaluation.eval_spider import execute_matching_check, check_precision, check_recall
 from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
 from schema_linking.custom_resd_sql.cross_encoder import get_relevant_tables_and_columns
-from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, get_db_id_and_tables
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, get_db_id_and_tables, \
+    get_all_tables_en
 from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
 from transformers import AutoTokenizer
 from torch import nn, cosine_similarity
@@ -82,6 +85,28 @@ with open(csv_file, "a", newline="", encoding="utf-8") as f:
 
 method = "cross-encoder"
 
+
+def filter_aehnliche_woerter(zielwort, wortliste, threshold=0.6, ignore_case=True):
+    """
+    Gibt nur die Wörter zurück, deren Ähnlichkeit >= threshold ist.
+
+    :param zielwort: Referenzwort
+    :param wortliste: Liste von Wörtern
+    :param threshold: Mindestähnlichkeit (0–1)
+    :param ignore_case: Groß-/Kleinschreibung ignorieren
+    :return: Gefilterte Liste
+    """
+    if ignore_case:
+        zielwort = zielwort.lower()
+
+    def aehnlichkeit(wort):
+        if ignore_case:
+            wort = wort.lower()
+        return SequenceMatcher(None, zielwort, wort).ratio()
+
+    return [wort for wort in wortliste if aehnlichkeit(wort) >= threshold]
+
+
 def _get_relevant_tables(question_as_list: list[str]) -> list:
     return get_similarity_tables_and_sentence(question_as_list)
 
@@ -122,6 +147,12 @@ for i, entry in enumerate(data):
              #get_relevant_tables_and_columns(entry.get("question"))
             relevant_tables =  _get_relevant_tables(entry.get("question").split(" "))
             relevant_tables = [table for table in relevant_tables if table != ' ']
+            tmp_similar_tables = []
+            all_tables_en = get_all_tables_en()
+            for table in relevant_tables:
+                tmp_similar_tables.extend(filter_aehnliche_woerter(table, all_tables_en))
+            relevant_tables.extend(tmp_similar_tables)
+            relevant_tables = list(dict.fromkeys(relevant_tables))
             print(f"relevant tables : {relevant_tables}")
             query = entry.get("query")
             query_lower = query.lower()
