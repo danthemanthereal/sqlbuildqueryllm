@@ -115,6 +115,23 @@ no table percentage 29.4 %
 precision 0.1 %
 recall 51.06 % + ca 20% 
 
+Mögliche Ansätze die man es gibt von Paper 
+
+1. SQL Query generieren
+   
+-> zuerst SQL generieren -> anhand der dann Bedingungen bestimmen -> E SQL -> Wert der Bedingung in den Spalten suchen und ähnliche finden 
+-> dies dann in Prompt geben mit ganzen Schema oder Schema aus LLm antwort was denkt sind wichtigsten
+
+-> Frage -> erste Generieren -> daruch wissen welche Tabellen / Spalten gebraucht -> noch einmal generieren lassen -> aus der Spalte bekommen : RAT Methode 
+
+2. LLM antwort
+
+-> C3: bekommt aus Prompt wo man Frage und ganzes Schema sendet 
+
+3. Embedden aus
+
+-> A Link 
+
 
 
   
