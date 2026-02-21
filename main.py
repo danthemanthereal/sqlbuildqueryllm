@@ -122,7 +122,7 @@ def get_table_index(schema_entry):
     return table_index
 
 
-json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_english_value/dev_de.json"
+json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 hit_counter = 0
 miss_counter = 0
 no_table_counter = 0
@@ -146,7 +146,7 @@ for i, entry in enumerate(data):
             found_no_tables = False
             print(f"question {entry.get('question')}")
              #get_relevant_tables_and_columns(entry.get("question"))
-            relevant_tables, matched_value = get_relevant_c3_tables(" ".join(entry.get('question_toks')))
+           # relevant_tables, matched_value = get_relevant_c3_tables(" ".join(entry.get('question_toks')))
             """_get_relevant_tables(entry.get("question").split(" "))
             relevant_tables = [table for table in relevant_tables if table != ' ']
             tmp_similar_tables = []
@@ -160,7 +160,7 @@ for i, entry in enumerate(data):
             relevant_tables.extend(possible_joined_tables)"""
             relevant_tables = list(dict.fromkeys(relevant_tables))
             print(f"predicted tables : {relevant_tables}")
-            print(f"matched values : {matched_value}")
+           # print(f"matched values : {matched_value}")
             query = entry.get("query")
             query_lower = query.lower()
             if not relevant_tables:
