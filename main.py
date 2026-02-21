@@ -8,6 +8,7 @@ from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_
 from evaluation.eval_spider import execute_matching_check, check_precision, check_recall
 from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
+from schema_linking.custom_e_sql.get_table_based_value_in_col import get_relevant_c3_tables
 from schema_linking.custom_resd_sql.cross_encoder import get_relevant_tables_and_columns
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, get_db_id_and_tables, \
     get_all_tables_en, get_relations_per_db
@@ -145,7 +146,9 @@ for i, entry in enumerate(data):
             found_no_tables = False
             print(f"question {entry.get('question')}")
              #get_relevant_tables_and_columns(entry.get("question"))
-            relevant_tables =  _get_relevant_tables(entry.get("question").split(" "))
+            relevant_tables = get_relevant_c3_tables(entry.get('question'))
+
+            """_get_relevant_tables(entry.get("question").split(" "))
             relevant_tables = [table for table in relevant_tables if table != ' ']
             tmp_similar_tables = []
             all_tables_en = get_all_tables_en()
@@ -155,9 +158,9 @@ for i, entry in enumerate(data):
             possible_joined_tables = []
             for table in relevant_tables:
                 possible_joined_tables.extend(get_relations_per_db(table))
-            relevant_tables.extend(possible_joined_tables)
+            relevant_tables.extend(possible_joined_tables)"""
             relevant_tables = list(dict.fromkeys(relevant_tables))
-            print(f"relevant tables : {relevant_tables}")
+            print(f"predicted tables : {relevant_tables}")
             query = entry.get("query")
             query_lower = query.lower()
             if not relevant_tables:
