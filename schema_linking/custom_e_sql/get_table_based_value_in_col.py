@@ -11,7 +11,7 @@ from rapidfuzz import fuzz, process
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables_en
 
 
-_stopwords = {
+_stopwords_ger = {
     'aber', 'alle', 'allem', 'allen', 'aller', 'alles', 'als', 'also', 'am',
     'an', 'ander', 'andere', 'anderem', 'anderen', 'anderer', 'anderes',
     'anderm', 'andern', 'anderr', 'anders', 'auch', 'auf', 'aus', 'bei',
@@ -53,7 +53,9 @@ _stopwords = {
     'zwar', 'zwischen'
 }
 
-_commonwords = {"nein", "viele", "ja"}
+_stopwords = {'who', 'ourselves', 'down', 'only', 'were', 'him', 'at', "weren't", 'has', 'few', "it's", 'm', 'again', 'd', 'haven', 'been', 'other', 'we', 'an', 'own', 'doing', 'ma', 'hers', 'all', "haven't", 'in', 'but', "shouldn't", 'does', 'out', 'aren', 'you', "you'd", 'himself', "isn't", 'most', 'y', 'below', 'is', "wasn't", 'hasn', 'them', 'wouldn', 'against', 'this', 'about', 'there', 'don', "that'll", 'a', 'being', 'with', 'your', 'theirs', 'its', 'any', 'why', 'now', 'during', 'weren', 'if', 'should', 'those', 'be', 'they', 'o', 't', 'of', 'or', 'me', 'i', 'some', 'her', 'do', 'will', 'yours', 'for', 'mightn', 'nor', 'needn', 'the', 'until', "couldn't", 'he', 'which', 'yourself', 'to', "needn't", "you're", 'because', 'their', 'where', 'it', "didn't", 've', 'whom', "should've", 'can', "shan't", 'on', 'had', 'have', 'myself', 'am', "don't", 'under', 'was', "won't", 'these', 'so', 'as', 'after', 'above', 'each', 'ours', 'hadn', 'having', 'wasn', 's', 'doesn', "hadn't", 'than', 'by', 'that', 'both', 'herself', 'his', "wouldn't", 'into', "doesn't", 'before', 'my', 'won', 'more', 'are', 'through', 'same', 'how', 'what', 'over', 'll', 'yourselves', 'up', 'mustn', "mustn't", "she's", 're', 'such', 'didn', "you'll", 'shan', 'when', "you've", 'themselves', "mightn't", 'she', 'from', 'isn', 'ain', 'between', 'once', 'here', 'shouldn', 'our', 'and', 'not', 'too', 'very', 'further', 'while', 'off', 'couldn', "hasn't", 'itself', 'then', 'did', 'just', "aren't"}
+
+_commonwords = {"no", "yes", "many"}
 
 class Match(object):
     def __init__(self, start: int, size: int) -> None:
@@ -62,7 +64,7 @@ class Match(object):
 
 
 def is_span_separator(c: str) -> bool:
-    return c in "'\"()`,.?! "
+    return c in "'\"()`,.?!„ "
 
 def get_effective_match_source(s: str, start: int, end: int) -> Match:
     _start = -1
