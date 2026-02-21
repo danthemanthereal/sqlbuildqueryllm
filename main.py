@@ -2,11 +2,14 @@ import json
 import csv
 import os
 from difflib import SequenceMatcher
+from time import sleep
 
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
 from evaluation.eval_spider import execute_matching_check, check_precision, check_recall
+from llm_components.groq.groq_llm_componnet import get_tables_groq
 from llm_components.slim_sql_llm import get_sql_query
+from schema_linking.c3_approach.tabell_recall_with_c3 import get_all_table_with_cols
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
 from schema_linking.custom_e_sql.get_table_based_value_in_col import get_relevant_c3_tables
 from schema_linking.custom_resd_sql.cross_encoder import get_relevant_tables_and_columns
@@ -144,6 +147,9 @@ for i, entry in enumerate(data):
             found_some_table = False
             found_only_relevant_tables = False
             found_no_tables = False
+            groq_answer = get_tables_groq(entry.get('question'),i)
+            sleep(60)
+            print("groq answer: ", groq_answer)
             print(f"question {entry.get('question')}")
              #get_relevant_tables_and_columns(entry.get("question"))
            # relevant_tables, matched_value = get_relevant_c3_tables(" ".join(entry.get('question_toks')))
@@ -158,6 +164,7 @@ for i, entry in enumerate(data):
             for table in relevant_tables:
                 possible_joined_tables.extend(get_relations_per_db(table))
             relevant_tables.extend(possible_joined_tables)"""
+            relevant_tables = []
             relevant_tables = list(dict.fromkeys(relevant_tables))
             print(f"predicted tables : {relevant_tables}")
            # print(f"matched values : {matched_value}")
