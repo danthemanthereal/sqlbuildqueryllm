@@ -484,6 +484,7 @@ def get_relevant_c3_tables(question: str):
     project_path = current_path.parent.parent.parent
     data_base_path = project_path / "data" / "dataset_spider_de" / "spider" / "database"
     matched_tables = []
+    matches = []
     for f in data_base_path.iterdir():
         sql_lite_path = data_base_path / f.name / f"{f.name}.sqlite"
         if (f.name == "bike_1" or
@@ -512,7 +513,7 @@ def get_relevant_c3_tables(question: str):
                     picklist = [ele.strip() for ele in picklist if isinstance(ele, str)]
                     # picklist is unordered, we sort it to ensure the reproduction stability
                     picklist = sorted(picklist)
-                    matches = []
+
                     if picklist and isinstance(picklist[0], str):
                         matched_entries = get_matched_entries(
                             s=question,
@@ -539,7 +540,7 @@ def get_relevant_c3_tables(question: str):
                                     if num_values_inserted >= 2:
                                         break
 
-    return matched_tables
+    return matched_tables, matches
 
 
 def get_column_picklist(table_name: str, column_name: str, db_path: str) -> list:
