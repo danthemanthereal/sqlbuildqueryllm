@@ -147,10 +147,10 @@ for i, entry in enumerate(data):
             found_some_table = False
             found_only_relevant_tables = False
             found_no_tables = False
-            groq_answer = get_tables_groq(entry.get('question'),i)
+            """groq_answer = get_tables_groq(entry.get('question'),i)
             sleep(60)
             print("groq answer: ", groq_answer)
-            print(f"question {entry.get('question')}")
+            print(f"question {entry.get('question')}")"""
              #get_relevant_tables_and_columns(entry.get("question"))
            # relevant_tables, matched_value = get_relevant_c3_tables(" ".join(entry.get('question_toks')))
             """_get_relevant_tables(entry.get("question").split(" "))
