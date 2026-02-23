@@ -175,7 +175,7 @@ for i, entry in enumerate(data):
             for table in relevant_tables:
                 possible_joined_tables.extend(get_relations_per_db(table))
             relevant_tables.extend(possible_joined_tables)"""
-            r, f = get_top_k_columns(entry.get("question"), entry.get("db_id"))
+            r = get_top_k_columns(entry.get("question"))
             relevant_tables = [dict.get("metadata", {}).get("table", " ") for dict in r]
             relevant_tables = list(dict.fromkeys(relevant_tables))
             relevant_tables = [get_english_table_name(table) for table in relevant_tables]
