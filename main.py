@@ -1,3 +1,10 @@
-from schema_linking.custom_link_align.create_vector_index_per_db import build_index_per_db
+import os
 
-build_index_per_db()
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
+os.environ["NUMEXPR_NUM_THREADS"] = "1"
+
+from schema_linking.custom_auto_link.vector_db_faiss import embed_documents
+
+embed_documents(batch_size=1024)
