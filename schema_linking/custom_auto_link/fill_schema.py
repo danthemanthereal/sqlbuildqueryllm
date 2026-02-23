@@ -889,6 +889,14 @@ def get_tables_with_tools(question: str):
         ]
     }#[]  TODO aus ersten 5 ergebnisse von Tabelle , alle spalten und fk holen
     all_tables = get_all_tables()
+    print(SCHEMA_LINKING)
+    print("##")
+    print(USER_INPUT.format(
+                USER_QUESTION=question,
+                RETRIEVED_SCHEMA=retrieved_schema,
+                ALL_TABLES=all_tables,
+                EXTERNAL_KNOWLEDGE=""
+            ))
     for i in range(10):
         with model.chat_session(system_prompt=SCHEMA_LINKING) as session:
             response = session.generate(USER_INPUT.format(
@@ -898,3 +906,4 @@ def get_tables_with_tools(question: str):
                 EXTERNAL_KNOWLEDGE=""
             ))
             print(response)
+            # hier dann je nach aktion entweder aufhören oder schema erweitern
