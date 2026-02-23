@@ -130,7 +130,30 @@ Mögliche Ansätze die man es gibt von Paper
 
 3. Embedden aus
 
--> A Link 
+
+
+Ergebnisse mit e5 embedding model basierend RAG auf Auto Link Ansatz: 
+
+Mit db angegeben 
+
+hit min one table percentage  94.78 %
+miss table percentage 5.22 %
+no table percentage 0.0 %
+precision 16.34 %
+recall 74.95 %
+
+
+Wenn man von allen dies Indexe aufmeinmal vergleicht und sammelt nimmt 
+
+hit min one table percentage  79.4 %
+miss table percentage 20.6 %
+no table percentage 0.0 %
+precision 0.68 %
+recall 51.35 %
+
+-> wie man evntuell verbessern kann 
+-> PCA und dann top 10 
+-> Werte aus Spalte und Beschreibungen mit embedden 
 
 
 
