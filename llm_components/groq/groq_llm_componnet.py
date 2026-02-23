@@ -34,3 +34,26 @@ def get_tables_groq(question: str, index ) -> str:
     )
 
     return chat_completion.choices[0].message.content
+
+
+
+def get_action_in_auto_link_groq(question: str, prompt: str ) -> str:
+
+    api_key = get_api_key(0)
+
+    client = Groq(
+        api_key=
+        api_key
+    )
+
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": prompt,
+            }
+        ],
+        model=model_name,
+    )
+
+    return chat_completion.choices[0].message.content
