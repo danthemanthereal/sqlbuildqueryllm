@@ -1,6 +1,7 @@
 import json
 import os
 
+from data_preprocessing.german_spider_preprocessor import get_english_table_name
 from schema_linking.custom_auto_link.retrieval_of_faiss_db import get_top_k_columns
 
 os.environ["OMP_NUM_THREADS"] = "1"
@@ -152,6 +153,7 @@ for i, entry in enumerate(data):
         if not file_exists:
             writer.writerow(header)
         question = "".join(entry.get("question"))
+        print("Frage ", question)
         if entry.get('question'):
             found_some_table = False
             found_only_relevant_tables = False
@@ -174,10 +176,9 @@ for i, entry in enumerate(data):
                 possible_joined_tables.extend(get_relations_per_db(table))
             relevant_tables.extend(possible_joined_tables)"""
             r, f = get_top_k_columns(entry.get("question"), entry.get("db_id"))
-            print("foltered result", r)
-            print("foltered metadaten", f)
-            relevant_tables = []
+            relevant_tables = [dict.get("metadata", {}).get("table", " ") for dict in r]
             relevant_tables = list(dict.fromkeys(relevant_tables))
+            relevant_tables = [get_english_table_name(table) for table in relevant_tables]
             print(f"predicted tables : {relevant_tables}")
            # print(f"matched values : {matched_value}")
             query = entry.get("query")
