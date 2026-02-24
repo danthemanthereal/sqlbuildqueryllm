@@ -41,7 +41,7 @@ def find_columns_by_semantic(question: str, keywords: list, hint: str):
 
     to_embed_strings.extend(column_strings)
     to_embed_strings.append(question_hint_string)
-
+    multi_lang_version = "intfloat/multilingual-e5-small"
     model = SentenceTransformer("intfloat/e5-small-v2")
 
     column_strings = [
