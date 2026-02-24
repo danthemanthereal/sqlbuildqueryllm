@@ -1,5 +1,6 @@
 from llm_components.groq.groq_llm_componnet import get_action_in_auto_link_groq
-from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables, get_all_tables_en
+import requests
 
 SCHEMA_LINKING = """
 You are an expert in schema linking -- finding relevant tables and columns based on user question.
@@ -647,8 +648,7 @@ SQLite Optimization Strategies:
 def get_tables_with_tools(question: str):
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
-    from gpt4all import GPT4All
-    model = GPT4All("orca-mini-3b-gguf2-q4_0.gguf")
+
     retrieved_schema = {
         "column_names": [
             [
@@ -888,22 +888,139 @@ def get_tables_with_tools(question: str):
             "singer_in_concert"
         ]
     }#[]  TODO aus ersten 5 ergebnisse von Tabelle , alle spalten und fk holen
-    all_tables = get_all_tables()
-    print(SCHEMA_LINKING)
-    print("##")
-    print(USER_INPUT.format(
-                USER_QUESTION=question,
-                RETRIEVED_SCHEMA=retrieved_schema,
-                ALL_TABLES=all_tables,
-                EXTERNAL_KNOWLEDGE=""
-            ))
-    for i in range(10):
-        with model.chat_session(system_prompt=SCHEMA_LINKING) as session:
-            response = session.generate(USER_INPUT.format(
-                USER_QUESTION=question,
-                RETRIEVED_SCHEMA=retrieved_schema,
-                ALL_TABLES=all_tables,
-                EXTERNAL_KNOWLEDGE=""
-            ))
-            print(response)
-            # hier dann je nach aktion entweder aufhören oder schema erweitern
+    all_tables = get_all_tables_en()
+
+
+    """r = requests.post(
+            "http://localhost:11434/api/generate",
+            json={
+                "model": "tinyllama",
+                "messages": [
+                    {"role": "system",
+                     "content": "You get a Question. And a List of Tables. Return a List with Tables you think are relevant for answer the question"},
+                    {"role": "user", "content": f"Question: {question} All poosible Tables {all_tables}" }
+                ],
+                "stream": False
+            }
+        )
+    print(r.json())"""
+    prompt = f"""
+    You are an SQL expert. Your task is to identify relevant tables for a question.
+
+    - Here is a list of tables (in German, do NOT translate them):
+
+    {all_tables}
+
+    - Question: "{question}"
+
+    Instructions:
+    1. Respond **ONLY with the table names from the list** that are relevant to answer the question.
+    2. Do NOT give any explanations, translations, examples, or extra text.
+    3. Separate the table names by commas or new lines.
+    4. If no table is relevant, respond with an empty string.
+    """
+    print(prompt)
+    print("####")
+    for i in range(11):
+        r = requests.post(
+            "http://localhost:11434/api/generate",
+            json={
+                "model": "tinyllama",
+                "prompt": prompt,
+                "stream": False
+            }
+        )
+        print(r.json()["response"])
+        # hier dann je nach aktion entweder aufhören oder schema erweitern
+
+        # action: stop -> fertig
+        # action schema_retrieval -> nach ähnlichen suchen
+        # action sql_execution -> generierte SQL ausführen und verbssern so execution fehler usw
+
+
+# action schema retrival
+"""
+question =  retrieve_content = "column name: " + column + "\n" + \
+                                       "table name: " + table + "\n" + \
+                                       "description: " + description
+                                       
+                                       => davor aktion brauche tabelle Auto ,Besucher ...
+                                       => werde in allen faiss nach Einträgen gesucht semnatisch ähnlich zu 
+def get_next_k_results(instance_id: str, question: str, db_name: str, embed_path: str, 
+                      top_k: int, cache_dir: str, status_dir: str, device: str):
+    cache = load_instance_cache(instance_id, cache_dir)
+    status = load_instance_status(instance_id, status_dir)
+    
+    used_indices = set(cache.get("used_indices", []))
+    
+    if status.get("is_complete", False):
+        print(f"Instance {instance_id} retrieve all completed.")
+        return [], {}, "All columns in this databases are retrieved. There is no need to retrieve again."
+    
+    results, total_available = _retrieve_with_device_filtered(
+        question=question,
+        db_name=db_name, 
+        embed_path=embed_path,
+        excluded_indices=used_indices,
+        top_k=top_k,
+        device=device
+    )
+    
+    if status.get("total_available", 0) == 0:
+        status["total_available"] = total_available
+    
+    new_used_indices = [int(result["index"]) for result in results]
+    all_used_indices = list(used_indices) + new_used_indices
+    
+    cache["used_indices"] = all_used_indices
+    save_instance_cache(instance_id, cache_dir, cache)
+    
+    used_count = len(all_used_indices)
+    remaining_count = total_available - used_count
+    is_complete = len(results) < top_k or remaining_count <= 0
+    
+    status = {
+        "is_complete": is_complete,
+        "total_available": int(total_available), 
+        "used_count": int(used_count),
+        "remaining_count": int(remaining_count)
+    }
+    save_instance_status(instance_id, status_dir, status)
+    
+    metadata_mapping = {}
+    for result in results:
+        metadata_mapping[result["index"]] = result["metadata"]
+    
+    if is_complete:
+        return results, metadata_mapping, "All columns in this databases are retrieved. There is no need to retrieve again."
+    else:
+        return results, metadata_mapping, ""
+        
+        
+        def _retrieve_with_device_filtered(question: str, db_name: str, embed_path: str, 
+                                 excluded_indices: set, top_k: int = 5, device: str = "cuda:0"):
+    from model_manager import model_manager
+    index_path = os.path.join(embed_path, db_name, "index.faiss")
+    index = faiss.read_index(index_path)
+    metadata_path = os.path.join(embed_path, db_name, "metadata.json")
+    with open(metadata_path, "r", encoding="utf-8") as f:
+        metadata_mapping = json.load(f)
+    model_manager.load_model(device=device)
+    question_embedding = model_manager.encode(question)
+    distances, indices = index.search(question_embedding.reshape(1, -1), len(metadata_mapping))
+    filtered_results = []
+    
+    for i in range(len(indices[0])):
+        idx = int(indices[0][i])
+        if 0 <= idx < len(metadata_mapping) and idx not in excluded_indices:
+            metadata = metadata_mapping[idx]
+            filtered_results.append({
+                "index": idx,
+                "distance": float(distances[0][i]),
+                "metadata": metadata
+            })
+            if len(filtered_results) >= top_k:
+                break
+    
+    return filtered_results, len(metadata_mapping)
+"""
