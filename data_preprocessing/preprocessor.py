@@ -7,15 +7,15 @@ nlp = spacy.load("de_core_news_sm")
 def reprocess(text:str):
     tokens = _tokenize(text)
     non_stop_word_tokens = _get_non_stop_words(tokens)
-    lemmatizes = _lemmatize(non_stop_word_tokens)
+    #lemmatizes = _lemmatize(non_stop_word_tokens)
     #pos_tags = _get_pos_tag(tokens) # anwenden auf non stop tokens ?
-    return lemmatizes
+    return non_stop_word_tokens
 
 def _tokenize(text: str):
     return nlp(text)
 
 def _get_non_stop_words(tokens):
-    return [token for token in tokens if not _is_full_word_or_punctuation(token)]
+    return [token.text for token in tokens if not _is_full_word_or_punctuation(token)]
 
 def _is_full_word_or_punctuation(token)->bool:
     return token.is_stop or token.is_punct or token.is_space # token.text.strip() ?
