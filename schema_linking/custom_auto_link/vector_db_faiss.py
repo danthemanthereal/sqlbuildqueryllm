@@ -82,7 +82,7 @@ def embed_documents(batch_size: int = 32):
                 "table": table_name,
                 "column": col_name,
                 "column_type": column_data_type,
-                "column_value": distinct_values_of_current_col,
+                "column_value": column_values,
 
             })
             idx_col += 1
