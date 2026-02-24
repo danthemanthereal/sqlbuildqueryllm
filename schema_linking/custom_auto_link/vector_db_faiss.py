@@ -1,11 +1,14 @@
 import sqlite3
 import numpy as np
 import faiss
+
 faiss.omp_set_num_threads(1)
 import os
 import json
 from sentence_transformers import SentenceTransformer
+
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 
 def embed_documents(batch_size: int = 32):
     model = SentenceTransformer('intfloat/e5-small-v2')
@@ -21,19 +24,45 @@ def embed_documents(batch_size: int = 32):
         tables = db["table_names"]
         columns = db["column_names"]
         column_types = db["column_types"]
+        original_tables = db["table_names_original"]
+        original_columns = db["column_names_original"]
         all_descriptions = []
         metadata_mapping = []
         idx_col = 0
         embedd_fais_dict_path = f"/Users/danielschmidt/Desktop/sqlbuildqueryllm/schema_linking/custom_auto_link/embedded_documents/{db_id}"
 
         for ind, (table_ind, col_name) in enumerate(columns):
+            if col_name == "*":
+                continue
             col_info = dict()
             col_info["column_name"] = col_name
             table_name = tables[table_ind]
+            english_col_tupel = original_columns[ind]
+            english_table_id = english_col_tupel[0]
+            english_table = original_tables[english_table_id]
+            english_col_name = english_col_tupel[1]
             column_data_type = column_types[idx_col]
-            description = (f"Tablle: {table_name}"
-                           f"Spalte: {col_name}"
-                           f"Datentyp: {column_data_type}")
+            column_values = []
+            no_file_exists = [
+                "bike_1",
+                "wta_1",
+                "formula_1",
+                "college_2",
+                "sakila_1",
+                "flight_4",
+                "soccer_1",
+                "baseball_1",
+                "store_1"
+            ]
+            if db_id not in no_file_exists:
+                column_values = get_column_distinct_column_values(english_table,
+                                                                  english_col_name,
+                                                                  db_id)
+
+            description = (f"Tabelle: {table_name}\n"
+                           f"Spalte: {col_name}\n"
+                           f"Datentyp: {column_data_type}\n"
+                           f"Werte: {column_values}")
             all_descriptions.append(description)
             distinct_values_of_current_col = []
             invalid_dbs = [
@@ -48,12 +77,12 @@ def embed_documents(batch_size: int = 32):
             ]
             if db_id not in invalid_dbs:
                 pass
-                #distinct_values_of_current_col = get_column_distinct_column_values(table_name, col_name, db_id)
+                # distinct_values_of_current_col = get_column_distinct_column_values(table_name, col_name, db_id)
             metadata_mapping.append({
                 "table": table_name,
                 "column": col_name,
                 "column_type": column_data_type,
-               # "column_value": distinct_values_of_current_col,
+                "column_value": distinct_values_of_current_col,
 
             })
             idx_col += 1
@@ -61,7 +90,11 @@ def embed_documents(batch_size: int = 32):
         db_embeddings = []
         for i in range(0, len(all_descriptions), batch_size):
             batch_descriptions = all_descriptions[i:i + batch_size]
-            batch_embeddings = model.encode(batch_descriptions, convert_to_numpy=True)
+            batch_embeddings = model.encode(
+                batch_descriptions,
+                convert_to_numpy=True,
+                batch_size=batch_size,
+                device="cpu", )
             db_embeddings.extend(batch_embeddings)
 
         dimension = len(db_embeddings[0])
