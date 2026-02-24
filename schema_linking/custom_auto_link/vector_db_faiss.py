@@ -55,14 +55,15 @@ def embed_documents(batch_size: int = 32):
                 "store_1"
             ]
             if db_id not in no_file_exists:
-                column_values = get_column_distinct_column_values(english_table,
-                                                                  english_col_name,
-                                                                  db_id)
+                pass
+              ##  column_values = get_column_distinct_column_values(english_table,
+                #                                                  english_col_name,
+                 #                                                 db_id)
 
             description = (f"Tabelle: {table_name}\n"
                            f"Spalte: {col_name}\n"
-                           f"Datentyp: {column_data_type}\n"
-                           f"Werte: {column_values}")
+                           f"Datentyp: {column_data_type}\n")
+                          # f"Werte: {column_values}")
             all_descriptions.append(description)
             distinct_values_of_current_col = []
             invalid_dbs = [
@@ -82,7 +83,7 @@ def embed_documents(batch_size: int = 32):
                 "table": table_name,
                 "column": col_name,
                 "column_type": column_data_type,
-                "column_value": column_values,
+              #  "column_value": column_values,
 
             })
             idx_col += 1
