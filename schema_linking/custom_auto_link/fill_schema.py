@@ -888,7 +888,7 @@ def get_tables_with_tools(question: str):
             "singer_in_concert"
         ]
     }#[]  TODO aus ersten 5 ergebnisse von Tabelle , alle spalten und fk holen
-    all_tables = get_all_tables_en()
+    all_tables = get_all_tables()
 
 
     """r = requests.post(
@@ -904,33 +904,32 @@ def get_tables_with_tools(question: str):
             }
         )
     print(r.json())"""
-    prompt = f"""
-    You are an SQL expert. Your task is to identify relevant tables for a question.
 
-    - Here is a list of tables (in German, do NOT translate them):
-
-    {all_tables}
-
-    - Question: "{question}"
-
-    Instructions:
-    1. Respond **ONLY with the table names from the list** that are relevant to answer the question.
-    2. Do NOT give any explanations, translations, examples, or extra text.
-    3. Separate the table names by commas or new lines.
-    4. If no table is relevant, respond with an empty string.
-    """
-    print(prompt)
-    print("####")
-    for i in range(11):
-        r = requests.post(
-            "http://localhost:11434/api/generate",
+   # for i in range(11):
+    r = requests.post(
+            "http://localhost:11434/api/chat",
             json={
-                "model": "tinyllama",
-                "prompt": prompt,
+                "model": "llama3",
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": SCHEMA_LINKING
+                    },
+                    {
+                        "role": "user",
+                        "content": USER_INPUT.format(
+                            RETRIEVED_SCHEMA=retrieved_schema,
+                            ALL_TABLES=all_tables,
+                            USER_QUESTION=question,
+                            EXTERNAL_KNOWLEDGE=""
+                        )
+                    }
+                ],
                 "stream": False
             }
         )
-        print(r.json()["response"])
+    response = r.json()
+    print(response["message"]["content"])
         # hier dann je nach aktion entweder aufhören oder schema erweitern
 
         # action: stop -> fertig
