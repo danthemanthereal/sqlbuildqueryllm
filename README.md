@@ -156,6 +156,17 @@ recall 51.35 %
 -> Werte aus Spalte und Beschreibungen mit embedden 
 
 
+Hier wie oben der Gleiche Ansazt dass die Werte aus den Tabellen genommen wurde beim embedden : 
+
+hit min one table percentage  74.95 %
+miss table percentage 25.05 %
+no table percentage 0.0 %
+precision 0.0 %
+recall 41.59 %
+
+=> etwas schlechter : vlt etwas schlechter weil in der Datenbank die Werte auf englisch stehen und Gefragt auf deutsch wird 
+
+
 
   
 NER ? 
