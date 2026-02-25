@@ -2,14 +2,25 @@
 # Dieser Code definiert eine Klasse RetrieveEntity,
 # die aus einer Frage und einem Hinweis (Hint)
 # automatisch relevante Spalten und Werte einer Datenbank identifiziert.
-from typing import List, Tuple, Optional
+# fokus auf inhalte der datenbank
+from typing import List, Tuple, Optional, Dict
 from sentence_transformers import SentenceTransformer
 import difflib
 import numpy as np
 
 from schema_linking.custom_chess_agentframe_work.db_schema_ln_this_approach import get_db_schema_dict
 
-
+def get_predicted_tables(keywords: List[str], question: str, hint: str):
+    selected_columns = {}
+    selected_tables = []
+    similar_columns = find_columns_by_semantic(keywords=keywords, question=question, hint=hint)
+    for table_name, column_name in similar_columns:
+        selected_tables.append(table_name)
+        if table_name not in selected_columns:
+            selected_columns[table_name] = []
+        if column_name not in selected_columns[table_name]:
+            selected_columns[table_name].append(column_name)
+    return selected_columns, selected_tables
 def get_similar_columns(question: str, key_words: list) -> list:
     pass
 
@@ -42,7 +53,7 @@ def find_columns_by_semantic(question: str, keywords: list, hint: str):
     to_embed_strings.extend(column_strings)
     to_embed_strings.append(question_hint_string)
     multi_lang_version = "intfloat/multilingual-e5-small"
-    model = SentenceTransformer("intfloat/e5-small-v2")
+    model = SentenceTransformer(multi_lang_version)
 
     column_strings = [
             f"passage: `{table}`.`{column}`"
@@ -118,7 +129,7 @@ def extract_paranthesis(string: str) -> List[str]:
     return matches
 
 
-def _does_keyword_match_column(self, keyword: str, column_name: str, threshold: float = 0.9) -> bool:
+def _does_keyword_match_column(keyword: str, column_name: str, threshold: float = 0.9) -> bool:
     """
     Checks if a keyword matches a column name based on similarity.
 
@@ -134,3 +145,32 @@ def _does_keyword_match_column(self, keyword: str, column_name: str, threshold: 
     column_name = column_name.lower().replace(" ", "").replace("_", "").rstrip("s")
     similarity = difflib.SequenceMatcher(None, column_name, keyword).ratio()
     return similarity >= threshold
+
+
+def find_similar_db_values(question: str, keywords: list, hint: str):
+    to_search_values = find_similar_words_of_key_words(keywords)
+
+def get_with_LSH():
+    pass
+
+def find_similar_words_of_key_words(keywords: List) -> List[str]:
+    def get_substring_packet(keyword: str, substring: str) -> Dict[str, str]:
+        return {"keyword": keyword, "substring": substring}
+
+    to_search_values = []
+    for keyword in keywords:
+        keyword = keyword.strip()
+        to_search_values.append(get_substring_packet(keyword, keyword))
+        if " " in keyword:
+            for i in range(len(keyword)):
+                if keyword[i] == " ":
+                    first_part = keyword[:i]
+                    second_part = keyword[i + 1:]
+                    to_search_values.append(get_substring_packet(keyword, first_part))
+                    to_search_values.append(get_substring_packet(keyword, second_part))
+                hint_column, hint_value = column_value(keyword)
+                if hint_value:
+                    to_search_values.append(get_substring_packet(keyword, hint_value))
+
+    to_search_values.sort(key=lambda x: (x["keyword"], len(x["substring"]), x["substring"]), reverse=True)
+    return to_search_values
