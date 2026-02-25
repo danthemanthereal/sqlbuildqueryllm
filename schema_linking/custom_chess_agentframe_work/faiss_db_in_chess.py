@@ -2,6 +2,9 @@ import faiss
 from sentence_transformers import SentenceTransformer
 import numpy as np
 import os
+from sklearn.metrics.pairwise import cosine_similarity
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables
+
 
 def create_embeddings(descriptions, batch_size=16):
     multi_lang_version = "intfloat/multilingual-e5-small"
@@ -32,3 +35,35 @@ def get_results_to_a_question(question: str, top_k: int = 10):
     query_vector = query_vector.reshape(1, -1)
     distances, indices = index.search(query_vector, top_k)
     return indices[0].tolist()
+
+
+# was not in the paper but embeddings of the table to a keyword -> in this dataset a lot of table
+# means fast dass selbe -> get this also
+
+def get_top_5_tables_based_on_key_word_meaning(keywords: list)->list:
+    res = []
+    
+    for keyword in keywords:
+        res.extend(get_best_table_based_on_keyword(keyword))
+    return res
+
+def get_best_table_based_on_keyword(keyword: str):
+    multi_lang_version = "intfloat/multilingual-e5-small"
+    model = SentenceTransformer(multi_lang_version)
+
+    tables =get_all_tables()
+
+    table_Key_word = tables + [keyword]
+
+    tables_embeddings = model.encode(table_Key_word)
+
+    keyword_embedding = tables_embeddings[-1].reshape(1, -1)
+
+    table_embeddings_only = tables_embeddings[:-1]
+
+    similarities = cosine_similarity(table_embeddings_only, keyword_embedding).flatten()
+
+    top5_idx = similarities.argsort()[-5:][::-1]
+
+    predicted_tables = [t for idx, t in enumerate(tables) if idx in top5_idx]
+    return predicted_tables

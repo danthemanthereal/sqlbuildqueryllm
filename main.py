@@ -10,5 +10,5 @@ os.environ["MKL_NUM_THREADS"] = "1"
 os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
 os.environ["NUMEXPR_NUM_THREADS"] = "1"
 
-predictedt_tables = get_relevant_tables("Was sind die besten Gebäude?")
+predictedt_tables = get_relevant_tables("Was sind die meisten Besucher gegangen?")
 print(predictedt_tables)

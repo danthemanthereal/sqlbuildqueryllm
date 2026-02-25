@@ -1,3 +1,4 @@
+from schema_linking.custom_chess_agentframe_work.faiss_db_in_chess import get_top_5_tables_based_on_key_word_meaning
 from schema_linking.custom_chess_agentframe_work.information_retriever_agent.extract_key_words import get_key_words_nlp
 from schema_linking.custom_chess_agentframe_work.information_retriever_agent.retrieve_context import \
     find_predicted_tables
@@ -24,6 +25,8 @@ def get_relevant_tables(question: str):
                 table_name = line.replace("Tabelle: ", "").strip()
                 table_names.append(table_name)
                 predicted_tables.append(table_name)
-
+    table_embedding = get_top_5_tables_based_on_key_word_meaning(key_words)
+    print("predictetd tables of embedding")
+    print(table_embedding)
     return predicted_tables
 

@@ -7,8 +7,12 @@ from typing import List, Tuple, Optional, Dict
 from sentence_transformers import SentenceTransformer
 import difflib
 import numpy as np
+from datasketch import MinHash, MinHashLSH
 
-from schema_linking.custom_chess_agentframe_work.db_schema_ln_this_approach import get_db_schema_dict
+
+from schema_linking.custom_chess_agentframe_work.db_schema_ln_this_approach import get_db_schema_dict, \
+    get_distinct_values_per_col
+
 
 def get_predicted_tables(keywords: List[str], question: str, hint: str):
     selected_columns = {}
@@ -174,3 +178,14 @@ def find_similar_words_of_key_words(keywords: List) -> List[str]:
 
     to_search_values.sort(key=lambda x: (x["keyword"], len(x["substring"]), x["substring"]), reverse=True)
     return to_search_values
+
+
+def find_db_values_with_lsh(keyword: str):
+    al_value_meta_map = get_distinct_values_per_col()
+    num_perm = 128
+    lsh = MinHashLSH(threshold=0.5, num_perm=num_perm)  # Threshold für Ähnlichkeit
+    cell_to_minhash = {}
+
+    for current_map in al_value_meta_map:
+        pass
+
