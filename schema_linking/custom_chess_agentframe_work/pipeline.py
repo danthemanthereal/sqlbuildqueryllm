@@ -15,7 +15,7 @@ def get_relevant_tables(question: str):
         word = first_part.split(": `")[1]
         predicted_tables.append(word)
 
-    res = find_predicted_tables(question, question, key_words,10)
+    res = find_predicted_tables(question, question, key_words,5)
     table_names = []
     for entry in res:
         # Zeilen splitten und nach "Tabelle: " suchen
