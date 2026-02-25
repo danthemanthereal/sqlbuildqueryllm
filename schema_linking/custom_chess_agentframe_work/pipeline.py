@@ -5,5 +5,6 @@ from schema_linking.custom_chess_agentframe_work.information_retriever_agent.ret
 
 def get_relevant_tables(question: str):
     key_words = get_key_words_nlp(question)
-    similar_columns = find_columns_by_semantic(question, key_words, "")
-    print(similar_columns)
+    #similar_columns = find_columns_by_semantic(question, key_words, "")
+    #print(similar_columns)
+
