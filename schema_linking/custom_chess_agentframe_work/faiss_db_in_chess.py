@@ -26,5 +26,9 @@ def create_embeddings(descriptions, batch_size=16):
 
 def get_results_to_a_question(question: str, top_k: int = 10):
     index = faiss.read_index("/Users/danielschmidt/Desktop/sqlbuildqueryllm/schema_linking/custom_chess_agentframe_work/faiss_total_db_index/index.faiss")
-    distances, indices = index.search(question, top_k)
-    return indices
+    multi_lang_version = "intfloat/multilingual-e5-small"
+    model = SentenceTransformer(multi_lang_version)
+    query_vector = model.encode(question)
+    query_vector = query_vector.reshape(1, -1)
+    distances, indices = index.search(query_vector, top_k)
+    return indices[0].tolist()
