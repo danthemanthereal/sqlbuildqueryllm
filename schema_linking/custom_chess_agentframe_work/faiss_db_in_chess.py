@@ -42,7 +42,7 @@ def get_results_to_a_question(question: str, top_k: int = 10):
 
 def get_top_5_tables_based_on_key_word_meaning(keywords: list)->list:
     res = []
-    
+
     for keyword in keywords:
         res.extend(get_best_table_based_on_keyword(keyword))
     return res
