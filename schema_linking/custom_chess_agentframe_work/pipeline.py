@@ -25,7 +25,7 @@ def get_relevant_tables(question: str):
                 table_name = line.replace("Tabelle: ", "").strip()
                 table_names.append(table_name)
                 predicted_tables.append(table_name)
-    table_embedding = get_top_5_tables_based_on_key_word_meaning(key_words)
-    predicted_tables.extend(table_embedding)
+    #table_embedding = get_top_5_tables_based_on_key_word_meaning(key_words)
+    #predicted_tables.extend(table_embedding)
     return predicted_tables
 
