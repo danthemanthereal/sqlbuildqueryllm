@@ -3,6 +3,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from adjustText import adjust_text
+from sklearn.cluster import KMeans
 
 def get_most_similar_table_with_anchor(word: str):
     tables = get_all_tables()
@@ -21,6 +22,28 @@ def get_most_similar_table_with_anchor(word: str):
     plt.scatter(reduced[:, 0], reduced[:, 1])
 
     plt.title("PCA Projection of Table Embeddings")
+    plt.xlabel("PC1")
+    plt.ylabel("PC2")
+
+    plt.show()
+
+    k = 25  # Anzahl Cluster (frei wählbar)
+
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    clusters = kmeans.fit_predict(embeddings)
+
+    pca = PCA(n_components=2)
+    reduced = pca.fit_transform(embeddings)
+
+    plt.figure(figsize=(16, 12))
+
+    plt.scatter(
+        reduced[:, 0],
+        reduced[:, 1],
+        c=clusters  # Farbe = Cluster
+    )
+
+    plt.title("K-Means Clustering of Table Embeddings")
     plt.xlabel("PC1")
     plt.ylabel("PC2")
 
