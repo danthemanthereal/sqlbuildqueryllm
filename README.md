@@ -155,6 +155,20 @@ recall 51.35 %
 -> PCA und dann top 10 
 -> Werte aus Spalte und Beschreibungen mit embedden 
 
+Ergebnisse mit multi lang ev 
+
+hit min one table percentage  86.46 %
+miss table percentage 13.54 %
+no table percentage 0.0 %
+precision 8.03 %
+recall 58.03 %
+
+-> besser, weil versteht deutsche wörter besser 
+was man probieren kann 
+-> Tabelle klassifiezieren und wenn eine aus einem Kluster drin ist, die auch dazu 
+-> Tabellen dazu die ähnlich geschrieben sind / ähnliches bedeuten 
+-> Keywords weise embedding -> manchmal findet wörter die passen jedoch nicht für richtiges Wort
+
 
 Hier wie oben der Gleiche Ansazt dass die Werte aus den Tabellen genommen wurde beim embedden : 
 
