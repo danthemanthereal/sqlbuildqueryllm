@@ -169,6 +169,15 @@ was man probieren kann
 -> Tabellen dazu die ähnlich geschrieben sind / ähnliches bedeuten 
 -> Keywords weise embedding -> manchmal findet wörter die passen jedoch nicht für richtiges Wort
 
+mit noch similar geschrieben dazu mit treshhold 0.8 
+
+hit min one table percentage  91.3 %
+miss table percentage 8.7 %
+no table percentage 0.0 %
+precision 3.38 %
+recall 66.44 %
+
+
 
 Hier wie oben der Gleiche Ansazt dass die Werte aus den Tabellen genommen wurde beim embedden : 
 
