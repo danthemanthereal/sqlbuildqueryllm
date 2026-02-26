@@ -102,7 +102,7 @@ with open(csv_file, "a", newline="", encoding="utf-8") as f:
 method = "cross-encoder"
 
 
-def filter_aehnliche_woerter(zielwort, wortliste, threshold=0.6, ignore_case=True):
+def filter_aehnliche_woerter(zielwort, wortliste, threshold=0.8, ignore_case=True):
     """
     Gibt nur die Wörter zurück, deren Ähnlichkeit >= threshold ist.
 
@@ -181,7 +181,23 @@ for i, entry in enumerate(data):
             relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
             #relevant_tables = [dict.get("metadata", {}).get("table", " ") for dict in r]
             relevant_tables = list(dict.fromkeys(relevant_tables))
-            relevant_tables = [get_english_table_name(table) for table in relevant_tables]
+            #relevant_tables = [get_english_table_name(table) for table in relevant_tables]
+            flattened_tables = []
+
+            for table in relevant_tables:
+                flattened_tables.extend(get_english_table_name(table))
+
+            relevant_tables = flattened_tables
+            # similar schreibweise noch hinzu
+            similar_words = []
+            englisch_tables_name = get_all_tables_en()
+            for table in relevant_tables:
+                sim_words = filter_aehnliche_woerter(table, englisch_tables_name, 0.8)
+                similar_words.extend(sim_words)
+
+            relevant_tables.extend(similar_words)
+
+            relevant_tables = list(dict.fromkeys(relevant_tables))
             print(f"predicted tables : {relevant_tables}")
            # print(f"matched values : {matched_value}")
             query = entry.get("query")
