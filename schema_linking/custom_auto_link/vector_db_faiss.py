@@ -11,7 +11,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
 def embed_documents(batch_size: int = 32):
-    model = SentenceTransformer('intfloat/e5-small-v2')
+    model = SentenceTransformer('intfloat/multilingual-e5-small')
 
     log = {}
     db_dict_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/spider/database"

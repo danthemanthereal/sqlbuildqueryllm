@@ -6,7 +6,7 @@ import os
 def get_top_k_columns(question: str, top_k: int = 10):
     index_folder_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/schema_linking/custom_auto_link/embedded_documents"
     filtered_results = []
-    model = SentenceTransformer('intfloat/e5-small-v2')
+    model = SentenceTransformer('intfloat/multilingual-e5-small')
     for db in os.listdir(index_folder_path):
         index_file_path = index_folder_path + "/" + db + "/index.faiss"
         index = faiss.read_index(index_file_path)
