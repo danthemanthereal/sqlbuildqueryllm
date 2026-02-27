@@ -1,0 +1,5032 @@
+[
+    {
+        "table_name": "Täter",
+        "table_description": "Tabelle mit Informationen über Täter und ihre Verbrechen.",
+        "column_names": [
+            "Täter-ID",
+            "Person-ID",
+            "Datum",
+            "Jahr",
+            "Standort",
+            "Land",
+            "getötet",
+            "verletzt"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Täters.",
+            "Weitere Identifikationsnummer des Täters, möglicherweise aus einem anderen System.",
+            "Datum, an dem das Verbrechen begangen wurde.",
+            "Jahr, in dem das Verbrechen begangen wurde.",
+            "Ort, an dem das Verbrechen begangen wurde.",
+            "Land, in dem das Verbrechen begangen wurde.",
+            "Anzahl der getöteten Personen.",
+            "Anzahl der verletzten Personen."
+        ],
+        "db_id": "perpetrator",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Person",
+        "table_description": "Tabelle mit Informationen über Personen",
+        "column_names": [
+            "Person-ID",
+            "Name",
+            "Höhe",
+            "Gewicht",
+            "Heimatort"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Person",
+            "Name der Person",
+            "Körpergröße der Person in Zentimetern",
+            "Körpergewicht der Person in Kilogramm",
+            "Heimatort oder Herkunftsort der Person"
+        ],
+        "db_id": "perpetrator",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Klassenzimmer",
+        "table_description": "Informationen über Klassenzimmer",
+        "column_names": [
+            "Gebäude",
+            "Zimmernummer",
+            "Kapazität"
+        ],
+        "column_descriptions": [
+            "Gebäude, in dem sich das Klassenzimmer befindet",
+            "Eindeutige Nummer des Klassenzimmers",
+            "Maximale Anzahl an Personen, die das Klassenzimmer aufnehmen kann"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Abteilung",
+        "table_description": "Übersicht über die Abteilungen mit Namen, Gebäude und Budget.",
+        "column_names": [
+            "Abteilungsname",
+            "Gebäude",
+            "Budget"
+        ],
+        "column_descriptions": [
+            "Name der Abteilung",
+            "Gebäude, in dem die Abteilung sich befindet",
+            "Budget der Abteilung"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kurs",
+        "table_description": "Eine Liste von Kursen mit zugehörigen Informationen",
+        "column_names": [
+            "Kurs-ID",
+            "Titel",
+            "Abteilungsname",
+            "Credits"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Kurses",
+            "Titel des Kurses",
+            "Name der Abteilung, die den Kurs anbietet",
+            "Anzahl der Credits, die für den Kurs vergeben werden"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Lehrer",
+        "table_description": "Informationen über Lehrer an einer Bildungseinrichtung",
+        "column_names": [
+            "Studenten-ID",
+            "Name",
+            "Abteilungsname",
+            "Gehalt"
+        ],
+        "column_descriptions": [
+            "ID des zugeordneten Studenten",
+            "Name des Lehrers",
+            "Abteilung oder Fachbereich des Lehrers",
+            "Gehalt des Lehrers"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Abschnitt",
+        "table_description": "Diese Tabelle enthält Informationen über Abschnitte, vermutlich in einem bildungstechnischen Kontext.",
+        "column_names": [
+            "Kurs-ID",
+            "Abschnitts-ID",
+            "Semester",
+            "Jahr",
+            "Gebäude",
+            "Zimmernummer",
+            "Zeitfenster-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Kurses",
+            "Eindeutige Identifikation des Abschnitts",
+            "Semester, in dem der Abschnitt stattfindet",
+            "Jahr, in dem der Abschnitt stattfindet",
+            "Gebäude, in dem der Abschnitt stattfindet",
+            "Zimmernummer, in der der Abschnitt stattfindet",
+            "Eindeutige Identifikation des Zeitfensters"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "unterrichtet",
+        "table_description": "Tabelle mit Informationen über die Unterrichtsteilnahme von Studenten in verschiedenen Kursen",
+        "column_names": [
+            "Studenten-ID",
+            "Kurs-ID",
+            "Abschnitts-ID",
+            "Semester",
+            "Jahr"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten",
+            "Eindeutige Identifikationsnummer des Kurses",
+            "Eindeutige Identifikationsnummer des Abschnitts",
+            "Semester, in dem der Unterricht stattfindet",
+            "Jahr, in dem der Unterricht stattfindet"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Student",
+        "table_description": "Tabelle mit Informationen über Studenten, einschließlich ihrer ID, Namen, Abteilung und Gesamtcredits.",
+        "column_names": [
+            "Studenten-ID",
+            "Name",
+            "Abteilungsname",
+            "Gesamt Credits"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten",
+            "Name des Studenten",
+            "Name der Abteilung, der der Student zugeordnet ist",
+            "Gesamtzahl der Credits, die der Student erreicht hat"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "nimmt Unterricht",
+        "table_description": "Teilnahme von Studenten an Unterrichtseinheiten mit Bewertungen",
+        "column_names": [
+            "Studenten-ID",
+            "Kurs-ID",
+            "Abschnitts-ID",
+            "Semester",
+            "Jahr",
+            "Note"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten",
+            "Eindeutige Identifikationsnummer des Kurses",
+            "Eindeutige Identifikationsnummer des Abschnitts oder der spezifischen Unterrichtseinheit",
+            "Angabe des Semesters, in dem der Unterricht stattfindet",
+            "Angabe des Jahres, in dem der Unterricht stattfindet",
+            "Bewertung des Studenten in diesem Kurs"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Berater",
+        "table_description": "Tabelle zur Zuordnung von Studenten und ihren Beratern (Lehrern)",
+        "column_names": [
+            "Studenten-ID",
+            "Lehrer-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Studenten",
+            "Eindeutige Identifikation des Lehrers, der als Berater fungiert"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zeitfenster",
+        "table_description": "Tabelle für die Verwaltung von Zeitfenstern.",
+        "column_names": [
+            "Zeitfenster-ID",
+            "Tag",
+            "Startstunde",
+            "Startminute",
+            "Endstunde",
+            "Endminute"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Zeitfensters.",
+            "Tag, an dem das Zeitfenster gilt.",
+            "Stunde, in der das Zeitfenster beginnt.",
+            "Minute, in der das Zeitfenster beginnt.",
+            "Stunde, in der das Zeitfenster endet.",
+            "Minute, in der das Zeitfenster endet."
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Voraussetzung",
+        "table_description": "Tabelle zur Darstellung von Voraussetzungen für Kurse",
+        "column_names": [
+            "Kurs-ID",
+            "Voraussetzung-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Kurses",
+            "Eindeutige Identifikation der Voraussetzung"
+        ],
+        "db_id": "college_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Flughafen",
+        "table_description": "Informationen über Flughäfen weltweit",
+        "column_names": [
+            "Flug-ID",
+            "Stadt",
+            "Land",
+            "iata",
+            "icao",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Flug",
+            "Stadt, in der sich der Flughafen befindet",
+            "Land, in dem sich der Flughafen befindet",
+            "IATA-Code des Flughafens",
+            "ICAO-Code des Flughafens",
+            "Name des Flughafens"
+        ],
+        "db_id": "flight_company",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Unternehmen betreiben",
+        "table_description": "Tabelle mit Informationen über Unternehmen und ihre Aktivitäten",
+        "column_names": [
+            "Flug-ID",
+            "Name",
+            "Art",
+            "grundsätzliche Aktivitäten",
+            "eingearbeitet in",
+            "Konzernbeteiligung"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Fluges",
+            "Name des Unternehmens",
+            "Art des Unternehmens",
+            "Grundlegende Aktivitäten des Unternehmens",
+            "In welches System oder welche Struktur das Unternehmen eingearbeitet ist",
+            "Beteiligung des Unternehmens an einem Konzern"
+        ],
+        "db_id": "flight_company",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Flug",
+        "table_description": "Informationen über einen Flug",
+        "column_names": [
+            "Flug-ID",
+            "Flugnummer",
+            "Datum",
+            "Pilot",
+            "Geschwindigkeit",
+            "Höhe",
+            "Flughafen-ID",
+            "Unternehmen-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für den Flug",
+            "Nummer des Fluges",
+            "Datum des Fluges",
+            "Name des Piloten",
+            "Geschwindigkeit des Flugzeugs",
+            "Flughöhe des Flugzeugs",
+            "Identifikation des Flughafens",
+            "Identifikation des Unternehmens"
+        ],
+        "db_id": "flight_company",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Institution",
+        "table_description": "Diese Tabelle enthält Informationen über verschiedene Institutionen.",
+        "column_names": [
+            "Institutions-ID",
+            "Name",
+            "Land"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Institution.",
+            "Name der Institution.",
+            "Land, in dem die Institution ansässig ist."
+        ],
+        "db_id": "icfp_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Autoren",
+        "table_description": "Tabelle mit Informationen über Autoren",
+        "column_names": [
+            "Autoren-ID",
+            "Nachname",
+            "Vorname"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Autors",
+            "Nachname des Autors",
+            "Vorname des Autors"
+        ],
+        "db_id": "icfp_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Papiere",
+        "table_description": "Eine Liste von Papieren mit ihren eindeutigen Identifikationsnummern und Titeln.",
+        "column_names": [
+            "Papier-ID",
+            "Titel"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Papiers.",
+            "Titel des Papiers."
+        ],
+        "db_id": "icfp_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Anzahl der Autoren",
+        "table_description": "Übersicht über die Anzahl der Autoren pro Papier mit Autoren- und Institutionsinformationen",
+        "column_names": [
+            "Autoren-ID",
+            "Institutions-ID",
+            "Papier-ID",
+            "Anzahl der Autoren"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Autors",
+            "Eindeutige Identifikation der Institution des Autors",
+            "Eindeutige Identifikation des Papiers",
+            "Anzahl der Autoren des Papiers"
+        ],
+        "db_id": "icfp_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Bodybuilder",
+        "table_description": "Tabelle mit Informationen über Bodybuilder und ihre Leistungen",
+        "column_names": [
+            "Bodybuilder-ID",
+            "Person-ID",
+            "schnappen",
+            "sauberer Ruck",
+            "gesamt"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID des Bodybuilders",
+            "ID der zugehörigen Person",
+            "Schnapp-Leistung des Bodybuilders",
+            "Sauberer Ruck-Leistung des Bodybuilders",
+            "Gesamtleistung des Bodybuilders"
+        ],
+        "db_id": "body_builder",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Person",
+        "table_description": "Tabelle mit Informationen über eine Person",
+        "column_names": [
+            "Person-ID",
+            "Name",
+            "Höhe",
+            "Gewicht",
+            "Geburtstag",
+            "Geburtsort"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Person",
+            "Vollständiger Name der Person",
+            "Körpergröße der Person in Metern",
+            "Körpergewicht der Person in Kilogramm",
+            "Geburtsdatum der Person",
+            "Geburtsort der Person"
+        ],
+        "db_id": "body_builder",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Sturm",
+        "table_description": "Tabelle mit Informationen über verschiedene Stürme",
+        "column_names": [
+            "Sturm-ID",
+            "Name",
+            "Termine aktiv",
+            "Höchstgeschwindigkeit",
+            "Schaden Millionen usd",
+            "Anzahl Todesfälle"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Sturm",
+            "Name des Sturms",
+            "Daten, an denen der Sturm aktiv war",
+            "Höchste Geschwindigkeit des Sturms",
+            "Schaden in Millionen US-Dollar",
+            "Anzahl der Todesfälle"
+        ],
+        "db_id": "storm_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Region",
+        "table_description": "Tabelle mit Informationen über verschiedene Regionen",
+        "column_names": [
+            "Regions-ID",
+            "Regionalcode",
+            "Regionsname"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Region",
+            "Code, der jede Region eindeutig identifiziert",
+            "Name der Region"
+        ],
+        "db_id": "storm_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "betroffene Region",
+        "table_description": "Tabelle mit Informationen über Regionen, die von einem Sturm betroffen sind.",
+        "column_names": [
+            "Regions-ID",
+            "Sturm-ID",
+            "Anzahl betroffene Stadt"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für die betroffene Region",
+            "Referenz zu dem Sturm, der die Region betroffen hat",
+            "Anzahl der Städte in der Region, die vom Sturm betroffen sind"
+        ],
+        "db_id": "storm_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Flugzeug",
+        "table_description": "Diese Tabelle enthält Informationen über Flugzeuge.",
+        "column_names": [
+            "Flugzeug-ID",
+            "Bestelljahr",
+            "Hersteller",
+            "Modell",
+            "Flottenserie",
+            "Antriebsstrang",
+            "Kraftstoffantrieb"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Flugzeugs",
+            "Jahr, in dem das Flugzeug bestellt wurde",
+            "Hersteller des Flugzeugs",
+            "Modell des Flugzeugs",
+            "Serie, zu der das Flugzeug gehört",
+            "Art des Antriebsstrangs des Flugzeugs",
+            "Art des Kraftstoffantriebs des Flugzeugs"
+        ],
+        "db_id": "pilot_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Pilot",
+        "table_description": "Tabelle mit Informationen über Piloten",
+        "column_names": [
+            "Pilot-ID",
+            "Pilotenname",
+            "Rang",
+            "Alter",
+            "Staatsangehörigkeit",
+            "Position",
+            "Jahr beitreten",
+            "Mannschaft"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Piloten",
+            "Name des Piloten",
+            "Rang des Piloten",
+            "Alter des Piloten",
+            "Staatsangehörigkeit des Piloten",
+            "Position des Piloten",
+            "Jahr, in dem der Pilot beigetreten ist",
+            "Mannschaft, zu der der Pilot gehört"
+        ],
+        "db_id": "pilot_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Pilotenrekord",
+        "table_description": "Ein Datensatz über die Flugaufzeichnungen eines Piloten.",
+        "column_names": [
+            "Datensatz-ID",
+            "Pilot-ID",
+            "Flugzeug-ID",
+            "Datum"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für den Datensatz.",
+            "Identifikationsnummer des Piloten.",
+            "Identifikationsnummer des Flugzeugs.",
+            "Datum des Fluges."
+        ],
+        "db_id": "pilot_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wettbewerb",
+        "table_description": "Diese Tabelle enthält Informationen über verschiedene Wettbewerbe.",
+        "column_names": [
+            "Wettbewerb-ID",
+            "Name",
+            "Klasse",
+            "Datum",
+            "Spur-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für den Wettbewerb.",
+            "Name des Wettbewerbs.",
+            "Klasse oder Kategorie des Wettbewerbs.",
+            "Datum, an dem der Wettbewerb stattfindet.",
+            "Identifikationsnummer der Spur, auf der der Wettbewerb stattfindet."
+        ],
+        "db_id": "race_track",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Spur",
+        "table_description": "Informationen über eine Spur oder Route",
+        "column_names": [
+            "Spur-ID",
+            "Name",
+            "Standort",
+            "Sitzplätze",
+            "Jahr eröffnet"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Spur",
+            "Name der Spur",
+            "Ort oder Strecke der Spur",
+            "Anzahl der Sitzplätze",
+            "Jahr der Eröffnung der Spur"
+        ],
+        "db_id": "race_track",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Autor",
+        "table_description": "Tabelle mit Informationen über Autoren",
+        "column_names": [
+            "Autor-ID",
+            "Startseite",
+            "Name",
+            "Organisation-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Autors",
+            "Startseite oder Homepage des Autors",
+            "Name des Autors",
+            "Referenz auf die Organisation des Autors"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Konferenz",
+        "table_description": "Diese Tabelle enthält Informationen über verschiedene Konferenzen.",
+        "column_names": [
+            "Konferenz-ID",
+            "Startseite",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Konferenz.",
+            "URL oder Link zur Startseite der Konferenz.",
+            "Name der Konferenz."
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Domain",
+        "table_description": "Tabelle mit Domains und ihren IDs",
+        "column_names": [
+            "Domain-ID",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID der Domain",
+            "Name der Domain"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Domain-Autor",
+        "table_description": "Tabelle zur Zuordnung von Autoren zu Domains",
+        "column_names": [
+            "Autor-ID",
+            "Domain-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Autors",
+            "Eindeutige Identifikation der Domain"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Domain-Konferenz",
+        "table_description": "Diese Tabelle stellt die Beziehung zwischen Konferenzen und Domains dar.",
+        "column_names": [
+            "Konferenz-ID",
+            "Domain-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Konferenz",
+            "Eindeutige Identifikationsnummer der Domain"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zeitschrift",
+        "table_description": "Tabelle mit Informationen über Zeitschriften",
+        "column_names": [
+            "Startseite",
+            "Zeitschrift-ID",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Startseite der Zeitschrift",
+            "Eindeutige ID der Zeitschrift",
+            "Name der Zeitschrift"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Domain-Zeitschrift",
+        "table_description": "Tabelle zur Herstellung einer Beziehung zwischen Domains und Zeitschriften.",
+        "column_names": [
+            "Domain-ID",
+            "Zeitschrift-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation der Domain.",
+            "Eindeutige Identifikation der Zeitschrift."
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Stichwort",
+        "table_description": "Tabelle für Stichwörter mit eindeutiger ID",
+        "column_names": [
+            "Stichwort",
+            "Stichwort-ID"
+        ],
+        "column_descriptions": [
+            "Ein einzelnes Stichwort",
+            "Eindeutige Identifikationsnummer des Stichworts"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Domain-Schlüsselwort",
+        "table_description": "Zuordnung von Domänen zu Schlüsselwörtern",
+        "column_names": [
+            "Domain-ID",
+            "Stichwort-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation der Domäne",
+            "Eindeutige Identifikation des Schlüsselworts"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Veröffentlichung",
+        "table_description": "Informationen über wissenschaftliche Veröffentlichungen",
+        "column_names": [
+            "Abstrakt",
+            "Konferenz-ID",
+            "Zitatzahl",
+            "Zeitschrift-ID",
+            "Veröffentlichug-ID",
+            "Referenzzahl",
+            "Titel",
+            "Jahr"
+        ],
+        "column_descriptions": [
+            "Kurze Zusammenfassung der Veröffentlichung",
+            "Eindeutige Identifikation der Konferenz",
+            "Anzahl der Zitate für die Veröffentlichung",
+            "Eindeutige Identifikation der Zeitschrift",
+            "Eindeutige Identifikation der Veröffentlichung",
+            "Anzahl der Referenzen in der Veröffentlichung",
+            "Titel der Veröffentlichung",
+            "Erscheinungsjahr der Veröffentlichung"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Domain-Veröffentlichung",
+        "table_description": "Tabelle mit Informationen über Veröffentlichungen von Domains",
+        "column_names": [
+            "Domain-ID",
+            "Veröffentlichug-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für die Domain",
+            "Eindeutige Identifikation für die Veröffentlichung"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Organisation",
+        "table_description": "Tabelle mit Informationen über Organisationen",
+        "column_names": [
+            "Kontinent",
+            "Startseite",
+            "Name",
+            "Organisation-ID"
+        ],
+        "column_descriptions": [
+            "Der Kontinent, auf dem die Organisation ihren Sitz hat",
+            "Die Startseite oder Website der Organisation",
+            "Der Name der Organisation",
+            "Eine eindeutige Identifikationsnummer für die Organisation"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Schlüsselwort für die Veröffentlichung",
+        "table_description": "Zuordnung von Veröffentlichungen zu Stichwörtern",
+        "column_names": [
+            "Veröffentlichug-ID",
+            "Stichwort-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation der Veröffentlichung",
+            "Eindeutige Identifikation des Stichworts"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "schreibt",
+        "table_description": "Tabelle zur Darstellung der Beziehung zwischen Autoren und Veröffentlichungen",
+        "column_names": [
+            "Autor-ID",
+            "Veröffentlichug-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Autors",
+            "Eindeutige Identifikationsnummer der Veröffentlichung"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "zitieren",
+        "table_description": "Tabelle zur Verwaltung von Zitaten und Zitiervorgängen",
+        "column_names": [
+            "zitiert",
+            "Zitieren"
+        ],
+        "column_descriptions": [
+            "Zeigt an, ob ein Element zitiert wurde",
+            "Enthält Informationen über das Zitieren"
+        ],
+        "db_id": "academic",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Adressen",
+        "table_description": "Tabelle für die Verwaltung von Adressen",
+        "column_names": [
+            "Adresse-ID",
+            "Adressen Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Adresse",
+            "Detaillierte Informationen zur Adresse"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Mitarbeiter",
+        "table_description": "Diese Tabelle enthält Informationen über die Mitarbeiter.",
+        "column_names": [
+            "Mitarbeiter ID",
+            "Geschlecht der Mitarbeiter",
+            "Mitarbeitername"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Mitarbeiters",
+            "Geschlecht des Mitarbeiters",
+            "Name des Mitarbeiters"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Lieferanten",
+        "table_description": "Tabelle mit Informationen über Lieferanten",
+        "column_names": [
+            "Lieferanten ID",
+            "Name des Lieferanten",
+            "Lieferantentelefon"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Lieferanten",
+            "Name des Lieferanten",
+            "Telefonnummer des Lieferanten"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kaufhauskette",
+        "table_description": "Eine Liste von Kaufhausketten mit eindeutiger ID und Namen",
+        "column_names": [
+            "Kaufhauskette-ID",
+            "Name der Kaufhauskette"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Kaufhauskette",
+            "Name der Kaufhauskette"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kunden",
+        "table_description": "Tabelle mit Informationen über Kunden",
+        "column_names": [
+            "Kunden-ID",
+            "Zahlungsmethodencode",
+            "Kundencode",
+            "Kundenname",
+            "Kundenadresse",
+            "Kundentelefon",
+            "Kunden-eMail"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Kunden",
+            "Code der bevorzugten Zahlungsmethode",
+            "Eindeutiger Code für den Kunden",
+            "Name des Kunden",
+            "Adresse des Kunden",
+            "Telefonnummer des Kunden",
+            "E-Mail-Adresse des Kunden"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produkte",
+        "table_description": "Tabelle für Produktinformationen",
+        "column_names": [
+            "Produkt ID",
+            "Produkttypcode",
+            "Produktname",
+            "Produktpreis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Produkts",
+            "Code, der den Typ des Produkts kennzeichnet",
+            "Name des Produkts",
+            "Preis des Produkts"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Lieferantenadressen",
+        "table_description": "Tabelle mit Informationen über Lieferantenadressen und deren Gültigkeitszeiträume.",
+        "column_names": [
+            "Lieferanten ID",
+            "Adresse-ID",
+            "Datum von",
+            "Datum bis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Lieferanten",
+            "Eindeutige Identifikation der Adresse",
+            "Datum, an dem die Adresse gültig wurde",
+            "Datum, bis zu dem die Adresse gültig war"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kundenadressen",
+        "table_description": "Übersicht über Kundenadressen und ihre Gültigkeitszeiträume",
+        "column_names": [
+            "Kunden-ID",
+            "Adresse-ID",
+            "Datum von",
+            "Datum bis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Kunden",
+            "Eindeutige Identifikation der Adresse",
+            "Beginn des Gültigkeitszeitraums der Adresse",
+            "Ende des Gültigkeitszeitraums der Adresse"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kundenbestellungen",
+        "table_description": "Tabelle für die Verwaltung von Kundenbestellungen, einschließlich Bestellinformationen und Status.",
+        "column_names": [
+            "Bestell-ID",
+            "Kunden-ID",
+            "Bestellstatuscode",
+            "Bestelldatum"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Bestellung",
+            "Eindeutige Identifikationsnummer des Kunden, der die Bestellung aufgegeben hat",
+            "Statuscode der Bestellung, z.B. 'neu', 'in Bearbeitung', 'versendet', 'abgeschlossen'",
+            "Datum, an dem die Bestellung aufgegeben wurde"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Warenhäuser",
+        "table_description": "Tabelle mit Informationen über Warenhäuser und Kaufhäuser",
+        "column_names": [
+            "Kaufhaus-ID",
+            "Kaufhauskette-ID",
+            "Laden-ID",
+            "Ladenadresse",
+            "Laden-Telefon",
+            "Laden E-Mail"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jedes Kaufhaus",
+            "Identifikationsnummer der Kaufhauskette, zu der das Kaufhaus gehört",
+            "Eindeutige Identifikationsnummer für jeden Laden",
+            "Adresse des Ladens",
+            "Telefonnummer des Ladens",
+            "E-Mail-Adresse des Ladens"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Abteilungen",
+        "table_description": "Tabelle mit Informationen über Abteilungen in einem Kaufhaus",
+        "column_names": [
+            "Abteilungs-ID",
+            "Kaufhaus-ID",
+            "Abteilungsname"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Abteilung",
+            "Identifikationsnummer des Kaufhauses, zu dem die Abteilung gehört",
+            "Name der Abteilung"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Bestellpositionen",
+        "table_description": "Tabelle mit Informationen über Artikel in Bestellungen",
+        "column_names": [
+            "Bestellartikel-ID",
+            "Bestell-ID",
+            "Produkt ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Artikel in einer Bestellung",
+            "Identifikation der Bestellung, zu der dieser Artikel gehört",
+            "Identifikation des Produkts, das bestellt wurde"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produktlieferanten",
+        "table_description": "Tabelle mit Informationen über Produktlieferanten",
+        "column_names": [
+            "Produkt ID",
+            "Lieferanten ID",
+            "Datum geliefert von",
+            "Datum geliefert zu",
+            "Gesamtbetrag gekauft",
+            "Gesamtwert gekauft"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Produkts",
+            "Eindeutige Identifikation des Lieferanten",
+            "Datum, an dem das Produkt vom Lieferanten geliefert wurde",
+            "Datum, an dem das Produkt an den Besteller geliefert wurde",
+            "Gesamtanzahl der gekauften Produkte",
+            "Gesamtwert der gekauften Produkte"
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Aufgaben der Personalabteilung",
+        "table_description": "Tabelle mit Informationen über die Zuweisung von Aufgaben an Mitarbeiter in verschiedenen Abteilungen.",
+        "column_names": [
+            "Mitarbeiter ID",
+            "Abteilungs-ID",
+            "Datum zugewiesen von",
+            "Berufsbezeichnungscode",
+            "Datum zugewiesen zu"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Mitarbeiters.",
+            "Identifikationsnummer der Abteilung, der der Mitarbeiter zugeordnet ist.",
+            "Datum, an dem die Aufgabe vom Vorgesetzten oder einer anderen Stelle zugewiesen wurde.",
+            "Code, der die Berufsbezeichnung oder den Aufgabenbereich des Mitarbeiters beschreibt.",
+            "Datum, an dem die Aufgabe dem Mitarbeiter zugewiesen wurde."
+        ],
+        "db_id": "department_store",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Künstler",
+        "table_description": "Tabelle mit Informationen über Künstler",
+        "column_names": [
+            "Künstler-ID",
+            "Künstler",
+            "Alter",
+            "berühmter Titel",
+            "berühmtes Erscheinungsdatum"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jeden Künstler",
+            "Name des Künstlers",
+            "Aktuelles Alter des Künstlers",
+            "Titel eines der berühmtesten Werke des Künstlers",
+            "Erscheinungsdatum des berühmten Titels"
+        ],
+        "db_id": "music_4",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Volumen",
+        "table_description": "Tabelle mit Informationen über Musikvolumina und -ausgaben.",
+        "column_names": [
+            "Volume-ID",
+            "Volumenausgabe",
+            "Ausgabetag",
+            "Wochen oben",
+            "Lied",
+            "Künstler-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jedes Volumen.",
+            "Beschreibung oder Titel der Volumenausgabe.",
+            "Datum, an dem die Volumenausgabe veröffentlicht wurde.",
+            "Anzahl der Wochen, die die Volumenausgabe in den Charts oder auf einer bestimmten Position verbracht hat.",
+            "Titel des Lieds, das Teil der Volumenausgabe ist.",
+            "Eindeutige Identifikationsnummer des Künstlers, der das Lied oder die Volumenausgabe erstellt hat."
+        ],
+        "db_id": "music_4",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Musikfestival",
+        "table_description": "Tabelle mit Informationen über Musikfestivals",
+        "column_names": [
+            "Musikfestival-ID",
+            "Musikfestival",
+            "Datum der Zeremonie",
+            "Kategorie",
+            "Volumen",
+            "Ergebnis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Musikfestivals",
+            "Name des Musikfestivals",
+            "Datum, an dem die Zeremonie stattfindet",
+            "Kategorie oder Genre des Musikfestivals",
+            "Anzahl der Teilnehmer oder Volumen des Musikfestivals",
+            "Ergebnis oder besondere Notiz zum Musikfestival"
+        ],
+        "db_id": "music_4",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kunden",
+        "table_description": "Tabelle mit Informationen über Kunden",
+        "column_names": [
+            "Kunden-ID",
+            "Kundenname"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Kunden",
+            "Name des Kunden"
+        ],
+        "db_id": "insurance_fnol",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Dienst",
+        "table_description": "Tabelle für Dienstleistungen",
+        "column_names": [
+            "Dienst-ID",
+            "Dienstname"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Dienstes",
+            "Name des Dienstes"
+        ],
+        "db_id": "insurance_fnol",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "verfügbare Richtlinien",
+        "table_description": "Tabelle mit verfügbaren Richtlinien und deren Details",
+        "column_names": [
+            "Richtlinien-ID",
+            "Richtlinientypcode",
+            "Kundentelefon"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für die Richtlinie",
+            "Code, der den Typ der Richtlinie angibt",
+            "Telefonnummer des Kunden"
+        ],
+        "db_id": "insurance_fnol",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kundenrichtlinien",
+        "table_description": "Tabelle enthält Informationen über Kundenrichtlinien, einschließlich Eröffnungs- und Schließungsdatum.",
+        "column_names": [
+            "Kunden-ID",
+            "Richtlinien-ID",
+            "Datum der Eröffnung",
+            "Datum geschlossen"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Kunden.",
+            "Eindeutige Identifikation der Richtlinie.",
+            "Zeitpunkt, an dem die Richtlinie eröffnet wurde.",
+            "Zeitpunkt, an dem die Richtlinie geschlossen wurde."
+        ],
+        "db_id": "insurance_fnol",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "erste Schadensmeldung",
+        "table_description": "Tabelle für die erste Schadensmeldung eines Kunden",
+        "column_names": [
+            "erste Schadensmeldung-ID",
+            "Kunden-ID",
+            "Richtlinien-ID",
+            "Dienst-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID für die erste Schadensmeldung",
+            "ID des Kunden, der die Schadensmeldung gemacht hat",
+            "ID der Richtlinien oder Policen, die für die Schadensmeldung relevant sind",
+            "ID des Dienstes oder der Abteilung, die die Schadensmeldung bearbeitet"
+        ],
+        "db_id": "insurance_fnol",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Ansprüche",
+        "table_description": "Tabelle für Ansprüche mit Identifikationsnummer, zugehöriger Schadensmeldung und Datum des Inkrafttretens",
+        "column_names": [
+            "Anspruchs-ID",
+            "erste Schadensmeldung-ID",
+            "Datum des Inkrafttretens"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Anspruchs",
+            "Identifikationsnummer der ersten Schadensmeldung",
+            "Datum, an dem der Anspruch in Kraft tritt"
+        ],
+        "db_id": "insurance_fnol",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Siedlungen",
+        "table_description": "Tabelle mit Informationen über Siedlungen, einschließlich ihrer Identifikation, Ansprüche und Abrechnungsdetails.",
+        "column_names": [
+            "Siedlungs-ID",
+            "Anspruchs-ID",
+            "Datum des Inkrafttretens",
+            "Abrechnungsbetrag"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Siedlung.",
+            "Identifikationsnummer des Anspruchs, der von der Siedlung geltend gemacht wird.",
+            "Datum, an dem der Anspruch in Kraft tritt.",
+            "Betrag, der für die Siedlung abgerechnet wird."
+        ],
+        "db_id": "insurance_fnol",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Film",
+        "table_description": "Diese Tabelle enthält Informationen über Episoden einer Fernsehserie.",
+        "column_names": [
+            "Film ID",
+            "Rang in Serie",
+            "Nummer in der Saison",
+            "Titel",
+            "unter der Regie von",
+            "ursprüngliches Sendedatum",
+            "Produktionscode"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jede Episode",
+            "Position der Episode innerhalb der gesamten Serie",
+            "Position der Episode innerhalb der jeweiligen Staffel",
+            "Name der Episode",
+            "Regisseur bzw. Regisseurin der Episode",
+            "Datum der ursprünglichen Ausstrahlung",
+            "Interner Produktionscode der Episode"
+        ],
+        "db_id": "cinema",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kino",
+        "table_description": "Tabelle mit Informationen über Kinos",
+        "column_names": [
+            "Kino ID",
+            "Name",
+            "Eröffnungsjahr",
+            "Kapazität",
+            "Standort"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Kinos",
+            "Name des Kinos",
+            "Jahr der Eröffnung des Kinos",
+            "Maximale Anzahl an Sitzplätzen im Kino",
+            "Standort des Kinos"
+        ],
+        "db_id": "cinema",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zeitplan",
+        "table_description": "Zeitplan für Filmvorführungen in verschiedenen Kinos",
+        "column_names": [
+            "Kino ID",
+            "Film ID",
+            "Datum",
+            "Showzeiten pro Tag",
+            "Preis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Kinos",
+            "Eindeutige Identifikation des Films",
+            "Datum der Filmvorführung",
+            "Anzahl der Vorführungen pro Tag",
+            "Preis für die Filmvorführung"
+        ],
+        "db_id": "cinema",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Hochschule",
+        "table_description": "Tabelle mit Informationen über Hochschulen",
+        "column_names": [
+            "Hochschule-ID",
+            "Name",
+            "Name des Anführers",
+            "Hochschulstandort"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Hochschule",
+            "Name der Hochschule",
+            "Name der führenden Person der Hochschule",
+            "Standort der Hochschule"
+        ],
+        "db_id": "decoration_competition",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Mitglied",
+        "table_description": "Tabelle mit Informationen über Mitglieder einer Organisation oder eines Vereins.",
+        "column_names": [
+            "Mitglied-ID",
+            "Name",
+            "Land",
+            "Hochschule-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID des Mitglieds",
+            "Name des Mitglieds",
+            "Land, in dem das Mitglied ist",
+            "ID der Hochschule, der das Mitglied zugeordnet ist"
+        ],
+        "db_id": "decoration_competition",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Runde",
+        "table_description": "Tabelle mit Informationen über eine Runde, einschließlich Teilnehmern und ihrem Rang.",
+        "column_names": [
+            "Runde-ID",
+            "Mitglied-ID",
+            "Dekorationsthema",
+            "Rang in der Runde"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jede Runde.",
+            "Identifikation des Mitglieds, das an der Runde teilnimmt.",
+            "Thema oder Motto, das für die Dekoration der Runde relevant ist.",
+            "Position oder Rang, den das Mitglied in der Runde erreicht hat."
+        ],
+        "db_id": "decoration_competition",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Telefon",
+        "table_description": "Diese Tabelle enthält Informationen über verschiedene Telefone.",
+        "column_names": [
+            "Name",
+            "Telefon-ID",
+            "Speicherplatz",
+            "Träger",
+            "Preis"
+        ],
+        "column_descriptions": [
+            "Beschreibung des Telefons oder seines Modells.",
+            "Eindeutige Identifikationsnummer für jedes Telefon.",
+            "Verfügbare Speicherkapazität des Telefons.",
+            "Name des Mobilfunkanbieters oder Trägers.",
+            "Preis des Telefons."
+        ],
+        "db_id": "phone_market",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Markt",
+        "table_description": "Tabelle mit Informationen über verschiedene Märkte",
+        "column_names": [
+            "Markt-ID",
+            "Kreis",
+            "Anzahl der Mitarbeiter",
+            "Anzahl der Geschäfte",
+            "Rangfolge"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jeden Markt",
+            "Der Kreis, in dem der Markt liegt",
+            "Die Anzahl der Mitarbeiter, die in diesem Markt arbeiten",
+            "Die Anzahl der Geschäfte, die sich auf diesem Markt befinden",
+            "Die Rangfolge oder Platzierung dieses Marktes"
+        ],
+        "db_id": "phone_market",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Telefonmarkt",
+        "table_description": "Übersicht über den Telefonmarkt mit Lagerbeständen",
+        "column_names": [
+            "Markt-ID",
+            "Telefon-ID",
+            "Anzahl der Lagerbestände"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID für den Markt",
+            "Eindeutige ID für das Telefon",
+            "Anzahl der verfügbaren Telefone in den Lagerbeständen"
+        ],
+        "db_id": "phone_market",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produkt",
+        "table_description": "Tabelle mit Informationen über Druckerprodukte",
+        "column_names": [
+            "Produkt ID",
+            "Produkt",
+            "Maße",
+            "dpi",
+            "Seiten pro Minute Farbe",
+            "maximale Seitengröße",
+            "Schnittstelle"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Produkts",
+            "Name oder Bezeichnung des Druckers",
+            "Physische Abmessungen des Druckers",
+            "Auflösung des Druckers in Punkten pro Zoll",
+            "Druckgeschwindigkeit im Farbmodus in Seiten pro Minute",
+            "Größte unterstützte Seitengröße",
+            "Verbindungsmöglichkeiten des Druckers"
+        ],
+        "db_id": "store_product",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Geschäft",
+        "table_description": "Tabelle mit Informationen über verschiedene Geschäfte.",
+        "column_names": [
+            "Geschäft-ID",
+            "Geschäftsname",
+            "Art",
+            "Flächengröße",
+            "Anzahl der Produktkategorien",
+            "Rangfolge"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jedes Geschäft.",
+            "Name des Geschäfts.",
+            "Art oder Kategorie des Geschäfts.",
+            "Größe des Geschäfts.",
+            "Anzahl der verschiedenen Produktkategorien, die im Geschäft angeboten werden.",
+            "Rang oder Priorität des Geschäfts."
+        ],
+        "db_id": "store_product",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Bezirk",
+        "table_description": "Informationen über Bezirke einer Stadt oder Region",
+        "column_names": [
+            "Bezirk-ID",
+            "Bezirksbezeichnung",
+            "Hauptsitz Stadt",
+            "Stadtbevölkerung",
+            "Stadtgebiet"
+        ],
+        "column_descriptions": [
+            "Eindeutige Kennung des Bezirks",
+            "Bezeichnung bzw. Name des Bezirks",
+            "Stadt, in der der Hauptsitz des Bezirks liegt",
+            "Bevölkerung der Stadt",
+            "Fläche des Stadtgebiets in Quadratkilometern"
+        ],
+        "db_id": "store_product",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produkt lagern",
+        "table_description": "Tabelle zur Lagerung von Produkten in verschiedenen Geschäften",
+        "column_names": [
+            "Geschäft-ID",
+            "Produkt ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Geschäfts",
+            "Eindeutige Identifikation des Produkts"
+        ],
+        "db_id": "store_product",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Geschäftsviertel",
+        "table_description": "Tabelle mit Informationen über Geschäftsviertel",
+        "column_names": [
+            "Geschäft-ID",
+            "Bezirk-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jedes Geschäft",
+            "Identifikation des Bezirks, zu dem das Geschäft gehört"
+        ],
+        "db_id": "store_product",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Drittunternehmen",
+        "table_description": "Tabelle mit Informationen über Drittunternehmen, die externe Firmen und deren Interaktionen mit dem Unternehmen enthält.",
+        "column_names": [
+            "Firmen-ID",
+            "Firmenart",
+            "Name der Firma",
+            "Firmenadresse",
+            "andere Firmendetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Firma",
+            "Kategorie oder Typ der Firma (z. B. Dienstleister, Lieferant, Partner)",
+            "Offizieller Name der Drittunternehmen",
+            "Adresse des Drittunternehmens, einschließlich Straße, Hausnummer, Postleitzahl und Stadt",
+            "Zusätzliche Informationen über das Drittunternehmen, wie Kontaktdaten, Geschäftsführer usw."
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wartungsverträge",
+        "table_description": "Tabelle mit Informationen über Wartungsverträge",
+        "column_names": [
+            "Wartungsvertrags-ID",
+            "Wartungsvertrag Firmen-ID",
+            "Vertragsstartdatum",
+            "Vertragsenddatum",
+            "andere Vertragsdetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Wartungsvertrags",
+            "Identifikationsnummer der Firma, mit der der Wartungsvertrag abgeschlossen wurde",
+            "Datum, an dem der Wartungsvertrag begonnen hat",
+            "Datum, an dem der Wartungsvertrag endet",
+            "Zusätzliche Details zum Wartungsvertrag"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Teile",
+        "table_description": "Tabelle mit Informationen über Teile oder Komponenten, einschließlich ihrer Kostenpflichtigkeit und Details.",
+        "column_names": [
+            "Teil-ID",
+            "Teilname",
+            "kostenpflichtig J/N",
+            "kostenpflichtiger Betrag",
+            "andere Teiledetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Teil.",
+            "Name des Teils.",
+            "Angabe, ob der Teil kostenpflichtig ist (Ja/Nein).",
+            "Der Betrag, der für den Teil zu zahlen ist, falls er kostenpflichtig ist.",
+            "Weitere Details oder Informationen über den Teil."
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kompetenzen",
+        "table_description": "Tabelle mit Informationen über verschiedene Fähigkeiten oder Kompetenzen",
+        "column_names": [
+            "Fähigkeits-ID",
+            "Fertigkeitscode",
+            "Fähigkeitsbeschreibung"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für die Fähigkeit",
+            "Spezifischer Code für die Fertigkeit",
+            "Detaillierte Beschreibung der Fähigkeit"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Mitarbeiter",
+        "table_description": "Tabelle mit Informationen über Mitarbeiter",
+        "column_names": [
+            "Mitarbeiter ID",
+            "Mitarbeitername",
+            "Geschlecht",
+            "andere Details der Mitarbeiter"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Mitarbeiters",
+            "Name des Mitarbeiters",
+            "Geschlecht des Mitarbeiters",
+            "Weitere Details über den Mitarbeiter"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Asset",
+        "table_description": "Tabelle zur Verwaltung von Vermögenswerten",
+        "column_names": [
+            "Asset-ID",
+            "Wartungsvertrags-ID",
+            "Lieferanten Firmen-ID",
+            "Asset-Details",
+            "Asset machen",
+            "Asset-Modell",
+            "Datum des Erwerbs des Vermögenswerts",
+            "Datum der Veräußerung des Vermögenswerts",
+            "andere Asset-Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für den Vermögenswert",
+            "Identifikationsnummer des Wartungsvertrags",
+            "Identifikationsnummer des Lieferanten",
+            "Allgemeine Details oder Beschreibung des Vermögenswerts",
+            "Funktion oder Zweck des Vermögenswerts",
+            "Modellbezeichnung des Vermögenswerts",
+            "Datum des Erwerbs des Vermögenswerts",
+            "Datum der Veräußerung des Vermögenswerts",
+            "Zusätzliche Details zum Vermögenswert"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Asset-Teile",
+        "table_description": "Zuordnung zwischen Assets und ihren Teilen",
+        "column_names": [
+            "Asset-ID",
+            "Teil-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Assets",
+            "Eindeutige Identifikationsnummer des Teils"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wartungsingenieure",
+        "table_description": "Tabelle mit Informationen über Wartungsingenieure",
+        "column_names": [
+            "Ingenieur ID",
+            "Firmen-ID",
+            "Vorname",
+            "Nachname",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Ingenieurs",
+            "Identifikationsnummer der Firma, der der Ingenieur zugeordnet ist",
+            "Vorname des Ingenieurs",
+            "Nachname des Ingenieurs",
+            "Weitere Informationen oder Details über den Ingenieur"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Ingenieurfähigkeiten",
+        "table_description": "Zuordnung von Ingenieuren zu ihren Fähigkeiten",
+        "column_names": [
+            "Ingenieur ID",
+            "Fähigkeits-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Ingenieurs",
+            "Eindeutige Identifikationsnummer der Fähigkeit"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Fehlerprotokoll",
+        "table_description": "Tabelle zur Protokollierung von Fehlern mit detaillierten Informationen",
+        "column_names": [
+            "Fehlerprotokolleintrags-ID",
+            "Asset-ID",
+            "aufgezeichnet nach Mitarbeiter-ID",
+            "Datum des Fehlerprotokolleintrags",
+            "Fehler Beschreibung",
+            "andere Fehlerdetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Fehlerprotokolleintrag",
+            "ID des Assets, bei dem der Fehler aufgetreten ist",
+            "ID des Mitarbeiters, der den Fehler protokolliert hat",
+            "Datum, an dem der Fehler protokolliert wurde",
+            "Kurze Beschreibung des aufgetretenen Fehlers",
+            "Weitere Details zum Fehler"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Ingenieurbesuche",
+        "table_description": "Tabelle zur Erfassung von Ingenieurbesuchen, einschließlich Details zum Besuch und zum Fehlerstatus.",
+        "column_names": [
+            "Ingenieur Besuch ID",
+            "Mitarbeiter-ID kontaktieren",
+            "Ingenieur ID",
+            "Fehlerprotokolleintrags-ID",
+            "Fehlerstatus",
+            "Besuchsstartdatum",
+            "Besuchsendedatum",
+            "andere Besuchsdetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Ingenieurbesuch.",
+            "Die ID des Mitarbeiters, der den Ingenieur kontaktiert hat oder kontaktiert werden soll.",
+            "Die ID des Ingenieurs, der den Besuch durchführt.",
+            "Die ID des Fehlerprotokolleintrags, zu dem der Besuch gehört.",
+            "Der Status des Fehlers zum Zeitpunkt des Besuchs.",
+            "Datum und Uhrzeit, zu denen der Besuch begonnen hat.",
+            "Datum und Uhrzeit, zu denen der Besuch geendet hat.",
+            "Weitere Details oder Notizen zum Besuch."
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Teilefehler",
+        "table_description": "Tabelle zur Erfassung von Fehlern bei Teilen",
+        "column_names": [
+            "Teil Fehler ID",
+            "Teil-ID",
+            "Fehler Kurzname",
+            "Fehler Beschreibung",
+            "andere Fehlerdetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für den Teilfehler",
+            "Identifikationsnummer des betroffenen Teils",
+            "Kurze Bezeichnung des Fehlers",
+            "Detaillierte Beschreibung des Fehlers",
+            "Zusätzliche Details oder Informationen zum Fehler"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Fehlerprotokollteile",
+        "table_description": "Tabelle zur Verwaltung von Fehlerprotokollteilen, einschließlich Fehler-ID, Teil-ID und Fehlerstatus.",
+        "column_names": [
+            "Fehlerprotokolleintrags-ID",
+            "Teil Fehler ID",
+            "Fehlerstatus"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Fehlerprotokolleintrags",
+            "Identifikationsnummer des Teils, auf den sich der Fehler bezieht",
+            "Aktueller Status des Fehlers"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Fähigkeiten erforderlich, um zu beheben",
+        "table_description": "Tabelle mit Fähigkeiten, die erforderlich sind, um bestimmte Fehler zu beheben",
+        "column_names": [
+            "Teil Fehler ID",
+            "Fähigkeits-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für den Teil oder die Komponente, in dem ein Fehler aufgetreten ist",
+            "Eindeutige Identifikation für eine Fähigkeit, die benötigt wird, um den Fehler zu beheben"
+        ],
+        "db_id": "assets_maintenance",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Adressen",
+        "table_description": "Eine Tabelle zur Verwaltung von Adressen.",
+        "column_names": [
+            "Adresse-ID",
+            "Linie 1",
+            "Linie 2",
+            "Stadt",
+            "Postleitzahl der Postleitzahl",
+            "Bundesland Provinz Grafschaft",
+            "Land"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Adresse",
+            "Erste Zeile der Adresse (Straße und Hausnummer)",
+            "Zweite Zeile der Adresse (Weitere Adresszusätze)",
+            "Name der Stadt",
+            "Postleitzahl",
+            "Bundesland, Provinz oder Grafschaft",
+            "Name des Landes"
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Personen",
+        "table_description": "Tabelle zur Verwaltung von Personendaten",
+        "column_names": [
+            "Personen-ID",
+            "Vorname",
+            "zweiter Vorname",
+            "Nachname",
+            "Handynummer",
+            "E-Mail-Addresse",
+            "Benutzername",
+            "Passwort"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer",
+            "Der erste Vorname der Person",
+            "Der zweite Vorname der Person",
+            "Der Nachname der Person",
+            "Die Handynummer der Person",
+            "Die E-Mail-Adresse der Person",
+            "Der Benutzername der Person",
+            "Das Passwort der Person"
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Studenten",
+        "table_description": "Tabelle mit Informationen über Studenten",
+        "column_names": [
+            "Studenten ID",
+            "Studentendetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten",
+            "Weitere Informationen über den Studenten"
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kurse",
+        "table_description": "Tabelle für die Verwaltung von Kursen",
+        "column_names": [
+            "Kurs-ID",
+            "Kursname",
+            "Kursbeschreibung",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Kurses",
+            "Name des Kurses",
+            "Detaillierte Beschreibung des Kurses",
+            "Zusätzliche Informationen oder Details zum Kurs"
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Personenadressen",
+        "table_description": "Zuordnung von Personen zu Adressen mit zeitlicher Gültigkeit",
+        "column_names": [
+            "Personenadresse ID",
+            "Personen-ID",
+            "Adresse-ID",
+            "Datum von",
+            "Datum bis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für den Personenadressen-Eintrag",
+            "Identifikationsnummer der Person",
+            "Identifikationsnummer der Adresse",
+            "Datum, an dem die Adresse für die Person gültig wurde",
+            "Datum, bis zu dem die Adresse für die Person gültig war"
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Anmeldungen für Studentenkurse",
+        "table_description": "Tabelle mit Anmeldungen von Studenten für verschiedene Kurse, einschließlich Studenten-ID, Kurs-ID und Registrierungsdatum.",
+        "column_names": [
+            "Studenten ID",
+            "Kurs-ID",
+            "Registrierungsdatum"
+        ],
+        "column_descriptions": [
+            "Studenten ID: Eindeutige Identifikationsnummer des Studenten.",
+            "Kurs-ID: Eindeutige Identifikationsnummer des Kurses, für den sich der Student angemeldet hat.",
+            "Registrierungsdatum: Datum, an dem der Student sich für den Kurs angemeldet hat."
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Teilnahme an Studentenkursen",
+        "table_description": "Tabelle zur Erfassung der Teilnahme von Studenten an Kursen",
+        "column_names": [
+            "Studenten ID",
+            "Kurs-ID",
+            "Teilnahmedatum"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten",
+            "Eindeutige Identifikationsnummer des Kurses",
+            "Datum, an dem der Student am Kurs teilgenommen hat"
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kandidaten",
+        "table_description": "Tabelle mit Informationen über verschiedene Kandidaten",
+        "column_names": [
+            "Kandidaten-ID",
+            "Kandidatendetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jeden Kandidaten",
+            "Weitere Informationen über den Kandidaten"
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kandidatenbewertungen",
+        "table_description": "Tabelle mit Informationen über die Bewertungen von Kandidaten",
+        "column_names": [
+            "Kandidaten-ID",
+            "Qualifikation",
+            "Prüfungsdatum",
+            "Bewertungsergebniscode"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für den Kandidaten",
+            "Qualifikation oder Status des Kandidaten",
+            "Datum der Prüfung",
+            "Code oder Ergebnis der Bewertung"
+        ],
+        "db_id": "student_assessment",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Rassen",
+        "table_description": "Tabelle mit Informationen über verschiedene Rassen",
+        "column_names": [
+            "Rassencode",
+            "Rassenname"
+        ],
+        "column_descriptions": [
+            "Eindeutiger Code für die Rasse",
+            "Name der Rasse"
+        ],
+        "db_id": "dog_kennels",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Gebühren",
+        "table_description": "Tabelle mit Informationen über Ladungen und zugehörige Gebühren",
+        "column_names": [
+            "Ladungs-ID",
+            "Ladungsart",
+            "Ladungsmenge"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Ladung",
+            "Art der Ladung (z.B. Fracht, Passagiere, etc.)",
+            "Menge der geladenen Güter oder Einheiten"
+        ],
+        "db_id": "dog_kennels",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Größen",
+        "table_description": "Tabelle mit Größeninformationen",
+        "column_names": [
+            "Größencode",
+            "Größenbeschreibung"
+        ],
+        "column_descriptions": [
+            "Eindeutiger Code für die Größe",
+            "Textuelle Beschreibung der Größe"
+        ],
+        "db_id": "dog_kennels",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Behandlungsarten",
+        "table_description": "Tabelle mit verschiedenen Behandlungsarten und ihren Beschreibungen",
+        "column_names": [
+            "Behandlungstypcode",
+            "Beschreibung der Behandlungsart"
+        ],
+        "column_descriptions": [
+            "Eindeutiger Code für den Behandlungstyp",
+            "Ausführliche Beschreibung der Behandlungsart"
+        ],
+        "db_id": "dog_kennels",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Besitzer",
+        "table_description": "Tabelle mit Informationen über Besitzer",
+        "column_names": [
+            "Besitzer ID",
+            "Vorname",
+            "Nachname",
+            "Straße",
+            "Stadt",
+            "Bundesland",
+            "Postleitzahl",
+            "E-Mail-Addresse",
+            "Haustelefon",
+            "Handynummer"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Besitzers",
+            "Der Vorname des Besitzers",
+            "Der Nachname des Besitzers",
+            "Die Straße, in der der Besitzer wohnt",
+            "Die Stadt, in der der Besitzer wohnt",
+            "Das Bundesland, in dem der Besitzer wohnt",
+            "Die Postleitzahl des Wohnortes des Besitzers",
+            "Die E-Mail-Adresse des Besitzers",
+            "Die Telefonnummer des Besitzers, sofern vorhanden",
+            "Die Handynummer des Besitzers"
+        ],
+        "db_id": "dog_kennels",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Hunde",
+        "table_description": "Tabelle mit Informationen über Hunde in einer Einrichtung",
+        "column_names": [
+            "Hunde-ID",
+            "Besitzer ID",
+            "aufgegeben ja oder nein",
+            "Rassencode",
+            "Größencode",
+            "Name",
+            "Alter",
+            "Geburtsdatum",
+            "Geschlecht",
+            "Gewicht",
+            "Datum angekommen",
+            "Datum der Annahme",
+            "Datum der Abreise"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jeden Hund",
+            "Identifikationsnummer des Besitzers",
+            "Gibt an, ob der Hund von seinem Besitzer aufgegeben wurde",
+            "Code, der die Rasse des Hundes angibt",
+            "Code, der die Größe des Hundes angibt",
+            "Name des Hundes",
+            "Alter des Hundes",
+            "Geburtsdatum des Hundes",
+            "Geschlecht des Hundes",
+            "Gewicht des Hundes",
+            "Datum, an dem der Hund in der Einrichtung angekommen ist",
+            "Datum, an dem der Hund zur Adoption angenommen wurde",
+            "Datum, an dem der Hund die Einrichtung verlassen hat"
+        ],
+        "db_id": "dog_kennels",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Profis",
+        "table_description": "Tabelle mit Informationen über professionelle Personen",
+        "column_names": [
+            "Profis-ID",
+            "Rollencode",
+            "Vorname",
+            "Straße",
+            "Stadt",
+            "Bundesland",
+            "Postleitzahl",
+            "Nachname",
+            "E-Mail-Addresse",
+            "Haustelefon",
+            "Handynummer"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer",
+            "Code für die Rolle des Profis",
+            "Vorname des Profis",
+            "Straße des Profis",
+            "Stadt des Profis",
+            "Bundesland des Profis",
+            "Postleitzahl des Profis",
+            "Nachname des Profis",
+            "E-Mail-Adresse des Profis",
+            "Festnetztelefonnummer des Profis",
+            "Mobiltelefonnummer des Profis"
+        ],
+        "db_id": "dog_kennels",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Behandlungen",
+        "table_description": "Tabelle mit Informationen über Behandlungen, vermutlich im Kontext einer Tierarztpraxis.",
+        "column_names": [
+            "Behandlungs-ID",
+            "Hunde-ID",
+            "Profis-ID",
+            "Behandlungstypcode",
+            "Datum der Behandlung",
+            "Behandlungskosten"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Behandlung.",
+            "Identifikationsnummer des Hundes, der behandelt wurde.",
+            "Identifikationsnummer des Professionals, der die Behandlung durchgeführt hat.",
+            "Code, der den Typ der Behandlung beschreibt.",
+            "Datum, an dem die Behandlung stattgefunden hat.",
+            "Kosten, die für die Behandlung angefallen sind."
+        ],
+        "db_id": "dog_kennels",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Genre",
+        "table_description": "Tabelle mit Informationen über verschiedene Genres",
+        "column_names": [
+            "Genre-Name",
+            "Bewertung",
+            "am beliebtesten in"
+        ],
+        "column_descriptions": [
+            "Der Name des Genres",
+            "Eine Bewertung des Genres",
+            "Die Region oder Plattform, wo das Genre am beliebtesten ist"
+        ],
+        "db_id": "music_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Künstler",
+        "table_description": "Tabelle mit Informationen über Künstler",
+        "column_names": [
+            "Künstlername",
+            "Land",
+            "Geschlecht",
+            "bevorzugtes Genre"
+        ],
+        "column_descriptions": [
+            "Name des Künstlers",
+            "Herkunftsland des Künstlers",
+            "Geschlecht des Künstlers",
+            "Bevorzugtes Musikgenre oder Kunstgenre des Künstlers"
+        ],
+        "db_id": "music_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Dateien",
+        "table_description": "Eine Tabelle zur Verwaltung von Audiodateien mit ihren Eigenschaften.",
+        "column_names": [
+            "Lied-ID",
+            "Künstlername",
+            "Dateigröße",
+            "Dauer",
+            "Formate"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jedes Lied.",
+            "Name des Künstlers, der das Lied interpretiert.",
+            "Größe der Datei in einem bestimmten Format (z.B. MP3, WAV).",
+            "Dauer des Liedes in Minuten und Sekunden.",
+            "Verwendetes Audioformat (z.B. MP3, WAV, AAC)."
+        ],
+        "db_id": "music_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Lied",
+        "table_description": "Tabelle mit Informationen über Musiklieder",
+        "column_names": [
+            "Liedname",
+            "Künstlername",
+            "Land",
+            "Lied-ID",
+            "Genre ist",
+            "Bewertung",
+            "Sprachen",
+            "Veröffentlichungsdatum",
+            "Auflösung"
+        ],
+        "column_descriptions": [
+            "Der Name des Liedes",
+            "Der Name des Künstlers oder der Band",
+            "Das Land, in dem das Lied veröffentlicht wurde",
+            "Eine eindeutige Identifikationsnummer für das Lied",
+            "Das Genre, zu dem das Lied gehört",
+            "Eine Bewertung oder Punktzahl für das Lied",
+            "Die Sprachen, in denen das Lied gesungen wird",
+            "Das Datum, an dem das Lied veröffentlicht wurde",
+            "Die technische Auflösung des Lieds"
+        ],
+        "db_id": "music_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Personen",
+        "table_description": "Eine Tabelle mit Informationen über Personen.",
+        "column_names": [
+            "Person-ID",
+            "Alter",
+            "Name",
+            "Staatsangehörigkeit",
+            "Graduiertenkolleg"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Person.",
+            "Das aktuelle Alter der Person.",
+            "Der vollständige Name der Person.",
+            "Die Staatsbürgerschaft oder Nationalität der Person.",
+            "Informationen über die Teilnahme an einem Graduiertenkolleg."
+        ],
+        "db_id": "company_employee",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Firmen",
+        "table_description": "Tabelle mit Informationen über verschiedene Firmen, einschließlich ihrer finanziellen Kennzahlen.",
+        "column_names": [
+            "Firmen-ID",
+            "Name",
+            "Hauptquartier",
+            "Industrie",
+            "Umsatz in Milliarden",
+            "Gewinne in Milliarden",
+            "Vermögen in Milliarden",
+            "Marktwert in Milliarden"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Firma.",
+            "Der Name der Firma.",
+            "Der Standort des Hauptsitzes der Firma.",
+            "Die Branche, in der die Firma tätig ist.",
+            "Der jährliche Umsatz der Firma in Milliarden.",
+            "Der jährliche Gewinn der Firma in Milliarden.",
+            "Das Gesamtvermögen der Firma in Milliarden.",
+            "Der Marktwert der Firma in Milliarden."
+        ],
+        "db_id": "company_employee",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Beschäftigung",
+        "table_description": "Tabelle mit Beschäftigungsverhältnissen von Personen bei verschiedenen Firmen.",
+        "column_names": [
+            "Firmen-ID",
+            "Person-ID",
+            "Jahr arbeiten"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Firma.",
+            "Eindeutige Identifikationsnummer der Person.",
+            "Jahr, in dem die Person bei der Firma gearbeitet hat."
+        ],
+        "db_id": "company_employee",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Stadt",
+        "table_description": "Tabelle mit Informationen über Städte",
+        "column_names": [
+            "Stadt-ID",
+            "Offizieller Name",
+            "Status",
+            "Fläche km 2",
+            "Bevölkerung",
+            "Volkszählungsranking"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Stadt",
+            "Offizieller Name der Stadt",
+            "Status oder Rechtsform der Stadt",
+            "Fläche der Stadt in Quadratkilometern",
+            "Einwohnerzahl der Stadt",
+            "Rang der Stadt in der Volkszählung"
+        ],
+        "db_id": "farm",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Farm",
+        "table_description": "Übersicht über landwirtschaftliche Betriebe mit Tierbeständen",
+        "column_names": [
+            "Farm-ID",
+            "Jahr",
+            "insgesamt Pferde",
+            "Arbeitspferde",
+            "Rinder gesamt",
+            "Ochsen",
+            "Bullen",
+            "Kühe",
+            "Schweine",
+            "Schafe und Ziegen"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Farm",
+            "Jahr, auf das sich die Daten beziehen",
+            "Gesamtzahl der Pferde auf der Farm",
+            "Anzahl der Pferde, die für landwirtschaftliche Arbeiten eingesetzt werden",
+            "Gesamtzahl der Rinder auf der Farm",
+            "Anzahl der Ochsen auf der Farm",
+            "Anzahl der Bullen auf der Farm",
+            "Anzahl der Kühe auf der Farm",
+            "Anzahl der Schweine auf der Farm",
+            "Anzahl der Schafe und Ziegen auf der Farm"
+        ],
+        "db_id": "farm",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "landwirtschaftlicher Wettbewerb",
+        "table_description": "Informationen über den landwirtschaftlichen Wettbewerb",
+        "column_names": [
+            "Wettbewerbs-ID",
+            "Jahr",
+            "Thema",
+            "ID der Gastgeberstadt",
+            "Gastgeber"
+        ],
+        "column_descriptions": [
+            "Eindeutige Kennung für den Wettbewerb",
+            "Jahr, in dem der Wettbewerb stattfand",
+            "Thema oder Schwerpunkt des Wettbewerbs",
+            "Eindeutige Kennung der Gastgeberstadt",
+            "Name der Stadt oder Organisation, die den Wettbewerb ausrichtet"
+        ],
+        "db_id": "farm",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wettbewerbsrekord",
+        "table_description": "Tabelle für Wettbewerbsrekorde",
+        "column_names": [
+            "Wettbewerbs-ID",
+            "Farm-ID",
+            "Rang"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID des Wettbewerbs",
+            "ID der Farm, die den Rekord hält",
+            "Rang des Wettbewerbsrekords"
+        ],
+        "db_id": "farm",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Adressen",
+        "table_description": "Tabelle zur Verwaltung von Adressen",
+        "column_names": [
+            "Adresse-ID",
+            "Adressen Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Adresse",
+            "Spezifische Informationen zu jeder Adresse"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Standorte",
+        "table_description": "Tabelle mit Informationen über verschiedene Standorte",
+        "column_names": [
+            "Standort-ID",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Standort",
+            "Weitere Informationen zum Standort"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produkte",
+        "table_description": "Diese Tabelle enthält Informationen zu verschiedenen Produkten.",
+        "column_names": [
+            "Produkt ID",
+            "Produkttypcode",
+            "Produktname",
+            "Produktpreis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Produkts",
+            "Code, der den Typ des Produkts kennzeichnet",
+            "Name des Produkts",
+            "Preis des Produkts"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Parteien",
+        "table_description": "Tabelle mit Informationen über verschiedene Parteien",
+        "column_names": [
+            "Partei-ID",
+            "Partei-Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Partei",
+            "Ausführliche Details über die Partei"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Assets",
+        "table_description": "Eine Liste von Vermögenswerten mit eindeutiger Identifikation und weiteren Details.",
+        "column_names": [
+            "Asset-ID",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Assets",
+            "Weitere Informationen oder Details zum Asset"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Funding",
+        "table_description": "Tabelle mit Informationen über Finanzierungen",
+        "column_names": [
+            "Funding-ID",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jede Finanzierung",
+            "Weitere Informationen zur Finanzierung"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Finanzen",
+        "table_description": "Tabelle mit finanziellen Informationen",
+        "column_names": [
+            "Finanz-ID",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede finanzielle Transaktion oder jedes Konto",
+            "Weitere Informationen zu den finanziellen Transaktionen oder Konten"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Veranstaltungen",
+        "table_description": "Tabelle mit Informationen über Veranstaltungen",
+        "column_names": [
+            "Veranstaltung-ID",
+            "Adresse-ID",
+            "Funding-ID",
+            "Ereignistypcode",
+            "Finanz-ID",
+            "Standort-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation der Veranstaltung",
+            "Identifikation der Adresse der Veranstaltung",
+            "Identifikation der Funding-Informationen",
+            "Code für den Typ der Veranstaltung",
+            "Identifikation der Finanzinformationen",
+            "Identifikation des Standorts der Veranstaltung"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produkte in Veranstaltungen",
+        "table_description": "Zuordnung von Produkten zu Veranstaltungen",
+        "column_names": [
+            "Produkt in Ereignis-ID",
+            "Veranstaltung-ID",
+            "Produkt ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für die Zuordnung eines Produkts zu einem Ereignis",
+            "Identifikation der Veranstaltung, an der das Produkt teilnimmt",
+            "Identifikation des Produkts, das an der Veranstaltung teilnimmt"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Partein in Veranstaltungen",
+        "table_description": "Zuordnung von Parteien zu Veranstaltungen mit Rollen",
+        "column_names": [
+            "Partei-ID",
+            "Veranstaltung-ID",
+            "Rollencode"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID der Partei",
+            "Eindeutige ID der Veranstaltung",
+            "Code für die Rolle der Partei in der Veranstaltung"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Vereinbarungen",
+        "table_description": "Tabelle mit Informationen über Vereinbarungen, identifiziert durch Dokument-ID und Veranstaltung-ID",
+        "column_names": [
+            "Dokument-ID",
+            "Veranstaltung-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Dokuments",
+            "Eindeutige Identifikationsnummer der Veranstaltung"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Assets in Veranstaltungen",
+        "table_description": "Tabelle zur Verwaltung von Assets in Veranstaltungen",
+        "column_names": [
+            "Asset-ID",
+            "Veranstaltung-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Assets",
+            "Eindeutige Identifikationsnummer der Veranstaltung"
+        ],
+        "db_id": "solvency_ii",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Stadt",
+        "table_description": "Tabelle mit Informationen über Städte, einschließlich ihrer Namen in verschiedenen Schreibweisen und sozioökonomischen Daten.",
+        "column_names": [
+            "Stadt-ID",
+            "Stadt",
+            "Hanzi",
+            "Hanyu Pinyin",
+            "regionale Bevölkerung",
+            "gdp"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für die Stadt",
+            "Name der Stadt",
+            "Name der Stadt in chinesischen Schriftzeichen (Hanzi)",
+            "Offizielle romanisierte Form des Stadtnamens (Hanyu Pinyin)",
+            "Anzahl der Einwohner in der Stadt oder dem zugehörigen Verwaltungsgebiet",
+            "Bruttoinlandsprodukt der Stadt"
+        ],
+        "db_id": "city_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Spiel",
+        "table_description": "Tabelle mit Informationen zu einem Spiel, einschließlich Datum, Ort, Spielstand, Ergebnis und Wettbewerb.",
+        "column_names": [
+            "Spiel-ID",
+            "Datum",
+            "Tagungsort",
+            "Spielstand",
+            "Ergebnis",
+            "Wettbewerb"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für das Spiel",
+            "Datum, an dem das Spiel stattfindet",
+            "Ort, an dem das Spiel stattfindet",
+            "Aktueller Stand des Spiels",
+            "Finales Ergebnis des Spiels",
+            "Wettbewerb, in dem das Spiel stattfindet"
+        ],
+        "db_id": "city_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Temperatur",
+        "table_description": "Tabelle mit Temperaturwerten für verschiedene Städte, aufgeteilt nach Monaten",
+        "column_names": [
+            "Stadt-ID",
+            "Januar",
+            "Februar",
+            "März",
+            "April",
+            "Juni",
+            "Juli",
+            "August",
+            "September",
+            "Oktober",
+            "November",
+            "Dezember"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation der Stadt",
+            "Temperatur im Januar",
+            "Temperatur im Februar",
+            "Temperatur im März",
+            "Temperatur im April",
+            "Temperatur im Juni",
+            "Temperatur im Juli",
+            "Temperatur im August",
+            "Temperatur im September",
+            "Temperatur im Oktober",
+            "Temperatur im November",
+            "Temperatur im Dezember"
+        ],
+        "db_id": "city_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Gastgeberstadt",
+        "table_description": "Tabelle mit Informationen über Gastgeberstädte für Spiele oder Events",
+        "column_names": [
+            "Jahr",
+            "Spiel-ID",
+            "Gastgeberstadt-ID"
+        ],
+        "column_descriptions": [
+            "Jahr, in dem das Spiel oder Event stattfand",
+            "Eindeutige Identifikation für das Spiel oder Event",
+            "Eindeutige Identifikation für die Gastgeberstadt"
+        ],
+        "db_id": "city_record",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Schwimmer",
+        "table_description": "Tabelle mit Schwimmern und ihren Zeiten für verschiedene Distanzen",
+        "column_names": [
+            "Aufzeichnung-ID",
+            "Name",
+            "Staatsangehörigkeit",
+            "Meter 100",
+            "Meter 200",
+            "Meter 300",
+            "Meter 400",
+            "Meter 500",
+            "Meter 600",
+            "Meter 700",
+            "Zeit"
+        ],
+        "column_descriptions": [
+            "Eindeutige Aufzeichnungs‑ID",
+            "Name des Schwimmers",
+            "Staatsangehörigkeit des Schwimmers",
+            "Zeit für 100 Meter",
+            "Zeit für 200 Meter",
+            "Zeit für 300 Meter",
+            "Zeit für 400 Meter",
+            "Zeit für 500 Meter",
+            "Zeit für 600 Meter",
+            "Zeit für 700 Meter",
+            "Gesamtzeit oder Endzeit des Wettkampfs"
+        ],
+        "db_id": "swimming",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Stadion",
+        "table_description": "Diese Tabelle enthält Informationen über Stadien.",
+        "column_names": [
+            "Aufzeichnung-ID",
+            "Name",
+            "Kapazität",
+            "Stadt",
+            "Land",
+            "Eröffnungsjahr"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Aufzeichnung",
+            "Name des Stadions",
+            "Kapazität des Stadions",
+            "Stadt, in der das Stadion liegt",
+            "Land, in dem das Stadion liegt",
+            "Jahr der Eröffnung des Stadions"
+        ],
+        "db_id": "swimming",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Spiel",
+        "table_description": "Tabelle mit Informationen über ein bestimmtes Spiel",
+        "column_names": [
+            "Aufzeichnung-ID",
+            "Name",
+            "Stadion-ID",
+            "Jahr"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Aufzeichnung",
+            "Name des Spiels oder des Events",
+            "Referenz auf ein bestimmtes Stadion",
+            "Jahr, in dem das Spiel stattfindet"
+        ],
+        "db_id": "swimming",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Aufzeichnung",
+        "table_description": "Aufzeichnungen von Schwimmwettkämpfen",
+        "column_names": [
+            "Aufzeichnung-ID",
+            "Ergebnis",
+            "Schwimmer ID",
+            "Spiel-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation der Aufzeichnung",
+            "Ergebnis des Schwimmwettkampfes",
+            "Identifikation des Schwimmers",
+            "Identifikation des Spiels oder Wettkampfes"
+        ],
+        "db_id": "swimming",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Airline",
+        "table_description": "Übersicht über Airlines mit ihren Identifikatoren, Namen, Abkürzungen und Herkunftsländern.",
+        "column_names": [
+            "Airline-ID",
+            "Airline-Name",
+            "Abkürzung",
+            "Land"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Airline.",
+            "Vollständiger Name der Airline.",
+            "Kurzform des Namens der Airline.",
+            "Land, in dem die Airline ihren Hauptsitz hat."
+        ],
+        "db_id": "flight_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Flughäfen",
+        "table_description": "Informationen über Flughäfen weltweit",
+        "column_names": [
+            "Stadt",
+            "Flughafencode",
+            "Name des Flughafens",
+            "Land",
+            "Land Abkürzung"
+        ],
+        "column_descriptions": [
+            "Stadt, in der der Flughafen liegt",
+            "Eindeutiger Code des Flughafens",
+            "Vollständiger Name des Flughafens",
+            "Name des Landes, in dem der Flughafen liegt",
+            "Abkürzung des Landes"
+        ],
+        "db_id": "flight_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Flüge",
+        "table_description": "Tabelle mit Informationen über Flüge",
+        "column_names": [
+            "Airline",
+            "Flugnummer",
+            "Quellflughafen",
+            "Zielflughafen"
+        ],
+        "column_descriptions": [
+            "Name der Fluggesellschaft",
+            "Eindeutige Nummer des Fluges",
+            "Flughafen, von dem der Flug startet",
+            "Flughafen, den der Flug ansteuert"
+        ],
+        "db_id": "flight_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Landkreis",
+        "table_description": "Tabelle mit Informationen über deutsche Landkreise",
+        "column_names": [
+            "Landkreis-ID",
+            "Name des Landkreises",
+            "Bevölkerung",
+            "Postleitzahl"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Landkreises",
+            "Offizieller Name des Landkreises",
+            "Einwohnerzahl des Landkreises",
+            "Postleitzahl des Landkreises"
+        ],
+        "db_id": "election",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Partei",
+        "table_description": "Informationen über politische Parteien und ihre Vertreter in verschiedenen Ämtern",
+        "column_names": [
+            "Partei-ID",
+            "Jahr",
+            "Partei",
+            "Gouverneur",
+            "Vizegouverneur",
+            "Controller",
+            "Generalstaatsanwalt",
+            "US-Senat"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation der Partei",
+            "Jahr, auf das sich die Informationen beziehen",
+            "Name der Partei",
+            "Name des Gouverneurs",
+            "Name des Vizegouverneurs",
+            "Name des Controllers",
+            "Name des Generalstaatsanwalts",
+            "Vertretung im US-Senat"
+        ],
+        "db_id": "election",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wahl",
+        "table_description": "Tabelle mit Informationen über Wahlen",
+        "column_names": [
+            "Wahl-ID",
+            "Landkreise vertreten",
+            "Kreis",
+            "delegieren",
+            "Partei",
+            "zuerst gewählt",
+            "Komitee"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Wahl",
+            "Landkreise, die bei der Wahl vertreten sind",
+            "Kreis oder Region, in dem die Wahl stattfindet",
+            "Informationen über die Delegation von Stimmen",
+            "Politische Partei, die an der Wahl teilnimmt",
+            "Datum oder Zeitpunkt, an dem die Wahl zum ersten Mal durchgeführt wurde",
+            "Name des Komitees, das die Wahl durchführt"
+        ],
+        "db_id": "election",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Hersteller",
+        "table_description": "Tabelle mit Informationen über verschiedene Hersteller",
+        "column_names": [
+            "Code",
+            "Name",
+            "Hauptquartier",
+            "Gründer",
+            "Einnahmen"
+        ],
+        "column_descriptions": [
+            "Eindeutiger Identifikationscode des Herstellers",
+            "Name des Herstellers",
+            "Standort des Hauptquartiers des Herstellers",
+            "Name des Gründers des Herstellers",
+            "Jährliche Einnahmen des Herstellers"
+        ],
+        "db_id": "manufactory_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produkte",
+        "table_description": "Diese Tabelle enthält Informationen über verschiedene Produkte.",
+        "column_names": [
+            "Code",
+            "Name",
+            "Preis",
+            "Hersteller"
+        ],
+        "column_descriptions": [
+            "Eindeutiger Identifikationscode des Produkts.",
+            "Name des Produkts.",
+            "Preis des Produkts.",
+            "Hersteller des Produkts."
+        ],
+        "db_id": "manufactory_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Personen",
+        "table_description": "Tabelle mit Informationen über verschiedene Personen",
+        "column_names": [
+            "Person-ID",
+            "Kreis",
+            "Name",
+            "Partei",
+            "Alter"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Person",
+            "Der Kreis, zu dem die Person gehört",
+            "Der Name der Person",
+            "Die Parteizugehörigkeit der Person",
+            "Das Alter der Person"
+        ],
+        "db_id": "debate",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Debatte",
+        "table_description": "Tabelle mit Informationen über Debatten",
+        "column_names": [
+            "Debatten-ID",
+            "Datum",
+            "Tagungsort",
+            "Anzahl der Zuschauer"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Debatte",
+            "Datum der Debatte",
+            "Ort, an dem die Debatte stattfindet",
+            "Anzahl der Personen, die die Debatte verfolgen"
+        ],
+        "db_id": "debate",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Menschen debattieren",
+        "table_description": "Tabelle mit Informationen über Debatten zwischen Menschen, einschließlich Debatten-ID und Angaben zum Ausgang.",
+        "column_names": [
+            "Debatten-ID",
+            "positiv",
+            "Negativ",
+            "ob positiv gewinnen"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Debatte.",
+            "Anzahl der Stimmen, die die positive Seite erhalten hat.",
+            "Anzahl der Stimmen, die die negative Seite erhalten hat.",
+            "Ergebnis der Debatte: Ob die positive Seite gewonnen hat."
+        ],
+        "db_id": "debate",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Person",
+        "table_description": "Tabelle mit Informationen über eine Person",
+        "column_names": [
+            "Name",
+            "Alter",
+            "Stadt",
+            "Geschlecht",
+            "Beruf"
+        ],
+        "column_descriptions": [
+            "Name der Person",
+            "Alter der Person",
+            "Stadt, in der die Person lebt",
+            "Geschlecht der Person",
+            "Beruf der Person"
+        ],
+        "db_id": "network_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "persönlicher Freund",
+        "table_description": "Tabelle mit Informationen über persönliche Freunde",
+        "column_names": [
+            "Name",
+            "Freund",
+            "Jahr"
+        ],
+        "column_descriptions": [
+            "Name der Person",
+            "Name des Freundes",
+            "Relevantes Jahr"
+        ],
+        "db_id": "network_2",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Dienst",
+        "table_description": "Tabelle mit Informationen über verschiedene Dienste",
+        "column_names": [
+            "Dienst-ID",
+            "Diensttypcode"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Dienst",
+            "Typ oder Kategorie des Dienstes"
+        ],
+        "db_id": "local_govt_in_alabama",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Teilnehmer",
+        "table_description": "Tabelle mit Informationen über Teilnehmer",
+        "column_names": [
+            "Teilnehmer-ID",
+            "Teilnehmertypcode",
+            "Teilnehmerdetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Teilnehmers",
+            "Code, der den Typ oder die Kategorie des Teilnehmers angibt",
+            "Weitere Details oder Informationen über den Teilnehmer"
+        ],
+        "db_id": "local_govt_in_alabama",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Ereignisse",
+        "table_description": "Eine Sammlung von Ereignissen mit zugehörigen Diensten und detaillierten Informationen.",
+        "column_names": [
+            "Ereignis-ID",
+            "Dienst-ID",
+            "Ereignisdetails"
+        ],
+        "column_descriptions": [
+            "Eine eindeutige Identifikationsnummer für jedes Ereignis.",
+            "Die Identifikationsnummer des Dienstes, zu dem das Ereignis gehört.",
+            "Detaillierte Informationen über das Ereignis."
+        ],
+        "db_id": "local_govt_in_alabama",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Teilnehmer an Ereignisse",
+        "table_description": "Zuordnung von Teilnehmern zu Ereignissen",
+        "column_names": [
+            "Ereignis-ID",
+            "Teilnehmer-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Ereignisses",
+            "Eindeutige Identifikation des Teilnehmers"
+        ],
+        "db_id": "local_govt_in_alabama",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Berg",
+        "table_description": "Tabelle mit Informationen über Berge",
+        "column_names": [
+            "Berg ID",
+            "Name",
+            "Höhe",
+            "Vorsprung",
+            "Reichweite",
+            "Land"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Berges",
+            "Name des Berges",
+            "Höhe des Berges über Meereshöhe",
+            "Höhenunterschied zwischen Berggipfel und Umgebung",
+            "Entfernung oder Gebiet, das vom Berg aus sichtbar ist",
+            "Land, in dem der Berg liegt"
+        ],
+        "db_id": "climbing",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Bergsteiger",
+        "table_description": "Tabelle mit Informationen über Bergsteiger, ihre Leistungen und die Berge, die sie erklommen haben.",
+        "column_names": [
+            "Bergsteiger-ID",
+            "Name",
+            "Land",
+            "Zeit",
+            "Punkte",
+            "Berg ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jeden Bergsteiger.",
+            "Name des Bergsteigers.",
+            "Land, aus dem der Bergsteiger stammt.",
+            "Zeit, die der Bergsteiger für das Erklimmen des Berges benötigte.",
+            "Punkte, die der Bergsteiger für seine Leistung erhielt.",
+            "Identifikationsnummer des Berges, den der Bergsteiger erklomm."
+        ],
+        "db_id": "climbing",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kursautoren und Tutoren",
+        "table_description": "Tabelle für Kursautoren und Tutoren, enthält Informationen über Autoren und Tutoren",
+        "column_names": [
+            "Autoren-ID",
+            "Autor Tutor atb",
+            "Benutzername",
+            "Passwort",
+            "persönlichen Namen",
+            "zweiter Vorname",
+            "Familienname",
+            "Geschlecht M/W",
+            "Anschrift Zeile 1"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Autors oder Tutors",
+            "Kennzeichnung, ob der Autor auch als Tutor tätig ist",
+            "Benutzername des Autors oder Tutors",
+            "Passwort des Autors oder Tutors",
+            "Persönlicher Name des Autors oder Tutors",
+            "Zweiter Vorname des Autors oder Tutors",
+            "Familienname des Autors oder Tutors",
+            "Geschlecht des Autors oder Tutors (M/W)",
+            "Erste Zeile der Anschrift des Autors oder Tutors"
+        ],
+        "db_id": "e_learning",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Studenten",
+        "table_description": "Tabelle mit Informationen über Studenten",
+        "column_names": [
+            "Studenten ID",
+            "Datum der Registrierung",
+            "Datum der letzten Anmeldung",
+            "Benutzername",
+            "Passwort",
+            "persönlichen Namen",
+            "zweiter Vorname",
+            "Familienname"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten",
+            "Datum, an dem der Student sich registriert hat",
+            "Datum der letzten Anmeldung des Studenten",
+            "Benutzername des Studenten",
+            "Passwort des Studenten",
+            "Persönlicher Name des Studenten",
+            "Zweiter Vorname des Studenten",
+            "Familienname des Studenten"
+        ],
+        "db_id": "e_learning",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Fächer",
+        "table_description": "Tabelle mit Informationen über verschiedene Fächer",
+        "column_names": [
+            "Fach-ID",
+            "Fachname"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Faches",
+            "Name des Faches"
+        ],
+        "db_id": "e_learning",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kurse",
+        "table_description": "Tabelle mit Informationen über Kurse",
+        "column_names": [
+            "Kurs-ID",
+            "Autoren-ID",
+            "Fach-ID",
+            "Kursname",
+            "Kursbeschreibung"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Kurs",
+            "Identifikation des Autors oder der Autoren des Kurses",
+            "Identifikation des Fachs oder der Kategorie, zu der der Kurs gehört",
+            "Name oder Titel des Kurses",
+            "Detaillierte Beschreibung des Kursinhalts"
+        ],
+        "db_id": "e_learning",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Einschreibung des Studentenkurses",
+        "table_description": "Einschreibung von Studenten für Kurse",
+        "column_names": [
+            "Registrierungs-ID",
+            "Studenten ID",
+            "Kurs-ID",
+            "Datum der Einschreibung",
+            "Datum der Fertigstellung"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für die Registrierung",
+            "Identifikationsnummer des Studenten",
+            "Identifikationsnummer des Kurses",
+            "Zeitpunkt der Einschreibung",
+            "Zeitpunkt der Fertigstellung"
+        ],
+        "db_id": "e_learning",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Studententests gemacht",
+        "table_description": "Tabelle mit Informationen über Tests von Studenten",
+        "column_names": [
+            "Registrierungs-ID",
+            "Datum des Tests",
+            "Testergebnis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Studenten",
+            "Zeitpunkt, an dem der Test absolviert wurde",
+            "Ergebnis des Tests"
+        ],
+        "db_id": "e_learning",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wissenschaftler",
+        "table_description": "Tabelle mit Informationen über Wissenschaftler",
+        "column_names": [
+            "ssn",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Sozialversicherungsnummer des Wissenschaftlers",
+            "Name des Wissenschaftlers"
+        ],
+        "db_id": "scientist_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Projekte",
+        "table_description": "Diese Tabelle enthält Informationen über verschiedene Projekte.",
+        "column_names": [
+            "Code",
+            "Name",
+            "Std"
+        ],
+        "column_descriptions": [
+            "Eindeutige Kennung für das Projekt",
+            "Name des Projekts",
+            "Standardabweichung oder projektbezogene Kennzahl"
+        ],
+        "db_id": "scientist_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zugewiesen an",
+        "table_description": "Tabelle zur Zuordnung von Wissenschaftlern zu Projekten",
+        "column_names": [
+            "Wissenschaftler",
+            "Projekt"
+        ],
+        "column_descriptions": [
+            "Name oder Identifikator des Wissenschaftlers",
+            "Name oder Identifikator des Projekts"
+        ],
+        "db_id": "scientist_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kapitän",
+        "table_description": "Tabelle mit Informationen über Kapitäne",
+        "column_names": [
+            "Kapitän ID",
+            "Name",
+            "Schiffs-ID",
+            "Alter",
+            "Klasse",
+            "Rang"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Kapitäns",
+            "Name des Kapitäns",
+            "Identifikationsnummer des Schiffes, auf dem der Kapitän dient",
+            "Alter des Kapitäns",
+            "Klasse oder Kategorie des Kapitäns",
+            "Dienstgrad oder Rang des Kapitäns"
+        ],
+        "db_id": "ship_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Schiff",
+        "table_description": "Tabelle mit Informationen über Schiffe",
+        "column_names": [
+            "Schiffs-ID",
+            "Name",
+            "Art",
+            "Baujahr",
+            "Klasse",
+            "Flagge"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Schiffes",
+            "Name des Schiffes",
+            "Art oder Typ des Schiffes",
+            "Baujahr des Schiffes",
+            "Klasse oder Kategorie des Schiffes",
+            "Flagge, unter der das Schiff registriert ist"
+        ],
+        "db_id": "ship_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Festivaldetail",
+        "table_description": "Tabelle mit Detailinformationen über Festivals",
+        "column_names": [
+            "Festival ID",
+            "Festival Name",
+            "Name des Vorsitzenden",
+            "Standort",
+            "Jahr",
+            "Anzahl der Zuschauer"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Festivals",
+            "Name des Festivals",
+            "Name der Person, die das Festival leitet",
+            "Ort, an dem das Festival stattfindet",
+            "Jahr, in dem das Festival stattfindet",
+            "Anzahl der Besucher des Festivals"
+        ],
+        "db_id": "entertainment_awards",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kunstwerk",
+        "table_description": "Tabelle für Informationen über Kunstwerke",
+        "column_names": [
+            "Kunstwerk-ID",
+            "Art",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Kunstwerks",
+            "Kategorie oder Stil des Kunstwerks",
+            "Titel oder Name des Kunstwerks"
+        ],
+        "db_id": "entertainment_awards",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Nominierung",
+        "table_description": "Tabelle zur Verwaltung von Nominierungen von Kunstwerken bei Festivals.",
+        "column_names": [
+            "Kunstwerk-ID",
+            "Festival ID",
+            "Ergebnis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Kunstwerks.",
+            "Identifikation des Festivals, bei dem das Kunstwerk nominiert wurde.",
+            "Ergebnis der Nominierung des Kunstwerks."
+        ],
+        "db_id": "entertainment_awards",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Allergietyp",
+        "table_description": "Tabelle zur Klassifizierung von Allergien nach ihrem Typ",
+        "column_names": [
+            "Name der Allergie",
+            "Allergietyp"
+        ],
+        "column_descriptions": [
+            "Bezeichnung der spezifischen Allergie",
+            "Kategorie oder Typ der Allergie"
+        ],
+        "db_id": "allergy_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "hat Allergie",
+        "table_description": "Tabelle mit Informationen über Allergien von Studenten",
+        "column_names": [
+            "Studenten-ID",
+            "Allergie"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten",
+            "Beschreibung der Allergie"
+        ],
+        "db_id": "allergy_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Student",
+        "table_description": "Tabelle mit Informationen über Studenten",
+        "column_names": [
+            "Studenten-ID",
+            "Nachname",
+            "Vorname",
+            "Alter",
+            "Geschlecht",
+            "Hauptfach",
+            "Berater",
+            "Stadtcode"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jeden Studenten",
+            "Nachname des Studenten",
+            "Vorname des Studenten",
+            "Alter des Studenten",
+            "Geschlecht des Studenten",
+            "Hauptstudienfach des Studenten",
+            "Akademischer Berater des Studenten",
+            "Code für den Wohnort oder die Stadt des Studenten"
+        ],
+        "db_id": "allergy_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Darsteller",
+        "table_description": "Tabelle mit Informationen über Darsteller",
+        "column_names": [
+            "Darsteller-ID",
+            "Geschlecht",
+            "Name",
+            "Staatsangehörigkeit",
+            "Geburtsstadt",
+            "Geburtsjahr"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Darstellers",
+            "Biologisches Geschlecht des Darstellers",
+            "Vollständiger Name des Darstellers",
+            "Nationalität oder Staatsbürgerschaft des Darstellers",
+            "Geburtsstadt des Darstellers",
+            "Geburtsjahr des Darstellers"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Urheberrecht",
+        "table_description": "Tabelle mit Informationen zu Urheberrechten",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "msid",
+            "Urheberrecht-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Drehbuchautors",
+            "Musikstück-ID",
+            "Eindeutige Identifikation des Urheberrechts"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Besetzung",
+        "table_description": "Tabelle mit Informationen über die Besetzung eines Films oder einer Serie",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "msid",
+            "Darsteller-ID",
+            "Rolle"
+        ],
+        "column_descriptions": [
+            "ID des Drehbuchautors",
+            "Musikstück-ID (msid)",
+            "ID des Darstellers",
+            "Rolle des Darstellers"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Genre",
+        "table_description": "Tabelle für Musikgenres",
+        "column_names": [
+            "Genre-ID",
+            "Genre"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jedes Genre",
+            "Name des Musikgenres"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Einstufung",
+        "table_description": "Tabelle zur Einstufung von Drehbuchautoren basierend auf Genre und Medieninhalten",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "msid",
+            "Genre-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Drehbuchautors",
+            "Medien-ID, Referenz auf ein bestimmtes Medium",
+            "Genre-ID, Klassifikation des Genres des Mediums"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Unternehmen",
+        "table_description": "Tabelle mit Informationen über Unternehmen oder Drehbuchautoren",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "Name",
+            "Landesvorwahl"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Drehbuchautors",
+            "Name des Unternehmens oder Drehbuchautors",
+            "Landesvorwahl des Unternehmens oder Drehbuchautors"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Regisseur",
+        "table_description": "Tabelle mit Informationen über Filmregisseure",
+        "column_names": [
+            "Regisseur-ID",
+            "Geschlecht",
+            "Name",
+            "Staatsangehörigkeit",
+            "Geburtsstadt",
+            "Geburtsjahr"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Regisseurs",
+            "Biologisches Geschlecht des Regisseurs",
+            "Vollständiger Name des Regisseurs",
+            "Nationalität des Regisseurs",
+            "Geburtsort des Regisseurs",
+            "Geburtsjahr des Regisseurs"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Hersteller",
+        "table_description": "Tabelle mit Informationen über Hersteller",
+        "column_names": [
+            "Produzent-ID",
+            "Geschlecht",
+            "Name",
+            "Staatsangehörigkeit",
+            "Geburtsstadt",
+            "Geburtsjahr"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Herstellers",
+            "Geschlecht des Herstellers",
+            "Name des Herstellers",
+            "Staatsangehörigkeit des Herstellers",
+            "Geburtsstadt des Herstellers",
+            "Geburtsjahr des Herstellers"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "unter der Regie von",
+        "table_description": "Beziehungen zwischen Regisseuren, Drehbuchautoren und Musikschaffenden",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "msid",
+            "Regisseur-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Drehbuchautors",
+            "Eindeutige Identifikationsnummer des Musikschaffenden oder Musikstücks",
+            "Eindeutige Identifikationsnummer des Regisseurs"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Stichwort",
+        "table_description": "Tabelle mit Stichwörtern und zugehörigen Drehbuchautor-IDs",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "Stichwort"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID des Drehbuchautors",
+            "Das Stichwort selbst"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "hergestellt von",
+        "table_description": "Tabelle mit Informationen über die Herstellung von Filmen oder Serien, einschließlich Drehbuchautor, msid und Produzent.",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "msid",
+            "Produzent-ID"
+        ],
+        "column_descriptions": [
+            "ID des Drehbuchautors",
+            "Eindeutige Identifikationsnummer für das Projekt",
+            "ID des Produzenten"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Film",
+        "table_description": "Diese Tabelle enthält Informationen über Filme, einschließlich ihrer eindeutigen ID, ihres Titels, ihres Erscheinungsjahres, alternativer Titel und ihres Budgets.",
+        "column_names": [
+            "Film-ID",
+            "Titel",
+            "Erscheinungsjahr",
+            "Titel auch bekannt als",
+            "Budget"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Films",
+            "Haupttitel des Films",
+            "Jahr, in dem der Film erschienen ist",
+            "Alternative Titel, unter denen der Film bekannt ist",
+            "Finanzieller Rahmen, der für die Produktion des Films bereitgestellt wurde"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Etikett",
+        "table_description": "Zuordnung von Drehbuchautoren, Medien-IDs und Stichwort-IDs",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "msid",
+            "Stichwort-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Drehbuchautors",
+            "Medien-ID, möglicherweise eine Referenz auf ein bestimmtes Medium",
+            "Identifikation eines Stichworts oder Tags"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Fernsehserie",
+        "table_description": "Diese Tabelle enthält Informationen über Fernsehserien.",
+        "column_names": [
+            "Fernsehserie-ID",
+            "Titel",
+            "Erscheinungsjahr",
+            "Anzahl der Staffeln",
+            "Anzahl der Folgen",
+            "Titel auch bekannt als",
+            "Budget"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Fernsehserie",
+            "Haupttitel der Fernsehserie",
+            "Jahr, in dem die Fernsehserie erstmalig erschienen ist",
+            "Anzahl der Staffeln, die die Fernsehserie umfasst",
+            "Gesamtzahl der Folgen in der Fernsehserie",
+            "Alternative Titel, unter denen die Fernsehserie bekannt ist",
+            "Finanzieller Rahmen, der für die Produktion der Fernsehserie bereitgestellt wurde"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Drehbuchautor",
+        "table_description": "Tabelle mit Informationen über Drehbuchautoren",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "Geschlecht",
+            "Name",
+            "Staatsangehörigkeit",
+            "Anzahl der Folgen",
+            "Geburtsstadt",
+            "Geburtsjahr"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Drehbuchautors",
+            "Geschlecht des Drehbuchautors",
+            "Name des Drehbuchautors",
+            "Staatsangehörigkeit des Drehbuchautors",
+            "Anzahl der Folgen, an denen der Drehbuchautor gearbeitet hat",
+            "Geburtsstadt des Drehbuchautors",
+            "Geburtsjahr des Drehbuchautors"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "geschrieben von",
+        "table_description": "Tabelle, die die Zuordnung von Drehbuchautoren zu einem Medium/Script beschreibt",
+        "column_names": [
+            "Drehbuchautor-ID",
+            "msid",
+            "Drehbuchautor-ID"
+        ],
+        "column_descriptions": [
+            "ID des ersten Drehbuchautors",
+            "ID des Mediums oder Scripts",
+            "ID des zweiten Drehbuchautors"
+        ],
+        "db_id": "imdb",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Rabatt Gutschein",
+        "table_description": "Tabelle mit Informationen über Rabatt-Gutscheine",
+        "column_names": [
+            "Gutschein-ID",
+            "Ausgabedatum",
+            "Gutscheinbetrag"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Gutscheins",
+            "Datum, an dem der Gutschein ausgegeben wurde",
+            "Betrag, den der Gutschein einspart"
+        ],
+        "db_id": "products_for_hire",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kunden",
+        "table_description": "Tabelle mit Informationen über Kunden",
+        "column_names": [
+            "Kundennummer",
+            "Gutschein-ID",
+            "guter oder schlechter Kunde",
+            "Vorname",
+            "Nachname",
+            "Geschlecht",
+            "Datum wurde Kunde",
+            "Datum der letzten Einstellung"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jeden Kunden",
+            "Identifikationsnummer für einen eventuell zugeordneten Gutschein",
+            "Klassifizierung des Kunden als guter oder schlechter Kunde",
+            "Vorname des Kunden",
+            "Nachname des Kunden",
+            "Geschlecht des Kunden",
+            "Datum, an dem der Kunde registriert wurde",
+            "Datum der letzten Änderung oder Einstellung des Kundenstatus"
+        ],
+        "db_id": "products_for_hire",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Buchungen",
+        "table_description": "Tabelle mit Informationen über getätigte Buchungen",
+        "column_names": [
+            "Buchungs-ID",
+            "Kundennummer",
+            "Buchungsstatuscode",
+            "zurückgegeben beschädigt ja oder nein",
+            "Buchungsstartdatum",
+            "Buchungsenddatum",
+            "angemietete Zählung",
+            "bezahlbarer Betrag",
+            "Betrag des Rabatts",
+            "ausstehender Betrag",
+            "Rückerstattungsbetrag"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Buchung",
+            "Identifikationsnummer des Kunden, der die Buchung vorgenommen hat",
+            "Code, der den aktuellen Status der Buchung angibt",
+            "Angabe, ob die Buchung zurückgegeben wurde und ob sie beschädigt war",
+            "Datum, an dem die Buchung begonnen hat",
+            "Datum, an dem die Buchung geendet hat",
+            "Anzahl der angemieteten Einheiten oder Leistungen",
+            "Betrag, der vom Kunden zu bezahlen ist",
+            "Betrag des Rabatts, der auf die Buchung angewendet wurde",
+            "Noch ausstehender Betrag, der vom Kunden zu bezahlen ist",
+            "Betrag, der an den Kunden zurückerstattet wurde"
+        ],
+        "db_id": "products_for_hire",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produkte zu mieten",
+        "table_description": "Tabelle für Produkte, die gemietet werden können",
+        "column_names": [
+            "Produkt ID",
+            "Produkttypcode",
+            "tägliche Mietkosten",
+            "Produktname",
+            "Produktbeschreibung"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Produkts",
+            "Code, der den Typ des Produkts kennzeichnet",
+            "Kosten für die Miete des Produkts pro Tag",
+            "Name des Produkts",
+            "Detaillierte Beschreibung des Produkts"
+        ],
+        "db_id": "products_for_hire",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zahlungen",
+        "table_description": "Tabelle mit Informationen über getätigte Zahlungen",
+        "column_names": [
+            "Zahlungs-ID",
+            "Buchungs-ID",
+            "Kundennummer",
+            "Zahlungsartcode",
+            "Betrag in voller Höhe bezahlt J/N",
+            "Zahlungsdatum",
+            "fälliger Betrag",
+            "gezahlter Betrag"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Zahlung",
+            "Identifikationsnummer der Buchung, zu der die Zahlung gehört",
+            "Nummer des Kunden, der die Zahlung getätigt hat",
+            "Code, der die Art der Zahlung kennzeichnet",
+            "Angabe, ob der Betrag in voller Höhe bezahlt wurde",
+            "Datum, an dem die Zahlung getätigt wurde",
+            "Betrag, der ursprünglich fällig war",
+            "Tatsächlich gezahlter Betrag"
+        ],
+        "db_id": "products_for_hire",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produkte gebucht",
+        "table_description": "Tabelle mit Informationen über gebuchte Produkte",
+        "column_names": [
+            "Buchungs-ID",
+            "Produkt ID",
+            "gab ja oder nein zurück",
+            "kam spät zurück ja oder nein",
+            "gebuchte Zählung",
+            "gebuchter Betrag"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jede Buchung",
+            "Identifikation des gebuchten Produkts",
+            "Angabe, ob das Produkt zurückgegeben wurde",
+            "Angabe, ob das zurückgegebene Produkt spät zurückgekommen ist",
+            "Anzahl der gebuchten Produkte",
+            "Finanzieller Betrag, der für die Buchung verrechnet wurde"
+        ],
+        "db_id": "products_for_hire",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Produktverfügbarkeit anzeigen",
+        "table_description": "Tabelle zur Anzeige der Verfügbarkeit von Produkten",
+        "column_names": [
+            "Produkt ID",
+            "Buchungs-ID",
+            "Status Datum",
+            "verfügbar ja oder nein"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Produkts",
+            "Identifikation einer Buchung oder Bestellung",
+            "Datum der letzten Statusaktualisierung",
+            "Verfügbarkeit des Produkts (ja oder nein)"
+        ],
+        "db_id": "products_for_hire",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kandidat",
+        "table_description": "Tabelle mit Informationen über Kandidaten in Umfragen",
+        "column_names": [
+            "Kandidaten-ID",
+            "Person-ID",
+            "Umfragequelle",
+            "Datum",
+            "Unterstützungsrate",
+            "Rate berücksichtigen",
+            "Rate ablehnen",
+            "unsichere Rate"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für den Kandidaten",
+            "Identifikationsnummer der Person, die den Kandidaten unterstützt oder ablehnt",
+            "Quelle, aus der die Umfragedaten stammen",
+            "Datum, an dem die Umfrage durchgeführt wurde",
+            "Rate, mit der der Kandidat unterstützt wird",
+            "Rate, mit der die Unterstützung berücksichtigt wird",
+            "Rate, mit der die Ablehnung des Kandidaten erfolgt",
+            "Rate, mit der die Unsicherheit bezüglich des Kandidaten geäußert wird"
+        ],
+        "db_id": "candidate_poll",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Person",
+        "table_description": "Tabelle mit Informationen über eine Person",
+        "column_names": [
+            "Person-ID",
+            "Geschlecht",
+            "Name",
+            "Geburtsdatum",
+            "Höhe",
+            "Gewicht"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Person",
+            "Geschlecht der Person",
+            "Name der Person",
+            "Geburtsdatum der Person",
+            "Körpergröße der Person",
+            "Körpergewicht der Person"
+        ],
+        "db_id": "candidate_poll",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Album",
+        "table_description": "Tabelle mit Informationen über Musik-Alben",
+        "column_names": [
+            "Album-ID",
+            "Titel",
+            "Künstler-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jedes Album",
+            "Titel des Albums",
+            "Künstler-ID, die auf den Künstler verweist"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Künstler",
+        "table_description": "Tabelle mit Informationen über Künstler",
+        "column_names": [
+            "Künstler-ID",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID des Künstlers",
+            "Name des Künstlers"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kunde",
+        "table_description": "Tabelle mit Informationen über Kunden",
+        "column_names": [
+            "Kunden-ID",
+            "Vorname",
+            "Nachname",
+            "Unternehmen",
+            "Adresse",
+            "Stadt",
+            "Bundesland",
+            "Land",
+            "Postleitzahl",
+            "Telefon",
+            "Fax",
+            "Email",
+            "Supportmitarbeiter-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für den Kunden",
+            "Vorname des Kunden",
+            "Nachname des Kunden",
+            "Name des Unternehmens",
+            "Adresse des Kunden",
+            "Stadt des Kunden",
+            "Bundesland des Kunden",
+            "Land des Kunden",
+            "Postleitzahl des Kunden",
+            "Telefonnummer des Kunden",
+            "Faxnummer des Kunden",
+            "E-Mail-Adresse des Kunden",
+            "ID des zuständigen Supportmitarbeiters"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Mitarbeiter",
+        "table_description": "Tabelle mit Informationen über die Angestellten eines Unternehmens",
+        "column_names": [
+            "Angestellten ID",
+            "Nachname",
+            "Vorname",
+            "Titel",
+            "berichtet an",
+            "Geburtstag",
+            "Anstellungsdatum",
+            "Adresse",
+            "Stadt",
+            "Bundesland",
+            "Land",
+            "Postleitzahl",
+            "Telefon",
+            "Fax",
+            "Email"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Mitarbeiters",
+            "Nachname des Mitarbeiters",
+            "Vorname des Mitarbeiters",
+            "Titel des Mitarbeiters",
+            "Name des Vorgesetzten, an den der Mitarbeiter berichtet",
+            "Geburtstag des Mitarbeiters",
+            "Anstellungsdatum des Mitarbeiters",
+            "Straßenadresse des Mitarbeiters",
+            "Stadt des Mitarbeiters",
+            "Bundesland des Mitarbeiters",
+            "Land des Mitarbeiters",
+            "Postleitzahl des Mitarbeiters",
+            "Telefonnummer des Mitarbeiters",
+            "Faxnummer des Mitarbeiters",
+            "E-Mail-Adresse des Mitarbeiters"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Genre",
+        "table_description": "Tabelle für Musikgenres oder ähnliche Kategorien",
+        "column_names": [
+            "Genre-ID",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für das Genre",
+            "Name des Genres"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Rechnung",
+        "table_description": "Tabelle mit Informationen über Rechnungen und Kunden",
+        "column_names": [
+            "Rechnungs-ID",
+            "Kunden-ID",
+            "Rechnungsdatum",
+            "Abrechnungsadresse",
+            "Abrechnungsstadt",
+            "Abrechnungsbundesland",
+            "Abrechnungsland",
+            "Abrechnungspostleitzahl",
+            "gesamt"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Rechnung",
+            "Identifikationsnummer des Kunden",
+            "Datum, an dem die Rechnung erstellt wurde",
+            "Straße und Hausnummer der Abrechnungsadresse",
+            "Stadt der Abrechnungsadresse",
+            "Bundesland der Abrechnungsadresse",
+            "Land der Abrechnungsadresse",
+            "Postleitzahl der Abrechnungsadresse",
+            "Gesamtbetrag der Rechnung"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Rechnungszeile",
+        "table_description": "Detaillierte Informationen zu einzelnen Positionen einer Rechnung",
+        "column_names": [
+            "Rechnungszeile ID",
+            "Rechnungs-ID",
+            "Track-ID",
+            "Einzelpreis",
+            "Menge"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Rechnungszeile",
+            "Identifikationsnummer der übergeordneten Rechnung",
+            "Verfolgungs- oder Tracking-ID",
+            "Preis pro Einheit der Position",
+            "Anzahl der Einheiten der Position"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Medientyp",
+        "table_description": "Tabelle für die Klassifizierung von Medientypen",
+        "column_names": [
+            "Medientyp-ID",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für den Medientyp",
+            "Name oder Bezeichnung des Medientyps"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Playlist",
+        "table_description": "Eine Tabelle mit Informationen über Playlists.",
+        "column_names": [
+            "Playlist-ID",
+            "Name"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Playlist.",
+            "Name der Playlist."
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Playlist-Track",
+        "table_description": "Tabelle zur Verwaltung von Tracks in Playlists",
+        "column_names": [
+            "Playlist-ID",
+            "Track-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID der Playlist",
+            "Eindeutige ID des Tracks"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Trak",
+        "table_description": "Tabelle mit Informationen über Musiktracks",
+        "column_names": [
+            "Track-ID",
+            "Name",
+            "Album-ID",
+            "Medientyp-ID",
+            "Genre-ID",
+            "Komponist",
+            "Millisekunden",
+            "Bytes",
+            "Einzelpreis"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jeden Track",
+            "Der Name des Tracks",
+            "Die Identifikation des Albums, zu dem der Track gehört",
+            "Der Typ des Mediums",
+            "Die Identifikation des Genres, zu dem der Track gehört",
+            "Der Komponist des Tracks",
+            "Die Länge des Tracks in Millisekunden",
+            "Die Größe des Tracks in Bytes",
+            "Der Preis für den Kauf eines einzelnen Tracks"
+        ],
+        "db_id": "chinook_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Routen",
+        "table_description": "Tabelle mit Informationen über Flugrouten",
+        "column_names": [
+            "Routen-ID",
+            "Zielflughafen-ID",
+            "Zielflughafen",
+            "Quellflughafen-ID",
+            "Quellflughafen",
+            "Fluggesellschaft-ID",
+            "Fluggesellschaft",
+            "Code-Freigabe"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jede Route",
+            "Identifikationscode des Zielflughafens",
+            "Name des Zielflughafens",
+            "Identifikationscode des Quellflughafens",
+            "Name des Quellflughafens",
+            "Identifikationscode der Fluggesellschaft",
+            "Name der Fluggesellschaft",
+            "Information über eventuelle Code-Freigaben für die Route"
+        ],
+        "db_id": "flight_4",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Flughäfen",
+        "table_description": "Tabelle mit Informationen über Flughäfen weltweit",
+        "column_names": [
+            "Flughafen ID",
+            "Name",
+            "Stadt",
+            "Land",
+            "x",
+            "y",
+            "Elevation",
+            "iata",
+            "icao"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Flughafens",
+            "Name des Flughafens",
+            "Stadt, in der der Flughafen liegt",
+            "Land, in dem der Flughafen liegt",
+            "Geografische Koordinate X (Längengrad)",
+            "Geografische Koordinate Y (Breitengrad)",
+            "Höhe des Flughafens über dem Meeresspiegel",
+            "IATA-Code des Flughafens",
+            "ICAO-Code des Flughafens"
+        ],
+        "db_id": "flight_4",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Fluggesellschaften",
+        "table_description": "Tabelle mit Informationen über Fluggesellschaften",
+        "column_names": [
+            "Fluggesellschaft-ID",
+            "Name",
+            "iata",
+            "icao",
+            "Rufzeichen",
+            "Land",
+            "aktiv"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Fluggesellschaft",
+            "Name der Fluggesellschaft",
+            "IATA-Code der Fluggesellschaft",
+            "ICAO-Code der Fluggesellschaft",
+            "Rufzeichen der Fluggesellschaft",
+            "Land, in dem die Fluggesellschaft ansässig ist",
+            "Status der Fluggesellschaft (aktiv/inaktiv)"
+        ],
+        "db_id": "flight_4",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Student",
+        "table_description": "Tabelle mit Informationen über Studenten",
+        "column_names": [
+            "Studenten ID",
+            "Nachname",
+            "Vorname",
+            "Alter",
+            "Geschlecht",
+            "Hauptfach",
+            "Berater",
+            "Stadtcode"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten",
+            "Nachname des Studenten",
+            "Vorname des Studenten",
+            "Alter des Studenten",
+            "Geschlecht des Studenten",
+            "Hauptstudienfach des Studenten",
+            "Akademischer Berater des Studenten",
+            "Stadtcode oder Wohnortcode des Studenten"
+        ],
+        "db_id": "pets_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "hat Haustier",
+        "table_description": "Beziehung zwischen Studenten und ihren Haustieren",
+        "column_names": [
+            "Studenten ID",
+            "Haustier ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für den Studenten",
+            "Eindeutige Identifikation für das Haustier"
+        ],
+        "db_id": "pets_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Haustiere",
+        "table_description": "Tabelle mit Informationen über Haustiere",
+        "column_names": [
+            "Haustier ID",
+            "Haustiertyp",
+            "Haustier Alter",
+            "Gewicht"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Haustiers",
+            "Typ des Haustiers (z.B. Hund, Katze, Vogel)",
+            "Alter des Haustiers",
+            "Gewicht des Haustiers"
+        ],
+        "db_id": "pets_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Student",
+        "table_description": "Tabelle mit Informationen über Studenten",
+        "column_names": [
+            "Studenten ID",
+            "Nachname",
+            "Vorname",
+            "Alter",
+            "Geschlecht",
+            "Hauptfach",
+            "Berater",
+            "Stadtcode"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jeden Studenten",
+            "Nachname des Studenten",
+            "Vorname des Studenten",
+            "Alter des Studenten",
+            "Geschlecht des Studenten",
+            "Hauptstudienfach des Studenten",
+            "Berater oder Studienbetreuer des Studenten",
+            "Code für den Wohnort oder die Stadt des Studenten"
+        ],
+        "db_id": "dorm_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wohnheim",
+        "table_description": "Tabelle mit Informationen über Wohnheime für Studenten",
+        "column_names": [
+            "Wohnheim-ID",
+            "Name des Wohnheims",
+            "Studentenkapazität",
+            "Geschlecht"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Wohnheims",
+            "Name des Wohnheims",
+            "Maximale Anzahl an Studenten, die im Wohnheim untergebracht werden können",
+            "Geschlecht des Wohnheims (männlich, weiblich, gemischt)"
+        ],
+        "db_id": "dorm_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wohnheim Annehmlichkeit",
+        "table_description": "Übersicht über Annehmlichkeiten in einem Wohnheim",
+        "column_names": [
+            "Annehmlichkeits-ID",
+            "Name der Annehmlichkeit"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Annehmlichkeit",
+            "Name oder Bezeichnung der Annehmlichkeit"
+        ],
+        "db_id": "dorm_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "hat Annehmlichkeit",
+        "table_description": "Beziehung zwischen Wohnheimen und Annehmlichkeiten",
+        "column_names": [
+            "Wohnheim-ID",
+            "Annehmlichkeits-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Wohnheims",
+            "Eindeutige Identifikation der Annehmlichkeit"
+        ],
+        "db_id": "dorm_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "lebt in",
+        "table_description": "Tabelle, die Studenten und ihre Wohnheime in Beziehung setzt.",
+        "column_names": [
+            "Studenten ID",
+            "Wohnheim-ID",
+            "Zimmernummer"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Studenten.",
+            "Identifikationsnummer des Wohnheims, in dem der Student lebt.",
+            "Spezifische Zimmernummer innerhalb des Wohnheims."
+        ],
+        "db_id": "dorm_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zeitschrift",
+        "table_description": "Tabelle mit Informationen über Zeitschriftenartikel oder -ausgaben",
+        "column_names": [
+            "Zeitschrift-ID",
+            "Datum",
+            "Thema",
+            "Umsatz"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Zeitschrift",
+            "Erscheinungsdatum der Zeitschrift",
+            "Inhaltlicher Schwerpunkt oder Thema der Zeitschrift",
+            "Verkaufserlös oder Umsatz der Zeitschrift"
+        ],
+        "db_id": "journal_committee",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Editor",
+        "table_description": "Tabelle mit Informationen über Editoren",
+        "column_names": [
+            "Editor-ID",
+            "Name",
+            "Alter"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Editors",
+            "Name des Editors",
+            "Alter des Editors"
+        ],
+        "db_id": "journal_committee",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zeitschriftenausschuss",
+        "table_description": "Tabelle mit Informationen über den Zeitschriftenausschuss",
+        "column_names": [
+            "Editor-ID",
+            "Zeitschrift-ID",
+            "Arbeitstyp"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Editors",
+            "Eindeutige Identifikation der Zeitschrift",
+            "Art der Arbeit im Zusammenhang mit dem Zeitschriftenausschuss"
+        ],
+        "db_id": "journal_committee",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Flug",
+        "table_description": "Tabelle mit Informationen über Flüge",
+        "column_names": [
+            "Flugnummer",
+            "Ursprung",
+            "Ziel",
+            "Entfernung",
+            "Abreisedatum",
+            "Ankunftsdatum",
+            "Preis",
+            "Airline-ID"
+        ],
+        "column_descriptions": [
+            "eindeutige Identifikationsnummer des Fluges",
+            "Startpunkt des Fluges",
+            "Endpunkt des Fluges",
+            "Distanz zwischen Ursprung und Ziel",
+            "Datum des Abflugs",
+            "Datum der Ankunft",
+            "Preis für den Flug",
+            "Identifikationsnummer der Airline"
+        ],
+        "db_id": "flight_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Flugzeug",
+        "table_description": "Tabelle mit Informationen über Flugzeuge bzw. Airlines.",
+        "column_names": [
+            "Airline-ID",
+            "Name",
+            "Entfernung"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Airline.",
+            "Name der Airline.",
+            "Entfernung, möglicherweise die Länge eines Fluges oder eine andere relevante Distanz."
+        ],
+        "db_id": "flight_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Mitarbeiter",
+        "table_description": "Tabelle mit Informationen zu Mitarbeitern",
+        "column_names": [
+            "Angestellten ID",
+            "Name",
+            "Gehalt"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Angestellten",
+            "Name des Mitarbeiters",
+            "Gehalt des Mitarbeiters"
+        ],
+        "db_id": "flight_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zertifikat",
+        "table_description": "Tabelle mit Informationen über Zertifikate von Angestellten bei verschiedenen Airlines",
+        "column_names": [
+            "Angestellten ID",
+            "Airline-ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Angestellten",
+            "Eindeutige Identifikationsnummer der Airline"
+        ],
+        "db_id": "flight_1",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Medizin",
+        "table_description": "Tabelle mit Informationen über medizinische Enzyme.",
+        "column_names": [
+            "Enzym-ID",
+            "Name",
+            "Handelsname",
+            "FDA genehmigt"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Enzyms.",
+            "Name des Enzyms.",
+            "Handelsname des Enzyms.",
+            "Angabe, ob das Enzym von der FDA genehmigt ist."
+        ],
+        "db_id": "medicine_enzyme_interaction",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Enzym",
+        "table_description": "Tabelle mit Informationen über Enzyme und ihre Eigenschaften.",
+        "column_names": [
+            "Enzym-ID",
+            "Name",
+            "Standort",
+            "Produkt",
+            "Chromosom",
+            "omim",
+            "Porphyrie"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Enzyms.",
+            "Name des Enzyms.",
+            "Lokalisierung oder Position des Enzyms.",
+            "Produkt der enzymatischen Reaktion.",
+            "Chromosom, auf dem das Enzym-Gen lokalisiert ist.",
+            "Referenz zu OMIM (Online Mendelian Inheritance in Man) für genetische Informationen.",
+            "Assoziation mit Porphyrie-Erkrankungen."
+        ],
+        "db_id": "medicine_enzyme_interaction",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Wechselwirkung zwischen Medizinenzymen",
+        "table_description": "Tabelle zur Beschreibung der Wechselwirkungen zwischen Medizinenzymen",
+        "column_names": [
+            "Enzym-ID",
+            "Medizin ID",
+            "Interaktionstyp"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Enzyms",
+            "Identifikation der Medizin, mit der das Enzym interagiert",
+            "Art der Interaktion zwischen Enzym und Medizin"
+        ],
+        "db_id": "medicine_enzyme_interaction",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kunden",
+        "table_description": "Tabelle zur Verwaltung von Kundeninformationen.",
+        "column_names": [
+            "Kunden-ID",
+            "Kundendetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Kunden.",
+            "Weitere Informationen zum Kunden."
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Eigenschaften",
+        "table_description": "Tabelle mit Informationen über verschiedene Eigenschaften",
+        "column_names": [
+            "Eigenschafts-ID",
+            "Eigenschaftstypcode",
+            "Eigenschaftsadresse",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer der Eigenschaft",
+            "Code, der den Typ der Eigenschaft angibt",
+            "Adresse der Eigenschaft",
+            "Zusätzliche Details über die Eigenschaft"
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Bewohner",
+        "table_description": "Tabelle mit Informationen über Bewohner",
+        "column_names": [
+            "Resident ID",
+            "Eigenschafts-ID",
+            "Einzugsdatum",
+            "Auszugsdatum",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Bewohners",
+            "Identifikationsnummer der Eigenschaft oder des Gebäudes",
+            "Datum, an dem der Bewohner eingezogen ist",
+            "Datum, an dem der Bewohner ausgezogen ist",
+            "Zusätzliche Informationen über den Bewohner"
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Organisationen",
+        "table_description": "Tabelle zur Darstellung von Organisationen und ihrer Hierarchie",
+        "column_names": [
+            "Organisations-ID",
+            "ID der übergeordneten Organisation",
+            "Organisationsdetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige ID der Organisation",
+            "ID der übergeordneten Organisation, falls vorhanden",
+            "Weitere Details über die Organisation"
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Dienstleistungen",
+        "table_description": "Tabelle mit Informationen über Dienstleistungen, die von einer Organisation angeboten werden.",
+        "column_names": [
+            "Dienstleistung-ID",
+            "Organisations-ID",
+            "Diensttypcode",
+            "Dienstleistungsdetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jede Dienstleistung.",
+            "Identifikationsnummer der Organisation, die die Dienstleistung anbietet.",
+            "Klassifizierung des Typs der Dienstleistung.",
+            "Weitere Informationen über die Dienstleistung."
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Dienstleistungen der Bewohner",
+        "table_description": "Übersicht über Dienstleistungen, die von Bewohnern in Anspruch genommen werden.",
+        "column_names": [
+            "Resident ID",
+            "Dienstleistung-ID",
+            "Einzugsdatum",
+            "Eigenschafts-ID",
+            "Datum angefordert",
+            "Datum angegeben",
+            "andere Details"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Bewohners",
+            "Eindeutige Identifikationsnummer der Dienstleistung",
+            "Datum, an dem der Bewohner in die Einrichtung eingezogen ist",
+            "Eindeutige Identifikationsnummer der Eigenschaft oder des Dienstleistungsortes",
+            "Datum, an dem die Dienstleistung angefordert wurde",
+            "Datum, an dem die Dienstleistung angegeben oder bereitgestellt wurde",
+            "Zusätzliche Details oder Bemerkungen zur Dienstleistung"
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Dinge",
+        "table_description": "Tabelle zur Verwaltung von Dingen oder Dienstleistungen mit eindeutiger Identifikation, Organisationszuordnung, Klassifizierung und detaillierten Beschreibungen.",
+        "column_names": [
+            "Ding ID",
+            "Organisations-ID",
+            "Art der Sache Code",
+            "Diensttypcode",
+            "Dienstleistungsdetails"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer für jedes Ding.",
+            "Identifikationsnummer der zugehörigen Organisation oder Abteilung.",
+            "Klassifizierungscode für die Art des Dings oder der Sache.",
+            "Code zur Klassifizierung des Typs der Dienstleistung.",
+            "Detaillierte Informationen über die spezifischen Dienstleistungsdetails."
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kundenereignis",
+        "table_description": "Tabelle zur Speicherung von Kundenereignissen",
+        "column_names": [
+            "Kundenereignis-ID",
+            "Kunden-ID",
+            "Einzugsdatum",
+            "Eigenschafts-ID",
+            "Resident ID",
+            "Ding ID"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Kundenereignisses",
+            "Identifikation des Kunden, der das Ereignis ausgelöst hat",
+            "Datum, an dem das Ereignis eingetreten ist",
+            "Referenz auf die Eigenschaft oder Kategorie des Ereignisses",
+            "Identifikation des Wohnsitzes oder der Residenz",
+            "Identifikation des Objekts oder Dinges"
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Kundenereignisnotizen",
+        "table_description": "Tabelle für Notizen zu Kundenereignissen",
+        "column_names": [
+            "Kundenereignisnotiz-ID",
+            "Kundenereignis-ID",
+            "Diensttypcode",
+            "Resident ID",
+            "Eigenschafts-ID",
+            "Einzugsdatum"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation für jede Kundenereignisnotiz",
+            "Identifikation der spezifischen Kundenereignis",
+            "Code für den Diensttyp, der mit der Kundenereignisnotiz verbunden ist",
+            "Identifikation des Residents oder Kunden",
+            "Identifikation einer bestimmten Eigenschaft oder eines Merkmals",
+            "Datum des Einzugs des Kunden oder Residents"
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "zeitgesteuerter Status der Dinge",
+        "table_description": "Tabelle zur Dokumentation des zeitlichen Verlaufs des Status von Dingen",
+        "column_names": [
+            "Ding ID",
+            "Datum und Datum",
+            "Status des Ding-Codes"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikationsnummer des Dinges",
+            "Zeitpunkt, zu dem der Status erfasst wurde",
+            "Code, der den aktuellen Status des Dinges beschreibt"
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "zeitgesteuerte Orte der Dinge",
+        "table_description": "Tabelle zur Speicherung von Orten von Dingen zu verschiedenen Zeiten",
+        "column_names": [
+            "Ding ID",
+            "Datum und Uhrzeit",
+            "Standortcode"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Dings",
+            "Zeitpunkt, zu dem der Standort erfasst wurde",
+            "Code des Standorts, an dem sich das Ding befindet"
+        ],
+        "db_id": "local_govt_and_lot",
+        "fks": [],
+        "pks": []
+    },
+    {
+        "table_name": "Zug",
+        "table_description": "Tabelle mit Informationen über Zugverbindungen",
+        "column_names": [
+            "Bahnhof-ID",
+            "Zugnummer",
+            "Name",
+            "Ursprung",
+            "Ziel",
+            "Zeit",
+            "Intervall"
+        ],
+        "column_descriptions": [
+            "Eindeutige Identifikation des Bahnhofs",
+            "Nummer des Zuges",
+            "Name des Zuges",
+            "Startbahnhof der Fahrt",
+            "Endbahnhof der Fahrt",
+            "Geplante Zeit (Abfahrt/Ankunft) des Zuges",
+            "Zeitintervall zwischen wiederkehrenden Fahrten"
+        ],
+        "db_id": "station_weather",
+        "fks": [],
+        "pks": []
+    }
+]
