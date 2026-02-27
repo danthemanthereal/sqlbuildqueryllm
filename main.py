@@ -49,7 +49,7 @@ for db in db_schema:
         }
         new_table_col_map.append(new)
 
-api_key = "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"
+api_key = "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"
 table_map_with_desc = []
 llm = Groq(api_key=api_key)
 output_file = f"{folder_path}/table_map_with_desc.json"
@@ -59,7 +59,7 @@ if os.path.exists(output_file):
         table_map_with_desc = json.load(f)
 else:
     table_map_with_desc = []
-for idx, map in enumerate(new_table_col_map):
+for idx, map in enumerate(new_table_col_map[258:],start=258):
     try:
         if idx % 5 == 0:
             time.sleep(5)
@@ -212,3 +212,4 @@ for idx, map in enumerate(new_table_col_map):
             json.dump(table_map_with_desc, f, ensure_ascii=False, indent=4)
         continue
         print(f"idx {idx}")
+
