@@ -177,6 +177,15 @@ no table percentage 0.0 %
 precision 3.38 %
 recall 66.44 %
 
+Ansatz mit Table namen als anchor und ganze frage k = 5
+
+hit min one table percentage  82.88 %
+miss table percentage 17.12 %
+no table percentage 0.0 %
+precision 0.0 %
+recall 57.64 %
+
+
 
 
 Hier wie oben der Gleiche Ansazt dass die Werte aus den Tabellen genommen wurde beim embedden : 
