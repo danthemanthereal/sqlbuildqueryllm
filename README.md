@@ -185,6 +185,12 @@ no table percentage 0.0 %
 precision 8.8 %
 recall 66.05 %
 
+-> was aufgefallen ist. Manchmal ähnliche benutzt statt richtige 
+-> manchmal keins weil Fokus auf andere Wörter 
+   -> dies zu lösen entweder key weise 
+   ->  beschreibungen genauer 
+   -> question decomposition / umschreiben der question
+
 
 Ansatz mit Table namen als anchor und ganze frage k = 5
 
