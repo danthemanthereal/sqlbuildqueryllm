@@ -177,6 +177,15 @@ no table percentage 0.0 %
 precision 3.38 %
 recall 66.44 %
 
+hier ohne similar wörter mit einbezogen jedoch wurden Tabellen und Datenbeschreibungen hiunzugefügt und dann embedded 
+
+hit min one table percentage  92.65 %
+miss table percentage 7.35 %
+no table percentage 0.0 %
+precision 8.8 %
+recall 66.05 %
+
+
 Ansatz mit Table namen als anchor und ganze frage k = 5
 
 hit min one table percentage  82.88 %
