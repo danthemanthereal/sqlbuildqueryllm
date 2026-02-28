@@ -18,27 +18,62 @@ def embed_documents(batch_size: int = 32):
     json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/table_map_with_desc.json"
     with open(json_file, 'r', encoding='utf-8') as f:
         all_table_map = json.load(f)
+    description_to_embedd = {}
+    meta_data_to_embedd = {}
     for table in all_table_map:
         table_name = table["table_name"]
         table_description = table["table_description"]
         columns = table["column_names"]
         columns_description = table["column_descriptions"]
         db_id = table["db_id"]
-        embedd_fais_dict_path = f"/Users/danielschmidt/Desktop/sqlbuildqueryllm/schema_linking/custom_auto_link/embedded_documents/{db_id}"
-        descriptions_to_embed = []
-        metadata_per_col = []
         for idx, col in enumerate(columns):
-            col_info = dict()
-            col_info["column_name"] = col
             current_description = columns_description[idx]
-            descriptions_to_embed.append(
-                {
-                    "Tabelle: ": table_name,
-                    "Beschreibung von Tabelle: ": table_description,
-                    "Spalte: ": col,
-                    "Beschreibung der Spalte: ": current_description
-                }
-            )
+            current_descriptions_to_embed = f"""
+                Tabelle : {table_name}
+                Beschreibung der Tabelle : {table_description}
+                Spalte : {col}
+                Beschreibung der Spalte : {current_description}
+            """
+            current_meta_data = {
+                "table": table_name,
+                "table_description": table_description,
+                "column": col,
+                "column_description": current_description,
+            }
+            if db_id in description_to_embedd:
+                description_to_embedd[db_id].append(current_descriptions_to_embed)
+            else:
+                description_to_embedd[db_id] = [current_descriptions_to_embed]
+
+            if db_id in meta_data_to_embedd:
+                meta_data_to_embedd[db_id].append(current_meta_data)
+            else:
+                meta_data_to_embedd[db_id] = [current_meta_data]
+
+    for key in description_to_embedd.keys():
+        all_descriptions = description_to_embedd[key]
+        metadata_mapping = meta_data_to_embedd[key]
+        db_embeddings = []
+        embedd_fais_dict_path = f"/Users/danielschmidt/Desktop/sqlbuildqueryllm/schema_linking/custom_auto_link/embedded_documents/{key}"
+        for i in range(0, len(all_descriptions), batch_size):
+            batch_descriptions = all_descriptions[i:i + batch_size]
+            batch_embeddings = model.encode(
+                batch_descriptions,
+                convert_to_numpy=True,
+                batch_size=batch_size,
+                device="cpu", )
+            db_embeddings.extend(batch_embeddings)
+
+        dimension = len(db_embeddings[0])
+        index = faiss.IndexFlatL2(dimension)
+        index.add(np.array(db_embeddings, dtype=np.float32))
+        os.makedirs(embedd_fais_dict_path, exist_ok=True)
+        faiss.write_index(index, os.path.join(embedd_fais_dict_path, "index.faiss"))
+
+        with open(os.path.join(embedd_fais_dict_path, "metadata.json"), "w", encoding="utf-8") as f_meta:
+            json.dump(metadata_mapping, f_meta, ensure_ascii=False, indent=2)
+
+
 
 
 
