@@ -90,6 +90,8 @@ print("table not in query:", table_not_in_query)
     #description = table_description_df.loc[table_description_df["name"] == table_name, "discription"].values[0]
     #print("richtiges ergebnis ",description )"""
 
+
+embed_documents(16)
 csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/output.csv"
 missing_csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/missing.csv"
 file_exists = os.path.isfile(csv_file)
@@ -274,6 +276,7 @@ print(f"recall {get_percentage(recall_amount)} %")
     print(f"Query   : {row['query']}")
     print(f"Frage   : {row['question']}\n")
     get_similarity_tables_and_sentence([row['question']], row['question'])"""
+
 
 
 
