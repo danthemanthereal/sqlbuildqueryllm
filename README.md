@@ -192,6 +192,16 @@ recall 66.05 %
    -> question decomposition / umschreiben der question
 
 
+Gleiche Bedingungen wie oben jedoch mit genauerern Spalten/ Tabellen Beschreibungen: 
+
+hit min one table percentage  94.49 %
+miss table percentage 5.51 %
+no table percentage 0.0 %
+precision 10.06 %
+recall 69.44 %
+
+
+
 Ansatz mit Table namen als anchor und ganze frage k = 5
 
 hit min one table percentage  82.88 %
