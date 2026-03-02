@@ -275,14 +275,17 @@ def build_kg_per_db_id():
 
                 if col.foreign_key:
                     fk_table, fk_col = col.foreign_key.split(":")
+
                     fk_node = f"column:{fk_table}.{fk_col}"
                     G.add_edge(col_node, fk_node, relation="FOREIGN_KEY")
+                    G.add_edge(fk_node, col_node, relation="REFERENCED_BY")
         all_kg.append(G)
     return all_kg
 
 def get_relations_per_db(table_name: str):
     all_fks = []
     all_kgs =  build_kg_per_db_id()
+    related_tables = []
     for G in all_kgs:
 
         table_node = f"table:{table_name}"
@@ -296,18 +299,23 @@ def get_relations_per_db(table_name: str):
                 continue
 
             for _, target, edge_data in G.out_edges(neighbor, data=True):
-                if edge_data.get("relation") == "FOREIGN_KEY":
-                    fks.append({
-                        "column": G.nodes[neighbor]["name"],
-                        "references": target.replace("column:", "")
-                    })
+                if edge_data.get("relation") in {
+                    "FOREIGN_KEY",
+                    "REFERENCED_BY"
+                }:
+                    ref_table = target.replace(
+                        "column:", ""
+                    ).split(".")[0]
+
+                    if ref_table != table_name:
+                        related_tables.append(ref_table)
 
         all_fks.append(fks)
     all_tables = []
     for fks in all_fks:
         for f in fks:
             all_tables.append(f["references"].split(".")[0])
-    return all_tables
+    return related_tables
 
 """from pyvis.network import Network
 print(f"Knoten: {G.number_of_nodes()}")
