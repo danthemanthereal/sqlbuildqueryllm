@@ -200,6 +200,15 @@ no table percentage 0.0 %
 precision 10.06 %
 recall 69.44 %
 
+mit anderen Embedding bei Tabellen Beschreibung und Spaltenbeschreibung: 
+
+hit min one table percentage  94.78 %
+miss table percentage 5.22 %
+no table percentage 0.0 %
+precision 10.15 %
+recall 70.21 %
+
+
 
 
 Ansatz mit Table namen als anchor und ganze frage k = 5
