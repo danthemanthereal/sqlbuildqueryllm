@@ -2205,16 +2205,16 @@
     ],
     "column_descriptions": [
       "Eindeutige Identifikationsnummer",
-      "Code für die Rolle des Profis für Hundebehandlung.",
-      "Vorname des Profis für Hundebehandlung.",
-      "Straße des Profis für Hundebehandlung.",
-      "Stadt des Profis für Hundebehandlung.",
-      "Bundesland des Profis für Hundebehandlung.",
-      "Postleitzahl des Profis für Hundebehandlung.",
+      "Code für die Rolle des Profis/ Fachleute für Hundebehandlung.",
+      "Vorname des Profis/ Fachleute für Hundebehandlung.",
+      "Straße des Profis / Fachleute für Hundebehandlung.",
+      "Stadt des Profis / Fachleute für Hundebehandlung.",
+      "Bundesland des Profis/ Fachleute für Hundebehandlung.",
+      "Postleitzahl des Profis/ Fachleute für Hundebehandlung.",
       "Nachname des Profis für Hundebehandlung.",
       "E-Mail-Adresse des Profis für Hundebehandlung.",
-      "Festnetztelefonnummer des Profis für Hundebehandlung.",
-      "Mobiltelefonnummer des Profis für Hundebehandlung."
+      "Festnetztelefonnummer des Profis / Fachleute für Hundebehandlung.",
+      "Mobiltelefonnummer des Profis/ Fachleute für Hundebehandlung."
     ],
     "db_id": "dog_kennels",
     "fks": [],
@@ -2876,7 +2876,7 @@
   },
   {
     "table_name": "Airline",
-    "table_description": "Übersicht über Airlines mit ihren Identifikatoren, Namen, Abkürzungen und Herkunftsländern.",
+    "table_description": "Übersicht über Fluggesellschaften mit ihren Identifikatoren, Namen, Abkürzungen und Herkunftsländern.",
     "column_names": [
       "Airline-ID",
       "Airline-Name",
@@ -2884,10 +2884,10 @@
       "Land"
     ],
     "column_descriptions": [
-      "Eindeutige Identifikationsnummer der Airline.",
-      "Vollständiger Name der Airline.",
-      "Kurzform des Namens der Airline.",
-      "Land, in dem die Airline ihren Hauptsitz hat."
+      "Eindeutige Identifikationsnummer der Fluggesellschaft.",
+      "Name der der Fluggesellschaft.",
+      "Abkürzung des Namens der Fluggesellschaft.",
+      "Land, in dem die Fluggesellschaft ihren Hauptsitz hat."
     ],
     "db_id": "flight_2",
     "fks": [],
@@ -10369,12 +10369,12 @@
       "Vorlagendetails"
     ],
     "column_descriptions": [
-      "Eindeutige Identifikationsnummer der Vorlage.",
+      "IDs von Vorlagen",
       "Versionsnummer der Vorlage.",
-      "**Typcode** beziehungsweiser **Vorlagentypcode**, den die Vorlage benutzt.",
+      "**Typcode** beziehungsweiser **Vorlagentypcode**, der Vorlage.",
       "Datum, ab dem die Vorlage gültig ist.",
       "Datum, bis zu dem die Vorlage gültig ist.",
-      "Detaillierte Informationen über die Vorlage."
+      "Beschreibung der Vorlage."
     ],
     "db_id": "cre_Doc_Template_Mgt",
     "fks": [],
@@ -10392,7 +10392,7 @@
     ],
     "column_descriptions": [
       "Eindeutige Identifikationsnummer des Dokuments",
-      "ID der Vorlage, auf der das Dokument basiert",
+      "Vorlage, welches das Dokument verwendet.",
       "Dokumentname, also Name des Dokuments.",
       "Kurzbeschreibung oder Zusammenfassung des Dokuments",
       "Zusätzliche Informationen oder Details zum Dokument"
@@ -10412,7 +10412,7 @@
     ],
     "column_descriptions": [
       "Eindeutige Identifikationsnummer für jeden Absatz",
-      "ID des Dokuments, in dem sich der Absatz befindet",
+      "Dokument zu dem der Absatz gehört.",
       "Der eigentliche Text des Absatzes",
       "Zusätzliche Informationen über den Absatz"
     ],
@@ -10482,7 +10482,7 @@
       "Eindeutige Identifikationsnummer der Stadt",
       "Name der Stadt",
       "Landesvorwahl der Stadt",
-      "Administrativer Bezirk, zu dem die Stadt gehört",
+      "Bezirk einer Stadt",
       "Einwohnerzahl der Stadt"
     ],
     "db_id": "world_1",
@@ -10843,7 +10843,7 @@
   },
   {
     "table_name": "Angestellten",
-    "table_description": "Tabelle mit Informationen über Angestellte",
+    "table_description": "Tabelle mit Informationen über Angestellte / Mitarbeiter",
     "column_names": [
       "Angestellten ID",
       "Name",
@@ -10851,10 +10851,10 @@
       "Stadt"
     ],
     "column_descriptions": [
-      "Eindeutige Identifikationsnummer des Angestellten",
-      "Name des Angestellten",
-      "Alter des Angestellten",
-      "Stadt, in der der Angestellte wohnt"
+      "Eindeutige Identifikationsnummer des Angestellten / Mitarbeiter",
+      "Name des Angestellten / Name des Mitarbeiter",
+      "Alter des Angestellten / Alter des Mitarbeiter",
+      "Stadt, in der der Angestellte wohnt / Stadt, in der der Mitarbeiter wohnt"
     ],
     "db_id": "employee_hire_evaluation",
     "fks": [],
@@ -10885,7 +10885,7 @@
   },
   {
     "table_name": "Einstellung",
-    "table_description": "Tabelle mit Informationen über die **Einstellungen von Mitarbeitern** in verschiedenen Shops, inklusive Startdatum, Position und Vollzeitstatus.",
+    "table_description": "Informationen über die Einstellung von Mitarbeitern",
     "column_names": [
       "Shop-ID",
       "Angestellten ID",
@@ -10894,7 +10894,7 @@
     ],
     "column_descriptions": [
       "Eindeutige Identifikationsnummer des Shops, in dem die Einstellung erfolgt",
-      "Eindeutige Identifikationsnummer des Angestellten, der eingestellt wird",
+      "Eindeutige Identifikationsnummer des Angestellten / Mitarbeiter, der eingestellt wird",
       "Datum, ab dem die Einstellung des Mitarbeiters beginnt",
       "Gibt an, ob die Einstellung des Mitarbeiters als Vollzeit- oder Teilzeitkraft erfolgt"
     ],
