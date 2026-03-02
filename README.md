@@ -208,6 +208,15 @@ no table percentage 0.0 %
 precision 10.15 %
 recall 70.21 %
 
+gleich wie oben jedoch noch ähnlich klingende dazu und joint tables auch dazu in predicted: 
+
+hit min one table percentage  96.62 %
+miss table percentage 3.38 %
+no table percentage 0.0 %
+precision 1.55 %
+recall 92.75 %
+
+
 
 
 
