@@ -8,8 +8,8 @@ from pathlib import Path
 from rank_bm25 import BM25Okapi
 from rapidfuzz import fuzz, process
 
+from data_preprocessing.german_spider_preprocessor import get_english_table_name
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_all_tables_en
-
 
 _stopwords_ger = {
     'aber', 'alle', 'allem', 'allen', 'aller', 'alles', 'als', 'also', 'am',
@@ -53,9 +53,24 @@ _stopwords_ger = {
     'zwar', 'zwischen'
 }
 
-_stopwords = {'who', 'ourselves', 'down', 'only', 'were', 'him', 'at', "weren't", 'has', 'few', "it's", 'm', 'again', 'd', 'haven', 'been', 'other', 'we', 'an', 'own', 'doing', 'ma', 'hers', 'all', "haven't", 'in', 'but', "shouldn't", 'does', 'out', 'aren', 'you', "you'd", 'himself', "isn't", 'most', 'y', 'below', 'is', "wasn't", 'hasn', 'them', 'wouldn', 'against', 'this', 'about', 'there', 'don', "that'll", 'a', 'being', 'with', 'your', 'theirs', 'its', 'any', 'why', 'now', 'during', 'weren', 'if', 'should', 'those', 'be', 'they', 'o', 't', 'of', 'or', 'me', 'i', 'some', 'her', 'do', 'will', 'yours', 'for', 'mightn', 'nor', 'needn', 'the', 'until', "couldn't", 'he', 'which', 'yourself', 'to', "needn't", "you're", 'because', 'their', 'where', 'it', "didn't", 've', 'whom', "should've", 'can', "shan't", 'on', 'had', 'have', 'myself', 'am', "don't", 'under', 'was', "won't", 'these', 'so', 'as', 'after', 'above', 'each', 'ours', 'hadn', 'having', 'wasn', 's', 'doesn', "hadn't", 'than', 'by', 'that', 'both', 'herself', 'his', "wouldn't", 'into', "doesn't", 'before', 'my', 'won', 'more', 'are', 'through', 'same', 'how', 'what', 'over', 'll', 'yourselves', 'up', 'mustn', "mustn't", "she's", 're', 'such', 'didn', "you'll", 'shan', 'when', "you've", 'themselves', "mightn't", 'she', 'from', 'isn', 'ain', 'between', 'once', 'here', 'shouldn', 'our', 'and', 'not', 'too', 'very', 'further', 'while', 'off', 'couldn', "hasn't", 'itself', 'then', 'did', 'just', "aren't"}
+_stopwords = {'who', 'ourselves', 'down', 'only', 'were', 'him', 'at', "weren't", 'has', 'few', "it's", 'm', 'again',
+              'd', 'haven', 'been', 'other', 'we', 'an', 'own', 'doing', 'ma', 'hers', 'all', "haven't", 'in', 'but',
+              "shouldn't", 'does', 'out', 'aren', 'you', "you'd", 'himself', "isn't", 'most', 'y', 'below', 'is',
+              "wasn't", 'hasn', 'them', 'wouldn', 'against', 'this', 'about', 'there', 'don', "that'll", 'a', 'being',
+              'with', 'your', 'theirs', 'its', 'any', 'why', 'now', 'during', 'weren', 'if', 'should', 'those', 'be',
+              'they', 'o', 't', 'of', 'or', 'me', 'i', 'some', 'her', 'do', 'will', 'yours', 'for', 'mightn', 'nor',
+              'needn', 'the', 'until', "couldn't", 'he', 'which', 'yourself', 'to', "needn't", "you're", 'because',
+              'their', 'where', 'it', "didn't", 've', 'whom', "should've", 'can', "shan't", 'on', 'had', 'have',
+              'myself', 'am', "don't", 'under', 'was', "won't", 'these', 'so', 'as', 'after', 'above', 'each', 'ours',
+              'hadn', 'having', 'wasn', 's', 'doesn', "hadn't", 'than', 'by', 'that', 'both', 'herself', 'his',
+              "wouldn't", 'into', "doesn't", 'before', 'my', 'won', 'more', 'are', 'through', 'same', 'how', 'what',
+              'over', 'll', 'yourselves', 'up', 'mustn', "mustn't", "she's", 're', 'such', 'didn', "you'll", 'shan',
+              'when', "you've", 'themselves', "mightn't", 'she', 'from', 'isn', 'ain', 'between', 'once', 'here',
+              'shouldn', 'our', 'and', 'not', 'too', 'very', 'further', 'while', 'off', 'couldn', "hasn't", 'itself',
+              'then', 'did', 'just', "aren't"}
 
 _commonwords = {"no", "yes", "many"}
+
 
 class Match(object):
     def __init__(self, start: int, size: int) -> None:
@@ -65,6 +80,7 @@ class Match(object):
 
 def is_span_separator(c: str) -> bool:
     return c in "'\"()`,.?!„ "
+
 
 def get_effective_match_source(s: str, start: int, end: int) -> Match:
     _start = -1
@@ -99,6 +115,7 @@ def get_effective_match_source(s: str, start: int, end: int) -> Match:
 
     return Match(_start, _end - _start + 1)
 
+
 def is_number(s: str) -> bool:
     try:
         float(s.replace(",", ""))
@@ -117,6 +134,7 @@ def is_commonword(s: str) -> bool:
 
 def is_common_db_term(s: str) -> bool:
     return s.strip() in ["id"]
+
 
 def get_table_column_map():
     schema_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/tables_de.json"
@@ -138,9 +156,10 @@ def get_table_column_map():
             schema[table_name].append(column_name)
 
         for table, columns in schema.items():
-           table_col_map[table] = columns
+            table_col_map[table] = columns
 
     return table_col_map
+
 
 def get_table_column_map_per_db_id():
     schema_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/tables_de.json"
@@ -164,7 +183,7 @@ def get_table_column_map_per_db_id():
 
         table_col_map = {}
         for table, columns in schema.items():
-           table_col_map[table] = columns
+            table_col_map[table] = columns
 
         if db_id in table_col_map_per_db_id:
             table_col_map_per_db_id[db_id].append(table_col_map)
@@ -196,7 +215,7 @@ def get_table_column_map_per_db_id_german():
 
         table_col_map = {}
         for table, columns in schema.items():
-           table_col_map[table] = columns
+            table_col_map[table] = columns
 
         if db_id in table_col_map_per_db_id:
             table_col_map_per_db_id[db_id].append(table_col_map)
@@ -237,6 +256,7 @@ def execute_sql(db_path: str, sql: str, fetch: Union[str, int] = "all") -> Any:
 
         raise e
 
+
 def go_all_dbs():
     db_table_col_map = get_table_column_map_per_db_id()
     current_path = Path(__file__).resolve()
@@ -252,7 +272,7 @@ def go_all_dbs():
                 f.name == "flight_4" or
                 f.name == "soccer_1" or
                 f.name == "baseball_1" or
-            f.name == "store_1"
+                f.name == "store_1"
 
         ):
             continue
@@ -264,8 +284,8 @@ def go_all_dbs():
                 table = key
                 columns = value
                 for column in columns:
-
                     get_distinct_val_of_columns(sql_lite_path_str, table, column)
+
 
 def get_distinct_val_of_columns(db_path: str, table: str, column: str):
     sql = f"SELECT DISTINCT `{column}` FROM `{table}`"
@@ -274,7 +294,6 @@ def get_distinct_val_of_columns(db_path: str, table: str, column: str):
 
 
 def construct_tokenized_db_table_value_corpus():
-
     # generating corpus whose items are tokenized version of "table_name column_name value" for each value and table in the database.
     corpus = []
     db_corpus = []
@@ -295,7 +314,8 @@ def construct_tokenized_db_table_value_corpus():
                 f.name == "flight_4" or
                 f.name == "soccer_1" or
                 f.name == "baseball_1" or
-                f.name == "store_1"
+                f.name == "store_1" or
+                f.name == ".DS_Store"
 
         ):
             continue
@@ -348,6 +368,7 @@ def construct_tokenized_db_table_value_corpus():
     # tokenized_db_corpus = [word_tokenize(doc) for doc in corpus if doc]  # takes too much time, so don't use it
     return tokenized_db_corpus, db_corpus
 
+
 def get_relevant_tables_of_question(question: str):
     tokenized_db_corpus, db_corpuse = construct_tokenized_db_table_value_corpus()
     bm25 = BM25Okapi(tokenized_db_corpus)
@@ -359,17 +380,24 @@ def get_relevant_tables_of_question(question: str):
 
     top_k = 5
     top_indices = np.argsort(scores)[::-1][:top_k]
-
     tables = []
     for idx in top_indices:
         table, column, value = db_corpuse[idx]
         tables.append(table)
 
+
     tokenized_values_only, tokenized_values_col, db_corpus = build_corpora()
     results_values_only = retrieve(question, tokenized_values_only, db_corpus, top_k=5)
     results_values_col = retrieve(question, tokenized_values_col, db_corpus, top_k=5)
-    tables.extend(results_values_only)
-    tables.extend(results_values_col)
+    flattened_tables = []
+
+    for table in results_values_col:
+        flattened_tables.extend(get_english_table_name(table))
+
+    for table in results_values_only:
+        flattened_tables.extend(get_english_table_name(table))
+
+    tables.extend(flattened_tables)
 
     # get tables which writes similar
     tables = list(dict.fromkeys(tables))
@@ -382,10 +410,12 @@ def get_relevant_tables_of_question(question: str):
             scorer=fuzz.ratio,
             score_cutoff=80
         )
+
         similar_tables = [candidate for candidate, score, idx in similar_tables_raw]
         simililar_tables_based_on_found.extend(similar_tables)
-    return tables.extend(simililar_tables_based_on_found)
 
+    tables.extend(simililar_tables_based_on_found)
+    return tables
 
 
 def build_corpora():
@@ -414,7 +444,8 @@ def build_corpora():
                 f.name == "flight_4" or
                 f.name == "soccer_1" or
                 f.name == "baseball_1" or
-                f.name == "store_1"
+                f.name == "store_1" or
+                f.name == ".DS_Store"
 
         ):
             continue
@@ -450,12 +481,11 @@ def build_corpora():
 
                         db_corpus.append((ger_table, ger_column, val))
 
-
-
     tokenized_values_only = [v.split() for v in values_only_corpus]
     tokenized_values_col = [v.split() for v in values_col_corpus]
 
     return tokenized_values_only, tokenized_values_col, db_corpus
+
 
 def retrieve(query, tokenized_corpus, db_corpus, top_k=5):
     """
@@ -478,6 +508,7 @@ def retrieve(query, tokenized_corpus, db_corpus, top_k=5):
         table, column, value = db_corpus[idx]
         tables.append(table)
     return tables
+
 
 def get_relevant_c3_tables(question: str):
     db_table_col_map = get_table_column_map_per_db_id()
@@ -503,7 +534,6 @@ def get_relevant_c3_tables(question: str):
             continue
         sql_lite_path_str = str(sql_lite_path)
         all_table_cols_of_db = db_table_col_map[f.name]
-
 
         for idx, table_col_map in enumerate(all_table_cols_of_db):
             for (table_name, columns) in table_col_map.items():
@@ -650,6 +680,7 @@ def get_matched_entries(
             key=lambda x: (1e16 * x[1][2] + 1e8 * x[1][3] + x[1][4]),
             reverse=True,
         )
+
 
 def prefix_match(s1: str, s2: str) -> bool:
     i, j = 0, 0

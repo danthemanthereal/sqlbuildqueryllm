@@ -24,7 +24,8 @@ from llm_components.groq.groq_llm_componnet import get_tables_groq
 from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.c3_approach.tabell_recall_with_c3 import get_all_table_with_cols
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
-from schema_linking.custom_e_sql.get_table_based_value_in_col import get_relevant_c3_tables
+from schema_linking.custom_e_sql.get_table_based_value_in_col import get_relevant_c3_tables, \
+    get_relevant_tables_of_question
 from schema_linking.custom_resd_sql.cross_encoder import get_relevant_tables_and_columns
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, get_db_id_and_tables, \
     get_all_tables_en, get_relations_per_db
@@ -210,6 +211,9 @@ with open(missing_csv_file, "a", newline="", encoding="utf-8") as f:
 
                 relevant_tables.extend(similar_words)
 
+                # with help of db values
+               # tables_with_db_values = get_relevant_tables_of_question(entry.get("question"))
+               # relevant_tables.extend(tables_with_db_values)
                 relevant_tables = list(dict.fromkeys(relevant_tables))
 
                 joined_tables = []
@@ -217,6 +221,8 @@ with open(missing_csv_file, "a", newline="", encoding="utf-8") as f:
                     joined_tables.extend(get_relations_per_db(table))
                 relevant_tables.extend(joined_tables)
                 relevant_tables = list(dict.fromkeys(relevant_tables))
+
+
                 print(f"predicted tables : {relevant_tables}")
                # print(f"matched values : {matched_value}")
                 query = entry.get("query")
@@ -282,6 +288,8 @@ print(f"recall {get_percentage(recall_amount)} %")
     print(f"Query   : {row['query']}")
     print(f"Frage   : {row['question']}\n")
     get_similarity_tables_and_sentence([row['question']], row['question'])"""
+
+
 
 
 
