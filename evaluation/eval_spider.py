@@ -66,3 +66,19 @@ def check_precision(generated_tables, gold_tables) -> bool:
 
 def check_recall(generated_tables, gold_tables) -> bool:
     return  set(gold_tables) <= set(generated_tables)
+
+
+# gleiche ergebnisse ? 
+def check_ea(generated_query, gold_query, db_id) -> bool:
+    db_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/spider/database" + f"/{db_id}/{db_id}.sqlite"
+    conn = sqlite3.connect(db_path)
+
+    cursor = conn.cursor()
+    cursor.execute(generated_query)
+    predicted_res = cursor.fetchall()
+    cursor.execute(gold_query)
+    ground_truth_res = cursor.fetchall()
+
+    if set(predicted_res) == set(ground_truth_res):
+        return True
+    return False
