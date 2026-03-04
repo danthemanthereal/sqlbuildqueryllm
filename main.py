@@ -161,10 +161,11 @@ recall_amount = 0
 with open(json_file, "r", encoding="utf-8") as f:
     data = json.load(f)
 
-"""
 splits = get_all_splitted_german_spider()
 data = splits[0]
-"""
+
+
+
 
 
 
