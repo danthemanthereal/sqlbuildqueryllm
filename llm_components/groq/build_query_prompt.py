@@ -10,4 +10,8 @@ def build_query_prompt(question, schema):
         Question: {question}
         
         Database schema: {schema}
+        
+        ** INSTRUCTIONS**
+            - use only table, columns, joins based on the given database schema. 
+            - output only the resulting SQL query without any explanation or comments.
 """
