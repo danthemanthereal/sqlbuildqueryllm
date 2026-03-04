@@ -11,3 +11,15 @@ def get_all_splitted_german_spider():
 
     chunked_data = chunk_list(data, 250)
     return chunked_data
+
+
+def get_api_key_for_one_split(index: int) -> str:
+    api_keys = [
+        "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", # viktor
+        "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", # frnaz meier
+        "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", # daniel acc
+        "",
+        ""
+    ]
+
+    return api_keys[index]
