@@ -10,3 +10,4 @@ def get_all_splitted_german_spider():
         return [lst[i:i + chunk_size] for i in range(0, len(lst), chunk_size)]
 
     chunked_data = chunk_list(data, 250)
+    return chunked_data
