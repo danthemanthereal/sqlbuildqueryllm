@@ -1,3 +1,5 @@
+from data_preprocessing.split_german_spider import get_api_key_for_one_split
+from llm_components.groq.build_query_prompt import build_query_prompt
 from llm_components.groq.prompt_get_whole_schema import with_c3_prompt
 
 api_key_1 = "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"
@@ -45,6 +47,29 @@ def get_action_in_auto_link_groq(question: str, prompt: str ) -> str:
         api_key=
         api_key
     )
+
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": prompt,
+            }
+        ],
+        model=model_name,
+    )
+
+    return chat_completion.choices[0].message.content
+
+
+def get_generated_sql_queries(question, db_schema, batch_index)-> str:
+
+    api_key = get_api_key_for_one_split(batch_index)
+    client = Groq(
+        api_key=
+        api_key
+    )
+
+    prompt = build_query_prompt(question, db_schema)
 
     chat_completion = client.chat.completions.create(
         messages=[
