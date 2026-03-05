@@ -21,7 +21,7 @@ from time import sleep
 
 from data_preprocessing.preprocessor import reprocess
 from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
-from evaluation.eval_spider import execute_matching_check, check_precision, check_recall
+from evaluation.eval_spider import execute_matching_check, check_precision, check_recall, check_ea
 from llm_components.groq.groq_llm_componnet import get_tables_groq, get_generated_sql_queries
 from llm_components.slim_sql_llm import get_sql_query
 from schema_linking.c3_approach.tabell_recall_with_c3 import get_all_table_with_cols
@@ -97,10 +97,13 @@ print("table not in query:", table_not_in_query)
 #embed_documents(16)
 csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/output.csv"
 missing_csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/missing.csv"
+compare_generated_sql_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/compare_sql_query.csv"
 file_exists = os.path.isfile(csv_file)
 missing_file_exists = os.path.isfile(missing_csv_file)
+compare_file_exists = os.path.isfile(compare_generated_sql_file)
 header = ["question", "query", "some_tables_in_query","only_relevant_tables", "no_relevant_tables", "founded_tables", "method"]
 header_for_missing_file = ["Frage","Predicted tables Deutsch", "Predicted Tables", "Gold Tables", "Ansatz"]
+header_compare_query_file = ["Frage", "Generierte Query", "Gold Query", "EA Reached", "EM Reached"]
 with open(csv_file, "a", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     if not file_exists:
@@ -110,6 +113,11 @@ with open(missing_csv_file, "a", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     if not missing_file_exists:
         writer.writerow(header_for_missing_file)
+
+with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    if not compare_file_exists:
+        writer.writerow(header_compare_query_file)
 
 
 method = "cross-encoder"
@@ -149,6 +157,9 @@ def get_table_index(schema_entry):
         table_index.append(table_index_list[1])
     return table_index
 
+def clean_sql(text):
+    text = text.replace("```sql", "").replace("```", "")
+    return text.strip()
 
 json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 hit_counter = 0
@@ -166,7 +177,7 @@ splits = get_all_splitted_german_spider()
 data = splits[0]
 
 
-with open(missing_csv_file, "a", newline="", encoding="utf-8") as f:
+with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
     missing_writer = csv.writer(f)
 
     for i, entry in enumerate(data):
@@ -238,8 +249,15 @@ with open(missing_csv_file, "a", newline="", encoding="utf-8") as f:
 
                 # execute sql query based on predicted tables
                 generated_query = get_generated_sql_queries(entry.get("question"),relevant_tables, 0)
+                generated_query = clean_sql(generated_query)
                 print("generated query")
                 print(generated_query)
+
+                # check ea reached for this question
+
+                #reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
+
+                #writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
                 """print(f"gold tables : {gold_tables}")
                # print("query ", entry.get("query"))
                 if not relevant_tables:
