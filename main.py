@@ -252,12 +252,14 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     generated_query = clean_sql(generated_query)
                     print("generated query")
                     print(generated_query)
+                    print("gold query ")
+                    print(entry.get("query"))
 
-                    # check ea reached for this question
+                    #check ea reached for this question
 
-                    #reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
+                    reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
 
-                    #writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
+                    writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
                     """print(f"gold tables : {gold_tables}")
                    # print("query ", entry.get("query"))
                     if not relevant_tables:
