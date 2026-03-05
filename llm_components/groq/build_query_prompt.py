@@ -1,17 +1,23 @@
 def build_query_prompt(question, schema):
     return f"""
-        Act like an expert for generating SQL queries for a question. 
-        
-        ***** TASK***
-        You are given a question and a database schema. 
-        Your task is to generate a SQL query for a question based only use 
-        information like table column and joins only based on the givin database schema.
-        
-        Question: {question}
-        
-        Database schema: {schema}
-        
-        ** INSTRUCTIONS**
-            - use only table, columns, joins based on the given database schema. 
-            - output only the resulting SQL query without any explanation or comments.
-"""
+                You are an expert SQL generator.
+                
+                TASK:
+                Generate a SQL query that answers the question using ONLY the given schema.
+                
+                SCHEMA:
+                {schema}
+                
+                QUESTION:
+                {question}
+                
+                RULES:
+                - Use only tables and columns from the schema.
+                - Do NOT explain anything.
+                - Do NOT output reasoning.
+                - Do NOT output markdown.
+                - Output ONLY the SQL query.
+                - The first word of your response must be SELECT.
+                
+                SQL:
+            """
