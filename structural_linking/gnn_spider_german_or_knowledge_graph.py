@@ -6,6 +6,13 @@ import networkx as nx
 
 from data_preprocessing.german_spider_preprocessor import get_english_table_name
 
+SHOW_GRAPH_HTML_ = """from pyvis.network import Network
+print(f"Knoten: {G.number_of_nodes()}")
+print(f"Kanten: {G.number_of_edges()}")
+net = Network(notebook=True, height="750px", width="100%")
+net.from_nx(G)
+net.show("graph.html")"""
+
 current_path = Path(__file__).resolve()
 project_path = current_path.parent.parent
 schema_path = project_path / "data" / "dataset_spider_de" / "multispider" / "with_english_value" / "tables_de.json"
@@ -303,6 +310,11 @@ def get_relations_per_db(table_name: str):
                     "FOREIGN_KEY",
                     "REFERENCED_BY"
                 }:
+
+                    fks.append({
+                            "column": G.nodes[neighbor]["name"],
+                            "references": target.replace("column:", "")
+                        })
                     ref_table = target.replace(
                         "column:", ""
                     ).split(".")[0]
@@ -312,14 +324,9 @@ def get_relations_per_db(table_name: str):
 
         all_fks.append(fks)
     all_tables = []
-    for fks in all_fks:
-        for f in fks:
-            all_tables.append(f["references"].split(".")[0])
-    return related_tables
 
-"""from pyvis.network import Network
-print(f"Knoten: {G.number_of_nodes()}")
-print(f"Kanten: {G.number_of_edges()}")
-net = Network(notebook=True, height="750px", width="100%")
-net.from_nx(G)
-net.show("graph.html")"""
+    """for fks in all_fks:
+        for f in fks:
+            all_tables.append(f["references"].split(".")[0])"""
+    return all_fks
+
