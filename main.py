@@ -94,7 +94,7 @@ print("table not in query:", table_not_in_query)
     #print("richtiges ergebnis ",description )"""
 
 
-embed_documents(16)
+#embed_documents(16)
 csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/output.csv"
 missing_csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/missing.csv"
 file_exists = os.path.isfile(csv_file)
@@ -220,7 +220,7 @@ with open(missing_csv_file, "a", newline="", encoding="utf-8") as f:
                 # with help of db values
                # tables_with_db_values = get_relevant_tables_of_question(entry.get("question"))
                # relevant_tables.extend(tables_with_db_values)
-                relevant_tables = list(dict.fromkeys(relevant_tables))
+                #relevant_tables = list(dict.fromkeys(relevant_tables))
 
                 joined_tables = []
                 for table in relevant_tables:
