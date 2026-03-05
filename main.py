@@ -179,6 +179,7 @@ data = splits[0]
 
 with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
     missing_writer = csv.writer(f)
+    compare_writer = csv.writer(f)
 
     for i, entry in enumerate(data):
             try:
@@ -259,7 +260,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
 
                     reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
 
-                    writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
+                    compare_writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
                     """print(f"gold tables : {gold_tables}")
                    # print("query ", entry.get("query"))
                     if not relevant_tables:
@@ -304,8 +305,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
 
             except Exception as e:
                 print(e)
-
-
+                compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), False, e])
 
 print(f"hit min one table percentage  {get_percentage(hit_counter)} %")
 
