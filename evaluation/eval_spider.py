@@ -70,15 +70,19 @@ def check_recall(generated_tables, gold_tables) -> bool:
 
 # gleiche ergebnisse ? 
 def check_ea(generated_query, gold_query, db_id) -> bool:
-    db_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/spider/database" + f"/{db_id}/{db_id}.sqlite"
-    conn = sqlite3.connect(db_path)
+    try:
+        db_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/spider/database" + f"/{db_id}/{db_id}.sqlite"
+        conn = sqlite3.connect(db_path)
 
-    cursor = conn.cursor()
-    cursor.execute(generated_query)
-    predicted_res = cursor.fetchall()
-    cursor.execute(gold_query)
-    ground_truth_res = cursor.fetchall()
+        cursor = conn.cursor()
+        cursor.execute(generated_query)
+        predicted_res = cursor.fetchall()
+        cursor.execute(gold_query)
+        ground_truth_res = cursor.fetchall()
 
-    if set(predicted_res) == set(ground_truth_res):
-        return True
-    return False
+        if set(predicted_res) == set(ground_truth_res):
+            return True
+        return False
+    except Exception as e:
+        print(f"Fehler in db ausführen {e}")
+        return False
