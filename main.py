@@ -181,126 +181,127 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
     missing_writer = csv.writer(f)
 
     for i, entry in enumerate(data):
+            try:
+                question = "".join(entry.get("question"))
+                print("Frage ", question)
+                if entry.get('question'):
+                    found_some_table = False
+                    found_only_relevant_tables = False
+                    found_no_tables = False
+                    """groq_answer = get_tables_groq(entry.get('question'),i)
+                    sleep(60)
+                    print("groq answer: ", groq_answer)
+                    print(f"question {entry.get('question')}")"""
+                     #get_relevant_tables_and_columns(entry.get("question"))
+                   # relevant_tables, matched_value = get_relevant_c3_tables(" ".join(entry.get('question_toks')))
+                    """_get_relevant_tables(entry.get("question").split(" "))
+                    relevant_tables = [table for table in relevant_tables if table != ' ']
+                    tmp_similar_tables = []
+                    all_tables_en = get_all_tables_en()
+                    for table in relevant_tables:
+                        tmp_similar_tables.extend(filter_aehnliche_woerter(table, all_tables_en))
+                    relevant_tables.extend(tmp_similar_tables)
+                    possible_joined_tables = []
+                    for table in relevant_tables:
+                        possible_joined_tables.extend(get_relations_per_db(table))
+                    relevant_tables.extend(possible_joined_tables)"""
+                    relevant_tables = get_top_k_columns(entry.get("question"),5)
+                    relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
+                    german_prediction = relevant_tables
+                    #relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
+                    #relevant_tables = [dict.get("metadata", {}).get("table", " ") for dict in r]
+                    relevant_tables = list(dict.fromkeys(relevant_tables))
+                    #print("predicted_tables in deutsch: ", relevant_tables)
+                    #relevant_tables = [get_english_table_name(table) for table in relevant_tables]
+                    flattened_tables = []
 
-            question = "".join(entry.get("question"))
-            print("Frage ", question)
-            if entry.get('question'):
-                found_some_table = False
-                found_only_relevant_tables = False
-                found_no_tables = False
-                """groq_answer = get_tables_groq(entry.get('question'),i)
-                sleep(60)
-                print("groq answer: ", groq_answer)
-                print(f"question {entry.get('question')}")"""
-                 #get_relevant_tables_and_columns(entry.get("question"))
-               # relevant_tables, matched_value = get_relevant_c3_tables(" ".join(entry.get('question_toks')))
-                """_get_relevant_tables(entry.get("question").split(" "))
-                relevant_tables = [table for table in relevant_tables if table != ' ']
-                tmp_similar_tables = []
-                all_tables_en = get_all_tables_en()
-                for table in relevant_tables:
-                    tmp_similar_tables.extend(filter_aehnliche_woerter(table, all_tables_en))
-                relevant_tables.extend(tmp_similar_tables)
-                possible_joined_tables = []
-                for table in relevant_tables:
-                    possible_joined_tables.extend(get_relations_per_db(table))
-                relevant_tables.extend(possible_joined_tables)"""
-                relevant_tables = get_top_k_columns(entry.get("question"),5)
-                relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
-                german_prediction = relevant_tables
-                #relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
-                #relevant_tables = [dict.get("metadata", {}).get("table", " ") for dict in r]
-                relevant_tables = list(dict.fromkeys(relevant_tables))
-                #print("predicted_tables in deutsch: ", relevant_tables)
-                #relevant_tables = [get_english_table_name(table) for table in relevant_tables]
-                flattened_tables = []
+                    for table in relevant_tables:
+                        flattened_tables.extend(get_english_table_name(table))
 
-                for table in relevant_tables:
-                    flattened_tables.extend(get_english_table_name(table))
+                    relevant_tables = flattened_tables
+                    # similar schreibweise noch hinzu
+                    similar_words = []
+                    englisch_tables_name = get_all_tables_en()
+                    for table in relevant_tables:
+                        sim_words = filter_aehnliche_woerter(table, englisch_tables_name, 0.8)
+                        similar_words.extend(sim_words)
 
-                relevant_tables = flattened_tables
-                # similar schreibweise noch hinzu
-                similar_words = []
-                englisch_tables_name = get_all_tables_en()
-                for table in relevant_tables:
-                    sim_words = filter_aehnliche_woerter(table, englisch_tables_name, 0.8)
-                    similar_words.extend(sim_words)
+                    relevant_tables.extend(similar_words)
 
-                relevant_tables.extend(similar_words)
+                    # with help of db values
+                   # tables_with_db_values = get_relevant_tables_of_question(entry.get("question"))
+                   # relevant_tables.extend(tables_with_db_values)
+                    #relevant_tables = list(dict.fromkeys(relevant_tables))
 
-                # with help of db values
-               # tables_with_db_values = get_relevant_tables_of_question(entry.get("question"))
-               # relevant_tables.extend(tables_with_db_values)
-                #relevant_tables = list(dict.fromkeys(relevant_tables))
-
-                joined_tables = []
-                for table in relevant_tables:
-                    joined_tables.extend(get_relations_per_db(table))
-                relevant_tables.extend(joined_tables)
-                #relevant_tables = list(dict.fromkeys(relevant_tables))
-
-
-               # print(f"predicted tables : {relevant_tables}")
-               # print(f"matched values : {matched_value}")
-                query = entry.get("query")
-                query_lower = query.lower()
-                table_index_map = get_table_index(entry)
-                gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
-
-                # execute sql query based on predicted tables
-                generated_query = get_generated_sql_queries(entry.get("question"),relevant_tables, 0)
-                generated_query = clean_sql(generated_query)
-                print("generated query")
-                print(generated_query)
-
-                # check ea reached for this question
-
-                #reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
-
-                #writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
-                """print(f"gold tables : {gold_tables}")
-               # print("query ", entry.get("query"))
-                if not relevant_tables:
-                    no_table_counter += 1
-                    found_no_tables = True
-                    continue
-
-                if any(table.lower() in query_lower for table in relevant_tables): # change to all ?
-                    hit_counter += 1
-                    found_some_table = True
-                else:
-
-                    missing_writer.writerow([entry.get("question"), german_prediction,relevant_tables, gold_tables, approach])
-                    miss_counter += 1
+                    joined_tables = []
+                    for table in relevant_tables:
+                        joined_tables.extend(get_relations_per_db(table))
+                    relevant_tables.extend(joined_tables)
+                    #relevant_tables = list(dict.fromkeys(relevant_tables))
 
 
-                if(check_precision(relevant_tables, gold_tables)):
-                    precision_amount += 1
-                    print(f"precision erreicht ")
-                if check_recall(relevant_tables, gold_tables):
-                    recall_amount += 1
-                    print(f"recall erreicht ")
-                if not check_precision(relevant_tables, gold_tables) and not check_recall(relevant_tables, gold_tables):
-                    print("no recall and no precision")
-                    missing_writer.writerow([entry.get("question"), german_prediction,relevant_tables, gold_tables, approach])"""
+                   # print(f"predicted tables : {relevant_tables}")
+                   # print(f"matched values : {matched_value}")
+                    query = entry.get("query")
+                    query_lower = query.lower()
+                    table_index_map = get_table_index(entry)
+                    gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
+
+                    # execute sql query based on predicted tables
+                    generated_query = get_generated_sql_queries(entry.get("question"),relevant_tables, 0)
+                    generated_query = clean_sql(generated_query)
+                    print("generated query")
+                    print(generated_query)
+
+                    # check ea reached for this question
+
+                    #reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
+
+                    #writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
+                    """print(f"gold tables : {gold_tables}")
+                   # print("query ", entry.get("query"))
+                    if not relevant_tables:
+                        no_table_counter += 1
+                        found_no_tables = True
+                        continue
+    
+                    if any(table.lower() in query_lower for table in relevant_tables): # change to all ?
+                        hit_counter += 1
+                        found_some_table = True
+                    else:
+    
+                        missing_writer.writerow([entry.get("question"), german_prediction,relevant_tables, gold_tables, approach])
+                        miss_counter += 1
+
+
+                    if(check_precision(relevant_tables, gold_tables)):
+                        precision_amount += 1
+                        print(f"precision erreicht ")
+                    if check_recall(relevant_tables, gold_tables):
+                        recall_amount += 1
+                        print(f"recall erreicht ")
+                    if not check_precision(relevant_tables, gold_tables) and not check_recall(relevant_tables, gold_tables):
+                        print("no recall and no precision")
+                        missing_writer.writerow([entry.get("question"), german_prediction,relevant_tables, gold_tables, approach])"""
 
 
 
 
-                """writer.writerow([
-                    question,
-                    query,
-                    found_some_table,
-                    found_only_relevant_tables,
-                    found_no_tables,
-                    relevant_tables,
-                    method
-                ])"""
-                #generated_sql_query = get_sql_query(relevant_tables, question)
-                #print(f"generated query : {generated_sql_query}")
-                #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
+                    """writer.writerow([
+                        question,
+                        query,
+                        found_some_table,
+                        found_only_relevant_tables,
+                        found_no_tables,
+                        relevant_tables,
+                        method
+                    ])"""
+                    #generated_sql_query = get_sql_query(relevant_tables, question)
+                    #print(f"generated query : {generated_sql_query}")
+                    #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
 
-
+            except Exception as e:
+                print(e)
 
 
 
