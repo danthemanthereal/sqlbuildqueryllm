@@ -157,16 +157,25 @@ def get_table_index(schema_entry):
         table_index.append(table_index_list[1])
     return table_index
 
-def clean_sql(response):
-    match = re.search(r"```sql\s*(.*?)```", response, re.DOTALL | re.IGNORECASE)
+def clean_sql(text):
+    text = text.strip()
+
+    match = re.search(r"```sql\s*(.*?)```", text, re.IGNORECASE | re.DOTALL)
     if match:
         return match.group(1).strip()
 
-    # fallback: erstes SELECT bis ;
-    match = re.search(r"(SELECT[\s\S]*?;)", response, re.IGNORECASE)
+    match = re.search(r"```\s*(SELECT.*?)```", text, re.IGNORECASE | re.DOTALL)
     if match:
         return match.group(1).strip()
-    return response.strip()
+
+    match = re.search(r"(SELECT[\s\S]*?;)", text, re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
+
+    match = re.search(r"(SELECT[\s\S]*)", text, re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
+    return text
 
 json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 hit_counter = 0
@@ -181,7 +190,7 @@ with open(json_file, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 splits = get_all_splitted_german_spider()
-data = splits[0]
+data = splits[1]
 
 
 with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
@@ -256,7 +265,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
 
                     # execute sql query based on predicted tables
-                    generated_query = get_generated_sql_queries(entry.get("question"),relevant_tables, 1)
+                    generated_query = get_generated_sql_queries(entry.get("question"),relevant_tables, 2)
                     generated_query = clean_sql(generated_query)
                     print("generated query")
                     print(generated_query)
