@@ -1,0 +1,158 @@
+Frage,Generierte Query,Gold Query,EA Reached,EM Reached
+Wie viele SängerIn haben wir?,SELECT count(singer_id) FROM singer,SELECT count(*) FROM singer,True,False
+Wie hoch ist die Gesamtzahl der Sängerinnen und Sänger?,SELECT count(*) FROM singer,SELECT count(*) FROM singer,True,False
+"Zeigen Sie Name, Land, Alter für alle Sängerinnen und Sänger, geordnet nach Alter vom ältesten bis zum jüngsten.","SELECT name, country, age FROM singer ORDER BY age DESC","SELECT name ,  country ,  age FROM singer ORDER BY age DESC",True,False
+"Wie lauten die Namen, Länder und das Alter aller Sängerinnen und Sänger in absteigender Reihenfolge des Alters?","SELECT name, country, age FROM singer ORDER BY age DESC","SELECT name ,  country ,  age FROM singer ORDER BY age DESC",True,False
+"Was ist das Durchschnitts-, Mindest- und Höchstalter aller Sängerinnen und Sänger aus Frankreich?","SELECT avg(age), min(age), max(age) FROM singer WHERE country = 'France'","SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'",True,False
+"Was ist das Durchschnitts-, Mindest- und Höchstalter für alle französischen Sängerinnen und Sänger?","SELECT avg(age), min(age), max(age) FROM singer WHERE country = 'France'","SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'",True,False
+Zeigen Sie den Namen und das Erscheinungsjahr des Liedes der jüngsten Sängerin oder des jüngsten Sängers an.,"SELECT song_name, song_release_year
+FROM singer
+WHERE age = (SELECT MIN(age) FROM singer);","SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1",True,False
+Wie lauten die Namen und Erscheinungsjahre aller Lieder der jüngsten Sängerin oder des jüngsten Sängers?,"SELECT song_name, song_release_year
+FROM singer
+WHERE age = (SELECT MIN(age) FROM singer);","SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1",True,False
+Aus welchen verschiedenen Ländern kommen die Sängerinnen und Sänger über 20 Jahren?,SELECT DISTINCT country FROM singer WHERE age > 20;,SELECT DISTINCT country FROM singer WHERE age  >  20,True,False
+Was sind die verschiedenen Länder mit Sängerinnen und Sängern über 20 Jahren?,SELECT DISTINCT country FROM singer WHERE age > 20,SELECT DISTINCT country FROM singer WHERE age  >  20,True,False
+Zeigen Sie alle Länder und die Anzahl der Sängerinnen und Sänger in jedem Land an.,"SELECT country, COUNT(singer_id) FROM singer GROUP BY country","SELECT country ,  count(*) FROM singer GROUP BY country",True,False
+Wie viele Sängerinnen und Sänger kommen aus jedem Land?,"SELECT country, COUNT(*) FROM singer GROUP BY country","SELECT country ,  count(*) FROM singer GROUP BY country",True,False
+Liste der Namen aller Lieder von Sängerinnen und Sängern über dem Durchschnittsalter.,SELECT song_name FROM singer WHERE age > (SELECT AVG(age) FROM singer),SELECT song_name FROM singer WHERE age  >  (SELECT avg(age) FROM singer),True,False
+"Wie lauten die Namen aller Lieder von Sängerinnen und Sängern, die älter als der Durchschnitt sind?",SELECT song_name FROM singer WHERE age > (SELECT AVG(age) FROM singer),SELECT song_name FROM singer WHERE age  >  (SELECT avg(age) FROM singer),True,False
+Zeigen Sie Standort und Namen aller Stadien mit einer Kapazität zwischen 5000 und 10000 an.,"SELECT location, name FROM stadium WHERE capacity BETWEEN 5000 AND 10000","SELECT LOCATION ,  name FROM stadium WHERE capacity BETWEEN 5000 AND 10000",True,False
+Wie lauten die Standorte und Namen aller Stationen mit einer Kapazität zwischen 5000 und 10000?,"SELECT name, location FROM stadium WHERE capacity BETWEEN 5000 AND 10000;","SELECT LOCATION ,  name FROM stadium WHERE capacity BETWEEN 5000 AND 10000",True,False
+Was ist die maximale Kapazität und der Durchschnitt aller Stadien?,"SELECT max(capacity), avg(capacity) FROM stadium","select max(capacity), average from stadium",False,False
+Was ist die durchschnittliche und maximale Kapazität für alle Stadien?,"SELECT avg(capacity), max(capacity) FROM stadium","select avg(capacity) ,  max(capacity) from stadium",True,False
+Wie lautet der Name und die Kapazität des Stadions mit der höchsten durchschnittlichen Besucherzahl?,"SELECT name, capacity FROM stadium ORDER BY average_attendance DESC LIMIT 1","SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1",False,False
+Wie lautet der Name und die Kapazität des Stadions mit der höchsten durchschnittlichen Besucherzahl?,"SELECT name, capacity FROM stadium ORDER BY average_attendance DESC LIMIT 1","SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1",False,False
+Wie viele Konzerte gibt es im Jahr 2014 oder 2015?,SELECT count(*) FROM concert WHERE year = 2014 OR year = 2015,SELECT count(*) FROM concert WHERE YEAR  =  2014 OR YEAR  =  2015,True,False
+Wie viele Konzerte aufgetreten 2014 oder 2015?,SELECT count(concert_id) FROM concert WHERE year = 2014 OR year = 2015,SELECT count(*) FROM concert WHERE YEAR  =  2014 OR YEAR  =  2015,True,False
+Zeigen Sie den Stadionnamen und die Anzahl der Konzerte in jedem Stadion an.,"SELECT T1.stadium_name, count(T2.concert_id) FROM stadium AS T1 JOIN concert AS T2 ON T1.stadium_id = T2.stadium_id GROUP BY T1.stadium_name","SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id",False,False
+Wie viele Konzerte gibt es für jedes Stadion?,"SELECT stadium_id, count(concert_id) FROM concert GROUP BY stadium_id","SELECT T2.name ,  count(*) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id GROUP BY T1.stadium_id",False,False
+Zeigen Sie den Namen und die Kapazität des Stadions mit den meisten Konzerten im Jahr 2014 oder danach.,"SELECT T1.stadium_name, T1.capacity
+FROM stadium AS T1
+INNER JOIN concert AS T2
+  ON T1.stadium_id = T2.stadium_id
+WHERE
+  T2.year >= 2014
+GROUP BY
+  T1.stadium_id
+ORDER BY
+  COUNT(T2.concert_id) DESC
+LIMIT 1;","SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1",False,False
+Wie heißt das Stadion mit den meisten Konzerten nach 2013?,SELECT T1.stadium_id FROM concert AS T1 WHERE T1.year > 2013 GROUP BY T1.stadium_id ORDER BY count(*) DESC LIMIT 1,"select t2.name ,  t2.capacity from concert as t1 join stadium as t2 on t1.stadium_id  =  t2.stadium_id where t1.year  >  2013 group by t2.stadium_id order by count(*) desc limit 1",False,False
+In welchem Jahr gibt es die meisten Konzerte?,SELECT year FROM concert GROUP BY year ORDER BY count(*) DESC LIMIT 1,SELECT YEAR FROM concert GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1,True,False
+"Was ist das Jahr, das die meisten Konzerte hat?",SELECT year FROM concert GROUP BY year ORDER BY count(*) DESC LIMIT 1,SELECT YEAR FROM concert GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1,True,False
+Zeigen die Stadionnamen ohne Konzert.,SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert),SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert),True,False
+Wie heißen die Stadien ohne Konzerte?,SELECT stadium_id FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert),SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert),False,False
+"Zeigen Sie Länder, aus denen eine Sängerin oder ein Sänger über 40 und eine Sängerin oder ein Sänger unter 30 stammen.","SELECT DISTINCT country
+FROM singer
+WHERE age > 40
+INTERSECT
+SELECT DISTINCT country
+FROM singer
+WHERE age < 30;",SELECT country FROM singer WHERE age  >  40 INTERSECT SELECT country FROM singer WHERE age  <  30,True,False
+"Zeige Namen für alle Stadien mit Ausnahme von Stadien, die im Jahr 2014 ein Konzert haben.",SELECT stadium_id FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert WHERE year = 2014),SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014,False,False
+"Wie heißen alle Stadien, die 2014 kein Konzert hatten?",SELECT stadium_name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert WHERE year = 2014),SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014,False,False
+Zeigen Sie den Namen und das Thema aller Konzerte sowie die Anzahl der Sängerinnen und Sänger in jedem Konzert an.,"SELECT
+  T1.concert_name,
+  T1.theme,
+  COUNT(T2.singer_id)
+FROM concert AS T1
+INNER JOIN singer_in_concert AS T2
+  ON T1.concert_id = T2.concert_id
+GROUP BY
+  T1.concert_id,
+  T1.concert_name,
+  T1.theme;","SELECT T2.concert_name ,  T2.theme ,  count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id  =  T2.concert_id GROUP BY T2.concert_id",True,False
+"Wie lauten die Namen, Themen und die Anzahl der Sängerinnen und Sänger für jedes Konzert?","SELECT
+  c.concert_name,
+  c.theme,
+  COUNT(sic.singer_id) AS singer_count
+FROM concert AS c
+JOIN singer_in_concert AS sic
+  ON c.concert_id = sic.concert_id
+GROUP BY
+  c.concert_id,
+  c.concert_name,
+  c.theme;","select t2.concert_name ,  t2.theme ,  count(*) from singer_in_concert as t1 join concert as t2 on t1.concert_id  =  t2.concert_id group by t2.concert_id",True,False
+Listen Sie die Namen von Sängerinnen und Sängern und die Anzahl der Konzerte für jede Sängerin und jeden Sänger auf.,"SELECT T1.name, count(T2.concert_id) FROM singer AS T1 JOIN singer_in_concert AS T2 ON T1.singer_id  =  T2.singer_id GROUP BY T1.name","SELECT T2.name ,  count(*) FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id  =  T2.singer_id GROUP BY T2.singer_id",True,False
+Wie lauten die Namen der Sängerin/des Sängers und die Anzahl der Konzerte für jede Person?,"SELECT T1.name, count(T2.concert_id) FROM singer AS T1 JOIN singer_in_concert AS T2 ON T1.singer_id  =  T2.singer_id GROUP BY T1.name","SELECT T2.name ,  count(*) FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id  =  T2.singer_id GROUP BY T2.singer_id",True,False
+Listen Sie alle Sängernamen in Konzerten im Jahr 2014 auf.,"SELECT DISTINCT
+  T1.name
+FROM singer AS T1
+INNER JOIN singer_in_concert AS T2
+  ON T1.singer_id = T2.singer_id
+INNER JOIN concert AS T3
+  ON T2.concert_id = T3.concert_id
+WHERE
+  T3.year = 2014;",SELECT T2.name FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id  =  T2.singer_id JOIN concert AS T3 ON T1.concert_id  =  T3.concert_id WHERE T3.year  =  2014,True,False
+"Wie lauten die Namen der Sängerinnen und Sänger, die 2014 in einem Konzert aufgetreten sind?",SELECT DISTINCT T1.singer_id FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id = T2.concert_id WHERE T2.year = 2014,SELECT T2.name FROM singer_in_concert AS T1 JOIN singer AS T2 ON T1.singer_id  =  T2.singer_id JOIN concert AS T3 ON T1.concert_id  =  T3.concert_id WHERE T3.year  =  2014,False,False
+"Wie lautet der Name und die Nation des Sängers, der ein Lied mit ""Hey"" im Namen hat?","SELECT
+  T1.name,
+  T1.country
+FROM singer AS T1
+INNER JOIN song AS T2
+  ON T1.singer_id = T2.singer_id
+WHERE
+  T2.song_name LIKE '%Hey%';","SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'",False,False
+"Wie lautet der Name und die Nation des/der Sänger/in, der/die ein Lied mit ""Hey"" im Namen hat?","SELECT T1.name, T1.country FROM singer AS T1 JOIN song AS T2 ON T1.singer_id  =  T2.singer_id WHERE T2.song_name LIKE '%Hey%'","SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'",False,False
+"Finden Sie die Namen und die Standorte der Stadien, in denen einige Konzerte in den Jahren 2014 und 2015 stattfanden.","SELECT DISTINCT T1.stadium_id, T2.concert_name
+FROM stadium AS T1
+INNER JOIN concert AS T2
+  ON T1.stadium_id = T2.stadium_id
+WHERE
+  T2.year = 2014 OR T2.year = 2015;","SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015",False,False
+"Wie lauten die Namen und Standorte der Stadien, in denen sowohl 2014 als auch 2015 Konzerte stattfanden?","SELECT DISTINCT T1.stadium_name, T1.stadium_location
+FROM stadium AS T1
+INNER JOIN concert AS T2 ON T1.stadium_id = T2.stadium_id
+WHERE T2.year = 2014
+INTERSECT
+SELECT DISTINCT T1.stadium_name, T1.stadium_location
+FROM stadium AS T1
+INNER JOIN concert AS T2 ON T1.stadium_id = T2.stadium_id
+WHERE T2.year = 2015;","SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015",False,False
+"Finden Sie die Anzahl der Konzerte, die in dem Stadion mit der höchsten Kapazität stattfanden.","SELECT
+  COUNT(T1.concert_id)
+FROM concert AS T1
+INNER JOIN stadium AS T2
+  ON T1.stadium_id = T2.stadium_id
+WHERE
+  T2.capacity = (
+    SELECT
+      MAX(capacity)
+    FROM stadium
+  );",select count(*) from concert where stadium_id = (select stadium_id from stadium order by capacity desc limit 1),True,False
+Wie viele Konzerte fanden in dem Stadion mit der größten Kapazität statt ?,SELECT count(T1.concert_id) FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id = T2.stadium_id WHERE T2.capacity = (SELECT max(capacity) FROM stadium),select count(*) from concert where stadium_id = (select stadium_id from stadium order by capacity desc limit 1),True,False
+"Ermitteln Sie die Anzahl der Haustiere, deren Gewicht schwerer als 10 ist.",SELECT count(*) FROM Pets WHERE weight > 10,SELECT count(*) FROM pets WHERE weight  >  10,True,False
+Wie viele Haustiere haben ein größeres Gewicht als 10?,SELECT count(*) FROM Pets WHERE weight > 10,SELECT count(*) FROM pets WHERE weight  >  10,True,False
+Finden Sie das Gewicht des jüngsten Hundes.,SELECT weight FROM Dogs ORDER BY date_of_birth DESC LIMIT 1,SELECT weight FROM pets ORDER BY pet_age LIMIT 1,False,False
+Wie viel wiegt der jüngste Hund?,SELECT weight FROM Dogs ORDER BY date_of_birth DESC LIMIT 1,SELECT weight FROM pets ORDER BY pet_age LIMIT 1,False,False
+Finden Sie das Höchstgewicht für jede Art von Haustier. Listen Sie das Höchstgewicht und den Haustiertyp auf.,"SELECT MAX(weight), pettype FROM Pets GROUP BY pettype","SELECT max(weight) ,  petType FROM pets GROUP BY petType",True,False
+Führen Sie das Höchstgewicht und den Typ für jede Art von Haustier auf.,"SELECT pettype, MAX(weight) FROM Pets GROUP BY pettype","SELECT max(weight) ,  petType FROM pets GROUP BY petType",False,False
+"Finden Sie die Anzahl der Haustiere von Studenten, die älter als 20 Jahre sind.",SELECT count(T1.petid) FROM Has_Pet AS T1 JOIN Student AS T2 ON T1.stuid  =  T2.stuid WHERE T2.age  >  20,SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20,True,False
+"Wie viele Haustiere besitzen Studenten, die älter als 20 Jahre sind?","SELECT count(DISTINCT T1.petid)
+FROM Has_Pet AS T1
+INNER JOIN Student AS T2
+ON T1.stuid = T2.stuid
+WHERE T2.age > 20;",SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20,True,False
+"Ermitteln Sie die Anzahl der Hunde, die von Studentinnen aufgezogen werden (mit Geschlecht W).","SELECT
+  COUNT(T1.dog_id)
+FROM Dogs AS T1
+INNER JOIN Has_Pet AS T2
+  ON T1.dog_id = T2.petid
+INNER JOIN Student AS T3
+  ON T2.stuid = T3.stuid
+WHERE
+  T3.gender = 'W';",SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog',False,False
+Wie viele Haushunde werden von Studentinnen aufgezogen?,"SELECT count(T1.dog_id)
+FROM Dogs AS T1
+INNER JOIN Owners AS T2
+ON T1.owner_id = T2.owner_id
+INNER JOIN Has_Pet AS T3
+ON T2.owner_id = T3.stuid;",SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog',False,False
+Ermitteln Sie die Anzahl der verschiedenen Arten von Haustieren.,SELECT count(DISTINCT pettype) FROM Pets,SELECT count(DISTINCT pettype) FROM pets,True,False
+Wie viele verschiedene Arten von Haustieren gibt es?,SELECT count(DISTINCT pettype) FROM Pets,SELECT count(DISTINCT pettype) FROM pets,True,False
+"Finden Sie den Vornamen der Studierenden, die eine Katze oder einen Hund als Haustier haben.","SELECT DISTINCT T1.name
+FROM Student AS T1
+INNER JOIN Has_Pet AS T2 ON T1.stuid = T2.stuid
+INNER JOIN Pets AS T3 ON T2.petid = T3.petid
+WHERE T3.pettype = 'cat' OR T3.pettype = 'dog';",SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog',False,False
