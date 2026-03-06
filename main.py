@@ -3,6 +3,7 @@ import os
 import re
 from data_preprocessing.german_spider_preprocessor import get_english_table_name
 from data_preprocessing.split_german_spider import get_all_splitted_german_spider
+from llm_components.gemma.gemma_llm_component import generate_query_by_gemma
 from llm_components.groq.build_db_schema_for_groq import build_db_schema_based_on_predicted_tables
 from schema_linking.custom_auto_link.retrieval_of_faiss_db import get_top_k_columns
 from schema_linking.custom_auto_link.vector_db_faiss import embed_documents
@@ -168,17 +169,6 @@ def clean_sql(text):
     if match:
         return match.group(1).strip()
 
-    match = re.search(r"```\s*(SELECT.*?)```", text, re.IGNORECASE | re.DOTALL)
-    if match:
-        return match.group(1).strip()
-
-    match = re.search(r"(SELECT[\s\S]*?;)", text, re.IGNORECASE)
-    if match:
-        return match.group(1).strip()
-
-    match = re.search(r"(SELECT[\s\S]*)", text, re.IGNORECASE)
-    if match:
-        return match.group(1).strip()
     return text
 
 json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
@@ -271,7 +261,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
 
                     # execute sql query based on predicted tables
-                    generated_query = get_generated_sql_queries(entry.get("question"),relevant_tables, 2)
+                    generated_query = generate_query_by_gemma(entry.get("question"),relevant_tables)
                     generated_query = clean_sql(generated_query)
                     print("generated query")
                     print(generated_query)
@@ -327,8 +317,8 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     #print(f"generated query : {generated_sql_query}")
                     #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
             except RateLimitError as e:
-
-                error_message = str(e)
+                pass
+                """error_message = str(e)
 
                 match = re.search(
                     r"try again in\s*(?:(\d+)m)?\s*(?:(\d+(?:\.\d+)?)s)?",
@@ -361,11 +351,11 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                 if reached:
                     achieved_ea += 1
                 executed_sql_amount += 1
-                compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), reached, False])
+                compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), reached, False])"""
 
             except Exception as e:
                 print(e)
-                compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), False, e])
+                #compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), False, e])
 
 #print(f"hit min one table percentage  {get_percentage(hit_counter)} %")
 
