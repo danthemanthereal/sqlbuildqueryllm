@@ -13,6 +13,7 @@ from groq import RateLimitError
 import math
 import re
 import time
+import ast
 
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
@@ -171,6 +172,15 @@ def clean_sql(text):
 
     return text
 
+def extract_error_dict(error_text: str):
+
+    match = re.search(r"\{.*\}", error_text, re.DOTALL)
+
+    if match:
+        return ast.literal_eval(match.group())
+
+    return None
+
 json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 hit_counter = 0
 miss_counter = 0
@@ -186,7 +196,7 @@ with open(json_file, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 splits = get_all_splitted_german_spider()
-data = splits[1]
+data = splits[0]
 
 
 with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
@@ -354,8 +364,37 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                 compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), reached, False])"""
 
             except Exception as e:
+                print("in exception ")
                 print(e)
-                #compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), False, e])
+                error_dict = extract_error_dict(str(e))
+                if error_dict:
+                    retry_info = error_dict['error']['details'][-1]
+
+
+                    delay_str = retry_info.get('retryDelay', None)
+                    if delay_str:
+                        print(f"nach delay ")
+                        delay_seconds = float(delay_str.replace('s', ''))
+                        delay_seconds+= 1
+                        time.sleep(delay_seconds)
+                        generated_query = generate_query_by_gemma(entry.get("question"), relevant_tables)
+                        generated_query = clean_sql(generated_query)
+                        print("generated query")
+                        print(generated_query)
+                        print("gold query ")
+                        print(entry.get("query"))
+
+                        # check ea reached for this question
+
+                        reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
+                        if reached:
+                            achieved_ea += 1
+                        executed_sql_amount += 1
+                        compare_writer.writerow(
+                            [entry.get("question"), generated_query, entry.get("query"), reached, False])
+
+
+#compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), False, e])
 
 #print(f"hit min one table percentage  {get_percentage(hit_counter)} %")
 
