@@ -183,6 +183,8 @@ miss_counter = 0
 no_table_counter = 0
 precision_amount = 0
 recall_amount = 0
+executed_sql_amount = 0
+achieved_ea = 0
 
 
 #embed_documents(16)
@@ -275,7 +277,9 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     #check ea reached for this question
 
                     reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
-
+                    if reached:
+                        achieved_ea += 1
+                    executed_sql_amount += 1
                     compare_writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
                     """print(f"gold tables : {gold_tables}")
                    # print("query ", entry.get("query"))
@@ -323,16 +327,17 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                 print(e)
                 compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), False, e])
 
-print(f"hit min one table percentage  {get_percentage(hit_counter)} %")
+#print(f"hit min one table percentage  {get_percentage(hit_counter)} %")
 
-print(f"miss table percentage {get_percentage(miss_counter)} %")
+#print(f"miss table percentage {get_percentage(miss_counter)} %")
 
-print(f"no table percentage {get_percentage(no_table_counter)} %")
+#print(f"no table percentage {get_percentage(no_table_counter)} %")
 
-print(f"precision {get_percentage(precision_amount)} %")
+#print(f"precision {get_percentage(precision_amount)} %")
 
-print(f"recall {get_percentage(recall_amount)} %")
+#print(f"recall {get_percentage(recall_amount)} %")
 
+print(f"Execution accuracy on all executed queries {round(achieved_ea / executed_sql_amount * 100, 2)}")
 
 """for index, row in query_question_test_df.iterrows():
     print(f"Zeile {index + 1}:")
