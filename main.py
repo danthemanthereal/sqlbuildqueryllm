@@ -8,6 +8,10 @@ from schema_linking.custom_auto_link.retrieval_of_faiss_db import get_top_k_colu
 from schema_linking.custom_auto_link.vector_db_faiss import embed_documents
 from schema_linking.custom_chess_agentframe_work.pipeline import get_relevant_tables
 from schema_linking.use_table_name_as_anchor import get_most_similar_table_with_anchor
+from groq import RateLimitError
+import math
+import re
+import time
 
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
@@ -322,6 +326,42 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     #generated_sql_query = get_sql_query(relevant_tables, question)
                     #print(f"generated query : {generated_sql_query}")
                     #execute_matching_check(entry.get("db_id"), generated_sql_query, gold_query, question)
+            except RateLimitError as e:
+
+                error_message = str(e)
+
+                match = re.search(
+                    r"try again in\s*(?:(\d+)m)?\s*(?:(\d+(?:\.\d+)?)s)?",
+                    error_message,
+                )
+
+                retry_after = 60
+                if match:
+                    minutes = int(match.group(1)) if match.group(1) else 0
+                    seconds = float(match.group(2)) if match.group(2) else 0.0
+
+                    retry_after = math.ceil(minutes * 60 + seconds)
+
+                retry_after += 1
+
+                time.sleep(retry_after)
+
+                # generate query after 429 error
+                print("Nochmal ausführen nach 429 Rate Limit ")
+                generated_query = get_generated_sql_queries(entry.get("question"), relevant_tables, 2)
+                generated_query = clean_sql(generated_query)
+                print("generated query")
+                print(generated_query)
+                print("gold query ")
+                print(entry.get("query"))
+
+                # check ea reached for this question
+
+                reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
+                if reached:
+                    achieved_ea += 1
+                executed_sql_amount += 1
+                compare_writer.writerow([entry.get("question"), generated_query, entry.get("query"), reached, False])
 
             except Exception as e:
                 print(e)
