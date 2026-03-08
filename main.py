@@ -195,8 +195,8 @@ achieved_ea = 0
 with open(json_file, "r", encoding="utf-8") as f:
     data = json.load(f)
 
-splits = get_all_splitted_german_spider()
-data = splits[0]
+#splits = get_all_splitted_german_spider()
+#data = splits[0]
 
 
 with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
@@ -286,6 +286,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     executed_sql_amount += 1
                     compare_writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
                     time.sleep(5)
+                    print(f"current ea {round(achieved_ea / executed_sql_amount * 100, 2)}")
                     """print(f"gold tables : {gold_tables}")
                    # print("query ", entry.get("query"))
                     if not relevant_tables:
