@@ -261,3 +261,9 @@ Evaluieren
 Exact Matching 
 
 Execution accuracy
+
+Mit dem Ansatz mit den einfachen Prompt und gemma 27 b Model : 
+
+51.05 % 
+
+
