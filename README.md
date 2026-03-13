@@ -266,4 +266,8 @@ Mit dem Ansatz mit den einfachen Prompt und gemma 27 b Model :
 
 51.05 % 
 
+Self Correction 
+
+einbauen von Fragen wenn etwas mehrdeutig ist ? Mit so vorschlagen welche Optionen ? 
+
 
