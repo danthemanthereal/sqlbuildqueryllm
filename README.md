@@ -253,6 +253,8 @@ Dieses Paper structural_parser_1.pdf soll eine Impl haben  mit spider als GNN da
 
 Question Decomposition 
 
+die bisherigen Prompts in Papern hatten Beispiele -> kann man auch ohne ? 
+
 
 Question Enrichment
 
