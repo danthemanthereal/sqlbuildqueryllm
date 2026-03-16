@@ -273,3 +273,6 @@ Self Correction
 einbauen von Fragen wenn etwas mehrdeutig ist ? Mit so vorschlagen welche Optionen ? 
 
 
+Finetuning für SQL Generieren es allgemein besser kann. 
+
+
