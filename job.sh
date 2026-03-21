@@ -17,4 +17,4 @@ module load python
 cd $HOME/sqlbuildqueryllm
 
 # Python-Skript starten
-python3 main.py
+python main.py
