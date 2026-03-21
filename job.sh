@@ -11,7 +11,7 @@
 module load python
 
 # Optional: virtuelle Umgebung aktivieren
-# source venv/bin/activate
+# source venv310/bin/activate
 
 # In den Projektordner wechseln
 cd $HOME/sqlbuildqueryllm
