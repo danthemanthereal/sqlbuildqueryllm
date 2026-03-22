@@ -1,5 +1,6 @@
 import json
 import os
+from pathlib import Path
 import re
 from data_preprocessing.german_spider_preprocessor import get_english_table_name
 from data_preprocessing.split_german_spider import get_all_splitted_german_spider
@@ -23,24 +24,15 @@ os.environ["NUMEXPR_NUM_THREADS"] = "1"
 import csv
 import os
 from difflib import SequenceMatcher
-from time import sleep
-
-from data_preprocessing.preprocessor import reprocess
-from data_preprocessing.stat_bot_swiss_preprocessing import table_meta_df, only_german_test_df, query_question_test_df
-from evaluation.eval_spider import execute_matching_check, check_precision, check_recall, check_ea
-from llm_components.groq.groq_llm_componnet import get_tables_groq, get_generated_sql_queries
-from llm_components.slim_sql_llm import get_sql_query
-from schema_linking.c3_approach.tabell_recall_with_c3 import get_all_table_with_cols
+from evaluation.eval_spider import check_ea
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
-from schema_linking.custom_e_sql.get_table_based_value_in_col import get_relevant_c3_tables, \
-    get_relevant_tables_of_question
-from schema_linking.custom_resd_sql.cross_encoder import get_relevant_tables_and_columns
-from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, get_db_id_and_tables, \
+from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, \
     get_all_tables_en, get_relations_per_db
-from vector_database.vector_db_for_table_describtion_swit_bot_dataset import collection, embeddings, model
-from transformers import AutoTokenizer
-from torch import nn, cosine_similarity
-from collections import Counter
+
+
+
+current_path = Path(__file__).resolve()
+project_path = str(current_path.parent)
 
 """only_table_name = list(table_meta_df["name"])
 table_description_df = table_meta_df[["name", "discription"]]
@@ -101,9 +93,9 @@ print("table not in query:", table_not_in_query)
 
 
 #embed_documents(16)
-csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/output.csv"
-missing_csv_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/missing.csv"
-compare_generated_sql_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/compare_sql_query.csv"
+csv_file = project_path + "/output.csv"
+missing_csv_file = project_path+ "/missing.csv"
+compare_generated_sql_file = project_path+  "/compare_sql_query.csv"
 file_exists = os.path.isfile(csv_file)
 missing_file_exists = os.path.isfile(missing_csv_file)
 compare_file_exists = os.path.isfile(compare_generated_sql_file)
@@ -181,7 +173,8 @@ def extract_error_dict(error_text: str):
 
     return None
 
-json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
+
+json_file = project_path + "/data/dataset_spider_de/multispider/with_original_value/dev_de.json"
 hit_counter = 0
 miss_counter = 0
 no_table_counter = 0

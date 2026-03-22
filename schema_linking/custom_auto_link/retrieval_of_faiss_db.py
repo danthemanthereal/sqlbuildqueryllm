@@ -2,9 +2,13 @@ import faiss
 import json
 from sentence_transformers import SentenceTransformer
 import os
+from pathlib import Path
 
-def get_top_k_columns(question: str, top_k: int = 10):
-    index_folder_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/schema_linking/custom_auto_link/embedded_documents"
+
+def get_top_k_columns(question: str, top_k: int = 5):
+    current_path = Path(__file__).resolve()
+    project_path = str(current_path.parent.parent.parent)
+    index_folder_path =  project_path + "/schema_linking/custom_auto_link/embedded_documents"
     filtered_results = []
     model = SentenceTransformer('intfloat/multilingual-e5-small')
     for db in os.listdir(index_folder_path):

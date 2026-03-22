@@ -71,7 +71,9 @@ def check_recall(generated_tables, gold_tables) -> bool:
 # gleiche ergebnisse ? 
 def check_ea(generated_query, gold_query, db_id) -> bool:
     try:
-        db_path = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/spider/database" + f"/{db_id}/{db_id}.sqlite"
+        current_path = Path(__file__).resolve()
+        project_path = str(current_path.parent.parent)
+        db_path = project_path + "/data/dataset_spider_de/spider/database" + f"/{db_id}/{db_id}.sqlite"
         conn = sqlite3.connect(db_path)
 
         cursor = conn.cursor()
