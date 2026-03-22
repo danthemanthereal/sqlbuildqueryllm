@@ -191,6 +191,8 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
 
     for i, entry in enumerate(data):
             try:
+                print("f current round ", executed_sql_amount)
+                executed_sql_amount += 1
                 question = "".join(entry.get("question"))
                 print("Frage ", question)
                 if entry.get('question'):
@@ -270,11 +272,9 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
                     if reached:
                         achieved_ea += 1
-                    executed_sql_amount += 1
                     compare_writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
                     time.sleep(5)
                     print(f"current ea {round(achieved_ea / executed_sql_amount * 100, 2)}")
-                    print("f current round ", executed_sql_amount)
                     """print(f"gold tables : {gold_tables}")
                    # print("query ", entry.get("query"))
                     if not relevant_tables:
@@ -380,7 +380,6 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                             reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"))
                             if reached:
                                 achieved_ea += 1
-                            executed_sql_amount += 1
                             compare_writer.writerow(
                                 [entry.get("question"), generated_query, entry.get("query"), reached, False])
                 except Exception as e:
