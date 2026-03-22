@@ -1,17 +1,10 @@
 import json
 import os
 from pathlib import Path
-import re
 from data_preprocessing.german_spider_preprocessor import get_english_table_name
-from data_preprocessing.split_german_spider import get_all_splitted_german_spider
 from llm_components.gemma.gemma_llm_component import generate_query_by_gemma
-from llm_components.groq.build_db_schema_for_groq import build_db_schema_based_on_predicted_tables
 from schema_linking.custom_auto_link.retrieval_of_faiss_db import get_top_k_columns
-from schema_linking.custom_auto_link.vector_db_faiss import embed_documents
-from schema_linking.custom_chess_agentframe_work.pipeline import get_relevant_tables
-from schema_linking.use_table_name_as_anchor import get_most_similar_table_with_anchor
 from groq import RateLimitError
-import math
 import re
 import time
 import ast
@@ -222,6 +215,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                         possible_joined_tables.extend(get_relations_per_db(table))
                     relevant_tables.extend(possible_joined_tables)"""
                     relevant_tables = get_top_k_columns(entry.get("question"),5)
+
                     relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
                     german_prediction = relevant_tables
                     #relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]

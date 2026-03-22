@@ -1,9 +1,12 @@
 import json
 from collections import defaultdict
+from pathlib import Path
 
 
 def get_german_english_translation_map():
-    json_file = "/Users/danielschmidt/Desktop/sqlbuildqueryllm/data/dataset_spider_de/multispider/with_original_value/tables_de.json"
+    current_path = Path(__file__).resolve()
+    project_path = str(current_path.parent.parent)
+    json_file = project_path +  "/data/dataset_spider_de/multispider/with_original_value/tables_de.json"
     german_english_table_mapping = defaultdict(list)
 
     with open(json_file, "r", encoding="utf-8") as f:
