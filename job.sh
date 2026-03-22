@@ -1,20 +1,36 @@
 #!/bin/bash
-#SBATCH --job-name=sqlbuildquery
-#SBATCH --output=output.log
-#SBATCH --error=error.log
-#SBATCH --time=00:10:00       # max runtime hh:mm:ss
-#SBATCH --mem=2G              # RAM pro Node
-#SBATCH --cpus-per-task=2     # CPUs
-#SBATCH --partition=standard  # Partition / Queue des Clusters
+#SBATCH --job-name=sqlbuildqueryllm
+#SBATCH --output=slurm-%j.out
+#SBATCH --error=slurm-%j.err
+#SBATCH --partition=cpu           # CPU-Partition wählen
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=2000M
+#SBATCH --time=02:00:00
 
-# Optional: Python-Modul laden
-module load python
+echo "Job gestartet auf $(hostname) um $(date)"
 
-# Optional: virtuelle Umgebung aktivieren
-# source venv310/bin/activate
+# Module laden
+module purge
+module load devel/python/3.11.7-gnu-14.2
 
-# In den Projektordner wechseln
-cd $HOME/sqlbuildqueryllm
+# Virtuelle Umgebung nutzen oder erstellen, falls noch nicht vorhanden
+VENV_DIR="$HOME/sqlbuildqueryllm/venv_sqlbuild"
 
-# Python-Skript starten
-python main.py
+if [ ! -d "$VENV_DIR" ]; then
+    echo "Virtuelle Umgebung wird erstellt..."
+    python -m venv "$VENV_DIR"
+fi
+
+# Umgebung aktivieren
+source "$VENV_DIR/bin/activate"
+
+# Bibliotheken installieren, falls noch nicht vorhanden
+pip install --upgrade pip
+pip install --upgrade --no-cache-dir -r requirements.txt
+
+# Script ausführen
+python -u main.py
+
+echo "Job beendet um $(date)"
