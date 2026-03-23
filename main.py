@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 from data_preprocessing.german_spider_preprocessor import get_english_table_name
 from llm_components.gemma.gemma_llm_component import generate_query_by_gemma
+from llm_components.ollama.ollama_component import get_query_with_mistral
 from schema_linking.custom_auto_link.retrieval_of_faiss_db import get_top_k_columns
 from groq import RateLimitError
 import re
@@ -260,7 +261,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
 
                     # execute sql query based on predicted tables
-                    generated_query = generate_query_by_gemma(entry.get("question"),relevant_tables)
+                    generated_query = get_query_with_mistral(entry.get("question"),relevant_tables)
                     generated_query = clean_sql(generated_query)
                     print("generated query")
                     print(generated_query)

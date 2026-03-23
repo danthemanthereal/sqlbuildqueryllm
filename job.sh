@@ -2,13 +2,12 @@
 #SBATCH --job-name=sqlbuildqueryllm
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
-#SBATCH --constraint="gpu"
-#SBATCH --nodes=1
+#SBATCH --partition=gpu_a100_il     # ❗ WICHTIG
+#SBATCH --gres=gpu:1             # 2 GPUs
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
-#SBATCH --mem-per-cpu=2000M
+#SBATCH --mem=16G
 #SBATCH --time=20:00:00
-
 echo "Job gestartet auf $(hostname) um $(date)"
 
 # Module laden
