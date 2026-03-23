@@ -11,9 +11,8 @@ def get_query_with_mistral(question: str, predicted_tables: list)->str:
 
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        torch_dtype=torch.float16,
-        device_map="auto"
-    )
+        torch_dtype=torch.float16
+    ).to("cuda")
 
     db_schema = build_db_schema_based_on_predicted_tables(predicted_tables)
     prompt = build_query_prompt(question, db_schema)
