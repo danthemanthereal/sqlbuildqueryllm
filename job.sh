@@ -2,12 +2,12 @@
 #SBATCH --job-name=sqlbuildqueryllm
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
-#SBATCH --partition=cpu           # CPU-Partition wählen
+#SBATCH --constraint="gpu"
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=2000M
-#SBATCH --time=10:00:00
+#SBATCH --time=20:00:00
 
 echo "Job gestartet auf $(hostname) um $(date)"
 
