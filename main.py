@@ -21,9 +21,7 @@ from difflib import SequenceMatcher
 from evaluation.eval_spider import check_ea
 from schema_linking.cross_encoder_approach import get_similarity_tables_and_sentence
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_gold_tables_of_db, \
-    get_all_tables_en, get_relations_per_db
-
-
+    get_all_tables_en, get_relations_per_db, get_relations_per_db_tables
 
 current_path = Path(__file__).resolve()
 project_path = str(current_path.parent)
@@ -248,7 +246,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
 
                     joined_tables = []
                     for table in relevant_tables:
-                        joined_tables.extend(get_relations_per_db(table))
+                        joined_tables.extend(get_relations_per_db_tables(table))
                     relevant_tables.extend(joined_tables)
                     #relevant_tables = list(dict.fromkeys(relevant_tables))
 
