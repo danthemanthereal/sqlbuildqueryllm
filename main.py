@@ -272,7 +272,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     if reached:
                         achieved_ea += 1
                     compare_writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
-                    
+
                     print(f"current ea {round(achieved_ea / executed_sql_amount * 100, 2)}")
                     """print(f"gold tables : {gold_tables}")
                    # print("query ", entry.get("query"))

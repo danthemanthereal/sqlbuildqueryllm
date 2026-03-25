@@ -4,7 +4,7 @@ import torch
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_columns_of_table, get_relations_per_db, \
     get_db_id_and_tables, get_columns_of_table_of_one_db, get_relations_of_one_db
 
-"""model_name = "mistralai/Mistral-7B-Instruct-v0.2"
+model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 
 print("Lade Modell einmal...")
 
@@ -15,13 +15,13 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.float16
 ).to("cuda")
 
-print("Modell geladen!")"""
+print("Modell geladen!")
 
 
 def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     db_schema = build_db_schema_based_on_predicted_tables(predicted_tables)
-    #prompt = build_query_prompt(question, db_schema)
-    #inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+    prompt = build_query_prompt(question, db_schema)
+    inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
     messages = [
         {
             "role": "system",
@@ -47,7 +47,7 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     """
         }
     ]
-    """
+
     inputs = tokenizer.apply_chat_template(
         messages,
         return_tensors="pt"
@@ -57,9 +57,9 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
     if "[/INST]" in result:
-        result = result[result.index("[/INST]")++ len("[/INST]"):]"""
+        result = result[result.index("[/INST]")++ len("[/INST]"):]
 
-    result = ""
+
     return result.strip()
 
 
