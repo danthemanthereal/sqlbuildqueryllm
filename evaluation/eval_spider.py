@@ -1,6 +1,7 @@
 from pathlib import Path
 import sqlite3
 import csv
+import re
 
 from llm_components.ollama.ollama_component import return_corrected_sql, return_corrected_sql_wrapper
 
@@ -89,15 +90,31 @@ def check_ea(generated_query, gold_query, db_id) -> bool:
             return True
         return False
     except Exception as e:
-        try:
+        print(e)
+        return False
+        """try:
             print(f"Fehler in db ausführen {e}")
             cororected_sql_query =  return_corrected_sql_wrapper(str(e), generated_query)
+            cororected_sql_query = clean_sql(cororected_sql_query)
             print(f"corrected sql query: {cororected_sql_query}")
+
             corrected_res = cursor.execute(cororected_sql_query)
+            
             if set(corrected_res) == set(ground_truth_res):
                 return True
-            return False
+            return False"""
 
-        except Exception as e:
+        """except Exception as e:
             print(f"fehler slebst nach verbesserung")
-            return False
+            print(e)
+            return False"""
+
+
+def clean_sql(text):
+    text = text.strip()
+
+    match = re.search(r"```sql\s*(.*?)```", text, re.IGNORECASE | re.DOTALL)
+    if match:
+        return match.group(1).strip()
+
+    return text

@@ -1,7 +1,10 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
-
+import re
+from question_decomposition.bidirectional_approach.prompts import get_question_decomposition_prompt
+from schema_linking.bidirectional_approach.prompts import get_extract_key_words_prompt
 from self_correction.agent_25_approach.prompts import DEFAULT_PROMPT_TEMPLATES
+from sql_generation_comp.bidirectional_approach.prompt import get_generate_query_prompt
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_columns_of_table, get_relations_per_db, \
     get_db_id_and_tables, get_columns_of_table_of_one_db, get_relations_of_one_db
 
@@ -22,31 +25,34 @@ db_schema = None
 def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     global db_schema
     db_schema = build_db_schema_based_on_predicted_tables(predicted_tables)
-    prompt = build_query_prompt(question, db_schema)
-    inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+    print("db_schema")
+    print(db_schema)
+    sub_question_prompt = get_question_decomposition_prompt(question)
+    inputs_sub_question = tokenizer(sub_question_prompt, return_tensors="pt").to("cuda")
+    sub_questions= model.generate(**inputs_sub_question, max_new_tokens=300)
+    sub_questions = clean_sql(sub_questions)
+    key_words_prompt = get_extract_key_words_prompt(question, "")
+    inputs_key_words = tokenizer(key_words_prompt, return_tensors="pt").to("cuda")
+    key_words = model.generate(**inputs_key_words, max_new_tokens=300)
+    key_words = clean_sql(key_words)
+    #prompt = get_generate_query_prompt(db_schema, question + sub_questions + key_words, "")
+    #prompt = build_query_prompt(question, db_schema)
+   # inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+    prompt = get_generate_query_prompt(db_schema, question+ sub_questions + key_words, "")
     messages = [
         {
             "role": "system",
-            "content": "You are a strict SQL generator. You only output valid SQL queries. No explanations."
+            "content": "You are a strict SQL generator. "
+                       "You maybe given several databases with several database id"
+                       "You choose one of the database schema to use for building the query"
+                       "Your criteria for using the database is to look on the tables and columns of the "
+                       "database. Select the database where you think are the tables and columns to answer the question. "
+                       "After selecting one database schema, you work only with the tables and columns of the selected databas schema."
+                       "You only output valid SQL queries. No explanations."
         },
         {
             "role": "user",
-            "content": f"""
-    Generate a SQL query for the following question.
-
-    SCHEMA:
-    {db_schema}
-
-    QUESTION:
-    {question}
-
-    RULES:
-    - Only use tables and columns from the schema
-    - Output ONLY SQL
-    - No explanation
-    - Start with SELECT
-    - End with semicolon
-    """
+            "content": prompt
         }
     ]
 
@@ -54,7 +60,7 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
         messages,
         return_tensors="pt"
     ).to("cuda")
-    outputs = model.generate(**inputs, max_new_tokens=100)
+    outputs = model.generate(**inputs, max_new_tokens=300)
 
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
@@ -119,7 +125,7 @@ def build_query_prompt(question, schema):
 
 
 def return_corrected_sql_wrapper(error_message, init_sql):
-    return return_corrected_sql(db_schema, error_message, init_sql, "")
+    return return_corrected_sql(db_schema, error_message, init_sql, "If the error is that no column exists, maybe try another table of a database schema.")
 def return_corrected_sql(schema_context, error,initial_sql, hint):
 
     agent_25_approcha_prompt = DEFAULT_PROMPT_TEMPLATES.get("generic")
@@ -151,3 +157,13 @@ def return_corrected_sql(schema_context, error,initial_sql, hint):
         result = result[result.index("[/INST]") + + len("[/INST]"):]
 
     return result.strip()
+
+
+def clean_sql(text):
+    text = text.strip()
+
+    match = re.search(r"```sql\s*(.*?)```", text, re.IGNORECASE | re.DOTALL)
+    if match:
+        return match.group(1).strip()
+
+    return text

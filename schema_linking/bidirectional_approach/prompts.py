@@ -47,7 +47,7 @@ Make sure your response includes the table names as keys, each associated with a
 For each aspect of the question, provide a clear and concise explanation of your reasoning behind selecting the columns. Do not include ““json in your response. Only output a json as your response.
 """
 
-def get_extract_key_words_prompt(SCHEMA, AUGMENTED_QUESTION, HINT, QUESTION, EVIDENCE):
+def get_extract_key_words_prompt(QUESTION, EVIDENCE):
     return f"""
 Objective: Analyze the given question and hint to identify and extract keywords, keyphrases, and named entities. These elements are crucial for understanding the core components of the inquiry and the guidance provided. The goal is to recognize and isolate significant terms and phrases that could be instrumental in formulating searches or queries related to the posed question.
 Instructions:

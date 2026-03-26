@@ -1,6 +1,6 @@
 def get_question_decomp_prompt(question, db_schema)->str:
-    return f"""
-    was bedeutet dies ### SQLite SQL tables, with their properties:
+    return f"""    
+ ### SQLite SQL tables, with their properties:
 # document_types (document_type_code, document_description)
 # documents (document_id, document_type_code, grant_id, sent_date, response_-
 received_date, other_details)
