@@ -1,6 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
+from self_correction.agent_25_approach.prompts import DEFAULT_PROMPT_TEMPLATES
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_columns_of_table, get_relations_per_db, \
     get_db_id_and_tables, get_columns_of_table_of_one_db, get_relations_of_one_db
 
@@ -16,9 +17,10 @@ model = AutoModelForCausalLM.from_pretrained(
 ).to("cuda")
 
 print("Modell geladen!")
-
+db_schema = None
 
 def get_query_with_mistral(question: str, predicted_tables: list) -> str:
+    global db_schema
     db_schema = build_db_schema_based_on_predicted_tables(predicted_tables)
     prompt = build_query_prompt(question, db_schema)
     inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
@@ -66,8 +68,6 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
 def build_db_schema_based_on_predicted_tables(tables: list) -> str:
     db_schema_sting = ""
     tables = list(dict.fromkeys(tables))
-    print("tables: ", tables)
-    print("----")
     tables_per_db_id = get_db_id_and_tables()
     db_table_schema_map = {}
 
@@ -91,8 +91,6 @@ def build_db_schema_based_on_predicted_tables(tables: list) -> str:
             relation_ships_of_the_table = get_relations_of_one_db(db_id,table)
             db_schema_sting += f" relation ship with other tables: {relation_ships_of_the_table}\n"
 
-    print("db schema string")
-    print(db_schema_sting)
     return db_schema_sting
 
 
@@ -118,3 +116,38 @@ def build_query_prompt(question, schema):
 
                 SQL:
             """
+
+
+def return_corrected_sql_wrapper(error_message, init_sql):
+    return return_corrected_sql(db_schema, error_message, init_sql, "")
+def return_corrected_sql(schema_context, error,initial_sql, hint):
+
+    agent_25_approcha_prompt = DEFAULT_PROMPT_TEMPLATES.get("generic")
+    filled_prompt = agent_25_approcha_prompt.format(schema_context=schema_context,
+    nlq=error,
+    initial_sql=initial_sql,
+    hint=hint)
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a an expert for correcting sql queries. You correct only the sql query based on the given database, the error and the false generated query. You only output valid SQL queries. No explanations."
+        },
+        {
+            "role": "user",
+            "content": filled_prompt,
+        },
+
+    ]
+
+    inputs = tokenizer.apply_chat_template(
+        messages,
+        return_tensors="pt"
+    ).to("cuda")
+    outputs = model.generate(**inputs, max_new_tokens=100)
+
+    result = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    if "[/INST]" in result:
+        result = result[result.index("[/INST]") + + len("[/INST]"):]
+
+    return result.strip()

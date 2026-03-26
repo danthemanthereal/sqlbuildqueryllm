@@ -3,6 +3,7 @@ DEFAULT_PROMPT_TEMPLATES = {
 Given a natural language question, the database schema, and an initial SQL query, your task is to review the initial SQL and provide a corrected version that answers the question accurately based on the schema.
 
 If the initial SQL is correct, return it as is. If it's incorrect, identify the errors and provide the corrected SQL.
+Your answer is only the corrected SQL Query without any comments. 
 
 Schema:
 {schema_context}
