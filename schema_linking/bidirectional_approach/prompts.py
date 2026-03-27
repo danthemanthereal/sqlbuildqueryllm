@@ -62,9 +62,7 @@ Task:
 Given the following question and hint, identify and list all relevant keywords, keyphrases, and named entities.
 Question: {QUESTION} Hint: {EVIDENCE}
 Please provide your findings as a json file, capturing the essence of both the question and hint through the identified terms and phrases.
-   {
-   "keywords": list of keywords, keyphrases and entities.
-}
+   {{"keywords": list of keywords, keyphrases and entities.}}
 Do not include “‘json in your response. Only output a json object as your response.
 
 """

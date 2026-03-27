@@ -14,10 +14,7 @@ Original Question: “Which employees work in departments located in New York?�
 Now, decompose the following question into subquestions. Provide the subquestions as a numbered list.
 Original Question: {QUESTION}
 Provide the subquestions in a json object without any explanation. Please respond with a JSON
-object structured as follows:
-   {
-   "Subquestions": list of subquestions.
-}
+object structured as follows:{{"Subquestions": list of subquestions.}}
 Do not include “‘json in your response. Only output a json object as your response.
 
 """

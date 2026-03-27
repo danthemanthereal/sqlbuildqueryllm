@@ -29,16 +29,23 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     print(db_schema)
     sub_question_prompt = get_question_decomposition_prompt(question)
     inputs_sub_question = tokenizer(sub_question_prompt, return_tensors="pt").to("cuda")
-    sub_questions= model.generate(**inputs_sub_question, max_new_tokens=300)
-    sub_questions = clean_sql(sub_questions)
+    outputs = model.generate(**inputs_sub_question, max_new_tokens=300)
+    generated_tokens = outputs[0][inputs_sub_question["input_ids"].shape[1]:]
+    sub_questions = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+    print("sub_questions")
+    print(sub_questions)
+
     key_words_prompt = get_extract_key_words_prompt(question, "")
     inputs_key_words = tokenizer(key_words_prompt, return_tensors="pt").to("cuda")
     key_words = model.generate(**inputs_key_words, max_new_tokens=300)
-    key_words = clean_sql(key_words)
+    key_words = tokenizer.decode(key_words[0][inputs_key_words["input_ids"].shape[1]:], skip_special_tokens=True)
+    print("key_words")
+    print(key_words)
+
     #prompt = get_generate_query_prompt(db_schema, question + sub_questions + key_words, "")
     #prompt = build_query_prompt(question, db_schema)
-   # inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
-    prompt = get_generate_query_prompt(db_schema, question+ sub_questions + key_words, "")
+    #inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+    prompt = get_generate_query_prompt(db_schema, question+ str(sub_questions) + str(key_words), "")
     messages = [
         {
             "role": "system",
@@ -65,7 +72,7 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
     if "[/INST]" in result:
-        result = result[result.index("[/INST]")++ len("[/INST]"):]
+        result = result[result.index("[/INST]") + len("[/INST]"):]
 
 
     return result.strip()
