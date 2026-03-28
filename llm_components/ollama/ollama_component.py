@@ -77,12 +77,11 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
 
 
     result.strip()
-
     try:
         data = json.loads(result)
         sql_query = data.get("SQL", "").strip()
     except json.JSONDecodeError:
-        sql_query = result  
+        sql_query = result
 
     return sql_query
 
@@ -108,8 +107,7 @@ def build_db_schema_based_on_predicted_tables(tables: list) -> str:
         for table in all_tables:
 
             col_of_table = get_columns_of_table_of_one_db(db_id, table)
-
-            db_schema_sting += f"table: {table} with columns: {col_of_table} \n"
+            db_schema_sting += f"{table}({','.join(col_of_table)}) \n"
             relation_ships_of_the_table = get_relations_of_one_db(db_id,table)
             db_schema_sting += f" relation ship with other tables: {relation_ships_of_the_table}\n"
 
