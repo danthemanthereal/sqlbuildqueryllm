@@ -1,6 +1,6 @@
 def get_prompt_with_question_decom_and_table_link(question, database_schema):
     return f"""
-und was macht dieser code ### SQLite SQL tables, with their properties:
+### SQLite SQL tables, with their properties:
 # document_types (document_type_code, document_description)
 # documents (document_id, document_type_code, grant_id, sent_date, response_-
 received_date, other_details)

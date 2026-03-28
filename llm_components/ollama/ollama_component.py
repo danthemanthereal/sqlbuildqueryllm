@@ -97,7 +97,17 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     except json.JSONDecodeError:
         sql_query = result
     print("return squety", sql_query)
-    return sql_query
+    print("type of sql_query", type(sql_query))
+    if '"SQL:"' in sql_query:
+        print("in if because jsno string")
+        sql_query_dict = json.loads(sql_query)
+
+        print(sql_query_dict)
+        print(type(sql_query_dict))
+        sql_query =  sql_query_dict["SQL"].strip()
+        sql_query = sql_query.replace("\\", "")
+        return sql_query.strip()
+    return sql_query.strip()
 
 
 def build_db_schema_based_on_predicted_tables(tables: list) -> str:

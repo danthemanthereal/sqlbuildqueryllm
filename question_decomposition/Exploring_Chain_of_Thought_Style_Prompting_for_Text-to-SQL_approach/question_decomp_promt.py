@@ -1,6 +1,6 @@
 def get_question_decomp_prompt(question, db_schema)->str:
     return f"""    
- ### SQLite SQL tables, with their properties:
+### SQLite SQL tables, with their properties:
 # document_types (document_type_code, document_description)
 # documents (document_id, document_type_code, grant_id, sent_date, response_-
 received_date, other_details)
@@ -38,7 +38,7 @@ T2.grant_amount > 5000 AND T4.organisation_type_description = ’Research’
 # singer_in_concert (concert_id, singer_id)
 #
 ### Question:  {question}
-### Database schema: {db_schema}
+### Database schema:{db_schema}
 decompose the question and use with the given Database schema the question. 
 Return only a sql query without any comments or explanation.  
 """
