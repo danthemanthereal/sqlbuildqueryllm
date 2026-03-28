@@ -26,22 +26,17 @@ db_schema = None
 def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     global db_schema
     db_schema = build_db_schema_based_on_predicted_tables(predicted_tables)
-    print("db_schema")
-    print(db_schema)
+
     sub_question_prompt = get_question_decomposition_prompt(question)
     inputs_sub_question = tokenizer(sub_question_prompt, return_tensors="pt").to("cuda")
     outputs = model.generate(**inputs_sub_question, max_new_tokens=300)
     generated_tokens = outputs[0][inputs_sub_question["input_ids"].shape[1]:]
     sub_questions = tokenizer.decode(generated_tokens, skip_special_tokens=True)
-    print("sub_questions")
-    print(sub_questions)
 
     key_words_prompt = get_extract_key_words_prompt(question, "")
     inputs_key_words = tokenizer(key_words_prompt, return_tensors="pt").to("cuda")
     key_words = model.generate(**inputs_key_words, max_new_tokens=300)
     key_words = tokenizer.decode(key_words[0][inputs_key_words["input_ids"].shape[1]:], skip_special_tokens=True)
-    print("key_words")
-    print(key_words)
 
     #prompt = get_generate_query_prompt(db_schema, question + sub_questions + key_words, "")
     #prompt = build_query_prompt(question, db_schema)
@@ -98,14 +93,11 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
         sql_query = result
     print("return squety", sql_query)
     print("type of sql_query", type(sql_query))
-    if '"SQL:"' in sql_query:
-        print("in if because jsno string")
-        sql_query_dict = json.loads(sql_query)
-
-        print(sql_query_dict)
-        print(type(sql_query_dict))
-        sql_query =  sql_query_dict["SQL"].strip()
+    if '"SQL"' in sql_query:
+        print("in if because json string")
         sql_query = sql_query.replace("\\", "")
+        sql_query_dict = json.loads(sql_query)
+        sql_query = sql_query_dict["SQL"].strip()
         return sql_query.strip()
     return sql_query.strip()
 
