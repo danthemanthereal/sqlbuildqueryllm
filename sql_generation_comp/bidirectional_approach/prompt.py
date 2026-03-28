@@ -10,7 +10,7 @@ Database admin instructions:
 Question Information: {AUGMENTED_QUESTION} Hint: {EVIDENCE}
 The question information, including subquestions and keywords, is designed to guide your focus toward the most relevant parts of the schema needed to answer the question effectively.
 Please respond with a JSON object structured as follows:
-   { "SQL": "Your SQL query in a single string." }
+   {{ "SQL": "Your SQL query in a single string." }}
 Priority should be given to columns that have been explicitly matched with examples relevant to the question’s context.
 Take a deep breath and think step by step to find the correct SQLite SQL query for the original question.
     """

@@ -1,6 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 import re
+import json
 from question_decomposition.bidirectional_approach.prompts import get_question_decomposition_prompt
 from schema_linking.bidirectional_approach.prompts import get_extract_key_words_prompt
 from self_correction.agent_25_approach.prompts import DEFAULT_PROMPT_TEMPLATES
@@ -75,7 +76,15 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
         result = result[result.index("[/INST]") + len("[/INST]"):]
 
 
-    return result.strip()
+    result.strip()
+
+    try:
+        data = json.loads(result)
+        sql_query = data.get("SQL", "").strip()
+    except json.JSONDecodeError:
+        sql_query = result  
+
+    return sql_query
 
 
 def build_db_schema_based_on_predicted_tables(tables: list) -> str:
