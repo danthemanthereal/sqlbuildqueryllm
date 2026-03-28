@@ -79,7 +79,16 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     result.strip()
     try:
         data = json.loads(result)
-        sql_query = data.get("SQL", "").strip()
+
+        if isinstance(data, str):
+            data = json.loads(data)
+
+        if isinstance(data, dict):
+            sql_query = data.get("SQL", "").strip()
+            sql_query = sql_query.replace("\\", "")
+        else:
+            sql_query = result
+
     except json.JSONDecodeError:
         sql_query = result
 
