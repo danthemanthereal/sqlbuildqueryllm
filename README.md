@@ -255,9 +255,13 @@ Question Decomposition
 
 die bisherigen Prompts in Papern hatten Beispiele -> kann man auch ohne ? 
 
-mit bidirectional paper (alle db schemas gegeben)
+mit bidirectional paper (alle db schemas gegeben) mit mistral 7b 
 
-Execution accuracy on all executed queries 21.66
+Execution accuracy on all executed queries 21.66% 
+
+mit nur richiger DB Execution accuracy on all executed queries 36.07% 
+
+-> aufgefallen , manchmal murden die Queries mehrmals / verschiedene weil vlt mehrdeutig ist. 
 
 
 Question Enrichment
