@@ -259,7 +259,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
 
                     # execute sql query based on predicted tables
-                    generated_query = get_query_with_mistral(entry.get("question"),relevant_tables, entry.get("db_id"))
+                    generated_query = get_query_with_mistral(entry.get("question"),relevant_tables)
                     generated_query = clean_sql(generated_query)
                     print("generated query")
                     print(generated_query)

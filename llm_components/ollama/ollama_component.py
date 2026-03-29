@@ -23,34 +23,37 @@ model = AutoModelForCausalLM.from_pretrained(
 print("Modell geladen!")
 db_schema = None
 
-def get_query_with_mistral(question: str, predicted_tables: list, correct_db_id) -> str:
+
+
+
+def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     global db_schema
-    db_schema = build_db_schema_based_on_predicted_tables(predicted_tables, correct_db_id)
+    db_schema = build_db_schema_based_on_predicted_tables(predicted_tables)
 
-    sub_question_prompt = get_question_decomposition_prompt(question)
-    inputs_sub_question = tokenizer(sub_question_prompt, return_tensors="pt").to("cuda")
-    outputs = model.generate(**inputs_sub_question, max_new_tokens=300)
-    generated_tokens = outputs[0][inputs_sub_question["input_ids"].shape[1]:]
-    sub_questions = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+    #sub_question_prompt = get_question_decomposition_prompt(question)
+    #inputs_sub_question = tokenizer(sub_question_prompt, return_tensors="pt").to("cuda")
+    #outputs = model.generate(**inputs_sub_question, max_new_tokens=300)
+    #generated_tokens = outputs[0][inputs_sub_question["input_ids"].shape[1]:]
+    #sub_questions = tokenizer.decode(generated_tokens, skip_special_tokens=True)
 
-    key_words_prompt = get_extract_key_words_prompt(question, "")
-    inputs_key_words = tokenizer(key_words_prompt, return_tensors="pt").to("cuda")
-    key_words = model.generate(**inputs_key_words, max_new_tokens=300)
-    key_words = tokenizer.decode(key_words[0][inputs_key_words["input_ids"].shape[1]:], skip_special_tokens=True)
+    #key_words_prompt = get_extract_key_words_prompt(question, "")
+    #inputs_key_words = tokenizer(key_words_prompt, return_tensors="pt").to("cuda")
+    #key_words = model.generate(**inputs_key_words, max_new_tokens=300)
+    #key_words = tokenizer.decode(key_words[0][inputs_key_words["input_ids"].shape[1]:], skip_special_tokens=True)
 
     #prompt = get_generate_query_prompt(db_schema, question + sub_questions + key_words, "")
     #prompt = build_query_prompt(question, db_schema)
     #inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
-    prompt = get_generate_query_prompt(db_schema, question+ str(sub_questions) + str(key_words), "")
+    prompt = get_question_decomp_prompt(question, db_schema)
     messages = [
         {
             "role": "system",
-            "content": "You are a strict SQL generator. "
+            "content": "You are a an expert for generation a correct sql query for a question."
                        "You maybe given several databases with several database id"
                        "You choose one of the database schema to use for building the query"
                        "Your criteria for using the database is to look on the tables and columns of the "
-                       "database. Select the database where you think are the tables and columns to answer the question. "
-                       "After selecting one database schema, you work only with the tables and columns of the selected databas schema."
+                       "database. Select the database where you think are the tables and columns to answer the best the question. "
+                       "After selecting one database schema, you work only with the tables and columns of the selected database schema."
                        "You only output valid SQL queries. No explanations."
         },
         {
@@ -199,3 +202,49 @@ def clean_sql(text):
         return match.group(1).strip()
 
     return text
+
+
+def get_question_decomp_prompt(question, db_schema)->str:
+    return f"""    
+### SQLite SQL tables, with their properties:
+# document_types (document_type_code, document_description)
+# documents (document_id, document_type_code, grant_id, sent_date, response_-
+received_date, other_details)
+# grants (grant_id, organisation_id, grant_amount, grant_start_date, grant_end_date,
+other_details)
+# organisation_types (organisation_type, organisation_type_description)
+# organisations (organisation_id, organisation_type, organisation_details)
+# project_outcomes (project_id, outcome_code, outcome_details)
+# project_staff (staff_id, project_id, role_code, date_from, date_to, other_details)
+# projects (project_id, organisation_id, project_details)
+# research_outcomes (outcome_code, outcome_description)
+# research_staff (staff_id, employer_organisation_id, staff_details)
+# staff_roles (role_code, role_description)
+# tasks (task_id, project_id, task_details, eg agree objectives)
+#
+### Question:  Find out the send dates of the documents with the grant amount of
+more than 5000 were granted by organisation type described as "Research".
+decompose the question
+1.  Find out the send dates of the documents.
+2.  Find out the send dates of the documents with the grant amount of more than
+5000.
+3.  Find out the send dates of the documents with the grant amount of more than 5000
+were granted by organisation type described as "Research".
+# Thus, the answer for the question is:  Find out the send dates of the documents
+with the grant amount of more than 5000 were granted by organisation type described
+as "Research".
+SELECT T1.sent_date FROM documents AS T1 JOIN Grants AS T2 ON T1.grant_id =
+T2.grant_id JOIN Organisations AS T3 ON T2.organisation_id = T3.organisation_id
+JOIN organisation_Types AS T4 ON T3.organisation_type = T4.organisation_type WHERE
+T2.grant_amount > 5000 AND T4.organisation_type_description = ’Research’
+### SQLite SQL tables, with their properties:
+# stadium (stadium_id, location, name, capacity, highest, lowest, average)
+# singer (singer_id, name, country, song_name, song_release_year, age, is_male)
+# concert (concert_id, concert_name, theme, stadium_id, year)
+# singer_in_concert (concert_id, singer_id)
+#
+### Question:  {question}
+### Database schema:{db_schema}
+decompose the question and use with the given Database schema the question. 
+Return only a sql query without any comments or explanation.  
+"""
