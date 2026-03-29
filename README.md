@@ -255,6 +255,10 @@ Question Decomposition
 
 die bisherigen Prompts in Papern hatten Beispiele -> kann man auch ohne ? 
 
+mit bidirectional paper (alle db schemas gegeben)
+
+Execution accuracy on all executed queries 21.66
+
 
 Question Enrichment
 
