@@ -90,6 +90,7 @@ def check_ea(generated_query, gold_query, db_id) -> bool:
             return True
         return False
     except Exception as e:
+        print("Fehler in db ausführen ")
         print(e)
         return False
         """try:
