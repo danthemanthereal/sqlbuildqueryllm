@@ -105,7 +105,7 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     return sql_query.strip()
 
 
-def build_db_schema_based_on_predicted_tables(tables: list, correct_db_id) -> str:
+def build_db_schema_based_on_predicted_tables(tables: list) -> str:
     db_schema_sting = ""
     tables = list(dict.fromkeys(tables))
     tables_per_db_id = get_db_id_and_tables()
@@ -120,8 +120,7 @@ def build_db_schema_based_on_predicted_tables(tables: list, correct_db_id) -> st
                 else:
                     db_table_schema_map[key] = [table]
     for db_id, tables in db_table_schema_map.items():
-        if db_id != correct_db_id:
-            continue
+
         db_schema_sting += f"Database : {db_id}\n"
         db_schema_sting += f"Tables and columns of the database:\n"
         all_tables = db_table_schema_map.get(db_id)
