@@ -26,9 +26,9 @@ db_schema = None
 
 
 
-def get_query_with_mistral(question: str, predicted_tables: list) -> str:
+def get_query_with_mistral(question: str, predicted_tables: list, db_id) -> str:
     global db_schema
-    db_schema = build_db_schema_based_on_predicted_tables(predicted_tables)
+    db_schema = build_db_schema_based_on_predicted_tables(predicted_tables, db_id)
 
     #sub_question_prompt = get_question_decomposition_prompt(question)
     #inputs_sub_question = tokenizer(sub_question_prompt, return_tensors="pt").to("cuda")
@@ -101,7 +101,7 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
     return sql_query.strip()
 
 
-def build_db_schema_based_on_predicted_tables(tables: list) -> str:
+def build_db_schema_based_on_predicted_tables(tables: list, db_id_par: str) -> str:
     db_schema_sting = ""
     tables = list(dict.fromkeys(tables))
     tables_per_db_id = get_db_id_and_tables()
@@ -116,7 +116,8 @@ def build_db_schema_based_on_predicted_tables(tables: list) -> str:
                 else:
                     db_table_schema_map[key] = [table]
     for db_id, tables in db_table_schema_map.items():
-
+        if db_id != db_id_par:
+            continue
         db_schema_sting += f"Database : {db_id}\n"
         db_schema_sting += f"Tables and columns of the database:\n"
         all_tables = db_table_schema_map.get(db_id)
