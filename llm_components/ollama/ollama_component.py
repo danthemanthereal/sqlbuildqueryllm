@@ -94,14 +94,10 @@ def get_query_with_mistral(question: str, predicted_tables: list) -> str:
             print(f"in end dict {sql_query}")
     except json.JSONDecodeError:
         sql_query = result
+    sql_query = sql_query.replace("\\", "")
     print("return squety", sql_query)
     print("type of sql_query", type(sql_query))
-    if '"SQL"' in sql_query:
-        print("in if because json string")
-        sql_query = sql_query.replace("\\", "")
-        sql_query_dict = json.loads(sql_query)
-        sql_query = sql_query_dict["SQL"].strip()
-        return sql_query.strip()
+
     return sql_query.strip()
 
 
