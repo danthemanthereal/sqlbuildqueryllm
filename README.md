@@ -263,6 +263,10 @@ mit nur richiger DB Execution accuracy on all executed queries 36.07%
 
 -> aufgefallen , manchmal murden die Queries mehrmals / verschiedene weil vlt mehrdeutig ist. 
 
+mit den ersten exploring prompt von chain of style prompting mit allen db schemas 
+
+Execution accuracy on all executed queries 5.61%
+
 
 Question Enrichment
 
