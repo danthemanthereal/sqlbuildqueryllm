@@ -271,6 +271,10 @@ mit den ersten exploring prompt von chain of style prompting mit nur richtiger d
 
 Execution accuracy on all executed queries 21.95%
 
+mit den zweiten exploring prompt von chain of style prompting mit nur richtiger db schema 
+
+Execution accuracy on all executed queries 40.62% 
+
 
 Question Enrichment
 
