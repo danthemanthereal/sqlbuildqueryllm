@@ -6,7 +6,7 @@
 #SBATCH --gres=gpu:1             # 2 GPUs
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
+#SBATCH --mem=32G
 #SBATCH --time=20:00:00
 echo "Job gestartet auf $(hostname) um $(date)"
 
