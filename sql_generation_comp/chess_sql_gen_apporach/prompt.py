@@ -1,0 +1,27 @@
+def first_prompt_of_chess(DATABASE_SCHEMA, QUESTION, HINT):
+    return f"""
+You are an experienced database expert.
+Now you need to generate a SQL query given the database information, a question and some additional information.
+The database structure is defined by the following table(columns of table) and foreign key information of table.
+Note that the "Example Values" are actual values from the column. Some column might contain the values that are directly related to the question. Use it to help you justify which columns to use.
+
+Given the table schema information description and the `Question`. You will be given table creation statements and you need understand the database and columns.
+
+Present your final query as a single line of SQL code, without extra information or comments.
+
+Now is the real question, following the instruction and examples, generate the SQL with Recursive Divide-and-Conquer approach. Make sure you only output one single query.
+**************************
+【Table creation statements】
+{DATABASE_SCHEMA}
+
+**************************
+【Question】
+Question:
+{QUESTION}
+
+Evidence:
+{HINT}
+
+**************************
+【Answer】
+"""
