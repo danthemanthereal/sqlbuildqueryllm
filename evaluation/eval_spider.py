@@ -96,6 +96,7 @@ def check_ea(generated_query, gold_query, db_id) -> bool:
         try:
             print(f"Fehler in db ausführen {e}")
             cororected_sql_query =  return_corrected_sql_wrapper(str(e), generated_query)
+            cororected_sql_query = cororected_sql_query.replace("\\", "")
             cororected_sql_query = clean_sql(cororected_sql_query)
             print(f"corrected sql query: {cororected_sql_query}")
 

@@ -55,7 +55,7 @@ def get_query_with_mistral(question: str, predicted_tables: list, db_id) -> str:
                        "Your criteria for using the database is to look on the tables and columns of the "
                        "database. Select the database where you think are the tables and columns to answer the best the question. "
                        "After selecting one database schema, you work only with the tables and columns of the selected database schema."
-                       "You only output valid SQL queries. No explanations."
+                       "You only output one valid SQL query. No explanations."
         },
         {
             "role": "user",
@@ -157,9 +157,9 @@ def build_query_prompt(question, schema):
 
 
 def return_corrected_sql_wrapper(error_message, init_sql):
-    return return_corrected_sql(db_schema, error_message, init_sql, "If the error is that no column exists, maybe try another table of a database schema.")
+    return return_corrected_sql( db_schema, error_message, init_sql, "If the error is that no column exists, maybe try another table of a database schema.")
 def return_corrected_sql(schema_context, error,initial_sql, hint):
-
+    print(f"schema in correction {schema_context}")
     agent_25_approcha_prompt = DEFAULT_PROMPT_TEMPLATES.get("generic")
     filled_prompt = agent_25_approcha_prompt.format(schema_context=schema_context,
     nlq=error,
@@ -168,7 +168,10 @@ def return_corrected_sql(schema_context, error,initial_sql, hint):
     messages = [
         {
             "role": "system",
-            "content": "You are a an expert for correcting sql queries. You correct only the sql query based on the given database, the error and the false generated query. You only output valid SQL queries. No explanations."
+            "content":
+                "You are a an expert for correcting sql queries. "
+                "You correct only the sql query based on the given database, the error and the false generated query. "
+                "You only output one valid SQL query. No explanations."
         },
         {
             "role": "user",
