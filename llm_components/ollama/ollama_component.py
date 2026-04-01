@@ -184,7 +184,7 @@ def return_corrected_sql(schema_context, error,initial_sql, hint):
         messages,
         return_tensors="pt"
     ).to("cuda")
-    outputs = model.generate(**inputs, max_new_tokens=100)
+    outputs = model.generate(**inputs, max_new_tokens=300)
 
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 

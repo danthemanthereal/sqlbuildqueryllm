@@ -100,9 +100,13 @@ def check_ea(generated_query, gold_query, db_id) -> bool:
             cororected_sql_query = clean_sql(cororected_sql_query)
             print(f"corrected sql query: {cororected_sql_query}")
 
-            corrected_res = cursor.execute(cororected_sql_query)
+            cursor.execute(cororected_sql_query)
+            corrected_res = cursor.fetchall()
+
+            cursor.execute(gold_query)
+            ground_truth_res_in_excep = cursor.fetchall()
             
-            if set(corrected_res) == set(ground_truth_res):
+            if set(corrected_res) == set(ground_truth_res_in_excep):
                 return True
             return False
 
