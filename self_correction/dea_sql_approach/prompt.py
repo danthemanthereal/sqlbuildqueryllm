@@ -1,7 +1,7 @@
 
 
 def correct_sql_self(query, table_info, sql):
-    sql_prompt = "For the given question, use the Database scheme to fix the given SQLite QUERY for any issuses.\n" \
+    return f"""For the given question, use the Database scheme to fix the given SQLite QUERY for any issuses.\n" \
                  "If there are any problems, please fix them.\n" \
                  "If there are no issues, return SQLite QUERY as is.\n" \
                  "### There are some instructions for fixing the SQL query:\n" \
@@ -20,16 +20,9 @@ def correct_sql_self(query, table_info, sql):
                  f"### Question: {query}\n" \
                  f"### SQLite SQL QUERY:\n" \
                  f"{sql}\n" \
-                 f"### Fixed SQL QUERY:" \
-                 f"SELECT\n"
-    prompt_dict = {
-        "query": query,
-        "table_info": table_info,
-        "sql": sql
-    }
-    sql_prompt = get_prompt_content(sql_prompt, prompt_dict)
-    #sql = ask_llm(sql_prompt) TODO replace with sql answer of used model
-    return sql
+                 f"### Fixed SQL QUERY:"""
+
+
 
 
 def correct_sql_by_case(query, table_info, sql):

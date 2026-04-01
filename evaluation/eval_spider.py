@@ -73,7 +73,7 @@ def check_recall(generated_tables, gold_tables) -> bool:
 
 
 # gleiche ergebnisse ? 
-def check_ea(generated_query, gold_query, db_id) -> bool:
+def check_ea(generated_query, gold_query, db_id, question) -> bool:
     try:
         current_path = Path(__file__).resolve()
         project_path = str(current_path.parent.parent)
@@ -96,7 +96,7 @@ def check_ea(generated_query, gold_query, db_id) -> bool:
         try:
             print(f"Fehler in db ausführen {e}")
             print(f"used db {db_id}")
-            cororected_sql_query =  return_corrected_sql_wrapper(str(e), generated_query)
+            cororected_sql_query =  return_corrected_sql_wrapper(str(e), generated_query, question)
             cororected_sql_query = cororected_sql_query.replace("\\", "")
             cororected_sql_query = clean_sql(cororected_sql_query)
             print(f"corrected sql query: {cororected_sql_query}")

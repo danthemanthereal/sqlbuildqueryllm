@@ -5,6 +5,7 @@ import json
 from question_decomposition.bidirectional_approach.prompts import get_question_decomposition_prompt
 from schema_linking.bidirectional_approach.prompts import get_extract_key_words_prompt
 from self_correction.agent_25_approach.prompts import DEFAULT_PROMPT_TEMPLATES
+from self_correction.dea_sql_approach.prompt import correct_sql_self
 from sql_generation_comp.bidirectional_approach.prompt import get_generate_query_prompt
 from sql_generation_comp.chess_sql_gen_apporach.prompt import first_prompt_of_chess
 from structural_linking.gnn_spider_german_or_knowledge_graph import get_columns_of_table, get_relations_per_db, \
@@ -156,26 +157,25 @@ def build_query_prompt(question, schema):
             """
 
 
-def return_corrected_sql_wrapper(error_message, init_sql):
-    return return_corrected_sql( db_schema, error_message, init_sql, "If the error is that no column exists, maybe try another table of a database schema.")
-def return_corrected_sql(schema_context, error,initial_sql, hint):
+def return_corrected_sql_wrapper(error_message, init_sql, question):
+    return return_corrected_sql( db_schema, error_message, init_sql,
+                                 "If the error is that no column exists, maybe try another table of a database schema.", question)
+def return_corrected_sql(schema_context, error,initial_sql, hint, question):
     print(f"schema in correction {schema_context}")
-    agent_25_approcha_prompt = DEFAULT_PROMPT_TEMPLATES.get("generic")
-    filled_prompt = agent_25_approcha_prompt.format(schema_context=schema_context,
-    nlq=error,
-    initial_sql=initial_sql,
-    hint=hint)
+    dea_correct_prompt = correct_sql_self(question, schema_context, initial_sql)
+
     messages = [
         {
             "role": "system",
             "content":
                 "You are a an expert for correcting sql queries. "
                 "You correct only the sql query based on the given database, the error and the false generated query. "
+                "You check that all columns are present in the table and spell correctly."
                 "You only output one valid SQL query. No explanations."
         },
         {
             "role": "user",
-            "content": filled_prompt,
+            "content": dea_correct_prompt,
         },
 
     ]
