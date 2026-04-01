@@ -45,7 +45,7 @@ def get_query_with_mistral(question: str, predicted_tables: list, db_id) -> str:
     #prompt = get_generate_query_prompt(db_schema, question + sub_questions + key_words, "")
     #prompt = build_query_prompt(question, db_schema)
     #inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
-    prompt = first_prompt_of_chess(db_schema, question, "")
+    prompt = get_prompt_with_question_decom_and_table_link(db_schema, question)
     messages = [
         {
             "role": "system",
@@ -117,8 +117,8 @@ def build_db_schema_based_on_predicted_tables(tables: list, db_id_par: str) -> s
                 else:
                     db_table_schema_map[key] = [table]
     for db_id, tables in db_table_schema_map.items():
-        #if db_id != db_id_par:
-         #   continue
+        if db_id != db_id_par:
+            continue
         db_schema_sting += f"Database : {db_id}\n"
         db_schema_sting += f"Tables and columns of the database:\n"
         all_tables = db_table_schema_map.get(db_id)

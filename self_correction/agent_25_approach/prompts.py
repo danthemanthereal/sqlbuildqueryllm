@@ -61,3 +61,19 @@ Foreign Keys:
         "correct_sql": "SELECT count(T1.emp_id) FROM employee AS T1 JOIN department AS T2 ON T1.dept_id = T2.dept_id WHERE T2.dept_name = 'Sales'"
     }
 ]
+
+def get_prompt_without_example(schema_context,nlq, initial_sql, hint):
+    return f"""
+    You are an expert SQL developer capable of identifying and correcting errors in SQL queries generated from natural language.
+Given a natural language question, the database schema, and an initial SQL query, your task is to review the initial SQL and provide a corrected version that answers the question accurately based on the schema.
+
+If the initial SQL is correct, return it as is. If it's incorrect, identify the errors and provide the corrected SQL.
+Your answer is only the corrected SQL Query without any comments. 
+
+Schema:
+{schema_context}
+
+Problem: {nlq}
+Initial SQL: {initial_sql}
+Hint: {hint}
+Correct SQL:"""
