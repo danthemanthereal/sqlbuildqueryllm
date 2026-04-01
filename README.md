@@ -275,6 +275,8 @@ mit den zweiten exploring prompt von chain of style prompting mit nur richtiger 
 
 Execution accuracy on all executed queries 40.62% 
 
+irgendwie bei so chess kommt so out of memery abbruch nach 316 fragen
+
 
 Question Enrichment
 
