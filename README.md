@@ -296,6 +296,10 @@ Mit dem Ansatz mit den einfachen Prompt und gemma 27 b , jetzt auch dazu zählen
 
 Self Correction 
 
+mit den zweiten von zweiten exploring prompt nur mit richtiger db und agent 25 paper ansatz 
+
+Execution accuracy on all executed queries 17.02%
+
 einbauen von Fragen wenn etwas mehrdeutig ist ? Mit so vorschlagen welche Optionen ? 
 
 
