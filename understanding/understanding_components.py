@@ -20,6 +20,7 @@ def check_ambiguity_in_question(question: str):
             "content": "You are an expert at identifying ambiguity in questions that are intended to be translated into SQL queries. "
             "If the question is unambiguous, return an empty string. "
             "If the question is ambiguous, clearly explain what makes it ambiguous and list possible interpretations of the question."
+            "You answer only in german."
         },
         {
             "role": "user",
@@ -49,6 +50,8 @@ Analyze the following question in the context of generating a SQL query.
 If the question is clear and unambiguous, return an empty string.
 
 If the question is ambiguous, ask clarifying questions and describe the possible interpretations that would affect the SQL query.
+
+Your answer will only be in german.
 
 Question: {question}
 """
