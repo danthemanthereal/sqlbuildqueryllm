@@ -90,31 +90,10 @@ def check_ea(generated_query, gold_query, db_id, question) -> bool:
             return True
         return False
     except Exception as e:
-        #print("Fehler in db ausführen ")
-        #print(e)
-        #return False
-        try:
-            print(f"Fehler in db ausführen {e}")
-            print(f"used db {db_id}")
-            cororected_sql_query =  return_corrected_sql_wrapper(str(e), generated_query, question)
-            cororected_sql_query = cororected_sql_query.replace("\\", "")
-            cororected_sql_query = clean_sql(cororected_sql_query)
-            print(f"corrected sql query: {cororected_sql_query}")
-
-            cursor.execute(cororected_sql_query)
-            corrected_res = cursor.fetchall()
-
-            cursor.execute(gold_query)
-            ground_truth_res_in_excep = cursor.fetchall()
-            
-            if set(corrected_res) == set(ground_truth_res_in_excep):
-                return True
-            return False
-
-        except Exception as e:
-            print(f"fehler slebst nach verbesserung")
-            print(e)
-            return False
+        print("Fehler in db ausführen ")
+        print(e)
+        return False
+        
 
 
 def clean_sql(text):
