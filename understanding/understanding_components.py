@@ -36,9 +36,6 @@ def check_ambiguity_in_question(question: str):
 
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-    if "[/INST]" in result:
-        result = result[result.index("[/INST]") + len("[/INST]"):]
-
     return result.strip()
 
 
