@@ -215,39 +215,39 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     for table in relevant_tables:
                         possible_joined_tables.extend(get_relations_per_db(table))
                     relevant_tables.extend(possible_joined_tables)"""
-                    relevant_tables = get_top_k_columns(entry.get("question"),5)
+                   # relevant_tables = get_top_k_columns(entry.get("question"),5)
 
-                    relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
-                    german_prediction = relevant_tables
+                  #  relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
+                 #   german_prediction = relevant_tables
                     #relevant_tables = [r.get("metadata").get("table") for r in relevant_tables]
                     #relevant_tables = [dict.get("metadata", {}).get("table", " ") for dict in r]
-                    relevant_tables = list(dict.fromkeys(relevant_tables))
+               #     relevant_tables = list(dict.fromkeys(relevant_tables))
                     #print("predicted_tables in deutsch: ", relevant_tables)
                     #relevant_tables = [get_english_table_name(table) for table in relevant_tables]
-                    flattened_tables = []
+                #    flattened_tables = []
 
-                    for table in relevant_tables:
-                        flattened_tables.extend(get_english_table_name(table))
+                 #   for table in relevant_tables:
+                  #      flattened_tables.extend(get_english_table_name(table))
 
-                    relevant_tables = flattened_tables
+                   # relevant_tables = flattened_tables
                     # similar schreibweise noch hinzu
-                    similar_words = []
-                    englisch_tables_name = get_all_tables_en()
-                    for table in relevant_tables:
-                        sim_words = filter_aehnliche_woerter(table, englisch_tables_name, 0.8)
-                        similar_words.extend(sim_words)
+                  #  similar_words = []
+                 #   englisch_tables_name = get_all_tables_en()
+                  #  for table in relevant_tables:
+                   #     sim_words = filter_aehnliche_woerter(table, englisch_tables_name, 0.8)
+                    #    similar_words.extend(sim_words)
 
-                    relevant_tables.extend(similar_words)
+                    #relevant_tables.extend(similar_words)
 
                     # with help of db values
                    # tables_with_db_values = get_relevant_tables_of_question(entry.get("question"))
                    # relevant_tables.extend(tables_with_db_values)
                     #relevant_tables = list(dict.fromkeys(relevant_tables))
 
-                    joined_tables = []
-                    for table in relevant_tables:
-                        joined_tables.extend(get_relations_per_db_tables(table))
-                    relevant_tables.extend(joined_tables)
+                  #  joined_tables = []
+                 #   for table in relevant_tables:
+                  #      joined_tables.extend(get_relations_per_db_tables(table))
+                 #   relevant_tables.extend(joined_tables)
                     #relevant_tables = list(dict.fromkeys(relevant_tables))
 
 
@@ -259,21 +259,21 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     gold_tables = get_gold_tables_of_db(entry.get("db_id"), table_index_map)
 
                     # execute sql query based on predicted tables
-                    generated_query = get_query_with_mistral(entry.get("question"),relevant_tables, entry.get("db_id"))
-                    generated_query = clean_sql(generated_query)
-                    print("generated query")
-                    print(generated_query)
-                    print("gold query ")
-                    print(entry.get("query"))
+                    #generated_query = get_query_with_mistral(entry.get("question"),relevant_tables, entry.get("db_id"))
+                    #generated_query = clean_sql(generated_query)
+                    #print("generated query")
+                    #print(generated_query)
+                    #print("gold query ")
+                    #print(entry.get("query"))
 
                     #check ea reached for this question
 
-                    reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"), entry.get("question"))
-                    if reached:
-                        achieved_ea += 1
-                    compare_writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
+                    #reached = check_ea(generated_query, entry.get("query"), entry.get("db_id"), entry.get("question"))
+                    #if reached:
+                     #   achieved_ea += 1
+                    #compare_writer.writerow([entry.get("question"), generated_query,entry.get("query"), reached, False])
 
-                    print(f"current ea {round(achieved_ea / executed_sql_amount * 100, 2)}")
+#                    print(f"current ea {round(achieved_ea / executed_sql_amount * 100, 2)}")
                     """print(f"gold tables : {gold_tables}")
                    # print("query ", entry.get("query"))
                     if not relevant_tables:
@@ -367,7 +367,7 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
 
 #print(f"recall {get_percentage(recall_amount)} %")
 
-print(f"Execution accuracy on all executed queries {round(achieved_ea / executed_sql_amount * 100, 2)}")
+#print(f"Execution accuracy on all executed queries {round(achieved_ea / executed_sql_amount * 100, 2)}")
 
 """for index, row in query_question_test_df.iterrows():
     print(f"Zeile {index + 1}:")
