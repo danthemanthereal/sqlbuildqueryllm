@@ -300,6 +300,11 @@ mit den zweiten von zweiten exploring prompt nur mit richtiger db und agent 25 p
 
 Execution accuracy on all executed queries 17.02%
 
+mit den dea prompt Execution accuracy on all executed queries 18.38% 
+
+-> trotzdem irgendwie noch falsche Spalten / Tabellen weiterhin benutzt 
+-> eher gefüllt downgrade -> selber machen oder in main corregierte version übertragen ? 
+
 einbauen von Fragen wenn etwas mehrdeutig ist ? Mit so vorschlagen welche Optionen ? 
 
 
