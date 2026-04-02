@@ -12,11 +12,43 @@ model = AutoModelForCausalLM.from_pretrained(
 ).to("cuda")
 
 def check_ambiguity_in_question(question: str):
-    pass
+    prompt = check_ambiguity_in_question_prompt(question)
+
+    messages = [
+        {
+            "role": "system",
+            "content": "You are an expert at identifying ambiguity in questions that are intended to be translated into SQL queries. "
+            "If the question is unambiguous, return an empty string. "
+            "If the question is ambiguous, clearly explain what makes it ambiguous and list possible interpretations of the question."
+        },
+        {
+            "role": "user",
+            "content": prompt
+        }
+    ]
+
+    inputs = tokenizer.apply_chat_template(
+        messages,
+        return_tensors="pt"
+    ).to("cuda")
+    outputs = model.generate(**inputs)
+
+    result = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    if "[/INST]" in result:
+        result = result[result.index("[/INST]") + len("[/INST]"):]
+
+    return result.strip()
 
 
-def check_ambiguity_in_question_prompt(question: str)->str:
+
+def check_ambiguity_in_question_prompt(question: str) -> str:
     return f"""
+Analyze the following question in the context of generating a SQL query.
 
+If the question is clear and unambiguous, return an empty string.
 
+If the question is ambiguous, ask clarifying questions and describe the possible interpretations that would affect the SQL query.
+
+Question: {question}
 """

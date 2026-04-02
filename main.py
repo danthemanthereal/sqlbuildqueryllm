@@ -10,6 +10,8 @@ import re
 import time
 import ast
 
+from understanding.understanding_components import check_ambiguity_in_question
+
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
 os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
@@ -198,6 +200,9 @@ with open(compare_generated_sql_file, "a", newline="", encoding="utf-8") as f:
                     found_some_table = False
                     found_only_relevant_tables = False
                     found_no_tables = False
+
+                    classification_because_of_ambiguity = check_ambiguity_in_question(entry.get('question'))
+                    print("possible ambiguity ", classification_because_of_ambiguity)
                     """groq_answer = get_tables_groq(entry.get('question'),i)
                     sleep(60)
                     print("groq answer: ", groq_answer)
