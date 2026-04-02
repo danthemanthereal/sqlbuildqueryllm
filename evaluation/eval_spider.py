@@ -93,7 +93,7 @@ def check_ea(generated_query, gold_query, db_id, question) -> bool:
         print("Fehler in db ausführen ")
         print(e)
         return False
-        
+
 
 
 def clean_sql(text):
