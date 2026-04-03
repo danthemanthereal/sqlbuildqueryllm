@@ -1,5 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
+
 model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 
 print("Lade Modell einmal...")
@@ -11,16 +12,18 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.float16
 ).to("cuda")
 
+
 def check_ambiguity_in_question(question: str):
     prompt = check_ambiguity_in_question_prompt(question)
 
     messages = [
         {
             "role": "system",
-            "content": "You are an expert at identifying ambiguity in questions that are intended to be translated into SQL queries. "
-            "If the question is unambiguous, return an empty string. "
-            "If the question is ambiguous, clearly explain what makes it ambiguous and list possible interpretations of the question."
-            "You answer only in german."
+            "content": "You analyze questions intended for SQL queries. "
+                       "If the question is clear and unambiguous, return an empty string. "
+                       "If the question is ambiguous, briefly explain why and list possible interpretations. "
+                       "Do not repeat the question. Do not add any extra text. "
+                       "Always answer in German."
         },
         {
             "role": "user",
@@ -32,12 +35,13 @@ def check_ambiguity_in_question(question: str):
         messages,
         return_tensors="pt"
     ).to("cuda")
-    outputs = model.generate(**inputs)
-
-    result = tokenizer.decode(outputs[0], skip_special_tokens=True)
-
+    outputs = model.generate(**inputs, max_new_tokens=2000,
+    temperature=0.2,
+    do_sample=False)
+    generated_tokens = outputs[0][inputs.shape[-1]:]
+    result = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+    print(f"res answer {result}")
     return result.strip()
-
 
 
 def check_ambiguity_in_question_prompt(question: str) -> str:
